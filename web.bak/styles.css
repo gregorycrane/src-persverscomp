@@ -1,0 +1,605 @@
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body {
+            height: 100%; width: 100%;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+            font-size: 14px; color: #111; background: #fdfdfa;
+        }
+        a { color: #880000; text-decoration: none; font-weight: bold; }
+
+        /* ── Inter-column Text Diff ────────────────────────────────── */
+        .diff-token-del {
+            background: #ffd7d7;
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+        .diff-token-ins {
+            background: #d4f5d4;
+            border-radius: 2px;
+            padding: 0 1px;
+        }
+        .diff-active .diff-token-del,
+        .diff-active .diff-token-ins {
+            /* classes applied; default state already shows colors */
+        }
+        #diff-toggle-row {
+            display: none;
+            padding: 3px 10px;
+            background: #f0ede4;
+            border-top: 1px solid #d8d0c0;
+            font-size: 12px;
+            align-items: center;
+            gap: 8px;
+        }
+        #diff-toggle-row.visible { display: flex; }
+        #diff-toggle-label { color: #555; font-weight: bold; }
+
+        /* ── Token Alignment Highlighting ─────────────────────────── */
+        /* Aligned tokens: subtle dotted underline at rest, no background */
+        .aln-token {
+            cursor: pointer;
+            border-bottom: 2px dotted #bbb;
+            padding: 0 1px;
+            transition: background 0.12s, border-bottom 0.12s;
+        }
+        /* Hovered group: bright highlight */
+        .aln-token.aln-hl-strong {
+            background: #fff176;
+            border-bottom: 2px solid #e6a817 !important;
+            opacity: 1 !important;
+        }
+        /* Other aligned tokens in same section: dimmed */
+        .aln-dimmed {
+            opacity: 0.35;
+        }
+
+        /* ── Alignment Panel ────────────────────────────────────────── */
+        #alignment-panel {
+            display: flex; align-items: center; gap: 8px;
+            padding: 4px 10px; background: #f5f0e8;
+            border-top: 1px solid #d0c8b8;
+            font-size: 12px; flex-wrap: wrap;
+        }
+        #alignment-panel label { font-weight: bold; color: #555; }
+        #alignment-pair-select {
+            font-size: 12px; padding: 2px 6px;
+            border: 1px solid #bbb; border-radius: 3px;
+            background: #fff; color: #333; cursor: pointer;
+        }
+        #alignment-pair-select:disabled { opacity: 0.5; cursor: default; }
+        #alignment-legend {
+            font-size: 11px; color: #666; font-style: italic;
+        }
+        .aln-score-bar {
+            display: inline-block; width: 30px; height: 6px;
+            background: linear-gradient(to right, #5b92d9, #4a52cc);
+            border-radius: 2px; vertical-align: middle; margin-left: 4px;
+            opacity: 0.7;
+        }
+        a:hover { text-decoration: underline; }
+
+        /* Splash Page Branding Layout */
+        #splash-view-root { display: flex; flex-direction: column; width: 100%; min-height: 100vh; justify-content: center; align-items: center; background: #fdfdfa; }
+        #splash-wrapper { max-width: 720px; width: 100%; text-align: center; padding: 40px; border: 2px dashed #660000; background: #fff; border-radius: 6px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        
+        .brand-banner-frame { display: flex; justify-content: center; align-items: center; border-bottom: 2px solid #660000; padding-bottom: 20px; margin-bottom: 20px; }
+        .brand-banner-frame img { max-width: 100%; height: auto; display: block; }
+
+        .file-upload-zone { margin: 25px 0; padding: 40px 20px; border: 2px dashed #ccc; background: #fafafa; border-radius: 4px; cursor: pointer; position: relative; transition: all 0.2s ease; }
+        .file-upload-zone:hover { border-color: #660000; background: #fdfbef; }
+        .file-input-hidden { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; }
+
+        .workspace-emblem-holder { display: flex; align-items: center; justify-content: center; }
+        .workspace-emblem-holder img { height: 32px; width: auto; display: block; border-radius: 2px; }
+
+        /* Dynamic Markdown Output Styling */
+        #manifesto-render-target h1 { display: none; } 
+        #manifesto-render-target h2 { font-size: 18px; color: #333; margin-top: 28px; margin-bottom: 12px; font-variant: small-caps; border-bottom: 1px dashed #e2e2d5; padding-bottom: 5px; }
+        #manifesto-render-target p { line-height: 1.6; margin-bottom: 14px; color: #333; text-align: justify; }
+        #manifesto-render-target blockquote { border-left: 3px solid #660000; padding: 10px 0 10px 15px; margin: 20px 0; font-style: italic; color: #444; background: #fefefe; }
+        #manifesto-render-target ul { margin-left: 25px; margin-bottom: 20px; line-height: 1.6; }
+        #manifesto-render-target li { margin-bottom: 8px; color: #333; }
+        #manifesto-render-target strong { color: #000; }
+
+        /* Active Workspace Navigation Layout */
+        #app-view-root { display: none; flex-direction: column; height: 100vh; width: 100vw; overflow: hidden; background: #fff; }
+        #header-container { flex-shrink: 0; background: #fff; border-bottom: 1px solid #ccc; z-index: 10; }
+        
+        #perseus-banner { background: #660000; color: #fff; padding: 5px 15px; display: flex; justify-content: space-between; align-items: center; }
+        .banner-logo-title-group { display: flex; align-items: center; gap: 12px; }
+        .banner-logo-title-group h1 a { color: #fff; font-size: 16px; font-weight: bold; font-family: Georgia, serif; }
+
+        .mode-toggle-panel { display: flex; gap: 8px; align-items: center; }
+        .toggle-btn { background: #440000; color: #ffccaa; border: 1px solid #993333; font-size: 11px; padding: 3px 10px; border-radius: 3px; cursor: pointer; font-weight: bold; }
+        .toggle-btn.active-mode { background: #fff; color: #660000; border-color: #fff; }
+
+        #nav-bar { background: #ddddcc; border-bottom: 1px solid #999988; padding: 4px 15px; font-size: 11px; font-weight: bold; }
+        #browse-bar { background: #eeeeee; border-bottom: 1px solid #cccccc; padding: 6px 15px; font-size: 11px; display: flex; flex-wrap: wrap; gap: 5px; }
+        .browse-row { display: flex; align-items: flex-start; width: 100%; }
+        .browse-row.hidden-row { display: none !important; }
+        .browse-row label { font-weight: bold; width: 80px; color: #444; flex-shrink: 0; padding-top: 1px; }
+        .browse-items { display: flex; flex-wrap: wrap; gap: 4px; }
+        .browse-items a { padding: 1px 6px; background: #e0e0d0; color: #336699; border: 1px solid #bbbb99; font-weight: bold; border-radius: 2px; cursor: pointer; }
+        .browse-items a.current { background: #660000; color: #fff; border-color: #330000; }
+
+        .browse-items a.sec-pill { background: #fff; color: #555; border: 1px solid #ccc; font-weight: normal; font-size: 10px; padding: 1px 5px; }
+        .browse-items a.sec-pill.active-pill { background: #660000; color: #fff; border-color: #330000; font-weight: bold; }
+
+        #outer-wrapper { display: flex; width: 100%; flex: 1; min-height: 0; overflow: hidden; }
+
+        /* View Mode Layout Grid Mapping Rules */
+        #main-container { display: flex; width: 100%; height: 100%; min-width: 0; position: relative; }
+        .reading-column { display: flex; flex-direction: column; border-right: 1px solid #eeeeee; background: #fff; min-width: 0; height: 100%; }
+        .reading-column:last-child { border-right: none; }
+        .cross-panel { background: #fafafa; }
+        .column-content-scroll { flex: 1; overflow-y: auto; padding: 15px; }
+        .panel-header { background: #660000; color: #fff; padding: 4px 8px; font-size: 11px; font-weight: bold; position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+        .edition-select-dropdown { background: #fff; color: #333; font-size: 10px; padding: 1px 4px; border: 1px solid #ccc; border-radius: 2px; outline: none; cursor: pointer; }
+
+        /* Left Hand Rail Navigation */
+        #classic-left-rail { display: none; width: auto; min-width: 80px; max-width: 320px; flex-shrink: 0; background: #f4f4f0; border-right: 1px solid #dcdcc8; padding: 10px 12px; overflow-y: auto; }
+        #classic-left-rail h3 { font-size: 12px; font-variant: small-caps; color: #555; margin-bottom: 8px; border-bottom: 1px solid #ccccbb; padding-bottom: 3px; }
+        .rail-tree-item { display: block; font-size: 12px; padding: 3px 6px; color: #336699; font-weight: bold; border-radius: 2px; margin-bottom: 2px; cursor: pointer; white-space: nowrap; }
+        .rail-tree-item:hover { background: #e8e8df; }
+        .rail-tree-item.active-rail-node { background: #660000; color: #fff !important; }
+
+        /* Layout Types Rules */
+        #outer-wrapper.mode-parallel #main-container { flex-direction: row; }
+        #outer-wrapper.mode-parallel .reading-column { flex: 1; height: 100%; }
+        #outer-wrapper.mode-parallel #classic-left-rail { display: none; }
+
+        /* --- Fixed Classic Asymmetric Layout Rules --- */
+        #outer-wrapper.mode-classic #classic-left-rail { 
+            display: block; 
+        }
+        #outer-wrapper.mode-classic #main-container { 
+            display: grid; 
+            grid-template-columns: 3fr 2fr; /* Left Focus vs Right Sidebar */
+            height: 100%; 
+            width: 100%;
+            overflow: hidden; /* Lock the wrapper frame from scrolling globally */
+        }
+
+        /* Force Focus Column to anchor left and scroll internally */
+        #outer-wrapper.mode-classic #col_f { 
+            grid-column: 1; 
+            border-right: 2px solid #ccc; 
+            height: 100%; 
+            display: flex;
+            flex-direction: column;
+            min-height: 0; 
+        }
+        #outer-wrapper.mode-classic #col_f .column-content-scroll {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        /* Sidebar Stack: Force internal scroll boxes for every version panel */
+        #outer-wrapper.mode-classic .reading-column.cross-panel {
+            /* display is governed by the column-count rules (#col_c3/#col_c4 hide at 3 cols);
+               do NOT set it here or it overrides those and forces c3/c4 visible in classic. */
+            flex-direction: column;
+            min-height: 0; /* CRITICAL: Allows flex items to shrink below text height */
+            border-bottom: 1px solid #ccc;
+        }
+        #outer-wrapper.mode-classic .reading-column.cross-panel .column-content-scroll {
+            flex: 1;
+            overflow-y: auto; /* Each version panel now handles its own scrolling text */
+        }
+
+        /* Explicit Column Position Assigments */
+        #outer-wrapper.mode-classic #col_c1 { grid-column: 2; grid-row: 1; }
+        #outer-wrapper.mode-classic #col_c2 { grid-column: 2; grid-row: 2; }
+        #outer-wrapper.mode-classic #col_c3 { grid-column: 2; grid-row: 3; }
+        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; border-bottom: none; }
+
+        /* Proportionate Grid Row Allocation */
+        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns) #main-container {
+            grid-template-rows: 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.four-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.five-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        
+        /* Typographic Content Rendering Elements */
+        .section-row { border-bottom: 1px solid #f0f0f0; padding: 10px 0; display: block; scroll-margin-top: 5px; }
+        .section-row.hidden-section { display: none !important; }
+        .greek-text { font-size: 15px; line-height: 1.7; font-family: "Gentium Plus", "Athena", serif; color: #000; }
+        .english-text { font-size: 13px; line-height: 1.6; color: #222; }
+        .french-text { font-size: 13px; line-height: 1.6; color: #2b2b2b; }
+        .latin-text { font-size: 13px; line-height: 1.6; color: #111; font-style: italic; }
+        .german-text, .italian-text { font-size: 13px; line-height: 1.6; color: #222; }
+
+        .commentary-text { 
+            font-size: 12.5px; 
+            line-height: 1.65; 
+            color: #443322; 
+            background-color: #fbfbf6; 
+            border-left: 2px solid #996633; 
+            padding-left: 8px; 
+        }
+
+        .commentary-text .lemma {
+            font-weight: bold;
+            color: #1a5276;
+        }
+        .commentary-text p + p { margin-top: 0; }
+        .commentary-text p:has(+ p > .lemma:first-child) { 
+            margin-bottom: 0.75em; 
+        }
+        .commentary-text p > .lemma:first-child { 
+            display: inline; 
+            margin-top: 0; 
+        }
+        .commentary-text p ~ p > .lemma:first-child::before { 
+            content: ''; 
+            display: block; 
+            margin-top: 0.75em; 
+        }
+        .poetry-grid-layout { display: grid !important; grid-template-columns: 45px 1fr; row-gap: 4px; align-items: start; width: 100%; white-space: normal; }
+        .poetry-grid-layout p { grid-column: 1 / -1; margin: 0.15em 0; line-height: 1.5; }
+        .poetry-grid-layout .line-num-cell { grid-column: 1; text-align: right; padding-right: 12px; font-size: 11px; color: #999; font-weight: bold; font-family: monospace; line-height: 1.7; user-select: none; display: block !important; }
+        .poetry-grid-layout .line-text-cell { grid-column: 2; line-height: 1.7; display: block !important; white-space: normal; }
+        
+        
+/* Visual styling — applies in BOTH the poetry grid and the prose columns */
+.stage-direction {
+    display: block;
+    font-style: italic;
+    color: #445566;
+    background: #fdfdfd;
+    border-left: 3px solid #ccc;
+    padding: 8px 12px;
+    margin: 10px 0;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+/* Grid-only: make it span both columns inside the poetry layout */
+.poetry-grid-layout .stage-direction {
+    grid-column: 1 / span 2 !important;
+    display: block !important;
+}
+
+/* Prose column: out-rank `.prose-body-inline div {display:inline !important}` (line ~268)
+   so the stage direction renders as a block, identical to the poetry column. */
+.prose-body-inline .stage-direction {
+    display: block !important;
+    margin: 10px 0 !important;
+    padding: 8px 12px !important;
+    font-style: italic;
+    color: #445566;
+    background: #fdfdfd;
+    border-left: 3px solid #ccc;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+        .prose-inline-layout { display: block; width: 100%; line-height: 1.6; }
+        .prose-inline-layout .prose-marker { font-weight: bold; color: #336699; margin-right: 8px; display: inline-block; }
+        .prose-inline-layout .prose-body-inline { display: inline; }
+        .prose-body-inline p, .prose-body-inline div { display: inline !important; margin: 0 !important; padding: 0 !important; }
+
+        .speaker-attr { color: #445566; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
+        .poetry-grid-layout .speaker-attr { grid-column: 1 / span 2; display: block !important; font-weight: bold; color: #660000; }        .render-italic, .render-italics { font-style: italic; }
+        .render-bold { font-weight: bold; }
+        
+        .note { font-size: 11px; color: #555; background: #fdfbf7; border-left: 2px solid #880000; padding: 2px 6px; margin: 4px 0 4px 1em; display: block; }
+        .poetry-grid-layout .note { grid-column: 1 / span 2; display: block !important; }
+
+/* --- Clean Breakout Rules for Prose Quotes and Continuations Inside Grid Layouts --- */
+
+/* Base structural rules for paragraph elements inside the grid */
+.poetry-grid-layout p {
+    grid-column: 1 / -1 !important;
+    margin: 0.3em 0;
+    line-height: 1.6;
+}
+
+/* Force the quote block to break out of the 2-column tracks and span full width */
+.poetry-grid-layout .quote-block,
+.section-row .quote-block {
+    grid-column: 1 / -1 !important;
+    display: block !important;
+    clear: both !important;
+    margin: 14px 0 14px 2.5em !important;
+    padding: 12px 18px !important;
+    border-left: 3px solid #996633 !important; /* Elegant gold/brown philological accent line */
+    background-color: #fbfbf6 !important;     /* Balanced warm-white panel background */
+    font-style: italic;
+    color: #332211;
+    line-height: 1.65;
+}
+
+/* Force trailing text after a quote block to drop below it and span full width */
+.poetry-grid-layout .prose-continuation,
+.section-row .prose-continuation {
+    grid-column: 1 / -1 !important;
+    display: block !important;
+    clear: both !important;
+    margin-top: 0.5em !important;
+    margin-bottom: 0.5em !important;
+    line-height: 1.6;
+    text-align: justify;
+    color: #222222;
+}
+        /* Inline Line Milestones (e.g. for prose translations) */
+        .inline-line-milestone {
+            display: inline-block;
+            background-color: #f0f0eb;
+            color: #880000;
+            font-family: monospace;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 1px 4px;
+            margin: 0 4px;
+            border: 1px solid #dcdcc8;
+            border-radius: 3px;
+            vertical-align: middle;
+            user-select: none;
+        }
+        
+        /* Highlight context on hover */
+        .inline-line-milestone:hover {
+            background-color: #660000;
+            color: #ffffff;
+            border-color: #330000;
+        }
+
+        /* Transliterated Greek glosses: <foreign xml:lang="xgrc"> (mēnis, geras, …) */
+        .foreign-xgrc {
+            font-style: italic;
+            color: #0f6e64;            /* teal accent, complements the maroon; tune to taste */
+            letter-spacing: 0.02em;
+        }
+        .foreign-xgrc:hover { color: #0a4d46; }
+
+        /* Inline line-number markers: <seg rend="subscript"|"superscript"> */
+        .seg-subscript, .seg-superscript {
+            font-size: 0.7em;
+            color: #999;
+            font-family: monospace;
+            font-weight: bold;
+            margin: 0 1px;
+            user-select: none;
+        }
+        .seg-subscript   { vertical-align: sub; }
+        .seg-superscript { vertical-align: super; }
+
+        /* Page-boundary milestones, e.g. Bekker pagination in Aristotle */
+        .bekker-page {
+            display: inline-block;
+            background-color: #eef2f7;
+            color: #2a4b7c;
+            font-family: monospace;
+            font-size: 10px;
+            font-weight: bold;
+            padding: 1px 4px;
+            margin: 0 4px;
+            border: 1px solid #c8d2dc;
+            border-radius: 3px;
+            vertical-align: super;
+            user-select: none;
+        }
+        .bekker-page:hover {
+            background-color: #2a4b7c;
+            color: #ffffff;
+            border-color: #1a3050;
+        }
+        
+        /* ── Treebank column styles ──────────────────────────────── */
+        .tb-sentence-block { border-bottom: 1px solid #f0efe8; padding: 8px 0 10px; }
+        .tb-cit-label { font-size: 10px; color: #aaa; font-family: "Courier New",monospace; margin-bottom: 3px; }
+        .tb-speaker { font-size: 12px; margin-bottom: 3px; }
+        .tb-speaker strong { color: #660000; }
+        .tb-token-row { font-family: "Gentium Plus","GFS Didot",serif; font-size: 15px; line-height: 1.9; display: block; }
+        .tb-tok { display: inline-block; cursor: pointer; border-radius: 2px; padding: 0 1px; transition: background 0.1s; }
+        .tb-tok:hover { background: #fff8dc; }
+        .tb-tok.tb-active { background: #fff3b0; outline: 1px solid #c8a800; outline-offset: 1px; color: #440000; font-weight: bold; }
+        .tb-tok.tb-is-head { background: #ffeaea; outline: 1px dashed #cc3300; outline-offset: 1px; }
+        .tb-tok.tb-is-dep  { background: #e8f0ff; outline: 1px dashed #336699; outline-offset: 1px; }
+   .tb-translit-row { direction: ltr; font-family: "Gentium Plus","GFS Didot",serif; font-size: 13px; line-height: 1.8; color: #555; font-style: italic; display: block; margin-top: 1px; }
+   .tb-translit-tok { font-style: italic; }
+   .tb-gloss-row { direction: ltr; font-family: -apple-system,"Segoe UI",sans-serif; font-size: 12.5px; line-height: 1.9; color: #1a5276; display: block; margin-top: 1px; }
+   .tb-gloss-tok { font-style: normal; }
+   .tb-gloss-tok.tb-active { color: #440000; }
+   /* Reader row-visibility toggles */
+   .tb-hide-original .tb-token-row   { display: none; }
+   .tb-hide-translit .tb-translit-row { display: none; }
+   .tb-vis-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 4px 0 8px; position: sticky; top: 0; background: #fff; z-index: 3; }
+   .tb-vis-label { font-size: 9px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; color: #bbb; margin-right: 2px; }
+   .tb-vis-btn { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; padding: 2px 9px; border: 1px solid #ccc; border-radius: 10px; background: #f5f4ef; color: #999; cursor: pointer; transition: all .12s; }
+   .tb-vis-btn:hover { border-color: #999; }
+   .tb-vis-btn.tb-vis-on { background: #660000; border-color: #660000; color: #fff; }
+   /* View-mode switch */
+   .tb-mode-switch { display: inline-flex; flex-shrink: 0; border: 1px solid #ccc; border-radius: 10px; overflow: hidden; margin-right: 8px; }
+   .tb-mode-btn { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; padding: 2px 11px; border: none; background: #f5f4ef; color: #999; cursor: pointer; }
+   .tb-mode-btn + .tb-mode-btn { border-left: 1px solid #ccc; }
+   .tb-mode-btn.tb-mode-on { background: #1a5276; color: #fff; }
+   /* Dependency syntax tree */
+   .tb-tree-wrap { overflow-x: auto; padding: 6px 0 4px; }
+   .tb-tree-svg { display: block; }
+   .tb-tree-line { stroke: #d4d2c8; stroke-width: 1.2px; fill: none; }
+   .tb-tree-rel { font-family: "Courier New", monospace; font-size: 9px; font-weight: bold; paint-order: stroke; stroke: #fff; stroke-width: 3px; stroke-linejoin: round; }
+   .tb-tree-root { font-family: "Courier New", monospace; font-size: 10px; font-weight: bold; fill: #999; letter-spacing: 1px; }
+   .tb-tree-node { cursor: pointer; }
+   .tb-tree-hit { fill: transparent; stroke: transparent; stroke-width: 1px; transition: fill .1s, stroke .1s; }
+   .tb-tree-form { font-family: "Gentium Plus","GFS Didot",serif; font-size: 16px; fill: #1a1a1a; }
+   .tb-tree-translit { font-family: "Gentium Plus","GFS Didot",serif; font-size: 11px; font-style: italic; fill: #888; }
+   .tb-tree-gloss { font-family: -apple-system,"Segoe UI",sans-serif; font-size: 11px; fill: #1a5276; }
+   .tb-tree-punct .tb-tree-form { fill: #bbb; }
+   /* hover highlighting: the word, its head, and its dependents */
+   .tb-tree-node:hover .tb-tree-hit,
+   .tb-tree-node.tb-active .tb-tree-hit { fill: #fff3b0; stroke: #c8a800; }
+   .tb-tree-node.tb-active .tb-tree-form { fill: #440000; font-weight: bold; }
+   .tb-tree-node.tb-is-head .tb-tree-hit { fill: #ffeaea; stroke: #cc3300; }
+   .tb-tree-node.tb-is-dep  .tb-tree-hit { fill: #e8f0ff; stroke: #336699; }
+   .tb-tree-edge.tb-edge-head .tb-tree-line { stroke: #cc3300; stroke-width: 2px; }
+   .tb-tree-edge.tb-edge-dep  .tb-tree-line { stroke: #336699; stroke-width: 2px; }
+   /* collapse carets / badges on the tree */
+   .tb-tree-caret { fill: #b9b6a8; }
+   .tb-tree-node:hover .tb-tree-caret { fill: #777; }
+   .tb-tree-count { font-family: "Courier New", monospace; font-size: 9px; font-weight: bold; fill: #999; }
+   .tb-tree-node.tb-tree-collapsed .tb-tree-form { font-style: italic; }
+   /* Per-word annotation grid */
+   .tb-grid-scroll { overflow-x: auto; padding: 4px 0 8px; }
+   .tb-grid { display: inline-block; min-width: 100%; border-top: 1px solid #efeee7; }
+   .tb-grow { display: flex; align-items: stretch; }
+   .tb-glabel { position: sticky; inset-inline-start: 0; flex: 0 0 62px; width: 62px; background: #fff; z-index: 2;
+                font-size: 8px; font-weight: bold; text-transform: uppercase; letter-spacing: .4px; color: #c4c2b6;
+                display: flex; align-items: center; padding: 2px 4px; border-bottom: 1px solid #f3f2ec; }
+   .tb-gcell { flex: 0 0 96px; width: 96px; box-sizing: border-box; padding: 3px 4px; text-align: center;
+               border-bottom: 1px solid #f3f2ec; border-inline-start: 1px solid #f3f2ec; cursor: pointer;
+               display: flex; align-items: center; justify-content: center; min-height: 19px; overflow: hidden; }
+   .tb-gcell:hover { background: #fff8dc; }
+   .tb-gcell.tb-gcol-active { background: #fff3b0; }
+   .tb-gc-form .tb-gcell { font-family: "Gentium Plus","GFS Didot",serif; font-size: 15px; font-weight: bold; color: #1a1a1a; }
+   .tb-gc-form .tb-glabel { color: #999; }
+   .tb-gcell-punct { color: #ccc; }
+   .tb-gc-translit .tb-gcell { font-family: "Gentium Plus","GFS Didot",serif; font-style: italic; font-size: 11px; color: #888; direction: ltr; }
+   .tb-gc-lemma .tb-gcell { font-family: "Gentium Plus","GFS Didot",serif; font-size: 12px; color: #444; }
+   .tb-gc-morph .tb-gcell { font-family: "Courier New", monospace; font-size: 8px; color: #8a8a8a; white-space: normal; line-height: 1.25; word-break: break-word; direction: ltr; }
+   .tb-gc-gloss .tb-gcell { font-family: -apple-system,"Segoe UI",sans-serif; font-size: 11px; color: #1a5276; white-space: normal; line-height: 1.2; direction: ltr; }
+   .tb-grid.tb-ghide-translit .tb-gc-translit,
+   .tb-grid.tb-ghide-lemma    .tb-gc-lemma,
+   .tb-grid.tb-ghide-relation .tb-gc-relation,
+   .tb-grid.tb-ghide-pos      .tb-gc-pos,
+   .tb-grid.tb-ghide-morph    .tb-gc-morph,
+   .tb-grid.tb-ghide-gloss    .tb-gc-gloss { display: none; }
+        .tb-punct { cursor: default; padding: 0; }
+        .tb-punct:hover { background: none; }
+        .tb-translation { margin: 2px 0 8px; border-left: 2px solid #e0dfd5; padding-left: 8px; }
+        .tb-trans-prose { font-size: 12.5px; line-height: 1.6; color: #333; margin-bottom: 2px; }
+        .tb-trans-lit   {font-size: 12.5px; line-height: 1.6; color: #333; margin-bottom: 2px; }
+   .tb-trans-translit { font-size: 12.5px; line-height: 1.6; color: #555; font-style: italic; margin-bottom: 2px; }
+        .tb-trans-label { font-size: 9px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin-right: 4px; }
+        .tb-detail-panel { display: none; margin-top: 6px; background: #f5f4ef; border: 1px solid #e0dfd5; border-left: 3px solid #660000; border-radius: 3px; padding: 10px 12px; animation: tb-slide 0.12s ease; }
+        .tb-detail-panel.tb-detail-visible { display: block; }
+        @keyframes tb-slide { from { opacity:0; transform:translateY(-3px); } to { opacity:1; transform:translateY(0); } }
+        .tb-detail-word { font-family: "Gentium Plus","GFS Didot",serif; font-size: 19px; font-weight: bold; color: #660000; margin-bottom: 6px; }
+        .tb-detail-grid { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: start; font-size: 12px; }
+        .tb-dk { font-size: 11px; font-weight: bold; color: #888; white-space: nowrap; }
+        .tb-dv { font-size: 12px; color: #111; line-height: 1.4; }
+        .tb-gloss { color: #1a5276; font-style: italic; font-size: 13px; font-weight: bold; }
+        .tb-greek { font-family: "Gentium Plus","GFS Didot",serif; font-size: 14px; }
+        .tb-xpos { font-family: "Courier New",monospace; font-size: 10px; color: #aaa; }
+        .tb-rel-chip { display:inline-block; padding:1px 6px; border-radius:3px; font-size:10px; font-weight:bold; font-family:"Courier New",monospace; color:#fff; line-height:1.5; }
+        .tb-pos-chip { display:inline-block; padding:1px 5px; border-radius:3px; font-size:10px; font-family:"Courier New",monospace; font-weight:bold; border:1px solid; line-height:1.5; }
+        .tb-feat-k { font-family:"Courier New",monospace; font-size:10px; color:#aaa; }
+        .tb-feat-v { font-family:"Courier New",monospace; font-size:10px; }
+        .tb-feats  { font-size:11px; line-height:1.8; }
+        /* Section focus: dim out-of-scope sentences (mirrors hidden-section on other columns) */
+        .tb-sent-dimmed { display: none !important; }
+
+        /* Clickable citation label */
+        .tb-cit-label a { color: #aaa; text-decoration: none; font-family: "Courier New",monospace; font-size: 10px; }
+        .tb-cit-label a:hover { color: #660000; text-decoration: underline; }
+
+        /* Literal translation word spans */
+        .tb-lit-word { display:inline; border-radius:2px; transition:background 0.12s, outline 0.12s; }
+        /* Linked words (have a Greek token mapped to them) get a subtle underline */
+        .tb-lit-word.tb-lit-linked {
+            cursor: pointer;
+            border-bottom: 1px dotted #aaa;
+        }
+        .tb-lit-word.tb-lit-linked:hover {
+            background: #f5f0e8;
+            border-bottom-color: #660000;
+        }
+        .tb-lit-word.tb-lit-active {
+            background: #fff3b0;
+            outline: 1px solid #c8a800;
+            outline-offset: 1px;
+            font-weight: bold;
+            border-bottom: 1px solid #c8a800;
+        }
+
+        .viewport-footer-controls { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-top: 20px; padding-top: 10px; border-top: 1px solid #ddd; width: 100%; clear: both; }
+        .poetry-grid-layout .viewport-footer-controls { grid-column: 1 / span 2; display: flex !important; }
+        .footer-group-left { display: flex; gap: 6px; }
+        .action-btn { display: inline-block; background: #660000; color: #fff !important; padding: 4px 10px; font-size: 11px; font-weight: bold; border-radius: 2px; border: none; cursor: pointer; text-align: center; }
+        .action-btn.secondary { background: #666; }
+        .action-btn:hover { background: #330000; text-decoration: none; }
+        .action-btn.secondary:hover { background: #444; }
+    
+        /* Panel Resizing Mechanics */
+        .resize-handle { flex-shrink: 0; background: #e0e0e0; position: relative; z-index: 20; transition: background 0.15s; }
+        .resize-handle:hover, .resize-handle.dragging { background: #660000; }
+        .resize-handle-h { width: 5px; cursor: col-resize; height: 100%; }
+        .resize-handle-v { height: 5px; cursor: row-resize; width: 100%; }
+        body.resizing-cols, body.resizing-cols * { cursor: col-resize !important; }
+        body.resizing-rows, body.resizing-rows * { cursor: row-resize !important; }
+
+        .make-focus-btn { font-size: 10px; padding: 1px 6px; margin-left: 6px; background: rgba(255,255,255,0.2); color: #fff; border: 1px solid rgba(255,255,255,0.4); border-radius: 3px; cursor: pointer; font-weight: normal; }
+        .make-focus-btn:hover { background: rgba(255,255,255,0.35); }
+
+        .toggle-btn.col-scaler-btn { background: #333; color: #aaa; border-color: #555; font-size: 10px; padding: 2px 8px; margin-left: 4px; }
+
+        /* Flexible Multi-Column State Handling Rules */
+        #col_c3, #col_c4, #resize-c2-c3, #resize-c3-c4 { display: none; }
+        
+        .four-columns #col_c3 { display: flex !important; }
+        .four-columns #resize-c2-c3 { display: block !important; }
+
+        .five-columns #col_c3, .five-columns #col_c4 { display: flex !important; }
+        .five-columns #resize-c2-c3, .five-columns #resize-c3-c4 { display: block !important; }
+
+        .four-columns.mode-parallel .reading-column,         .five-columns.mode-parallel .reading-column { flex: 1 !important; width: auto !important; }
+
+        /* Fixed Classic Asymmetric Layout Rules */
+        #outer-wrapper.mode-classic #classic-left-rail { 
+            display: block; 
+        }
+        #outer-wrapper.mode-classic #main-container { 
+            display: grid; 
+            grid-template-columns: 3fr 2fr; /* Focus column vs Right sidebar stack */
+            height: 100%; 
+            width: 100%;
+        }
+
+        /* Force Focus Column to always occupy the first column and stretch the full row height */
+        #outer-wrapper.mode-classic #col_f { 
+            grid-column: 1; 
+            border-right: 2px solid #ccc; 
+            height: 100%; 
+            min-height: 0; 
+        }
+
+        /* Sidebar Stack Assignments */
+        #outer-wrapper.mode-classic #col_c1 { grid-column: 2; grid-row: 1; border-bottom: 1px solid #ccc; }
+        #outer-wrapper.mode-classic #col_c2 { grid-column: 2; grid-row: 2; border-bottom: 1px solid #ccc; }
+        #outer-wrapper.mode-classic #col_c3 { grid-column: 2; grid-row: 3; border-bottom: 1px solid #ccc; }
+        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; }
+
+        /* Dynamic Row Definitions based on Column count configuration */
+        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns) #main-container {
+            grid-template-rows: 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.four-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.five-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+
+        /* Ensure prose structural divisions expand naturally */
+.spanish-text .prose-para,
+.english-text .prose-para {
+    display: block !important;
+    margin-bottom: 1.4em !important;
+    line-height: 1.65;
+    text-align: justify;
+}
+
+/* Ensure the runtime speaker handles are block elements in prose mode */
+.prose-para .speaker-attr {
+    display: block !important;
+    margin-top: 1em !important;
+    margin-bottom: 0.4em !important;
+    color: #660000;
+    font-weight: bold;
+}
+
+.commentary-text .comm-entry { margin: 0.4em 0; }

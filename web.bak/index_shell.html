@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Perseus Serverless Version Browser (Prototype) | Dual-Framework Workspace</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    
+    <style>%%PERSEUS_STYLES%%</style>
+</head>
+<body>
+
+  <div id="splash-view-root">
+      <div id="splash-wrapper">
+          <div class="brand-banner-frame">
+              <img src="./assets/perseus_banner.png" alt="Perseus Digital Library Banner" />
+          </div>
+
+          <div class="file-upload-zone" id="drop-zone">
+              <strong style="color: #660000; font-family: Georgia, serif; font-size: 16px;">Mount Local Data Asset</strong><br/>
+              <span style="font-size: 12px; color: #555; display: inline-block; margin-top: 8px;">Drag & Drop `corpus_alignment_grid.db` here, or click to browse files</span>
+              <input type="file" id="file-picker" class="file-input-hidden" accept=".db" onchange="handleFileSelection(this.files)"/>
+          </div>
+          
+          <div id="status-readout" style="font-size: 11px; color: #777; font-style: italic; margin-bottom: 15px;">Awaiting compilation asset attachment...</div>
+          
+          <button id="start-reading-btn" onclick="launchReadingEnvironment()" style="display:none; margin: 25px auto; padding: 14px 36px; background: #660000; color: #fff; border: none; border-radius: 4px; font-size: 16px; font-family: Georgia, serif; font-weight: bold; cursor: pointer; letter-spacing: 0.5px; transition: background 0.2s ease;" onmouseover="this.style.background='#440000'" onmouseout="this.style.background='#660000'">Start Reading Environment</button>
+          
+          <div id="manifesto-render-target"></div>
+      </div>
+  </div>
+
+  <div id="app-view-root">
+    <div id="header-container">
+      <div id="perseus-banner">
+        <div class="banner-logo-title-group">
+            <div class="workspace-emblem-holder">
+                <img src="./assets/perseus_running_man.png" alt="Perseus Emblem" />
+            </div>
+            <h1><a href="./" onclick="window.location.href='./'">Perseus Workspace Engine</a></h1>
+        </div>
+        
+        <div class="mode-toggle-panel">
+            <button id="btn-mode-parallel" class="toggle-btn active-mode" onclick="setWorkspaceLayoutMode('parallel')">Parallel Grid</button>
+            <button id="btn-mode-classic" class="toggle-btn" onclick="setWorkspaceLayoutMode('classic')">Classic Asymmetric</button>
+            <button id="btn-column-scaler" class="toggle-btn col-scaler-btn" onclick="cycleColumns()">Columns: 3</button>
+        </div>
+      </div>
+      <div id="nav-bar">
+        <span id="frame-context-label">Mounting layout frameworks...</span>
+      </div>
+      
+      <div id="browse-bar">
+        <div class="browse-row" id="row-book-container">
+          <label>Books:</label>
+          <div class="browse-items" id="book-items-container"></div>
+        </div>
+        <div class="browse-row" id="row-chapter-selector">
+          <label id="chapter-row-label">Chapters:</label>
+          <div class="browse-items" id="chapter-items-container"></div>
+        </div>
+        <!-- ── Text Diff / Alignment combined row ──────────────── -->
+        <div class="browse-row" id="row-alignment-panel"
+             style="background:#f5f0e8; border-top:1px solid #d0c8b8; flex-wrap:wrap; gap:4px 12px;">
+
+          <!-- Diff toggle -->
+          <div id="diff-toggle-row" style="display:none; align-items:center; gap:6px;">
+            <label style="font-weight:bold;color:#555">Text diff:</label>
+            <label style="cursor:pointer;font-size:12px">
+              <input type="checkbox" id="diff-toggle-checkbox"
+                     onchange="onDiffToggle(this.checked)" style="margin-right:3px">
+              Highlight differences between editions
+            </label>
+            <span id="diff-pair-label" style="color:#777;font-size:11px;font-style:italic"></span>
+          </div>
+
+          <!-- OR separator — only shown when both controls are available -->
+          <span id="diff-aln-separator"
+                style="display:none;font-weight:bold;color:#999;font-size:11px;align-self:center">— or —</span>
+
+          <!-- Alignment selector -->
+          <div style="display:flex;align-items:center;gap:6px;">
+            <label style="font-weight:bold;color:#555;font-size:12px">Alignment:</label>
+            <select id="alignment-pair-select" onchange="onAlignmentPairChange(this.value)"
+                    style="font-size:12px;padding:2px 6px;border:1px solid #bbb;border-radius:3px;background:#fff;color:#333;cursor:pointer" disabled>
+              <option value="">— none —</option>
+            </select>
+            <span id="alignment-legend" style="font-size:11px;color:#666;font-style:italic"></span>
+          </div>
+
+        </div>
+
+        <div class="browse-row" id="row-section-selector">
+          <label>Sections:</label>
+          <div class="browse-items" id="section-items-container"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="outer-wrapper" class="mode-parallel">
+      <div id="classic-left-rail">
+          <h3 id="rail-title">Structure Rail</h3>
+          <div id="rail-nodes-target"></div>
+      </div>
+
+      <div id="main-container">
+        <div class="reading-column" id="col_f">
+            <div class="panel-header">
+                <span>Focus</span>
+                <select class="edition-select-dropdown" id="select_f" onchange="updateColumnContent('f', this.value)"></select>
+            </div>
+            <div class="column-content-scroll" id="content_f"></div>
+        </div>
+        <div class="resize-handle resize-handle-h" id="resize-f-c1"></div>
+        <div class="reading-column cross-panel" id="col_c1">
+            <div class="panel-header">
+                <span>Comparison Version 1 <button class="make-focus-btn" onclick="swapToFocus('c1')">⇦ Focus</button></span>
+                <select class="edition-select-dropdown" id="select_c1" onchange="updateColumnContent('c1', this.value)"></select>
+            </div>
+            <div class="column-content-scroll" id="content_c1"></div>
+        </div>
+        <div class="resize-handle resize-handle-h" id="resize-c1-c2"></div>
+        <div class="reading-column cross-panel" id="col_c2">
+            <div class="panel-header">
+                <span>Comparison Version 2 <button class="make-focus-btn" onclick="swapToFocus('c2')">⇦ Focus</button></span>
+                <select class="edition-select-dropdown" id="select_c2" onchange="updateColumnContent('c2', this.value)"></select>
+            </div>
+            <div class="column-content-scroll" id="content_c2"></div>
+        </div>
+        <div class="resize-handle resize-handle-h" id="resize-c2-c3"></div>
+        <div class="reading-column cross-panel" id="col_c3">
+            <div class="panel-header">
+                <span>Comparison Version 3 <button class="make-focus-btn" onclick="swapToFocus('c3')">⇦ Focus</button></span>
+                <select class="edition-select-dropdown" id="select_c3" onchange="updateColumnContent('c3', this.value)"></select>
+            </div>
+            <div class="column-content-scroll" id="content_c3"></div>
+        </div>
+        <div class="resize-handle resize-handle-h" id="resize-c3-c4"></div>
+        <div class="reading-column cross-panel" id="col_c4">
+            <div class="panel-header">
+                <span>Comparison Version 4 <button class="make-focus-btn" onclick="swapToFocus('c4')">⇦ Focus</button></span>
+                <select class="edition-select-dropdown" id="select_c4" onchange="updateColumnContent('c4', this.value)"></select>
+            </div>
+            <div class="column-content-scroll" id="content_c4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>%%PERSEUS_APP_JS%%</script>
+</body>
+</html>
