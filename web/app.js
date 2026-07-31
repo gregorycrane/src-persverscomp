@@ -28,6 +28,212 @@
     }
     function _jp(s, fb) { try { return JSON.parse(s); } catch (e) { return fb; } }
 
+    // ── Greek transliteration engine (client-side, no precomputation) ──────
+    // Converts polytonic Greek Unicode text into Latin transliteration on the
+    // fly. Two modes:
+    //   'simple' — plain ASCII-ish reading form, no accents/breathing marks
+    //              shown as diacritics, macrons dropped (e ~ eta, o ~ omega).
+    //   'full'   — scholarly form: acute/grave/circumflex accents rendered as
+    //              combining diacritics on the corresponding Latin vowel,
+    //              long eta/omega marked with a macron (ē/ō), iota subscript
+    //              shown as an appended -i, rough breathing as h-/rh-.
+    // Works directly on HTML strings: it only rewrites contiguous runs of
+    // Greek-range codepoints, so tags/attributes/entities pass through untouched.
+    const GK_SMOOTH      = '\u0313';
+    const GK_ROUGH        = '\u0314';
+    const GK_ACUTE        = '\u0301';
+    const GK_GRAVE        = '\u0300';
+    const GK_CIRCUMFLEX_A = '\u0342'; // perispomeni
+    const GK_CIRCUMFLEX_B = '\u0303'; // combining tilde (occasional alt encoding)
+    const GK_IOTA_SUB     = '\u0345'; // ypogegrammeni
+    const GK_DIAERESIS    = '\u0308';
+    const GK_MACRON       = '\u0304';
+    const GK_BREVE        = '\u0306';
+    const GK_COMBINING_MARKS = new Set([
+        GK_SMOOTH, GK_ROUGH, GK_ACUTE, GK_GRAVE, GK_CIRCUMFLEX_A, GK_CIRCUMFLEX_B,
+        GK_IOTA_SUB, GK_DIAERESIS, GK_MACRON, GK_BREVE
+    ]);
+
+    const GREEK_BASE_LETTERS = {
+        'α': { s: 'a',  f: 'a'  }, 'β': { s: 'b',  f: 'b'  }, 'γ': { s: 'g',  f: 'g'  },
+        'δ': { s: 'd',  f: 'd'  }, 'ε': { s: 'e',  f: 'e'  }, 'ζ': { s: 'z',  f: 'z'  },
+        'η': { s: 'e',  f: 'ē'  }, 'θ': { s: 'th', f: 'th' }, 'ι': { s: 'i',  f: 'i'  },
+        'κ': { s: 'k',  f: 'k'  }, 'λ': { s: 'l',  f: 'l'  }, 'μ': { s: 'm',  f: 'm'  },
+        'ν': { s: 'n',  f: 'n'  }, 'ξ': { s: 'x',  f: 'x'  }, 'ο': { s: 'o',  f: 'o'  },
+        'π': { s: 'p',  f: 'p'  }, 'ρ': { s: 'r',  f: 'r'  }, 'σ': { s: 's',  f: 's'  },
+        'ς': { s: 's',  f: 's'  }, 'τ': { s: 't',  f: 't'  }, 'υ': { s: 'u',  f: 'u'  },
+        'φ': { s: 'ph', f: 'ph' }, 'χ': { s: 'kh', f: 'kh' }, 'ψ': { s: 'ps', f: 'ps' },
+        'ω': { s: 'o',  f: 'ō'  },
+    };
+    const GREEK_DIPHTHONGS = {
+        'αι': { s: 'ai', f: 'ai' }, 'ει': { s: 'ei', f: 'ei' }, 'οι': { s: 'oi', f: 'oi' },
+        'υι': { s: 'ui', f: 'ui' }, 'αυ': { s: 'au', f: 'au' }, 'ευ': { s: 'eu', f: 'eu' },
+        'ηυ': { s: 'eu', f: 'ēu' }, 'ου': { s: 'ou', f: 'ou' },
+    };
+    const GREEK_PUNCT_MAP = {
+        '\u037E': '?',   // Greek question mark
+        '\u0387': ';',   // ano teleia
+        '\u1FBD': "'",   // koronis (elision)
+        '\u1FBF': "'",   // psili used standalone
+        '\u1FFE': "'",   // dasia used standalone
+    };
+    const GK_LATIN_VOWELS = 'aeiouyēō';
+
+    function _gkGroupLetters(nfdStr) {
+        const letters = [];
+        for (const ch of nfdStr) {
+            if (GK_COMBINING_MARKS.has(ch) && letters.length) {
+                letters[letters.length - 1].marks.push(ch);
+            } else {
+                letters.push({ base: ch, marks: [] });
+            }
+        }
+        return letters;
+    }
+
+    function _gkMergeDiphthongs(letters) {
+        const out = [];
+        for (let i = 0; i < letters.length; i++) {
+            const cur = letters[i];
+            const nxt = letters[i + 1];
+            if (nxt) {
+                const curLower = cur.base.toLowerCase();
+                const nxtLower = nxt.base.toLowerCase();
+                const pairKey = curLower + nxtLower;
+                const hasDiaeresis = nxt.marks.includes(GK_DIAERESIS);
+                const curHasIotaSub = cur.marks.includes(GK_IOTA_SUB);
+                if (GREEK_DIPHTHONGS[pairKey] && !hasDiaeresis && !curHasIotaSub) {
+                    out.push({
+                        diphthong: pairKey,
+                        marks: cur.marks.concat(nxt.marks),
+                        isUpper: cur.base !== curLower,
+                    });
+                    i++; // consumed the second vowel
+                    continue;
+                }
+            }
+            out.push({ base: cur.base, marks: cur.marks, isUpper: cur.base !== cur.base.toLowerCase() });
+        }
+        return out;
+    }
+
+    function _gkInsertAccent(str, accentMark) {
+        // Greek writes the accent over a diphthong's second vowel (e.g. αἵ ->
+        // haî, not hâi), so scan from the end and mark the last Latin vowel.
+        for (let i = str.length - 1; i >= 0; i--) {
+            if (GK_LATIN_VOWELS.includes(str[i])) {
+                return str.slice(0, i + 1) + accentMark + str.slice(i + 1);
+            }
+        }
+        return str + accentMark;
+    }
+
+    function _gkRenderUnit(unit, mode, nextBaseLower) {
+        let latin;
+        if (unit.diphthong) {
+            const d = GREEK_DIPHTHONGS[unit.diphthong];
+            latin = (mode === 'full') ? d.f : d.s;
+        } else {
+            const lower = unit.base.toLowerCase();
+            const entry = GREEK_BASE_LETTERS[lower];
+            if (!entry) {
+                // Not a recognized Greek letter (punctuation, space, markup char).
+                return (GREEK_PUNCT_MAP[unit.base] !== undefined) ? GREEK_PUNCT_MAP[unit.base] : unit.base;
+            }
+            latin = (mode === 'full') ? entry.f : entry.s;
+            if (lower === 'γ' && nextBaseLower && 'γκξχ'.includes(nextBaseLower)) {
+                latin = 'n'; // gamma nasal (ἄγγελος -> angelos)
+            }
+            if (lower === 'ρ') {
+                latin = unit.marks.includes(GK_ROUGH) ? 'rh' : 'r';
+            }
+        }
+        const isRho = !unit.diphthong && unit.base.toLowerCase() === 'ρ';
+        if (!isRho && unit.marks.includes(GK_ROUGH)) {
+            latin = 'h' + latin;
+        }
+        if (mode === 'full') {
+            if (unit.marks.includes(GK_ACUTE)) latin = _gkInsertAccent(latin, GK_ACUTE);
+            else if (unit.marks.includes(GK_GRAVE)) latin = _gkInsertAccent(latin, GK_GRAVE);
+            else if (unit.marks.includes(GK_CIRCUMFLEX_A) || unit.marks.includes(GK_CIRCUMFLEX_B)) latin = _gkInsertAccent(latin, '\u0302');
+            if (unit.marks.includes(GK_IOTA_SUB)) latin += 'i';
+        }
+        if (unit.isUpper) latin = latin.charAt(0).toUpperCase() + latin.slice(1);
+        return latin;
+    }
+
+    function transliterateGreekWord(word, mode) {
+        const nfd = word.normalize('NFD');
+        const letters = _gkGroupLetters(nfd);
+        const units = _gkMergeDiphthongs(letters);
+        let result = '';
+        for (let i = 0; i < units.length; i++) {
+            const nxt = units[i + 1];
+            const nextBaseLower = nxt ? (nxt.diphthong ? nxt.diphthong[0] : nxt.base.toLowerCase()) : null;
+            result += _gkRenderUnit(units[i], mode, nextBaseLower);
+        }
+        return result.normalize('NFC');
+    }
+
+    // Matches contiguous runs of Greek/Coptic + Greek Extended codepoints
+    // (letters, breathing/accent marks, and Greek-specific punctuation).
+    // Anything outside these ranges — HTML tags, attributes, English text,
+    // ASCII punctuation — is left completely untouched.
+    const GREEK_RUN_REGEX = /[\u0370-\u03FF\u1F00-\u1FFF]+/gu;
+    // Non-global sibling used purely for "does this contain any Greek at all"
+    // checks (a global regex's .test() mutates lastIndex between calls, which
+    // would silently break repeated presence checks across renders).
+    const GREEK_HAS_REGEX = /[\u0370-\u03FF\u1F00-\u1FFF]/u;
+
+    function transliterateHtmlFragment(html, mode) {
+        if (!mode) return html;
+        return html.replace(GREEK_RUN_REGEX, (run) => transliterateGreekWord(run, mode));
+    }
+
+    // Re-derives a column's displayed HTML from its stored native-Greek
+    // snapshot, applying (or clearing) transliteration without touching the DB.
+    // Walks a live DOM subtree and transliterates (or restores) its text nodes
+    // in place, without touching element structure — safe for parts of the
+    // page (like the treebank view) that attach click handlers via
+    // addEventListener rather than inline onclick, which innerHTML
+    // replacement would silently destroy.
+    function walkAndTransliterateNode(rootEl, mode) {
+        if (!rootEl) return;
+        const walker = document.createTreeWalker(rootEl, NodeFilter.SHOW_TEXT, null);
+        let node;
+        while ((node = walker.nextNode())) {
+            if (node.__gkOriginal === undefined) node.__gkOriginal = node.nodeValue;
+            node.nodeValue = mode ? transliterateHtmlFragment(node.__gkOriginal, mode) : node.__gkOriginal;
+        }
+    }
+
+    function applyGreekTransliteration(prefix) {
+        const targetContainer = document.getElementById(`content_${prefix}`);
+        if (!targetContainer) return;
+        const mode = columnTranslitMode[prefix] || '';
+        if (columnGreekOriginalHtml[prefix] !== undefined) {
+            const original = columnGreekOriginalHtml[prefix];
+            targetContainer.innerHTML = mode ? transliterateHtmlFragment(original, mode) : original;
+        } else {
+            walkAndTransliterateNode(targetContainer, mode);
+        }
+    }
+
+    // Re-syncs a token detail panel (populated asynchronously on click, after
+    // the column's initial transliteration pass already ran) to whatever
+    // mode its column currently has selected.
+    function _tbApplyTranslitToPanel(panel) {
+        const containerEl = panel.closest && panel.closest('[id^="content_"]');
+        if (!containerEl) return;
+        const prefix = containerEl.id.slice(8);
+        walkAndTransliterateNode(panel, columnTranslitMode[prefix] || '');
+    }
+
+    window.onTranslitModeChange = function(prefix, mode) {
+        columnTranslitMode[prefix] = mode;
+        applyGreekTransliteration(prefix);
+    };
+
     // TREEBANK_DATA["tg.wk/vid"][chapter] -> [ {subdoc, section, tokens, prose, literal}, ... ]
     const _TB_CACHE = new Map();
     function _hydrateTreebank(tbKey) {
@@ -37,7 +243,7 @@
         const [tg, work] = tbKey.slice(0, slash).split(".");
         const vid = tbKey.slice(slash + 1);
         const rows = _dbRows(
-            "SELECT subdoc, section, chapter, sentence_json, prose_translation, literal_translation, transliteration " +
+            "SELECT subdoc, section, chapter, sentence_json, prose_translation, literal_translation, transliteration, credits_json " +
             "FROM treebank_sentences WHERE textgroup=? AND work=? AND version_short_id=? ORDER BY id",
             [tg, work, vid]);
         let out = null;
@@ -48,7 +254,8 @@
                     subdoc: r.subdoc, section: r.section,
                     tokens: _jp(r.sentence_json, []),
                     prose: r.prose_translation, literal: r.literal_translation,
-                    translit: r.transliteration
+                    translit: r.transliteration,
+                    credits: _jp(r.credits_json, null)
                 });
             });
         }
@@ -57,6 +264,31 @@
     }
     const TREEBANK_DATA = new Proxy({}, {
         get: (_t, k) => (typeof k === "string" ? _hydrateTreebank(k) : undefined)
+    });
+
+    // TREEBANK_DOC_CREDITS["tg.wk/vid"] -> { annotators: [{name,address}], source: "..." }
+    // Document-level fallback credits, used whenever a sentence doesn't carry
+    // its own "# sentannotators" line (the common case).
+    const _TB_CREDITS_CACHE = new Map();
+    function _hydrateTreebankDocCredits(tbKey) {
+        if (_TB_CREDITS_CACHE.has(tbKey)) return _TB_CREDITS_CACHE.get(tbKey);
+        if (!window.dbInstance) return null;
+        const slash = tbKey.lastIndexOf("/");
+        const [tg, work] = tbKey.slice(0, slash).split(".");
+        const vid = tbKey.slice(slash + 1);
+        const rows = _dbRows(
+            "SELECT source_repo, credits_json FROM treebank_doc_credits " +
+            "WHERE textgroup=? AND work=? AND version_short_id=?",
+            [tg, work, vid]);
+        let out = { annotators: [], source: null };
+        if (rows.length) {
+            out = { annotators: _jp(rows[0].credits_json, []) || [], source: rows[0].source_repo || null };
+        }
+        _TB_CREDITS_CACHE.set(tbKey, out);
+        return out;
+    }
+    const TREEBANK_DOC_CREDITS = new Proxy({}, {
+        get: (_t, k) => (typeof k === "string" ? _hydrateTreebankDocCredits(k) : null)
     });
 
     // SPEAKERS_DATA["tg.wk"][subdoc] -> speaker
@@ -166,10 +398,14 @@ function parseCtsUrn(urn) {
              workKey: `${m[2]}.${m[3]}` };
 }
 
-// FLAT layout: data/<textgroup>/<work>/<tg>.<wk>.db. The path is fully
-// determined by the work key alone — no namespace tier, no catalog lookup.
+// FLAT layout: data/<textgroup>/<work>/<tg>.<wk>.part1.db. This is now only a
+// last-resort GUESS used if catalog.json can't be reached at all — the real
+// source of truth for which file(s) make up a work is catalog.json's
+// per-work `parts` list (see shardPartPathsForWorkKey below), since a large
+// work may be split into several book-range parts to stay under GitHub's
+// 100MB per-file limit.
 function shardPathFor(textgroup, work) {
-    return `${DATA_DIR}/${textgroup}/${work}/${textgroup}.${work}.db`;
+    return `${DATA_DIR}/${textgroup}/${work}/${textgroup}.${work}.part1.db`;
 }
 function shardPathForWorkKey(workKey) {
     const [tg, wk] = workKey.split(".");
@@ -184,18 +420,37 @@ async function loadCatalog() {
     return CATALOG;
 }
 
-// Fetch + open a shard for a work; cached and de-duplicated.
+// Every work's shard files, in order, from catalog.json's `parts` list.
+// Falls back to a single guessed path if the catalog can't be read at all
+// or doesn't have this work's parts recorded (e.g. a stale catalog.json).
+async function shardPartPathsForWorkKey(workKey, shardPathHint) {
+    try {
+        const catalog = await loadCatalog();
+        const meta = catalog.works && catalog.works[workKey];
+        if (meta && Array.isArray(meta.parts) && meta.parts.length) {
+            const [tg, wk] = workKey.split(".");
+            return meta.parts.map(p => `${DATA_DIR}/${tg}/${wk}/${p.file}`);
+        }
+    } catch (e) {
+        console.warn(`Could not read catalog.json parts for ${workKey}, falling back to a guessed path:`, e);
+    }
+    return [shardPathHint || shardPathForWorkKey(workKey)];
+}
+
+// Fetch + open a shard for a work; cached and de-duplicated. If the work is
+// split into multiple book-range parts, every part is fetched and merged
+// into a single in-memory database before being cached/returned, so the
+// rest of the app (treebankForChapter, alignmentsForPair, etc.) keeps
+// working against one `db` handle exactly as it did before any work was
+// ever split into multiple files on disk — the split is invisible past
+// this point.
 async function getDbForWork(workKey, shardPathHint) {
     if (SHARD_CACHE.has(workKey)) return SHARD_CACHE.get(workKey);
     if (SHARD_INFLIGHT.has(workKey)) return SHARD_INFLIGHT.get(workKey);
 
-    const path = shardPathHint || shardPathForWorkKey(workKey);
-
     const p = (async () => {
-        const resp = await fetch(`./${path}`);
-        if (!resp.ok) throw new Error(`Shard not found: ${path}`);
-        const buf = new Uint8Array(await resp.arrayBuffer());
-        const db = new window.SQL_WASM_ENGINE.Database(buf);
+        const partPaths = await shardPartPathsForWorkKey(workKey, shardPathHint);
+        const db = await loadAndMergeParts(partPaths);
         SHARD_CACHE.set(workKey, db);
         SHARD_INFLIGHT.delete(workKey);
         return db;
@@ -203,6 +458,63 @@ async function getDbForWork(workKey, shardPathHint) {
     SHARD_INFLIGHT.set(workKey, p);
     return p;
 }
+
+// Fetches every part file's bytes and merges them into one in-memory
+// sql.js Database (the first part becomes the primary connection; the rest
+// are merged into it, then closed). A single-part work just opens normally.
+async function loadAndMergeParts(partPaths) {
+    const buffers = await Promise.all(partPaths.map(async path => {
+        const resp = await fetch(`./${path}`);
+        if (!resp.ok) throw new Error(`Shard part not found: ${path}`);
+        return new Uint8Array(await resp.arrayBuffer());
+    }));
+
+    const primary = new window.SQL_WASM_ENGINE.Database(buffers[0]);
+    if (buffers.length > 1) {
+        primary.exec("BEGIN TRANSACTION");
+        try {
+            for (let i = 1; i < buffers.length; i++) {
+                const part = new window.SQL_WASM_ENGINE.Database(buffers[i]);
+                mergePartInto(primary, part);
+                part.close();
+            }
+            primary.exec("COMMIT");
+        } catch (e) {
+            primary.exec("ROLLBACK");
+            throw e;
+        }
+    }
+    return primary;
+}
+
+// Copies every row of every table in `part` into `primary`, keeping each
+// row's ORIGINAL id. The notebook's sharder always inserts the full column
+// list (id included) when writing a part, so autoincrement never
+// reassigns a value there — every row's id is inherited straight from the
+// shared monolith, never reassigned per part. That makes a single
+// INSERT OR IGNORE correct and sufficient for every table:
+//  - Partitioned tables (alignment_grid, text_segments, treebank_sentences,
+//    treebank_tokens, metrical_lines) have disjoint ids between parts
+//    (each part only holds its own book range's rows), so every row from
+//    `part` just gets added.
+//  - Wholesale tables (text_units, treebank_speakers, token_alignments,
+//    edition_line_alignments) are byte-identical copies of the same source
+//    rows in every part, WITH THE SAME ids — so INSERT OR IGNORE correctly
+//    dedupes them instead of creating duplicates.
+// (Verified against real generated part files before shipping this.)
+function mergePartInto(primary, part) {
+    const tables = queryAll(part, "SELECT name FROM sqlite_master WHERE type='table'").map(r => r.name);
+    for (const table of tables) {
+        const rows = queryAll(part, `SELECT * FROM ${table}`);
+        if (rows.length === 0) continue;
+        const cols = Object.keys(rows[0]);
+        const stmt = primary.prepare(
+            `INSERT OR IGNORE INTO ${table} (${cols.join(", ")}) VALUES (${cols.map(() => "?").join(", ")})`);
+        for (const row of rows) stmt.run(cols.map(c => row[c]));
+        stmt.free();
+    }
+}
+
 
 // Optional memory hygiene for long sessions / "own machine" use.
 function evictWorkExcept(keepWorkKey) {
@@ -258,6 +570,14 @@ let activeWorkKey = "tlg0003.tlg001";
     let activeColumnsCount = 3;
     let columnEditions = { f: "", c1: "", c2: "", c3: "", c4: "", c5: "", c6: "" };
 
+    // ── Greek transliteration state ────────────────────────────────────
+    // Per-column mode: '' (native Greek) | 'simple' | 'full'. Persists across
+    // re-renders so switching chapters keeps the reader's chosen view.
+    let columnTranslitMode = { f: "", c1: "", c2: "", c3: "", c4: "", c5: "", c6: "" };
+    // Per-column snapshot of the un-transliterated HTML, captured each render
+    // so toggling back to native Greek is lossless (no round-trip decay).
+    let columnGreekOriginalHtml = {};
+
     // ── Diff state ───────────────────────────────────────────────────
     let diffEnabled = false;
 
@@ -269,32 +589,89 @@ let activeWorkKey = "tlg0003.tlg001";
 
     
     
-    // Full "Author Title" names — kept as a fallback for the grouped picker.
-    const WORK_NAMES = {
-        "tlg0003.tlg001": "Thucydides History",
-        "tlg0011.tlg004": "Sophocles Oedipus Rex",
-        "tlg0012.tlg001": "Homer Iliad",
-        "tlg0012.tlg002": "Homer Odyssey",
-        "tlg0086.tlg034": "Aristotle Poetics"
-    };
-
     // Author (textgroup) display names used to group the splash list.
     const AUTHOR_NAMES = {
         "tlg0003": "Thucydides",
         "tlg0011": "Sophocles",
         "tlg0012": "Homer",
+        "tlg0020": "Hesiod",
+        "tlg0085": "Aeschylus",
         "tlg0086": "Aristotle"
     };
 
-    // Per-work short titles shown under each author heading.
+    // Per-work short titles shown under each author heading. This is the
+    // only place a new work's display name needs to be added -- there used
+    // to be a second "WORK_NAMES" map here too (full "Author Title" strings,
+    // typed out by hand), but it was just AUTHOR_NAMES + WORK_TITLES
+    // duplicated, and had silently fallen out of sync (missing Hesiod's
+    // "Works and Days" and "Shield of Heracles", which only WORK_TITLES had).
+    // Removed -- the fallback below builds the full name from these two maps
+    // instead of requiring a third one to be kept in sync by hand.
     const WORK_TITLES = {
         "tlg0003.tlg001": "History",
+        "tlg0011.tlg001": "Trachiniai",
         "tlg0011.tlg002": "Antigone",
+        "tlg0011.tlg003": "Ajax",
         "tlg0011.tlg004": "Oedipus Rex",
+        "tlg0011.tlg005": "Electra",
+        "tlg0011.tlg006": "Philoctetes",
+        "tlg0011.tlg007": "Oedipus at Colonus",
         "tlg0012.tlg001": "Iliad",
         "tlg0012.tlg002": "Odyssey",
+        "tlg0020.tlg001": "Theogony",
+        "tlg0020.tlg002": "Works and Days",
+        "tlg0020.tlg003": "Shield of Heracles",
+        "tlg0085.tlg001": "Suppliant Women",
+        "tlg0085.tlg002": "Persians",
+        "tlg0085.tlg003": "Prometheus Bound",
+        "tlg0085.tlg004": "Seven Against Thebes",
+        "tlg0085.tlg005": "Agamemnon",
+        "tlg0085.tlg006": "Libation Bearers",
+        "tlg0085.tlg007": "Eumenides",
+
         "tlg0086.tlg034": "Poetics"
     };
+
+    // Right-hand summary chip for a work entry. Prefers a compact
+    // editions/translations/commentaries count, computed from
+    // meta.versions (short_id/urn/label/doc_type/text_class per version --
+    // already written into catalog.json by split_corpus_by_work() for every
+    // work, so no catalog-builder changes were needed for this). Falls back
+    // to total file size, computed defensively (meta.bytes if present and
+    // numeric, otherwise summed across meta.parts[].bytes, since the
+    // catalog builder records bytes per part but never sums a work-level
+    // total) -- and shows nothing at all rather than "NaNKB" if no usable
+    // number can be found either way.
+    function countDocTypes(versions) {
+        const counts = { edition: 0, translation: 0, commentary: 0 };
+        for (const v of versions || []) {
+            if (v && Object.prototype.hasOwnProperty.call(counts, v.doc_type)) {
+                counts[v.doc_type]++;
+            }
+        }
+        return counts;
+    }
+
+    function formatWorkMeta(meta) {
+        const counts = countDocTypes(meta.versions);
+        if (counts.edition || counts.translation || counts.commentary) {
+            const bits = [];
+            if (counts.edition) bits.push(counts.edition + " ed" + (counts.edition > 1 ? "s" : ""));
+            if (counts.translation) bits.push(counts.translation + " tr");
+            if (counts.commentary) bits.push(counts.commentary + " comm");
+            return bits.join(" · ");
+        }
+
+        let bytes = Number(meta.bytes);
+        if (!Number.isFinite(bytes) || bytes <= 0) {
+            if (Array.isArray(meta.parts) && meta.parts.length) {
+                const summed = meta.parts.reduce((sum, p) => sum + (Number(p.bytes) || 0), 0);
+                bytes = summed > 0 ? summed : NaN;
+            }
+        }
+        if (!Number.isFinite(bytes) || bytes <= 0) return "";
+        return bytes > 1e6 ? (bytes/1e6).toFixed(1)+"MB" : (bytes/1e3).toFixed(0)+"KB";
+    }
 
     function buildWorkPickerFromCatalog(catalog) {
         const works = catalog.works || {};
@@ -308,33 +685,57 @@ let activeWorkKey = "tlg0003.tlg001";
             (byAuthor[tg] = byAuthor[tg] || []).push(wk);
         }
 
-        let html = "<div style='padding:20px;max-width:800px;margin:0 auto;'>";
-        html += "<h2>Available Works</h2>";
-
         const authorKeys = Object.keys(byAuthor).sort((a, b) =>
             (AUTHOR_NAMES[a] || a).localeCompare(AUTHOR_NAMES[b] || b));
 
+        // Whether each author's group was left open/closed last time (manual
+        // toggles only -- filtering below expands/collapses temporarily
+        // without touching this).
+        const EXPANDED_KEY_PREFIX = "workPicker.expanded.";
+        function getStoredExpanded(tg, fallback) {
+            const v = localStorage.getItem(EXPANDED_KEY_PREFIX + tg);
+            return v === null ? fallback : v === "true";
+        }
+
+        let html = "<div style='padding:20px;max-width:800px;margin:0 auto;'>";
+        html += "<h2>Available Works</h2>";
+        html += "<input type='text' id='work-filter' placeholder='Filter works or authors…' " +
+                "style='width:100%;box-sizing:border-box;padding:8px 10px;margin-bottom:14px;" +
+                "border:1px solid #ccc;border-radius:4px;font-size:0.95em;'>";
+
         for (const tg of authorKeys) {
             const author = AUTHOR_NAMES[tg] || tg;
-            html += "<h3 style='margin:18px 0 6px;font-size:1.05em;color:#7a1f1f;" +
-                    "border-bottom:1px solid #e0d8c8;padding-bottom:3px;'>" + author + "</h3>";
-            html += "<ul style='list-style:none;padding:0;margin:0;'>";
-
             const workKeys = byAuthor[tg].sort((a, b) =>
                 (WORK_TITLES[a] || a).localeCompare(WORK_TITLES[b] || b));
 
+            // Default to open while the catalog is small; once there are
+            // enough authors that a full expansion is unwieldy, default new
+            // (never-toggled) groups to closed instead. Either way, a
+            // group's own manually-set state always wins.
+            const defaultOpen = authorKeys.length <= 8;
+            const isOpen = getStoredExpanded(tg, defaultOpen);
+
+            html += "<details class='author-group' data-author='" + tg + "'" +
+                    (isOpen ? " open" : "") + " style='margin:10px 0;'>";
+            html += "<summary style='cursor:pointer;font-size:1.05em;color:#7a1f1f;" +
+                    "border-bottom:1px solid #e0d8c8;padding-bottom:3px;list-style:revert;'>" +
+                    author + " <span class='author-count' style='color:#999;font-weight:normal;" +
+                    "font-size:0.85em;'>(" + workKeys.length + ")</span></summary>";
+            html += "<ul style='list-style:none;padding:0;margin:8px 0 0;'>";
+
             for (const wk of workKeys) {
                 const meta = works[wk];
-                const sz = meta.bytes > 1e6 ? (meta.bytes/1e6).toFixed(1)+"MB" : (meta.bytes/1e3).toFixed(0)+"KB";
-                const title = WORK_TITLES[wk] || WORK_NAMES[wk] || meta.label;
-                html += "<li data-work='" + wk + "' style='display:flex;align-items:baseline;" +
+                const sz = formatWorkMeta(meta);
+                const title = WORK_TITLES[wk] || meta.label;
+                html += "<li data-work='" + wk + "' data-search='" +
+                        (author + " " + title).toLowerCase() + "' style='display:flex;align-items:baseline;" +
                         "justify-content:space-between;gap:12px;margin:8px 0;padding:12px 14px;" +
                         "border:1px solid #ddd;border-radius:4px;cursor:pointer;background:#f9f9f9;'>";
                 html += "<strong style='flex:1 1 auto;min-width:0;'>" + title + "</strong>";
                 html += "<span style='flex:0 0 auto;color:#999;font-size:0.9em;white-space:nowrap;'>" + sz + "</span>";
                 html += "</li>";
             }
-            html += "</ul>";
+            html += "</ul></details>";
         }
 
         html += "</div>";
@@ -346,6 +747,42 @@ let activeWorkKey = "tlg0003.tlg001";
                 selectWorkAndRoute(this.getAttribute("data-work"));
             };
         });
+
+        // Persist manual open/close toggles per author, but only when the
+        // filter box is empty -- while filtering, groups are forced open
+        // temporarily (see below) and that shouldn't overwrite a user's
+        // real preference.
+        root.querySelectorAll("details.author-group").forEach(el => {
+            el.addEventListener("toggle", function() {
+                const filterEl = document.getElementById("work-filter");
+                if (filterEl && filterEl.value.trim() !== "") return;
+                localStorage.setItem(EXPANDED_KEY_PREFIX + this.getAttribute("data-author"), String(this.open));
+            });
+        });
+
+        // Filter box: hides non-matching works, auto-opens any group with a
+        // match, hides groups with none, and restores each group's own
+        // stored open/closed state when the filter is cleared.
+        const filterInput = document.getElementById("work-filter");
+        if (filterInput) {
+            filterInput.oninput = function() {
+                const q = this.value.trim().toLowerCase();
+                root.querySelectorAll("details.author-group").forEach(details => {
+                    let anyVisible = false;
+                    details.querySelectorAll("li[data-work]").forEach(li => {
+                        const match = q === "" || li.getAttribute("data-search").includes(q);
+                        li.style.display = match ? "" : "none";
+                        if (match) anyVisible = true;
+                    });
+                    details.style.display = anyVisible ? "" : "none";
+                    if (q === "") {
+                        details.open = getStoredExpanded(details.getAttribute("data-author"), authorKeys.length <= 8);
+                    } else {
+                        details.open = anyVisible;
+                    }
+                });
+            };
+        }
     }
     
     async function selectWorkAndRoute(wk) {
@@ -478,7 +915,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012."); 
+        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
     }
     function naturalSectionKeys(obj) {
         return Object.keys(obj).sort((a, b) => {
@@ -1467,18 +1904,23 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         const wKey = activeWorkKey;
         const vid  = activeEditionMeta.short_id;
         const tbKey = `${wKey}/${vid}`;
+        const prefix = container.id.replace('content_', '');
+        delete columnGreekOriginalHtml[prefix]; // treebank always uses the DOM-walk transliteration strategy
         const chapterData = TREEBANK_DATA[tbKey];
         if (!chapterData) {
             container.innerHTML = '<p style="color:#999;font-style:italic;padding:12px">No treebank data for this chapter.</p>';
+            setTranslitControlVisible(prefix, false);
             return;
         }
         const chapter = payload.chapter;
         const allSentences = chapterData[chapter] || [];
         if (allSentences.length === 0) {
             container.innerHTML = '<p style="color:#999;font-style:italic;padding:12px">No treebank sentences for chapter ' + chapter + '.</p>';
+            setTranslitControlVisible(prefix, false);
             return;
         }
         const speakerMap = SPEAKERS_DATA[wKey] || {};
+        const docCredits = TREEBANK_DOC_CREDITS[tbKey] || { annotators: [], source: null };
         const isPoetry = isPoetryWork(wKey);
         container.innerHTML = '';
 
@@ -1587,6 +2029,50 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 block.appendChild(spkEl);
             }
 
+            // Credits: prefer this sentence's own "# sentannotators" (the
+            // exception — some files vary annotator by sentence); otherwise
+            // fall back to the document-level roster (the common case).
+            const sentCredits = sent.credits
+                || (docCredits.annotators.length
+                    ? docCredits.annotators.map(a => ({ name: a.name, address: a.address, role: null }))
+                    : null);
+            if ((sentCredits && sentCredits.length) || docCredits.source) {
+                const credWrap = document.createElement('div');
+                credWrap.className = 'tb-credits-wrap';
+                const toggle = document.createElement('a');
+                toggle.href = 'javascript:void(0)';
+                toggle.className = 'tb-credits-toggle';
+                toggle.textContent = 'Show Metadata';
+                const box = document.createElement('div');
+                box.className = 'tb-credits-box';
+                box.style.display = 'none';
+                if (sentCredits && sentCredits.length) {
+                    const annotSection = document.createElement('div');
+                    annotSection.className = 'tb-credits-section';
+                    annotSection.innerHTML = '<div class="tb-credits-heading">Annotator</div>' +
+                        sentCredits.map(c =>
+                            `<div class="tb-credits-line">${escHtml(c.name)}${c.address ? ', ' + escHtml(c.address) : ''}</div>`
+                        ).join('');
+                    box.appendChild(annotSection);
+                }
+                if (docCredits.source) {
+                    const srcSection = document.createElement('div');
+                    srcSection.className = 'tb-credits-section';
+                    srcSection.innerHTML = '<div class="tb-credits-heading">Source</div>' +
+                        `<div class="tb-credits-line">${escHtml(docCredits.source)}</div>`;
+                    box.appendChild(srcSection);
+                }
+                toggle.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const isOpen = box.style.display !== 'none';
+                    box.style.display = isOpen ? 'none' : '';
+                    toggle.textContent = isOpen ? 'Show Metadata' : 'Hide Metadata';
+                });
+                credWrap.appendChild(toggle);
+                credWrap.appendChild(box);
+                block.appendChild(credWrap);
+            }
+
             // Prose translation on top, so Arabic / translit / gloss / treebank sit together below it
             if (sent.prose) {
                 const trans = document.createElement('div');
@@ -1598,12 +2084,53 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 block.appendChild(trans);
             }
 
+            // Filled in once the token-selection handler (tbSelect, or the poetry
+            // equivalent) exists below — lets the tokenised translit spans below
+            // trigger the same cross-row highlight even though they're built first.
+            let tbSelectRef = null;
+
+            if (sent.translit) {
+                const trLine = document.createElement('div');
+                trLine.className = 'tb-trans-translit';
+                trLine.setAttribute('dir', 'ltr');
+                const trLabel = document.createElement('span');
+                trLabel.className = 'tb-trans-label';
+                trLabel.textContent = 'Translit';
+                trLine.appendChild(trLabel);
+                trLine.appendChild(document.createTextNode(' '));
+
+                if (sent.tokens.some(t => t.translit)) {
+                    // Tokenised: one span per token, carrying the same data-tok-id
+                    // as the original-script row, gloss row, and literal row, so
+                    // clicking (or being selected via) any of them highlights here too.
+                    sent.tokens.forEach(tok => {
+                        const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
+                        const trSpan = document.createElement('span');
+                        trSpan.className = 'tb-tok tb-translit-tok' + (isPunct ? ' tb-punct' : '');
+                        trSpan.dataset.tokId = tok.id;
+                        trSpan.textContent = tok.translit || tok.form;
+                        if (!isPunct) trSpan.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            if (tbSelectRef) tbSelectRef(tok.id);
+                        });
+                        trLine.appendChild(trSpan);
+                        if (!isPunct) trLine.appendChild(document.createTextNode(' '));
+                    });
+                } else {
+                    // No per-token translit data on this sentence — fall back to the
+                    // plain sentence-level string (not click/highlightable).
+                    trLine.appendChild(document.createTextNode(sent.translit));
+                }
+                block.appendChild(trLine);
+            }
+
+
             // ── View mode: 'tree' = full annotation grid + collapsible dependency tree; 'text' = interlinear rows ──
             const tbMode = window.__tbMode || 'text';
             if (tbMode === 'tree') {
                 tbRenderGrid(block, sent);   // grid: every annotation as a row, one column per word (replaces interlinear)
                 tbRenderTree(block, sent);   // collapsible dependency syntax tree below the grid
-            } else {
+             } else {
             // Token row layout configuration
             const tokRow = document.createElement('div');
             tokRow.className = 'tb-token-row';
@@ -1634,8 +2161,10 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 if (panel) {
                     panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
                     panel.classList.add('tb-detail-visible');
+                    _tbApplyTranslitToPanel(panel);
                 }
             };
+            tbSelectRef = tbSelect;
 
             if (isPoetry) {
                 // Poetry Grid Container to match your standard 5-column structural layout rule
@@ -1643,7 +2172,25 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 poetryGrid.className = 'poetry-grid-layout';
                 
                 let currentLineWrapper = null;
-                
+                let currentTokensRow = null;
+                let currentGlossRow = null;
+                const sentHasGloss = sent.tokens.some(t => t.gloss);
+
+                function startNewLineWrapper() {
+                    currentLineWrapper = document.createElement('div');
+                    currentLineWrapper.className = 'line-text-cell';
+                    currentTokensRow = document.createElement('div');
+                    currentTokensRow.className = 'line-tokens-row';
+                    currentLineWrapper.appendChild(currentTokensRow);
+                    if (sentHasGloss) {
+                        currentGlossRow = document.createElement('div');
+                        currentGlossRow.className = 'line-gloss-row tb-gloss-row';
+                        currentLineWrapper.appendChild(currentGlossRow);
+                    } else {
+                        currentGlossRow = null;
+                    }
+                }
+
                 sent.tokens.forEach((tok, tIdx) => {
                     const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
                     const currentTokenLine = tok.ref ? tok.ref.trim() : null;
@@ -1651,15 +2198,19 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     // 1. Detect if this is the very start of a sentence AND it continues an existing line
                     if (tIdx === 0 && currentTokenLine && currentTokenLine === lastSeenLineNum) {
                         // Insert an inline indentation block to signal an antilabe/mid-line sentence split
+                        if (!currentLineWrapper) startNewLineWrapper();
                         const indentSpacer = document.createElement('span');
                         indentSpacer.style.display = 'inline-block';
                         indentSpacer.style.width = '3em';
                         indentSpacer.innerHTML = '&nbsp;';
-                        if (!currentLineWrapper) {
-                            currentLineWrapper = document.createElement('div');
-                            currentLineWrapper.className = 'line-text-cell';
+                        currentTokensRow.appendChild(indentSpacer);
+                        if (currentGlossRow) {
+                            const glIndentSpacer = document.createElement('span');
+                            glIndentSpacer.style.display = 'inline-block';
+                            glIndentSpacer.style.width = '3em';
+                            glIndentSpacer.innerHTML = '&nbsp;';
+                            currentGlossRow.appendChild(glIndentSpacer);
                         }
-                        currentLineWrapper.appendChild(indentSpacer);
                     }
 
                     // 2. Handle a brand new line number boundary shift
@@ -1678,14 +2229,15 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         poetryGrid.appendChild(numCell);
 
                         // Create matching text container cell for tokens on this line
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        // (holds a token row and, when this sentence carries glosses, a
+                        // gloss row stacked directly beneath it so glosses follow the
+                        // poetic linebreaks rather than sentence breaks)
+                        startNewLineWrapper();
                     }
 
                     // Fallback container wrap if metadata fields are missing a Ref tag
                     if (!currentLineWrapper) {
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        startNewLineWrapper();
                     }
 
                     // Build token span item
@@ -1694,36 +2246,34 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     span.dataset.tokId = tok.id;
                     span.textContent = tok.form;
 
-                    if (!isPunct) {
-                        span.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            const wasActive = span.classList.contains('tb-active');
-                            block.querySelectorAll('.tb-tok').forEach(s => s.classList.remove('tb-active','tb-is-head','tb-is-dep'));
-                            block.querySelectorAll('.tb-lit-word').forEach(s => s.classList.remove('tb-lit-active'));
-                            block.querySelector('.tb-detail-panel').innerHTML = '';
-                            block.querySelector('.tb-detail-panel').classList.remove('tb-detail-visible');
-                            if (wasActive) return;
-                            
-                            span.classList.add('tb-active');
-                            if (tok.head > 0) {
-                                const headSpan = poetryGrid.querySelector(`[data-tok-id="${tok.head}"]`);
-                                if (headSpan) headSpan.classList.add('tb-is-head');
-                            }
-                            sent.tokens.filter(t => t.head === tok.id).forEach(dep => {
-                                const depSpan = poetryGrid.querySelector(`[data-tok-id="${dep.id}"]`);
-                                if (depSpan) depSpan.classList.add('tb-is-dep');
-                            });
-                            tbHighlightLiteral(block, alignment, tok.id, true);
-                            const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
-                            const depToks = sent.tokens.filter(t => t.head === tok.id && t.upos !== 'PUNCT');
-                            const panel = block.querySelector('.tb-detail-panel');
-                            panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
-                            panel.classList.add('tb-detail-visible');
-                        });
+                    // Matching gloss span, stacked directly under this token on the
+                    // line's own gloss row (skips punctuation, same as the prose gloss row)
+                    let glossSpan = null;
+                    if (currentGlossRow && !isPunct) {
+                        glossSpan = document.createElement('span');
+                        glossSpan.className = 'tb-tok tb-gloss-tok';
+                        glossSpan.dataset.tokId = tok.id;
+                        glossSpan.textContent = tok.gloss || '·';
                     }
 
-                    currentLineWrapper.appendChild(span);
-                    if (!isPunct) currentLineWrapper.appendChild(document.createTextNode(' '));
+                    if (!isPunct) {
+                        // Shared with prose: block-scoped (not poetryGrid-scoped), so it
+                        // also lights up matching data-tok-id spans that live outside the
+                        // poetry grid — e.g. the tokenised translit row above.
+                        const selectThisToken = (e) => {
+                            e.stopPropagation();
+                            tbSelect(tok.id);
+                        };
+                        span.addEventListener('click', selectThisToken);
+                        if (glossSpan) glossSpan.addEventListener('click', selectThisToken);
+                    }
+
+                    currentTokensRow.appendChild(span);
+                    if (!isPunct) currentTokensRow.appendChild(document.createTextNode(' '));
+                    if (currentGlossRow) {
+                        if (glossSpan) currentGlossRow.appendChild(glossSpan);
+                        if (!isPunct) currentGlossRow.appendChild(document.createTextNode(' '));
+                    }
                 });
 
                 // Append trailing grid line row to final grid container
@@ -1745,6 +2295,13 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 });
             }
             block.appendChild(tokRow);
+
+            if (litWords.length) {
+                const litRow = document.createElement('div');
+                litRow.className = 'tb-literal-row';
+                litRow.innerHTML = `<span class="tb-trans-label">Literal</span> ${tbLiteralHtml(litWords)}`;
+                block.appendChild(litRow);
+            }
 
             // Parallel clickable transliteration row (one span per token, same selection)
             if (!isPoetry && sent.tokens.some(t => t.translit)) {
@@ -1825,21 +2382,38 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             ${nextBtnHtml}
         `;
         container.appendChild(footer);
+
+        // Greek transliteration: same content-based detection as reading
+        // columns, but applied via DOM text-node walking (walkAndTransliterateNode)
+        // rather than an innerHTML swap, since the treebank view attaches its
+        // click-to-highlight/detail-panel handlers with addEventListener —
+        // replacing innerHTML here would silently strip them.
+        const hasGreek = GREEK_HAS_REGEX.test(container.textContent);
+        setTranslitControlVisible(prefix, hasGreek);
+        if (hasGreek) {
+            const savedMode = document.getElementById(`translit_${prefix}`);
+            if (savedMode) savedMode.value = columnTranslitMode[prefix] || '';
+            applyGreekTransliteration(prefix);
+        }
     }
 
     function renderMetricalColumn(container, activeEditionMeta, payload) {
         const wKey  = activeWorkKey;
         const vid   = activeEditionMeta.short_id;
         const mKey  = `${wKey}/${vid}`;
+        const prefix = container.id.replace('content_', '');
+        delete columnGreekOriginalHtml[prefix]; // metrical always uses the DOM-walk transliteration strategy
         const chapterData = METRICAL_DATA[mKey];
         if (!chapterData) {
             container.innerHTML = '<p style="color:#999;font-style:italic;padding:12px">No metrical data loaded.</p>';
+            setTranslitControlVisible(prefix, false);
             return;
         }
         const chapter = payload.chapter;
         const lineMap = chapterData[chapter];
         if (!lineMap || Object.keys(lineMap).length === 0) {
             container.innerHTML = `<p style="color:#999;font-style:italic;padding:12px">No metrical data for chapter ${chapter}.</p>`;
+            setTranslitControlVisible(prefix, false);
             return;
         }
 
@@ -1979,6 +2553,17 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             wrapper.appendChild(lineUnit);
         });
         container.appendChild(wrapper);
+
+        // Greek transliteration: same DOM-walk strategy as the treebank view.
+        // Metrical lines are built purely with createElement/textContent (no
+        // click handlers at all here), so this is even lower-risk than treebank.
+        const hasGreek = GREEK_HAS_REGEX.test(container.textContent);
+        setTranslitControlVisible(prefix, hasGreek);
+        if (hasGreek) {
+            const savedMode = document.getElementById(`translit_${prefix}`);
+            if (savedMode) savedMode.value = columnTranslitMode[prefix] || '';
+            applyGreekTransliteration(prefix);
+        }
     }
 
     function tbNorm(s) {
@@ -2240,7 +2825,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         const ht = headOf(t) ? byId.get(headOf(t)) : null;
                         const dps = (kids.get(t.id) || []).map(id => byId.get(id)).filter(d => d && d.upos !== 'PUNCT');
                         const panel = block.querySelector('.tb-detail-panel');
-                        if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); }
+                        if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
                     }
                 });
                 svg.appendChild(g);
@@ -2293,7 +2878,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             grid.querySelectorAll('.tb-gcell.tb-gcol-active').forEach(c => c.classList.remove('tb-gcol-active'));
             grid.querySelectorAll('.tb-gcell[data-tok-id="' + t.id + '"]').forEach(c => c.classList.add('tb-gcol-active'));
             const panel = block.querySelector('.tb-detail-panel');
-            if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); }
+            if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
         };
 
         rows.forEach(r => {
@@ -2459,7 +3044,30 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 ${nextBtnHtml}
             `;
             targetContainer.appendChild(footer);
+
+            // Greek transliteration: gate on whether this column's *rendered
+            // content* actually contains Greek right now, not on the edition's
+            // declared class. A translation column with Greek in its footnotes,
+            // or a commentary column that's mostly English discussion around
+            // quoted Greek, both qualify — only the Greek runs get converted,
+            // everything else in the column passes through untouched.
+            const containerHtml = targetContainer.innerHTML;
+            const isGreekColumn = GREEK_HAS_REGEX.test(containerHtml);
+            setTranslitControlVisible(prefix, isGreekColumn);
+            if (isGreekColumn) {
+                columnGreekOriginalHtml[prefix] = containerHtml;
+                const savedMode = document.getElementById(`translit_${prefix}`);
+                if (savedMode) savedMode.value = columnTranslitMode[prefix] || '';
+                applyGreekTransliteration(prefix);
+            } else {
+                delete columnGreekOriginalHtml[prefix];
+            }
         });
+    }
+
+    function setTranslitControlVisible(prefix, visible) {
+        const el = document.getElementById(`translit_${prefix}`);
+        if (el) el.style.display = visible ? '' : 'none';
     }
 
     window.navigateAdjacentUrn = function(urn) {

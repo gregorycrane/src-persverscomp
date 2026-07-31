@@ -530,6 +530,7 @@ let activeWorkKey = "tlg0003.tlg001";
     const WORK_TITLES = {
         "tlg0003.tlg001": "History",
         "tlg0011.tlg002": "Antigone",
+        "tlg0011.tlg003": "Ajax",
         "tlg0011.tlg004": "Oedipus Rex",
         "tlg0012.tlg001": "Iliad",
         "tlg0012.tlg002": "Odyssey",
@@ -1933,7 +1934,25 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 poetryGrid.className = 'poetry-grid-layout';
                 
                 let currentLineWrapper = null;
-                
+                let currentTokensRow = null;
+                let currentGlossRow = null;
+                const sentHasGloss = sent.tokens.some(t => t.gloss);
+
+                function startNewLineWrapper() {
+                    currentLineWrapper = document.createElement('div');
+                    currentLineWrapper.className = 'line-text-cell';
+                    currentTokensRow = document.createElement('div');
+                    currentTokensRow.className = 'line-tokens-row';
+                    currentLineWrapper.appendChild(currentTokensRow);
+                    if (sentHasGloss) {
+                        currentGlossRow = document.createElement('div');
+                        currentGlossRow.className = 'line-gloss-row tb-gloss-row';
+                        currentLineWrapper.appendChild(currentGlossRow);
+                    } else {
+                        currentGlossRow = null;
+                    }
+                }
+
                 sent.tokens.forEach((tok, tIdx) => {
                     const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
                     const currentTokenLine = tok.ref ? tok.ref.trim() : null;
@@ -1941,15 +1960,19 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     // 1. Detect if this is the very start of a sentence AND it continues an existing line
                     if (tIdx === 0 && currentTokenLine && currentTokenLine === lastSeenLineNum) {
                         // Insert an inline indentation block to signal an antilabe/mid-line sentence split
+                        if (!currentLineWrapper) startNewLineWrapper();
                         const indentSpacer = document.createElement('span');
                         indentSpacer.style.display = 'inline-block';
                         indentSpacer.style.width = '3em';
                         indentSpacer.innerHTML = '&nbsp;';
-                        if (!currentLineWrapper) {
-                            currentLineWrapper = document.createElement('div');
-                            currentLineWrapper.className = 'line-text-cell';
+                        currentTokensRow.appendChild(indentSpacer);
+                        if (currentGlossRow) {
+                            const glIndentSpacer = document.createElement('span');
+                            glIndentSpacer.style.display = 'inline-block';
+                            glIndentSpacer.style.width = '3em';
+                            glIndentSpacer.innerHTML = '&nbsp;';
+                            currentGlossRow.appendChild(glIndentSpacer);
                         }
-                        currentLineWrapper.appendChild(indentSpacer);
                     }
 
                     // 2. Handle a brand new line number boundary shift
@@ -1968,14 +1991,15 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         poetryGrid.appendChild(numCell);
 
                         // Create matching text container cell for tokens on this line
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        // (holds a token row and, when this sentence carries glosses, a
+                        // gloss row stacked directly beneath it so glosses follow the
+                        // poetic linebreaks rather than sentence breaks)
+                        startNewLineWrapper();
                     }
 
                     // Fallback container wrap if metadata fields are missing a Ref tag
                     if (!currentLineWrapper) {
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        startNewLineWrapper();
                     }
 
                     // Build token span item
@@ -1984,8 +2008,18 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     span.dataset.tokId = tok.id;
                     span.textContent = tok.form;
 
+                    // Matching gloss span, stacked directly under this token on the
+                    // line's own gloss row (skips punctuation, same as the prose gloss row)
+                    let glossSpan = null;
+                    if (currentGlossRow && !isPunct) {
+                        glossSpan = document.createElement('span');
+                        glossSpan.className = 'tb-tok tb-gloss-tok';
+                        glossSpan.dataset.tokId = tok.id;
+                        glossSpan.textContent = tok.gloss || '·';
+                    }
+
                     if (!isPunct) {
-                        span.addEventListener('click', (e) => {
+                        const selectThisToken = (e) => {
                             e.stopPropagation();
                             const wasActive = span.classList.contains('tb-active');
                             block.querySelectorAll('.tb-tok').forEach(s => s.classList.remove('tb-active','tb-is-head','tb-is-dep'));
@@ -1995,13 +2029,12 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                             if (wasActive) return;
                             
                             span.classList.add('tb-active');
+                            poetryGrid.querySelectorAll(`[data-tok-id="${tok.id}"]`).forEach(s => s.classList.add('tb-active'));
                             if (tok.head > 0) {
-                                const headSpan = poetryGrid.querySelector(`[data-tok-id="${tok.head}"]`);
-                                if (headSpan) headSpan.classList.add('tb-is-head');
+                                poetryGrid.querySelectorAll(`[data-tok-id="${tok.head}"]`).forEach(s => s.classList.add('tb-is-head'));
                             }
                             sent.tokens.filter(t => t.head === tok.id).forEach(dep => {
-                                const depSpan = poetryGrid.querySelector(`[data-tok-id="${dep.id}"]`);
-                                if (depSpan) depSpan.classList.add('tb-is-dep');
+                                poetryGrid.querySelectorAll(`[data-tok-id="${dep.id}"]`).forEach(s => s.classList.add('tb-is-dep'));
                             });
                             tbHighlightLiteral(block, alignment, tok.id, true);
                             const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
@@ -2010,11 +2043,17 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                             panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
                             panel.classList.add('tb-detail-visible');
                             _tbApplyTranslitToPanel(panel);
-                        });
+                        };
+                        span.addEventListener('click', selectThisToken);
+                        if (glossSpan) glossSpan.addEventListener('click', selectThisToken);
                     }
 
-                    currentLineWrapper.appendChild(span);
-                    if (!isPunct) currentLineWrapper.appendChild(document.createTextNode(' '));
+                    currentTokensRow.appendChild(span);
+                    if (!isPunct) currentTokensRow.appendChild(document.createTextNode(' '));
+                    if (currentGlossRow) {
+                        if (glossSpan) currentGlossRow.appendChild(glossSpan);
+                        if (!isPunct) currentGlossRow.appendChild(document.createTextNode(' '));
+                    }
                 });
 
                 // Append trailing grid line row to final grid container

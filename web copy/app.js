@@ -515,6 +515,9 @@ let activeWorkKey = "tlg0003.tlg001";
         "tlg0011.tlg004": "Sophocles Oedipus Rex",
         "tlg0012.tlg001": "Homer Iliad",
         "tlg0012.tlg002": "Homer Odyssey",
+        "tlg0020.tlg001": "Hesiod Theogony",
+        "tlg0020.tlg002": "Hesiod Works and Days",
+        "tlg0020.tlg003": "Hesiod Shield of Heracles",
         "tlg0086.tlg034": "Aristotle Poetics"
     };
 
@@ -523,6 +526,7 @@ let activeWorkKey = "tlg0003.tlg001";
         "tlg0003": "Thucydides",
         "tlg0011": "Sophocles",
         "tlg0012": "Homer",
+        "tlg0020": "Hesiod",
         "tlg0086": "Aristotle"
     };
 
@@ -530,9 +534,11 @@ let activeWorkKey = "tlg0003.tlg001";
     const WORK_TITLES = {
         "tlg0003.tlg001": "History",
         "tlg0011.tlg002": "Antigone",
+        "tlg0011.tlg003": "Ajax",
         "tlg0011.tlg004": "Oedipus Rex",
         "tlg0012.tlg001": "Iliad",
         "tlg0012.tlg002": "Odyssey",
+        "tlg0020.tlg001": "Theogony",
         "tlg0086.tlg034": "Poetics"
     };
 
@@ -718,7 +724,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012."); 
+        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi."); 
     }
     function naturalSectionKeys(obj) {
         return Object.keys(obj).sort((a, b) => {
@@ -1887,12 +1893,53 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 block.appendChild(trans);
             }
 
+            // Filled in once the token-selection handler (tbSelect, or the poetry
+            // equivalent) exists below — lets the tokenised translit spans below
+            // trigger the same cross-row highlight even though they're built first.
+            let tbSelectRef = null;
+
+            if (sent.translit) {
+                const trLine = document.createElement('div');
+                trLine.className = 'tb-trans-translit';
+                trLine.setAttribute('dir', 'ltr');
+                const trLabel = document.createElement('span');
+                trLabel.className = 'tb-trans-label';
+                trLabel.textContent = 'Translit';
+                trLine.appendChild(trLabel);
+                trLine.appendChild(document.createTextNode(' '));
+
+                if (sent.tokens.some(t => t.translit)) {
+                    // Tokenised: one span per token, carrying the same data-tok-id
+                    // as the original-script row, gloss row, and literal row, so
+                    // clicking (or being selected via) any of them highlights here too.
+                    sent.tokens.forEach(tok => {
+                        const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
+                        const trSpan = document.createElement('span');
+                        trSpan.className = 'tb-tok tb-translit-tok' + (isPunct ? ' tb-punct' : '');
+                        trSpan.dataset.tokId = tok.id;
+                        trSpan.textContent = tok.translit || tok.form;
+                        if (!isPunct) trSpan.addEventListener('click', (e) => {
+                            e.stopPropagation();
+                            if (tbSelectRef) tbSelectRef(tok.id);
+                        });
+                        trLine.appendChild(trSpan);
+                        if (!isPunct) trLine.appendChild(document.createTextNode(' '));
+                    });
+                } else {
+                    // No per-token translit data on this sentence — fall back to the
+                    // plain sentence-level string (not click/highlightable).
+                    trLine.appendChild(document.createTextNode(sent.translit));
+                }
+                block.appendChild(trLine);
+            }
+
+
             // ── View mode: 'tree' = full annotation grid + collapsible dependency tree; 'text' = interlinear rows ──
             const tbMode = window.__tbMode || 'text';
             if (tbMode === 'tree') {
                 tbRenderGrid(block, sent);   // grid: every annotation as a row, one column per word (replaces interlinear)
                 tbRenderTree(block, sent);   // collapsible dependency syntax tree below the grid
-            } else {
+             } else {
             // Token row layout configuration
             const tokRow = document.createElement('div');
             tokRow.className = 'tb-token-row';
@@ -1926,6 +1973,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     _tbApplyTranslitToPanel(panel);
                 }
             };
+            tbSelectRef = tbSelect;
 
             if (isPoetry) {
                 // Poetry Grid Container to match your standard 5-column structural layout rule
@@ -1933,7 +1981,25 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 poetryGrid.className = 'poetry-grid-layout';
                 
                 let currentLineWrapper = null;
-                
+                let currentTokensRow = null;
+                let currentGlossRow = null;
+                const sentHasGloss = sent.tokens.some(t => t.gloss);
+
+                function startNewLineWrapper() {
+                    currentLineWrapper = document.createElement('div');
+                    currentLineWrapper.className = 'line-text-cell';
+                    currentTokensRow = document.createElement('div');
+                    currentTokensRow.className = 'line-tokens-row';
+                    currentLineWrapper.appendChild(currentTokensRow);
+                    if (sentHasGloss) {
+                        currentGlossRow = document.createElement('div');
+                        currentGlossRow.className = 'line-gloss-row tb-gloss-row';
+                        currentLineWrapper.appendChild(currentGlossRow);
+                    } else {
+                        currentGlossRow = null;
+                    }
+                }
+
                 sent.tokens.forEach((tok, tIdx) => {
                     const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
                     const currentTokenLine = tok.ref ? tok.ref.trim() : null;
@@ -1941,15 +2007,19 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     // 1. Detect if this is the very start of a sentence AND it continues an existing line
                     if (tIdx === 0 && currentTokenLine && currentTokenLine === lastSeenLineNum) {
                         // Insert an inline indentation block to signal an antilabe/mid-line sentence split
+                        if (!currentLineWrapper) startNewLineWrapper();
                         const indentSpacer = document.createElement('span');
                         indentSpacer.style.display = 'inline-block';
                         indentSpacer.style.width = '3em';
                         indentSpacer.innerHTML = '&nbsp;';
-                        if (!currentLineWrapper) {
-                            currentLineWrapper = document.createElement('div');
-                            currentLineWrapper.className = 'line-text-cell';
+                        currentTokensRow.appendChild(indentSpacer);
+                        if (currentGlossRow) {
+                            const glIndentSpacer = document.createElement('span');
+                            glIndentSpacer.style.display = 'inline-block';
+                            glIndentSpacer.style.width = '3em';
+                            glIndentSpacer.innerHTML = '&nbsp;';
+                            currentGlossRow.appendChild(glIndentSpacer);
                         }
-                        currentLineWrapper.appendChild(indentSpacer);
                     }
 
                     // 2. Handle a brand new line number boundary shift
@@ -1968,14 +2038,15 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         poetryGrid.appendChild(numCell);
 
                         // Create matching text container cell for tokens on this line
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        // (holds a token row and, when this sentence carries glosses, a
+                        // gloss row stacked directly beneath it so glosses follow the
+                        // poetic linebreaks rather than sentence breaks)
+                        startNewLineWrapper();
                     }
 
                     // Fallback container wrap if metadata fields are missing a Ref tag
                     if (!currentLineWrapper) {
-                        currentLineWrapper = document.createElement('div');
-                        currentLineWrapper.className = 'line-text-cell';
+                        startNewLineWrapper();
                     }
 
                     // Build token span item
@@ -1984,37 +2055,34 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     span.dataset.tokId = tok.id;
                     span.textContent = tok.form;
 
-                    if (!isPunct) {
-                        span.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            const wasActive = span.classList.contains('tb-active');
-                            block.querySelectorAll('.tb-tok').forEach(s => s.classList.remove('tb-active','tb-is-head','tb-is-dep'));
-                            block.querySelectorAll('.tb-lit-word').forEach(s => s.classList.remove('tb-lit-active'));
-                            block.querySelector('.tb-detail-panel').innerHTML = '';
-                            block.querySelector('.tb-detail-panel').classList.remove('tb-detail-visible');
-                            if (wasActive) return;
-                            
-                            span.classList.add('tb-active');
-                            if (tok.head > 0) {
-                                const headSpan = poetryGrid.querySelector(`[data-tok-id="${tok.head}"]`);
-                                if (headSpan) headSpan.classList.add('tb-is-head');
-                            }
-                            sent.tokens.filter(t => t.head === tok.id).forEach(dep => {
-                                const depSpan = poetryGrid.querySelector(`[data-tok-id="${dep.id}"]`);
-                                if (depSpan) depSpan.classList.add('tb-is-dep');
-                            });
-                            tbHighlightLiteral(block, alignment, tok.id, true);
-                            const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
-                            const depToks = sent.tokens.filter(t => t.head === tok.id && t.upos !== 'PUNCT');
-                            const panel = block.querySelector('.tb-detail-panel');
-                            panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
-                            panel.classList.add('tb-detail-visible');
-                            _tbApplyTranslitToPanel(panel);
-                        });
+                    // Matching gloss span, stacked directly under this token on the
+                    // line's own gloss row (skips punctuation, same as the prose gloss row)
+                    let glossSpan = null;
+                    if (currentGlossRow && !isPunct) {
+                        glossSpan = document.createElement('span');
+                        glossSpan.className = 'tb-tok tb-gloss-tok';
+                        glossSpan.dataset.tokId = tok.id;
+                        glossSpan.textContent = tok.gloss || '·';
                     }
 
-                    currentLineWrapper.appendChild(span);
-                    if (!isPunct) currentLineWrapper.appendChild(document.createTextNode(' '));
+                    if (!isPunct) {
+                        // Shared with prose: block-scoped (not poetryGrid-scoped), so it
+                        // also lights up matching data-tok-id spans that live outside the
+                        // poetry grid — e.g. the tokenised translit row above.
+                        const selectThisToken = (e) => {
+                            e.stopPropagation();
+                            tbSelect(tok.id);
+                        };
+                        span.addEventListener('click', selectThisToken);
+                        if (glossSpan) glossSpan.addEventListener('click', selectThisToken);
+                    }
+
+                    currentTokensRow.appendChild(span);
+                    if (!isPunct) currentTokensRow.appendChild(document.createTextNode(' '));
+                    if (currentGlossRow) {
+                        if (glossSpan) currentGlossRow.appendChild(glossSpan);
+                        if (!isPunct) currentGlossRow.appendChild(document.createTextNode(' '));
+                    }
                 });
 
                 // Append trailing grid line row to final grid container
@@ -2036,6 +2104,13 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 });
             }
             block.appendChild(tokRow);
+
+            if (litWords.length) {
+                const litRow = document.createElement('div');
+                litRow.className = 'tb-literal-row';
+                litRow.innerHTML = `<span class="tb-trans-label">Literal</span> ${tbLiteralHtml(litWords)}`;
+                block.appendChild(litRow);
+            }
 
             // Parallel clickable transliteration row (one span per token, same selection)
             if (!isPoetry && sent.tokens.some(t => t.translit)) {

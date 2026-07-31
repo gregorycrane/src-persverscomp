@@ -7,6 +7,10 @@
         }
         a { color: #880000; text-decoration: none; font-weight: bold; }
 
+        .metrical-part-b {
+            margin-left: 1.4em;
+        }
+
         /* ── Inter-column Text Diff ────────────────────────────────── */
         .diff-token-del {
             background: #ffd7d7;
@@ -135,6 +139,7 @@
         .column-content-scroll { flex: 1; overflow-y: auto; padding: 15px; }
         .panel-header { background: #660000; color: #fff; padding: 4px 8px; font-size: 11px; font-weight: bold; position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
         .edition-select-dropdown { background: #fff; color: #333; font-size: 10px; padding: 1px 4px; border: 1px solid #ccc; border-radius: 2px; outline: none; cursor: pointer; }
+        .translit-mode-select { background: #fdf3e3; color: #660000; font-size: 10px; padding: 1px 4px; margin-left: 4px; border: 1px solid #d8c090; border-radius: 2px; outline: none; cursor: pointer; }
 
         /* Left Hand Rail Navigation */
         #classic-left-rail { display: none; width: auto; min-width: 80px; max-width: 320px; flex-shrink: 0; background: #f4f4f0; border-right: 1px solid #dcdcc8; padding: 10px 12px; overflow-y: auto; }
@@ -191,10 +196,12 @@
         #outer-wrapper.mode-classic #col_c1 { grid-column: 2; grid-row: 1; }
         #outer-wrapper.mode-classic #col_c2 { grid-column: 2; grid-row: 2; }
         #outer-wrapper.mode-classic #col_c3 { grid-column: 2; grid-row: 3; }
-        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; border-bottom: none; }
+        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; }
+        #outer-wrapper.mode-classic #col_c5 { grid-column: 2; grid-row: 5; }
+        #outer-wrapper.mode-classic #col_c6 { grid-column: 2; grid-row: 6; border-bottom: none; }
 
         /* Proportionate Grid Row Allocation */
-        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns) #main-container {
+        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns):not(.six-columns):not(.seven-columns) #main-container {
             grid-template-rows: 1fr 1fr;
         }
         #outer-wrapper.mode-classic.four-columns #main-container {
@@ -202,6 +209,12 @@
         }
         #outer-wrapper.mode-classic.five-columns #main-container {
             grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.six-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.seven-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         }
         
         /* Typographic Content Rendering Elements */
@@ -392,6 +405,13 @@
         /* ── Treebank column styles ──────────────────────────────── */
         .tb-sentence-block { border-bottom: 1px solid #f0efe8; padding: 8px 0 10px; }
         .tb-cit-label { font-size: 10px; color: #aaa; font-family: "Courier New",monospace; margin-bottom: 3px; }
+        .tb-credits-wrap { margin: 2px 0 6px; }
+        .tb-credits-toggle { font-size: 10px; color: #660000; text-decoration: none; cursor: pointer; }
+        .tb-credits-toggle:hover { text-decoration: underline; }
+        .tb-credits-box { margin-top: 4px; padding: 8px 10px; background: #f5f4ef; border: 1px solid #e0dfd5; border-radius: 3px; }
+        .tb-credits-section + .tb-credits-section { margin-top: 6px; }
+        .tb-credits-heading { font-size: 9px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin-bottom: 2px; }
+        .tb-credits-line { font-size: 11px; color: #444; line-height: 1.4; }
         .tb-speaker { font-size: 12px; margin-bottom: 3px; }
         .tb-speaker strong { color: #660000; }
         .tb-token-row { font-family: "Gentium Plus","GFS Didot",serif; font-size: 15px; line-height: 1.9; display: block; }
@@ -538,7 +558,7 @@
         .toggle-btn.col-scaler-btn { background: #333; color: #aaa; border-color: #555; font-size: 10px; padding: 2px 8px; margin-left: 4px; }
 
         /* Flexible Multi-Column State Handling Rules */
-        #col_c3, #col_c4, #resize-c2-c3, #resize-c3-c4 { display: none; }
+        #col_c3, #col_c4, #col_c5, #col_c6, #resize-c2-c3, #resize-c3-c4, #resize-c4-c5, #resize-c5-c6 { display: none; }
         
         .four-columns #col_c3 { display: flex !important; }
         .four-columns #resize-c2-c3 { display: block !important; }
@@ -546,7 +566,13 @@
         .five-columns #col_c3, .five-columns #col_c4 { display: flex !important; }
         .five-columns #resize-c2-c3, .five-columns #resize-c3-c4 { display: block !important; }
 
-        .four-columns.mode-parallel .reading-column,         .five-columns.mode-parallel .reading-column { flex: 1 !important; width: auto !important; }
+        .six-columns #col_c3, .six-columns #col_c4, .six-columns #col_c5 { display: flex !important; }
+        .six-columns #resize-c2-c3, .six-columns #resize-c3-c4, .six-columns #resize-c4-c5 { display: block !important; }
+
+        .seven-columns #col_c3, .seven-columns #col_c4, .seven-columns #col_c5, .seven-columns #col_c6 { display: flex !important; }
+        .seven-columns #resize-c2-c3, .seven-columns #resize-c3-c4, .seven-columns #resize-c4-c5, .seven-columns #resize-c5-c6 { display: block !important; }
+
+        .four-columns.mode-parallel .reading-column,         .five-columns.mode-parallel .reading-column,         .six-columns.mode-parallel .reading-column,         .seven-columns.mode-parallel .reading-column { flex: 1 !important; width: auto !important; }
 
         /* Fixed Classic Asymmetric Layout Rules */
         #outer-wrapper.mode-classic #classic-left-rail { 
@@ -571,10 +597,12 @@
         #outer-wrapper.mode-classic #col_c1 { grid-column: 2; grid-row: 1; border-bottom: 1px solid #ccc; }
         #outer-wrapper.mode-classic #col_c2 { grid-column: 2; grid-row: 2; border-bottom: 1px solid #ccc; }
         #outer-wrapper.mode-classic #col_c3 { grid-column: 2; grid-row: 3; border-bottom: 1px solid #ccc; }
-        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; }
+        #outer-wrapper.mode-classic #col_c4 { grid-column: 2; grid-row: 4; border-bottom: 1px solid #ccc; }
+        #outer-wrapper.mode-classic #col_c5 { grid-column: 2; grid-row: 5; border-bottom: 1px solid #ccc; }
+        #outer-wrapper.mode-classic #col_c6 { grid-column: 2; grid-row: 6; }
 
         /* Dynamic Row Definitions based on Column count configuration */
-        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns) #main-container {
+        #outer-wrapper.mode-classic:not(.four-columns):not(.five-columns):not(.six-columns):not(.seven-columns) #main-container {
             grid-template-rows: 1fr 1fr;
         }
         #outer-wrapper.mode-classic.four-columns #main-container {
@@ -582,6 +610,12 @@
         }
         #outer-wrapper.mode-classic.five-columns #main-container {
             grid-template-rows: 1fr 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.six-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        }
+        #outer-wrapper.mode-classic.seven-columns #main-container {
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
         }
 
         /* Ensure prose structural divisions expand naturally */
