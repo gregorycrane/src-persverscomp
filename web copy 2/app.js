@@ -389,173 +389,6 @@ const SHARD_INFLIGHT = new Map(); // workKey -> Promise (dedupe concurrent loads
 
 const DATA_DIR = "site/data";
 
-// ── Author-level lexica (Cunliffe, Dindorf, ...) ───────────────────────────
-// Separate from the work-shard cache above: lexica are keyed by shard FILE
-// (a shard can bundle several lexicon_ids, e.g. Cunliffe words + names),
-// not by work, and are loaded lazily on first token click rather than
-// eagerly with the work.
-let LEXICA_CATALOG = null;
-const LEXICON_SHARD_CACHE = new Map();    // shardFile -> sql.js Database
-const LEXICON_SHARD_INFLIGHT = new Map(); // shardFile -> Promise
-
-// Top-level copy of escHtml -- the lexicon functions below live at module
-// scope, but the existing escHtml() is nested inside renderTreebankColumn()
-// and isn't reachable from here. Same implementation, kept in sync.
-function escHtmlTopLevel(s) {
-    if (!s) return '';
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-async function loadLexicaCatalog() {
-    if (LEXICA_CATALOG) return LEXICA_CATALOG;
-    try {
-        const r = await fetch(`./site/lexica.json?v=${Date.now()}`, { cache: "no-store" });
-        if (!r.ok) throw new Error("lexica.json not found");
-        LEXICA_CATALOG = await r.json();
-    } catch (e) {
-        console.warn("[lexica] no lexica.json (no lexica configured for this build):", e.message);
-        LEXICA_CATALOG = { lexica: {}, textgroups: {} };
-    }
-    return LEXICA_CATALOG;
-}
-
-// Which lexicon_ids apply to a textgroup, each with its shard file + display meta.
-async function lexiconsForTextgroup(textgroup) {
-    const catalog = await loadLexicaCatalog();
-    const ids = catalog.textgroups[textgroup] || [];
-    return ids.map(id => ({ lexicon_id: id, ...catalog.lexica[id] }));
-}
-
-async function getLexiconShard(shardFile) {
-    if (LEXICON_SHARD_CACHE.has(shardFile)) return LEXICON_SHARD_CACHE.get(shardFile);
-    if (LEXICON_SHARD_INFLIGHT.has(shardFile)) return LEXICON_SHARD_INFLIGHT.get(shardFile);
-
-    const p = (async () => {
-        const resp = await fetch(`./site/data/lexica/${shardFile}`);
-        if (!resp.ok) throw new Error(`Lexicon shard not found: ${shardFile}`);
-        const buf = new Uint8Array(await resp.arrayBuffer());
-        const db = new window.SQL_WASM_ENGINE.Database(buf);
-        LEXICON_SHARD_CACHE.set(shardFile, db);
-        LEXICON_SHARD_INFLIGHT.delete(shardFile);
-        return db;
-    })();
-    LEXICON_SHARD_INFLIGHT.set(shardFile, p);
-    return p;
-}
-
-// Same accent/case-folding logic as the notebook's norm_key() (Cell 1b/1c) --
-// MUST be kept in sync so a token's lemma and a lexicon's headword_key are
-// directly comparable. Strips Greek polytonic diacritics (combining marks),
-// folds final sigma, lowercases.
-function normalizeHeadwordKey(s) {
-    if (!s) return null;
-    let t = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    t = t.normalize('NFC').toLowerCase();
-    t = t.replace(/\u03c2/g, '\u03c3'); // final sigma -> medial sigma
-    return t;
-}
-
-// Looks up one lexicon's entries for a normalized headword key, resolving
-// through lexicon_aliases first (covers "see X" pointer entries) so a hit
-// on an alias returns the fuller target entry instead of a stub.
-function lookupLexiconEntries(db, lexiconId, headwordKey) {
-    if (!headwordKey) return [];
-    const direct = queryAll(db,
-        "SELECT entry_id, headword_display, entry_html FROM lexicon_entries " +
-        "WHERE lexicon_id=? AND headword_key=?", [lexiconId, headwordKey]);
-    if (direct.length) return direct;
-    const aliasHit = queryAll(db,
-        "SELECT entry_id FROM lexicon_aliases WHERE lexicon_id=? AND alias_key=?",
-        [lexiconId, headwordKey]);
-    if (aliasHit.length) {
-        const ids = aliasHit.map(r => r.entry_id);
-        const placeholders = ids.map(() => "?").join(",");
-        return queryAll(db,
-            `SELECT entry_id, headword_display, entry_html FROM lexicon_entries ` +
-            `WHERE lexicon_id=? AND entry_id IN (${placeholders})`, [lexiconId, ...ids]);
-    }
-    return [];
-}
-
-function lookupLexiconEntryById(db, lexiconId, entryId) {
-    const rows = queryAll(db,
-        "SELECT entry_id, headword_display, entry_html FROM lexicon_entries " +
-        "WHERE lexicon_id=? AND entry_id=?", [lexiconId, entryId]);
-    return rows[0] || null;
-}
-
-function renderLexiconBlock(lexMeta, entryRows) {
-    if (!entryRows.length) {
-        return `<div class="tb-lex-empty">No entry in ${escHtmlTopLevel(lexMeta.title)}</div>`;
-    }
-    const body = entryRows.map(row => `
-        <div class="tb-lex-headword tb-greek">${escHtmlTopLevel(row.headword_display)}</div>
-        <div class="tb-lex-body">${row.entry_html}</div>
-    `).join('<div class="tb-lex-divider"></div>');
-    return `
-        <div class="tb-lex-entry">
-            <div class="tb-lex-source">${escHtmlTopLevel(lexMeta.title)}</div>
-            ${body}
-        </div>`;
-}
-
-// Called after the base detail panel (gloss/lemma/morph) is already shown,
-// so the dictionary lookup never blocks the synchronous part of the panel.
-// `slot` is an empty <div> already in the DOM; this fills it in place once
-// the relevant shard(s) have loaded, tolerating a work with no configured
-// lexica (slot just stays empty, nothing printed).
-async function populateLexiconSlot(slot, tok, textgroup) {
-    const lexica = await lexiconsForTextgroup(textgroup);
-    if (!lexica.length) return;
-
-    const key = normalizeHeadwordKey(tok.lemma && tok.lemma !== '_' ? tok.lemma : tok.form);
-    if (!key) return;
-
-    // Proper-name tokens check the names lexicon (if any) first, so a
-    // homograph between a common word and a name resolves to the more
-    // relevant one when both exist.
-    const ordered = tok.upos === 'PROPN'
-        ? [...lexica].sort((a, b) => (a.entry_kind === 'name' ? -1 : 1))
-        : lexica;
-
-    let html = '';
-    for (const lex of ordered) {
-        try {
-            const db = await getLexiconShard(lex.shard);
-            const rows = lookupLexiconEntries(db, lex.lexicon_id, key);
-            if (rows.length) html += renderLexiconBlock(lex, rows);
-        } catch (e) {
-            console.warn(`[lexica] lookup failed for ${lex.lexicon_id}:`, e);
-        }
-    }
-    if (html) slot.innerHTML = html;
-    // If nothing at all was found across every configured lexicon, the slot
-    // is left empty rather than printing an empty-state per lexicon --
-    // quieter for the common case of function words with no dictionary entry.
-}
-
-// Global so it can be called from onclick="" attributes baked into
-// entry_html at build time (see notebook Cell 1c's _lex_inline_html).
-async function openLexiconEntry(lexiconId, entryId) {
-    const catalog = await loadLexicaCatalog();
-    const lexMeta = catalog.lexica[lexiconId];
-    if (!lexMeta) { console.warn(`[lexica] unknown lexicon_id: ${lexiconId}`); return; }
-    try {
-        const db = await getLexiconShard(lexMeta.shard);
-        const row = lookupLexiconEntryById(db, lexiconId, entryId);
-        if (!row) { console.warn(`[lexica] entry not found: ${lexiconId}/${entryId}`); return; }
-        const panel = document.querySelector('.tb-detail-panel.tb-detail-visible .tb-lex-slot')
-                   || document.querySelector('.tb-detail-panel.tb-detail-visible');
-        if (panel) {
-            panel.innerHTML = renderLexiconBlock(lexMeta, [row]);
-            panel.scrollIntoView({ block: "nearest" });
-        }
-    } catch (e) {
-        console.warn(`[lexica] openLexiconEntry failed:`, e);
-    }
-}
-window.openLexiconEntry = openLexiconEntry;
-
 // urn:cts:greekLit:tlg0012.tlg001.perseus-grc2:1.10  ->  parts
 function parseCtsUrn(urn) {
     const m = /^urn:cts:([^:]+):([^.]+)\.([^.:]+)(?:\.([^:]+))?(?::(.*))?$/.exec(urn || "");
@@ -2326,7 +2159,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
                 const depToks = sent.tokens.filter(t => t.head === tok.id && t.upos !== 'PUNCT');
                 if (panel) {
-                    _tbFillDetailPanel(panel, tok, headTok, depToks);
+                    panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
+                    panel.classList.add('tb-detail-visible');
+                    _tbApplyTranslitToPanel(panel);
                 }
             };
             tbSelectRef = tbSelect;
@@ -2861,22 +2696,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const dl = depToks.map(d => `<span class="tb-rel-chip" style="background:${tbRelColor(d.deprel)};font-size:9px">${escHtml(d.deprel)}</span>&nbsp;<span class="tb-greek">${escHtml(d.form)}</span>`).join('&ensp;');
             h += `<span class="tb-dk">Depends</span><span class="tb-dv">${dl}</span>`;
         }
-        return h + '</div><div class="tb-lex-slot"></div>';
-    }
-
-    // Shared by all three token-detail call sites (text-mode interlinear,
-    // tree-mode dependency diagram, tree-mode annotation grid). Fills the
-    // panel synchronously as before, then kicks off the lexicon lookup
-    // without blocking -- the dictionary section fades in once its shard
-    // has loaded (first click on a work is the only slow one; the shard
-    // is cached for every click after that).
-    function _tbFillDetailPanel(panel, tok, headTok, depToks) {
-        panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
-        panel.classList.add('tb-detail-visible');
-        _tbApplyTranslitToPanel(panel);
-        const slot = panel.querySelector('.tb-lex-slot');
-        const textgroup = (typeof activeWorkKey === 'string' ? activeWorkKey.split('.')[0] : null);
-        if (slot && textgroup) populateLexiconSlot(slot, tok, textgroup);
+        return h + '</div>';
     }
 
     // ── Dependency syntax-tree renderer (Tree mode) ──
@@ -3005,7 +2825,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         const ht = headOf(t) ? byId.get(headOf(t)) : null;
                         const dps = (kids.get(t.id) || []).map(id => byId.get(id)).filter(d => d && d.upos !== 'PUNCT');
                         const panel = block.querySelector('.tb-detail-panel');
-                        if (panel) { _tbFillDetailPanel(panel, t, ht, dps); }
+                        if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
                     }
                 });
                 svg.appendChild(g);
@@ -3058,7 +2878,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             grid.querySelectorAll('.tb-gcell.tb-gcol-active').forEach(c => c.classList.remove('tb-gcol-active'));
             grid.querySelectorAll('.tb-gcell[data-tok-id="' + t.id + '"]').forEach(c => c.classList.add('tb-gcol-active'));
             const panel = block.querySelector('.tb-detail-panel');
-            if (panel) { _tbFillDetailPanel(panel, t, ht, dps); }
+            if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
         };
 
         rows.forEach(r => {

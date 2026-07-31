@@ -61,13 +61,13 @@
         'κ': { s: 'k',  f: 'k'  }, 'λ': { s: 'l',  f: 'l'  }, 'μ': { s: 'm',  f: 'm'  },
         'ν': { s: 'n',  f: 'n'  }, 'ξ': { s: 'x',  f: 'x'  }, 'ο': { s: 'o',  f: 'o'  },
         'π': { s: 'p',  f: 'p'  }, 'ρ': { s: 'r',  f: 'r'  }, 'σ': { s: 's',  f: 's'  },
-        'ς': { s: 's',  f: 's'  }, 'τ': { s: 't',  f: 't'  }, 'υ': { s: 'u',  f: 'u'  },
-        'φ': { s: 'ph', f: 'ph' }, 'χ': { s: 'kh', f: 'kh' }, 'ψ': { s: 'ps', f: 'ps' },
+        'ς': { s: 's',  f: 's'  }, 'τ': { s: 't',  f: 't'  }, 'υ': { s: 'y',  f: 'y'  },
+        'φ': { s: 'ph', f: 'ph' }, 'χ': { s: 'ch', f: 'ch' }, 'ψ': { s: 'ps', f: 'ps' },
         'ω': { s: 'o',  f: 'ō'  },
     };
     const GREEK_DIPHTHONGS = {
         'αι': { s: 'ai', f: 'ai' }, 'ει': { s: 'ei', f: 'ei' }, 'οι': { s: 'oi', f: 'oi' },
-        'υι': { s: 'ui', f: 'ui' }, 'αυ': { s: 'au', f: 'au' }, 'ευ': { s: 'eu', f: 'eu' },
+        'υι': { s: 'yi', f: 'yi' }, 'αυ': { s: 'au', f: 'au' }, 'ευ': { s: 'eu', f: 'eu' },
         'ηυ': { s: 'eu', f: 'ēu' }, 'ου': { s: 'ou', f: 'ou' },
     };
     const GREEK_PUNCT_MAP = {
@@ -389,173 +389,6 @@ const SHARD_INFLIGHT = new Map(); // workKey -> Promise (dedupe concurrent loads
 
 const DATA_DIR = "site/data";
 
-// ── Author-level lexica (Cunliffe, Dindorf, ...) ───────────────────────────
-// Separate from the work-shard cache above: lexica are keyed by shard FILE
-// (a shard can bundle several lexicon_ids, e.g. Cunliffe words + names),
-// not by work, and are loaded lazily on first token click rather than
-// eagerly with the work.
-let LEXICA_CATALOG = null;
-const LEXICON_SHARD_CACHE = new Map();    // shardFile -> sql.js Database
-const LEXICON_SHARD_INFLIGHT = new Map(); // shardFile -> Promise
-
-// Top-level copy of escHtml -- the lexicon functions below live at module
-// scope, but the existing escHtml() is nested inside renderTreebankColumn()
-// and isn't reachable from here. Same implementation, kept in sync.
-function escHtmlTopLevel(s) {
-    if (!s) return '';
-    return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-async function loadLexicaCatalog() {
-    if (LEXICA_CATALOG) return LEXICA_CATALOG;
-    try {
-        const r = await fetch(`./site/lexica.json?v=${Date.now()}`, { cache: "no-store" });
-        if (!r.ok) throw new Error("lexica.json not found");
-        LEXICA_CATALOG = await r.json();
-    } catch (e) {
-        console.warn("[lexica] no lexica.json (no lexica configured for this build):", e.message);
-        LEXICA_CATALOG = { lexica: {}, textgroups: {} };
-    }
-    return LEXICA_CATALOG;
-}
-
-// Which lexicon_ids apply to a textgroup, each with its shard file + display meta.
-async function lexiconsForTextgroup(textgroup) {
-    const catalog = await loadLexicaCatalog();
-    const ids = catalog.textgroups[textgroup] || [];
-    return ids.map(id => ({ lexicon_id: id, ...catalog.lexica[id] }));
-}
-
-async function getLexiconShard(shardFile) {
-    if (LEXICON_SHARD_CACHE.has(shardFile)) return LEXICON_SHARD_CACHE.get(shardFile);
-    if (LEXICON_SHARD_INFLIGHT.has(shardFile)) return LEXICON_SHARD_INFLIGHT.get(shardFile);
-
-    const p = (async () => {
-        const resp = await fetch(`./site/data/lexica/${shardFile}`);
-        if (!resp.ok) throw new Error(`Lexicon shard not found: ${shardFile}`);
-        const buf = new Uint8Array(await resp.arrayBuffer());
-        const db = new window.SQL_WASM_ENGINE.Database(buf);
-        LEXICON_SHARD_CACHE.set(shardFile, db);
-        LEXICON_SHARD_INFLIGHT.delete(shardFile);
-        return db;
-    })();
-    LEXICON_SHARD_INFLIGHT.set(shardFile, p);
-    return p;
-}
-
-// Same accent/case-folding logic as the notebook's norm_key() (Cell 1b/1c) --
-// MUST be kept in sync so a token's lemma and a lexicon's headword_key are
-// directly comparable. Strips Greek polytonic diacritics (combining marks),
-// folds final sigma, lowercases.
-function normalizeHeadwordKey(s) {
-    if (!s) return null;
-    let t = s.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-    t = t.normalize('NFC').toLowerCase();
-    t = t.replace(/\u03c2/g, '\u03c3'); // final sigma -> medial sigma
-    return t;
-}
-
-// Looks up one lexicon's entries for a normalized headword key, resolving
-// through lexicon_aliases first (covers "see X" pointer entries) so a hit
-// on an alias returns the fuller target entry instead of a stub.
-function lookupLexiconEntries(db, lexiconId, headwordKey) {
-    if (!headwordKey) return [];
-    const direct = queryAll(db,
-        "SELECT entry_id, headword_display, entry_html FROM lexicon_entries " +
-        "WHERE lexicon_id=? AND headword_key=?", [lexiconId, headwordKey]);
-    if (direct.length) return direct;
-    const aliasHit = queryAll(db,
-        "SELECT entry_id FROM lexicon_aliases WHERE lexicon_id=? AND alias_key=?",
-        [lexiconId, headwordKey]);
-    if (aliasHit.length) {
-        const ids = aliasHit.map(r => r.entry_id);
-        const placeholders = ids.map(() => "?").join(",");
-        return queryAll(db,
-            `SELECT entry_id, headword_display, entry_html FROM lexicon_entries ` +
-            `WHERE lexicon_id=? AND entry_id IN (${placeholders})`, [lexiconId, ...ids]);
-    }
-    return [];
-}
-
-function lookupLexiconEntryById(db, lexiconId, entryId) {
-    const rows = queryAll(db,
-        "SELECT entry_id, headword_display, entry_html FROM lexicon_entries " +
-        "WHERE lexicon_id=? AND entry_id=?", [lexiconId, entryId]);
-    return rows[0] || null;
-}
-
-function renderLexiconBlock(lexMeta, entryRows) {
-    if (!entryRows.length) {
-        return `<div class="tb-lex-empty">No entry in ${escHtmlTopLevel(lexMeta.title)}</div>`;
-    }
-    const body = entryRows.map(row => `
-        <div class="tb-lex-headword tb-greek">${escHtmlTopLevel(row.headword_display)}</div>
-        <div class="tb-lex-body">${row.entry_html}</div>
-    `).join('<div class="tb-lex-divider"></div>');
-    return `
-        <div class="tb-lex-entry">
-            <div class="tb-lex-source">${escHtmlTopLevel(lexMeta.title)}</div>
-            ${body}
-        </div>`;
-}
-
-// Called after the base detail panel (gloss/lemma/morph) is already shown,
-// so the dictionary lookup never blocks the synchronous part of the panel.
-// `slot` is an empty <div> already in the DOM; this fills it in place once
-// the relevant shard(s) have loaded, tolerating a work with no configured
-// lexica (slot just stays empty, nothing printed).
-async function populateLexiconSlot(slot, tok, textgroup) {
-    const lexica = await lexiconsForTextgroup(textgroup);
-    if (!lexica.length) return;
-
-    const key = normalizeHeadwordKey(tok.lemma && tok.lemma !== '_' ? tok.lemma : tok.form);
-    if (!key) return;
-
-    // Proper-name tokens check the names lexicon (if any) first, so a
-    // homograph between a common word and a name resolves to the more
-    // relevant one when both exist.
-    const ordered = tok.upos === 'PROPN'
-        ? [...lexica].sort((a, b) => (a.entry_kind === 'name' ? -1 : 1))
-        : lexica;
-
-    let html = '';
-    for (const lex of ordered) {
-        try {
-            const db = await getLexiconShard(lex.shard);
-            const rows = lookupLexiconEntries(db, lex.lexicon_id, key);
-            if (rows.length) html += renderLexiconBlock(lex, rows);
-        } catch (e) {
-            console.warn(`[lexica] lookup failed for ${lex.lexicon_id}:`, e);
-        }
-    }
-    if (html) slot.innerHTML = html;
-    // If nothing at all was found across every configured lexicon, the slot
-    // is left empty rather than printing an empty-state per lexicon --
-    // quieter for the common case of function words with no dictionary entry.
-}
-
-// Global so it can be called from onclick="" attributes baked into
-// entry_html at build time (see notebook Cell 1c's _lex_inline_html).
-async function openLexiconEntry(lexiconId, entryId) {
-    const catalog = await loadLexicaCatalog();
-    const lexMeta = catalog.lexica[lexiconId];
-    if (!lexMeta) { console.warn(`[lexica] unknown lexicon_id: ${lexiconId}`); return; }
-    try {
-        const db = await getLexiconShard(lexMeta.shard);
-        const row = lookupLexiconEntryById(db, lexiconId, entryId);
-        if (!row) { console.warn(`[lexica] entry not found: ${lexiconId}/${entryId}`); return; }
-        const panel = document.querySelector('.tb-detail-panel.tb-detail-visible .tb-lex-slot')
-                   || document.querySelector('.tb-detail-panel.tb-detail-visible');
-        if (panel) {
-            panel.innerHTML = renderLexiconBlock(lexMeta, [row]);
-            panel.scrollIntoView({ block: "nearest" });
-        }
-    } catch (e) {
-        console.warn(`[lexica] openLexiconEntry failed:`, e);
-    }
-}
-window.openLexiconEntry = openLexiconEntry;
-
 // urn:cts:greekLit:tlg0012.tlg001.perseus-grc2:1.10  ->  parts
 function parseCtsUrn(urn) {
     const m = /^urn:cts:([^:]+):([^.]+)\.([^.:]+)(?:\.([^:]+))?(?::(.*))?$/.exec(urn || "");
@@ -565,14 +398,10 @@ function parseCtsUrn(urn) {
              workKey: `${m[2]}.${m[3]}` };
 }
 
-// FLAT layout: data/<textgroup>/<work>/<tg>.<wk>.part1.db. This is now only a
-// last-resort GUESS used if catalog.json can't be reached at all — the real
-// source of truth for which file(s) make up a work is catalog.json's
-// per-work `parts` list (see shardPartPathsForWorkKey below), since a large
-// work may be split into several book-range parts to stay under GitHub's
-// 100MB per-file limit.
+// FLAT layout: data/<textgroup>/<work>/<tg>.<wk>.db. The path is fully
+// determined by the work key alone — no namespace tier, no catalog lookup.
 function shardPathFor(textgroup, work) {
-    return `${DATA_DIR}/${textgroup}/${work}/${textgroup}.${work}.part1.db`;
+    return `${DATA_DIR}/${textgroup}/${work}/${textgroup}.${work}.db`;
 }
 function shardPathForWorkKey(workKey) {
     const [tg, wk] = workKey.split(".");
@@ -587,37 +416,18 @@ async function loadCatalog() {
     return CATALOG;
 }
 
-// Every work's shard files, in order, from catalog.json's `parts` list.
-// Falls back to a single guessed path if the catalog can't be read at all
-// or doesn't have this work's parts recorded (e.g. a stale catalog.json).
-async function shardPartPathsForWorkKey(workKey, shardPathHint) {
-    try {
-        const catalog = await loadCatalog();
-        const meta = catalog.works && catalog.works[workKey];
-        if (meta && Array.isArray(meta.parts) && meta.parts.length) {
-            const [tg, wk] = workKey.split(".");
-            return meta.parts.map(p => `${DATA_DIR}/${tg}/${wk}/${p.file}`);
-        }
-    } catch (e) {
-        console.warn(`Could not read catalog.json parts for ${workKey}, falling back to a guessed path:`, e);
-    }
-    return [shardPathHint || shardPathForWorkKey(workKey)];
-}
-
-// Fetch + open a shard for a work; cached and de-duplicated. If the work is
-// split into multiple book-range parts, every part is fetched and merged
-// into a single in-memory database before being cached/returned, so the
-// rest of the app (treebankForChapter, alignmentsForPair, etc.) keeps
-// working against one `db` handle exactly as it did before any work was
-// ever split into multiple files on disk — the split is invisible past
-// this point.
+// Fetch + open a shard for a work; cached and de-duplicated.
 async function getDbForWork(workKey, shardPathHint) {
     if (SHARD_CACHE.has(workKey)) return SHARD_CACHE.get(workKey);
     if (SHARD_INFLIGHT.has(workKey)) return SHARD_INFLIGHT.get(workKey);
 
+    const path = shardPathHint || shardPathForWorkKey(workKey);
+
     const p = (async () => {
-        const partPaths = await shardPartPathsForWorkKey(workKey, shardPathHint);
-        const db = await loadAndMergeParts(partPaths);
+        const resp = await fetch(`./${path}`);
+        if (!resp.ok) throw new Error(`Shard not found: ${path}`);
+        const buf = new Uint8Array(await resp.arrayBuffer());
+        const db = new window.SQL_WASM_ENGINE.Database(buf);
         SHARD_CACHE.set(workKey, db);
         SHARD_INFLIGHT.delete(workKey);
         return db;
@@ -625,63 +435,6 @@ async function getDbForWork(workKey, shardPathHint) {
     SHARD_INFLIGHT.set(workKey, p);
     return p;
 }
-
-// Fetches every part file's bytes and merges them into one in-memory
-// sql.js Database (the first part becomes the primary connection; the rest
-// are merged into it, then closed). A single-part work just opens normally.
-async function loadAndMergeParts(partPaths) {
-    const buffers = await Promise.all(partPaths.map(async path => {
-        const resp = await fetch(`./${path}`);
-        if (!resp.ok) throw new Error(`Shard part not found: ${path}`);
-        return new Uint8Array(await resp.arrayBuffer());
-    }));
-
-    const primary = new window.SQL_WASM_ENGINE.Database(buffers[0]);
-    if (buffers.length > 1) {
-        primary.exec("BEGIN TRANSACTION");
-        try {
-            for (let i = 1; i < buffers.length; i++) {
-                const part = new window.SQL_WASM_ENGINE.Database(buffers[i]);
-                mergePartInto(primary, part);
-                part.close();
-            }
-            primary.exec("COMMIT");
-        } catch (e) {
-            primary.exec("ROLLBACK");
-            throw e;
-        }
-    }
-    return primary;
-}
-
-// Copies every row of every table in `part` into `primary`, keeping each
-// row's ORIGINAL id. The notebook's sharder always inserts the full column
-// list (id included) when writing a part, so autoincrement never
-// reassigns a value there — every row's id is inherited straight from the
-// shared monolith, never reassigned per part. That makes a single
-// INSERT OR IGNORE correct and sufficient for every table:
-//  - Partitioned tables (alignment_grid, text_segments, treebank_sentences,
-//    treebank_tokens, metrical_lines) have disjoint ids between parts
-//    (each part only holds its own book range's rows), so every row from
-//    `part` just gets added.
-//  - Wholesale tables (text_units, treebank_speakers, token_alignments,
-//    edition_line_alignments) are byte-identical copies of the same source
-//    rows in every part, WITH THE SAME ids — so INSERT OR IGNORE correctly
-//    dedupes them instead of creating duplicates.
-// (Verified against real generated part files before shipping this.)
-function mergePartInto(primary, part) {
-    const tables = queryAll(part, "SELECT name FROM sqlite_master WHERE type='table'").map(r => r.name);
-    for (const table of tables) {
-        const rows = queryAll(part, `SELECT * FROM ${table}`);
-        if (rows.length === 0) continue;
-        const cols = Object.keys(rows[0]);
-        const stmt = primary.prepare(
-            `INSERT OR IGNORE INTO ${table} (${cols.join(", ")}) VALUES (${cols.map(() => "?").join(", ")})`);
-        for (const row of rows) stmt.run(cols.map(c => row[c]));
-        stmt.free();
-    }
-}
-
 
 // Optional memory hygiene for long sessions / "own machine" use.
 function evictWorkExcept(keepWorkKey) {
@@ -756,89 +509,33 @@ let activeWorkKey = "tlg0003.tlg001";
 
     
     
+    // Full "Author Title" names — kept as a fallback for the grouped picker.
+    const WORK_NAMES = {
+        "tlg0003.tlg001": "Thucydides History",
+        "tlg0011.tlg004": "Sophocles Oedipus Rex",
+        "tlg0012.tlg001": "Homer Iliad",
+        "tlg0012.tlg002": "Homer Odyssey",
+        "tlg0086.tlg034": "Aristotle Poetics"
+    };
+
     // Author (textgroup) display names used to group the splash list.
     const AUTHOR_NAMES = {
         "tlg0003": "Thucydides",
         "tlg0011": "Sophocles",
         "tlg0012": "Homer",
-        "tlg0020": "Hesiod",
-        "tlg0085": "Aeschylus",
         "tlg0086": "Aristotle"
     };
 
-    // Per-work short titles shown under each author heading. This is the
-    // only place a new work's display name needs to be added -- there used
-    // to be a second "WORK_NAMES" map here too (full "Author Title" strings,
-    // typed out by hand), but it was just AUTHOR_NAMES + WORK_TITLES
-    // duplicated, and had silently fallen out of sync (missing Hesiod's
-    // "Works and Days" and "Shield of Heracles", which only WORK_TITLES had).
-    // Removed -- the fallback below builds the full name from these two maps
-    // instead of requiring a third one to be kept in sync by hand.
+    // Per-work short titles shown under each author heading.
     const WORK_TITLES = {
         "tlg0003.tlg001": "History",
-        "tlg0011.tlg001": "Trachiniai",
         "tlg0011.tlg002": "Antigone",
         "tlg0011.tlg003": "Ajax",
         "tlg0011.tlg004": "Oedipus Rex",
-        "tlg0011.tlg005": "Electra",
-        "tlg0011.tlg006": "Philoctetes",
-        "tlg0011.tlg007": "Oedipus at Colonus",
         "tlg0012.tlg001": "Iliad",
         "tlg0012.tlg002": "Odyssey",
-        "tlg0020.tlg001": "Theogony",
-        "tlg0020.tlg002": "Works and Days",
-        "tlg0020.tlg003": "Shield of Heracles",
-        "tlg0085.tlg001": "Suppliant Women",
-        "tlg0085.tlg002": "Persians",
-        "tlg0085.tlg003": "Prometheus Bound",
-        "tlg0085.tlg004": "Seven Against Thebes",
-        "tlg0085.tlg005": "Agamemnon",
-        "tlg0085.tlg006": "Libation Bearers",
-        "tlg0085.tlg007": "Eumenides",
-
         "tlg0086.tlg034": "Poetics"
     };
-
-    // Right-hand summary chip for a work entry. Prefers a compact
-    // editions/translations/commentaries count, computed from
-    // meta.versions (short_id/urn/label/doc_type/text_class per version --
-    // already written into catalog.json by split_corpus_by_work() for every
-    // work, so no catalog-builder changes were needed for this). Falls back
-    // to total file size, computed defensively (meta.bytes if present and
-    // numeric, otherwise summed across meta.parts[].bytes, since the
-    // catalog builder records bytes per part but never sums a work-level
-    // total) -- and shows nothing at all rather than "NaNKB" if no usable
-    // number can be found either way.
-    function countDocTypes(versions) {
-        const counts = { edition: 0, translation: 0, commentary: 0 };
-        for (const v of versions || []) {
-            if (v && Object.prototype.hasOwnProperty.call(counts, v.doc_type)) {
-                counts[v.doc_type]++;
-            }
-        }
-        return counts;
-    }
-
-    function formatWorkMeta(meta) {
-        const counts = countDocTypes(meta.versions);
-        if (counts.edition || counts.translation || counts.commentary) {
-            const bits = [];
-            if (counts.edition) bits.push(counts.edition + " ed" + (counts.edition > 1 ? "s" : ""));
-            if (counts.translation) bits.push(counts.translation + " tr");
-            if (counts.commentary) bits.push(counts.commentary + " comm");
-            return bits.join(" · ");
-        }
-
-        let bytes = Number(meta.bytes);
-        if (!Number.isFinite(bytes) || bytes <= 0) {
-            if (Array.isArray(meta.parts) && meta.parts.length) {
-                const summed = meta.parts.reduce((sum, p) => sum + (Number(p.bytes) || 0), 0);
-                bytes = summed > 0 ? summed : NaN;
-            }
-        }
-        if (!Number.isFinite(bytes) || bytes <= 0) return "";
-        return bytes > 1e6 ? (bytes/1e6).toFixed(1)+"MB" : (bytes/1e3).toFixed(0)+"KB";
-    }
 
     function buildWorkPickerFromCatalog(catalog) {
         const works = catalog.works || {};
@@ -852,57 +549,33 @@ let activeWorkKey = "tlg0003.tlg001";
             (byAuthor[tg] = byAuthor[tg] || []).push(wk);
         }
 
+        let html = "<div style='padding:20px;max-width:800px;margin:0 auto;'>";
+        html += "<h2>Available Works</h2>";
+
         const authorKeys = Object.keys(byAuthor).sort((a, b) =>
             (AUTHOR_NAMES[a] || a).localeCompare(AUTHOR_NAMES[b] || b));
 
-        // Whether each author's group was left open/closed last time (manual
-        // toggles only -- filtering below expands/collapses temporarily
-        // without touching this).
-        const EXPANDED_KEY_PREFIX = "workPicker.expanded.";
-        function getStoredExpanded(tg, fallback) {
-            const v = localStorage.getItem(EXPANDED_KEY_PREFIX + tg);
-            return v === null ? fallback : v === "true";
-        }
-
-        let html = "<div style='padding:20px;max-width:800px;margin:0 auto;'>";
-        html += "<h2>Available Works</h2>";
-        html += "<input type='text' id='work-filter' placeholder='Filter works or authors…' " +
-                "style='width:100%;box-sizing:border-box;padding:8px 10px;margin-bottom:14px;" +
-                "border:1px solid #ccc;border-radius:4px;font-size:0.95em;'>";
-
         for (const tg of authorKeys) {
             const author = AUTHOR_NAMES[tg] || tg;
+            html += "<h3 style='margin:18px 0 6px;font-size:1.05em;color:#7a1f1f;" +
+                    "border-bottom:1px solid #e0d8c8;padding-bottom:3px;'>" + author + "</h3>";
+            html += "<ul style='list-style:none;padding:0;margin:0;'>";
+
             const workKeys = byAuthor[tg].sort((a, b) =>
                 (WORK_TITLES[a] || a).localeCompare(WORK_TITLES[b] || b));
 
-            // Default to open while the catalog is small; once there are
-            // enough authors that a full expansion is unwieldy, default new
-            // (never-toggled) groups to closed instead. Either way, a
-            // group's own manually-set state always wins.
-            const defaultOpen = authorKeys.length <= 8;
-            const isOpen = getStoredExpanded(tg, defaultOpen);
-
-            html += "<details class='author-group' data-author='" + tg + "'" +
-                    (isOpen ? " open" : "") + " style='margin:10px 0;'>";
-            html += "<summary style='cursor:pointer;font-size:1.05em;color:#7a1f1f;" +
-                    "border-bottom:1px solid #e0d8c8;padding-bottom:3px;list-style:revert;'>" +
-                    author + " <span class='author-count' style='color:#999;font-weight:normal;" +
-                    "font-size:0.85em;'>(" + workKeys.length + ")</span></summary>";
-            html += "<ul style='list-style:none;padding:0;margin:8px 0 0;'>";
-
             for (const wk of workKeys) {
                 const meta = works[wk];
-                const sz = formatWorkMeta(meta);
-                const title = WORK_TITLES[wk] || meta.label;
-                html += "<li data-work='" + wk + "' data-search='" +
-                        (author + " " + title).toLowerCase() + "' style='display:flex;align-items:baseline;" +
+                const sz = meta.bytes > 1e6 ? (meta.bytes/1e6).toFixed(1)+"MB" : (meta.bytes/1e3).toFixed(0)+"KB";
+                const title = WORK_TITLES[wk] || WORK_NAMES[wk] || meta.label;
+                html += "<li data-work='" + wk + "' style='display:flex;align-items:baseline;" +
                         "justify-content:space-between;gap:12px;margin:8px 0;padding:12px 14px;" +
                         "border:1px solid #ddd;border-radius:4px;cursor:pointer;background:#f9f9f9;'>";
                 html += "<strong style='flex:1 1 auto;min-width:0;'>" + title + "</strong>";
                 html += "<span style='flex:0 0 auto;color:#999;font-size:0.9em;white-space:nowrap;'>" + sz + "</span>";
                 html += "</li>";
             }
-            html += "</ul></details>";
+            html += "</ul>";
         }
 
         html += "</div>";
@@ -914,42 +587,6 @@ let activeWorkKey = "tlg0003.tlg001";
                 selectWorkAndRoute(this.getAttribute("data-work"));
             };
         });
-
-        // Persist manual open/close toggles per author, but only when the
-        // filter box is empty -- while filtering, groups are forced open
-        // temporarily (see below) and that shouldn't overwrite a user's
-        // real preference.
-        root.querySelectorAll("details.author-group").forEach(el => {
-            el.addEventListener("toggle", function() {
-                const filterEl = document.getElementById("work-filter");
-                if (filterEl && filterEl.value.trim() !== "") return;
-                localStorage.setItem(EXPANDED_KEY_PREFIX + this.getAttribute("data-author"), String(this.open));
-            });
-        });
-
-        // Filter box: hides non-matching works, auto-opens any group with a
-        // match, hides groups with none, and restores each group's own
-        // stored open/closed state when the filter is cleared.
-        const filterInput = document.getElementById("work-filter");
-        if (filterInput) {
-            filterInput.oninput = function() {
-                const q = this.value.trim().toLowerCase();
-                root.querySelectorAll("details.author-group").forEach(details => {
-                    let anyVisible = false;
-                    details.querySelectorAll("li[data-work]").forEach(li => {
-                        const match = q === "" || li.getAttribute("data-search").includes(q);
-                        li.style.display = match ? "" : "none";
-                        if (match) anyVisible = true;
-                    });
-                    details.style.display = anyVisible ? "" : "none";
-                    if (q === "") {
-                        details.open = getStoredExpanded(details.getAttribute("data-author"), authorKeys.length <= 8);
-                    } else {
-                        details.open = anyVisible;
-                    }
-                });
-            };
-        }
     }
     
     async function selectWorkAndRoute(wk) {
@@ -1082,7 +719,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
+        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012."); 
     }
     function naturalSectionKeys(obj) {
         return Object.keys(obj).sort((a, b) => {
@@ -2251,53 +1888,12 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 block.appendChild(trans);
             }
 
-            // Filled in once the token-selection handler (tbSelect, or the poetry
-            // equivalent) exists below — lets the tokenised translit spans below
-            // trigger the same cross-row highlight even though they're built first.
-            let tbSelectRef = null;
-
-            if (sent.translit) {
-                const trLine = document.createElement('div');
-                trLine.className = 'tb-trans-translit';
-                trLine.setAttribute('dir', 'ltr');
-                const trLabel = document.createElement('span');
-                trLabel.className = 'tb-trans-label';
-                trLabel.textContent = 'Translit';
-                trLine.appendChild(trLabel);
-                trLine.appendChild(document.createTextNode(' '));
-
-                if (sent.tokens.some(t => t.translit)) {
-                    // Tokenised: one span per token, carrying the same data-tok-id
-                    // as the original-script row, gloss row, and literal row, so
-                    // clicking (or being selected via) any of them highlights here too.
-                    sent.tokens.forEach(tok => {
-                        const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
-                        const trSpan = document.createElement('span');
-                        trSpan.className = 'tb-tok tb-translit-tok' + (isPunct ? ' tb-punct' : '');
-                        trSpan.dataset.tokId = tok.id;
-                        trSpan.textContent = tok.translit || tok.form;
-                        if (!isPunct) trSpan.addEventListener('click', (e) => {
-                            e.stopPropagation();
-                            if (tbSelectRef) tbSelectRef(tok.id);
-                        });
-                        trLine.appendChild(trSpan);
-                        if (!isPunct) trLine.appendChild(document.createTextNode(' '));
-                    });
-                } else {
-                    // No per-token translit data on this sentence — fall back to the
-                    // plain sentence-level string (not click/highlightable).
-                    trLine.appendChild(document.createTextNode(sent.translit));
-                }
-                block.appendChild(trLine);
-            }
-
-
             // ── View mode: 'tree' = full annotation grid + collapsible dependency tree; 'text' = interlinear rows ──
             const tbMode = window.__tbMode || 'text';
             if (tbMode === 'tree') {
                 tbRenderGrid(block, sent);   // grid: every annotation as a row, one column per word (replaces interlinear)
                 tbRenderTree(block, sent);   // collapsible dependency syntax tree below the grid
-             } else {
+            } else {
             // Token row layout configuration
             const tokRow = document.createElement('div');
             tokRow.className = 'tb-token-row';
@@ -2326,10 +1922,11 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
                 const depToks = sent.tokens.filter(t => t.head === tok.id && t.upos !== 'PUNCT');
                 if (panel) {
-                    _tbFillDetailPanel(panel, tok, headTok, depToks);
+                    panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
+                    panel.classList.add('tb-detail-visible');
+                    _tbApplyTranslitToPanel(panel);
                 }
             };
-            tbSelectRef = tbSelect;
 
             if (isPoetry) {
                 // Poetry Grid Container to match your standard 5-column structural layout rule
@@ -2422,12 +2019,30 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     }
 
                     if (!isPunct) {
-                        // Shared with prose: block-scoped (not poetryGrid-scoped), so it
-                        // also lights up matching data-tok-id spans that live outside the
-                        // poetry grid — e.g. the tokenised translit row above.
                         const selectThisToken = (e) => {
                             e.stopPropagation();
-                            tbSelect(tok.id);
+                            const wasActive = span.classList.contains('tb-active');
+                            block.querySelectorAll('.tb-tok').forEach(s => s.classList.remove('tb-active','tb-is-head','tb-is-dep'));
+                            block.querySelectorAll('.tb-lit-word').forEach(s => s.classList.remove('tb-lit-active'));
+                            block.querySelector('.tb-detail-panel').innerHTML = '';
+                            block.querySelector('.tb-detail-panel').classList.remove('tb-detail-visible');
+                            if (wasActive) return;
+                            
+                            span.classList.add('tb-active');
+                            poetryGrid.querySelectorAll(`[data-tok-id="${tok.id}"]`).forEach(s => s.classList.add('tb-active'));
+                            if (tok.head > 0) {
+                                poetryGrid.querySelectorAll(`[data-tok-id="${tok.head}"]`).forEach(s => s.classList.add('tb-is-head'));
+                            }
+                            sent.tokens.filter(t => t.head === tok.id).forEach(dep => {
+                                poetryGrid.querySelectorAll(`[data-tok-id="${dep.id}"]`).forEach(s => s.classList.add('tb-is-dep'));
+                            });
+                            tbHighlightLiteral(block, alignment, tok.id, true);
+                            const headTok = tok.head > 0 ? sent.tokens.find(t => t.id === tok.head) : null;
+                            const depToks = sent.tokens.filter(t => t.head === tok.id && t.upos !== 'PUNCT');
+                            const panel = block.querySelector('.tb-detail-panel');
+                            panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
+                            panel.classList.add('tb-detail-visible');
+                            _tbApplyTranslitToPanel(panel);
                         };
                         span.addEventListener('click', selectThisToken);
                         if (glossSpan) glossSpan.addEventListener('click', selectThisToken);
@@ -2460,13 +2075,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 });
             }
             block.appendChild(tokRow);
-
-            if (litWords.length) {
-                const litRow = document.createElement('div');
-                litRow.className = 'tb-literal-row';
-                litRow.innerHTML = `<span class="tb-trans-label">Literal</span> ${tbLiteralHtml(litWords)}`;
-                block.appendChild(litRow);
-            }
 
             // Parallel clickable transliteration row (one span per token, same selection)
             if (!isPoetry && sent.tokens.some(t => t.translit)) {
@@ -2861,22 +2469,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const dl = depToks.map(d => `<span class="tb-rel-chip" style="background:${tbRelColor(d.deprel)};font-size:9px">${escHtml(d.deprel)}</span>&nbsp;<span class="tb-greek">${escHtml(d.form)}</span>`).join('&ensp;');
             h += `<span class="tb-dk">Depends</span><span class="tb-dv">${dl}</span>`;
         }
-        return h + '</div><div class="tb-lex-slot"></div>';
-    }
-
-    // Shared by all three token-detail call sites (text-mode interlinear,
-    // tree-mode dependency diagram, tree-mode annotation grid). Fills the
-    // panel synchronously as before, then kicks off the lexicon lookup
-    // without blocking -- the dictionary section fades in once its shard
-    // has loaded (first click on a work is the only slow one; the shard
-    // is cached for every click after that).
-    function _tbFillDetailPanel(panel, tok, headTok, depToks) {
-        panel.innerHTML = renderTokenDetail(tok, headTok, depToks);
-        panel.classList.add('tb-detail-visible');
-        _tbApplyTranslitToPanel(panel);
-        const slot = panel.querySelector('.tb-lex-slot');
-        const textgroup = (typeof activeWorkKey === 'string' ? activeWorkKey.split('.')[0] : null);
-        if (slot && textgroup) populateLexiconSlot(slot, tok, textgroup);
+        return h + '</div>';
     }
 
     // ── Dependency syntax-tree renderer (Tree mode) ──
@@ -3005,7 +2598,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         const ht = headOf(t) ? byId.get(headOf(t)) : null;
                         const dps = (kids.get(t.id) || []).map(id => byId.get(id)).filter(d => d && d.upos !== 'PUNCT');
                         const panel = block.querySelector('.tb-detail-panel');
-                        if (panel) { _tbFillDetailPanel(panel, t, ht, dps); }
+                        if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
                     }
                 });
                 svg.appendChild(g);
@@ -3058,7 +2651,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             grid.querySelectorAll('.tb-gcell.tb-gcol-active').forEach(c => c.classList.remove('tb-gcol-active'));
             grid.querySelectorAll('.tb-gcell[data-tok-id="' + t.id + '"]').forEach(c => c.classList.add('tb-gcol-active'));
             const panel = block.querySelector('.tb-detail-panel');
-            if (panel) { _tbFillDetailPanel(panel, t, ht, dps); }
+            if (panel) { panel.innerHTML = renderTokenDetail(t, ht, dps); panel.classList.add('tb-detail-visible'); _tbApplyTranslitToPanel(panel); }
         };
 
         rows.forEach(r => {

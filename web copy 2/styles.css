@@ -583,34 +583,6 @@
         .tb-feat-k { font-family:"Courier New",monospace; font-size:10px; color:#aaa; }
         .tb-feat-v { font-family:"Courier New",monospace; font-size:10px; }
         .tb-feats  { font-size:11px; line-height:1.8; }
-
-        /* ── Author-level lexicon lookup (Cunliffe, Dindorf, ...) ──────────
-           Renders inside the same .tb-detail-panel used for gloss/lemma/morph;
-           .tb-lex-slot is the empty placeholder swapped for this markup once
-           the relevant shard has loaded (see populateLexiconSlot in app.js). */
-        .tb-lex-slot:empty { display: none; }
-        .tb-lex-entry { margin-top: 10px; padding-top: 8px; border-top: 1px solid #e0dfd5; }
-        .tb-lex-source { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin-bottom: 4px; }
-        .tb-lex-headword { font-size: 15px; font-weight: bold; color: #660000; margin: 6px 0 2px; }
-        .tb-lex-body { font-size: 12.5px; line-height: 1.6; color: #333; }
-        .tb-lex-divider { border-top: 1px dashed #e0dfd5; margin: 8px 0; }
-        .tb-lex-empty { font-size: 11px; color: #aaa; font-style: italic; margin-top: 8px; }
-
-        /* Entry markup, as emitted by the notebook's _lex_inline_html() */
-        .tb-lex-p { margin: 2px 0; }
-        .tb-lex-sense { margin: 2px 0; }
-        .tb-lex-def { color: #222; }
-        .tb-lex-note { color: #777; font-size: 11.5px; }
-        .tb-lex-cit { margin: 4px 0 4px 8px; padding-left: 6px; border-left: 2px solid #e0dfd5; }
-        .tb-lex-quote { font-family: "Gentium Plus","GFS Didot",serif; font-size: 13px; color: #444; margin: 2px 0; }
-        .tb-lex-cite { font-size: 10px; color: #aaa; font-family: "Courier New",monospace; }
-        .tb-lex-term { font-style: italic; color: #555; }
-        .tb-lex-gloss { color: #1a5276; font-style: italic; }
-        .tb-lex-hi { font-style: italic; }
-        .tb-lex-ref { color: #660000; text-decoration: none; border-bottom: 1px dotted #660000; cursor: pointer; }
-        .tb-lex-ref:hover { color: #440000; border-bottom-style: solid; }
-        .tb-lex-ref-dead { color: #888; }
-
         /* Section focus: dim out-of-scope sentences (mirrors hidden-section on other columns) */
         .tb-sent-dimmed { display: none !important; }
 
