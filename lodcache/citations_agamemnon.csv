@@ -1,0 +1,68 @@
+mention_type,mention_name,citation,place_id,place_name,lat,lon,feature_type
+ethnic,Achaeans,104,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Troy,104,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Scamander,1150,400262WSka,Skamander R. (Troad) 119 Karamenderes - Σκάμανδρος,39.994,26.213,river
+place,Acheron,1150,392205WAch,Acheron R. (Preveza) 163 Akheron - Αχέρων,39.2348,20.4831,river
+place,Ilium,1210,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Pythian,1255,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Ilium,1255,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Argos,1360,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Thrace,1399,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+place,Ilium,1426,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Troy,1455,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Achaean,160,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Chalcis,160,385236PCha,Chalkis (Euboea) 435 Chalkida - Χάλκις,38.4597,23.6153,polity
+place,Aulis,160,384236UAul,Aulis (Euboea) 151 Mikro Vathy/Ag. Nikolaos - Αυλίς,38.4335,23.5925,sanctuary/temple
+place,Strymon,160,408238WStr,Strymon R. (Serres) 155 Strymon - Στρυμών,40.7858,23.8489,river
+place,Argos,160,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Argos,1625,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Argos,1654,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+ethnic,Argives,264,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+ethnic,Achaeans,264,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Troy,264,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Idaean,281,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+place,Ida,281,397268LIda,Ida Mt. (Troad) 335 Kaz daglari - Ίδα,39.6922,26.8423,mountain
+place,Lemnos,281,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Athos,281,402243LAth,Athos (Chalkidike) 150 Athos - Άθως,40.158,24.327,region/people
+place,Euripus,281,385236WEur,Euripos (Euboea) 128 Chalkida - Εύριπος,38.465,23.591,sea/strait
+place,Messapion,281,385235LMes,Messapion? Mt. (Boeotia) 4 Chtypas - Μεσσάπιον,38.464,23.488,mountain
+place,Asopus,281,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Cithaeron,281,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Aegiplanctum,281,380232FLys,Aigiplankton beacon? (Attica) 1 Lisi - Αιγίπλαγκτον,38.0128,23.1672,fortification
+place,Saronic,281,378237WSar,Saronic Gulf (Attica) 49 Saronikos - Σάρων,37.8,23.7,sea/strait
+place,Arachnaeus,281,378228LAra,Arachnaion Mt. (Argolid) 3 Arachnaion - Αραχναίον,37.644,22.961,mountain
+place,Troy,281,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+ethnic,Achaeans,320,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Trojan,320,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Troy,355,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Ilium,385,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+ethnic,Argives,40,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+ethnic,Trojans,40,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Ilium,420,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Pythian,503,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Argos,503,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Scamander,503,400262WSka,Skamander R. (Troad) 119 Karamenderes - Σκάμανδρος,39.994,26.213,river
+demonym,Achaean,519,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Troy,519,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Argive,550,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Ida,550,397268LIda,Ida Mt. (Troad) 335 Kaz daglari - Ίδα,39.6922,26.8423,mountain
+place,Troy,550,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Ilium,583,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Achaean,620,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Ilium,620,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+ethnic,Achaeans,630,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Argive,630,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Thrace,630,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+place,Aegean,630,381253WAeg,Aegean Sea (Hellas) 235 Aegean - Αιγαίον πέλαγος,38.1,25.3,sea/strait
+place,Simois,681,400262WSim,Simoeis R. (Troad) 69 ? - Σιμόεις,39.9617,26.248,river
+place,Ilium,699,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Troy,750,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Argive,8,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Troy,8,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Argive,810,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Ilium,810,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Ilium,855,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+person,Argos,855,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+person,Phocis,855,386227RPho,Phokis region (Central Greece) 781 Phokida - Φωκίς,38.6,22.7,region/people
+place,Ilium,905,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Ilium,975,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity

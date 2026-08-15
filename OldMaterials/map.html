@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perseus Workspace Engine | Map</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
+    <script src="./shard_loader.js"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <style>
+        body { margin: 0; padding: 0; font-family: Arial, sans-serif; }
+        #header {
+            padding: 12px 20px;
+            background-color: #660000;
+            color: #fff;
+            font-family: Georgia, serif;
+        }
+        #header h2 { margin: 0 0 4px; font-size: 1.2rem; }
+        #header p { margin: 0; font-size: 0.85rem; color: #f0d8d8; }
+        #status { padding: 16px 20px; font-size: 14px; color: #555; }
+        #map { width: 100%; height: calc(100vh - 64px); }
+        .attribution-note { font-size: 11px; color: #888; padding: 4px 20px; }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h2 id="passage-title">Loading passage…</h2>
+        <p id="passage-subtitle">Places attested in this section (ToposText)</p>
+    </div>
+
+    <div id="status"></div>
+    <div id="map" style="display:none;"></div>
+
+    <script>
+    function setStatus(html) {
+        document.getElementById("status").innerHTML = html;
+    }
+
+    // De-duplicates by place_id (a place mentioned several times in one
+    // chapter should get one pin, not several stacked on top of each
+    // other), while keeping every distinct mention name/type so the
+    // popup can list all of them.
+    function groupByPlace(rows) {
+        const byPlace = new Map();
+        for (const r of rows) {
+            if (r.lat == null || r.lon == null) continue; // no coordinates -- can't plot
+            if (!byPlace.has(r.place_id)) {
+                byPlace.set(r.place_id, {
+                    place_id: r.place_id,
+                    place_name: r.place_name,
+                    lat: r.lat,
+                    lon: r.lon,
+                    feature_type: r.feature_type,
+                    mentions: []
+                });
+            }
+            byPlace.get(r.place_id).mentions.push({ name: r.mention_name, type: r.mention_type });
+        }
+        return Array.from(byPlace.values());
+    }
+
+    function renderMap(places, passageLabel) {
+        document.getElementById("status").style.display = "none";
+        document.getElementById("map").style.display = "block";
+
+        const map = L.map('map').setView([38.0, 23.7], 6);
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+            attribution: 'OpenStreetMap contributors, CARTO | Place data: ToposText (topostext.org)',
+            subdomains: 'abcd',
+            maxZoom: 19
+        }).addTo(map);
+
+        const markerOptions = { radius: 8, fillColor: "#660000", color: "#fff", weight: 2, opacity: 1, fillOpacity: 0.85 };
+        const markers = [];
+
+        for (const p of places) {
+            const marker = L.circleMarker([p.lat, p.lon], markerOptions);
+            const mentionList = p.mentions
+                .map(m => `${m.name} <span style="color:#888;">(${m.type})</span>`)
+                .join("<br/>");
+            marker.bindPopup(
+                `<div style="font-size:14px;"><strong>${p.place_name}</strong><br/>` +
+                `<span style="color:#888;">Mentioned in ${passageLabel} as:</span><br/>${mentionList}</div>`
+            );
+            marker.addTo(map);
+            markers.push(marker);
+        }
+
+        if (markers.length > 0) {
+            const group = L.featureGroup(markers);
+            map.fitBounds(group.getBounds(), { padding: [50, 50] });
+        }
+    }
+
+    async function main() {
+        const params = new URLSearchParams(window.location.search);
+        const workKey = params.get("work");
+        const chapter = params.get("chapter");
+
+        if (!workKey || !chapter) {
+            setStatus("No passage specified. Open this page from the reader's " +
+                       "\u201cMap this passage\u201d button rather than directly.");
+            return;
+        }
+
+        document.getElementById("passage-title").textContent =
+            `${workKey.replace(".", " ")} \u2014 ${chapter}`;
+
+        setStatus("Loading map data\u2026");
+
+        try {
+            await new Promise((resolve, reject) => {
+                initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` })
+                    .then(SQL => { window.SQL_WASM_ENGINE = SQL; resolve(); })
+                    .catch(reject);
+            });
+
+            const db = await getDbForWork(workKey, shardPathForWorkKey(workKey));
+
+            let rows;
+            try {
+                rows = placesForChapter(db, chapter);
+            } catch (e) {
+                // Most likely cause: this work's shard doesn't have a
+                // place_references table yet (pilot coverage is currently
+                // Thucydides / Iliad / Agamemnon only). Distinguish that
+                // from a genuine query bug rather than showing a raw
+                // SQL error to the reader.
+                if (/no such table/i.test(e.message || "")) {
+                    setStatus("No place data is available for this text yet. " +
+                               "Place coverage is currently limited to a small " +
+                               "pilot set of works.");
+                    return;
+                }
+                throw e;
+            }
+
+            if (rows.length === 0) {
+                setStatus("No places are attested in this specific passage.");
+                return;
+            }
+
+            const places = groupByPlace(rows);
+            renderMap(places, chapter);
+
+        } catch (e) {
+            console.error(e);
+            setStatus("Something went wrong loading the map: " + (e.message || e));
+        }
+    }
+
+    main();
+    </script>
+
+    <p class="attribution-note">Place data &copy; <a href="https://topostext.org" target="_blank">ToposText</a>, used under its published terms.</p>
+</body>
+</html>

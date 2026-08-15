@@ -330,7 +330,7 @@
         .prose-inline-layout .prose-body-inline { display: inline; }
         .prose-body-inline p, .prose-body-inline div { display: inline !important; margin: 0 !important; padding: 0 !important; }
 
-        .speaker-attr { color: #660000; font-weight: bold; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
+        .speaker-attr { color: #445566; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
         .poetry-grid-layout .speaker-attr { grid-column: 1 / span 2; display: block !important; font-weight: bold; color: #660000; }        .render-italic, .render-italics { font-style: italic; }
         .render-bold { font-weight: bold; }
         

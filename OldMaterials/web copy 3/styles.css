@@ -223,38 +223,6 @@
         /* Typographic Content Rendering Elements */
         .section-row { border-bottom: 1px solid #f0f0f0; padding: 10px 0; display: block; scroll-margin-top: 5px; }
         .section-row.hidden-section { display: none !important; }
-
-        /* Requested passage range from a CTS URN (e.g. "...:1.4-1.7") --
-           applies to both the plain-prose section-row renderer and the
-           treebank sentence-block renderer. */
-        .section-row.urn-range-highlight {
-            background: #fff9db;
-            border-left: 3px solid #b8860b;
-            padding-left: 9px;
-            margin-left: -12px;
-        }
-        .tb-sentence-block.urn-range-highlight {
-            background: #fff9db;
-            border-left: 3px solid #b8860b;
-            border-radius: 4px;
-        }
-        /* Requested raw-line range within a card-based poetry section (see
-           app.js's naturalSectionKeys render loop) -- highlights the
-           individual .line-num-cell / .line-text-cell pair for each
-           matching line, since the whole card can't be highlighted or
-           hidden as a unit the way a real prose section can. */
-        .line-num-cell.urn-range-highlight,
-        .line-text-cell.urn-range-highlight {
-            background: #fff9db;
-        }
-        .line-num-cell.urn-range-highlight {
-            border-left: 3px solid #b8860b;
-            margin-left: -12px;
-            padding-left: 9px;
-        }
-        .line-text-cell.urn-range-highlight {
-            padding-right: 6px;
-        }
         .greek-text { font-size: 15px; line-height: 1.7; font-family: "Gentium Plus", "Athena", serif; color: #000; }
         .english-text { font-size: 13px; line-height: 1.6; color: #222; }
         .french-text { font-size: 13px; line-height: 1.6; color: #2b2b2b; }
@@ -330,7 +298,7 @@
         .prose-inline-layout .prose-body-inline { display: inline; }
         .prose-body-inline p, .prose-body-inline div { display: inline !important; margin: 0 !important; padding: 0 !important; }
 
-        .speaker-attr { color: #660000; font-weight: bold; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
+        .speaker-attr { color: #445566; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
         .poetry-grid-layout .speaker-attr { grid-column: 1 / span 2; display: block !important; font-weight: bold; color: #660000; }        .render-italic, .render-italics { font-style: italic; }
         .render-bold { font-weight: bold; }
         
@@ -505,7 +473,7 @@
         
         /* ── Treebank column styles ──────────────────────────────── */
         .tb-sentence-block { border-bottom: 1px solid #f0efe8; padding: 8px 0 10px; }
-        .tb-cit-label { font-size: 11px; color: #6b6559; font-family: "Courier New",monospace; margin-bottom: 3px; }
+        .tb-cit-label { font-size: 10px; color: #aaa; font-family: "Courier New",monospace; margin-bottom: 3px; }
         .tb-credits-wrap { margin: 2px 0 6px; }
         .tb-credits-toggle { font-size: 10px; color: #660000; text-decoration: none; cursor: pointer; }
         .tb-credits-toggle:hover { text-decoration: underline; }
@@ -609,8 +577,6 @@
         .tb-dv { font-size: 12px; color: #111; line-height: 1.4; }
         .tb-gloss { color: #1a5276; font-style: italic; font-size: 13px; font-weight: bold; }
         .tb-greek { font-family: "Gentium Plus","GFS Didot",serif; font-size: 14px; }
-        .tb-annot-link { color: inherit; text-decoration: none; border-bottom: 1px dashed #99847a; cursor: pointer; }
-        .tb-annot-link:hover { border-bottom-color: #660000; color: #660000; }
         .tb-xpos { font-family: "Courier New",monospace; font-size: 10px; color: #aaa; }
         .tb-rel-chip { display:inline-block; padding:1px 6px; border-radius:3px; font-size:10px; font-weight:bold; font-family:"Courier New",monospace; color:#fff; line-height:1.5; }
         .tb-pos-chip { display:inline-block; padding:1px 5px; border-radius:3px; font-size:10px; font-family:"Courier New",monospace; font-weight:bold; border:1px solid; line-height:1.5; }
@@ -624,10 +590,7 @@
            the relevant shard has loaded (see populateLexiconSlot in app.js). */
         .tb-lex-slot:empty { display: none; }
         .tb-lex-entry { margin-top: 10px; padding-top: 8px; border-top: 1px solid #e0dfd5; }
-        .tb-lex-source { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin-bottom: 4px; display: flex; align-items: center; justify-content: space-between; gap: 8px; }
-        .tb-lex-latin-toggle-label { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; font-weight: normal; text-transform: none; letter-spacing: normal; color: #777; cursor: pointer; user-select: none; white-space: nowrap; }
-        .tb-lex-latin-toggle-label input { margin: 0; }
-        .tb-lex-latin-toggle-label:hover { color: #660000; }
+        .tb-lex-source { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.5px; color: #999; margin-bottom: 4px; }
         .tb-lex-headword { font-size: 15px; font-weight: bold; color: #660000; margin: 6px 0 2px; }
         .tb-lex-body { font-size: 12.5px; line-height: 1.6; color: #333; }
         .tb-lex-divider { border-top: 1px dashed #e0dfd5; margin: 8px 0; }
@@ -640,10 +603,7 @@
         .tb-lex-note { color: #777; font-size: 11.5px; }
         .tb-lex-cit { margin: 4px 0 4px 8px; padding-left: 6px; border-left: 2px solid #e0dfd5; }
         .tb-lex-quote { font-family: "Gentium Plus","GFS Didot",serif; font-size: 13px; color: #444; margin: 2px 0; }
-        /* Citation refs (e.g. "1.38.6") -- kept visually secondary to the
-           definition text so the eye still lands on the translation first,
-           but dark/large enough to read without squinting (was #aaa/10px). */
-        .tb-lex-cite { font-size: 11px; color: #6b6559; font-family: "Courier New",monospace; }
+        .tb-lex-cite { font-size: 10px; color: #aaa; font-family: "Courier New",monospace; }
         .tb-lex-term { font-style: italic; color: #555; }
         .tb-lex-gloss { color: #1a5276; font-style: italic; }
         .tb-lex-hi { font-style: italic; }
@@ -665,7 +625,7 @@
         .tb-sent-dimmed { display: none !important; }
 
         /* Clickable citation label */
-        .tb-cit-label a { color: #6b6559; text-decoration: none; font-family: "Courier New",monospace; font-size: 11px; }
+        .tb-cit-label a { color: #aaa; text-decoration: none; font-family: "Courier New",monospace; font-size: 10px; }
         .tb-cit-label a:hover { color: #660000; text-decoration: underline; }
 
         /* Literal translation word spans */
@@ -707,11 +667,6 @@
         .make-focus-btn:hover { background: rgba(255,255,255,0.35); }
 
         .toggle-btn.col-scaler-btn { background: #333; color: #aaa; border-color: #555; font-size: 10px; padding: 2px 8px; margin-left: 4px; }
-
-        /* Hides Bétant-style Latin definitions (tb-lex-lat) when the reader
-           has switched to English-only via the toolbar toggle; the English
-           translation (tb-lex-eng) is untouched either way. */
-        body.lexicon-hide-latin .tb-lex-lat { display: none; }
 
         /* Flexible Multi-Column State Handling Rules */
         #col_c3, #col_c4, #col_c5, #col_c6, #resize-c2-c3, #resize-c3-c4, #resize-c4-c5, #resize-c5-c6 { display: none; }

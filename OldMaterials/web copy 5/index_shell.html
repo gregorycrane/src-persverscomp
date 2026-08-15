@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Perseus Serverless Multitext Browser (Prototype)</title>
+    <title>Perseus Serverless Version Browser (Prototype) | Dual-Framework Workspace</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     
@@ -37,7 +37,7 @@
             <div class="workspace-emblem-holder">
                 <img src="./assets/perseus_running_man.png" alt="Perseus Emblem" />
             </div>
-            <h1><a href="./" onclick="window.location.href='./'">Perseus Multitext Viewer</a></h1>
+            <h1><a href="./" onclick="window.location.href='./'">Perseus Workspace Engine</a></h1>
         </div>
         
         <div class="mode-toggle-panel">
@@ -45,8 +45,6 @@
             <button id="btn-mode-classic" class="toggle-btn" onclick="setWorkspaceLayoutMode('classic')">Classic Asymmetric</button>
             <button id="btn-column-scaler" class="toggle-btn col-scaler-btn" onclick="cycleColumns()">Columns: 3</button>
             <a class="toggle-btn" href="./lexicon-browser.html" style="text-decoration:none;display:inline-flex;align-items:center;">Browse Lexica</a>
-            <button class="toggle-btn" onclick="openMapForCurrentPassage()">Map this passage</button>
-            <button class="toggle-btn" onclick="openMapForCurrentBook()">Map this book</button>
         </div>
       </div>
       <div id="nav-bar">

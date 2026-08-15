@@ -5,11 +5,6 @@
 
     const GLOBAL_STRUCTURES = STRUCT_REPLACE;
     const TEXT_REGISTRY    = REGISTRY_REPLACE;
-    // ── Treebank search-app link config ─────────────────────────────────
-    // Path from this reader (repo root) to the sibling treebank search app,
-    // used by the Gloss/Lemma links in the annotation detail panel below.
-    // Adjust if the search app is deployed somewhere other than ./search/.
-    const SEARCH_APP_URL = './search/index.html';
     // ── Lazy, DB-backed annotation accessors (v39) ─────────────────────────
     // The loaded corpus DB (window.dbInstance) already contains every annotation
     // layer: treebank_sentences, treebank_speakers, metrical_lines,
@@ -32,31 +27,6 @@
         });
     }
     function _jp(s, fb) { try { return JSON.parse(s); } catch (e) { return fb; } }
-
-    // Cache of column-existence checks per table, since PRAGMA table_info is
-    // static for a given shard/session and this can get called once per
-    // treebank hydration. Needed because a corpus can legitimately be in a
-    // mixed state during a staged rebuild -- some works' shards carry the
-    // newer `book` column on treebank_sentences, others (not yet rebuilt)
-    // don't -- and a query that unconditionally selects a column absent from
-    // an older shard throws, which _dbRows swallows into a silent [], making
-    // that work's treebank vanish entirely rather than just losing the
-    // book-qualified lookup it would have enabled.
-    const _COLUMN_CACHE = new Map();
-    function _hasColumn(table, col) {
-        const key = `${table}.${col}`;
-        if (_COLUMN_CACHE.has(key)) return _COLUMN_CACHE.get(key);
-        let has = false;
-        try {
-            const db = window.dbInstance;
-            if (db) {
-                const res = db.exec(`PRAGMA table_info(${table})`);
-                if (res.length) has = res[0].values.some(r => r[1] === col);
-            }
-        } catch (e) { /* leave false */ }
-        _COLUMN_CACHE.set(key, has);
-        return has;
-    }
 
     // ── Greek transliteration engine (client-side, no precomputation) ──────
     // Converts polytonic Greek Unicode text into Latin transliteration on the
@@ -272,46 +242,21 @@
         const slash = tbKey.lastIndexOf("/");
         const [tg, work] = tbKey.slice(0, slash).split(".");
         const vid = tbKey.slice(slash + 1);
-        // Older, not-yet-rebuilt shards may not have the `book` column yet
-        // (added alongside the Propertius work -- see comment below); only
-        // request it when it actually exists, so this degrades gracefully
-        // to the pre-`book` behavior instead of finding zero rows.
-        const hasBookCol = _hasColumn('treebank_sentences', 'book');
         const rows = _dbRows(
-            `SELECT subdoc, section, chapter, ${hasBookCol ? 'book,' : ''} sentence_json, prose_translation, literal_translation, transliteration, credits_json ` +
+            "SELECT subdoc, section, chapter, sentence_json, prose_translation, literal_translation, transliteration, credits_json " +
             "FROM treebank_sentences WHERE textgroup=? AND work=? AND version_short_id=? ORDER BY id",
             [tg, work, vid]);
         let out = null;
         if (rows.length) {
             out = {};
             rows.forEach(r => {
-                // Group under the book-qualified key ("1.1") whenever a real
-                // `book` value is present, in addition to the bare chapter
-                // key ("1"). renderTreebankColumn() already looks up
-                // `${payload.book}.${chapter}` first and falls back to bare
-                // `chapter` -- that compound lookup previously only ever hit
-                // for prose works, where book.chapter is folded straight
-                // into the `chapter` column itself. Poetry/card-based works
-                // (Propertius, and any existing multi-book milestone-carded
-                // work -- Homer, Vergil, etc.) store `chapter` bare, so
-                // without this, sentences from every book sharing the same
-                // card number (book 1 poem 1, book 2 poem 1, ...) all landed
-                // under one bare key and got shown together regardless of
-                // which book was actually open. `book` (added alongside
-                // `chapter`/`section` in the treebank schema) is what makes
-                // the compound key constructible here at all.
-                const sentObj = {
+                (out[r.chapter] = out[r.chapter] || []).push({
                     subdoc: r.subdoc, section: r.section,
                     tokens: _jp(r.sentence_json, []),
                     prose: r.prose_translation, literal: r.literal_translation,
                     translit: r.transliteration,
                     credits: _jp(r.credits_json, null)
-                };
-                (out[r.chapter] = out[r.chapter] || []).push(sentObj);
-                if (r.book) {
-                    const bkKey = `${r.book}.${r.chapter}`;
-                    (out[bkKey] = out[bkKey] || []).push(sentObj);
-                }
+                });
             });
         }
         _TB_CACHE.set(tbKey, out);
@@ -539,58 +484,6 @@ function lookupLexiconEntryById(db, lexiconId, entryId) {
     return rows[0] || null;
 }
 
-// Logeion short-definition complement for inline treebank glosses.
-// Prefetched per-textgroup (fire-and-forget, same "lazy, first render may
-// miss it, re-render fills it in" pattern already used for the Browse
-// Lexica shards above) rather than making renderTreebankColumn async --
-// avoids restructuring its call sites, at the cost of the very first
-// render after navigating to a new work not having the complement yet.
-const LOGEION_SHARDS_FOR_TEXTGROUP = new Map(); // textgroup -> [{lexicon_id, db}]
-
-async function ensureLogeionShardsLoaded(textgroup, onLoaded) {
-    if (LOGEION_SHARDS_FOR_TEXTGROUP.has(textgroup)) return;
-    let logeionLexica = [];
-    try {
-        const lexica = await lexiconsForTextgroup(textgroup);
-        logeionLexica = lexica.filter(l => l.lexicon_id && l.lexicon_id.startsWith('logeion-'));
-    } catch (e) {
-        console.warn('[logeion] could not resolve lexica for', textgroup, e);
-    }
-    const dbs = [];
-    for (const lex of logeionLexica) {
-        try {
-            const db = await getLexiconShard(lex.shard_file);
-            dbs.push({ lexicon_id: lex.lexicon_id, db });
-        } catch (e) {
-            console.warn('[logeion] shard fetch failed for', lex.lexicon_id, e);
-        }
-    }
-    LOGEION_SHARDS_FOR_TEXTGROUP.set(textgroup, dbs);
-    if (onLoaded) onLoaded();
-}
-
-// Synchronous lookup against whatever Logeion shard(s) are already
-// cached for this textgroup -- returns null (not yet loaded, or no
-// entry for this lemma) rather than throwing, since callers use this
-// inline during synchronous DOM-building and can't await here.
-function logeionGlossFor(tok, textgroup) {
-    const dbs = LOGEION_SHARDS_FOR_TEXTGROUP.get(textgroup);
-    if (!dbs || !dbs.length) return null;
-    const key = normalizeHeadwordKey(tok.lemma);
-    if (!key) return null;
-    for (const { lexicon_id, db } of dbs) {
-        const rows = lookupLexiconEntries(db, lexicon_id, key);
-        if (rows.length) {
-            // Logeion entries are always one flat definition string with
-            // no nested markup -- strip the wrapping div/span down to
-            // plain text rather than injecting raw HTML into a gloss span.
-            const text = rows[0].entry_html.replace(/<[^>]+>/g, '').trim();
-            if (text) return text;
-        }
-    }
-    return null;
-}
-
 function _tbHeadwordScriptClass(s) {
     // Arabic/Persian script range -- gets RTL + Perso-Arabic font styling
     // instead of the Greek serif used for Cunliffe/Dindorf headwords.
@@ -611,25 +504,9 @@ function renderLexiconBlock(lexMeta, entryRows) {
         <div class="tb-lex-body">${row.entry_html}</div>
     `;
     }).join('<div class="tb-lex-divider"></div>');
-
-    // Some lexica (e.g. Bétant's Lexicon Thucydideum) give definitions in
-    // Latin with an added English translation alongside; most don't. Rather
-    // than a permanent global toolbar toggle that's meaningless for every
-    // other lexicon, show "Hide Latin" only on the entries where it applies,
-    // right next to the source label it affects. The preference itself is
-    // still global (see toggleLexiconLatin), so flipping it here also
-    // updates any other Latin-bearing lexicon block currently on screen.
-    const hasLatin = entryRows.some(row => row.entry_html && row.entry_html.includes('tb-lex-lat'));
-    const latinToggle = hasLatin
-        ? `<label class="tb-lex-latin-toggle-label" title="Bétant's Lexicon Thucydideum gives definitions in Latin with an added English translation alongside">
-             <input type="checkbox" class="tb-lex-latin-toggle" ${localStorage.getItem(LEXICON_LATIN_PREF_KEY) === '1' ? 'checked' : ''} onchange="toggleLexiconLatin(this.checked)">
-             Hide Latin
-           </label>`
-        : '';
-
     return `
         <div class="tb-lex-entry">
-            <div class="tb-lex-source">${escHtmlTopLevel(lexMeta.title)}${latinToggle}</div>
+            <div class="tb-lex-source">${escHtmlTopLevel(lexMeta.title)}</div>
             ${body}
         </div>`;
 }
@@ -691,41 +568,12 @@ async function openLexiconEntry(lexiconId, entryId) {
 }
 window.openLexiconEntry = openLexiconEntry;
 
-// ── Lexicon language display toggle (e.g. Bétant's Latin defs + added ───
-// English translations) ─────────────────────────────────────────────────
-// A global reader preference, not per-panel: entries render both
-// <gloss xml:lang="lat"> and <gloss xml:lang="eng"> every time (tagged
-// with tb-lex-lat / tb-lex-eng classes by the notebook's _lex_inline_html),
-// and this just flips a body-level class that CSS uses to hide one side.
-// Persisted across sessions the same way column count / layout mode would
-// be if this app tracked those in storage.
-const LEXICON_LATIN_PREF_KEY = 'persvers_hideLexiconLatin';
-
-function applyLexiconLatinPref() {
-    const hidden = localStorage.getItem(LEXICON_LATIN_PREF_KEY) === '1';
-    document.body.classList.toggle('lexicon-hide-latin', hidden);
-    document.querySelectorAll('.tb-lex-latin-toggle').forEach(cb => { cb.checked = hidden; });
-}
-
-function toggleLexiconLatin(hidden) {
-    localStorage.setItem(LEXICON_LATIN_PREF_KEY, hidden ? '1' : '0');
-    document.body.classList.toggle('lexicon-hide-latin', hidden);
-    document.querySelectorAll('.tb-lex-latin-toggle').forEach(cb => { cb.checked = hidden; });
-}
-window.toggleLexiconLatin = toggleLexiconLatin;
-
 // urn:cts:greekLit:tlg0012.tlg001.perseus-grc2:1.10  ->  parts
 function parseCtsUrn(urn) {
     const m = /^urn:cts:([^:]+):([^.]+)\.([^.:]+)(?:\.([^:]+))?(?::(.*))?$/.exec(urn || "");
     if (!m) return null;
-    const passage = m[5] || null;
-    // Passage may be a range ("1.4-1.7") rather than a single ref ("1.4").
-    // startRef/endRef are equal when there's no range, so callers that want
-    // a single passage can just always use startRef.
-    const [startRef, endRefRaw] = passage ? passage.split('-') : [null, null];
     return { textClass: m[1], textgroup: m[2], work: m[3],
-             version: m[4] || null, passage,
-             startRef, endRef: endRefRaw || startRef,
+             version: m[4] || null, passage: m[5] || null,
              workKey: `${m[2]}.${m[3]}` };
 }
 
@@ -880,70 +728,6 @@ function metricalForChapter(db, version, chapter) {
         "SELECT line_ref, line_json FROM metrical_lines WHERE version_short_id=? AND chapter=?",
         [version, chapter]);
 }
-// Places attested in a given chapter, sourced from ToposText's place-mention
-// index (see the place_references ingestion cell). Unlike treebank/metrical
-// data, this isn't per-edition -- a work has one place index regardless of
-// which translation/edition column is showing -- so there's no version_id
-// filter. `book` is optional (pass it whenever the reader has one selected,
-// same as getChapterDataPayload's own "AND book=?" pattern) -- prose rows
-// always have a NULL book in place_references and match on chapter alone
-// regardless of what book is passed, since their chapter is already the
-// self-disambiguating folded "book.chapter" string; poetry rows have a
-// real book value and only match when it agrees, since bare card labels
-// like "1-21" legitimately recur across different books. Returns one row
-// per (mention, place) pair; the same place can legitimately appear more
-// than once if it's mentioned more than once in the same chapter --
-// callers that want one pin per place should de-duplicate by place_id.
-function placesForChapter(db, chapter, book) {
-    return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book " +
-        "FROM place_references WHERE chapter=? AND (? IS NULL OR book IS NULL OR book=?)",
-        [chapter, book || null, book || null]);
-}
-// All places attested anywhere in a given book. Handles both addressing
-// conventions this table can contain: poetry's real `book` column
-// (Iliad: book="2", chapter="1-15"), and prose's folded "book.chapter"
-// string with book always NULL (Thucydides: book=NULL, chapter="2.13").
-// A single work's shard only ever uses one convention, so there's no
-// collision risk in checking both -- a prose row's book is always NULL
-// (never equals the poetry-style numeric match), and a poetry row's
-// bare card-label chapter (e.g. "1-21") never contains a "." so it can
-// never spuriously match the prose-style prefix check either.
-function placesForBook(db, book) {
-    return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book " +
-        "FROM place_references WHERE book=? OR chapter=? OR chapter LIKE ?",
-        [book, book, `${book}.%`]);
-}
-// Every place attested anywhere in the work, for bookless works (e.g.
-// Agamemnon) where there's no book to scope to -- the natural "show
-// everything" equivalent of placesForBook for a flat-structured text.
-function placesForWork(db) {
-    return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter " +
-        "FROM place_references");
-}
-// The next (book, chapter) passage after the given one, in true global
-// reading order (spans book boundaries correctly). Mirrors the same
-// "GROUP BY book, chapter ORDER BY MIN(sort_order)" pattern the build
-// notebook itself already uses to enumerate a work's passages -- not a
-// new convention invented here. Returns null at the end of the work.
-function nextPassage(db, book, chapter) {
-    const rows = queryAll(db,
-        `WITH ordered AS (
-            SELECT book, chapter, MIN(sort_order) AS so
-            FROM alignment_grid
-            GROUP BY book, chapter
-        )
-        SELECT book, chapter FROM ordered
-        WHERE so > (
-            SELECT MIN(sort_order) FROM alignment_grid
-            WHERE chapter=? AND (book=? OR (book IS NULL AND ? IS NULL))
-        )
-        ORDER BY so ASC LIMIT 1`,
-        [chapter, book || null, book || null]);
-    return rows.length ? rows[0] : null;
-}
 
 // ── Entry point: deep-link routing ─────────────────────────────────────────
 async function routeToUrn(urn) {
@@ -961,26 +745,9 @@ async function routeToUrn(urn) {
 let activeWorkKey = "tlg0003.tlg001";
     let activeUrnContext = "";
     let activeSectionFilter = null;
-    // Range counterpart to activeSectionFilter, set when routing from a CTS
-    // URN that names a passage range (e.g. "...:1.4-1.7") rather than a
-    // single passage. {start, end} are the last ref-component of each
-    // endpoint (numeric line/section comparison; see sectionValueInRange).
-    // Only same-chapter ranges are supported -- see initializeRoutingFromURL.
-    let activeSectionRange = null;
     let currentActiveMode = "parallel";
     let activeColumnsCount = 3;
     let columnEditions = { f: "", c1: "", c2: "", c3: "", c4: "", c5: "", c6: "" };
-
-    // Minimal default styling for TOC buttons the current Focus edition has
-    // no real content at (see getChaptersWithContent / renderNavigationControls).
-    // If a real stylesheet already defines .chapter-unavailable-focus, that
-    // will simply take precedence -- this is just a safe fallback so the
-    // feature isn't invisible out of the box.
-    (function() {
-        const s = document.createElement("style");
-        s.textContent = ".chapter-unavailable-focus { opacity: 0.4; font-style: italic; }";
-        document.head.appendChild(s);
-    })();
 
     // ── Greek transliteration state ────────────────────────────────────
     // Per-column mode: '' (native Greek) | 'simple' | 'full'. Persists across
@@ -1001,14 +768,48 @@ let activeWorkKey = "tlg0003.tlg001";
 
     
     
-    // Author/work display names now come from catalog.json's "authors" map
-    // and each work's "title" field (written once, in the notebook, from
-    // the same WORK_REGISTRY metadata the rest of the build already uses)
-    // rather than being hand-typed here. This used to be two separate
-    // hardcoded objects that had to be kept in sync by hand across every
-    // page that needed a display name -- see buildWorkPickerFromCatalog
-    // below and map.html for the two places that read catalog.authors /
-    // catalog.works[wk].title now.
+    // Author (textgroup) display names used to group the splash list.
+    const AUTHOR_NAMES = {
+        "tlg0003": "Thucydides",
+        "tlg0011": "Sophocles",
+        "tlg0012": "Homer",
+        "tlg0020": "Hesiod",
+        "tlg0085": "Aeschylus",
+        "tlg0086": "Aristotle"
+    };
+
+    // Per-work short titles shown under each author heading. This is the
+    // only place a new work's display name needs to be added -- there used
+    // to be a second "WORK_NAMES" map here too (full "Author Title" strings,
+    // typed out by hand), but it was just AUTHOR_NAMES + WORK_TITLES
+    // duplicated, and had silently fallen out of sync (missing Hesiod's
+    // "Works and Days" and "Shield of Heracles", which only WORK_TITLES had).
+    // Removed -- the fallback below builds the full name from these two maps
+    // instead of requiring a third one to be kept in sync by hand.
+    const WORK_TITLES = {
+        "tlg0003.tlg001": "History",
+        "tlg0011.tlg001": "Trachiniai",
+        "tlg0011.tlg002": "Antigone",
+        "tlg0011.tlg003": "Ajax",
+        "tlg0011.tlg004": "Oedipus Rex",
+        "tlg0011.tlg005": "Electra",
+        "tlg0011.tlg006": "Philoctetes",
+        "tlg0011.tlg007": "Oedipus at Colonus",
+        "tlg0012.tlg001": "Iliad",
+        "tlg0012.tlg002": "Odyssey",
+        "tlg0020.tlg001": "Theogony",
+        "tlg0020.tlg002": "Works and Days",
+        "tlg0020.tlg003": "Shield of Heracles",
+        "tlg0085.tlg001": "Suppliant Women",
+        "tlg0085.tlg002": "Persians",
+        "tlg0085.tlg003": "Prometheus Bound",
+        "tlg0085.tlg004": "Seven Against Thebes",
+        "tlg0085.tlg005": "Agamemnon",
+        "tlg0085.tlg006": "Libation Bearers",
+        "tlg0085.tlg007": "Eumenides",
+
+        "tlg0086.tlg034": "Poetics"
+    };
 
     // Right-hand summary chip for a work entry. Prefers a compact
     // editions/translations/commentaries count, computed from
@@ -1020,99 +821,23 @@ let activeWorkKey = "tlg0003.tlg001";
     // catalog builder records bytes per part but never sums a work-level
     // total) -- and shows nothing at all rather than "NaNKB" if no usable
     // number can be found either way.
-    // Extracts a language code from a version's short_id (e.g.
-    // "daphne-tb-grc1" -> "grc", "daphne-tb-cn1" -> "cn"). Mirrors the
-    // same suffix-scanning approach used elsewhere in this project (the
-    // Logeion lexicon's textgroup scoping): checks every hyphen-
-    // separated segment, not just the trailing one, since a real
-    // edition id has been seen embedding its code mid-string; strips
-    // trailing digits before matching; explicitly excludes "tb" itself
-    // (a literal infix in treebank ids like "kassel-tb-grc1", not a
-    // language code).
-    function _versionLangCode(shortId) {
-        const segs = (shortId || "").split("-");
-        let found = null;
-        for (const seg of segs) {
-            const code = seg.replace(/\d+$/, "").toLowerCase();
-            if (/^[a-z]{2,4}$/.test(code) && code !== "tb") {
-                found = code;
-            }
-        }
-        return found;
-    }
-
-    // A treebank id's language-like suffix (grc/ara/fas) marks the SOURCE
-    // text's own script, not the annotation/gloss language -- that's a
-    // different thing, and for these three it defaults to English
-    // (unmarked in the id). Only a genuinely different annotation
-    // language gets its own explicit marker (e.g. "cn" for Chinese) --
-    // and that marker-only id doesn't restate the source script itself
-    // (e.g. "daphne-tb-cn1" has no "grc" in it at all, even though it
-    // annotates the same Greek text as its "daphne-tb-grc1" sibling).
-    // So the source script comes from the WORK's own edition(s), not
-    // from each individual treebank id, and is combined with each
-    // treebank's own annotation language for display (e.g. "grc-en",
-    // "grc-cn").
-    const TREEBANK_SOURCE_SCRIPT_CODES = new Set(['grc', 'ara', 'fas']);
-
     function countDocTypes(versions) {
         const counts = { edition: 0, translation: 0, commentary: 0 };
-        const treebankLangs = {};
-
-        // Source script: the language of this work's own edition(s) --
-        // first one found wins (a work's editions are normally all the
-        // same source language anyway).
-        let sourceLang = null;
         for (const v of versions || []) {
-            if (v && v.doc_type === 'edition') {
-                const code = _versionLangCode(v.short_id);
-                if (code) { sourceLang = code; break; }
-            }
-        }
-
-        for (const v of versions || []) {
-            if (!v) continue;
-            if (Object.prototype.hasOwnProperty.call(counts, v.doc_type)) {
+            if (v && Object.prototype.hasOwnProperty.call(counts, v.doc_type)) {
                 counts[v.doc_type]++;
-            } else if (v.doc_type === 'treebank') {
-                const rawCode = _versionLangCode(v.short_id);
-                let source, annotationLang;
-                if (rawCode && TREEBANK_SOURCE_SCRIPT_CODES.has(rawCode)) {
-                    // This id self-describes its own source script (it
-                    // may be annotating a translation edition, not the
-                    // work's primary language -- e.g. an Arabic treebank
-                    // of Bishr Matta's translation of a Greek work) --
-                    // trust it over the work-level default.
-                    source = rawCode;
-                    annotationLang = 'en';
-                } else if (rawCode) {
-                    // A non-script code (e.g. "cn") is the annotation
-                    // language; this id doesn't self-describe a source,
-                    // so fall back to the work's own edition language.
-                    source = sourceLang || '?';
-                    annotationLang = rawCode;
-                } else {
-                    source = sourceLang || '?';
-                    annotationLang = 'en';
-                }
-                const lang = `${source}-${annotationLang}`;
-                treebankLangs[lang] = (treebankLangs[lang] || 0) + 1;
             }
         }
-        counts.treebankLangs = treebankLangs;
         return counts;
     }
 
     function formatWorkMeta(meta) {
         const counts = countDocTypes(meta.versions);
-        const treebankBits = Object.keys(counts.treebankLangs).sort()
-            .map(lang => counts.treebankLangs[lang] + " tb " + lang);
-        if (counts.edition || counts.translation || counts.commentary || treebankBits.length) {
+        if (counts.edition || counts.translation || counts.commentary) {
             const bits = [];
             if (counts.edition) bits.push(counts.edition + " ed" + (counts.edition > 1 ? "s" : ""));
             if (counts.translation) bits.push(counts.translation + " tr");
             if (counts.commentary) bits.push(counts.commentary + " comm");
-            bits.push(...treebankBits);
             return bits.join(" · ");
         }
 
@@ -1140,7 +865,7 @@ let activeWorkKey = "tlg0003.tlg001";
         }
 
         const authorKeys = Object.keys(byAuthor).sort((a, b) =>
-            ((catalog.authors || {})[a] || a).localeCompare((catalog.authors || {})[b] || b));
+            (AUTHOR_NAMES[a] || a).localeCompare(AUTHOR_NAMES[b] || b));
 
         // Whether each author's group was left open/closed last time (manual
         // toggles only -- filtering below expands/collapses temporarily
@@ -1158,9 +883,9 @@ let activeWorkKey = "tlg0003.tlg001";
                 "border:1px solid #ccc;border-radius:4px;font-size:0.95em;'>";
 
         for (const tg of authorKeys) {
-            const author = (catalog.authors || {})[tg] || tg;
+            const author = AUTHOR_NAMES[tg] || tg;
             const workKeys = byAuthor[tg].sort((a, b) =>
-                ((works[a] || {}).title || a).localeCompare((works[b] || {}).title || b));
+                (WORK_TITLES[a] || a).localeCompare(WORK_TITLES[b] || b));
 
             // Default to open while the catalog is small; once there are
             // enough authors that a full expansion is unwieldy, default new
@@ -1180,7 +905,7 @@ let activeWorkKey = "tlg0003.tlg001";
             for (const wk of workKeys) {
                 const meta = works[wk];
                 const sz = formatWorkMeta(meta);
-                const title = meta.title || meta.label;
+                const title = WORK_TITLES[wk] || meta.label;
                 html += "<li data-work='" + wk + "' data-search='" +
                         (author + " " + title).toLowerCase() + "' style='display:flex;align-items:baseline;" +
                         "justify-content:space-between;gap:12px;margin:8px 0;padding:12px 14px;" +
@@ -1288,13 +1013,8 @@ let activeWorkKey = "tlg0003.tlg001";
                 const wParam = params.get("w");
                 
                 if (wParam) {
-                    // wParam may be a plain "workKey" or "workKey:passage", or
-                    // a full CTS URN ("urn:cts:NS:tg.wk[.version]:range") --
-                    // extract the work key accordingly rather than assuming
-                    // "everything before the first colon" (which grabs "urn"
-                    // for a CTS URN, since urn:cts: itself contains colons).
-                    const ctsUrn = wParam.startsWith("urn:cts:") ? parseCtsUrn(wParam) : null;
-                    const workKey = ctsUrn ? ctsUrn.workKey : wParam.split(":")[0];
+                    // Parse work key from URL (before any colon)
+                    const workKey = wParam.split(":")[0];
                     console.log("[v40] URL specifies work:", workKey);
                     
                     try {
@@ -1374,89 +1094,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
-    }
-    // Generic per-work terminology, replacing the old hardcoded "Book"/
-    // "Chapter" literals scattered through the nav UI. Sourced from
-    // catalog.json's works[workKey].unit_labels (set by the notebook from
-    // work_registry.json's own optional "unit_labels" field -- see
-    // WORK_REGISTRY docs). Defaults to the original Book/Chapter/Section
-    // wording when a work doesn't specify its own, so every existing work
-    // renders exactly as before with zero registry changes required.
-    // Poetry's "Lines" override (isPoetryWork) is intentionally orthogonal
-    // and still wins over whatever `chapter` label a work sets, since a
-    // verse work's own unit_labels would normally just say "Chapter" too.
-    const DEFAULT_UNIT_LABELS = { book: "Book", chapter: "Chapter", section: "Section" };
-    function getUnitLabels(wKey) {
-        const fromCatalog = CATALOG && CATALOG.works && CATALOG.works[wKey] && CATALOG.works[wKey].unit_labels;
-        return Object.assign({}, DEFAULT_UNIT_LABELS, fromCatalog || {});
-    }
-    // Optional per-book display titles (e.g. a speech collection's real
-    // titles instead of bare numbers), from catalog.json's
-    // works[workKey].book_titles = {"1": "I. Oratio nataliciis...", ...}.
-    // Falls back to `${labels.book} ${bk}` when a work has none.
-    function getBookTitle(wKey, bk) {
-        const fromCatalog = CATALOG && CATALOG.works && CATALOG.works[wKey] && CATALOG.works[wKey].book_titles;
-        if (fromCatalog && fromCatalog[bk]) return fromCatalog[bk];
-        return `${getUnitLabels(wKey).book} ${bk}`;
-    }
-    // Optional one-line topic summary per book (e.g. Boeckh's own English
-    // "SUMMARIES OF THE SPEECHES" front matter -- "On Sparta and Athens,
-    // the most famous republics among the Greeks"), from catalog.json's
-    // works[workKey].book_summaries = {"1": "On Sparta and Athens...", ...}.
-    // Returns null (not a fallback string) when a work has none, so callers
-    // can decide whether to show anything at all rather than rendering an
-    // empty subtitle.
-    function getBookSummary(wKey, bk) {
-        const fromCatalog = CATALOG && CATALOG.works && CATALOG.works[wKey] && CATALOG.works[wKey].book_summaries;
-        return (fromCatalog && fromCatalog[bk]) ? fromCatalog[bk] : null;
-    }
-    // True when this book has a real catalog title (not just the generic
-    // "Book N" fallback) -- used to decide whether a nav button can safely
-    // compact down to a bare number, since a bare number is only legible
-    // when there's somewhere else (the hover popup) for the full title to
-    // go. Works with no book_titles at all keep their existing short
-    // "Book N"/"Speech N" labels unchanged -- those are already compact,
-    // nothing to gain by hiding them behind a hover.
-    function hasBookTitle(wKey, bk) {
-        const fromCatalog = CATALOG && CATALOG.works && CATALOG.works[wKey] && CATALOG.works[wKey].book_titles;
-        return !!(fromCatalog && fromCatalog[bk]);
-    }
-    function _escapeHtml(s) {
-        const div = document.createElement("div");
-        div.innerText = s;
-        return div.innerHTML;
-    }
-    // Custom hover popup for compacted book buttons, replacing the native
-    // `title` attribute tooltip: shows instantly on mouseenter (no ~1s
-    // browser delay), is actually visible rather than relying on a sustained
-    // hover nobody thinks to try on a bare number, and can hold both the
-    // full title and the one-line summary together. Built once and reused/
-    // repositioned per hover rather than recreated each time.
-    let _bookHoverPopupEl = null;
-    function _ensureBookHoverPopup() {
-        if (_bookHoverPopupEl) return _bookHoverPopupEl;
-        const el = document.createElement("div");
-        el.id = "book-hover-popup";
-        el.style.cssText = "position:fixed;z-index:9999;max-width:360px;padding:8px 12px;" +
-            "background:#2b2b2b;color:#f0f0f0;font-size:13px;line-height:1.4;" +
-            "border-radius:6px;box-shadow:0 2px 10px rgba(0,0,0,0.3);" +
-            "pointer-events:none;display:none;";
-        document.body.appendChild(el);
-        _bookHoverPopupEl = el;
-        return el;
-    }
-    function _showBookHoverPopup(anchorEl, title, summary) {
-        const el = _ensureBookHoverPopup();
-        el.innerHTML = `<div style="font-weight:600;${summary ? "margin-bottom:4px;" : ""}">${_escapeHtml(title)}</div>` +
-            (summary ? `<div style="opacity:0.85;font-style:italic;">${_escapeHtml(summary)}</div>` : "");
-        const rect = anchorEl.getBoundingClientRect();
-        el.style.left = `${Math.round(rect.left)}px`;
-        el.style.top = `${Math.round(rect.bottom + 6)}px`;
-        el.style.display = "block";
-    }
-    function _hideBookHoverPopup() {
-        if (_bookHoverPopupEl) _bookHoverPopupEl.style.display = "none";
+        return wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
     }
     function naturalSectionKeys(obj) {
         return Object.keys(obj).sort((a, b) => {
@@ -1649,181 +1287,18 @@ function populateNavigationFromShard() {
         // NOTE: The rogue triggerTargetNavigation() call has been removed from here.
     }
 
-// Parses "urn:cts:NAMESPACE:TEXTGROUP.WORK[.VERSION]:REF" where REF is
-// either a single passage ("1.4") or a range ("1.4-1.7"). VERSION (the
-// edition/version short_id, e.g. "perseus-grc2") is optional -- CTS URNs
-// are valid with or without it. Returns null if the string doesn't match a
-// CTS URN shape at all (caller falls through to older URL forms).
-// Given a raw citable line/section number (e.g. the "4" in a CTS URN ref
-// "1.4"), finds which internal chapter actually contains it. "Chapter" is
-// frequently an artificial pagination chunk rather than the line number
-// itself -- Storr-style card intervals (Homer, Sophocles) and Ferdowsi's
-// curated Pizzi reading selections both group several consecutive lines
-// under one chapter id, so a raw line number can't be assumed to equal a
-// chapter id directly. Pass book=null for flat-structure works (no book
-// division at all, so nothing to filter by there). Falls back to treating
-// rawLine as the chapter itself if no match is found or the db isn't
-// ready -- which is only correct for works that genuinely don't chunk, so
-// it's logged rather than failing silently.
-function resolveChapterForRawLine(workKey, book, rawLine) {
-    if (rawLine == null) return rawLine;
-
-    // Card/line-range works (poetry_cards, card_prose, line_commentary parse
-    // modes in the ingest notebook -- covers essentially all of Sophocles,
-    // Homer, Hesiod, and Aeschylus) don't store one alignment_grid row per
-    // verse line. Each card's whole line span is written as a SINGLE row
-    // with section="1" (see parse_poetry_cards_tei /
-    // parse_card_prose_tei), so a "WHERE section=?" lookup for a raw verse
-    // line like "377" can never find anything for these works -- there is
-    // no such row. What these works DO give us is the card's own line
-    // range as the chapter label itself (e.g. "375-390", built by
-    // build_poetry_canonical_intervals), already sitting in
-    // GLOBAL_STRUCTURES from populateNavigationFromShard(). So resolve the
-    // raw line against those chapter labels directly first -- exact, and
-    // needs no DB query at all -- and only fall back to the alignment_grid
-    // section lookup below for genuinely section-addressed works (e.g.
-    // Thucydides, Aristotle's Poetics) where individual sections really
-    // are stored as separate rows.
-    if (!isNaN(parseInt(rawLine, 10))) {
-        const ln = parseInt(rawLine, 10);
-        const chapterList = isFlatStructure(workKey)
-            ? (GLOBAL_STRUCTURES[workKey] || [])
-            : ((GLOBAL_STRUCTURES[workKey] && GLOBAL_STRUCTURES[workKey][book]) || []);
-        for (const chLabel of chapterList) {
-            const m = /^(\d+)-(\d+)$/.exec(String(chLabel));
-            if (m && ln >= parseInt(m[1], 10) && ln <= parseInt(m[2], 10)) {
-                return chLabel;
-            }
-        }
-    }
-
-    if (!window.dbInstance) return rawLine;
-    try {
-        const [tg, wk] = workKey.split(".");
-        let sql = "SELECT chapter FROM alignment_grid WHERE textgroup=? AND work=? AND section=?";
-        const params = [tg, wk, String(rawLine)];
-        if (book != null) { sql += " AND book=?"; params.push(String(book)); }
-        sql += " LIMIT 1";
-        const stmt = window.dbInstance.prepare(sql);
-        stmt.bind(params);
-        const found = stmt.step() ? stmt.getAsObject().chapter : null;
-        stmt.free();
-        if (found) return found;
-        console.warn(`[url] no alignment_grid row and no matching card-range chapter for ${workKey} book=${book} section=${rawLine} -- ` +
-            `falling back to treating "${rawLine}" as the chapter itself, which is likely wrong.`);
-        return rawLine;
-    } catch (e) {
-        console.warn("[url] alignment_grid lookup failed:", e.message, "-- falling back to raw value as chapter.");
-        return rawLine;
-    }
-}
-
-// Resolves a passage spec ("377", "377-378", "1.4", "1.4-1.7", "1.5.12")
-// into {book, chapter, sectionRange} for a given work. Shared by the plain
-// "workKey:passage" URL form and the full CTS URN form -- both need
-// identical book/chapter/range resolution once the work key itself is
-// known, and keeping it in one place is deliberate: these two forms already
-// drifted apart once (the URN form gained range + chapter-resolution
-// support first; this consolidation is what brings the plain form back in
-// sync with it, rather than fixing each in isolation again next time).
-//
-// For a SINGLE (non-range) spec, if its second-to-last component already
-// names a known chapter/card id for this work, it's used directly with no
-// database lookup -- this preserves exact behavior for links generated
-// elsewhere in the app (e.g. the treebank search tool) that already pass a
-// valid internal chapter id rather than a raw external line citation. A
-// dash-range always skips that fast path and resolves both endpoints as
-// raw lines, since a range is unambiguously a line citation, not a
-// chapter-to-chapter span.
-function resolvePassageSpec(workKey, spec) {
-    spec = (spec || "").replace(/\s+/g, "");
-    const isRange = spec.includes('-');
-    const [startRef, endRefRaw] = spec.split('-');
-    const endRef = endRefRaw || startRef;
-    const startSegs = startRef.split(".");
-    const endSegs = endRef.split(".");
-
-    if (isFlatStructure(workKey)) {
-        const startLine = startSegs[startSegs.length - 1];
-        const endLine = endSegs[endSegs.length - 1];
-
-        if (!isRange && (GLOBAL_STRUCTURES[workKey] || []).includes(startLine)) {
-            return { book: null, chapter: startLine, sectionRange: null };
-        }
-
-        const chapter = resolveChapterForRawLine(workKey, null, startLine);
-        if (endLine !== startLine) {
-            const endCh = resolveChapterForRawLine(workKey, null, endLine);
-            if (endCh !== chapter) {
-                console.warn(`[url] passage "${spec}" spans multiple chapters (${chapter} vs ${endCh}) -- ` +
-                    `only same-chapter ranges are currently supported; showing chapter ${chapter} only.`);
-            }
-        }
-        return { book: null, chapter, sectionRange: { start: startLine, end: endLine } };
-    } else {
-        const book = startSegs[0];
-
-        if (!isRange && startSegs.length >= 2) {
-            const known = (GLOBAL_STRUCTURES[workKey] && GLOBAL_STRUCTURES[workKey][book]) || [];
-            // Prose works store chapters in FOLDED "book.chapter" form
-            // (e.g. "1.1"), so a plain 2-segment ref like "1.1" needs to
-            // be checked against the FULL folded key (startRef), not
-            // just its second segment alone -- checking only startSegs[1]
-            // ("1") never matches a known list of folded keys like
-            // ["1.1","1.2",...], so a bare whole-chapter reference (e.g.
-            // "?w=tlg0003.tlg001:1.1", no section) always fell through to
-            // the range-parsing code below, which then wrongly treated
-            // that trailing "1" as a specific section to highlight
-            // instead of recognizing the whole chapter was requested.
-            if (startSegs.length === 2 && known.includes(startRef)) {
-                return { book, chapter: startRef, sectionRange: null };
-            }
-            if (known.includes(startSegs[1])) {
-                return { book, chapter: startSegs[1],
-                         sectionRange: startSegs[2] ? { start: startSegs[2], end: startSegs[2] } : null };
-            }
-        }
-
-        // endSegs[endSegs.length-1] is the line whether or not the end ref
-        // carried its own book prefix -- for a plain range end like "379"
-        // (no dot), endSegs is just ["379"] and endSegs[0] IS the line, not
-        // a book. The previous `endSegs.length > 1 ? ... : startLine` guard
-        // treated that as "no line given" and silently collapsed the end of
-        // the range onto the start, so "1.377-379" resolved as if only
-        // "377" had been requested. Mirrors the flat-structure branch above,
-        // which never had this bug.
-        const startLine = startSegs.length > 1 ? startSegs[startSegs.length - 1] : "1";
-        const endLine = endSegs[endSegs.length - 1];
-        const chapter = resolveChapterForRawLine(workKey, book, startLine);
-        // Only treat this as a book mismatch when the end ref actually named
-        // its own book (endSegs.length > 1) -- an end ref with no book
-        // segment ("379") implicitly belongs to the same book as the start,
-        // not to some other book that happens to match endSegs[0] (which
-        // would be the line number, not a book, in that case).
-        if (endSegs.length > 1 && endSegs[0] !== startSegs[0]) {
-            console.warn(`[url] passage "${spec}" spans multiple books -- ` +
-                `only same-book ranges are currently supported; showing book ${book} only.`);
-        } else if (endLine !== startLine) {
-            const endCh = resolveChapterForRawLine(workKey, book, endLine);
-            if (endCh !== chapter) {
-                console.warn(`[url] passage "${spec}" spans multiple chapters (${chapter} vs ${endCh}) -- ` +
-                    `only same-chapter ranges are currently supported; showing chapter ${chapter} only.`);
-            }
-        }
-        return { book, chapter, sectionRange: { start: startLine, end: endLine } };
-    }
-}
-
 function initializeRoutingFromURL() { 
         console.log('[v40] initializeRoutingFromURL, activeWorkKey:', activeWorkKey); 
         
-        // 1. Parse the URL safely
+        // 1. Silently map out the structures and registries first
+        populateNavigationFromShard();
+
+        // 2. Parse the URL safely
         const params = new URLSearchParams(window.location.search);
         // const rawParam = params.get("w") || "tlg0003.tlg001";
         const rawParam = params.get("w") || activeWorkKey;
         let b = null, ch = "1";
         activeSectionFilter = null;
-        activeSectionRange = null;
         
         columnEditions.f = params.get("focus") || "";
         columnEditions.c1 = params.get("right") || "";
@@ -1846,44 +1321,18 @@ function initializeRoutingFromURL() {
             }, 0);
         }
 
-        // A full CTS URN, e.g. "urn:cts:greekLit:tlg0012.tlg001.perseus-grc2:1.4-1.7"
-        // -- optionally naming a specific edition/version, and optionally a
-        // passage RANGE ("start-end") rather than a single passage. Checked
-        // before the plain "workKey:passage" form below since a URN also
-        // contains colons and would otherwise be misparsed by it.
-        const ctsUrn = rawParam.startsWith("urn:cts:") ? parseCtsUrn(rawParam) : null;
-
-        // 2. Resolve which work key the URL actually points to, and (re)build
-        // GLOBAL_STRUCTURES/TEXT_REGISTRY for THAT work before doing any
-        // passage resolution below. This has to happen before that
-        // resolution -- populateNavigationFromShard() populates structures
-        // keyed off whatever activeWorkKey currently is, and until this
-        // point that's still the default/previous work, not the one named
-        // in ?w=. Calling it too early (as a prior version of this function
-        // did) leaves GLOBAL_STRUCTURES[urlWorkKey] undefined, which makes
-        // isFlatStructure() misreport and resolvePassageSpec() silently
-        // misparse -- and getChapterDataPayload() then fails to find the
-        // work at all, so triggerTargetNavigation() bails out early and the
-        // page hangs on "Mounting layout frameworks...".
-        activeWorkKey = ctsUrn ? ctsUrn.workKey
-            : rawParam.includes(":") ? rawParam.split(":")[0]
-            : rawParam;
-        populateNavigationFromShard();
-
-        if (ctsUrn) {
-            // Only apply the URN's own version if the URL didn't separately
-            // specify ?focus= -- an explicit focus= always wins.
-            if (ctsUrn.version && !columnEditions.f) columnEditions.f = ctsUrn.version;
-
-            const spec = ctsUrn.endRef && ctsUrn.endRef !== ctsUrn.startRef
-                ? `${ctsUrn.startRef}-${ctsUrn.endRef}` : (ctsUrn.startRef || "1");
-            const resolved = resolvePassageSpec(activeWorkKey, spec);
-            b = resolved.book; ch = resolved.chapter; activeSectionRange = resolved.sectionRange;
-        } else if (rawParam.includes(":")) {
+        if (rawParam.includes(":")) {
             const querySegments = rawParam.split(":");
             activeWorkKey = querySegments[0];
-            const resolved = resolvePassageSpec(activeWorkKey, querySegments[1]);
-            b = resolved.book; ch = resolved.chapter; activeSectionRange = resolved.sectionRange;
+            const passageSegments = querySegments[1].split(".");
+            
+            if (isFlatStructure(activeWorkKey)) {
+                b = null; ch = passageSegments[0] || "1";
+                if (passageSegments[1]) activeSectionFilter = passageSegments[1];
+            } else {
+                b = passageSegments[0]; ch = passageSegments[1] || "1";
+                if (passageSegments[2]) activeSectionFilter = passageSegments[2];
+            }
         } else {
             activeWorkKey = rawParam;
             if (isFlatStructure(activeWorkKey)) {
@@ -1967,29 +1416,9 @@ function initializeRoutingFromURL() {
                         console.warn(`[url] column "${prefix}": "${currentEd}" not found for ${payload.textgroup}.${payload.work} - leaving blank. Valid ids: ${known.join(", ")}`);
                         columnEditions[prefix] = "";
                     } else {
-                        // Default column configuration: source edition,
-                        // translation, treebank -- or, when this work has
-                        // no treebank, a second translation instead.
-                        // Applies only to the first three columns (the
-                        // default column count); columns beyond that keep
-                        // cycling through the existing interleaved
-                        // priority list (editions/translations/
-                        // commentaries/appcrits, then treebanks, then
-                        // metrics), unchanged.
-                        let defaultId = "";
-                        if (prefix === 'f') {
-                            defaultId = editions[0] ? editions[0][0] : (prioritizedList[0] || "");
-                        } else if (prefix === 'c1') {
-                            defaultId = translations[0] ? translations[0][0] : (prioritizedList[1] || "");
-                        } else if (prefix === 'c2') {
-                            defaultId = treebanks[0] ? treebanks[0][0]
-                                : (translations[1] ? translations[1][0] : (prioritizedList[2] || ""));
-                        } else {
-                            defaultId = prioritizedList.length > 0
-                                ? prioritizedList[idx % prioritizedList.length]
-                                : "";
-                        }
-                        columnEditions[prefix] = defaultId;
+                        columnEditions[prefix] = prioritizedList.length > 0
+                            ? prioritizedList[idx % prioritizedList.length]
+                            : "";
                     }
                 }
             });
@@ -2003,47 +1432,12 @@ function initializeRoutingFromURL() {
             console.error("renderActiveContentLayers error:", err);
             document.getElementById("status-readout").innerText = "Render error: " + err.message;
         }
-        if (activeSectionRange) {
-            // Center the FIRST highlighted line, not the whole match set --
-            // for a short range this keeps every requested line on screen at
-            // once; for a longer one it's at least a sane anchor point.
-            setTimeout(() => {
-                const el = document.querySelector('.urn-range-highlight');
-                if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 50);
-        }
         updateDiffToggleVisibility();
-        // NOTE: previously gated on `!activePairId` too (skip reapply
-        // whenever ANY alignment pair is active, regardless of which
-        // columns), on the theory that diffing would destroy alignment
-        // token spans. Confirmed by direct test that this isn't actually
-        // true in practice -- manually toggling the diff checkbox while an
-        // unrelated alignment pair (Bywater GRC <-> Butcher ENG) was active
-        // cleanly applied 13 diffs with no corruption, because the columns
-        // being diffed (F/C3, both Greek) were entirely different from the
-        // columns holding the alignment (grc1/eng2). onDiffToggle (the
-        // manual path) never had this check and was always the one actually
-        // working; the automatic reapply was needlessly stricter than the
-        // path it's supposed to mirror. Dropped to match.
-        if (diffEnabled) {
+        if (diffEnabled && !activePairId) {
             // Diff a single pair only — see onDiffToggle. Rendering every pairwise
             // combination overwrites shared column DOM and lights up identical neighbours.
-            //
-            // Deferred one frame: this runs synchronously in the same tick as
-            // the appendChild calls just above that built the new chapter's
-            // content, whereas the manual "uncheck, then recheck the diff
-            // checkbox" workaround runs as a separate later browser event --
-            // i.e. always after the browser has settled the just-inserted
-            // DOM. Deferring via requestAnimationFrame makes the automatic
-            // re-apply match that same timing rather than racing it, which
-            // is the working theory for why navigating to a new chunk left
-            // the checkbox checked but nothing highlighted, requiring the
-            // manual uncheck/recheck to actually see a diff.
-            requestAnimationFrame(() => {
-                const pairs = findSameLangColumnPairs();
-                console.log("[diff-reapply] fired. pairs:", pairs.length, pairs.map(p => p.leftPrefix+"v"+p.rightPrefix));
-                if (pairs.length > 0) applyColumnDiff(pairs[0].leftPrefix, pairs[0].rightPrefix);
-            });
+            const pairs = findSameLangColumnPairs();
+            if (pairs.length > 0) applyColumnDiff(pairs[0].leftPrefix, pairs[0].rightPrefix);
         }
         
         updateURLState(payload.book, payload.chapter);
@@ -2136,162 +1530,62 @@ function initializeRoutingFromURL() {
         return pairs;
     }
 
-    // Shared by both the prose and poetry diff paths: reads a text container's
-    // word tokens from a cached clean baseline (so repeated toggles never
-    // re-diff already-injected diff markup), stripping milestone/Bekker
-    // number spans first since those remain in textContent even though CSS
-    // hides them, and would otherwise shift token indices.
-    function _diffTokensFromCell(cell) {
-        if (cell.dataset.diffBaseline === undefined) cell.dataset.diffBaseline = cell.innerHTML;
-        const clone = document.createElement('div');
-        clone.innerHTML = cell.dataset.diffBaseline;
-        clone.querySelectorAll('.inline-line-milestone, .milestone').forEach(el => el.remove());
-        const text = (clone.textContent || "").trim();
-        const isWord = t => /[a-zA-ZͰ-Ͽἀ-῿Ā-ɏЀ-ӿ]/.test(t);
-        return text.split(/\s+/).filter(t => t && isWord(t));
-    }
-
-    // For a poetry row, map line-number -> its .line-text-cell element.
-    // .line-num-cell and .line-text-cell are written as separate adjacent
-    // sibling divs per line (see renderNavigationControls' urn-range-highlight
-    // handling, which has the same data-n-or-textContent fallback for the
-    // same reason: most editions don't set a lineno_sigil, so the line
-    // number exists only as the num-cell's own text, not an attribute).
-    function _poetryLineCells(row) {
-        const map = new Map();
-        row.querySelectorAll('.line-num-cell').forEach(numCell => {
-            const n = numCell.hasAttribute('data-n')
-                ? numCell.getAttribute('data-n')
-                : numCell.textContent.trim();
-            const textCell = numCell.nextElementSibling;
-            if (n && textCell && textCell.classList.contains('line-text-cell')) {
-                map.set(n, textCell);
-            }
-        });
-        return map;
-    }
-
     // Apply diff highlighting to already-rendered column content.
-    // Skips treebank, metrical, and any column with an active alignment pair
-    // (which would destroy aln-token spans). Handles two DOM shapes:
-    // prose rows (.prose-body-inline, one blob per card) and poetry rows
-    // (.line-num-cell/.line-text-cell pairs, one per verse line) -- these
-    // are built by genuinely different code paths in renderNavigationControls
-    // and previously only the prose shape was diffed; poetry rows have no
-    // .prose-body-inline at all, so the diff silently found nothing to do.
-    // Poetry lines are matched by LINE NUMBER, not row position, since two
-    // editions can legitimately have different line counts within a shared
-    // card (see the card_anchor="poem" work).
+    // Only runs on prose columns; skips treebank, metrical, and any column
+    // with an active alignment pair (which would destroy aln-token spans).
     function applyColumnDiff(leftPrefix, rightPrefix) {
 
         // Validate both columns are plain prose (not treebank/metrical)
         const leftMeta  = TEXT_REGISTRY[columnEditions[leftPrefix]];
         const rightMeta = TEXT_REGISTRY[columnEditions[rightPrefix]];
-        if (!leftMeta || !rightMeta) { console.log("[diff] bail: missing TEXT_REGISTRY meta", leftPrefix, rightPrefix); return; }
-        if (leftMeta.doc_type  === 'treebank' || leftMeta.doc_type  === 'metrical') { console.log("[diff] bail: left is treebank/metrical"); return; }
-        if (rightMeta.doc_type === 'treebank' || rightMeta.doc_type === 'metrical') { console.log("[diff] bail: right is treebank/metrical"); return; }
+        if (!leftMeta || !rightMeta) return;
+        if (leftMeta.doc_type  === 'treebank' || leftMeta.doc_type  === 'metrical') return;
+        if (rightMeta.doc_type === 'treebank' || rightMeta.doc_type === 'metrical') return;
 
         const leftCol  = document.getElementById(`content_${leftPrefix}`);
         const rightCol = document.getElementById(`content_${rightPrefix}`);
-        if (!leftCol || !rightCol) { console.log("[diff] bail: missing content container", leftPrefix, rightPrefix); return; }
+        if (!leftCol || !rightCol) return;
 
-        const leftRows = leftCol.querySelectorAll('.section-row');
-        console.log(`[diff] applyColumnDiff(${leftPrefix}, ${rightPrefix}): ${leftRows.length} .section-row in left column`);
-        let matchedRows = 0, proseRows = 0, poetryRows = 0, diffsApplied = 0;
-
-        leftRows.forEach(leftRow => {
+        leftCol.querySelectorAll('.section-row').forEach(leftRow => {
             const secClass = [...leftRow.classList].find(c => c.startsWith('s-idx-'));
             if (!secClass) return;
             const rightRow = rightCol.querySelector(`.${secClass}`);
             if (!rightRow) return;
-            matchedRows++;
 
+            // Use only the prose-body-inline element text — not the whole row
+            // (avoids picking up section numbers, treebank IDs, etc.)
             const leftBody  = leftRow.querySelector('.prose-body-inline');
             const rightBody = rightRow.querySelector('.prose-body-inline');
+            if (!leftBody || !rightBody) return;
 
-            if (leftBody && rightBody) {
-                proseRows++;
-                // ── Prose: one diff across the whole card's text ──
-                const leftToks  = _diffTokensFromCell(leftBody);
-                const rightToks = _diffTokensFromCell(rightBody);
-                if (!leftToks.length || !rightToks.length) return;
+            // Clone and strip milestone/Bekker number spans before reading text.
+            // CSS hides them visually but they remain in textContent and shift token indices.
+            // Read from a cached clean baseline so repeated toggles / multiple
+            // applyColumnDiff calls never re-diff already-injected diff markup.
+            if (leftBody.dataset.diffBaseline  === undefined) leftBody.dataset.diffBaseline  = leftBody.innerHTML;
+            if (rightBody.dataset.diffBaseline === undefined) rightBody.dataset.diffBaseline = rightBody.innerHTML;
+            const leftClone  = document.createElement('div'); leftClone.innerHTML  = leftBody.dataset.diffBaseline;
+            const rightClone = document.createElement('div'); rightClone.innerHTML = rightBody.dataset.diffBaseline;
+            leftClone.querySelectorAll('.inline-line-milestone, .milestone').forEach(el => el.remove());
+            rightClone.querySelectorAll('.inline-line-milestone, .milestone').forEach(el => el.remove());
 
-                const {leftOut, rightOut} = tokenDiff(leftToks, rightToks);
-                const hasDiff = leftOut.some(x => x.type !== "same") || rightOut.some(x => x.type !== "same");
-                if (!hasDiff) return;
-                diffsApplied++;
+            const leftText  = (leftClone.textContent  || "").trim();
+            const rightText = (rightClone.textContent || "").trim();
+            if (!leftText || !rightText) return;
 
-                leftBody.innerHTML  = renderDiffTokens(leftOut);
-                rightBody.innerHTML = renderDiffTokens(rightOut);
-                return;
-            }
+            // Keep only word-tokens (contain at least one letter).
+            const isWord = t => /[a-zA-ZͰ-Ͽἀ-῿Ā-ɏЀ-ӿ]/.test(t);
+            const leftToks  = leftText.split(/\s+/).filter(t => t && isWord(t));
+            const rightToks = rightText.split(/\s+/).filter(t => t && isWord(t));
 
-            // ── Poetry: align tokens across the WHOLE card, not line-by-line ──
-            // Editions routinely disagree about where line breaks fall --
-            // especially in lyric passages, where a print edition may break
-            // mid-word at a column width (Boeckh's Antigone: his line 100 is
-            // "...τὸ κάλ-", his 101 is "λιστον...", continuing the same word
-            // Storr prints whole on one line). Matching by line NUMBER then
-            // treats that as two "different" lines and the mismatch cascades
-            // for everything after it. Fix: flatten every line's tokens into
-            // one continuous sequence per column (tagging each token with
-            // which line it actually came from), diff that ONE sequence
-            // against the other column's, then regroup the aligned output
-            // back by original line before injecting it -- so alignment
-            // happens across the whole passage regardless of line breaks,
-            // but each edition still displays under its own correct line
-            // numbers afterward.
-            poetryRows++;
-            const leftLines  = _poetryLineCells(leftRow);
-            const rightLines = _poetryLineCells(rightRow);
-            if (!leftLines.size || !rightLines.size) {
-                console.log(`[diff] poetry row ${secClass}: leftLines=${leftLines.size} rightLines=${rightLines.size} (no .line-num-cell found)`);
-                return;
-            }
-
-            const flatten = (lineMap) => {
-                const flat = [];
-                lineMap.forEach((cell, lineN) => {
-                    _diffTokensFromCell(cell).forEach(tok => flat.push({tok, lineN, cell}));
-                });
-                return flat;
-            };
-            const leftFlat  = flatten(leftLines);
-            const rightFlat = flatten(rightLines);
-            if (!leftFlat.length || !rightFlat.length) return;
-
-            const {leftOut, rightOut} = tokenDiff(
-                leftFlat.map(x => x.tok), rightFlat.map(x => x.tok));
+            const {leftOut, rightOut} = tokenDiff(leftToks, rightToks);
 
             const hasDiff = leftOut.some(x => x.type !== "same") || rightOut.some(x => x.type !== "same");
             if (!hasDiff) return;
-            diffsApplied++;
 
-            // Regroup diff output back by the line it actually came from,
-            // preserving within-line order, then render each line's cell
-            // from just its own slice.
-            const regroup = (flat, out) => {
-                const byLine = new Map();
-                out.forEach((item, k) => {
-                    const lineN = flat[k].lineN;
-                    if (!byLine.has(lineN)) byLine.set(lineN, []);
-                    byLine.get(lineN).push(item);
-                });
-                return byLine;
-            };
-            const leftByLine  = regroup(leftFlat, leftOut);
-            const rightByLine = regroup(rightFlat, rightOut);
-
-            leftLines.forEach((cell, lineN) => {
-                const items = leftByLine.get(lineN);
-                if (items) cell.innerHTML = renderDiffTokens(items);
-            });
-            rightLines.forEach((cell, lineN) => {
-                const items = rightByLine.get(lineN);
-                if (items) cell.innerHTML = renderDiffTokens(items);
-            });
+            leftBody.innerHTML  = renderDiffTokens(leftOut);
+            rightBody.innerHTML = renderDiffTokens(rightOut);
         });
-        console.log(`[diff] done: ${matchedRows} rows matched left<->right (${proseRows} prose, ${poetryRows} poetry), ${diffsApplied} diffs actually applied`);
     }
 
     function clearColumnDiff() {
@@ -2661,85 +1955,17 @@ function initializeRoutingFromURL() {
         
         if (!isFlatStructure(activeWorkKey)) {
             const currentActiveBkEl = document.querySelector("#book-items-container a.current");
-            // Book buttons carry the raw book number in data-book (set at
-            // creation time) -- NOT parsed from the displayed label, which
-            // may be a work-specific term ("Speech 3") or a real title
-            // ("I. Oratio nataliciis...") rather than literally "Book N".
-            currentBk = currentActiveBkEl ? currentActiveBkEl.dataset.book : Object.keys(GLOBAL_STRUCTURES[activeWorkKey])[0];
+            // Book buttons are labelled "Book N" but DB stores bare "N"
+            const rawBk = currentActiveBkEl ? currentActiveBkEl.innerText : `Book ${Object.keys(GLOBAL_STRUCTURES[activeWorkKey])[0]}`;
+            currentBk = rawBk.replace(/^Book\s+/, "");
         }
         triggerTargetNavigation(currentBk, currentCh);
     }
 
-    // Opens map.html scoped to whatever passage is currently on screen.
-    // Reuses the exact same current-book/current-chapter DOM reading as
-    // triggerViewRefresh/updateURLState, and -- critically -- passes book
-    // and chapter as SEPARATE params, the same way triggerTargetNavigation
-    // itself does, rather than folding them into one string. The DOM
-    // already shows the chapter value in whatever format alignment_grid
-    // actually expects for this work (folded "book.chapter" for prose like
-    // Thucydides, a bare card label like "1-21" for poetry like the Iliad
-    // -- book is tracked separately there since bare card labels legally
-    // recur across different books), so this reads it faithfully instead
-    // of reconstructing it.
-    function openMapForCurrentPassage() {
-        let currentBk = null, currentCh = "1";
-        const currentActiveChEl = document.querySelector("#chapter-items-container a.current");
-        if (currentActiveChEl) currentCh = currentActiveChEl.innerText;
-
-        if (!isFlatStructure(activeWorkKey)) {
-            const currentActiveBkEl = document.querySelector("#book-items-container a.current");
-            currentBk = currentActiveBkEl ? currentActiveBkEl.dataset.book : Object.keys(GLOBAL_STRUCTURES[activeWorkKey])[0];
-        }
-
-        // If a SECTION is also selected on top of a folded prose chapter
-        // (dot-separated, e.g. "3.3.2"), roll up to chapter depth --
-        // ToposText's citation data for these pilot works never goes
-        // deeper than chapter. Never touches poetry card labels (dash-
-        // separated, e.g. "1-21"), which never contain a dot.
-        const dotParts = currentCh.split(".");
-        const chapterValue = dotParts.length > 2 ? dotParts.slice(0, 2).join(".") : currentCh;
-
-        const params = new URLSearchParams({ work: activeWorkKey, chapter: chapterValue });
-        if (currentBk) params.set("book", currentBk);
-        window.open(`./map.html?${params.toString()}`, "_blank");
-    }
-
-    // Opens map.html scoped to the whole book currently on screen (e.g.
-    // all of Thucydides Book 3), rather than just the current chapter.
-    // For flat/bookless works (no book concept -- e.g. Agamemnon), maps
-    // the whole work instead, since "book" has no meaning there.
-    function openMapForCurrentBook() {
-        if (isFlatStructure(activeWorkKey)) {
-            const url = `./map.html?work=${encodeURIComponent(activeWorkKey)}&whole=1`;
-            window.open(url, "_blank");
-            return;
-        }
-        const currentActiveBkEl = document.querySelector("#book-items-container a.current");
-        const currentBk = currentActiveBkEl ? currentActiveBkEl.dataset.book : Object.keys(GLOBAL_STRUCTURES[activeWorkKey])[0];
-        const url = `./map.html?work=${encodeURIComponent(activeWorkKey)}&book=${encodeURIComponent(currentBk)}`;
-        window.open(url, "_blank");
-    }
-
     function updateURLState(book, chapter) {
         const params = new URLSearchParams();
-        // Prefer the originally-requested raw-line range over the resolved
-        // chapter/card label when one is active. For card-based poetry
-        // works, `chapter` here is an internal card id (e.g. "371-403")
-        // that the ingest pipeline invented to group lines for storage --
-        // not what the person typed or would recognize. Writing that back
-        // into the URL silently swaps their citation ("377-379") for an
-        // unrelated one and breaks re-sharing/reloading with the same
-        // highlighted lines. activeSectionRange still holds the original
-        // request (see resolvePassageSpec), so use it here when present.
-        let passageValue;
-        if (activeSectionRange) {
-            const { start, end } = activeSectionRange;
-            passageValue = book ? `${book}.${start}` : start;
-            if (end !== start) passageValue += `-${end}`;
-        } else {
-            passageValue = book ? `${book}.${chapter}` : `${chapter}`;
-            if (activeSectionFilter) passageValue += `.${activeSectionFilter}`;
-        }
+        let passageValue = book ? `${book}.${chapter}` : `${chapter}`;
+        if (activeSectionFilter) passageValue += `.${activeSectionFilter}`;
 
         params.set("w", `${activeWorkKey}:${passageValue}`);
 
@@ -2757,71 +1983,7 @@ function initializeRoutingFromURL() {
 
     function selectSectionDirectly(secId) {
         activeSectionFilter = (activeSectionFilter === secId) ? null : secId;
-        activeSectionRange = null;
         triggerViewRefresh();
-    }
-
-    // Returns a Set of chapter labels, within `book`, that `versionShortId`
-    // actually has a text_segments row for -- i.e. real content, not just a
-    // slot in the union chapter_sequence some OTHER edition introduced (see
-    // notebook cell 3: an edition with no content at a card gets no row at
-    // all now, specifically so this query can distinguish the two cleanly).
-    function getChaptersWithContent(workKey, book, versionShortId) {
-        if (!window.dbInstance || !versionShortId) return null;
-        const parts = workKey.split(".");
-        let q = `SELECT DISTINCT ag.chapter FROM alignment_grid ag
-                 JOIN text_segments ts ON ag.passage_urn = ts.passage_urn
-                 WHERE ag.textgroup='${parts[0]}' AND ag.work='${parts[1]}'
-                 AND ts.version_short_id='${versionShortId}'`;
-        if (book) q += ` AND ag.book='${book}'`;
-        const result = window.dbInstance.exec(q);
-        if (!result.length) return new Set();
-        return new Set(result[0].values.map(r => r[0]));
-    }
-
-    // Returns the Focus edition's OWN chapter reading order for (work, book)
-    // as an array, or null when there's nothing to prefer -- no Focus
-    // edition selected, or this shard predates edition_chapter_order (older
-    // build), or this edition never diverges from canonical and simply has
-    // no rows. Callers fall back to GLOBAL_STRUCTURES's canonical (shared
-    // union) order in all of those cases.
-    //
-    // Why this matters: GLOBAL_STRUCTURES/alignment_grid.sort_order is ONE
-    // order every edition shares (the union of all cards, sorted naturally).
-    // That's wrong whenever an edition's own printed order genuinely differs
-    // -- e.g. Sidgwick's Eumenides swaps two stanzas of the binding song
-    // relative to Smyth's card numbering (372-376 before 368-371). The build
-    // pipeline (Cell 4's _merge_local_order) already computes each edition's
-    // true reading order at ingest time; this just reads it back.
-    function getFocusChapterOrder(workKey, book, versionShortId) {
-        if (!window.dbInstance || !versionShortId) return null;
-        const [tg, wk] = workKey.split(".");
-        let q = `SELECT chapter FROM edition_chapter_order
-                 WHERE textgroup='${tg}' AND work='${wk}' AND version_short_id='${versionShortId}'`;
-        q += book ? ` AND book='${book}'` : ` AND book IS NULL`;
-        q += ` ORDER BY local_sort_index`;
-        let result;
-        try {
-            result = window.dbInstance.exec(q);
-        } catch (e) {
-            // Older shard built before this table existed -- fall back silently.
-            return null;
-        }
-        if (!result.length || !result[0].values.length) return null;
-        return result[0].values.map(r => r[0]);
-    }
-
-    // Reorders `canonicalList` (GLOBAL_STRUCTURES's shared union order) into
-    // the Focus edition's own reading order when one is recorded and its
-    // chapter SET matches exactly (defensive: a length/content mismatch
-    // means stale or partial data, so fall back to canonical rather than
-    // risk silently dropping or duplicating a TOC entry).
-    function focusAwareChapterOrder(workKey, book, versionShortId, canonicalList) {
-        const order = getFocusChapterOrder(workKey, book, versionShortId);
-        if (!order || order.length !== canonicalList.length) return canonicalList;
-        const canonicalSet = new Set(canonicalList);
-        for (const ch of order) if (!canonicalSet.has(ch)) return canonicalList;
-        return order;
     }
 
     function renderNavigationControls(payload) {
@@ -2846,75 +2008,25 @@ function initializeRoutingFromURL() {
             if (bookContainer) {
                 bookContainer.innerHTML = "";
                 Object.keys(GLOBAL_STRUCTURES[activeWorkKey]).forEach(bk => {
-                    const a = document.createElement("a");
-                    const fullTitle = getBookTitle(activeWorkKey, bk);
-                    const summary = getBookSummary(activeWorkKey, bk);
-                    const compact = hasBookTitle(activeWorkKey, bk);
-                    // Compact to a bare number when there's a real title to
-                    // show on hover instead -- otherwise keep the existing
-                    // short "Book N"/"Speech N" label as-is (already compact,
-                    // nothing gained by hiding it behind a hover).
-                    a.innerText = compact ? bk : fullTitle;
-                    a.dataset.book = bk;
-                    if (compact || summary) {
-                        a.addEventListener("mouseenter", () => _showBookHoverPopup(a, fullTitle, summary));
-                        a.addEventListener("mouseleave", _hideBookHoverPopup);
-                    }
+                    const a = document.createElement("a"); a.innerText = `Book ${bk}`;
                     if(bk === payload.book) a.className = "current";
-                    a.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(bk, GLOBAL_STRUCTURES[activeWorkKey][bk][0]); };
+                    a.onclick = () => { activeSectionFilter = null; triggerTargetNavigation(bk, GLOBAL_STRUCTURES[activeWorkKey][bk][0]); };
                     bookContainer.appendChild(a);
                 });
             }
         }
 
         const bookLabelEl = document.getElementById("chapter-row-label");
-        if (bookLabelEl) bookLabelEl.innerText = isDramaOrPoetry ? "Lines:" : `${getUnitLabels(activeWorkKey).chapter}s:`;
+        if (bookLabelEl) bookLabelEl.innerText = isDramaOrPoetry ? "Lines:" : "Chapters:";
 
         const chapterContainer = document.getElementById("chapter-items-container");
-        // Canonical union order (shared default) vs. the Focus edition's own
-        // reading order, when recorded -- see focusAwareChapterOrder above.
-        // Scoped to poetry/drama for now, matching getChaptersWithContent's
-        // existing scoping just below; the build pipeline computes this for
-        // every work regardless of genre, so prose could opt in later too.
-        const canonicalChList = isFlatStructure(activeWorkKey) ? GLOBAL_STRUCTURES[activeWorkKey] : GLOBAL_STRUCTURES[activeWorkKey][payload.book];
-        const chList = isDramaOrPoetry
-            ? focusAwareChapterOrder(activeWorkKey, payload.book, columnEditions.f, canonicalChList)
-            : canonicalChList;
         if (chapterContainer) {
             chapterContainer.innerHTML = "";
-            // The TOC deliberately shows the UNION of every edition's own
-            // card labels (e.g. Butler's "8a" alongside Muller's "13b"), so
-            // an editorial split introduced by any one edition stays visible
-            // and navigable -- that disagreement is real scholarly content,
-            // not noise. But not every button leads to real Focus-edition
-            // content: mark (don't remove) the ones the current Focus
-            // edition has nothing at, so it's clear at a glance which clicks
-            // land on real text vs. a "not divided separately here" note.
-            let focusHasContent = isDramaOrPoetry
-                ? getChaptersWithContent(activeWorkKey, payload.book, columnEditions.f)
-                : null;
-            // Sanity check: the chapter on screen right now is proof-positive
-            // that the focus edition has content there (it's rendering, we're
-            // looking at it). If the query disagrees -- claims the current
-            // chapter has nothing -- the query result itself is wrong for
-            // this render (bad book filter, stale/empty version_short_id,
-            // whatever the exact cause), not the data. Trusting it anyway
-            // greys out every button, including ones that plainly work, and
-            // actively misleads with "not divided separately here" on
-            // content that plainly IS there. Fail safe: skip greying
-            // entirely for this render rather than mislabel real content.
-            if (focusHasContent && payload.chapter && !focusHasContent.has(payload.chapter)) {
-                console.log("[chapter-toc] getChaptersWithContent disagrees with what's on screen -- skipping greying this render", payload.chapter, [...focusHasContent]);
-                focusHasContent = null;
-            }
+            const chList = isFlatStructure(activeWorkKey) ? GLOBAL_STRUCTURES[activeWorkKey] : GLOBAL_STRUCTURES[activeWorkKey][payload.book];
             chList.forEach(ch => {
                 const a = document.createElement("a"); a.innerText = ch;
                 if(ch === payload.chapter) a.className = "current";
-                if (focusHasContent && !focusHasContent.has(ch)) {
-                    a.classList.add("chapter-unavailable-focus");
-                    a.title = "Not divided separately in the focus edition -- click to see other editions here";
-                }
-                a.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(payload.book, ch); };
+                a.onclick = () => { activeSectionFilter = null; triggerTargetNavigation(payload.book, ch); };
                 chapterContainer.appendChild(a);
             });
         }
@@ -2925,7 +2037,7 @@ function initializeRoutingFromURL() {
                 sectionContainer.innerHTML = "";
                 naturalSectionKeys(payload.sections).forEach(sec => {
                     const a = document.createElement("a"); a.innerText = sec; a.className = "sec-pill";
-                    if (sec === activeSectionFilter || sectionValueInRange(sec)) a.classList.add("active-pill");
+                    if(sec === activeSectionFilter) a.classList.add("active-pill");
                     a.onclick = () => selectSectionDirectly(sec);
                     sectionContainer.appendChild(a);
                 });
@@ -2936,94 +2048,32 @@ function initializeRoutingFromURL() {
         const railTitle = document.getElementById("rail-title");
         if (railNodesTarget) {
             railNodesTarget.innerHTML = "";
-            const unitLabels = getUnitLabels(activeWorkKey);
             if (isFlatStructure(activeWorkKey)) {
-                railTitle.innerText = isDramaOrPoetry ? "Lines Tree" : `${unitLabels.chapter}s Tree`;
-                // Reuses the same (possibly Focus-reordered) chList computed
-                // above for the main chapter TOC, so the rail tree and the
-                // TOC never disagree about reading order.
-                chList.forEach(ch => {
+                railTitle.innerText = isDramaOrPoetry ? "Lines Tree" : "Chapters Tree";
+                GLOBAL_STRUCTURES[activeWorkKey].forEach(ch => {
                     const n = document.createElement("div");
                     n.className = `rail-tree-item ${(payload.chapter === ch) ? 'active-rail-node' : ''}`;
-                    n.innerText = isDramaOrPoetry ? `Lines ${ch}` : `${unitLabels.chapter} ${ch}`;
-                    n.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(null, ch); };
+                    n.innerText = isDramaOrPoetry ? `Lines ${ch}` : `Chapter ${ch}`;
+                    n.onclick = () => { activeSectionFilter = null; triggerTargetNavigation(null, ch); };
                     railNodesTarget.appendChild(n);
                 });
             } else {
-                const bookDisplay = getBookTitle(activeWorkKey, payload.book);
-                railTitle.innerText = isPoetryWork(activeWorkKey) ? `${bookDisplay} Lines` : `${bookDisplay} ${unitLabels.chapter}s`;
-                // Surface the book's one-line topic summary (if the work has
-                // one -- see getBookSummary) right under the rail title,
-                // where it's visible whenever you're browsing this book, not
-                // just on hover like the nav-list tooltip set above.
-                let subtitleEl = document.getElementById("rail-title-subtitle");
-                const summary = getBookSummary(activeWorkKey, payload.book);
-                if (summary) {
-                    if (!subtitleEl) {
-                        subtitleEl = document.createElement("div");
-                        subtitleEl.id = "rail-title-subtitle";
-                        subtitleEl.style.fontSize = "0.85em";
-                        subtitleEl.style.opacity = "0.75";
-                        subtitleEl.style.fontStyle = "italic";
-                        subtitleEl.style.marginTop = "2px";
-                        railTitle.insertAdjacentElement("afterend", subtitleEl);
-                    }
-                    subtitleEl.innerText = summary;
-                    subtitleEl.style.display = "";
-                } else if (subtitleEl) {
-                    subtitleEl.style.display = "none";
-                }
-                chList.forEach(ch => {
+                railTitle.innerText = isPoetryWork(activeWorkKey) ? `Book ${payload.book} Lines` : `Book ${payload.book} Chapters`;
+                GLOBAL_STRUCTURES[activeWorkKey][payload.book].forEach(ch => {
                     const n = document.createElement("div");
                     n.className = `rail-tree-item ${(payload.chapter === ch) ? 'active-rail-node' : ''}`;
-                    n.innerText = isPoetryWork(activeWorkKey) ? `Lines ${ch}` : `${unitLabels.chapter} ${ch}`;
-                    n.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(payload.book, ch); };
+                    n.innerText = isPoetryWork(activeWorkKey) ? `Lines ${ch}` : `Chapter ${ch}`;
+                    n.onclick = () => { activeSectionFilter = null; triggerTargetNavigation(payload.book, ch); };
                     railNodesTarget.appendChild(n);
                 });
             }
         }
     }
 
-    // Numeric comparison, not string comparison -- "9" < "10" lexicographically
-    // is false, which would silently break any range crossing a power of ten.
-    // Falls back to exact-match-either-endpoint for non-numeric section ids
-    // (rare, but some lexicon/apparatus-style sections use non-digit keys).
-    function sectionValueInRange(secValue) {
-        if (!activeSectionRange || secValue == null) return false;
-        const n = parseInt(secValue, 10);
-        const a = parseInt(activeSectionRange.start, 10);
-        const b = parseInt(activeSectionRange.end, 10);
-        if (!isNaN(n) && !isNaN(a) && !isNaN(b)) return n >= a && n <= b;
-        return String(secValue) === String(activeSectionRange.start) ||
-               String(secValue) === String(activeSectionRange.end);
-    }
-
     function tbSentMatchesSection(sent, filter, isPoetry) {
-        if (activeSectionRange) {
-            // sent.section is a synthetic "1" for card-based poetry works
-            // (one row covers a whole card's line span), and sent.chapter is
-            // the resolved multi-line card label itself (e.g. "371-403") --
-            // parseInt'ing that just grabs its first number ("371"), which
-            // is essentially never inside the requested range and previously
-            // caused EVERY sentence to fail this check, get tb-sent-dimmed,
-            // and vanish (that class is display:none, not a dim effect --
-            // see styles.css). sent.subdoc is the sentence's own citation
-            // (the raw verse line, e.g. "377") and is what should actually
-            // be compared against a raw-line range like 377-379.
-            return isPoetry ? sectionValueInRange(sent.subdoc) : sectionValueInRange(sent.section);
-        }
         if (!filter) return true;
         if (isPoetry) {
-            // Two possible poetry addressing shapes: flat "chapter = line number"
-            // (single-level poems, where this used to only check sent.chapter)
-            // or "chapter = reading/grouping, section = line number within it"
-            // (e.g. Ferdowsi's curated Pizzi selections -- chapter is WHICH
-            // reading, section is the verse line inside it). Check both rather
-            // than assuming every poetry work uses the flat shape; assuming
-            // only sent.chapter silently hid every sentence for any poetry
-            // work using the two-level shape, since chapter never equals a
-            // line-number filter in that structure.
-            return sent.chapter === filter || sent.section === filter;
+            return sent.chapter === filter;
         } else {
             return sent.section === filter;
         }
@@ -3031,7 +2081,6 @@ function initializeRoutingFromURL() {
 
 function renderTreebankColumn(container, activeEditionMeta, payload) {
         const wKey = activeWorkKey;
-        const tgKey = wKey.split('.')[0];
         const vid  = activeEditionMeta.short_id;
         const tbKey = `${wKey}/${vid}`;
         const prefix = container.id.replace('content_', '');
@@ -3043,17 +2092,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             return;
         }
         const chapter = payload.chapter;
-        // For book-structured works, prose treebank rows are now stored
-        // under a book-qualified key ("book.chapter", e.g. "1.89") so that
-        // the same chapter number in a different book (very common --
-        // Thucydides book 2 chapter 1 vs book 3 chapter 1) doesn't collide
-        // under one key -- treebank_sentences has no separate book column,
-        // so this compound string IS the only disambiguator. Existing
-        // card-based poetry treebanks (Homer, Sophocles, etc.) still store
-        // the bare card label with no book prefix, so fall back to that if
-        // the compound lookup misses.
-        const lookupKey = payload.book ? `${payload.book}.${chapter}` : chapter;
-        const allSentences = chapterData[lookupKey] || chapterData[chapter] || [];
+        const allSentences = chapterData[chapter] || [];
         if (allSentences.length === 0) {
             container.innerHTML = '<p style="color:#999;font-style:italic;padding:12px">No treebank sentences for chapter ' + chapter + '.</p>';
             setTranslitControlVisible(prefix, false);
@@ -3063,17 +2102,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         const docCredits = TREEBANK_DOC_CREDITS[tbKey] || { annotators: [], source: null };
         const isPoetry = isPoetryWork(wKey);
         container.innerHTML = '';
-
-        if (!LOGEION_SHARDS_FOR_TEXTGROUP.has(tgKey)) {
-            ensureLogeionShardsLoaded(tgKey, () => {
-                // Only re-render if the reader is still looking at this
-                // same chapter's treebank -- avoids a late-resolving fetch
-                // clobbering content after they've since navigated away.
-                if (TREEBANK_DATA[tbKey] === chapterData) {
-                    renderTreebankColumn(container, activeEditionMeta, payload);
-                }
-            });
-        }
 
         // Reader row-visibility state (persists across treebank re-renders)
         if (!window.__tbRowVis) window.__tbRowVis = { original: true, translit: true };
@@ -3157,9 +2185,8 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
 
         allSentences.forEach(sent => {
             const inFocus = tbSentMatchesSection(sent, filter, isPoetry);
-            const inRange = activeSectionRange && inFocus;
             const block = document.createElement('div');
-            block.className = 'tb-sentence-block' + (inFocus ? '' : ' tb-sent-dimmed') + (inRange ? ' urn-range-highlight' : '');
+            block.className = 'tb-sentence-block' + (inFocus ? '' : ' tb-sent-dimmed');
             block.dataset.subdoc = sent.subdoc;
             block.dataset.section = sent.section;
             block.dataset.chapter = sent.chapter;
@@ -3324,7 +2351,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 let currentLineWrapper = null;
                 let currentTokensRow = null;
                 let currentGlossRow = null;
-                const sentHasGloss = sent.tokens.some(t => t.gloss || logeionGlossFor(t, tgKey));
+                const sentHasGloss = sent.tokens.some(t => t.gloss);
 
                 function startNewLineWrapper() {
                     currentLineWrapper = document.createElement('div');
@@ -3403,10 +2430,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         glossSpan = document.createElement('span');
                         glossSpan.className = 'tb-tok tb-gloss-tok';
                         glossSpan.dataset.tokId = tok.id;
-                        const logeionDef = logeionGlossFor(tok, tgKey);
-                        glossSpan.textContent = tok.gloss
-                            ? (logeionDef ? `${tok.gloss} \u00b7 ${logeionDef}` : tok.gloss)
-                            : (logeionDef || '\u00b7');
+                        glossSpan.textContent = tok.gloss || '·';
                     }
 
                     if (!isPunct) {
@@ -3475,7 +2499,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
 
             // Parallel clickable GLOSS row (one span per token, same selection) —
             // replaces the literal translation so Arabic / translit / gloss align one-to-one.
-            if (!isPoetry && sent.tokens.some(t => t.gloss || logeionGlossFor(t, tgKey))) {
+            if (!isPoetry && sent.tokens.some(t => t.gloss)) {
                 const glRow = document.createElement('div');
                 glRow.className = 'tb-gloss-row';
                 sent.tokens.forEach(tok => {
@@ -3484,10 +2508,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     const span = document.createElement('span');
                     span.className = 'tb-tok tb-gloss-tok';
                     span.dataset.tokId = tok.id;
-                    const logeionDef = logeionGlossFor(tok, tgKey);
-                    span.textContent = tok.gloss
-                        ? (logeionDef ? `${tok.gloss} \u00b7 ${logeionDef}` : tok.gloss)
-                        : (logeionDef || '\u00b7');
+                    span.textContent = tok.gloss || '·';
                     span.addEventListener('click', (e) => { e.stopPropagation(); tbSelect(tok.id); });
                     glRow.appendChild(span);
                     glRow.appendChild(document.createTextNode(' '));
@@ -3828,17 +2849,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         }
     }
 
-    // Builds an <a> to the sibling search app pre-filled with a gloss/lemma
-    // search for `term`, restricted to `mode` ('gloss' | 'lemma'). Opens in
-    // a new tab so the reader keeps its place. Falls back to plain escaped
-    // text if `term` is empty.
-    function tbSearchLink(term, mode, innerHtml) {
-        if (!term) return innerHtml;
-        const href = `${SEARCH_APP_URL}?q=${encodeURIComponent(term)}&mode=${mode}`;
-        const label = mode === 'gloss' ? 'Search this gloss' : 'Search this lemma';
-        return `<a class="tb-annot-link" href="${href}" target="_blank" rel="noopener" title="${label}">${innerHtml}</a>`;
-    }
-
     function renderTokenDetail(tok, headTok, depToks) {
         const rc = tbRelColor(tok.deprel);
         const pc = tbPosColor(tok.upos);
@@ -3846,9 +2856,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         if (tok.translit)
             h += `<span class="tb-dk">Translit</span><span class="tb-dv" dir="ltr" style="font-style:italic">${escHtml(tok.translit)}</span>`;
         if (tok.gloss)
-            h += `<span class="tb-dk">Gloss</span><span class="tb-dv tb-gloss">${tbSearchLink(tok.gloss, 'gloss', escHtml(tok.gloss))}</span>`;
+            h += `<span class="tb-dk">Gloss</span><span class="tb-dv tb-gloss">${escHtml(tok.gloss)}</span>`;
         if (tok.lemma && tok.lemma !== '_' && tok.lemma !== tok.form)
-            h += `<span class="tb-dk">Lemma</span><span class="tb-dv tb-greek">${tbSearchLink(tok.lemma, 'lemma', escHtml(tok.lemma))}${tok.ltranslit ? ' <span dir="ltr" style="font-style:italic;color:#888;font-size:11px">'+escHtml(tok.ltranslit)+'</span>' : ''}</span>`;
+            h += `<span class="tb-dk">Lemma</span><span class="tb-dv tb-greek">${escHtml(tok.lemma)}${tok.ltranslit ? ' <span dir="ltr" style="font-style:italic;color:#888;font-size:11px">'+escHtml(tok.ltranslit)+'</span>' : ''}</span>`;
         if (tok.upos && tok.upos !== '_')
             h += `<span class="tb-dk">Part of Speech</span><span class="tb-dv"><span class="tb-pos-chip" style="color:${pc};border-color:${pc}40">${escHtml(tok.upos)}</span>${tok.xpos && tok.xpos !== '_' && tok.xpos !== tok.upos ? ' <span class="tb-xpos">'+escHtml(tok.xpos)+'</span>' : ''}</span>`;
         h += `<span class="tb-dk">Dependency</span><span class="tb-dv"><span class="tb-rel-chip" style="background:${rc}">${escHtml(tok.deprel)}</span></span>`;
@@ -4167,27 +3177,10 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const hasAln     = isAlnSrc || isAlnTgt;
 
             naturalSectionKeys(payload.sections).forEach(sec => {
-                // For card-based poetry works (Sophocles, Homer, Hesiod,
-                // Aeschylus -- anything ingested via poetry_cards/card_prose),
-                // a whole card's line span is stored under ONE synthetic
-                // section key ("1"), not one row per line -- see
-                // resolveChapterForRawLine's comment. Comparing that "1"
-                // against a requested line range like 377-379 can never
-                // match, so the old range-hiding logic here hid the entire
-                // card's content whenever a raw-line URL was used. The real
-                // per-line granularity lives inside this section's own HTML,
-                // as data-n attributes on .line-num-cell elements (written by
-                // extract_text_recursive in the ingest notebook) -- so for
-                // poetry, skip whole-section hiding/highlighting here and
-                // instead highlight the matching individual lines below,
-                // after the content is in the DOM.
-                const inRange = !isPoetry && activeSectionRange && sectionValueInRange(sec);
-                const isHidden = isPoetry ? false : (activeSectionRange
-                    ? !inRange
-                    : (activeSectionFilter !== null && activeSectionFilter !== sec));
+                const isHidden = activeSectionFilter !== null && activeSectionFilter !== sec;
                 const row = document.createElement("div");
-                row.className = `section-row s-idx-${sec} ${isHidden ? 'hidden-section' : ''} ${inRange ? 'urn-range-highlight' : ''}`;
-                let txt = payload.sections[sec][shortId] || "<i>Not divided separately in this edition.</i>";
+                row.className = `section-row s-idx-${sec} ${isHidden ? 'hidden-section' : ''}`;
+                let txt = payload.sections[sec][shortId] || "<i>[Text range missing in alignment layer]</i>";
                 const visualIndexLabel = isPoetry ? sec : `[${sec}]`;
 
                 // Apply token alignment wrapping for source/target columns
@@ -4208,32 +3201,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 if (!wrapper.querySelector('.line-num-cell')) {
                     wrapper.classList.remove('poetry-grid-layout');
                 }
-                // Line-level highlight for a requested raw-line range (see
-                // comment above) -- .line-num-cell and its sibling
-                // .line-text-cell are written as separate adjacent divs per
-                // line (not a shared per-line wrapper), so both need the
-                // class individually for the highlight to cover the whole line.
-                if (activeSectionRange) {
-                    // data-n is only written when the edition config sets a
-                    // lineno_sigil (see extract_text_recursive in the ingest
-                    // notebook); most editions -- including this one -- don't
-                    // set one, so the line number exists only as the cell's
-                    // own plain text content ("377"), not an attribute.
-                    // Without this fallback, .line-num-cell[data-n] matches
-                    // nothing for such editions and no line is ever
-                    // highlighted, even though the range resolved correctly.
-                    wrapper.querySelectorAll('.line-num-cell').forEach(numCell => {
-                        const n = numCell.hasAttribute('data-n')
-                            ? numCell.getAttribute('data-n')
-                            : numCell.textContent.trim();
-                        if (!n || !sectionValueInRange(n)) return;
-                        numCell.classList.add('urn-range-highlight');
-                        const textCell = numCell.nextElementSibling;
-                        if (textCell && textCell.classList.contains('line-text-cell')) {
-                            textCell.classList.add('urn-range-highlight');
-                        }
-                    });
-                }
                 row.appendChild(wrapper);
             } else {
                     row.innerHTML = `
@@ -4245,7 +3212,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 }
                 targetContainer.appendChild(row);
             });
-
 
             const footer = document.createElement("div");
             footer.className = "viewport-footer-controls";
@@ -4299,7 +3265,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
 
     window.navigateAdjacentUrn = function(urn) {
         activeSectionFilter = null;
-        activeSectionRange = null;
         const parts = urn.split(":");
         const psg = parts[parts.length - 1].split(".");
         if (isFlatStructure(activeWorkKey)) {
@@ -4312,7 +3277,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
     window.clearSectionFilter = function(e) {
         if(e) e.preventDefault();
         activeSectionFilter = null;
-        activeSectionRange = null;
         triggerViewRefresh();
     };
 
@@ -4600,7 +3564,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const ow = document.getElementById('outer-wrapper');
             if (ow) modeObserver.observe(ow, { attributes: true, attributeFilter: ['class'] });
             window.addEventListener('resize', positionClassicHandles);
-            applyLexiconLatinPref();
         });
     })();
 
