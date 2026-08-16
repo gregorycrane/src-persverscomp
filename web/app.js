@@ -3842,7 +3842,17 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
     function renderTokenDetail(tok, headTok, depToks) {
         const rc = tbRelColor(tok.deprel);
         const pc = tbPosColor(tok.upos);
-        let h = `<div class="tb-detail-word">${escHtml(tok.form)}</div><div class="tb-detail-grid">`;
+        // Romanization sits right next to the word itself, not just in the
+        // grid row below -- for a script most readers can't sound out
+        // (Japanese, etc.), burying it in a conditional detail row means
+        // it's easy to miss entirely. Shown inline whenever present; the
+        // grid row further down is kept too, so it still lines up visually
+        // with Gloss/POS/etc. for readers scanning that list.
+        let h = `<div class="tb-detail-word">${escHtml(tok.form)}` +
+            (tok.translit
+                ? ` <span class="tb-detail-word-translit" dir="ltr" style="font-style:italic;font-weight:normal;font-size:0.55em;color:#888;vertical-align:middle">${escHtml(tok.translit)}</span>`
+                : '') +
+            `</div><div class="tb-detail-grid">`;
         if (tok.translit)
             h += `<span class="tb-dk">Translit</span><span class="tb-dv" dir="ltr" style="font-style:italic">${escHtml(tok.translit)}</span>`;
         if (tok.gloss)

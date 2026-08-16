@@ -1,1945 +1,2099 @@
 {
- "tlg0003.tlg001": {
-  "textgroup": "tlg0003",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-grc2.xml",
-    "label": "Greek (H. S. Jones, 1942)",
-    "class": "greek-text"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "1st1K-eng1": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-eng1.xml",
-    "label": "English (C. F. Smith, 1919)",
-    "class": "english-text"
-   },
-   "1st1K-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-eng2.xml",
-    "label": "English (Henry Dale, 1851)",
-    "class": "english-text"
-   },
-   "perseus-eng4": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-eng4.xml",
-    "label": "English (Thomas Hobbes, 1843)",
-    "class": "english-text"
-   },
-   "perseus-eng6": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-eng6.xml",
-    "label": "English (R. Crawley, 1914)",
-    "class": "english-text"
-   },
-   "1st1k-fre1": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1k-fre1.xml",
-    "label": "French (E. Bétant, 1863)",
-    "class": "french-text"
-   },
-   "1st1K-fre2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-fre2.xml",
-    "label": "French (M. C. Zévort, 1852)",
-    "class": "french-text"
-   },
-   "1st1K-ger1": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger1.xml",
-    "label": "German (H. Gürsching, 1856)",
-    "class": "german-text"
-   },
-   "1st1K-ger2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger2.xml",
-    "label": "German (A. Wahrmund, 1864)",
-    "class": "german-text"
-   },
-   "1st1K-ger3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger3.xml",
-    "label": "German (Theodor Braun, 1917)",
-    "class": "german-text"
-   },
-   "1st1K-ger4": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger4.xml",
-    "label": "German (Rudolf G. Binding, 1937)",
-    "class": "german-text"
-   },
-   "1st1K-ita1": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ita1.xml",
-    "label": "Italian (Anonymous, 1835)",
-    "class": "italian-text"
-   },
-   "1st1k-lat2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1k-lat2.xml",
-    "label": "Latin (Fr. Haase, 1869)",
-    "class": "latin-text"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "glaux-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0003/tlg001/tlg0003.tlg001.perseus-grc2.glossed.xml",
-    "label": "Treebank (Glaux)",
-    "class": "treebank-text",
-    "parse_mode": "agdt_xml",
-    "source_repo": "Glaux"
-   }
-  }
- },
- "tlg0006.tlg001": {
-  "textgroup": "tlg0006",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg001/tlg0006.tlg001.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg001/tlg0006.tlg001.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg001/tlg0006.tlg001.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg002": {
-  "textgroup": "tlg0006",
-  "work": "tlg002",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg002/tlg0006.tlg002.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg002/tlg0006.tlg002.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg002/tlg0006.tlg002.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg003": {
-  "textgroup": "tlg0006",
-  "work": "tlg003",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg003/tlg0006.tlg003.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg003/tlg0006.tlg003.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg003/tlg0006.tlg003.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg004": {
-  "textgroup": "tlg0006",
-  "work": "tlg004",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg004/tlg0006.tlg004.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg004/tlg0006.tlg004.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg004/tlg0006.tlg004.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg005": {
-  "textgroup": "tlg0006",
-  "work": "tlg005",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg005/tlg0006.tlg005.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg005/tlg0006.tlg005.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg005/tlg0006.tlg005.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg006": {
-  "textgroup": "tlg0006",
-  "work": "tlg006",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg006/tlg0006.tlg006.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg006/tlg0006.tlg006.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg006/tlg0006.tlg006.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg007": {
-  "textgroup": "tlg0006",
-  "work": "tlg007",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg007/tlg0006.tlg007.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg007/tlg0006.tlg007.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg007/tlg0006.tlg007.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg008": {
-  "textgroup": "tlg0006",
-  "work": "tlg008",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg008/tlg0006.tlg008.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg008/tlg0006.tlg008.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg008/tlg0006.tlg008.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg009": {
-  "textgroup": "tlg0006",
-  "work": "tlg009",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg009/tlg0006.tlg009.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg009/tlg0006.tlg009.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg009/tlg0006.tlg009.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg010": {
-  "textgroup": "tlg0006",
-  "work": "tlg010",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg010/tlg0006.tlg010.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg010/tlg0006.tlg010.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg010/tlg0006.tlg010.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg011": {
-  "textgroup": "tlg0006",
-  "work": "tlg011",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg011/tlg0006.tlg011.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg011/tlg0006.tlg011.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg011/tlg0006.tlg011.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg012": {
-  "textgroup": "tlg0006",
-  "work": "tlg012",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg012/tlg0006.tlg012.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg012/tlg0006.tlg012.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg012/tlg0006.tlg012.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg013": {
-  "textgroup": "tlg0006",
-  "work": "tlg013",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg013/tlg0006.tlg013.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg013/tlg0006.tlg013.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg013/tlg0006.tlg013.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg014": {
-  "textgroup": "tlg0006",
-  "work": "tlg014",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg014/tlg0006.tlg014.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg014/tlg0006.tlg014.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg014/tlg0006.tlg014.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg015": {
-  "textgroup": "tlg0006",
-  "work": "tlg015",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg015/tlg0006.tlg015.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg015/tlg0006.tlg015.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg015/tlg0006.tlg015.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg016": {
-  "textgroup": "tlg0006",
-  "work": "tlg016",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg016/tlg0006.tlg016.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg016/tlg0006.tlg016.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg016/tlg0006.tlg016.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg017": {
-  "textgroup": "tlg0006",
-  "work": "tlg017",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg017/tlg0006.tlg017.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg017/tlg0006.tlg017.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg018": {
-  "textgroup": "tlg0006",
-  "work": "tlg018",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg018/tlg0006.tlg018.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg018/tlg0006.tlg018.perseus-eng2.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg018/tlg0006.tlg018.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0006.tlg019": {
-  "textgroup": "tlg0006",
-  "work": "tlg019",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-grc2.xml",
-    "label": "Greek (Gilbert Murray, 1913)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-eng3.xml",
-    "label": "English (Edward P. Coleridge, 1906)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "perseus-eng4": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-eng4.xml",
-    "label": "English (Gilbert Murray, 1913)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "grc_misc-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg019/tlg0006.tlg019.perseus-grc2.conllu",
-    "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0012.tlg001": {
-  "textgroup": "tlg0012",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg001/tlg0012.tlg001.perseus-grc2.xml",
-    "label": "Greek (David B Monro, 1908)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg001/tlg0012.tlg001.perseus-eng3.xml",
-    "label": "English (A.T. Murray, 1924)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "butlernagy2020-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.butlernagy2020-eng2.xml",
-    "label": "English (Butler, rev. Nagy et al., 2020)",
-    "class": "english-text",
-    "parse_mode": "card_prose"
-   },
-   "bryant1870-eng2": {
-    "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg001/tlg0012.tlg001.bryant1870-eng2.xml",
-    "label": "English (William Cullen Bryant, 1870)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "pope1720watson1857-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.popewatson1857-eng2.xml",
-    "label": "English (Alexander Pope, 1720, ed. Watson, 1857)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hobbes1667molesworth-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.hobbes1667molesworth-eng2.xml",
-    "label": "English (Thomas Hobbes, 1667, ed. Molesworth 1843)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "chapman1611hooper-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.chapman1611hooper-eng2.xml",
-    "label": "English (George Chapman, 1611, ed. Hooper 1857)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "cowper-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.cowper-eng2.xml",
-    "label": "English (William Cowper, 1791, ed. Southey)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "newman1856-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.newman1856-eng2.xml",
-    "label": "English (F. W. Newman, 1856)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne_perstb-grc1": {
-    "path": [
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012_tlg001_daphne_perstbgllt-grc1_1-6.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.7-12.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.13-18.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.19-24.conllu"
-    ],
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "source_repo": "gregorycrane/gAGDT"
-   }
-  },
-  "metrics": {
-   "perstb-meter-grc1": {
-    "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg001/tlg0012.tlg001.meter.tsv",
-    "label": "Metrical Analysis (Perseus)",
-    "class": "metrical-text"
-   }
-  }
- },
- "tlg0012.tlg002": {
-  "textgroup": "tlg0012",
-  "work": "tlg002",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg002/tlg0012.tlg002.perseus-grc2.xml",
-    "label": "Greek (David B Monro, 1908)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg002/tlg0012.tlg002.perseus-eng3.xml",
-    "label": "English (A.T. Murray, 1924)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "butlernagy2020-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.butlernagy2020-eng2.xml",
-    "label": "English (Butler, rev. Nagy et al., 2020)",
-    "class": "english-text",
-    "parse_mode": "card_prose"
-   },
-   "bryant1873-eng2": {
-    "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg002/tlg0012.tlg002.bryant1873-eng2.xml",
-    "label": "English (William Cullen Bryant, 1873)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "pope1726watson1858-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.popewatson1858-eng2.xml",
-    "label": "English (Alexander Pope, 1726, ed. Watson, 1858)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hobbes1667molesworth-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.hobbes1667molesworth-eng2.xml",
-    "label": "English (Thomas Hobbes, 1667, ed. Molesworth 1843)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "chapman1615hooper-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.chapman1615hooper-eng2.xml",
-    "label": "English (George Chapman, 1667, ed. Hooper 1857)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "cowper-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.cowper-eng2.xml",
-    "label": "English (William Cowper, 1791, ed. Southey)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "cotterill1911-eng2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.cotterill1911-eng2.xml",
-    "label": "English (H. B. Cotterill, 1911)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne_perstb-grc1": {
-    "path": [
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.1-6.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.7-12.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.13-18.conllu",
-     "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.19-24.conllu"
-    ],
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "source_repo": "gregorycrane/gAGDT"
-   }
-  },
-  "metrics": {
-   "perstb-meter-grc1": {
-    "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg002/tlg0012.tlg002.meter.tsv",
-    "label": "Metrical Analysis (Perseus)",
-    "class": "metrical-text"
-   }
-  }
- },
- "tlg0086.tlg034": {
-  "textgroup": "tlg0086",
-  "work": "tlg034",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.perseus-grc2.xml",
-    "label": "Greek (Kassel, 1965)",
-    "class": "greek-text"
-   },
-   "digicorpus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.digicorpus-grc2.xml",
-    "label": "Greek (Digital Corpus Variant)",
-    "class": "greek-text"
-   },
-   "bywater1909-grc1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1.xml",
-    "label": "Greek (Ingram Bywater, 1909)",
-    "class": "greek-text"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "bishrmatta-ara1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.tkatsch-ara1.xml",
-    "label": "Arabic (Abū Bishr Mattā, c. 900)",
-    "class": "arabic-text"
-   },
-   "moerbeke1277-lat1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.moerbeke1277-lat1.xml",
-    "label": "Latin (Moerbeke, 1277)",
-    "class": "latin-text"
-   },
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.perseus-eng2.xml",
-    "label": "English (W.H. Fyfe, 1927)",
-    "class": "english-text"
-   },
-   "butcher1911-eng2": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.butcher1911-eng2.xml",
-    "label": "English (S.H. Butcher, 1911)",
-    "class": "english-text"
-   },
-   "riccobono1587-lat1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.riccobono1587-lat1.xml",
-    "label": "Latin (A. Riccobono, 1587)",
-    "class": "latin-text"
-   },
-   "bywater1909-eng1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-eng1.xml",
-    "label": "English (Ingram Bywater, 1909)",
-    "class": "english-text"
-   },
-   "twining1789-eng1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.twining1789-eng1.xml",
-    "label": "English (Thomas Twining, 1789)",
-    "class": "english-text",
-    "parse_mode": "milestones"
-   },
-   "dacier1692-fra2": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.dacier1692-fra2.xml",
-    "label": "French (André Dacier, 1692)",
-    "class": "french-text",
-    "parse_mode": "milestones"
-   },
-   "segni-ita1-aligned": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.segni-ita1-aligned.xml",
-    "label": "Italian (Bernardo Segni, 1549)",
-    "class": "italian-text"
-   }
-  },
-  "commentaries": {
-   "bywater1909-com1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-commentary-eng1.xml",
-    "label": "Commentary (Bywater, 1909)",
-    "class": "commentary-text"
-   },
-   "dacier1692-com-fra1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.dacier1692-commentary-fra2.xml",
-    "label": "Commentary (André Dacier, 1692)",
-    "class": "commentary-text",
-    "parse_mode": "milestones"
-   },
-   "twining-com-eng1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.twining1789-commentary-eng2.xml",
-    "label": "Commentary (T. Twining, 1789)",
-    "class": "commentary-text",
-    "parse_mode": "milestones"
-   }
-  },
-  "treebanks": {
-   "kassel-tb-grc1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.kassel.tb.conllu",
-    "label": "Treebank (Kassel, UD 2026)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   },
-   "moerbeke-tb-lat1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.moerbeke1277-lat1.conllu",
-    "label": "Treebank (Moerbeke, UD 2026)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   },
-   "bishrmatta-tb-ara1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.matta-ara.conllu",
-    "label": "Treebank (Bishr Mattā Arabic, UD)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  },
-  "alignments": {
-   "bywater1909-grc1__bywater1909-eng1": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1__bywater1909-eng1.json",
-    "label": "Bywater GRC → Bywater ENG (1909)",
-    "src_version": "bywater1909-grc1",
-    "tgt_version": "bywater1909-eng1"
-   },
-   "bywater1909-grc1__butcher1911-eng2": {
-    "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1__butcher1911-eng2.json",
-    "label": "Bywater GRC → Butcher ENG (1911)",
-    "src_version": "bywater1909-grc1",
-    "tgt_version": "butcher1911-eng2"
-   }
-  }
- },
- "tlg0011.tlg001": {
-  "textgroup": "tlg0011",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg001/tlg0011.tlg001.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg001/tlg0011.tlg001.perseus-eng3.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf007/viaf2603144.viaf007.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/tlg0011.tlg001.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg001/tlg0011.tlg001.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/speakers.csv"
-   }
-  }
- },
- "tlg0011.tlg002": {
-  "textgroup": "tlg0011",
-  "work": "tlg002",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg002/tlg0011.tlg002.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "boeckh-grc1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh1884-grc1.xml",
-    "label": "Greek (A. Boeckh, 1884)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "B."
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg002/tlg0011.tlg002.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb2, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hoelderlin1805-deu1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.hoelderlin1805-deu1.xml",
-    "label": "German (F. Hölderlin, 1804)",
-    "class": "german-text",
-    "parse_mode": "poetry_cards",
-    "card_anchor": "milestones",
-    "lineno_sigil": "H."
-   },
-   "boeckh-deu2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh1884-deu2.xml",
-    "label": "German (A. Boeckh, 1884)",
-    "class": "german-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "B."
-   },
-   "bothe1806-lat1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.bothe1806-lat1.xml",
-    "label": "Latin (F. H. Bothe, 1806)",
-    "class": "latin-text",
-    "parse_mode": "card_prose"
-   },
-   "garbin1889-spa2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.garbin1889-spa2.xml",
-    "label": "Spanish (A. G. Garbin, 1889)",
-    "class": "spanish-text",
-    "parse_mode": "card_prose"
-   },
-   "bolufer1921-spa2": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.bolufer1921-spa2.xml",
-    "label": "Spanish (J. A. Bolufer, 1921)",
-    "class": "spanish-text",
-    "parse_mode": "card_prose"
-   },
-   "jebb1904-eng1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.jebb1904-eng1.xml",
-    "label": "English (Sir Richard Jebb1, 1904)",
-    "class": "english-text",
-    "parse_mode": "card_prose"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf003/viaf2603144.viaf003.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg002/tlg0011.tlg002.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg002/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
-   }
-  },
-  "edition_alignments": [
-   "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh-grc1--perseus-grc2.align.tsv"
-  ]
- },
- "tlg0011.tlg003": {
-  "textgroup": "tlg0011",
-  "work": "tlg003",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg003/tlg0011.tlg003.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg003/tlg0011.tlg003.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf004/viaf2603144.viaf004.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/tlg0011.tlg003.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg003/tlg0011.tlg003.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/speakers.csv"
-   }
-  }
- },
- "tlg0011.tlg005": {
-  "textgroup": "tlg0011",
-  "work": "tlg005",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg005/tlg0011.tlg005.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg005/tlg0011.tlg005.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf005/viaf2603144.viaf005.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/tlg0011.tlg005.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg005/tlg0011.tlg005.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/speakers.csv"
-   }
-  }
- },
- "tlg0011.tlg006": {
-  "textgroup": "tlg0011",
-  "work": "tlg006",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg006/tlg0011.tlg006.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg006/tlg0011.tlg006.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf006/viaf2603144.viaf006.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/tlg0011.tlg006.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg006/tlg0011.tlg006.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/speakers.csv"
-   }
-  }
- },
- "tlg0011.tlg007": {
-  "textgroup": "tlg0011",
-  "work": "tlg007",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg007/tlg0011.tlg007.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg007/tlg0011.tlg007.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {
-   "jebb-com-eng1": {
-    "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf002/viaf2603144.viaf002.perseus-eng1.xml",
-    "label": "Commentary (R. C. Jebb)",
-    "class": "commentary-text",
-    "parse_mode": "line_commentary"
-   }
-  },
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/tlg0011.tlg007.daphne_tb-grc1.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg007/tlg0011.tlg007.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/speakers.csv"
-   }
-  }
- },
- "tlg0011.tlg008": {
-  "textgroup": "tlg0011",
-  "work": "tlg008",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.conllu",
-    "label": "Treebank (Deepseek)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": ""
-   }
-  }
- },
- "tlg0011.tlg004": {
-  "textgroup": "tlg0011",
-  "work": "tlg004",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg004/tlg0011.tlg004.perseus-grc2.xml",
-    "label": "Greek (F. Storr, 1912)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg004/tlg0011.tlg004.perseus-eng2.xml",
-    "label": "English (Sir Richard Jebb, 1904)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne-tb-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/tlg0011.tlg004.daphne_tb-grc1.glossed.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
-   },
-   "daphne-tb-cn1": {
-    "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg004/tlg0011.tlg004.daphne-cn.conllu",
-    "label": "Treebank (Daphne AGDT CN)",
-    "class": "treebank-text",
-    "parse_mode": "conllu",
-    "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
-   }
-  }
- },
- "tlg0020.tlg001": {
-  "textgroup": "tlg0020",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg001/tlg0020.tlg001.perseus-grc2.xml",
-    "label": "Greek (Hugh G. Evelyn-White, 1914)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg001/tlg0020.tlg001.perseus-eng2.xml",
-    "label": "English (Hugh G. Evelyn-White, 1914)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne_perstbgl-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg001.daphne_perstbgl-grc1.corrected.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0020.tlg002": {
-  "textgroup": "tlg0020",
-  "work": "tlg002",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg002/tlg0020.tlg002.perseus-grc2.xml",
-    "label": "Greek (Hugh G. Evelyn-White, 1914)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg002/tlg0020.tlg002.perseus-eng2.xml",
-    "label": "English (Hugh G. Evelyn-White, 1914)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne_perstbgl-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg002.daphne_perstbgl-grc1.corrected.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0020.tlg003": {
-  "textgroup": "tlg0020",
-  "work": "tlg003",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg003/tlg0020.tlg003.perseus-grc2.xml",
-    "label": "Greek (Hugh G. Evelyn-White, 1914)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg003/tlg0020.tlg003.perseus-eng2.xml",
-    "label": "English (Hugh G. Evelyn-White, 1914)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "daphne_perstbgl-grc1": {
-    "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg003.daphne_perstbgl-grc1.corrected.conllu",
-    "label": "Treebank (Daphne AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "ferdowsi.shahnameh": {
-  "textgroup": "ferdowsi",
-  "work": "shahnameh",
-  "editions": {
-   "pizzi1883-fas1": {
-    "path": "/Users/gcrane/github/Shahnameh/pizzi-readings.fa.xml",
-    "label": "Persian (I. Pizzi, ed., 1883)",
-    "class": "persian-text",
-    "parse_mode": "reading_lines"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "pizzi1883-eng1": {
-    "path": "/Users/gcrane/github/Shahnameh/pizzi-readings.eng.xml",
-    "label": "English (trans. Pizzi selections, 1883)",
-    "class": "english-text",
-    "parse_mode": "reading_lines"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "pizzi-tb-fas1": {
-    "path": "/Users/gcrane/github/Shahnameh/pizzi.readings.fa.conllu",
-    "label": "Treebank (Pizzi Persian selections, UD)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0085.tlg001": {
-  "textgroup": "tlg0085",
-  "work": "tlg001",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg001/tlg0085.tlg001.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0003.tlg001": {
+    "textgroup": "tlg0003",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-grc2.xml",
+        "label": "Greek (H. S. Jones, 1942)",
+        "class": "greek-text"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "D."
+    "appcrits": {},
+    "translations": {
+      "1st1K-eng1": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-eng1.xml",
+        "label": "English (C. F. Smith, 1919)",
+        "class": "english-text"
+      },
+      "1st1K-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-eng2.xml",
+        "label": "English (Henry Dale, 1851)",
+        "class": "english-text"
+      },
+      "perseus-eng4": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-eng4.xml",
+        "label": "English (Thomas Hobbes, 1843)",
+        "class": "english-text"
+      },
+      "perseus-eng6": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.perseus-eng6.xml",
+        "label": "English (R. Crawley, 1914)",
+        "class": "english-text"
+      },
+      "1st1k-fre1": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1k-fre1.xml",
+        "label": "French (E. Bétant, 1863)",
+        "class": "french-text"
+      },
+      "1st1K-fre2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-fre2.xml",
+        "label": "French (M. C. Zévort, 1852)",
+        "class": "french-text"
+      },
+      "1st1K-ger1": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger1.xml",
+        "label": "German (H. Gürsching, 1856)",
+        "class": "german-text"
+      },
+      "1st1K-ger2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger2.xml",
+        "label": "German (A. Wahrmund, 1864)",
+        "class": "german-text"
+      },
+      "1st1K-ger3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger3.xml",
+        "label": "German (Theodor Braun, 1917)",
+        "class": "german-text"
+      },
+      "1st1K-ger4": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ger4.xml",
+        "label": "German (Rudolf G. Binding, 1937)",
+        "class": "german-text"
+      },
+      "1st1K-ita1": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1K-ita1.xml",
+        "label": "Italian (Anonymous, 1835)",
+        "class": "italian-text"
+      },
+      "1st1k-lat2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0003/tlg001/tlg0003.tlg001.1st1k-lat2.xml",
+        "label": "Latin (Fr. Haase, 1869)",
+        "class": "latin-text"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "glaux-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0003/tlg001/tlg0003.tlg001.perseus-grc2.glossed.xml",
+        "label": "Treebank (Glaux)",
+        "class": "treebank-text",
+        "parse_mode": "agdt_xml",
+        "source_repo": "Glaux"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg001/tlg0085.tlg001.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg001.tbanktrans2.xml",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "agdt_xml"
-   }
-  }
- },
- "tlg0085.tlg002": {
-  "textgroup": "tlg0085",
-  "work": "tlg002",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg002/tlg0085.tlg002.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0006.tlg001": {
+    "textgroup": "tlg0006",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg001/tlg0006.tlg001.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg001/tlg0006.tlg001.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg001/tlg0006.tlg001.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg002/tlg0085.tlg002.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg002.tbanktrans2.xml",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "agdt_xml"
-   }
-  }
- },
- "tlg0085.tlg003": {
-  "textgroup": "tlg0085",
-  "work": "tlg003",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg003/tlg0085.tlg003.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0006.tlg002": {
+    "textgroup": "tlg0006",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg002/tlg0006.tlg002.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg002/tlg0006.tlg002.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg002/tlg0006.tlg002.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg003/tlg0085.tlg003.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg003.tbanktrans2.conllu",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0085.tlg004": {
-  "textgroup": "tlg0085",
-  "work": "tlg004",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg004/tlg0085.tlg004.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0006.tlg003": {
+    "textgroup": "tlg0006",
+    "work": "tlg003",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg003/tlg0006.tlg003.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg003/tlg0006.tlg003.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg003/tlg0006.tlg003.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg004/tlg0085.tlg004.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg004.tbanktrans2.xml",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "agdt_xml"
-   }
-  }
- },
- "tlg0085.tlg005": {
-  "textgroup": "tlg0085",
-  "work": "tlg005",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-   "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0006.tlg004": {
+    "textgroup": "tlg0006",
+    "work": "tlg004",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg004/tlg0006.tlg004.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg004/tlg0006.tlg004.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.dindorf1882-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg004/tlg0006.tlg004.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng3": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-eng3.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   },
-   "perseus-eng4": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-eng4.xml",
-    "label": "English (Robert Browning, 1889)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg005.tbanktrans.conllu",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0085.tlg006": {
-  "textgroup": "tlg0085",
-  "work": "tlg006",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg006/tlg0085.tlg006.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-  "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+  "tlg0006.tlg005": {
+    "textgroup": "tlg0006",
+    "work": "tlg005",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg005/tlg0006.tlg005.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg005/tlg0006.tlg005.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg005/tlg0006.tlg005.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg006/tlg0085.tlg006.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg006.tbanktrans2.conllu",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "tlg0085.tlg007": {
-  "textgroup": "tlg0085",
-  "work": "tlg007",
-  "editions": {
-   "perseus-grc2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg007/tlg0085.tlg007.perseus-grc2.xml",
-    "label": "Greek (Herbert Weir Smyth, 1926)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards"
-   },
-  "sidgwick1887-grc1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.sidgwick1887-grc1.xml",
-    "label": "Greek (Arthur Sidgwick, 1887)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "S."
+  "tlg0006.tlg006": {
+    "textgroup": "tlg0006",
+    "work": "tlg006",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg006/tlg0006.tlg006.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-  "hermann1852-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.hermann1852-grc2.xml",
-    "label": "Greek (Gottfried Hermann, 1852)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg006/tlg0006.tlg006.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
     },
-   "dindorf1882-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.dindorf1882-grc2.xml",
-    "label": "Greek (W. Dindorf, 1882)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "H."
-    },
-   "mazon1920-grc2": {
-    "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.mazon1920-grc2.xml",
-    "label": "Greek (P. Mazon, 1920)",
-    "class": "greek-text",
-    "parse_mode": "poetry_cards",
-    "lineno_sigil": "M."
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg006/tlg0006.tlg006.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-   "perseus-eng2": {
-    "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg007/tlg0085.tlg007.perseus-eng2.xml",
-    "label": "English (Herbert Weir Smyth, 1926)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards"
-   }
+  "tlg0006.tlg007": {
+    "textgroup": "tlg0006",
+    "work": "tlg007",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg007/tlg0006.tlg007.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg007/tlg0006.tlg007.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg007/tlg0006.tlg007.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
   },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-grc1": {
-    "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg007.tbanktrans2.conllu",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
+  "tlg0006.tlg008": {
+    "textgroup": "tlg0006",
+    "work": "tlg008",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg008/tlg0006.tlg008.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg008/tlg0006.tlg008.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg008/tlg0006.tlg008.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg009": {
+    "textgroup": "tlg0006",
+    "work": "tlg009",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg009/tlg0006.tlg009.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg009/tlg0006.tlg009.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg009/tlg0006.tlg009.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg010": {
+    "textgroup": "tlg0006",
+    "work": "tlg010",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg010/tlg0006.tlg010.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg010/tlg0006.tlg010.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg010/tlg0006.tlg010.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg011": {
+    "textgroup": "tlg0006",
+    "work": "tlg011",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg011/tlg0006.tlg011.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg011/tlg0006.tlg011.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg011/tlg0006.tlg011.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg012": {
+    "textgroup": "tlg0006",
+    "work": "tlg012",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg012/tlg0006.tlg012.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg012/tlg0006.tlg012.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg012/tlg0006.tlg012.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg013": {
+    "textgroup": "tlg0006",
+    "work": "tlg013",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg013/tlg0006.tlg013.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg013/tlg0006.tlg013.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg013/tlg0006.tlg013.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg014": {
+    "textgroup": "tlg0006",
+    "work": "tlg014",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg014/tlg0006.tlg014.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg014/tlg0006.tlg014.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg014/tlg0006.tlg014.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg015": {
+    "textgroup": "tlg0006",
+    "work": "tlg015",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg015/tlg0006.tlg015.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg015/tlg0006.tlg015.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg015/tlg0006.tlg015.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg016": {
+    "textgroup": "tlg0006",
+    "work": "tlg016",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg016/tlg0006.tlg016.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg016/tlg0006.tlg016.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg016/tlg0006.tlg016.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg017": {
+    "textgroup": "tlg0006",
+    "work": "tlg017",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg017/tlg0006.tlg017.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg017/tlg0006.tlg017.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg017/tlg0006.tlg017.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg018": {
+    "textgroup": "tlg0006",
+    "work": "tlg018",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg018/tlg0006.tlg018.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg018/tlg0006.tlg018.perseus-eng2.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg018/tlg0006.tlg018.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0006.tlg019": {
+    "textgroup": "tlg0006",
+    "work": "tlg019",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-grc2.xml",
+        "label": "Greek (Gilbert Murray, 1913)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-eng3.xml",
+        "label": "English (Edward P. Coleridge, 1906)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "perseus-eng4": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0006/tlg019/tlg0006.tlg019.perseus-eng4.xml",
+        "label": "English (Gilbert Murray, 1913)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "grc_misc-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/data/tlg0006/tlg019/tlg0006.tlg019.perseus-grc2.conllu",
+        "label": "Treebank (Gemini Flash 3.6 CoNLL-U)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0012.tlg001": {
+    "textgroup": "tlg0012",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg001/tlg0012.tlg001.perseus-grc2.xml",
+        "label": "Greek (David B Monro, 1908)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg001/tlg0012.tlg001.perseus-eng3.xml",
+        "label": "English (A.T. Murray, 1924)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "butlernagy2020-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.butlernagy2020-eng2.xml",
+        "label": "English (Butler, rev. Nagy et al., 2020)",
+        "class": "english-text",
+        "parse_mode": "card_prose"
+      },
+      "bryant1870-eng2": {
+        "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg001/tlg0012.tlg001.bryant1870-eng2.xml",
+        "label": "English (William Cullen Bryant, 1870)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "pope1720watson1857-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.popewatson1857-eng2.xml",
+        "label": "English (Alexander Pope, 1720, ed. Watson, 1857)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hobbes1667molesworth-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.hobbes1667molesworth-eng2.xml",
+        "label": "English (Thomas Hobbes, 1667, ed. Molesworth 1843)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "chapman1611hooper-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.chapman1611hooper-eng2.xml",
+        "label": "English (George Chapman, 1611, ed. Hooper 1857)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "cowper-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.cowper-eng2.xml",
+        "label": "English (William Cowper, 1791, ed. Southey)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "newman1856-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg001/tlg0012.tlg001.newman1856-eng2.xml",
+        "label": "English (F. W. Newman, 1856)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne_perstb-grc1": {
+        "path": [
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012_tlg001_daphne_perstbgllt-grc1_1-6.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.7-12.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.13-18.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg001/grc_new/tlg0012.tlg001.daphne_perstbgllt-grc1.19-24.conllu"
+        ],
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "gregorycrane/gAGDT"
+      }
+    },
+    "metrics": {
+      "perstb-meter-grc1": {
+        "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg001/tlg0012.tlg001.meter.tsv",
+        "label": "Metrical Analysis (Perseus)",
+        "class": "metrical-text"
+      }
+    }
+  },
+  "tlg0012.tlg002": {
+    "textgroup": "tlg0012",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg002/tlg0012.tlg002.perseus-grc2.xml",
+        "label": "Greek (David B Monro, 1908)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0012/tlg002/tlg0012.tlg002.perseus-eng3.xml",
+        "label": "English (A.T. Murray, 1924)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "butlernagy2020-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.butlernagy2020-eng2.xml",
+        "label": "English (Butler, rev. Nagy et al., 2020)",
+        "class": "english-text",
+        "parse_mode": "card_prose"
+      },
+      "bryant1873-eng2": {
+        "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg002/tlg0012.tlg002.bryant1873-eng2.xml",
+        "label": "English (William Cullen Bryant, 1873)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "pope1726watson1858-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.popewatson1858-eng2.xml",
+        "label": "English (Alexander Pope, 1726, ed. Watson, 1858)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hobbes1667molesworth-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.hobbes1667molesworth-eng2.xml",
+        "label": "English (Thomas Hobbes, 1667, ed. Molesworth 1843)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "chapman1615hooper-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.chapman1615hooper-eng2.xml",
+        "label": "English (George Chapman, 1667, ed. Hooper 1857)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "cowper-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.cowper-eng2.xml",
+        "label": "English (William Cowper, 1791, ed. Southey)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "cotterill1911-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0012/tlg002/tlg0012.tlg002.cotterill1911-eng2.xml",
+        "label": "English (H. B. Cotterill, 1911)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne_perstb-grc1": {
+        "path": [
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.1-6.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.7-12.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.13-18.conllu",
+          "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0012/tlg002/grc_new/tlg0012.tlg002.daphne_tbglosslt-grc1.19-24.conllu"
+        ],
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "gregorycrane/gAGDT"
+      }
+    },
+    "metrics": {
+      "perstb-meter-grc1": {
+        "path": "/Users/gcrane/github/Homerica/data/tlg0012/tlg002/tlg0012.tlg002.meter.tsv",
+        "label": "Metrical Analysis (Perseus)",
+        "class": "metrical-text"
+      }
+    }
+  },
+  "tlg0086.tlg034": {
+    "textgroup": "tlg0086",
+    "work": "tlg034",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.perseus-grc2.xml",
+        "label": "Greek (Kassel, 1965)",
+        "class": "greek-text"
+      },
+      "digicorpus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.digicorpus-grc2.xml",
+        "label": "Greek (Digital Corpus Variant)",
+        "class": "greek-text"
+      },
+      "bywater1909-grc1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1.xml",
+        "label": "Greek (Ingram Bywater, 1909)",
+        "class": "greek-text"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "bishrmatta-ara1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.tkatsch-ara1.xml",
+        "label": "Arabic (Abū Bishr Mattā, c. 900)",
+        "class": "arabic-text"
+      },
+      "moerbeke1277-lat1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.moerbeke1277-lat1.xml",
+        "label": "Latin (Moerbeke, 1277)",
+        "class": "latin-text"
+      },
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0086/tlg034/tlg0086.tlg034.perseus-eng2.xml",
+        "label": "English (W.H. Fyfe, 1927)",
+        "class": "english-text"
+      },
+      "butcher1911-eng2": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.butcher1911-eng2.xml",
+        "label": "English (S.H. Butcher, 1911)",
+        "class": "english-text"
+      },
+      "riccobono1587-lat1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.riccobono1587-lat1.xml",
+        "label": "Latin (A. Riccobono, 1587)",
+        "class": "latin-text"
+      },
+      "bywater1909-eng1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-eng1.xml",
+        "label": "English (Ingram Bywater, 1909)",
+        "class": "english-text"
+      },
+      "twining1789-eng1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.twining1789-eng1.xml",
+        "label": "English (Thomas Twining, 1789)",
+        "class": "english-text",
+        "parse_mode": "milestones"
+      },
+      "dacier1692-fra2": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.dacier1692-fra2.xml",
+        "label": "French (André Dacier, 1692)",
+        "class": "french-text",
+        "parse_mode": "milestones"
+      },
+      "segni-ita1-aligned": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.segni-ita1-aligned.xml",
+        "label": "Italian (Bernardo Segni, 1549)",
+        "class": "italian-text"
+      }
+    },
+    "commentaries": {
+      "bywater1909-com1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-commentary-eng1.xml",
+        "label": "Commentary (Bywater, 1909)",
+        "class": "commentary-text"
+      },
+      "dacier1692-com-fra1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.dacier1692-commentary-fra2.xml",
+        "label": "Commentary (André Dacier, 1692)",
+        "class": "commentary-text",
+        "parse_mode": "milestones"
+      },
+      "twining-com-eng1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.twining1789-commentary-eng2.xml",
+        "label": "Commentary (T. Twining, 1789)",
+        "class": "commentary-text",
+        "parse_mode": "milestones"
+      }
+    },
+    "treebanks": {
+      "kassel-tb-grc1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.kassel.tb.conllu",
+        "label": "Treebank (Kassel, UD 2026)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      },
+      "moerbeke-tb-lat1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.moerbeke1277-lat1.conllu",
+        "label": "Treebank (Moerbeke, UD 2026)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      },
+      "bishrmatta-tb-ara1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.matta-ara.conllu",
+        "label": "Treebank (Bishr Mattā Arabic, UD)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    },
+    "alignments": {
+      "bywater1909-grc1__bywater1909-eng1": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1__bywater1909-eng1.json",
+        "label": "Bywater GRC → Bywater ENG (1909)",
+        "src_version": "bywater1909-grc1",
+        "tgt_version": "bywater1909-eng1"
+      },
+      "bywater1909-grc1__butcher1911-eng2": {
+        "path": "/Users/gcrane/github/Poetics2.0/data/tlg0086/tlg034/tlg0086.tlg034.bywater1909-grc1__butcher1911-eng2.json",
+        "label": "Bywater GRC → Butcher ENG (1911)",
+        "src_version": "bywater1909-grc1",
+        "tgt_version": "butcher1911-eng2"
+      }
+    }
+  },
+  "tlg0011.tlg001": {
+    "textgroup": "tlg0011",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg001/tlg0011.tlg001.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg001/tlg0011.tlg001.perseus-eng3.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf007/viaf2603144.viaf007.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/tlg0011.tlg001.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg001/tlg0011.tlg001.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg001/speakers.csv"
+      }
+    }
+  },
+  "tlg0011.tlg002": {
+    "textgroup": "tlg0011",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg002/tlg0011.tlg002.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "boeckh-grc1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh1884-grc1.xml",
+        "label": "Greek (A. Boeckh, 1884)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "B."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg002/tlg0011.tlg002.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb2, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hoelderlin1805-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.hoelderlin1805-deu1.xml",
+        "label": "German (F. Hölderlin, 1804)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "H."
+      },
+      "boeckh-deu2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh1884-deu2.xml",
+        "label": "German (A. Boeckh, 1884)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "B."
+      },
+      "bothe1806-lat1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.bothe1806-lat1.xml",
+        "label": "Latin (F. H. Bothe, 1806)",
+        "class": "latin-text",
+        "parse_mode": "card_prose"
+      },
+      "garbin1889-spa2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.garbin1889-spa2.xml",
+        "label": "Spanish (A. G. Garbin, 1889)",
+        "class": "spanish-text",
+        "parse_mode": "card_prose"
+      },
+      "bolufer1921-spa2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.bolufer1921-spa2.xml",
+        "label": "Spanish (J. A. Bolufer, 1921)",
+        "class": "spanish-text",
+        "parse_mode": "card_prose"
+      },
+      "jebb1904-eng1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.jebb1904-eng1.xml",
+        "label": "English (Sir Richard Jebb1, 1904)",
+        "class": "english-text",
+        "parse_mode": "card_prose"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf003/viaf2603144.viaf003.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg002/tlg0011.tlg002.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg002/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
+      }
+    },
+    "edition_alignments": [
+      "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.boeckh-grc1--perseus-grc2.align.tsv"
+    ]
+  },
+  "tlg0011.tlg003": {
+    "textgroup": "tlg0011",
+    "work": "tlg003",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg003/tlg0011.tlg003.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg003/tlg0011.tlg003.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf004/viaf2603144.viaf004.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/tlg0011.tlg003.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg003/tlg0011.tlg003.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg003/speakers.csv"
+      }
+    }
+  },
+  "tlg0011.tlg005": {
+    "textgroup": "tlg0011",
+    "work": "tlg005",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg005/tlg0011.tlg005.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg005/tlg0011.tlg005.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf005/viaf2603144.viaf005.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/tlg0011.tlg005.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg005/tlg0011.tlg005.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg005/speakers.csv"
+      }
+    }
+  },
+  "tlg0011.tlg006": {
+    "textgroup": "tlg0011",
+    "work": "tlg006",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg006/tlg0011.tlg006.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg006/tlg0011.tlg006.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf006/viaf2603144.viaf006.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/tlg0011.tlg006.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg006/tlg0011.tlg006.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg006/speakers.csv"
+      }
+    }
+  },
+  "tlg0011.tlg007": {
+    "textgroup": "tlg0011",
+    "work": "tlg007",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg007/tlg0011.tlg007.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg007/tlg0011.tlg007.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {
+      "jebb-com-eng1": {
+        "path": "/Users/gcrane/github/canonical_pdlrefwk/data/viaf2603144/viaf002/viaf2603144.viaf002.perseus-eng1.xml",
+        "label": "Commentary (R. C. Jebb)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary"
+      }
+    },
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/tlg0011.tlg007.daphne_tb-grc1.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg007/tlg0011.tlg007.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg007/speakers.csv"
+      }
+    }
+  },
+  "tlg0011.tlg008": {
+    "textgroup": "tlg0011",
+    "work": "tlg008",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.conllu",
+        "label": "Treebank (Deepseek)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": ""
+      }
+    }
+  },
+  "tlg0011.tlg004": {
+    "textgroup": "tlg0011",
+    "work": "tlg004",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg004/tlg0011.tlg004.perseus-grc2.xml",
+        "label": "Greek (F. Storr, 1912)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg004/tlg0011.tlg004.perseus-eng2.xml",
+        "label": "English (Sir Richard Jebb, 1904)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne-tb-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/tlg0011.tlg004.daphne_tb-grc1.glossed.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
+      },
+      "daphne-tb-cn1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg004/tlg0011.tlg004.daphne-cn.conllu",
+        "label": "Treebank (Daphne AGDT CN)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "speakers_csv": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0011/tlg004/speakers.csv"
+      }
+    }
+  },
+  "tlg0020.tlg001": {
+    "textgroup": "tlg0020",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg001/tlg0020.tlg001.perseus-grc2.xml",
+        "label": "Greek (Hugh G. Evelyn-White, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg001/tlg0020.tlg001.perseus-eng2.xml",
+        "label": "English (Hugh G. Evelyn-White, 1914)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne_perstbgl-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg001.daphne_perstbgl-grc1.corrected.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0020.tlg002": {
+    "textgroup": "tlg0020",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg002/tlg0020.tlg002.perseus-grc2.xml",
+        "label": "Greek (Hugh G. Evelyn-White, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg002/tlg0020.tlg002.perseus-eng2.xml",
+        "label": "English (Hugh G. Evelyn-White, 1914)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne_perstbgl-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg002.daphne_perstbgl-grc1.corrected.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0020.tlg003": {
+    "textgroup": "tlg0020",
+    "work": "tlg003",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg003/tlg0020.tlg003.perseus-grc2.xml",
+        "label": "Greek (Hugh G. Evelyn-White, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0020/tlg003/tlg0020.tlg003.perseus-eng2.xml",
+        "label": "English (Hugh G. Evelyn-White, 1914)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "daphne_perstbgl-grc1": {
+        "path": "/Users/gcrane/github/Daphne/data/annotation/latest/tlg0020/grc_versions/tlg0020.tlg003.daphne_perstbgl-grc1.corrected.conllu",
+        "label": "Treebank (Daphne AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "ferdowsi.shahnameh": {
+    "textgroup": "ferdowsi",
+    "work": "shahnameh",
+    "editions": {
+      "pizzi1883-fas1": {
+        "path": "/Users/gcrane/github/Shahnameh/pizzi-readings.fa.xml",
+        "label": "Persian (I. Pizzi, ed., 1883)",
+        "class": "persian-text",
+        "parse_mode": "reading_lines"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "pizzi1883-eng1": {
+        "path": "/Users/gcrane/github/Shahnameh/pizzi-readings.eng.xml",
+        "label": "English (trans. Pizzi selections, 1883)",
+        "class": "english-text",
+        "parse_mode": "reading_lines"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "pizzi-tb-fas1": {
+        "path": "/Users/gcrane/github/Shahnameh/pizzi.readings.fa.conllu",
+        "label": "Treebank (Pizzi Persian selections, UD)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0085.tlg001": {
+    "textgroup": "tlg0085",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg001/tlg0085.tlg001.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "D."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "depauw1745-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.depauw1745-grc2.xml",
+        "label": "Greek (J. Depauw, 1745)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Dep."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg001/tlg0085.tlg001.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg001.tbanktrans2.xml",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "agdt_xml"
+      }
+    }
+  },
+  "tlg0085.tlg002": {
+    "textgroup": "tlg0085",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg002/tlg0085.tlg002.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg002/tlg0085.tlg002.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg002.tbanktrans2.xml",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "agdt_xml"
+      }
+    }
+  },
+  "tlg0085.tlg003": {
+    "textgroup": "tlg0085",
+    "work": "tlg003",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg003/tlg0085.tlg003.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg003/tlg0085.tlg003.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg003.tbanktrans2.conllu",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0085.tlg004": {
+    "textgroup": "tlg0085",
+    "work": "tlg004",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg004/tlg0085.tlg004.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg004/tlg0085.tlg004.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg004.tbanktrans2.xml",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "agdt_xml"
+      }
+    }
+  },
+  "tlg0085.tlg005": {
+    "textgroup": "tlg0085",
+    "work": "tlg005",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.dindorf1882-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng3": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-eng3.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "perseus-eng4": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-eng4.xml",
+        "label": "English (Robert Browning, 1889)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg005.tbanktrans.conllu",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0085.tlg006": {
+    "textgroup": "tlg0085",
+    "work": "tlg006",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg006/tlg0085.tlg006.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg006/tlg0085.tlg006.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg006.tbanktrans2.conllu",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0085.tlg007": {
+    "textgroup": "tlg0085",
+    "work": "tlg007",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg007/tlg0085.tlg007.perseus-grc2.xml",
+        "label": "Greek (Herbert Weir Smyth, 1926)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sidgwick1887-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.sidgwick1887-grc1.xml",
+        "label": "Greek (Arthur Sidgwick, 1887)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "S."
+      },
+      "hermann1852-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.hermann1852-grc2.xml",
+        "label": "Greek (Gottfried Hermann, 1852)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "dindorf1882-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.dindorf1882-grc2.xml",
+        "label": "Greek (W. Dindorf, 1882)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "H."
+      },
+      "mazon1920-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.mazon1920-grc2.xml",
+        "label": "Greek (P. Mazon, 1920)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "M."
+      },
+      "wilam14-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.wilam1914-grc2.xml",
+        "label": "Greek (U. von Wilamowitz, 1914)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      },
+      "wecklein1885-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.wecklein1885-grc2.xml",
+        "label": "Greek (K. Wecklein, 1885)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Wil."
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg007/tlg0085.tlg007.perseus-eng2.xml",
+        "label": "English (Herbert Weir Smyth, 1926)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-grc1": {
+        "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg007.tbanktrans2.conllu",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "phi0620.phi001": {
+    "textgroup": "phi0620",
+    "work": "phi001",
+    "editions": {
+      "butler1912-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-lat1.xml",
+        "label": "Latin (H. E. Butler, ed. 1912)",
+        "class": "latin-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
+      },
+      "perseus-lat3": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi0620/phi001/phi0620.phi001.perseus-lat3.xml",
+        "label": "Latin (Lucian Muller, ed. 1898)",
+        "class": "latin-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "butler1912-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-eng1.xml",
+        "label": "English (H. E. Butler, 1912)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-lat1.conllu",
+        "label": "Treebank (Perseus AGDT)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "boeckh1858.orationes": {
+    "textgroup": "boeckh1858",
+    "work": "orationes",
+    "editions": {
+      "leipzig1858-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.orationes.leipzig1858-lat1.xml",
+        "label": "Latin (F. Ascherson, ed. 1858)",
+        "class": "latin-text",
+        "parse_mode": "speech_collection_sentences",
+        "book_div_type": "speech"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "leipzig1858-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.orationes.leipzig1858-eng1.xml",
+        "label": "English (translation)",
+        "class": "english-text",
+        "parse_mode": "speech_collection_sentences",
+        "book_div_type": "speech"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-tb-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.leipzig1858-lat1.conllu",
+        "label": "Treebank (Claude Sonnet 5 / DeepSeek)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    },
+    "unit_labels": {
+      "book": "Speech",
+      "chapter": "Paragraph",
+      "section": "Sentence"
+    },
+    "book_titles": {
+      "1": "I. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. Aug. a. MDCCCXII. habita.",
+      "2": "II. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXIV. habita.",
+      "3": "III. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVI. habita.",
+      "4": "IV. Oratio in dedicatione universitatis litterariae Bero- linensis d. XXVI. m. April. a. MDCCCXVII. habita.",
+      "5": "V. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVII. habita.",
+      "6": "VI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVIII. habita.",
+      "7": "VII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXIX. habita.",
+      "8": "VIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXX. habita.",
+      "9": "IX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXI. habita.",
+      "10": "X. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXII. habita.",
+      "11": "XI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIII. habita.",
+      "12": "XII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIV. habita.",
+      "13": "XIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXV. habita.",
+      "14": "XIV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVI. habita.",
+      "15": "XV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVII. habita.",
+      "16": "XVI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVIII. habita.",
+      "17": "XVII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIX. habita.",
+      "18": "XVIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXX. habita.",
+      "19": "XIX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXI. habita.",
+      "20": "XX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXII. habita.",
+      "21": "XXI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIII. habita.",
+      "22": "XXII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIV. habita.",
+      "23": "XXIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXV. habita.",
+      "24": "XXIV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXVI. habita.",
+      "25": "XXV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXVII. habita.",
+      "26": "XXVI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIX. habita.",
+      "27": "XXVII. Friderici Guilelmi III. laudatio d. XXVII. m. Iunii a. MDCCCXL. dicta.",
+      "28": "XXVIII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXLI. habita.",
+      "29": "XXIX. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXII. habita.",
+      "30": "XXX. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXIII. habita.",
+      "31": "XXXI. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXV. habita.",
+      "32": "XXXII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXVI. habita.",
+      "33": "XXXIII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXVII. habita."
+    }
+  },
+  "heike.tokyo1933": {
+    "textgroup": "heike",
+    "work": "tokyo1933",
+    "editions": {
+      "tokyo1933-jpn1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/heike/tokyo1933/heike.tokyo1933.perseus-jpn1.xml",
+        "label": "Japanese (Kakuichi-bon, UVA/Tufts ed.)",
+        "class": "japanese-text",
+        "parse_mode": "book_chapter_section"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "tokyo1933-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/heike/tokyo1933/heike.tokyo1933.perseus-eng1.xml",
+        "label": "English (machine translation, DeepSeek)",
+        "class": "english-text",
+        "parse_mode": "book_chapter_section"
+      },
+      "sadler1918-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/heike/sadler1918/heike.sadler1918.perseus-eng1.xml",
+        "label": "English (A. L. Sadler, 1918–1921)",
+        "class": "english-text",
+        "parse_mode": "milestones",
+        "milestone_unit": "translation",
+        "milestone_scheme": "book_chapter"
+      },
+      "tokyo1933-translit1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/heike/tokyo1933/heike.tokyo1933.perseus-translit1.xml",
+        "label": "Transliteration (romanized, DeepSeek)",
+        "class": "english-text",
+        "parse_mode": "book_chapter_section"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "tokyo1933-tb-jpn1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/heike/tokyo1933/heike.tokyo1933-jpn1.conllu",
+        "label": "Treebank (Claude Sonnet 5 / DeepSeek, in progress — Books 1–7)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    },
+    "unit_labels": {
+      "book": "Book",
+      "chapter": "Chapter",
+      "section": "Section"
+    }
   }
- },
- "phi0620.phi001": {
-  "textgroup": "phi0620",
-  "work": "phi001",
-  "editions": {
-   "butler1912-lat1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-lat1.xml",
-    "label": "Latin (H. E. Butler, ed. 1912)",
-    "class": "latin-text",
-    "parse_mode": "poetry_cards",
-    "card_anchor": "poem"
-   },
-   "perseus-lat3": {
-    "path": "/Users/gcrane/github/canonical-latinLit/data/phi0620/phi001/phi0620.phi001.perseus-lat3.xml",
-    "label": "Latin (Lucian Muller, ed. 1898)",
-    "class": "latin-text",
-    "parse_mode": "poetry_cards",
-    "card_anchor": "poem"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "butler1912-eng1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-eng1.xml",
-    "label": "English (H. E. Butler, 1912)",
-    "class": "english-text",
-    "parse_mode": "poetry_cards",
-    "card_anchor": "poem"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-lat1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/phi0620/phi001/phi0620.phi001.butler1912-lat1.conllu",
-    "label": "Treebank (Perseus AGDT)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  }
- },
- "boeckh1858.orationes": {
-  "textgroup": "boeckh1858",
-  "work": "orationes",
-  "editions": {
-   "leipzig1858-lat1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.orationes.leipzig1858-lat1.xml",
-    "label": "Latin (F. Ascherson, ed. 1858)",
-    "class": "latin-text",
-    "parse_mode": "speech_collection_sentences",
-    "book_div_type": "speech"
-   }
-  },
-  "appcrits": {},
-  "translations": {
-   "leipzig1858-eng1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.orationes.leipzig1858-eng1.xml",
-    "label": "English (translation)",
-    "class": "english-text",
-    "parse_mode": "speech_collection_sentences",
-    "book_div_type": "speech"
-   }
-  },
-  "commentaries": {},
-  "treebanks": {
-   "perseus-tb-lat1": {
-    "path": "/Users/gcrane/github/grcnewxml/data/boeckh/leipzig1858/boeckh.leipzig1858-lat1.conllu",
-    "label": "Treebank (Claude Sonnet 5 / DeepSeek)",
-    "class": "treebank-text",
-    "parse_mode": "conllu"
-   }
-  },
-  "unit_labels": {
-   "book": "Speech",
-   "chapter": "Paragraph",
-   "section": "Sentence"
-  },
-  "book_titles": {
-   "1": "I. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. Aug. a. MDCCCXII. habita.",
-   "2": "II. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXIV. habita.",
-   "3": "III. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVI. habita.",
-   "4": "IV. Oratio in dedicatione universitatis litterariae Bero- linensis d. XXVI. m. April. a. MDCCCXVII. habita.",
-   "5": "V. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVII. habita.",
-   "6": "VI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXVIII. habita.",
-   "7": "VII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXIX. habita.",
-   "8": "VIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXX. habita.",
-   "9": "IX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXI. habita.",
-   "10": "X. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXII. habita.",
-   "11": "XI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIII. habita.",
-   "12": "XII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIV. habita.",
-   "13": "XIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXV. habita.",
-   "14": "XIV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVI. habita.",
-   "15": "XV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVII. habita.",
-   "16": "XVI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXVIII. habita.",
-   "17": "XVII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXIX. habita.",
-   "18": "XVIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXX. habita.",
-   "19": "XIX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXI. habita.",
-   "20": "XX. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXII. habita.",
-   "21": "XXI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIII. habita.",
-   "22": "XXII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIV. habita.",
-   "23": "XXIII. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXV. habita.",
-   "24": "XXIV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXVI. habita.",
-   "25": "XXV. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXVII. habita.",
-   "26": "XXVI. Oratio nataliciis Friderici Guilelmi III. celebrandis d. III. m. Aug. a. MDCCCXXXIX. habita.",
-   "27": "XXVII. Friderici Guilelmi III. laudatio d. XXVII. m. Iunii a. MDCCCXL. dicta.",
-   "28": "XXVIII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXLI. habita.",
-   "29": "XXIX. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXII. habita.",
-   "30": "XXX. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXIII. habita.",
-   "31": "XXXI. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXV. habita.",
-   "32": "XXXII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXVI. habita.",
-   "33": "XXXIII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXVII. habita."
-  }
- }
 }
