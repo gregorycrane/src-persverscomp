@@ -1521,6 +1521,36 @@
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -1585,6 +1615,30 @@
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg002/tlg0085.tlg002.perseus-eng2.xml",
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -1651,6 +1705,30 @@
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -1716,6 +1794,36 @@
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -1772,6 +1880,13 @@
         "class": "greek-text",
         "parse_mode": "poetry_cards",
         "lineno_sigil": "Wil."
+      },
+      "west1990-grc2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.west1990-grc2.xml",
+        "label": "Greek (M. West, 1990)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "West"
       }
     },
     "appcrits": {},
@@ -1786,6 +1901,36 @@
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg005/tlg0085.tlg005.perseus-eng4.xml",
         "label": "English (Robert Browning, 1889)",
         "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "wilam1919-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.wilam1919-ger1.xml",
+        "label": "German (U. von Wilamowitz, 1919)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -1851,6 +1996,42 @@
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg006/tlg0085.tlg006.perseus-eng2.xml",
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.potter-eng2.xml",
+        "label": "English (Robert Potter, 1779)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "wilam1919-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.wilam1919-ger1.xml",
+        "label": "German (U. von Wilamowitz, 1919)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -1923,6 +2104,42 @@
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0085/tlg007/tlg0085.tlg007.perseus-eng2.xml",
         "label": "English (Herbert Weir Smyth, 1926)",
         "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "buckley1849-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.buckley1849-eng2.xml",
+        "label": "English (T. Buckley, 1849)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "wilam1919-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.wilam1919-ger1.xml",
+        "label": "German (U. von Wilamowitz, 1919)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards"
+      },
+      "mazon1920-fra2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.mazon1920-fra2.xml",
+        "label": "French (P. Mazon, 1920)",
+        "class": "french-text",
+        "parse_mode": "poetry_cards"
+      },
+      "romagnoli1922-ita2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.romagnoli1922-ita2.xml",
+        "label": "Italian (G. Romagnoli, 1922)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      },
+      "sanravius1555-lat2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.sanravius1555-lat2.xml",
+        "label": "Latin (A. San Ravius, 1555)",
+        "class": "latin-text",
         "parse_mode": "poetry_cards"
       }
     },
