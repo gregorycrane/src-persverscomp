@@ -1,0 +1,1666 @@
+mention_type,mention_name,citation,place_id,place_name,lat,lon,feature_type
+demonym,Indian,1.11,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Paros,1.11,371252PPar,Paros (Cyclades) 193 Parikia - Πάρος,37.0844,25.1483,polity
+place,Enipeus,1.118,378218WEni,Enipeus R. (Eleia) 11 Lestenitsa - Ενιπεύς,37.655,21.546,river
+demonym,Athenian,1.125,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Olympos,1.137,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Nile,1.137,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+demonym,Cilician,1.154,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+demonym,Parrhasian,1.163,375222RPar,Parrhasia region (Arkadia) 69  - Παρρασία,37.45,22.15,region/people
+place,Olympos,1.163,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,1.176,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,1.202,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Tarsos,1.258,369349UTar,Tarsus (Anatolia) 209 Tarsus - Ταρσός,36.9122,34.897,polity
+place,Cydnos,1.258,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Olympos,1.258,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Dicte,1.321,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+person,Olympos,1.352,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Inachian,1.377,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Olympos,1.377,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Tauros,1.408,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+demonym,Olympian,1.427,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Olenian,1.439,382216POle,Olenos (Achaia) 84 Tsoukalaiika/Kamenitsa? - Ώλενος,38.1537,21.6406,polity
+place,Olympos,1.439,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Sidonian,1.46,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+demonym,Achaian,1.90,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Lydia,10.139,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Pactolos,10.139,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Phrygian,10.175,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Pactolos,10.217,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Libyan,10.230,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Trojan,10.250,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Tmolos,10.250,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+demonym,Phrygian,10.292,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Trojan,10.292,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Maeonia,10.292,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Olympos,10.292,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ida,10.292,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+demonym,Magnesian,10.321,397227RMag,Magnesia region (Magnesia) 235 Magnesia - Μαγνησία,39.4,22.9,region/people
+place,Alpheios,10.373,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+place,Cithairon,10.85,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+person,Colchian,10.96,431423RCol,Colchis (Pontus) 391 Georgia - Κολχίς,42.12,42.28,region/people
+demonym,Phrygian,11.113,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Trojan,11.118,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Olympian,11.17,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Pactolos,11.17,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Phrygian,11.253,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Olympos,11.253,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ida,11.287,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+place,Eridanos,11.301,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Pactolos,11.301,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Eridanos,11.32,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Pactolos,11.32,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Hermos,11.32,385281WHer,Hermus R. (Lydia) 64 Gediz - Έρμος,38.5178,28.1113,river
+place,Hades,11.325,000000GHad,Hades (Underworld) 210 ELTA,37.98561,23.762304,mythic site
+place,Tmolos,11.337,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+demonym,Laconian,11.351,370225RLak,Lakonia region (Peloponnese) 790 Lakonia - Λακωνική,37.001,22.5,region/people
+person,Amyclaian,11.351,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+place,Maiandros,11.369,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+place,Maiandros,11.369,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+place,Acheron,11.442,392205WAch,Acheron R. (Preveza) 163 Akheron - Αχέρων,39.2348,20.4831,river
+place,Maiandros,11.463,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+place,Nile,11.509,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+demonym,Lydian,12.117,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Phrygian,12.117,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Hermos,12.117,385281WHer,Hermus R. (Lydia) 64 Gediz - Έρμος,38.5178,28.1113,river
+place,Pactolos,12.117,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Sangarios,12.117,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+demonym,Phrygian,12.142,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Dorian,12.142,387224RDor,Doris tetrapolis (Central Greece) 303 Dorida - Δωρίς,38.7,22.4,region/people
+demonym,Aonian,12.142,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Acheron,12.142,392205WAch,Acheron R. (Preveza) 163 Akheron - Αχέρων,39.2348,20.4831,river
+place,Marathon,12.142,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Pactolos,12.142,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Eurotas,12.142,371224WEur,Eurotas R. (Lakonia) 201 Evrotas - Ευρώτας,37.093,22.427,river
+person,Amyclaian,12.142,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+place,Styx,12.207,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+place,Therapne,12.207,371225UThe,Therapne (Lakonia) 55 SE Sparta - Θεράπναι,37.0736,22.534,polity
+demonym,Olympian,12.292,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Maeonia,12.394,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+demonym,Phrygian,12.70,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Paphian,12.70,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Sipylos,12.70,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+ethnic,Indians,13.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Boiotian,13.120,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Indian,13.120,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Delphian,13.122,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Aonian,13.122,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Phocis,13.122,386227RPho,Phokis region (Central Greece) 781 Phokida - Φωκίς,38.6,22.7,region/people
+place,Cyparissos,13.122,385226UKyp,Kyparissos? (Phokis) 20 Zemeno - Κυπάρισσος,38.474,22.633,polity
+place,Hyampolis,13.122,386229PHya,Hyampolis (Phokis) 49 Exarkhos (Bogdanou) - Υάμπολις,38.5961,22.9054,polity
+place,Crisa,13.122,384225UKri,Krisa (Phokis) 104 Chryso - Κρισά,38.4712,22.469,polity
+place,Daulis,13.122,385227PDau,Daulis (Boeotia) 66 Davleia/Kastro - Δαυλίς,38.5055,22.7318,polity
+place,Panopeus,13.122,385228UPan,Panopeos/Phanotis (Boeotia) 68 Ag. Vlasios - Πανόπη,38.495,22.795,polity
+place,Parnassos,13.122,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Castalia,13.122,385225WCas,Castalia (Phokis) 80 Castalian spring - Κασταλία,38.483,22.505,spring
+ethnic,Abantes,13.135,388238RAba,Abantes tribe (Euboea) 39 Euboia - Αβαντίς,38.75,23.5,region/people
+ethnic,Abantes,13.135,388238RAba,Abantes tribe (Euboea) 39 Euboia - Αβαντίς,38.75,23.5,region/people
+ethnic,Ellopians,13.135,389231UHel,Hellopia (Euboea) 23 Kastaniotissa? - Ελλοπία,38.9118,23.136,polity
+demonym,Euboian,13.135,385239IEub,Euboia (Euboea) 740 Evia - Εύβοια,38.53,23.87,island
+demonym,Phrygian,13.135,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Cnossian,13.135,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+demonym,Cotylaian,13.135,388238LKot,Kotylaion Mt. (Euboea) 7 Mavrovouni - Κοτύλαιον,38.601,24.008,mountain
+place,Crete,13.135,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Marathon,13.135,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Eretria,13.135,384238PEre,Eretria (Euboea) 227 Eretria - Ερέτρια,38.3982,23.7905,polity
+place,Styra,13.135,382242PSty,Styra (Euboea) 22 Styra - Στύρα,38.1455,24.2607,polity
+place,Cerinthos,13.135,388235UKer,"Kerinthos (Euboea) 15 Kria Vrisi, Ag. Ilias - Κήρινθος",38.8343,23.4775,polity
+place,Carystos,13.135,380244PKar,Karystos (Euboea) 146 Karystos - Κάρυστος,38.027,24.427,polity
+place,Dion,13.135,388229PDio,Dion site (Euboea) 11 Likhas - Διώνη,38.8509,22.8731,polity
+place,Geraistos,13.135,380245HGer,Geraistos (Euboea) 47 Porto Kastri - Γεραιστός,37.977,24.539,harbor
+place,Styx,13.135,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+place,Marmarion,13.135,380243UMar,Marmarion (Euboea) 3 Marmari - Μαρμάριον,38.049,24.3209,polity
+place,Aige,13.135,386236UAig,Aigai site (Euboea) 18 Politika Kafkala - Αιγαί,38.586,23.555,polity
+place,Chalcis,13.135,385236PCha,Chalkis (Euboea) 435 Chalkida - Χάλκις,38.4597,23.6153,polity
+ethnic,Athenians,13.171,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Eleusinian,13.171,380235SEle,Eleusinian Demeter sanctuary (Attica) 156 Eleusis - Ελευσίς,38.0411,23.538,sanctuary/temple
+place,Siphnos,13.171,370247PSip,Siphnos (Cyclades) 75 Kastro - Σίφνος,36.975,24.745,polity
+place,Oinoe,13.171,382239DOin,Oinoe (Marathon) 14 Marathonas - Οινόη,38.156,23.9327,deme
+place,Hymettos,13.171,379238LHym,Hymettos Mt. (Attica) 89 Imitos - Υμηττός,37.946,23.815,mountain
+place,Marathon,13.171,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,city,13.171,380235PEle,Eleusis (Attica) 227 Elefsina - Ελευσίς,38.0441,23.5415,polity
+place,Brauron,13.171,379240SBra,Artemis Brauronia sanct. (Attica) 34 Brauron - Βραυρωνία η Άρτεμις,37.9262,23.9937,sanctuary/temple
+place,Thoricos,13.171,377241DTho,Thorikos (Attica) 33 Thorikos - Θορικός,37.7392,24.0516,deme
+place,Aphidna,13.171,381239DAph,Aphidna fortress (Attica) 63 s of Kapandriti - Άφιδνα,38.1871,23.8792,fortification
+place,Acharnai,13.171,381237DAch,Acharnai (Attica) 85 Acharnes/Menidi - Αχαρναί,38.0803,23.7332,deme
+place,Attica,13.171,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Phaleron,13.171,379237DPha,Phaleron (Attica) 163 Palio Faliro - Φάληρον,37.9373,23.7062,deme
+ethnic,Indians,13.19,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,13.19,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Asopos,13.201,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Aigina,13.201,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+place,Asopos,13.201,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+ethnic,Colchians,13.222,431423RCol,Colchis (Pontus) 391 Georgia - Κολχίς,42.12,42.28,region/people
+demonym,Cydonian,13.222,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+demonym,Indian,13.222,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cnossian,13.222,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+demonym,Cretan,13.222,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Lyctos,13.222,352254PLyk,Lyktos/Lyttos (Crete) 57 Xidas - Λύττος,35.2081,25.3682,polity
+place,Miletos,13.222,353256PMil,Milatos (Crete) 10 Paralia Milatou - Μίλατος,35.3144,25.5655,polity
+place,Gortyn,13.222,351249UGor,Gortyna (Crete) 90 Gortyna/Ag. Deka - Γόρτυν,35.0594,24.95,polity
+place,Rhytion,13.222,350252URhy,Rhytion/Rhytiassos (Crete) 7 Rotasi - Ρύτιον,35.002,25.171,polity
+place,Lycastos,13.222,352251ULyk,Lykastos (Crete) 9 Rokka - Λύκαστος,35.2024,25.1016,polity
+place,Cisamos,13.222,355237UKis,Kisamos (Crete) 7 Kisamos - Κίσαμος,35.4929,23.6558,polity
+place,Dicte,13.222,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+place,Scythia,13.222,475310RSky,Scythia (Pontus) 1137 N. Coast of Black Sea - Σκυθική,47.5,31.01,region/people
+place,Amnisos,13.222,353253WAmn,Amnisos R. (Crete) 11 Karteros - Αμνισός,35.327,25.196,river
+place,Phasis,13.222,422417WPha,Phasis R. (Georgia) 183 Rioni - Φάσις,42.171,41.733,river
+person,Phaistian,13.222,351248PPha,Phaistos (Crete) 34 Phaistos/Ag. Ioannis - Φαιστός,35.0512,24.8138,polity
+demonym,Indian,13.253,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,13.253,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cyllene,13.253,379224LKyl,Kyllene Mt. (Korinthia) 114 Kyllini - Κυλλήνη,37.9397,22.3969,mountain
+place,Meropis,13.253,369273PKos,Kos (Dodecanese) 282 Kos - Κώς,36.8914,27.2859,polity
+place,Parrhasia,13.253,375222RPar,Parrhasia region (Arkadia) 69  - Παρρασία,37.45,22.15,region/people
+ethnic,Arcadians,13.286,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Lasion,13.286,378217PLas,Lasion (Eleia) 29 N Koumanis - Λασιών,37.798,21.7435,polity
+place,Lycaios,13.286,375220LLyk,Lykaion Mt. (Arkadia) 77 Lykaion - Λύκαιον,37.4569,21.975,mountain
+place,Stymphalos,13.286,379225PSty,Stymphalos (Korinthia) 108 Stymphalia - Στύμφαλος,37.8606,22.4618,polity
+place,Rhipe,13.286,382220URhy,Rhypes polis (Achaia) 30 Koumari - Ρύπαι,38.2189,22.03,sanctuary/temple
+place,Stratie,13.286,377219UStr,Stratos (Eleia) 10 Stavri ridge - Στράτος,37.7249,21.8649,polity
+place,Mantinea,13.286,376224UMan,Mantineia (Arkadia) 400 Mantineia - Μαντίνεια,37.6181,22.3933,polity
+place,Enispe,13.286,368228UEni,Enispe? (Arkadia) 10 unlocated - Ενίσπη,37.6,22.2,polity
+place,Parrhasia,13.286,375222RPar,Parrhasia region (Arkadia) 69  - Παρρασία,37.45,22.15,region/people
+place,Pheneos,13.286,379223PPhe,Pheneos (Arkadia) 106 Archaia Feneos - Φενεός,37.9117,22.307,polity
+place,Orchomenos,13.286,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Libya,13.286,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Sicilian,13.309,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Pisan,13.309,376217PPis,Pisa (Eleia) 197 Pissa - Πίσα,37.6395,21.653,polity
+place,Catana,13.309,375151PCat,Katane/Catina (Sicily) 164 Catania - Κατάνη,37.503,15.0881,polity
+place,Camarina,13.309,369144PCam,Camarina (Sicily) 81 Camarina - Καμάρινα,36.8721,14.4474,polity
+place,Hybla,13.309,376149UHyb,Hybla Gereatis (Sicily) 37 Paterna - Ύβλαι,37.5673,14.9009,polity
+place,Aitna,13.309,377150LAit,Aitna Mt. (Sicily) 215 Etna - Αίτνη,37.748,15.001,mountain
+place,Pachynos,13.309,367151LPac,Pachynos cape (Sicily) 88 Pachino - Πάχυνος,36.67,15.131,cape
+place,Arethusa,13.309,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Alpheios,13.309,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+ethnic,Libyans,13.333,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+ethnic,Ethiopians,13.333,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+demonym,Sithonian,13.333,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+demonym,Bistonian,13.333,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+place,Tritonian lake,13.333,000000WTri,Tritonis lake (Libya) 49 unknown - Τριτωνίς,30.14,19.0,lake
+place,Ammon,13.333,292255SAmm,Ammon Oracle (Egypt) 100 Siwa Oasis - Αμμώνειον,29.2052,25.5435,sanctuary/temple
+place,Cinyps,13.333,325144UKin,Kinyps (Libya) 27 Khoms,32.5279,14.4473,polity
+ethnic,Lydians,13.35,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Olympos,13.35,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Samothrace,13.393,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+place,Myrmex,13.393,391233IMyr,Myrmex (Skiathos) 4 Lefkari - Μύρμηξ,39.1409,23.3442,island
+place,Zerynthos,13.393,405257UZer,Zerynthos (Samothrace) 14 E coast of Samothraki - Ζήρυνθος,40.4887,25.6534,polity
+demonym,Indian,13.411,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Bistonian,13.428,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+place,Pimpleia,13.428,401225UPim,Pimpleia (Pieria) 19 S Dion - Πίμπλεια,40.1434,22.4931,polity
+demonym,Cyprian,13.432,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,13.432,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Lapethos,13.432,353332PLap,Lapethos (Cyprus) 19 Lambousa - Λάπηθος,35.357,33.198,polity
+place,Tamasos,13.432,350332PTam,Tamassos (Cyprus) 13 SE Politiko - Ταμασσός,35.028422,33.2421855,polity
+place,Soloi,13.432,351328PSol,Soloi (Cyprus) 28 Karavostasi/Yedidalga - Σόλοι,35.1398,32.811959,polity
+place,Lapethos,13.432,353332PLap,Lapethos (Cyprus) 19 Lambousa - Λάπηθος,35.357,33.198,polity
+place,Cinyreia,13.432,353333PKer,Keryneia (Cyprus) 14 Kyrenia - Κερύνεια,35.337334,33.321417,polity
+place,Crapaseia,13.432,356344PKar,Karpasia (Cyprus) 21 Rizokarpaso-Ag. Filon - Καρπασία,35.626206,34.369934,polity
+place,Paphos,13.432,348324PPap,Paphos (Cyprus) 35 Kato Paphos - Πάφος,34.757,32.407,polity
+place,Salamis,13.432,379235PSal,Salamis (Salamis) 266 Ambelaki - Σαλαμίς,37.952,23.5408,polity
+place,Salamis,13.432,352339PSal,Salamis/Konstantia (Cyprus) 108 Ammokhostos - Σαλαμίς,35.1799505,33.9030525,polity
+ethnic,Lydians,13.464,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Pactolian,13.464,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Sardis,13.464,385280PSar,Sardis (Lydia) 383 Sart - Σάρδις,38.4883,28.0403,polity
+place,Hermos,13.464,385281WHer,Hermus R. (Lydia) 64 Gediz - Έρμος,38.5178,28.1113,river
+place,Stataloi,13.464,386283USat,Satala (Lydia) 3 Adala - Σάταλα,38.5792,28.2675,polity
+demonym,Indian,13.498,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Berecyntian,13.498,355241LBer,Berekynthos Mt. (Crete) 18 Malaxa - Βερέκυνθον,35.466,24.094,mountain
+ethnic,Phrygians,13.511,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+ethnic,Lydians,13.511,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Aonian,13.511,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Maiandros,13.511,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+place,Sangarios,13.511,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+place,Dirce,13.511,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+place,Sangarios,13.511,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+place,Sipylos,13.511,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+place,Aonia,13.53,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,13.53,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Onchestos,13.53,384232UOnc,Onchestos (Boeotia) 51 Kazarma - Ογχηστός,38.3622,23.1453,sanctuary/temple
+place,Peteon,13.53,384234UPet,Peteon (Boeotia) 11 Platanaki - Πετεών,38.444,23.4121,polity
+place,Ocalae,13.53,384230UOka,Evangelistrias tower Okaleia? (Boeotia) 14 Evangelistria - Ωκαλέα,38.34662,23.04426,tower
+place,Erythrai,13.53,382234PEry,Erythrai (Boeotia) 34 Daphni - Ερυθραί,38.2358,23.4032,polity
+place,Arne,13.53,385229UArn,Arne (Boeotia) 44 Magoula Balomenou - Άρνη,38.5112,22.8616,polity
+place,Mideia,13.53,384229PLeb,Lebadeia (Boeotia) 94 Levadeia - Λεβάδεια,38.4354,22.875,polity
+place,Eilesion,13.53,383235UEil,Eilesion (Boeotia) 9 Asopia/Khlembotsari - Ειλέσιον,38.3022,23.5037,polity
+place,Scolon,13.53,383234PSko,Skolos (Boeotia) 24 Neokhoraki - Σκώλος,38.269,23.387,polity
+place,Thisbe,13.53,383230PThi,Thisbai (Boeotia) 48 Thisbi - Θίσβαι,38.2564,22.972,polity
+place,Eleon,13.53,384235UHel,Heleon (Boeotia) 28 Arma - Ελεών,38.355,23.481,polity
+place,Copai,13.53,385232PKop,Kopai (Boeotia) 35 Kastro - Κώπαι,38.494,23.161,polity
+place,lake,13.53,384231WCop,Copais lake (Boeotia) 56 Kopais - Κώπαι,38.4471,23.0687,lake
+place,Medeon,13.53,384232UMed,Medeon Kopais (Boeotia) 8 Davlosis - Μεδεών,38.3866,23.167,polity
+place,Hyle,13.53,385233UHyl,Hyle (Boeotia) 41 Yliki - Ύλη,38.447,23.312,polity
+place,Thespiae,13.53,383232PThe,Thespiai (Boeotia) 230 Thespies - Θεσπιαί,38.2935,23.1549,polity
+place,Plataiai,13.53,382233PPla,Plataea (Boeotia) 337 Plataia - Πλαταιά,38.2213,23.2733,polity
+place,Haliartos,13.53,384231PHal,Haliartos (Boeotia) 145 Aliartos - Αλίαρτος,38.3787,23.088,polity
+place,Helicon,13.53,384228LHel,Helikon Mt. (Boeotia) 237 Elikona - Ελικών,38.3207,23.0154,mountain
+place,Anthedon,13.53,385235PAnt,Anthedon (Boeotia) 63 Magdilo - Ανθηδών,38.4987,23.448,polity
+place,Ascra,13.53,383231UAsk,Askra (Boeotia) 55 Pyrgaki-Episkopi - Άσκρα,38.32242,23.0855,polity
+place,Graia,13.53,384236UGra,Graia? (Boeotia) 20 Paralia Avlidas - Γραία,38.38427,23.62658,polity
+place,Mycalessos,13.53,384235PMyk,Mykalessos (Boeotia) 45 Ritsona - Μυκαλησσός,38.407,23.519,polity
+place,Nisa,13.53,385234UIso,Isos (Boeotia) 13 Paralimni - Ίσος,38.4778,23.3892,polity
+place,city,13.53,384230PKor,Koroneia (Boeotia) 112 Palaia Koroneia - Κορώνεα,38.3912,22.9571,polity
+demonym,Carian,13.546,370287RKar,Caria region (Asia Minor) 709 W Asia Minor - Καρία,37.01,28.7,region/people
+demonym,Indian,13.546,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Caunos,13.546,368286UKau,Kaunos (Caria) 84 Dalyan - Καύνος,36.8259,28.6215,polity
+place,Caunos,13.546,368286UKau,Kaunos (Caria) 84 Dalyan - Καύνος,36.8259,28.6215,polity
+place,Mycale,13.546,377271LMyc,Mykale Mt. (Ionia) 88 Samsun Dag - Μυκάλη,37.6667,27.0833,mountain
+place,Maiandros,13.546,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+ethnic,Boiotians,13.83,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+ethnic,Achaians,13.83,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Indian,13.83,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Argive,13.83,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Aspledon,13.83,385230UAsp,Aspledon (Boeotia) 11 Dionysos/Polyyria? - Ασπληδών,38.536,22.957,polity
+place,Orchomenos,13.83,385230POrc,Orchomenos (Boeotia) 161 Orchomenos - Ορχομενός,38.4956,22.9641,polity
+place,Hyria,13.83,385236UHyr,Hyria (Euboea) 22 Tseloneri - Υρία,38.4568,23.5648,polity
+place,Aulis,13.83,384236UAul,Aulis (Euboea) 151 Mikro Vathy/Ag. Nikolaos - Αυλίς,38.4335,23.5925,sanctuary/temple
+person,Colchian,13.83,431423RCol,Colchis (Pontus) 391 Georgia - Κολχίς,42.12,42.28,region/people
+demonym,Indian,14.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,14.1,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Achaian,14.105,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Dorian,14.105,387224RDor,Doris tetrapolis (Central Greece) 303 Dorida - Δωρίς,38.7,22.4,region/people
+place,Lemnos,14.17,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Samos,14.17,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+demonym,Cyprian,14.193,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Lydian,14.203,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Indian,14.203,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Sipylos,14.203,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+place,Ione,14.219,362362PAnt,Antioch (Syria) 827 Antakya - Αντιόχεια,36.2,36.165,polity
+demonym,Cnossian,14.23,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Crete,14.23,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+ethnic,Indians,14.269,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Phrygian,14.269,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Sangarios,14.269,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+place,river,14.269,361360WOro,Orontes river (Syria) 81 Asi - Ορόντης,36.0677,35.9902,river
+demonym,Phrygian,14.284,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,14.284,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Lycians,14.295,365295RLyc,Lycia region (Asia Minor) 599 SW Asia Minor - Λυκία,36.5,29.5,region/people
+place,Phrygia,14.295,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,14.303,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,14.323,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,14.329,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,14.36,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Styx,14.36,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+place,Rhodes,14.36,364282IRho,Rhodes (Dodecanese) 1346 Rodos - Ρόδος,36.4408,28.2244,polity
+place,India,14.386,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,14.403,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,14.411,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Trojan,14.419,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Olympos,14.419,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Sicilian,14.52,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+ethnic,Indians,15.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,15.115,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,15.146,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lycian,15.146,365295RLyc,Lycia region (Asia Minor) 599 SW Asia Minor - Λυκία,36.5,29.5,region/people
+ethnic,Indians,15.23,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,15.288,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Paphian,15.312,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Rhyndacos,15.366,401285WRhy,Rhyndakos R. (Mysia) 42 Mustafakemalpasha - Ρύνδακος,40.1357,28.542,river
+place,Sipylos,15.366,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+demonym,Cyprian,15.393,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+ethnic,Indians,15.54,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,15.86,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Sparta,16.102,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+place,India,16.102,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,16.129,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Orchomenos,16.129,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Libanos,16.158,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Olympian,16.19,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,16.236,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cyprian,16.263,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+ethnic,Indians,16.380,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tyre,16.46,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Aigina,16.46,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+demonym,Indian,17.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Phrygian,17.1,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Amazonian,17.1,373268LAma,Amazonion cape (Patmos) 8 Geranos - Αμαζώνιον,37.337,26.61,cape
+demonym,Lydian,17.1,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,17.127,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tauros,17.127,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+ethnic,Indians,17.156,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,17.156,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,17.186,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,17.21,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Helice,17.215,382221PHel,Helike (Achaia) 104 Nikoleika - Ελίκη,38.222,22.1318,polity
+place,Acheloos,17.215,383211WAch,Achelous R. (Aitolia) 208 Akheloos - Αχελώιος,38.3388,21.1067,river
+demonym,Indian,17.240,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Phrygia,17.240,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+ethnic,Indians,17.269,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Caucasian,17.269,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Indian,17.290,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,17.290,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Acheron,17.290,392205WAch,Acheron R. (Preveza) 163 Akheron - Αχέρων,39.2348,20.4831,river
+ethnic,Indians,17.321,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tauros,17.321,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+ethnic,Indians,17.380,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Ethiopians,17.380,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+demonym,Arabian,17.380,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Tauros,17.380,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Nile,17.380,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Meroe,17.380,169337UMer,Meroe (Ethiopia) 94 Hillat ed Darqab - Μερόη,16.938,33.7104,polity
+ethnic,Indians,17.77,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,17.77,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,17.98,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Lydia,17.98,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,18.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,18.157,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,18.184,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Arcadia,18.20,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Sipylos,18.20,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+ethnic,Indians,18.214,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Persian,18.214,295540RPer,Persia (Asia) 4067 Fars - Περσία ,29.5,54.0,region/people
+place,Tigris,18.214,346437WTig,Tigris R (Mesopotamia) 250 Tigris - Τίγρις,34.5971,43.702,river
+place,Olympos,18.214,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,18.239,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,18.271,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Indus,18.271,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+place,Cydnos,18.271,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Cilicia,18.271,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+ethnic,Indians,18.297,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Erythraian Sea,18.297,195390WEry,Erythraean Sea (Red Sea) 300 Red Sea - Ερυθρά θάλασσα,19.5,39.0,sea/strait
+demonym,Tyrian,18.325,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Tyrian,18.354,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Indian,18.354,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tauros,18.39,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+demonym,Olympian,19.102,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Athens,19.102,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+person,Amyclaian,19.102,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+ethnic,Indians,19.130,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Elis,19.130,378215REle,Eleia or Elis region (Eleia) 617 Ileia - Ήλις,37.8,21.5,region/people
+place,Crete,19.156,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Eridanos,19.185,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Sparta,19.185,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+demonym,Indian,19.19,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Pisa,19.214,376217PPis,Pisa (Eleia) 197 Pissa - Πίσα,37.6395,21.653,polity
+demonym,Delphic,19.301,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Phrygian,19.301,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Pierian,19.47,402225RPie,Pieria region (Pieria) 172 Pieria - Πιερία,40.2,22.5,region/people
+demonym,Attic,19.47,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Bistonian,19.47,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+demonym,Attic,19.74,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Athens,19.74,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Olympos,2.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,2.109,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cydnos,2.130,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Eridanos,2.130,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Nile,2.163,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Tauros,2.163,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+demonym,Arcadian,2.170,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Olympos,2.170,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,2.188,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Pamphylian,2.20,370320RPam,Pamphylia region (Asia Minor) 280 Antalya - Παμφυλία,37.01,32.01,region/people
+place,Olympos,2.20,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cilicia,2.20,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Tauros,2.20,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Olympos,2.205,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lemnos,2.205,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Olympos,2.258,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,2.273,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,2.281,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Caucasus,2.281,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Paphian,2.314,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,2.314,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Eridanos,2.314,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Olympos,2.364,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Pierian,2.391,402225RPie,Pieria region (Pieria) 172 Pieria - Πιερία,40.2,22.5,region/people
+place,Sicily,2.391,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Aitna,2.391,377150LAit,Aitna Mt. (Sicily) 215 Etna - Αίτνη,37.748,15.001,mountain
+place,Athos,2.391,402243LAth,Athos (Chalkidike) 150 Athos - Άθως,40.158,24.327,region/people
+place,Macedon,2.391,408225RMak,Macedonia region (Greece) 3609 Makedonia - Μακεδονία,40.81,22.5,region/people
+place,Libanos,2.391,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Olympos,2.414,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Arcadian,2.508,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+demonym,Olympian,2.565,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lemnos,2.565,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Amyclean,2.60,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+demonym,Attic,2.60,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Paphian,2.60,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Sicily,2.620,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Olympos,2.620,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cilician,2.631,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Tauros,2.631,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cydnos,2.631,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Cydnos,2.631,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Tarsos,2.631,369349UTar,Tarsus (Anatolia) 209 Tarsus - Ταρσός,36.9122,34.897,polity
+demonym,Olympian,2.660,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Illyrian,2.660,405195RIll,Illyria region (Albania) 939 Albania - Ιλλυρία,40.8,19.8,region/people
+ethnic,Cilicians,2.679,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+ethnic,Cadmeians,2.679,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Thasos,2.679,408247PTha,Thasos (Macedonia) 260 Thasos - Θάσος,40.7799,24.7138,polity
+place,Tauros,2.679,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Ida,2.679,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+person,Ethiopia,2.679,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+person,Dicte,2.679,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+place,Pytho,2.696,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Olympos,2.699,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,20.107,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Lydia,20.107,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Tyros,20.138,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Byblos,20.138,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Adonis,20.138,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+place,Libanos,20.138,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Arabia,20.138,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Nysa,20.138,000000LNys,Nysa Mt.? (Egypt) 71 mythical - Νύσα,28.539,33.975,mountain
+place,Arabia,20.167,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Thermodon,20.197,412369WThe,Thermodon R. (Pontus) 89 Terme R. - Θερμώδων,41.194,36.942,river
+place,Caucasus,20.197,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Berecynthian,20.285,355241LBer,Berekynthos Mt. (Crete) 18 Malaxa - Βερέκυνθον,35.466,24.094,mountain
+place,Mount Carmel,20.285,327350LKar,Mount Carmel (Phoenicia) 17 Carmel,32.746,35.033,mountain
+demonym,Boiotian,20.317,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,20.317,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+ethnic,Arabs,20.346,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Lydian,20.374,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Olympos,20.50,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,20.80,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Sidonian,20.80,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+demonym,Indian,21.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,21.103,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+ethnic,Arabs,21.131,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+ethnic,Indians,21.191,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Caucasus,21.191,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+ethnic,Indians,21.220,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Ganges,21.220,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+demonym,Median,21.249,355480RMed,Media (Asia) 945 Hamedan - Μηδία,35.5,48.0,region/people
+demonym,Bactrian,21.249,340670RBac,Bactria region (Asia) 230 Afghanistan - Βακτριανή,36.768,66.901,region/people
+demonym,Indian,21.249,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+person,Persia,21.249,295540RPer,Persia (Asia) 4067 Fars - Περσία ,29.5,54.0,region/people
+place,Torone,21.277,400239PTor,Torone (Chalkidike) 82 Toroni - Τορώνη,39.9764,23.9013,polity
+place,Arabia,21.277,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Olympos,21.277,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,21.306,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,21.306,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Crete,21.306,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Caucasus,21.306,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Arabian,21.74,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Nysa,21.74,000000LNys,Nysa Mt.? (Egypt) 71 mythical - Νύσα,28.539,33.975,mountain
+demonym,Indian,22.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Phrygian,22.1,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Sicilian,22.1,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Nile,22.1,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+ethnic,Indians,22.106,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.136,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,22.136,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Lycian,22.136,365295RLyc,Lycia region (Asia Minor) 599 SW Asia Minor - Λυκία,36.5,29.5,region/people
+place,Pactolos,22.136,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Bistonian,22.166,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+demonym,Sithonian,22.166,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+place,Bistonia,22.166,413248RBis,Bistones tribe (Xanthi) 22  - Βίστονες,41.2,25.0,region/people
+demonym,Indian,22.18,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.194,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.225,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.255,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.284,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Athenian,22.316,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Indian,22.316,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,22.379,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Aigina,22.379,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+demonym,Indian,22.49,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Thessalian,22.49,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+ethnic,Indians,22.77,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,22.77,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Phrygia,22.77,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,23.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,23.131,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Parrhasian,23.131,375222RPar,Parrhasia region (Arkadia) 69  - Παρρασία,37.45,22.15,region/people
+ethnic,Indians,23.160,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Simoeis,23.221,400262WSim,Simoeis R. (Troad) 69 ? - Σιμόεις,39.9617,26.248,river
+place,Asopos,23.221,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Eridanos,23.221,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Olympos,23.221,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,23.250,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Eridanos,23.250,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Ganges,23.250,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+place,Acesines,23.250,293710WAke,Akesines river (India) 52 Chenab river,29.1513,70.7367,river
+place,Persia,23.278,295540RPer,Persia (Asia) 4067 Fars - Περσία ,29.5,54.0,region/people
+place,Asopos,23.278,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+ethnic,Indians,23.297,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Eridanos,23.297,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Olympos,23.297,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Corinth,23.297,379229PKor,Corinth/Korinthos (Korinthia) 1749 Archaia Korinthos - Κόρινθος,37.9054,22.8802,polity
+demonym,Indian,23.50,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Bactrians,23.77,340670RBac,Bactria region (Asia) 230 Afghanistan - Βακτριανή,36.768,66.901,region/people
+ethnic,Persians,23.77,295540RPer,Persia (Asia) 4067 Fars - Περσία ,29.5,54.0,region/people
+ethnic,Cilicians,23.77,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+ethnic,Sauromatians,23.77,490315RSar,Sarmatia (Scythia) 314 Ukraine - Σαρματία,49.0,31.5,region/people
+ethnic,Colchians,23.77,431423RCol,Colchis (Pontus) 391 Georgia - Κολχίς,42.12,42.28,region/people
+ethnic,Indians,23.77,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Median,23.77,355480RMed,Media (Asia) 945 Hamedan - Μηδία,35.5,48.0,region/people
+demonym,Iberian,23.77,390000RIbe,Iberia/Hispania (Iberia) 520 Spain - Ιβηρία,39.0,-4.0,region/people
+place,Araxes,23.77,391454WAra,Araxes R (Armenia) 93 Arax - Αράξης,39.0809,45.4002,river
+place,Euphrates,23.77,353403WEup,Euphrates R. (Mesopotamia) 585 Euphrates - Ευφράτης,35.2791,40.2708,river
+place,Tauros,23.77,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cydnos,23.77,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Tanais,23.77,473393WTan,Tanais R. (Pontus) 174 Don - Τάναϊς,47.268,39.336,river
+place,Eridanos,23.77,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Rhine,23.77,507071WRhi,Rhenus river (Gallia) 437 Rhine - Ρήνος,50.736,7.1111,river
+ethnic,Indians,24.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,24.105,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cilician,24.105,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+ethnic,Indians,24.131,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,24.163,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,24.194,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Libyan,24.21,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Indus,24.21,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+place,Caucasus,24.21,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Lesbian,24.222,392261ILes,Lesbos (Lesbos) 438 Lesbos - Λέσβος,39.2075,26.2,island
+demonym,Cyprian,24.222,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,24.222,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,24.222,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lapethos,24.222,353332PLap,Lapethos (Cyprus) 19 Lambousa - Λάπηθος,35.357,33.198,polity
+place,Athens,24.222,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Paphian,24.254,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Orchomenos,24.254,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Olympos,24.275,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cyprus,24.303,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+ethnic,Indians,24.330,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,24.330,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,24.49,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Maeonia,24.49,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Pactolos,24.49,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Olympos,24.49,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,24.77,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Asopos,24.77,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Athens,24.77,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Olympos,24.77,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cydnos,24.77,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+person,Attic,24.77,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Indian,25.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Thebes,25.1,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,25.1,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Olympos,25.124,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cydonian,25.149,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+demonym,Indian,25.149,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,25.149,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Inachos,25.149,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+person,Megara,25.149,380233PMeg,Megara (Megarid) 713 Megara - Μέγαρα,37.997,23.34285,polity
+demonym,Arcadian,25.178,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Lerna,25.178,375227ULer,Lerna (Argolid) 125 S Myloi - Λέρνα,37.5511,22.7182,polity
+ethnic,Indians,25.18,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Aonian,25.18,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Dorian,25.18,387224RDor,Doris tetrapolis (Central Greece) 303 Dorida - Δωρίς,38.7,22.4,region/people
+place,Thebes,25.18,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Ilion,25.18,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Inachian,25.207,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Cnossian,25.207,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Lerna,25.207,375227ULer,Lerna (Argolid) 125 S Myloi - Λέρνα,37.5511,22.7182,polity
+place,Nemea,25.207,378227SNem,Nemean Zeus sanct. (Korinthia) 215 Archaia Nemea - Νεμέα,37.8085,22.7108,sanctuary/temple
+ethnic,Indians,25.233,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Achaia,25.233,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+ethnic,Indians,25.262,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Ganges,25.262,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+ethnic,Indians,25.293,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Scythian,25.293,475310RSky,Scythia (Pontus) 1137 N. Coast of Black Sea - Σκυθική,47.5,31.01,region/people
+demonym,Libyan,25.32,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+ethnic,Indians,25.324,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,25.324,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Lemnian,25.324,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Pactolos,25.324,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Lydian,25.351,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Indian,25.351,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Caucasian,25.351,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Bactrian,25.351,340670RBac,Bactria region (Asia) 230 Afghanistan - Βακτριανή,36.768,66.901,region/people
+demonym,Maeonian,25.351,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Phrygia,25.351,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Libanos,25.351,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Tauros,25.351,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+demonym,Olympian,25.380,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Maiandros,25.380,378274UMai,Maiandros (Ionia) 15 Söke? - Μαίανδρος,37.7519,27.4103,polity
+demonym,Trojan,25.410,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Thebes,25.410,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Olympos,25.439,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Maeonia,25.439,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Maeonia,25.439,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Hermos,25.439,385281WHer,Hermus R. (Lydia) 64 Gediz - Έρμος,38.5178,28.1113,river
+demonym,Olympian,25.553,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,25.63,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,25.63,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,25.93,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Inachos,25.93,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Olympos,25.93,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,26.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,26.128,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Arabs,26.13,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+ethnic,Indians,26.13,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,26.13,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,26.155,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,26.213,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Ethiopian,26.213,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+place,Indus,26.213,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+demonym,Indian,26.235,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Nile,26.235,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Egypt,26.235,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Indus,26.235,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+ethnic,Ethiopians,26.324,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+ethnic,Bactrians,26.324,340670RBac,Bactria region (Asia) 230 Afghanistan - Βακτριανή,36.768,66.901,region/people
+demonym,Indian,26.324,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Caucasian,26.324,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Amazonian,26.324,373268LAma,Amazonion cape (Patmos) 8 Geranos - Αμαζώνιον,37.337,26.61,cape
+place,Marathon,26.324,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+ethnic,Indians,26.351,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,26.43,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Thebes,26.43,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Dirce,26.43,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+ethnic,Indians,26.71,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Aonian,26.71,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+ethnic,Indians,27.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,27.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ganges,27.1,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+demonym,Indian,27.106,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lemnian,27.106,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+ethnic,Indians,27.134,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Indus,27.134,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+place,Caucasus,27.134,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+place,Ganges,27.134,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+ethnic,Indians,27.164,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,27.195,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,27.195,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Tmolos,27.195,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+demonym,Phrygian,27.20,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,27.20,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,27.20,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Sangarios,27.20,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+place,Ganges,27.20,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+ethnic,Indians,27.225,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Trojans,27.225,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Phrygian,27.225,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Achaian,27.225,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Olympos,27.225,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Pytho,27.252,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Parnassos,27.252,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+demonym,Olympian,27.257,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Delphian,27.257,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Athenian,27.257,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Parnassos,27.257,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Peneios,27.257,399227WPen,Peneios R. (Thessaly) 185 Peneios - Πηνειός,39.9298,22.7094,river
+place,Dirce,27.257,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+place,Asopos,27.257,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Delos,27.257,374253PDel,Delos (Cyclades) 404 Dilos - Δήλος,37.398,25.267,polity
+place,Marathon,27.257,381241LMaB,Marathon battlefield (Attica) 173 Schinias - Μαραθών,38.144,24.0002,battlefield
+ethnic,Medes,27.286,355480RMed,Media (Asia) 945 Hamedan - Μηδία,35.5,48.0,region/people
+demonym,Athenian,27.286,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Boiotian,27.286,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Phrygian,27.286,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Marathon,27.286,381241LMaB,Marathon battlefield (Attica) 173 Schinias - Μαραθών,38.144,24.0002,battlefield
+place,Olympos,27.286,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+person,Eleusis,27.286,380235SEle,Eleusinian Demeter sanctuary (Attica) 156 Eleusis - Ελευσίς,38.0411,23.538,sanctuary/temple
+person,Argos,27.286,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Indian,27.310,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Marathon,27.310,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Olympos,27.310,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+person,Attica,27.310,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+person,Thrace,27.310,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+person,Lemnos,27.310,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Olympian,27.49,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,27.78,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Dardanos,27.78,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Hades,27.78,000000GHad,Hades (Underworld) 210 ELTA,37.98561,23.762304,mythic site
+place,Olympos,27.78,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Lemnian,28.1,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Indian,28.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Athenian,28.111,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Athens,28.142,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+ethnic,Indians,28.168,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Sicilian,28.168,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+ethnic,Indians,28.192,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Sicilian,28.192,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Etna,28.192,377150LAit,Aitna Mt. (Sicily) 215 Etna - Αίτνη,37.748,15.001,mountain
+ethnic,Indians,28.20,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Pelasgian,28.20,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+ethnic,Indians,28.224,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,28.224,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,28.259,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,28.259,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ida,28.282,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+demonym,Indian,28.318,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Dardanian,28.50,420313RDar,Dardania region 122 Skopje - Δαρδανία,42.03,21.32,region/people
+ethnic,Indians,28.81,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Phrygia,28.81,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Hermos,28.81,385281WHer,Hermus R. (Lydia) 64 Gediz - Έρμος,38.5178,28.1113,river
+ethnic,Indians,29.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Thessalian,29.1,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Indian,29.101,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,29.141,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,29.171,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lemnian,29.171,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Samothrace,29.171,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+ethnic,Indians,29.20,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Colchians,29.201,431423RCol,Colchis (Pontus) 391 Georgia - Κολχίς,42.12,42.28,region/people
+demonym,Lemnian,29.201,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Indian,29.201,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,29.233,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,29.259,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,29.259,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,29.289,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,29.317,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,29.317,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,29.317,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lemnos,29.317,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Cyprus,29.317,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Byblos,29.317,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Sicily,29.341,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Olympos,29.341,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Libanos,29.341,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Paphos,29.341,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Cythera,29.341,363230PKyt,Cythera (Kythera) 136 Paleokastro - Κύθηρα,36.2295,23.0291,polity
+place,Cyprus,29.341,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Lemnos,29.341,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Lemnos,29.375,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Indian,29.49,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,29.49,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Paphian,29.79,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Istros,3.1,442277WIst,Ister or Danube R. (Europe) 612 Danube - Ίστρος,44.206,27.742,river
+demonym,Cyprian,3.103,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,3.103,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Byblos,3.103,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Adonis,3.103,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+place,Byblos,3.103,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Lemnos,3.131,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Tauros,3.16,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cilicia,3.16,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Samothrace,3.180,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+place,Dardanos,3.180,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Ida,3.180,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+demonym,Ausonian,3.195,410155RAus,Ausonia region (Italy) 111 Central/South Italy - Αυσονία,41.0,15.5,region/people
+place,Dardanos,3.195,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Olympos,3.195,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Thessalian,3.205,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Pythian,3.205,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Sithonia,3.215,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+place,Athos,3.215,402243LAth,Athos (Chalkidike) 150 Athos - Άθως,40.158,24.327,region/people
+place,Dardanos,3.215,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Ida,3.215,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+demonym,Sithonian,3.220,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+place,Ida,3.234,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+demonym,Bistonian,3.243,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+demonym,Inachian,3.257,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Egyptian,3.257,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Argos,3.257,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Ionian sea,3.257,408187WIon,Ionian Sea (Greece/Italy) 284 Mar Ionio - Ιόνιος,39.2,18.7,sea/strait
+place,Neilos,3.257,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+demonym,Chaonian,3.284,403197RCha,Chaonia region (Epiros) 101 Southern Albania - Χαονία,40.3,19.7,region/people
+demonym,Egyptian,3.284,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Inachos,3.284,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Libya,3.284,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Memphis,3.284,298313PMem,Memphis (Egypt) 247 Mit Rahina - Μέμφις,29.849,31.255,polity
+place,Thebes,3.284,257326PThe,Thebes (Egypt) 129 Luxor - Θήβαι,25.684,32.641,polity
+demonym,Tyrian,3.320,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Sidonian,3.320,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+demonym,Phrygian,3.325,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Dardanos,3.325,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Simoeis,3.325,400262WSim,Simoeis R. (Troad) 69 ? - Σιμόεις,39.9617,26.248,river
+place,Libya,3.325,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Trojan,3.35,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Samian,3.35,377269PSam,Samos (Aegean) 872 Pythagoreio - Σάμος,37.695,26.935,polity
+place,channel,3.35,402264WHel,Hellespont (Thrace) 730 Dardanelles - Ελλήσποντός,40.2,26.4,sea/strait
+place,Samos,3.35,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+place,Sithonia,3.35,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+demonym,Inachian,3.351,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Libya,3.351,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Dardanos,3.351,401264UDar,Dardanos (Troad) 123 Dardanos Bataryasi - Δάρδανος,40.086,26.3725,polity
+place,Nile,3.351,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Bosporos,3.351,454367WBos,Cimmerian Bosphorus (Pontus) 218 Kerch Strait - Κιμμερικός Βόσπορος,45.36,36.66,sea/strait
+place,Olympos,3.425,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cnossian,3.55,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Ida,3.55,397268LIda,Ida Mt. (Troad) 335 Kaz daglari - Ίδα,39.6922,26.8423,mountain
+demonym,Sidonian,3.77,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+person,Paphian,3.77,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Indian,30.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lemnian,30.172,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Argos,30.172,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+ethnic,Indians,30.201,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,30.201,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lemnos,30.201,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Elis,30.201,378215REle,Eleia or Elis region (Eleia) 617 Ileia - Ήλις,37.8,21.5,region/people
+place,Alpheios,30.201,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+ethnic,Indians,30.231,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,30.261,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Libya,30.261,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Olympos,30.261,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,India,30.288,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,30.288,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,30.319,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lemnian,30.52,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Sicilian,30.52,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Lemnian,30.84,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+ethnic,Indians,31.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Libya,31.1,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+ethnic,Indians,31.103,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Libyan,31.103,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Lemnos,31.103,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Paphos,31.103,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Cyprus,31.103,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Byblos,31.103,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Adonis,31.103,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+ethnic,Indians,31.130,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Orchomenos,31.130,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+ethnic,Indians,31.159,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Thebes,31.159,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Olympos,31.159,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Leucadian,31.187,387207PLeu,Leukas (Ionian Islands) 213 Leukada - Λευκάς,38.81,20.717,polity
+demonym,Indian,31.187,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,31.187,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Cilician,31.187,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Libanos,31.187,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Orchomenos,31.187,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Olympos,31.21,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Nile,31.21,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Inachos,31.21,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Olympos,31.216,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Trojan,31.243,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Olympos,31.243,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Argos,31.243,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Mycene,31.243,377228PMyk,Mycenae (Argolid) 289 Mykines - Μυκήναι,37.7308,22.7561,polity
+place,Sparta,31.243,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+ethnic,Indians,31.272,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,31.47,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Eleusinian,31.47,380235SEle,Eleusinian Demeter sanctuary (Attica) 156 Eleusis - Ελευσίς,38.0411,23.538,sanctuary/temple
+place,Olympos,31.47,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Athens,31.47,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+ethnic,Indians,31.75,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Tyrsenians,31.75,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+demonym,Sicilian,31.75,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Caucasian,31.75,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+place,Ganges,31.75,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+place,Olympos,31.75,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cyprian,32.1,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Libanos,32.1,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Olympos,32.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,32.134,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,32.163,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lyctian,32.163,352254PLyk,Lyktos/Lyttos (Crete) 57 Xidas - Λύττος,35.2081,25.3682,polity
+demonym,Arabian,32.193,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Cyprian,32.193,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,32.193,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+ethnic,Thebans,32.217,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Phrygian,32.217,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Cyprus,32.217,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+ethnic,Indians,32.24,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,32.249,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Parrhasian,32.249,375222RPar,Parrhasia region (Arkadia) 69  - Παρρασία,37.45,22.15,region/people
+place,Indus,32.281,254683WInd,Indus river (India) 151 Indus - Ινδός,25.4487,68.3192,river
+place,Ganges,32.281,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+ethnic,Indians,32.48,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,32.48,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Lerna,32.48,375227ULer,Lerna (Argolid) 125 S Myloi - Λέρνα,37.5511,22.7182,polity
+place,Inachos,32.48,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Nile,32.48,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+demonym,Cyprian,32.74,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Indian,33.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Paphos,33.1,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Paphian,33.107,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Olympian,33.107,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,33.13,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Paphos,33.13,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Indian,33.162,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lemnian,33.162,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Libanos,33.162,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Indian,33.193,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Orontes,33.193,361360WOro,Orontes river (Syria) 81 Asi - Ορόντης,36.0677,35.9902,river
+place,Phrygia,33.223,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,33.25,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,33.25,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Maeonia,33.25,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Caucasus,33.25,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+place,Tmolos,33.25,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+place,Pactolos,33.25,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+ethnic,Cilicians,33.282,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+demonym,Olympian,33.282,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Tauros,33.282,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Aigina,33.282,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+place,India,33.282,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,33.309,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Melis,33.309,388224RMal,Malis region (Phthiotis) 97 Lamia - Μαλιεύς,38.8,22.4,region/people
+demonym,Indian,33.336,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Melis,33.336,388224RMal,Malis region (Phthiotis) 97 Lamia - Μαλιεύς,38.8,22.4,region/people
+demonym,Indian,33.365,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cydonian,33.365,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+ethnic,Indians,34.107,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Sparta,34.107,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+ethnic,Mainalids,34.137,377223LMai,Mainalion Mt. (Arkadia) 80 Mainalo - Μαίναλος,37.4845,22.2693,mountain
+ethnic,Indians,34.16,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cilician,34.16,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Tauros,34.16,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cydnos,34.16,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Cydnos,34.16,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+ethnic,Indians,34.197,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cilician,34.197,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+demonym,Maeonian,34.197,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Lydia,34.197,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Pactolos,34.197,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Phrygia,34.197,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Thebes,34.197,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Orchomenos,34.20,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+ethnic,Indians,34.221,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Mainalids,34.221,377223LMai,Mainalion Mt. (Arkadia) 80 Mainalo - Μαίναλος,37.4845,22.2693,mountain
+ethnic,Indians,34.316,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,34.48,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Indian,35.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,35.103,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,35.103,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Maeonia,35.103,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+ethnic,Indians,35.134,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,35.162,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Sparta,35.162,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+person,India,35.162,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,35.20,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+ethnic,Mainalids,35.224,377223LMai,Mainalion Mt. (Arkadia) 80 Mainalo - Μαίναλος,37.4845,22.2693,mountain
+place,Olympos,35.224,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Mainalids,35.255,377223LMai,Mainalion Mt. (Arkadia) 80 Mainalo - Μαίναλος,37.4845,22.2693,mountain
+demonym,Indian,35.255,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Caucasus,35.255,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+place,India,35.284,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,35.284,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,35.344,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Arabia,35.344,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Crete,35.375,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+ethnic,Erythraians,35.79,384265PEry,Erythrai (Ionia) 123 Ildir - Ερυθραί,38.3828,26.4808,polity
+ethnic,Dryopes,35.79,383243RDry,Dryopes tribe (Euboea) 42  - Δρύοπες,38.2,24.2,region/people
+demonym,Lydian,35.79,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Calydon,35.79,384215UKal,Kalydon (Aitolia) 173 Kalydona N Evinokhori - Καλυδών,38.372,21.533,polity
+place,Parnassus,35.79,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Olympos,36.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Olympos,36.109,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Delos,36.109,374253PDel,Delos (Cyclades) 404 Dilos - Δήλος,37.398,25.267,polity
+place,Inachos,36.109,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+ethnic,Mainalids,36.135,377223LMai,Mainalion Mt. (Arkadia) 80 Mainalo - Μαίναλος,37.4845,22.2693,mountain
+ethnic,Indians,36.135,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,36.166,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,36.196,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,36.228,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,36.228,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Abantes,36.256,388238RAba,Abantes tribe (Euboea) 39 Euboia - Αβαντίς,38.75,23.5,region/people
+demonym,Caucasian,36.256,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+demonym,Indian,36.256,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Thermodon,36.256,412369WThe,Thermodon R. (Pontus) 89 Terme R. - Θερμώδων,41.194,36.942,river
+demonym,Arabian,36.316,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Indian,36.345,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+person,Dicte,36.376,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+ethnic,Indians,36.404,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,36.404,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Cilician,36.404,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+ethnic,Indians,36.434,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,36.51,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Arcadian,36.51,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+demonym,Delphic,36.80,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Arabian,36.80,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+ethnic,Indians,37.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Indian,37.104,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Amazonian,37.104,373268LAma,Amazonion cape (Patmos) 8 Geranos - Αμαζώνιον,37.337,26.61,cape
+demonym,Lemnian,37.104,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Thermodon,37.104,412369WThe,Thermodon R. (Pontus) 89 Terme R. - Θερμώδων,41.194,36.942,river
+place,Pactolos,37.104,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+demonym,Lydian,37.136,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Olympian,37.136,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Pythian,37.136,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Isthmian,37.136,379230SIst,Isthmian Poseidon sanct. (Korinthia) 184 Isthmia - Ισθμία,37.9159,22.9932,sanctuary/temple
+place,Tmolos,37.136,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+place,Pisa,37.136,376217PPis,Pisa (Eleia) 197 Pissa - Πίσα,37.6395,21.653,polity
+place,Elis,37.136,378215REle,Eleia or Elis region (Eleia) 617 Ileia - Ήλις,37.8,21.5,region/people
+place,Aonia,37.136,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Phocis,37.136,386227RPho,Phokis region (Central Greece) 781 Phokida - Φωκίς,38.6,22.7,region/people
+place,Marathon,37.136,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Achaia,37.136,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Pellene,37.136,372223PPel,Pellana (Lakonia) 36 Kalyvia Georgitsi - Πελλάνα,37.2083,22.3244,polity
+place,Corinth,37.136,379229PKor,Corinth/Korinthos (Korinthia) 1749 Archaia Korinthos - Κόρινθος,37.9054,22.8802,polity
+demonym,Sithonian,37.157,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+demonym,Attic,37.157,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Sicilian,37.157,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Arcadian,37.157,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Pisa,37.157,376217PPis,Pisa (Eleia) 197 Pissa - Πίσα,37.6395,21.653,polity
+place,Alpheios,37.157,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+place,Arethusa,37.157,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Cecropia,37.302,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Marathon,37.302,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Athens,37.420,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Olympos,37.451,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,37.47,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+person,Dicte,37.47,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+ethnic,Indians,37.481,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Sicilian,37.481,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Indian,37.537,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Thessalian,37.600,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+place,Phrygia,37.622,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Athenian,37.652,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Sidonian,37.652,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+demonym,Thessalian,37.652,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Cnossian,37.710,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+demonym,Indian,37.741,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Cnossian,37.75,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Ida,37.75,352248LIda,Ida Mt. (Crete) 133 Pseiloritis - Ίδα,35.2263,24.7708,mountain
+place,Crete,37.75,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+person,Dicte,37.75,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+demonym,Indian,37.771,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Indians,38.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Mygdonians,38.1,368410RMyg,Mygdonia region (Mesopotamia) 12 ,36.8,41.0,region/people
+place,Olympos,38.248,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Nile,38.272,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+demonym,Olympian,38.332,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Libyan,38.332,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Olympos,38.361,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Olympian,38.389,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Libyan,38.389,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Eridanos,38.389,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Olympos,38.419,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Eridanos,38.419,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+demonym,Phrygian,38.47,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Indian,38.47,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,38.47,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Athens,38.47,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Marathon,38.47,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+demonym,Indian,38.76,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,38.76,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Eridanos,38.76,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+ethnic,Indians,39.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Arabs,39.1,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+ethnic,Indians,39.112,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Salamis,39.112,379235PSal,Salamis (Salamis) 266 Ambelaki - Σαλαμίς,37.952,23.5408,polity
+person,Marathonian,39.112,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+person,Ethiopian,39.112,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+ethnic,Indians,39.140,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Achaia,39.140,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+ethnic,Ethiopians,39.169,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+demonym,Attic,39.169,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Aigina,39.169,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+place,Thrace,39.169,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+place,Ilissos,39.169,380237WIli,Ilissos R. (Athens) 56 Ilissos - Ιλισσός,37.968,23.734,river
+demonym,Ethiopian,39.199,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+demonym,Indian,39.199,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Cecropia,39.199,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Athens,39.199,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Marathon,39.199,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+ethnic,Indians,39.20,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Argives,39.20,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Thessalian,39.20,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Indian,39.259,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,39.288,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Lydian,39.343,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,39.373,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,39.51,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Trojan,39.51,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Inachos,39.51,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Indian,39.80,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Aonian,39.80,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,39.80,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Anthedon,39.80,385235PAnt,Anthedon (Boeotia) 63 Magdilo - Ανθηδών,38.4987,23.448,polity
+demonym,Tyrian,4.106,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Olympos,4.114,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Paphian,4.143,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Acheron,4.143,392205WAch,Acheron R. (Preveza) 163 Akheron - Αχέρων,39.2348,20.4831,river
+place,Latmos,4.182,375276LLat,Latmos Mt. (Caria) 24 Beşparmak Dağı - Λάτμος,37.5,27.5833,mountain
+demonym,Olympian,4.20,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cyprian,4.207,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,4.213,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Phoinician,4.226,335354RPho,Phoenicia (Lebanon) 1083 Lebanon - Φοινική,33.5,35.4,region/people
+demonym,Sidonian,4.226,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+place,Libanos,4.226,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Thrace,4.226,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+ethnic,Achaians,4.249,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Argos,4.249,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Egyptian,4.260,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Memphis,4.260,298313PMem,Memphis (Egypt) 247 Mit Rahina - Μέμφις,29.849,31.255,polity
+place,Thebes,4.260,257326PThe,Thebes (Egypt) 129 Luxor - Θήβαι,25.684,32.641,polity
+demonym,Achaian,4.285,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Pythian,4.285,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Tyrian,4.293,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Egyptian,4.293,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Thebes,4.293,257326PThe,Thebes (Egypt) 129 Luxor - Θήβαι,25.684,32.641,polity
+person,Olympos,4.293,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Parnassos,4.307,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Castalia,4.307,385225WCas,Castalia (Phokis) 80 Castalian spring - Κασταλία,38.483,22.505,spring
+demonym,Pythian,4.311,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Parnassos,4.311,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Daulis,4.311,385227PDau,Daulis (Boeotia) 66 Davleia/Kastro - Δαυλίς,38.5055,22.7318,polity
+place,Panopeus,4.331,385228UPan,Panopeos/Phanotis (Boeotia) 68 Ag. Vlasios - Πανόπη,38.495,22.795,polity
+place,Tanagra,4.331,383236PTan,Tanagra (Boeotia) 108 SE Kerykeion - Τάναγρα,38.3074,23.5841,polity
+place,Coroneia,4.331,384230PKor,Koroneia (Boeotia) 112 Palaia Koroneia - Κορώνεα,38.3912,22.9571,polity
+place,Haliartos,4.331,384231PHal,Haliartos (Boeotia) 145 Aliartos - Αλίαρτος,38.3787,23.088,polity
+place,Thespiai,4.331,383232PThe,Thespiai (Boeotia) 230 Thespies - Θεσπιαί,38.2935,23.1549,polity
+place,Plataiai,4.331,382233PPla,Plataea (Boeotia) 337 Plataia - Πλαταιά,38.2213,23.2733,polity
+place,Aonia,4.331,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Pythian,4.344,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Chaironeia,4.344,385228PCha,Chaironea (Boeotia) 204 Kapraina - Χαιρώνεα,38.4944,22.8416,polity
+place,Dirce,4.356,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+demonym,Olympian,4.36,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Dirce,4.393,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+place,Thebes,4.393,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Illyrian,4.406,405195RIll,Illyria region (Albania) 939 Albania - Ιλλυρία,40.8,19.8,region/people
+demonym,Olympian,4.77,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Adonis,4.77,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+place,Libanos,4.77,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Olympian,4.92,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Pythian,4.92,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+ethnic,Indians,40.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tyre,40.1,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Orontes,40.110,361360WOro,Orontes river (Syria) 81 Asi - Ορόντης,36.0677,35.9902,river
+place,Orontes,40.110,361360WOro,Orontes river (Syria) 81 Asi - Ορόντης,36.0677,35.9902,river
+demonym,Phrygian,40.141,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Cydnos,40.141,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Orontes,40.141,361360WOro,Orontes river (Syria) 81 Asi - Ορόντης,36.0677,35.9902,river
+place,Maeonia,40.141,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+place,Tmolos,40.141,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+ethnic,Indians,40.167,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,40.167,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Indians,40.197,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Phrygian,40.197,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Median,40.21,355480RMed,Media (Asia) 945 Hamedan - Μηδία,35.5,48.0,region/people
+place,Scythia,40.21,475310RSky,Scythia (Pontus) 1137 N. Coast of Black Sea - Σκυθική,47.5,31.01,region/people
+place,Caucasus,40.21,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+ethnic,Indians,40.225,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Berecyntian,40.225,355241LBer,Berekynthos Mt. (Crete) 18 Malaxa - Βερέκυνθον,35.466,24.094,mountain
+demonym,Libyan,40.225,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Indian,40.253,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Tmolos,40.253,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+demonym,Cnossian,40.281,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+demonym,Amazonian,40.281,373268LAma,Amazonion cape (Patmos) 8 Geranos - Αμαζώνιον,37.337,26.61,cape
+demonym,Arabian,40.281,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Tyrian,40.281,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Babylonian,40.281,325444UBab,Babylon (Iraq) 739 Hillah - Βαβυλών,32.542,44.421,polity
+place,Phasis,40.281,422417WPha,Phasis R. (Georgia) 183 Rioni - Φάσις,42.171,41.733,river
+place,Scythia,40.281,475310RSky,Scythia (Pontus) 1137 N. Coast of Black Sea - Σκυθική,47.5,31.01,region/people
+place,Caucasus,40.281,433424LCau,Caucasus Mt. (Pontus) 244 Kafkaz - Καύκασος,43.351,42.45,mountain
+place,Tyre,40.309,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Tyrian,40.336,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Lebanon,40.336,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Arabian,40.391,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Delphic,40.391,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Euphrates,40.391,353403WEup,Euphrates R. (Mesopotamia) 585 Euphrates - Ευφράτης,35.2791,40.2708,river
+place,Libya,40.391,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Nile,40.391,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Babylon,40.391,325444UBab,Babylon (Iraq) 739 Hillah - Βαβυλών,32.542,44.421,polity
+person,Egypt,40.391,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+demonym,Olympian,40.510,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Tyrian,40.510,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Syracusan,40.540,371153PSyr,Syracuse (Sicily) 1628 Siracusa - Συράκουσαι,37.0639,15.293,polity
+place,Arethusa,40.540,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Alpheios,40.540,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+place,Tyre,40.571,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Indian,40.80,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Parnassos,40.80,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+place,Olympos,40.80,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lebanon,41.1,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Beroe,41.1,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Colias,41.108,379236LKol,Kolias cape (Attica) 26 Ag. Kosmas - Κωλιάς,37.8945,23.717,cape
+place,Cythera,41.108,363230PKyt,Cythera (Kythera) 136 Paleokastro - Κύθηρα,36.2295,23.0291,polity
+place,Cyprus,41.108,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Orchomenos,41.136,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Lebanon,41.136,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Attic,41.163,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Laconian,41.163,370225RLak,Lakonia region (Peloponnese) 790 Lakonia - Λακωνική,37.001,22.5,region/people
+demonym,Paphian,41.163,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Sidonian,41.19,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+place,Lebanon,41.19,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Libya,41.19,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Attic,41.194,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Pythian,41.221,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Attic,41.221,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Pierian,41.221,402225RPie,Pieria region (Pieria) 172 Pieria - Πιερία,40.2,22.5,region/people
+demonym,Paphian,41.221,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Sidonian,41.221,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+place,Ilissos,41.221,380237WIli,Ilissos R. (Athens) 56 Ilissos - Ιλισσός,37.968,23.734,river
+place,Orchomenos,41.221,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+person,Olympos,41.221,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Mycene,41.248,377228PMyk,Mycenae (Argolid) 289 Mykines - Μυκήναι,37.7308,22.7561,polity
+place,Thebes,41.248,257326PThe,Thebes (Egypt) 129 Luxor - Θήβαι,25.684,32.641,polity
+place,Nile,41.248,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,city,41.248,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Athens,41.248,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Paphian,41.308,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Cyprus,41.308,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Corinth,41.308,379229PKor,Corinth/Korinthos (Korinthia) 1749 Archaia Korinthos - Κόρινθος,37.9054,22.8802,polity
+place,Sparta,41.308,371224PSpa,Sparta/Lacedaemon (Lakonia) 5559 Sparti - Σπάρτα,37.0821,22.4237,polity
+place,Arcadia,41.335,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Sardis,41.335,385280PSar,Sardis (Lydia) 383 Sart - Σάρδις,38.4883,28.0403,polity
+place,Tarsos,41.335,369349UTar,Tarsus (Anatolia) 209 Tarsus - Ταρσός,36.9122,34.897,polity
+ethnic,Ausonians,41.365,410155RAus,Ausonia region (Italy) 111 Central/South Italy - Αυσονία,41.0,15.5,region/people
+demonym,Heliconian,41.365,384228LHel,Helikon Mt. (Boeotia) 237 Elikona - Ελικών,38.3207,23.0154,mountain
+place,Rome,41.365,419125PRom,Rome (Italy) 10805 Roma - Ρώμη,41.891,12.486,polity
+place,Berytos,41.365,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Lebanon,41.365,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Attic,41.383,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Paphian,41.383,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Ausonian,41.383,410155RAus,Ausonia region (Italy) 111 Central/South Italy - Αυσονία,41.0,15.5,region/people
+place,Rome,41.383,419125PRom,Rome (Italy) 10805 Roma - Ρώμη,41.891,12.486,polity
+place,Berytos,41.383,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Beroe,41.48,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+demonym,Achaian,41.77,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Isthmian,41.77,379230SIst,Isthmian Poseidon sanct. (Korinthia) 184 Isthmia - Ισθμία,37.9159,22.9932,sanctuary/temple
+place,Beroe,41.77,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Tarsos,41.77,369349UTar,Tarsus (Anatolia) 209 Tarsus - Ταρσός,36.9122,34.897,polity
+place,Thebes,41.77,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Sardis,41.77,385280PSar,Sardis (Lydia) 383 Sart - Σάρδις,38.4883,28.0403,polity
+place,Pactolos,41.77,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Arcadia,41.77,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Cyprus,41.77,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Corinth,41.77,379229PKor,Corinth/Korinthos (Korinthia) 1749 Archaia Korinthos - Κόρινθος,37.9054,22.8802,polity
+place,Paphos,41.77,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Byblos,41.77,341356PByb,Byblos (Lebanon) 70 Byblos - Βύβλος,34.119,35.646,polity
+place,Tyre,42.1,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Lebanon,42.1,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+ethnic,Indians,42.118,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Thessalian,42.118,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Cyprian,42.118,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Enipeus,42.118,378218WEni,Enipeus R. (Eleia) 11 Lestenitsa - Ενιπεύς,37.655,21.546,river
+person,Lebanon,42.118,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+ethnic,Trojans,42.178,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+demonym,Indian,42.238,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Lebanon,42.264,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Arcadian,42.288,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Cyprus,42.288,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+ethnic,Indians,42.335,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Paphian,42.365,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,42.365,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cythera,42.365,363230PKyt,Cythera (Kythera) 136 Paleokastro - Κύθηρα,36.2295,23.0291,polity
+place,Ladon,42.365,378218WLad,Ladon R. (Eleia) 165 Ladon - Λάδων,37.682,21.859,river
+place,Euboia,42.393,385239IEub,Euboia (Euboea) 740 Evia - Εύβοια,38.53,23.87,island
+place,Eridanos,42.393,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Paphos,42.452,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Lesbos,42.452,392261ILes,Lesbos (Lesbos) 438 Lesbos - Λέσβος,39.2075,26.2,island
+place,Cyprus,42.452,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Naxos,42.452,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+place,Orchomenos,42.452,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Olympos,42.452,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ganges,42.482,38898WGan,Ganges (India) 119 Ganges - Γάγγης,23.7818,89.8009,river
+place,Styx,42.510,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+place,Olympos,42.510,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Lebanon,42.510,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Lebanon,42.53,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Alpheios,42.90,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+demonym,Phrygian,43.1,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+person,Amyclaian,43.1,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+demonym,Indian,43.117,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Berytos,43.117,339355UBer,Berytus (Lebanon) 98 Beirut - Βηρυτός,33.896,35.5056,polity
+place,Lebanon,43.117,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+ethnic,Ethiopians,43.146,130350REth,Aethiopia (Africa) 779 Africa - Αιθίοπες,13.01,35.01,region/people
+ethnic,Indians,43.146,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Lydian,43.146,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Olympos,43.146,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Arabian,43.177,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Isthmian,43.177,379230SIst,Isthmian Poseidon sanct. (Korinthia) 184 Isthmia - Ισθμία,37.9159,22.9932,sanctuary/temple
+demonym,Indian,43.177,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Corinth,43.177,379229PKor,Corinth/Korinthos (Korinthia) 1749 Archaia Korinthos - Κόρινθος,37.9054,22.8802,polity
+ethnic,Indians,43.206,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Isthmian,43.206,379230SIst,Isthmian Poseidon sanct. (Korinthia) 184 Isthmia - Ισθμία,37.9159,22.9932,sanctuary/temple
+place,Pallene,43.206,400236LPal,Pallene/Phlegra (Chalkidike) 112 Pallini - Παλλήνη,40.06,23.41,region/people
+place,Lebanon,43.21,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Indian,43.237,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Myrtoan,43.268,370240WMyr,Myrtoan Sea (Cyclades) 32 Myrtoion pelagos - Μυρτώιον πέλαγος,37.01,24.01,sea/strait
+demonym,Icarian,43.268,375263WIka,Ikarian Sea (Samos) 52 Icarian sea - Ικάριον πέλαγος,37.5,26.3333,sea/strait
+demonym,Sardinian,43.268,402920ISar,Sardinia (Italy) 450 Sardinia - Σαρδίνια,40.2,9.2,island
+demonym,Iberian,43.268,390000RIbe,Iberia/Hispania (Iberia) 520 Spain - Ιβηρία,39.0,-4.0,region/people
+demonym,Aegean,43.268,381253WAeg,Aegean Sea (Hellas) 235 Aegean - Αιγαίον πέλαγος,38.1,25.3,sea/strait
+demonym,Sicilian,43.268,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Libyan,43.268,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Bosporos,43.268,454367WBos,Cimmerian Bosphorus (Pontus) 218 Kerch Strait - Κιμμερικός Βόσπορος,45.36,36.66,sea/strait
+place,Ionian Sea,43.268,408187WIon,Ionian Sea (Greece/Italy) 284 Mar Ionio - Ιόνιος,39.2,18.7,sea/strait
+place,Adriatic,43.268,421170WAdr,Adriatic Sea (Italy) 359 Mare Adriatico - Αδριατικόν,42.09,16.95,sea/strait
+place,Syrtis,43.268,340105WSyr,Syrtis Minor gulf (Tunisia) 48 Gabes Bay - μικρά Σύρτις,34.0,10.5,sea/strait
+demonym,Samothracian,43.300,405255PSam,Samothrake (Samothrace) 159 Paleopolis - Σαμοθραίκη,40.5039,25.5348,polity
+demonym,Maeonian,43.300,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+demonym,Cilician,43.300,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+place,Lebanon,43.300,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Tmolos,43.300,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+place,Pallene,43.331,400236LPal,Pallene/Phlegra (Chalkidike) 112 Pallini - Παλλήνη,40.06,23.41,region/people
+demonym,Lydian,43.362,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Arabian,43.394,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Olympian,43.394,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Persian,43.394,295540RPer,Persia (Asia) 4067 Fars - Περσία ,29.5,54.0,region/people
+demonym,Iberian,43.394,390000RIbe,Iberia/Hispania (Iberia) 520 Spain - Ιβηρία,39.0,-4.0,region/people
+demonym,Lydian,43.394,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Euphrates,43.394,353403WEup,Euphrates R. (Mesopotamia) 585 Euphrates - Ευφράτης,35.2791,40.2708,river
+place,Rhine,43.394,507071WRhi,Rhenus river (Gallia) 437 Rhine - Ρήνος,50.736,7.1111,river
+place,Pactolos,43.394,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Eridanos,43.394,450120WEri,Eridanos/Padus R. (Italy) 300 Po - Ηριδανός,44.9753,12.0293,river
+place,Strymon,43.394,408238WStr,Strymon R. (Serres) 155 Strymon - Στρυμών,40.7858,23.8489,river
+person,Lemnian,43.394,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Lydian,43.422,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Indian,43.422,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Phrygian,43.422,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Lebanon,43.422,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+place,Adonis,43.422,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+place,Thrace,43.422,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+place,Pactolos,43.422,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Maeonia,43.422,388283RMai,Maionia region (Ionia) 80 Menye - Μαιονία,38.6,28.0,region/people
+demonym,Cilician,43.53,370340RCil,Cilicia region (Asia Minor) 981 Mersin - Κιλικία,37.01,34.01,region/people
+demonym,Indian,43.53,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Egyptian,43.53,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+demonym,Pharian,43.53,432166UPha,Pharos (Croatia) 47 Stari Grad - Φάρος,43.183,16.599,polity
+place,Tmolos,43.53,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+demonym,Isthmian,43.84,379230SIst,Isthmian Poseidon sanct. (Korinthia) 184 Isthmia - Ισθμία,37.9159,22.9932,sanctuary/temple
+place,Lebanon,43.84,339358LLib,Libanos Mt. (Phoenicia) 123 Mt. Lebanon - Λίβανος,33.925,35.765,mountain
+demonym,Illyrian,44.1,405195RIll,Illyria region (Albania) 939 Albania - Ιλλυρία,40.8,19.8,region/people
+demonym,Aonian,44.1,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Pelion,44.1,394230LPel,Pelion Mt. (Magnesia) 226 Pelion - Πήλιον,39.437,23.046,mountain
+place,Tanagra,44.1,383236PTan,Tanagra (Boeotia) 108 SE Kerykeion - Τάναγρα,38.3074,23.5841,polity
+place,Hippocrene,44.1,383230WHip,Hippokrene spring (Boeotia) 30 Mt. Zagara - Ίππου κρήνη,38.319,23.031,spring
+place,Asopos,44.1,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Dirce,44.1,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+demonym,Illyrian,44.114,405195RIll,Illyria region (Albania) 939 Albania - Ιλλυρία,40.8,19.8,region/people
+demonym,Lydian,44.114,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Berecyntian,44.114,355241LBer,Berekynthos Mt. (Crete) 18 Malaxa - Βερέκυνθον,35.466,24.094,mountain
+demonym,Aonian,44.144,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,44.144,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,44.144,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Hades,44.144,000000GHad,Hades (Underworld) 210 ELTA,37.98561,23.762304,mythic site
+place,Thebes,44.176,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+ethnic,Indians,44.230,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+ethnic,Tyrsenians,44.230,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+demonym,Attic,44.262,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Libyan,44.262,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+place,Styx,44.262,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+place,Thebes,44.262,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Olympos,44.262,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Cadmeian,44.51,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,44.82,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+demonym,Lydian,45.1,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+ethnic,Tyrsenians,45.106,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+demonym,Phoinician,45.106,335354RPho,Phoenicia (Lebanon) 1083 Lebanon - Φοινική,33.5,35.4,region/people
+demonym,Sidonian,45.106,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+demonym,Sicilian,45.106,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Indian,45.106,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Tyrian,45.106,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Arethusa,45.106,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Olympos,45.106,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Tyrsenians,45.136,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+place,Tyrsenia,45.197,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+place,Thebes,45.20,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,45.20,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+ethnic,Cimmerians,45.258,454367WBos,Cimmerian Bosphorus (Pontus) 218 Kerch Strait - Κιμμερικός Βόσπορος,45.36,36.66,sea/strait
+place,Thebes,45.321,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Aonian,45.51,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Phrygian,45.51,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+ethnic,Tyrsenians,45.78,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+demonym,Lydian,45.78,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+demonym,Sicilian,45.78,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Dicte,46.1,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+demonym,Sidonian,46.109,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity
+place,Lydia,46.109,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Thebes,46.109,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Dirce,46.140,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+demonym,Lydian,46.169,385280RLyd,Lydia region (Asia Minor) 841 Manisa - Λυδία,38.5,28.0,region/people
+place,Cithairon,46.169,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Cithairon,46.199,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Thebes,46.199,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Olympian,46.21,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Dirce,46.21,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+place,Thebes,46.21,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,46.258,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Cithairon,46.318,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+demonym,Illyrian,46.349,405195RIll,Illyria region (Albania) 939 Albania - Ιλλυρία,40.8,19.8,region/people
+place,Athens,46.349,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+ethnic,Indians,46.51,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Olympian,46.51,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Rhine,46.51,507071WRhi,Rhenus river (Gallia) 437 Rhine - Ρήνος,50.736,7.1111,river
+place,Thebes,46.51,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Pytho,46.79,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Attica,47.1,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Athens,47.1,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Attic,47.12,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Phrygian,47.12,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Acharnian,47.12,381237DAch,Acharnai (Attica) 85 Acharnes/Menidi - Αχαρναί,38.0803,23.7332,deme
+place,Ilissos,47.12,380237WIli,Ilissos R. (Athens) 56 Ilissos - Ιλισσός,37.968,23.734,river
+place,Cephisos,47.12,379237WKep,Kephisos R. (Attica) 13 Kephisos - Κηφισός,37.9442,23.6723,river
+place,Marathon,47.12,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+demonym,Arcadian,47.248,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+demonym,Achaian,47.248,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Olympos,47.248,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Attica,47.248,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Ilissos,47.248,380237WIli,Ilissos R. (Athens) 56 Ilissos - Ιλισσός,37.968,23.734,river
+place,Naxos,47.248,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+demonym,Cyprian,47.273,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Cydonian,47.273,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+place,Naxos,47.273,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+demonym,Paphian,47.302,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Athenian,47.302,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Naxos,47.302,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+demonym,Athenian,47.331,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Marathon,47.331,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Naxos,47.331,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+place,labyrinth,47.360,351249CLab,Labyrinth (Crete) 39 Roufas - Λαβύρινθος,35.0752,24.9195,building
+place,Athens,47.360,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Marathon,47.360,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Naxos,47.360,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+place,Cnossos,47.360,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Marathon,47.390,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Crete,47.390,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Naxos,47.390,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+place,Athens,47.41,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Paphian,47.420,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Olympian,47.420,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Cecropia,47.420,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Crete,47.420,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Athens,47.420,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,labyrinth,47.420,351249CLab,Labyrinth (Crete) 39 Roufas - Λαβύρινθος,35.0752,24.9195,building
+place,Cnossos,47.420,353252PKno,Knossos (Crete) 147 Knosos - Κνωσσός,35.2978,25.1631,polity
+place,Naxos,47.420,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+demonym,Naxian,47.450,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+demonym,Pelasgian,47.450,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+place,Orchomenos,47.450,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Ortygia,47.450,374253PDel,Delos (Cyclades) 404 Dilos - Δήλος,37.398,25.267,polity
+place,Argos,47.450,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Inachos,47.450,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Inachian,47.480,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Pelasgian,47.480,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+demonym,Indian,47.480,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Tyrrhenian,47.480,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+place,Achaia,47.480,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Argos,47.480,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Paphian,47.509,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Aonian,47.509,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Pelasgian,47.509,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+demonym,Argive,47.509,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Thebes,47.509,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Inachos,47.509,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Asopos,47.509,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+demonym,Argive,47.539,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Inachian,47.539,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Pelasgian,47.539,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+place,Seriphos,47.539,372245PSer,Seriphos (Cyclades) 77 Chora - Σέριφος,37.154,24.506,polity
+place,Mycene,47.539,377228PMyk,Mycenae (Argolid) 289 Mykines - Μυκήναι,37.7308,22.7561,polity
+ethnic,Argives,47.570,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Pactolos,47.596,385281WPac,Pactolus R. (Lydia) 76 Sart Çayı - Πακτωλός,38.4804,28.0628,river
+place,Argos,47.596,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,India,47.596,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,47.626,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+demonym,Sicilian,47.626,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Tyrrhenian,47.626,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+place,Thebes,47.626,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Argos,47.626,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Achaia,47.626,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Mycene,47.626,377228PMyk,Mycenae (Argolid) 289 Mykines - Μυκήναι,37.7308,22.7561,polity
+place,Seriphos,47.626,372245PSer,Seriphos (Cyclades) 77 Chora - Σέριφος,37.154,24.506,polity
+place,Olympos,47.658,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Argos,47.658,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Mycene,47.658,377228PMyk,Mycenae (Argolid) 289 Mykines - Μυκήναι,37.7308,22.7561,polity
+demonym,Athenian,47.68,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+place,Olympos,47.68,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Ilissos,47.68,380237WIli,Ilissos R. (Athens) 56 Ilissos - Ιλισσός,37.968,23.734,river
+demonym,Olympian,47.688,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Argive,47.688,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Crete,47.688,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Achaia,47.688,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+demonym,Icarian,47.718,381239DIka,Ikarion deme sanctuary (Attica) 12 Dionysos - Ικαρία,38.0956,23.9005,deme
+demonym,Pelasgian,47.718,398223UPel,Pelasgiotis region (Thessaly) 268 Thessalia - Πελασγία,39.5,22.5,region/people
+demonym,Inachian,47.718,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Olympos,47.718,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Olympian,47.98,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Indians,48.1,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Inachian,48.1,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+demonym,Achaian,48.1,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Argos,48.1,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Lemnos,48.188,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+person,Athos,48.188,402243LAth,Athos (Chalkidike) 150 Athos - Άθως,40.158,24.327,region/people
+place,Olympos,48.19,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Nysa,48.19,000000LNys,Nysa Mt.? (Egypt) 71 mythical - Νύσα,28.539,33.975,mountain
+place,Pelion,48.19,394230LPel,Pelion Mt. (Magnesia) 226 Pelion - Πήλιον,39.437,23.046,mountain
+demonym,Paphian,48.217,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Phrygian,48.217,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Rhyndacos,48.217,401285WRhy,Rhyndakos R. (Mysia) 42 Mustafakemalpasha - Ρύνδακος,40.1357,28.542,river
+demonym,Paphian,48.276,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Orchomenos,48.276,377223POrc,Orchomenos (Arkadia) 150 Orchomenos - Ορχομενός,37.7247,22.3154,polity
+place,Sangarios,48.303,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+demonym,Paphian,48.332,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Tauros,48.359,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cydnos,48.359,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Sipylos,48.382,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+place,Phrygia,48.409,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Phrygia,48.432,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Sipylos,48.432,386275LSip,Sipylos Mt. (Lydia) 82 Spil Dagi - Σίπυλος,38.567,27.456,mountain
+demonym,Argive,48.462,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+demonym,Achaian,48.462,382219RAch,Achaea region (Achaia) 1800 Achaia - Αχαΐα,38.2,21.9,region/people
+place,Tauros,48.462,370332LTau,Taurus Mountains (Asia Minor) 313 Toros Dağları - Ταύρος,37.0,33.2,mountain
+place,Cydnos,48.462,369349WKyd,Kydnos river (Cilicia) 70 Berdan cay - Κύδνος,36.9191,34.92,river
+place,Olympos,48.462,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Paphian,48.489,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Haimos,48.49,428247LHae,Haemus Mt. (Bulgaria) 122 Stara Planina - Αίμος,42.773,24.659,mountain
+place,Emathia,48.49,406223REma,Emathia region (Emathia) 56 central Macedonian plain - Ημαθία,40.5,22.3,region/people
+demonym,Lemnian,48.519,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+demonym,Sithonian,48.548,402238LSit,Sithonia (Chalkidike) 33 Sithonia - Σιθωνία,40.15,23.8,region/people
+place,Naxos,48.548,371255INax,Naxos island/polis (Cyclades) 198 Chora Naxou - Νάξος,37.1059,25.377,polity
+place,Cecropia,48.548,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Paphos,48.548,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Amyclaian,48.574,370224UAmy,Amyklai (Lakonia) 130 Amykles - Αμύκλαι,37.0363,22.4502,sanctuary/temple
+place,Latmos,48.574,375276LLat,Latmos Mt. (Caria) 24 Beşparmak Dağı - Λάτμος,37.5,27.5833,mountain
+place,Olympos,48.604,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Phrygian,48.664,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Cyllenian,48.692,379224LKyl,Kyllene Mt. (Korinthia) 114 Kyllini - Κυλλήνη,37.9397,22.3969,mountain
+place,Sangarios,48.692,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+place,Pytho,48.692,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+place,Arcadia,48.692,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+place,Tmolos,48.692,383281LTmo,Tmolus Mt. (Lydia) 91 Boz Dag - Τμώλος,38.3237,28.1016,mountain
+place,Paphos,48.692,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Phrygia,48.692,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Berecyntian,48.723,355241LBer,Berekynthos Mt. (Crete) 18 Malaxa - Βερέκυνθον,35.466,24.094,mountain
+demonym,Paphian,48.723,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Phrygia,48.80,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Phrygian,48.866,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+demonym,Attic,48.928,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+place,Sangarios,48.928,411306WSan,Sangarius R. (Asia Minor) 72 Karasu - Σαγγάριος,41.109,30.645,river
+ethnic,Athenians,48.958,380237PAth,Athens (Attica) 9448 Athina - Αθήναι,37.9718,23.72793,polity
+demonym,Attic,48.958,379239RAtt,Attica region (Hellas) 1518 Attiki - Αττική,37.9,23.9,region/people
+demonym,Cydonian,48.958,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+place,Marathon,48.958,381240DMar,Marathon (Attica) 128 Plasi - Μαραθών,38.1466,23.9701,deme
+place,Olympos,48.958,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+person,Eleusis,48.958,380235SEle,Eleusinian Demeter sanctuary (Attica) 156 Eleusis - Ελευσίς,38.0411,23.538,sanctuary/temple
+demonym,Delphian,5.1,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Olympian,5.113,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Thebes,5.113,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Cyprian,5.121,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Indian,5.158,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Erythraian Sea,5.158,195390WEry,Erythraean Sea (Red Sea) 300 Red Sea - Ερυθρά θάλασσα,19.5,39.0,sea/strait
+demonym,Aonian,5.190,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,5.190,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Ceian,5.280,376243IKeo,Keos (Kea) 152 Tzia - Κέως,37.6167,24.3333,island
+demonym,Aonian,5.280,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Indian,5.287,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Aonian,5.35,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Thebes,5.35,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Cithairon,5.354,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+place,Cithairon,5.412,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+demonym,Olympian,5.432,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Aonian,5.51,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Tyrian,5.51,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+place,Teumessos,5.51,384234UTeu,Teumessos (Boeotia) 43 Ypato - Τευμησσός,38.3633,23.393,polity
+place,Helicon,5.51,384228LHel,Helikon Mt. (Boeotia) 237 Elikona - Ελικών,38.3207,23.0154,mountain
+place,Cithairon,5.51,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+demonym,Lemnian,5.562,399253ILem,Lemnos (Aegean) 341 Lemnos - Λήμνος,39.93,25.21,island
+place,Olympos,5.562,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Paphian,5.586,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Cyprian,5.609,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Tritonis,5.67,000000WTri,Tritonis lake (Libya) 49 unknown - Τριτωνίς,30.14,19.0,lake
+place,Thebes,5.85,257326PThe,Thebes (Egypt) 129 Luxor - Θήβαι,25.684,32.641,polity
+place,Egypt,5.85,271307REgy,Aigyptos (Egypt) 4104 Egypt - Αίγυπτος,27.1,30.7,region/people
+place,Olympos,5.85,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+ethnic,Aonians,5.88,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+demonym,Paphian,5.88,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,6.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Libyan,6.103,300070RLib,Libya (Africa) 1525 North Africa - Λιβύη,32.01,10.01,region/people
+demonym,Cretan,6.103,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Dicte,6.103,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+place,Sicily,6.103,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Adriatic,6.103,421170WAdr,Adriatic Sea (Italy) 359 Mare Adriatico - Αδριατικόν,42.09,16.95,sea/strait
+place,Olympos,6.169,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,6.206,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Arabian,6.206,280400RAra,Arabia region (Asia) 874 Saudi Arabia - Αραβία,28.0,40.0,region/people
+place,Bactria,6.206,340670RBac,Bactria region (Asia) 230 Afghanistan - Βακτριανή,36.768,66.901,region/people
+place,Caspian Sea,6.206,400516WHyr,Hyrkanian Sea (Asia) 219 Caspian Sea - Υρκάνιον,40.0,51.6,sea/strait
+place,Red Sea,6.206,195390WEry,Erythraean Sea (Red Sea) 300 Red Sea - Ερυθρά θάλασσα,19.5,39.0,sea/strait
+demonym,Paphian,6.300,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Sicilian,6.318,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+demonym,Tyrrhenian,6.326,430105RTyr,Tyrrhenians/Etruria (Italy) 1288 Toscana - Τυρρηνία,43.0,10.5,region/people
+demonym,Sicilian,6.326,376145RSic,Sicily region (Italy) 3245 Sicilia - Σικελία,37.6,14.5,region/people
+place,Ossa,6.326,398227LOss,Ossa Mt. (Thessaly) 135 Kissavos - Όσσα,39.7969,22.6869,mountain
+place,Pelion,6.326,394230LPel,Pelion Mt. (Magnesia) 226 Pelion - Πήλιον,39.437,23.046,mountain
+place,Adriatic,6.326,421170WAdr,Adriatic Sea (Italy) 359 Mare Adriatico - Αδριατικόν,42.09,16.95,sea/strait
+demonym,Syracusan,6.339,371153PSyr,Syracuse (Sicily) 1628 Siracusa - Συράκουσαι,37.0639,15.293,polity
+place,Nile,6.339,312301WNil,Nile River (Egypt) 878 en-Nil - Νείλος,30.0918,31.2313,river
+place,Alpheios,6.339,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+place,Arethusa,6.339,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Euphrates,6.339,353403WEup,Euphrates R. (Mesopotamia) 585 Euphrates - Ευφράτης,35.2791,40.2708,river
+place,Arethusa,6.339,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+place,Arethusa,6.339,371153WAre,Arethousa (Sicily) 80 Arethousa - Αρέθουσα,37.0573,15.2929,spring
+demonym,Paphian,6.356,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Alpheios,6.356,376215WAlp,Alpheios R. (Eleia) 336 Alpheios - Αλφειός,37.6125,21.4517,river
+place,Adonis,6.356,340356WAdo,Adonis river (Phoenicia) 13 Afqa - Άδωνις,34.0633,35.6522,river
+demonym,Thessalian,6.371,394223RThs,Thessaly region (Hellas) 1628 Thessalia - Θεσσαλία,39.4,22.3,region/people
+demonym,Cyprian,6.58,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+demonym,Paphian,6.86,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+place,Olympos,7.110,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Aigina,7.110,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+place,Dia,7.110,354252IDia,Dia (Crete) 11 Dia - Δία,35.448,25.22,island
+place,Asopos,7.166,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Asopos,7.180,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+demonym,Phoinician,7.190,335354RPho,Phoenicia (Lebanon) 1083 Lebanon - Φοινική,33.5,35.4,region/people
+place,Asopos,7.210,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+place,Aigina,7.210,378234PAig,Aigina polis (Aegina) 464 Aigina - Αίγινα,37.75,23.425,polity
+demonym,Aonian,7.222,384233RBoi,Boiotia region (Boeotia) 1673 Viotia - Βοιωτία,38.35,23.25,region/people
+place,Helicon,7.222,384228LHel,Helikon Mt. (Boeotia) 237 Elikona - Ελικών,38.3207,23.0154,mountain
+place,water of Pegasos,7.222,383230WHip,Hippokrene spring (Boeotia) 30 Mt. Zagara - Ίππου κρήνη,38.319,23.031,spring
+place,Latmos,7.222,375276LLat,Latmos Mt. (Caria) 24 Beşparmak Dağı - Λάτμος,37.5,27.5833,mountain
+place,Asopos,7.222,383233WAso,Asopos R. (Boeotia) 77 Asopos - Ασωπός,38.3016,23.5921,river
+demonym,Cyprian,7.286,350330RCyp,Cyprus (Kypros) 999 Cyprus - Κύπρος,35.0,33.0,region/people
+place,Thebes,7.308,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Crete,7.352,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Olympos,7.352,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Indian,7.73,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+place,Olympos,8.1,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Thebes,8.1,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+ethnic,Cretans,8.109,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+demonym,Cydonian,8.109,355240PKyd,Kydonia (Crete) 79 Khania - Κυδωνία,35.5158,24.0187,polity
+place,Dicte,8.109,353263LDik,Dikte Mt. (Crete) 30 Mt. Modi - Δίκτη,35.118,25.418,mountain
+place,Amnisos,8.109,353253WAmn,Amnisos R. (Crete) 11 Karteros - Αμνισός,35.327,25.196,river
+demonym,Olympian,8.124,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Crete,8.124,352252IKre,Crete (Greece) 1562 Kriti - Κρήτη,35.2052,25.1836,region/people
+place,Olympos,8.152,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Paphian,8.165,348326SAPa,Paphia Aphrodite sanct. (Cyprus) 123 Kouklia - Παφίας Αφροδίτης,34.707,32.574,sanctuary/temple
+demonym,Dictaean,8.178,352263SDik,Zeus Diktaios sanct. (Crete) 9 Palaikastro: Roussolakkos - Δικταίου Διός ιερόν,35.1964,26.276,sanctuary/temple
+demonym,Tyrian,8.178,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Argive,8.235,376227PArg,Argos (Argolid) 2457 Argos - Άργος,37.63091,22.72079,polity
+place,Dirce,8.235,383233WDir,Dirke (Boeotia) 87 Thiva - Δίρκη,38.3183,23.3143,spring
+place,Lerna,8.235,375227ULer,Lerna (Argolid) 125 S Myloi - Λέρνα,37.5511,22.7182,polity
+place,Enipeus,8.235,378218WEni,Enipeus R. (Eleia) 11 Lestenitsa - Ενιπεύς,37.655,21.546,river
+demonym,Olympian,8.310,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Olympian,8.333,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+demonym,Tyrian,8.351,333352PTyr,Tyre (Lebanon) 551 Sur - Τύρος,33.272,35.196,polity
+demonym,Inachian,8.351,378228WIna,Inachos R. (Argolid) 141 Inachos - Ίναχος,37.625,22.744,river
+place,Thebes,8.367,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Olympian,8.375,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Thebes,8.50,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+demonym,Bistonian,8.61,410251WBis,Bistonis (Xanthi) 44 Lake Vistonis - Βιστονία,41.03,25.12,lake
+place,Olympos,8.61,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Thrace,8.61,410265RThr,Thrace region (Evros) 1818 Thraki - Θραίκη,41.0,26.5,region/people
+demonym,Arcadian,8.73,375223RArk,Arkadia region (Arkadia) 1437 Arkadia - Αρκαδία,37.5,22.3,region/people
+demonym,Olympian,8.73,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Istros,8.88,442277WIst,Ister or Danube R. (Europe) 612 Danube - Ίστρος,44.206,27.742,river
+place,Pergamos,8.88,400262UIli,Troy/Ilion (Troad) 3316 Truva - Τροίη,39.9575,26.2389,polity
+place,Olympos,8.88,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Styx,9.132,380222WSty,"Styx R. (Achaia) 151 Mavronero, above Solos - Στύξ",37.9836,22.2039,river
+ethnic,Indians,9.149,300740RInd,India (Asia) 1628 India - Ινδία,30.0,74.0,region/people
+demonym,Syracusan,9.16,371153PSyr,Syracuse (Sicily) 1628 Siracusa - Συράκουσαι,37.0639,15.293,polity
+demonym,Phrygian,9.184,400310RPhr,Phrygia region (Asia Minor) 1177 Central Turkey - Φρυγία,40.0,31.0,region/people
+place,Olympos,9.206,401224LOly,Olympus Mt. (Pieria) 811 Mt. Olympos - Ολυμπος,40.0856,22.3586,mountain
+place,Thebes,9.206,383233PThe,Thebes (Boeotia) 2611 Thiva - Θήβαι,38.3191,23.3178,polity
+place,Ortygia,9.206,374253PDel,Delos (Cyclades) 404 Dilos - Δήλος,37.398,25.267,polity
+demonym,Delphian,9.247,385225SDel,"Delphic Oracle, Pytho (Delphi) 1539 Delphous - Δελφοί",38.48264,22.50108,sanctuary/temple
+demonym,Parnassian,9.275,385226LPar,Parnassus Mt. (Phokis) 272 Parnassos - Παρνασσός,38.5354,22.6219,mountain
+demonym,Corycian,9.275,385225CKor,Korykion (Phokis) 29 above Delphi - Κωρύκιον,38.5158,22.5217,cave
+place,Cithairon,9.61,382233LCit,Cithaeron Mt. (Boeotia) 203 Kithairon - Κιθαιρών,38.185,23.2506,mountain
+demonym,Sidonian,9.92,336354PSid,Sidon (Lebanon) 284 Sidon - Σιδών,33.56,35.371,polity

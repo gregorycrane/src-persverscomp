@@ -621,7 +621,7 @@ function renderLexiconBlock(lexMeta, entryRows) {
     // updates any other Latin-bearing lexicon block currently on screen.
     const hasLatin = entryRows.some(row => row.entry_html && row.entry_html.includes('tb-lex-lat'));
     const latinToggle = hasLatin
-        ? `<label class="tb-lex-latin-toggle-label" title="Bétant's Lexicon Thucydideum gives definitions in Latin with an added English translation alongside">
+        ? `<label class="tb-lex-latin-toggle-label" title="${escHtmlTopLevel(lexMeta.title)} gives definitions in Latin with an added English translation alongside">
              <input type="checkbox" class="tb-lex-latin-toggle" ${localStorage.getItem(LEXICON_LATIN_PREF_KEY) === '1' ? 'checked' : ''} onchange="toggleLexiconLatin(this.checked)">
              Hide Latin
            </label>`
@@ -1374,7 +1374,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
+        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
     }
     // Generic per-work terminology, replacing the old hardcoded "Book"/
     // "Chapter" literals scattered through the nav UI. Sourced from

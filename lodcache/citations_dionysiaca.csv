@@ -1,0 +1,14 @@
+
+Extract real place citations for Thucydides, Iliad, and Agamemnon from
+the ToposText app's SQLite database (topostext.db).
+
+Confirmed schema (from inspection, not assumed):
+    ZINDEXTABLE.ZPLACE     -> ZPLACES._id      (coordinates, place id, name)
+    ZINDEXTABLE.ZPARAGRAPH -> ZPARAGRAPH._id   (ZLOCATION = citation, e.g. "1.1")
+    ZINDEXTABLE.ZWORK      -> ZWORKS._id       (work title/credits)
+
+Usage:
+    python3 extract_citations.py <path-to-db> types      # step 0: what ZTYPE values exist
+    python3 extract_citations.py <path-to-db> find_works # step 1: locate our 3 target works
+    python3 extract_citations.py <path-to-db> extract    # step 2: pull the real citation rows
+

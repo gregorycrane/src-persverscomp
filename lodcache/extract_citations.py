@@ -25,6 +25,8 @@ TARGET_TITLE_PATTERNS = {
     "Thucydides": "%Thucydides%",
     "Iliad": "%Iliad%",
     "Agamemnon": "%Agamemnon%",
+    "Apollonius": "%Argonautica%",
+    "Nonnus": "%Dionysiaca%%",
 }
 
 
