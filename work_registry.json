@@ -1,41 +1,41 @@
 {
   "tlg2045.tlg001": {
-  "textgroup": "tlg2045",
-  "work": "tlg001",
-  "editions": {
-    "perseus-grc2": {
-      "path": "/Users/gcrane/github/canonical-greekLit/data/tlg2045/tlg001/tlg2045.tlg001.perseus-grc2.xml",
-      "label": "Greek (W. H. D. Rouse, 1940)",
-      "class": "greek-text",
-      "parse_mode": "poetry_cards"
+    "textgroup": "tlg2045",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg2045/tlg001/tlg2045.tlg001.perseus-grc2.xml",
+        "label": "Greek (W. H. D. Rouse, 1940)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "rouse1940-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg2045/tlg001/tlg2045.tlg001.rouse1940-eng2.xml",
+        "label": "English (W. H. D. Rouse, 1940) from https://topostext.org/work/529",
+        "class": "english-text",
+        "parse_mode": "card_prose"
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg2045.tlg001.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    },
+    "metrics": {
+      "perstb-meter-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg2045/tlg001/tlg2045.tlg001.meter.tsv",
+        "label": "Metrical Analysis (David Chamberlain: https://hypotactic.com/)",
+        "class": "metrical-text"
+      }
     }
   },
-  "appcrits": {},
-  "translations": {
-    "rouse1940-eng2": {
-      "path": "/Users/gcrane/github/grcnewxml/data/tlg2045/tlg001/tlg2045.tlg001.rouse1940-eng2.xml",
-      "label": "English (W. H. D. Rouse, 1940) from https://topostext.org/work/529",
-      "class": "english-text",
-      "parse_mode": "card_prose"
-    }
-  },
-  "commentaries": {},
-  "treebanks": {
-    "perseus-grc2-oga020-src": {
-      "path": "/Users/gcrane/github/oga_src/data/tlg2045.tlg001.perseus-grc2_oga020_src.glossed.conllu",
-      "label": "Treebank (Perseus AGDT/OGA, glossed)",
-      "class": "treebank-text",
-      "parse_mode": "conllu"
-    }
-  },
-  "metrics": {
-    "perstb-meter-grc1": {
-      "path": "/Users/gcrane/github/grcnewxml/data/tlg2045/tlg001/tlg2045.tlg001.meter.tsv",
-      "label": "Metrical Analysis (David Chamberlain: https://hypotactic.com/)",
-      "class": "metrical-text"
-    }
-  }
-},
   "tlg0001.tlg001": {
     "textgroup": "tlg0001",
     "work": "tlg001",
@@ -63,13 +63,13 @@
     },
     "appcrits": {},
     "translations": {
-       "seaton1912-eng2": {
+      "seaton1912-eng2": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0001/tlg001/tlg0001.tlg001.seaton1912-eng2.xml",
         "label": "English (R. C. Seaton, 1912)",
         "class": "english-text",
         "parse_mode": "card_prose"
       },
-     "fawkes1780-eng2": {
+      "fawkes1780-eng2": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0001/tlg001/tlg0001.tlg001.fawkes1780-eng2.xml",
         "label": "English (F. Fawkes, 1780)",
         "class": "english-text",
@@ -81,7 +81,6 @@
         "class": "english-text",
         "parse_mode": "card_prose"
       },
-
       "seatonrevised2026-eng2": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0001/tlg001/tlg0001.tlg001.seatonrevised2026-eng2.xml",
         "label": "English (R. C. Seaton, rev. 2026)",
@@ -1677,6 +1676,12 @@
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
         "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -1766,6 +1771,12 @@
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
         "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -1854,6 +1865,12 @@
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.sanravius1555-lat2.xml",
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
+        "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -1949,6 +1966,12 @@
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.sanravius1555-lat2.xml",
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
+        "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -2058,6 +2081,12 @@
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
         "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
       }
     },
     "commentaries": {},
@@ -2165,6 +2194,12 @@
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.sanravius1555-lat2.xml",
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
+        "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
         "parse_mode": "poetry_cards"
       }
     },
@@ -2280,6 +2315,12 @@
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.sanravius1555-lat2.xml",
         "label": "Latin (A. San Ravius, 1555)",
         "class": "latin-text",
+        "parse_mode": "poetry_cards"
+      },
+      "swanwick1886-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.swanwick1886-eng2.xml",
+        "label": "English (Anna Swanwick, 1886)",
+        "class": "english-text",
         "parse_mode": "poetry_cards"
       }
     },
