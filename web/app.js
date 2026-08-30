@@ -1604,15 +1604,30 @@ function populateNavigationFromShard() {
         const [tg, wk] = activeWorkKey.split(".");
         
         // 1. Build GLOBAL_STRUCTURES for this work
+        // NOTE (regression fix): these two queries used to have no
+        // textgroup/work scoping at all -- fine only as long as the loaded
+        // DB happened to contain exactly one work. The "Mount Local Data
+        // Asset" flow in index_shell.html loads corpus_alignment_grid.db --
+        // the full multi-work monolith, not a per-work shard -- straight
+        // into the browser, so an unscoped "SELECT DISTINCT book/chapter
+        // FROM alignment_grid" pulls in every OTHER work's books/chapters
+        // (and whatever oddities their own book/chapter labels carry) right
+        // alongside this one's, and folds them into the same sort_order
+        // ordering, which is only coherent within a single work. Every
+        // other query in this file scopes by (textgroup, work) exactly like
+        // idx_grid_lookup expects (see getChaptersWithContent below) --
+        // this one should too.
         const books_result = window.dbInstance.exec(
-            "SELECT DISTINCT book FROM alignment_grid WHERE book IS NOT NULL ORDER BY CAST(book AS INTEGER)");
+            "SELECT DISTINCT book FROM alignment_grid WHERE textgroup=? AND work=? AND book IS NOT NULL ORDER BY CAST(book AS INTEGER)",
+            [tg, wk]);
         const books = books_result[0] ? books_result[0].values.map(r => r[0]) : [];
         
         if (books.length > 0) {
             const bookMap = {};
             books.forEach(bk => {
                 const chapter_result = window.dbInstance.exec(
-                    "SELECT DISTINCT chapter FROM alignment_grid WHERE book='" + bk + "' ORDER BY sort_order");
+                    "SELECT DISTINCT chapter FROM alignment_grid WHERE textgroup=? AND work=? AND book=? ORDER BY sort_order",
+                    [tg, wk, bk]);
                 bookMap[bk] = chapter_result[0] ? chapter_result[0].values.map(r => r[0]) : [];
             });
             window.GLOBAL_STRUCTURES = window.GLOBAL_STRUCTURES || {};
@@ -1620,7 +1635,8 @@ function populateNavigationFromShard() {
             console.log("[v40] multi-book structure with " + books.length + " books");
         } else {
             const chapter_result = window.dbInstance.exec(
-                "SELECT DISTINCT chapter FROM alignment_grid ORDER BY sort_order");
+                "SELECT DISTINCT chapter FROM alignment_grid WHERE textgroup=? AND work=? ORDER BY sort_order",
+                [tg, wk]);
             const chapters = chapter_result[0] ? chapter_result[0].values.map(r => r[0]) : [];
             window.GLOBAL_STRUCTURES = window.GLOBAL_STRUCTURES || {};
             window.GLOBAL_STRUCTURES[activeWorkKey] = chapters;
