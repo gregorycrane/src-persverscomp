@@ -1,0 +1,196 @@
+"""Build orchestrator -- the `make` entry point. NEW module.
+
+Flow: if the monolith is missing (fresh clone, or cleanup.py ran),
+reconstitute it from the deployed shards first (no TEI re-parsing needed).
+Then run the normal manifest-driven staleness pass: only works whose
+declared source files (or the parser/core code that reads them) actually
+changed get re-ingested. Sharding and index.html only get rebuilt if
+something changed.
+"""
+import argparse
+import sqlite3
+from pathlib import Path
+
+from pipeline.config import DB_PATH, WORKSPACE_DIR
+from pipeline.registry import WORK_REGISTRY, WORK_REGISTRY_PATH
+from pipeline.manifest import load_manifest, save_manifest, is_stale, record
+from pipeline.parsers import PARSE_MODE_PARSERS
+from pipeline.treebank.conllu import parse_conllu_treebank
+from pipeline.treebank.agdt import parse_agdt_treebank
+from pipeline.ingest_work import ingest_works
+from pipeline.core.storage import init_storage_engine
+from pipeline.reconstitute import reconstitute_monolith
+from pipeline import sharding, index_builder
+
+_CORE_DIR = Path(__file__).parent / "core"
+_CORE_FILES = [_CORE_DIR / "xml_utils.py", _CORE_DIR / "storage.py",
+               _CORE_DIR / "canonical_intervals.py", _CORE_DIR / "alignment.py"]
+
+# Keyed by each treebank entry's own `parse_mode` (ingest_work.py's
+# treebank dispatch, not the edition-level PARSE_MODE_PARSERS above).
+_TREEBANK_PARSE_MODE_PARSERS = {
+    "conllu": parse_conllu_treebank,
+    "agdt_xml": parse_agdt_treebank,
+}
+
+
+def dep_paths_for(work_key: str, meta: dict) -> list:
+    """Every file whose change should invalidate this work's manifest
+    fingerprint: its own declared source files, the shared core modules,
+    the registry itself (a hand-edited path/config fix should also trigger
+    a rebuild) -- and, per edition/translation/commentary/treebank entry,
+    whichever parser module ITS OWN `parse_mode` dispatches to (a work can
+    mix several parse_modes across its entries; there is no single
+    work-level "doc_type" to key off of -- see parsers/__init__.py's
+    docstring for why the previous version of this function using
+    meta.get("doc_type") never matched anything real).
+    """
+    paths = [WORK_REGISTRY_PATH, *_CORE_FILES]
+    parser_files = set()
+
+    def _add_path(value):
+        # A treebank entry's `path` may be a single string or a list of
+        # shard files (e.g. the Iliad conllu split into book ranges).
+        for p in ([value] if isinstance(value, str) else value):
+            paths.append(Path(p))
+
+    for group in ("editions", "appcrits", "translations", "commentaries", "scholia", "metrics"):
+        for entry in meta.get(group, {}).values():
+            if "path" in entry:
+                _add_path(entry["path"])
+            parser_fn = PARSE_MODE_PARSERS.get(entry.get("parse_mode"))
+            if parser_fn is not None:
+                parser_files.add(Path(parser_fn.__globals__["__file__"]))
+    for tb in meta.get("treebanks", {}).values():
+        if "path" in tb:
+            _add_path(tb["path"])
+        tb_parser_fn = _TREEBANK_PARSE_MODE_PARSERS.get(tb.get("parse_mode"))
+        if tb_parser_fn is not None:
+            parser_files.add(Path(tb_parser_fn.__globals__["__file__"]))
+    for aln in meta.get("alignments", {}).values():
+        if "path" in aln:
+            paths.append(Path(aln["path"]))
+    for tsv in meta.get("edition_alignments", []):
+        paths.append(Path(tsv))
+    if meta.get("speakers_csv"):
+        paths.append(Path(meta["speakers_csv"]))
+    paths.extend(sorted(parser_files, key=str))
+    return paths
+
+
+def _resolve_targets(requested: list) -> list:
+    """Map each --work argument to concrete registry keys. An exact
+    work_key passes through; anything else is treated as a textgroup /
+    prefix and expanded to every work_key that equals it or starts with
+    it followed by a '.' (so 'tlg001' never sucks in 'tlg0012').
+    Order is preserved and duplicates dropped. Unknown values abort.
+    """
+    all_keys = list(WORK_REGISTRY.keys())
+    if not requested:
+        return all_keys
+    resolved, seen = [], set()
+    for token in requested:
+        if token in WORK_REGISTRY:
+            matches = [token]
+        else:
+            matches = [k for k in all_keys
+                       if k == token or k.startswith(token + ".")]
+        if not matches:
+            raise SystemExit(
+                f"--work {token!r}: no matching work in the registry "
+                f"(expected a work_key like 'tlg0012.tlg001' or a textgroup "
+                f"prefix like 'tlg0012')."
+            )
+        for m in matches:
+            if m not in seen:
+                seen.add(m)
+                resolved.append(m)
+    return resolved
+
+
+def main(argv=None):
+    ap = argparse.ArgumentParser(description="Perseus Multitext Viewer build orchestrator")
+    ap.add_argument("--work", action="append", dest="works",
+                     help="only build this work (repeatable). Accepts a full "
+                          "work_key (tlg0012.tlg001), or a textgroup / prefix "
+                          "(tlg0012) which expands to every matching work_key "
+                          "(tlg0012.tlg001, tlg0012.tlg002, ...).")
+    ap.add_argument("--force", action="store_true",
+                     help="ignore the manifest, rebuild every targeted work")
+    ap.add_argument("--skip-index", action="store_true",
+                     help="rebuild shards but don't regenerate index.html")
+    ap.add_argument("--index-only", action="store_true",
+                     help="skip ingestion entirely -- just rebuild index.html from "
+                          "the existing monolith + web/. Use this after editing "
+                          "web/app.js, web/styles.css, or web/index_shell.html: "
+                          "none of those are TEI source files, so no work is ever "
+                          "'stale' from a plain make, and `make force` would only "
+                          "pick the change up by wastefully re-ingesting everything.")
+    args = ap.parse_args(argv)
+
+    if not DB_PATH.exists():
+        shard_root = WORKSPACE_DIR / "site" / "data"
+        if shard_root.exists() and any(shard_root.rglob("*.db")):
+            reconstitute_monolith(DB_PATH, shard_root).close()
+        elif args.index_only:
+            raise SystemExit(
+                "--index-only: no monolith and no shards found under "
+                f"{shard_root} -- nothing to build index.html from. "
+                "Run a normal `make` (or `make force`) at least once first."
+            )
+        else:
+            print(f"[monolith] not present and no shards found under {shard_root} "
+                  f"-- initializing an empty monolith (every work is stale).")
+            init_storage_engine(DB_PATH).close()
+
+    if args.index_only:
+        conn = sqlite3.connect(str(DB_PATH))
+        index_builder.rebuild(conn)
+        conn.close()
+        print("\nindex.html rebuilt from the existing monolith + web/ (no ingestion).")
+        return
+
+    manifest = {} if args.force else load_manifest()
+    target_keys = _resolve_targets(args.works)
+
+    conn = sqlite3.connect(str(DB_PATH))
+    changed = []
+    for work_key in target_keys:
+        meta = WORK_REGISTRY[work_key]
+        deps = dep_paths_for(work_key, meta)
+        if args.force or is_stale(work_key, deps, manifest):
+            print(f"[build] {work_key} -- stale, ingesting")
+            ingest_works(conn, work_keys=[work_key])
+            record(work_key, deps, manifest)
+            changed.append(work_key)
+        else:
+            print(f"[skip]  {work_key} -- unchanged")
+    conn.close()
+
+    if changed:
+        sharding.split_corpus_by_work(
+            str(DB_PATH), str(WORKSPACE_DIR / "site"), only_work_keys=changed)
+
+        # Special case (not a general lexicon pipeline): the Orlando Furioso
+        # Italian glossary. Ingest just that lexicon into the monolith and
+        # shard only its .db, merging into the existing lexica.json.
+        if "ariosto.orlandofurioso" in changed:
+            from pipeline.lexicon.ingest import ingest_lexica
+            from pipeline.lexicon.shard import shard_lexica
+            conn = sqlite3.connect(str(DB_PATH))
+            ingest_lexica(conn, lexicon_ids=["orlando-furioso-ita"])
+            conn.close()
+            shard_lexica(DB_PATH, WORKSPACE_DIR / "site" / "data" / "lexica",
+                         WORKSPACE_DIR / "site", only_shard_files=["lexica_ariosto.db"])
+
+        if not args.skip_index:
+            conn = sqlite3.connect(str(DB_PATH))
+            index_builder.rebuild(conn)
+            conn.close()
+
+    save_manifest(manifest)
+    print(f"\n{len(changed)}/{len(target_keys)} work(s) rebuilt.")
+
+
+if __name__ == "__main__":
+    main()

@@ -403,7 +403,7 @@
         if (!window.dbInstance) return undefined;       // not ready yet; don't cache
         const [tg, work] = workKey.split(".");
         const rows = _dbRows(
-            "SELECT pair_id, src_version, tgt_version, segment, src_indices, tgt_indices, src_tokens, tgt_tokens, score " +
+            "SELECT pair_id, src_version, tgt_version, segment, src_indices, tgt_indices, src_tokens, tgt_tokens, score, meta_json " +
             "FROM token_alignments WHERE textgroup=? AND work=? ORDER BY pair_id, segment, id",
             [tg, work]);
         let out;
@@ -415,7 +415,8 @@
                 (p.segments[r.segment] = p.segments[r.segment] || []).push({
                     s: _jp(r.src_indices, []), t: _jp(r.tgt_indices, []),
                     st: _jp(r.src_tokens, []), tt: _jp(r.tgt_tokens, []),
-                    sc: Math.round(r.score * 1e4) / 1e4
+                    sc: Math.round(r.score * 1e4) / 1e4,
+                    meta: _jp(r.meta_json, {})
                 });
             });
         }
@@ -872,7 +873,7 @@ function treebankForChapter(db, version, chapter) {
 }
 function alignmentsForPair(db, pairId, segment) {
     return queryAll(db,
-        "SELECT src_indices, tgt_indices, src_tokens, tgt_tokens, score " +
+        "SELECT src_indices, tgt_indices, src_tokens, tgt_tokens, score, meta_json " +
         "FROM token_alignments WHERE pair_id=? AND segment=?", [pairId, segment]);
 }
 function metricalForChapter(db, version, chapter) {
@@ -998,6 +999,8 @@ let activeWorkKey = "tlg0003.tlg001";
     // activeAlignGroup: index of currently hovered group (for cross-column highlight)
     let activePairId      = "";
     let activeAlignGroups = new Set();  // set of group keys currently highlighted
+    let pinnedAlignGroup  = "";         // click/tap keeps a bridge relationship open
+    const alignmentGroupMeta = new Map();
 
     
     
@@ -1056,7 +1059,7 @@ let activeWorkKey = "tlg0003.tlg001";
     const TREEBANK_SOURCE_SCRIPT_CODES = new Set(['grc', 'ara', 'fas']);
 
     function countDocTypes(versions) {
-        const counts = { edition: 0, translation: 0, commentary: 0 };
+        const counts = { edition: 0, translation: 0, commentary: 0, scholia: 0 };
         const treebankLangs = {};
 
         // Source script: the language of this work's own edition(s) --
@@ -1107,11 +1110,12 @@ let activeWorkKey = "tlg0003.tlg001";
         const counts = countDocTypes(meta.versions);
         const treebankBits = Object.keys(counts.treebankLangs).sort()
             .map(lang => counts.treebankLangs[lang] + " tb " + lang);
-        if (counts.edition || counts.translation || counts.commentary || treebankBits.length) {
+        if (counts.edition || counts.translation || counts.commentary || counts.scholia || treebankBits.length) {
             const bits = [];
             if (counts.edition) bits.push(counts.edition + " ed" + (counts.edition > 1 ? "s" : ""));
             if (counts.translation) bits.push(counts.translation + " tr");
             if (counts.commentary) bits.push(counts.commentary + " comm");
+            if (counts.scholia) bits.push(counts.scholia + " schol");
             bits.push(...treebankBits);
             return bits.join(" · ");
         }
@@ -1374,7 +1378,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085."); 
+        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085.") || wKey.startsWith("ariosto.");
     }
     // Generic per-work terminology, replacing the old hardcoded "Book"/
     // "Chapter" literals scattered through the nav UI. Sourced from
@@ -1527,6 +1531,7 @@ let activeWorkKey = "tlg0003.tlg001";
                 appcrit: document.createElement("optgroup"),
                 translation: document.createElement("optgroup"),
                 commentary: document.createElement("optgroup"),
+                scholia: document.createElement("optgroup"),
                 treebank: document.createElement("optgroup"),
                 metrical: document.createElement("optgroup")
             };
@@ -1535,6 +1540,7 @@ let activeWorkKey = "tlg0003.tlg001";
             categories.appcrit.label = "Apparatus Critici";
             categories.translation.label = "Translations";
             categories.commentary.label = "Commentaries";
+            categories.scholia.label = "Scholia";
             categories.treebank.label = "Treebanks";
             categories.metrical.label = "Metrical Analysis";
 
@@ -1930,7 +1936,19 @@ function initializeRoutingFromURL() {
         if (!payload) return;
         activeUrnContext = payload.urn;
         
-        document.getElementById("frame-context-label").innerText = "Active Frame Context URN: " + payload.urn;
+        // Human-readable author/work name from catalog.json's "authors" map
+        // and each work's "title" field -- same source buildWorkPickerFromCatalog
+        // already reads (see its comment above), just not previously wired
+        // into this label. Falls back to the bare textgroup/work id if the
+        // catalog doesn't have an entry (e.g. a work added without a title),
+        // so this never regresses to blank on stale/incomplete catalog data.
+        const _labelWorkKey = payload.textgroup + "." + payload.work;
+        const _authorName = (CATALOG && CATALOG.authors && CATALOG.authors[payload.textgroup])
+            || payload.textgroup;
+        const _workTitle = (CATALOG && CATALOG.works && CATALOG.works[_labelWorkKey]
+            && CATALOG.works[_labelWorkKey].title) || payload.work;
+        document.getElementById("frame-context-label").innerText =
+            _authorName + ", " + _workTitle + "  —  " + payload.urn;
         
         const validEditions = Object.entries(TEXT_REGISTRY).filter(([key, meta]) => {
             return meta.textgroup === payload.textgroup && meta.work === payload.work;
@@ -1940,17 +1958,19 @@ function initializeRoutingFromURL() {
             const editions = validEditions.filter(([_, m]) => m.doc_type === 'edition');
             const translations = validEditions.filter(([_, m]) => m.doc_type === 'translation');
             const commentaries = validEditions.filter(([_, m]) => m.doc_type === 'commentary');
+            const scholia = validEditions.filter(([_, m]) => m.doc_type === 'scholia');
             const appcrits = validEditions.filter(([_, m]) => m.doc_type === 'appcrit');
             const treebanks = validEditions.filter(([_, m]) => m.doc_type === 'treebank');
             const metrics  = validEditions.filter(([_, m]) => m.doc_type === 'metrical');
 
             let prioritizedList = [];
-            let maxLen = Math.max(editions.length, translations.length, commentaries.length, appcrits.length);
+            let maxLen = Math.max(editions.length, translations.length, commentaries.length, scholia.length, appcrits.length);
             
             for (let i = 0; i < maxLen; i++) {
                 if (editions[i]) prioritizedList.push(editions[i][0]);
                 if (translations[i]) prioritizedList.push(translations[i][0]);
                 if (commentaries[i]) prioritizedList.push(commentaries[i][0]);
+                if (scholia[i]) prioritizedList.push(scholia[i][0]);
                 if (appcrits[i]) prioritizedList.push(appcrits[i][0]);
             }
             treebanks.forEach(([id]) => { if (!prioritizedList.includes(id)) prioritizedList.push(id); });
@@ -1990,7 +2010,7 @@ function initializeRoutingFromURL() {
                         // default column count); columns beyond that keep
                         // cycling through the existing interleaved
                         // priority list (editions/translations/
-                        // commentaries/appcrits, then treebanks, then
+                        // commentaries/scholia/appcrits, then treebanks, then
                         // metrics), unchanged.
                         let defaultId = "";
                         if (prefix === 'f') {
@@ -2465,6 +2485,8 @@ function initializeRoutingFromURL() {
     function onAlignmentPairChange(pairId) {
         activePairId = pairId;
         activeAlignGroups.clear();
+        pinnedAlignGroup = "";
+        alignmentGroupMeta.clear();
         updateAlignmentLegend();
         triggerViewRefresh();
     }
@@ -2531,7 +2553,7 @@ function initializeRoutingFromURL() {
     // This namespacing ensures tokens from different sections never share a key,
     // so hovering a word in section [3] only lights up its match in [3], not [8].
 
-    function alnHoverIn(groupKey) {
+    function applyAlignmentHighlight(groupKey) {
         activeAlignGroups.clear();
         activeAlignGroups.add(groupKey);
         // Extract segKey (everything before the last "__")
@@ -2550,12 +2572,164 @@ function initializeRoutingFromURL() {
             // tokens in other sections: untouched
         });
     }
+    function alnHoverIn(groupKey) {
+        applyAlignmentHighlight(groupKey);
+    }
     function alnHoverOut() {
+        if (pinnedAlignGroup) {
+            applyAlignmentHighlight(pinnedAlignGroup);
+            return;
+        }
         activeAlignGroups.clear();
         document.querySelectorAll(".aln-token").forEach(el => {
             el.classList.remove("aln-hl-strong", "aln-dimmed");
             el.style.borderBottomColor = "";
         });
+    }
+
+    function alignmentStudyText(meta) {
+        if (!meta) return "";
+        const tokens = meta.tokens || [];
+        const citationLabel = meta.citation_label
+            || (activeWorkKey === 'tlg0012.tlg002' ? 'Odyssey'
+                : activeWorkKey === 'tlg0012.tlg001' ? 'Iliad' : '');
+        return tokens.map(tok => {
+            const bits = [tok.form];
+            if (tok.lemma && tok.lemma !== '_') bits.push(`lemma ${tok.lemma}`);
+            if (tok.feats && tok.feats !== '_') bits.push(tok.feats.replace(/\|/g, ' · '));
+            if (tok.deprel && tok.deprel !== '_') bits.push(tok.deprel);
+            if (tok.ref) bits.push(`${citationLabel ? citationLabel + ' ' : ''}${tok.ref}`);
+            return bits.join(' — ');
+        }).join(' | ');
+    }
+
+    function showAlignmentStudy(groupKey) {
+        const meta = alignmentGroupMeta.get(groupKey) || {};
+        const leg = document.getElementById("alignment-legend");
+        if (!leg) return;
+        const greek = (meta.tokens || []).map(t => t.form).join(' ');
+        const cue = (meta.cues || []).join(', ');
+        const details = alignmentStudyText(meta);
+        leg.innerHTML = `<strong>${escapeHtml(greek || 'Alignment')}</strong>`
+            + (cue ? ` <span class="aln-cue">cue: ${escapeHtml(cue)}</span>` : '')
+            + (details ? `<span class="aln-study-detail">${escapeHtml(details)}</span>` : '');
+    }
+
+    function alnClick(event, groupKey) {
+        if (event) event.stopPropagation();
+        const wasPinned = pinnedAlignGroup === groupKey;
+        document.querySelectorAll('.aln-token.aln-study-reveal').forEach(el => el.classList.remove('aln-study-reveal'));
+        pinnedAlignGroup = wasPinned ? "" : groupKey;
+        if (!pinnedAlignGroup) {
+            alnHoverOut();
+            updateAlignmentLegend();
+            return;
+        }
+        applyAlignmentHighlight(groupKey);
+        document.querySelectorAll('.aln-token').forEach(el => {
+            if (el.dataset.gk === groupKey && el.dataset.side === 'tgt' && el.dataset.greek) {
+                el.classList.add('aln-study-reveal');
+            }
+        });
+        showAlignmentStudy(groupKey);
+    }
+
+    // renderAlignedPoetry builds its markup in a temporary wrapper and returns
+    // an HTML string. Serialising that wrapper preserves data attributes but
+    // necessarily drops DOM event-handler properties, so bind the interactions
+    // after the final nodes have been inserted into the reader column.
+    function bindAlignmentTokenEvents(root) {
+        root.querySelectorAll('.aln-token[data-gk]').forEach(el => {
+            const groupKey = el.dataset.gk;
+            el.onmouseenter = () => alnHoverIn(groupKey);
+            el.onmouseleave = alnHoverOut;
+            el.onclick = event => alnClick(event, groupKey);
+        });
+    }
+
+    // Preserve the TEI/HTML structure while wrapping whitespace-delimited
+    // tokens by authored card-level indices. This avoids the surface-form
+    // collisions that occur with repeated Greek forms.
+    function wrapPoetryTokenIndices(wrapper, indexMap, side) {
+        let tokenIndex = 0;
+        const cells = Array.from(wrapper.querySelectorAll('.line-text-cell'));
+        cells.forEach(cell => {
+            const walker = document.createTreeWalker(cell, NodeFilter.SHOW_TEXT);
+            const nodes = [];
+            while (walker.nextNode()) nodes.push(walker.currentNode);
+            nodes.forEach(node => {
+                const text = node.nodeValue || '';
+                const matches = Array.from(text.matchAll(/\S+/g));
+                if (!matches.length) return;
+                const frag = document.createDocumentFragment();
+                let cursor = 0;
+                matches.forEach(match => {
+                    if (match.index > cursor) frag.appendChild(document.createTextNode(text.slice(cursor, match.index)));
+                    const info = indexMap.get(tokenIndex++);
+                    if (info) {
+                        const span = document.createElement('span');
+                        span.className = 'aln-token';
+                        span.dataset.gk = info.groupKey;
+                        span.dataset.side = side;
+                        span.dataset.color = info.color;
+                        span.style.borderBottomColor = info.color;
+                        span.textContent = match[0];
+                        // These nodes are serialized by renderAlignedPoetry;
+                        // attributes survive that round-trip, handler
+                        // properties do not.
+                        span.setAttribute('onmouseenter', `alnHoverIn('${info.groupKey}')`);
+                        span.setAttribute('onmouseleave', 'alnHoverOut()');
+                        span.setAttribute('onclick', `alnClick(event, '${info.groupKey}')`);
+                        frag.appendChild(span);
+                    } else {
+                        frag.appendChild(document.createTextNode(match[0]));
+                    }
+                    cursor = match.index + match[0].length;
+                });
+                if (cursor < text.length) frag.appendChild(document.createTextNode(text.slice(cursor)));
+                node.replaceWith(frag);
+            });
+        });
+    }
+
+    function renderAlignedPoetry(rawHtml, versionShortId, groups, pair, segKey) {
+        if (!groups || groups.length === 0) return rawHtml;
+        const isSrc = versionShortId === pair.src_version;
+        const isTgt = versionShortId === pair.tgt_version;
+        if (!isSrc && !isTgt) return rawHtml;
+
+        const wrapper = document.createElement('div');
+        wrapper.innerHTML = rawHtml;
+        const indexMap = new Map();
+        groups.forEach((group, gi) => {
+            const groupKey = `${segKey}__${gi}`;
+            const color = scoreToColor(group.sc);
+            const meta = group.meta || {};
+            alignmentGroupMeta.set(groupKey, meta);
+            const indices = isSrc ? (group.s || []) : (group.t || []);
+            indices.forEach(idx => indexMap.set(idx, { groupKey, color }));
+
+            if (isTgt && Array.isArray(meta.target_ids)) {
+                const byId = new Map(Array.from(wrapper.querySelectorAll('[data-xml-id]'))
+                    .map(candidate => [candidate.dataset.xmlId, candidate]));
+                meta.target_ids.forEach(targetId => {
+                    const el = byId.get(targetId);
+                    if (!el) return;
+                    el.classList.add('aln-token');
+                    el.dataset.gk = groupKey;
+                    el.dataset.side = 'tgt';
+                    el.dataset.color = color;
+                    el.dataset.greek = (meta.tokens || []).map(tok => tok.form).join(' ');
+                    el.style.borderBottomColor = color;
+                    el.title = alignmentStudyText(meta);
+                    el.setAttribute('onmouseenter', `alnHoverIn('${groupKey}')`);
+                    el.setAttribute('onmouseleave', 'alnHoverOut()');
+                    el.setAttribute('onclick', `alnClick(event, '${groupKey}')`);
+                });
+            }
+        });
+        if (isSrc || indexMap.size > 0) wrapPoetryTokenIndices(wrapper, indexMap, isSrc ? 'src' : 'tgt');
+        return wrapper.innerHTML;
     }
 
     // Filter alignment groups to meaningful 1-to-1 correspondences.
@@ -2769,6 +2943,16 @@ function initializeRoutingFromURL() {
         params.set("cols", activeColumnsCount.toString());
 
         window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
+
+        // Report this in-app navigation to Analytics as its own pageview.
+        // replaceState above doesn't trigger a real page load, so without
+        // this, GA would only ever see the first passage of a session.
+        if (typeof gtag === "function") {
+            gtag("event", "page_view", {
+                page_path: window.location.pathname + window.location.search,
+                page_title: document.title
+            });
+        }
     }
 
     function selectSectionDirectly(secId) {
@@ -4225,12 +4409,23 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     if (groups.length > 0) {
                         txt = renderAlignedProse(txt, shortId, groups, alnPair, segKey);
                     }
+                } else if (hasAln && isPoetry && alnPair) {
+                    // Poetry cards contain many numbered lines in one stored
+                    // section. Authored bridge alignments are keyed by
+                    // BOOK.CARD-RANGE and use stable TEI phrase IDs on the
+                    // target plus card-level token indices on the Greek.
+                    const segKey = `${payload.book || '1'}.${payload.chapter}`;
+                    const groups = (alnPair.segments || {})[segKey] || [];
+                    if (groups.length > 0) {
+                        txt = renderAlignedPoetry(txt, shortId, groups, alnPair, segKey);
+                    }
                 }
 
             if (isPoetry) {
                 const wrapper = document.createElement("div");
                 wrapper.className = `${cssClass} poetry-grid-layout`;
                 wrapper.innerHTML = txt;
+                bindAlignmentTokenEvents(wrapper);
                 if (!wrapper.querySelector('.line-num-cell')) {
                     wrapper.classList.remove('poetry-grid-layout');
                 }
@@ -4636,4 +4831,62 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         dz.addEventListener('dragleave', () => { dz.style.borderColor = '#ccc'; dz.style.background = '#fafafa'; });
         dz.addEventListener('drop', e => { e.preventDefault(); dz.style.borderColor = '#ccc'; dz.style.background = '#fafafa'; handleFileSelection(e.dataTransfer.files); });
     }
-  
+
+    // ── Critical-apparatus popover ────────────────────────────────────────
+    // Inline <span class="app-crit"> (emitted by render_app_crit in
+    // pipeline/core/xml_utils.py) carries the editor's adopted reading as
+    // its visible text; the variants live in data-app (pipe-separated) with
+    // the lemma in data-lem, and a native title="" as a no-JS fallback.
+    // Here we upgrade that to a real popover: hover previews it instantly,
+    // a click pins it open (apparatus entries get long enough to want to
+    // read at leisure and select-copy). Delegated off document so it keeps
+    // working across every column re-render without re-binding.
+    (function initAppCritPopover() {
+        let el = null, pinned = false, hideTimer = null;
+        const ensure = () => {
+            if (el) return el;
+            el = document.createElement('div');
+            el.id = 'app-crit-popover';
+            el.hidden = true;
+            el.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+            el.addEventListener('mouseleave', () => { if (!pinned) hide(); });
+            document.body.appendChild(el);
+            return el;
+        };
+        const esc = s => { const d = document.createElement('div'); d.innerText = s == null ? '' : s; return d.innerHTML; };
+        const show = (anchor) => {
+            clearTimeout(hideTimer);
+            const box = ensure();
+            const lem = anchor.getAttribute('data-lem') || anchor.textContent.trim();
+            const rdgs = (anchor.getAttribute('data-app') || anchor.getAttribute('title') || '')
+                .split('|').map(s => s.trim()).filter(Boolean);
+            box.innerHTML =
+                (lem ? `<div class="app-pop-lem">${esc(lem)}</div>` : '') +
+                `<ul class="app-pop-list">${rdgs.map(r => `<li>${esc(r)}</li>`).join('')}</ul>` +
+                (pinned ? '<div class="app-pop-hint">click outside to dismiss</div>' : '');
+            box.hidden = false;
+            const r = anchor.getBoundingClientRect();
+            const w = box.offsetWidth, h = box.offsetHeight;
+            let left = r.left, top = r.bottom + 6;
+            if (left + w > window.innerWidth - 8) left = window.innerWidth - w - 8;
+            if (top + h > window.innerHeight - 8) top = r.top - h - 6;   // flip above
+            box.style.left = Math.max(8, Math.round(left)) + 'px';
+            box.style.top = Math.max(8, Math.round(top)) + 'px';
+        };
+        const hide = () => { if (el) { el.hidden = true; } pinned = false; };
+        document.addEventListener('mouseover', e => {
+            const a = e.target.closest && e.target.closest('.app-crit');
+            if (a && !pinned) show(a);
+        });
+        document.addEventListener('mouseout', e => {
+            if (pinned) return;
+            const a = e.target.closest && e.target.closest('.app-crit');
+            if (a) hideTimer = setTimeout(hide, 120);
+        });
+        document.addEventListener('click', e => {
+            const a = e.target.closest && e.target.closest('.app-crit');
+            if (a) { e.stopPropagation(); pinned = true; show(a); return; }
+            if (el && !el.hidden && !(el.contains(e.target))) hide();
+        });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+    })();

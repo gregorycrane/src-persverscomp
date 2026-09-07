@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader><fileDesc><titleStmt><title>Test Edition</title></titleStmt>
+  <publicationStmt><p>test</p></publicationStmt>
+  <sourceDesc><p>test</p></sourceDesc></fileDesc></teiHeader>
+  <text>
+    <body>
+      <div type="edition" n="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2">
+        <div type="textpart" subtype="book" n="1">
+          <milestone unit="card" n="1"/>
+          <l n="1">alpha</l>
+          <l n="2">beta</l>
+          <milestone unit="card" n="3"/>
+          <l n="3">gamma</l>
+          <l n="4">delta</l>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

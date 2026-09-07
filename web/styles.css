@@ -59,6 +59,40 @@
         .aln-dimmed {
             opacity: 0.35;
         }
+        .seg-type-supplied {
+            color: #6f6a61;
+            text-decoration: underline dotted #aaa;
+            text-underline-offset: 3px;
+        }
+        .seg-alignment-unresolved {
+            text-decoration: underline wavy #b36b45;
+            text-underline-offset: 3px;
+        }
+        .aln-token.aln-study-reveal::after {
+            content: attr(data-greek);
+            display: block;
+            width: max-content;
+            max-width: 18rem;
+            margin: 2px 0 4px;
+            padding: 2px 5px;
+            border-radius: 3px;
+            background: #f4efe4;
+            color: #5b1f1f;
+            font-family: "Palatino Linotype", "New Athena Unicode", serif;
+            font-size: 0.82em;
+            line-height: 1.25;
+        }
+        .aln-study-detail {
+            display: block;
+            margin-top: 2px;
+            color: #4f4b45;
+            font-style: normal;
+        }
+        .aln-cue {
+            margin-left: 5px;
+            color: #70542f;
+            font-style: normal;
+        }
 
         /* ── Alignment Panel ────────────────────────────────────────── */
         #alignment-panel {
@@ -256,7 +290,8 @@
             padding-right: 6px;
         }
         .greek-text { font-size: 15px; line-height: 1.7; font-family: "Gentium Plus", "Athena", serif; color: #000; }
-        .english-text { font-size: 13px; line-height: 1.6; color: #222; }
+        .english-text, .bridge-translation-text { font-size: 13px; line-height: 1.6; color: #222; }
+        .bridge-translation-text { background: #f7f4ec; }
         .french-text { font-size: 13px; line-height: 1.6; color: #2b2b2b; }
         .latin-text { font-size: 13px; line-height: 1.6; color: #111; font-style: italic; }
         .german-text, .italian-text { font-size: 13px; line-height: 1.6; color: #222; }
@@ -271,8 +306,40 @@
         }
 
         .commentary-text .lemma {
-            font-weight: bold;
-            color: #1a5276;
+            font-weight: 700;
+            color: #7a1f14;
+            background-color: #f3e6c8;
+            border-bottom: 1px solid #c49a57;
+            border-radius: 2px;
+            padding: 0 0.2em;
+        }
+        .commentary-text .tei-emph {
+            font-style: italic;
+            font-weight: 600;
+        }
+        .commentary-text .tei-gloss {
+            font-style: italic;
+            color: #315f73;
+        }
+        .commentary-text .tei-gloss::before { content: "‘"; }
+        .commentary-text .tei-gloss::after { content: "’"; }
+        /* Nested glosses are valid TEI.  The surrounding "lit." already
+           identifies this subordinate gloss, so avoid doubled quotation marks. */
+        .commentary-text .tei-gloss .tei-gloss::before,
+        .commentary-text .tei-gloss .tei-gloss::after { content: none; }
+        .commentary-text .tei-bibl {
+            color: #6d553e;
+            font-style: normal;
+            font-weight: 600;
+        }
+        .commentary-text .tei-ref {
+            color: #315f73;
+            font-style: normal;
+            font-weight: 600;
+            border-bottom: 1px dotted currentColor;
+        }
+        .commentary-text .tei-quote {
+            color: #3f3028;
         }
         .commentary-text p + p { margin-top: 0; }
         .commentary-text p:has(+ p > .lemma:first-child) { 
@@ -336,6 +403,38 @@
         
         .note { font-size: 11px; color: #555; background: #fdfbf7; border-left: 2px solid #880000; padding: 2px 6px; margin: 4px 0 4px 1em; display: block; }
         .poetry-grid-layout .note { grid-column: 1 / span 2; display: block !important; }
+
+        /* Inline critical apparatus (TEI <app>): the adopted <lem> reading
+           stays in the running text; the variants ride along in a title=""
+           tooltip. The dagger is a ::after pseudo-element, never real text,
+           so it can't leak into alignment/lexicon tokenization. */
+        .app-crit { border-bottom: 1px dotted #b08968; cursor: help; }
+        .app-crit::after { content: "†"; font-size: 0.7em; line-height: 0; vertical-align: super;
+                           color: #996633; margin-left: 1px; }
+        .app-crit:hover { background: #f6efe2; }
+        .app-crit-empty { border-bottom: 0; }
+        .app-crit-empty::after { margin-left: 0; }
+
+        /* JS-driven apparatus popover (see initAppCritPopover in app.js) */
+        #app-crit-popover {
+            position: fixed; z-index: 10000; max-width: 340px;
+            padding: 8px 11px; border-radius: 6px;
+            background: #2b2b2b; color: #f2efe9;
+            font-size: 12.5px; line-height: 1.5;
+            box-shadow: 0 3px 14px rgba(0,0,0,0.32);
+        }
+        #app-crit-popover .app-pop-lem {
+            font-weight: 700; color: #fff;
+            padding-bottom: 4px; margin-bottom: 4px;
+            border-bottom: 1px solid rgba(255,255,255,0.18);
+        }
+        #app-crit-popover .app-pop-lem::after { content: " ]"; opacity: 0.55; font-weight: 400; }
+        #app-crit-popover .app-pop-list { margin: 0; padding: 0; list-style: none; }
+        #app-crit-popover .app-pop-list li { padding: 1px 0; }
+        #app-crit-popover .app-pop-list li + li { border-top: 1px dotted rgba(255,255,255,0.14); }
+        #app-crit-popover .app-pop-hint {
+            margin-top: 5px; font-size: 10.5px; font-style: italic; opacity: 0.6;
+        }
 
 /* --- Clean Breakout Rules for Prose Quotes and Continuations Inside Grid Layouts --- */
 
@@ -832,5 +931,21 @@
     letter-spacing: 0.02em;
 }
 .commentary-text .comm-lineno::before { content: "l. "; font-weight: normal; opacity: 0.85; }
+
+/* A mapped commentary/apparatus badge already names both numbering systems
+   (for example, “H. 1525 → Smyth 1558”), so a generic leading “l.” would be
+   misleading and visually noisy. */
+.commentary-text .comm-lineno:has(.comm-reference-line)::before { content: ""; }
+.commentary-text .comm-reference-line {
+  display: inline-block;
+  margin: -1px -6px -1px 0.55em;
+  padding: 1px 7px;
+  color: #452707;
+  background-color: #fff1d2;
+  border-left: 1px solid #74491f;
+  border-radius: 0 3px 3px 0;
+  font-weight: 700;
+  letter-spacing: 0;
+}
 .commentary-text .comm-entry:first-child,
 .commentary-text .comm-lineno:first-child { margin-top: 0; }

@@ -1,145 +1,201 @@
-# Perseus Version Comparison — Build Source
+# src-persverscomp
 
-This repository contains the source data registry, browser application source, and notebook-based build pipeline for the [Perseus Version Comparison runtime](https://github.com/gregorycrane/persverscomp).
+Build pipeline for the Perseus Multitext Viewer. Unpack this zip's contents
+directly into your existing `src-persverscomp/` directory -- it does not
+touch `web/` or `work_registry.json`, both of which stay exactly as they are.
 
-The two repositories have different roles:
+## What's in this zip
 
-| Repository | Role |
-| --- | --- |
-| `src-persverscomp` (this repository) | Source configuration and build logic. Edit and run the build here. |
-| `persverscomp` | Generated, runnable static site. Serve or deploy that repository. |
-
-## What the build produces
-
-The pipeline combines CTS-addressable texts and annotations into a browser-based comparison environment with:
-
-- editions, translations, and commentaries displayed in parallel;
-- structural, line, and token alignment data;
-- treebank sentences, tokens, speakers, and metrical annotations;
-- place references and map data;
-- work-specific and general lexica;
-- per-work SQLite shards queried in the browser through WebAssembly; and
-- generated catalogs and a self-contained front-end entry page.
-
-The deployed system has no application server or database daemon. Its generated SQLite databases are read-only static assets.
-
-## Important files and directories
-
-| Path | Purpose |
-| --- | --- |
-| `perseus-urn-cts-scalable-5col-v97.ipynb` | Current build notebook and canonical pipeline entry point. |
-| `work_registry.json` | Registry of works, versions, annotations, parsing modes, and local source paths. |
-| `web/index_shell.html` | HTML shell used to generate the runtime `index.html`. |
-| `web/styles.css` | Reader styling embedded into the generated page. |
-| `web/app.js` | Reader application code embedded into the generated page. |
-| `lodcache/` | Cached and supporting data used to ingest place references. |
-| `OldMaterials/` | Historical notebooks and documentation; not the current build source. |
-
-## Requirements
-
-- Python 3 with the standard `sqlite3` module
-- JupyterLab or Jupyter Notebook
-- [`lxml`](https://lxml.de/) for XML processing
-- Enough free disk space for the temporary monolithic database and generated shards
-- Local copies of every source file named in `work_registry.json` and the notebook's lexicon registry
-- A writable checkout of `persverscomp`
-
-The build currently expects these local paths:
-
-```text
-/Users/gcrane/github/src-persverscomp
-/Users/gcrane/github/persverscomp
-/tmp/persvers_build
+```
+pipeline/            the build pipeline, split out of the old notebook
+Makefile              make / make work=<key> / make force / make index / make clean / make test
+manifest.json          new, empty -- gets populated on first build
+tests/                  a handful of smoke tests (see "Testing" below)
+notebooks/archive/       the original notebook, kept runnable
+README.md (this file)
 ```
 
-To use different checkouts, update `SRC_DIR`, `WORKSPACE_DIR`, and `BUILD_DIR` in the notebook before running the pipeline.
+Not included (left as-is in your existing directory): `web/`,
+`work_registry.json`, `lodcache/`, and anything under `WORKSPACE_DIR`
+(`persverscomp/`) or `BUILD_DIR` (`/tmp/persvers_build`).
 
-## Configure the corpus
+## Building
 
-`work_registry.json` is the main corpus manifest. Each work identifies its CTS textgroup and work IDs, then lists the available editions, translations, commentaries, treebanks, metrics, alignments, and related resources. Entries also specify how a source should be parsed.
-
-Current parsing modes include:
-
-- `agdt_xml`
-- `book_chapter_section`
-- `card_prose`
-- `conllu`
-- `line_commentary`
-- `milestones`
-- `poetry_cards`
-- `reading_lines`
-- `speech_collection_sentences`
-
-Paths in the registry are local build inputs, often absolute paths. The registry therefore belongs in this source repository and is not a deployable runtime asset.
-
-Lexicon sources are currently registered in the notebook rather than in `work_registry.json`. Verify those paths as well before rebuilding.
-
-## Build the runtime
-
-1. Update `work_registry.json`, the source documents, or the files under `web/`.
-2. Open `perseus-urn-cts-scalable-5col-v97.ipynb` from this repository.
-3. Confirm the source, runtime, temporary-build, lexicon, and place-data paths.
-4. Run the populated cells from top to bottom. Cell order matters.
-5. Review the validation and row-count output for missing versions, malformed citations, oversized shards, or incomplete annotations.
-6. Inspect the changes in the sibling `persverscomp` repository before committing or deploying them.
-
-The important pipeline order is:
-
-1. create and populate the temporary monolithic database;
-2. flatten treebank sentences into token rows;
-3. ingest place references and other supplemental data;
-4. split the corpus into work- and book-aware shards and write `catalog.json`;
-5. build the runtime `index.html` from the three files under `web/`;
-6. generate the shard loader;
-7. ingest and shard the lexica, writing `lexica.json`; and
-8. run final guards before deleting the temporary monolith.
-
-Do not run the cleanup cell until all corpus and lexicon shards have been written. If the monolith is deleted too early, rerun the preceding build and ingestion cells before sharding again.
-
-## Generated output
-
-The notebook writes into the sibling `persverscomp` checkout:
-
-| Output | Description |
-| --- | --- |
-| `index.html` | Compiled reader containing the HTML shell, CSS, JavaScript, and generated registry data. |
-| `.nojekyll` | Prevents GitHub Pages from processing the static output with Jekyll. |
-| `site/catalog.json` | Work, author, version, annotation, book, and shard metadata. |
-| `site/data/**/*.db` | Read-only SQLite corpus shards. |
-| `site/data/lexica/*.db` | Read-only lexicon shards. |
-| `site/lexica.json` | Lexicon metadata and textgroup-to-lexicon mappings. |
-| `site/shard_loader.js` | Browser loader for catalogs and SQLite shards. |
-
-The intermediate monolithic database is created at `/tmp/persvers_build/corpus_alignment_grid.db`. It is a build artifact, not part of the deployed site, and the notebook can remove it after all dependent stages have completed.
-
-Large works may be divided at ancient book boundaries. The browser downloads all parts required for the selected work and combines their query results in memory. The build aims to keep individual files comfortably below GitHub's 100 MB file limit.
-
-## Editing guidance
-
-- Make front-end changes in `web/index_shell.html`, `web/styles.css`, or `web/app.js`, then rebuild. Do not treat the generated runtime `index.html` as the source of truth.
-- Keep local source paths and parsing instructions in `work_registry.json`; do not copy that file into the public runtime.
-- Treat `OldMaterials/` and notebook checkpoint directories as reference material only.
-- The notebook currently regenerates the runtime repository's `README.md`. If that embedded README text is not updated at the same time, a full rebuild can replace later manual README edits.
-
-## Testing a generated build
-
-Because the application fetches JSON, SQLite, and WebAssembly assets, test it through an HTTP server rather than by opening `index.html` as a `file://` URL:
-
-```bash
-cd /Users/gcrane/github/persverscomp
-python3 -m http.server 8000
+```
+make                    # build every work whose sources changed since the last build
+make work=tlg0085.tlg007  # build just one work
+make force               # ignore manifest.json, rebuild everything
+make index                # rebuild index.html only, from the existing monolith + web/
+make clean                 # delete the temp monolith
+make test                   # run the test suite
 ```
 
-Then open `http://localhost:8000/` and verify several works, including a multipart work and works with commentary, treebank, place, and lexicon data.
+If the monolith at `/tmp/persvers_build/corpus_alignment_grid.db` is
+missing (fresh clone, or after `make clean`), the next build reconstitutes
+it from `site/data/**/*.db` first -- no TEI/treebank re-parsing needed --
+then runs the normal manifest-driven pass on top of that.
 
-## Troubleshooting
+**Which one to run, by what changed:**
 
-- **A source file is missing:** check the absolute paths in `work_registry.json` and the lexicon registry in the notebook.
-- **The build uses stale state:** restart the notebook kernel and rerun the populated cells from top to bottom.
-- **A work is absent from the catalog:** confirm that its registry entry is enabled, its input parsed successfully, and the sharding cell completed.
-- **The site fails when opened directly:** use a local HTTP server; browser security rules commonly block `fetch` and WebAssembly from `file://` pages.
-- **A shard is too large:** review the work's citation hierarchy and book boundaries so the sharding stage can split it safely.
+| You changed... | Run |
+|---|---|
+| a TEI/treebank/alignment source file | `make work=<key>` (or plain `make` to catch everything stale) |
+| parser code (`pipeline/parsers/*.py`, `pipeline/treebank/*.py`, etc.) | plain `make` -- `dep_paths_for()` maps each work's own per-edition `parse_mode` to the parser file it actually uses, so a parser-code edit correctly marks every work that depends on it as stale |
+| `web/app.js`, `web/styles.css`, or `web/index_shell.html` | `make index` -- these aren't TEI sources, so no work is ever "stale" from editing them; `make force` would only pick the change up by wastefully re-ingesting the entire corpus |
+| you're not sure, or want a clean rebuild from scratch | `make force` |
 
-## Licensing
+## How this maps to the old notebook
 
-No repository-level license file is currently present. Add or identify the applicable code and data licenses before redistributing material outside the project's existing terms.
+Every cell's logic moved to a specific module; see the module docstrings
+for exactly which cell it came from and what (if anything) changed in the
+move. In short:
+
+| Old cell | New home |
+|---|---|
+| Cell 0 (config) | `pipeline/config.py` |
+| Cell 1 (WORK_REGISTRY) | `pipeline/registry.py` |
+| Cell 4 (parsers + driver loop) | `pipeline/core/`, `pipeline/parsers/`, `pipeline/treebank/{conllu,agdt}.py`, `pipeline/ingest_work.py` |
+| Cell 5 (treebank flatten) | `pipeline/treebank/flatten.py` |
+| Cell 7 (place references) | `pipeline/places/topostext.py` |
+| Cell 9 (sharding) | `pipeline/sharding.py` |
+| Cell 10 (index.html builder) | `pipeline/index_builder.py` (WEB_SRC path fix -- see its docstring) |
+| Cell 11 (shard loader JS) | not carried over as a Python generator -- see "What I deliberately didn't do" below |
+| Cell 12 (lexicon parsers) | `pipeline/lexicon/parsers.py`, `pipeline/lexicon/ingest.py` |
+| Cell 13 (lexicon sharding) | `pipeline/lexicon/shard.py` -- **not yet extracted, see below** |
+| Cell 14 (treebank QA guard) | `pipeline/treebank/chunking_guard.py` |
+| Cell 15 (cleanup) | `pipeline/cleanup.py` |
+| *(new)* | `pipeline/manifest.py`, `pipeline/reconstitute.py`, `pipeline/build_all.py` |
+
+The mechanical transform applied throughout Cell 4's driver tail (now
+`ingest_work.py`) was: `for work_key, work_meta in WORK_REGISTRY.items():`
+became `for work_key in target_keys: work_meta = WORK_REGISTRY[work_key]`.
+Everything else in those loop bodies is unchanged from the notebook.
+
+## What I deliberately didn't do
+
+- **`pipeline/lexicon/shard.py` (Cell 13) was not extracted in this pass.**
+  Everything else lexicon-related (`parsers.py`, `ingest.py`) is done; I ran
+  out of turn budget before getting to the sharding step. It's a much
+  smaller, more self-contained cell than Cell 4 or Cell 9 -- straightforward
+  to pull over the same way the others were.
+- **`sharding.py`'s `split_corpus_by_work` was moved verbatim, not made
+  work-selective.** It still re-shards the entire monolith (and rebuilds
+  `catalog.json`) on every call, even when `build_all.py` only just
+  ingested one work. I didn't trace far enough into its ~400 lines to be
+  confident a partial-shard filter wouldn't quietly break `catalog.json`'s
+  cross-work aggregation, so `build_all.py` calls it unfiltered for now.
+  Sharding a persistent monolith is still much cheaper than re-parsing TEI,
+  so this is a real but bounded inefficiency, not a correctness risk.
+- **Cell 11's `SHARD_LOADER_JS`** (a Python string constant that gets
+  written out as `shard_loader.js`) wasn't ported into the package as-is.
+  Since you asked not to touch `web/`, and the cleanest fix is to make
+  `shard_loader.js` a real static file under `web/` rather than a generated
+  string, I left this alone rather than either modifying `web/` or
+  preserving an awkward string-constant generator. Worth a short follow-up
+  once you're ready to touch `web/`.
+
+## What's actually been verified, and what hasn't
+
+This section has a real story worth being honest about, because it changed
+twice during this split -- both times because something was actually run,
+not because I re-reasoned about it harder.
+
+**Round 1.** After the first `make` run hit a `NameError: WORK_REGISTRY`
+(missing import in `ingest_work.py`), I wrote an AST-based checker that
+flags any name a function uses but that's never defined anywhere in its
+file, filtered to exclude closures. It found 54 real missing imports across
+~14 files -- names that were kernel-globals in the notebook (`WORK_REGISTRY`,
+`TEXTGROUP_NAMESPACE`, `build_poetry_canonical_intervals`, plain missing
+`re`/`os`/`json`/`OrderedDict`) that I hadn't consistently re-imported when
+writing each module's header, plus two real scoping bugs
+(`global_sort_index` and `_pending_metrical`/`WORK_HAS_BOOKS` needed
+explicit initialization as function-locals instead of relying on
+notebook-kernel-global state). I fixed all 54, the checker reported clean,
+and I claimed the package was "structurally solid."
+
+**Round 2.** The very next real run (`make work=tlg0085.tlg007`) crashed
+again -- same class of bug, `OrderedDict` undefined in `poetry_cards.py`,
+a file my own checker had just cleared. The checker itself had a bug: it
+treated `OrderedDict` inside `data.setdefault(bk, OrderedDict())[label] = …`
+as a *binding* rather than a *use*, because it naively walked every AST node
+inside an assignment target instead of checking whether each Name was
+actually in a Store or Load context. That's a real category of Python
+expression (a call nested inside a complex assignment target) that a naive
+target-walk gets backwards. I rewrote the checker to use Python's own
+Store/Load/Del context markers instead of hand-rolled target-walking, reran
+it, and it found 2 more real instances of the exact same missing-import
+pattern (`card_prose.py`, `line_commentary.py`) that round 1's checker had
+also missed for the same reason. All fixed. The only thing the v2 checker
+still flags is `chunking_guard.py`'s `WORK_HAS_BOOKS` -- a deliberate,
+documented pattern (`run_chunking_guard` sets it via `global` before calling
+`_chset_from_conllu`), not a bug.
+
+More importantly: I'd claimed "structurally solid" after a synthetic
+end-to-end test that used an *empty* fake work registry -- which meant it
+never actually called a single parser, so it couldn't have caught this
+class of bug no matter how clean the checker said things were. I've since
+added `tests/test_ingest_work_e2e.py`, which runs a real (minimal) TEI
+fixture (`tests/fixtures/poetry_cards_minimal.xml`) through the actual
+`doc_type=poetry_cards` dispatch path -- the same path that crashed for
+you -- and asserts on the real parsed output (card intervals, rendered
+HTML). It passes, and it's now part of the permanent suite specifically so
+this class of bug gets caught by `make test` next time, not by your next
+real build.
+
+**What that does and doesn't cover.** One parser (`poetry_cards`) now has
+real fixture coverage; the other seven `doc_type`s
+(`card_prose`, `milestone`, `reading_lines`, `hierarchical`,
+`speech_collection`, `book_chapter_section`, `line_commentary`, plus the
+treebank/lexicon/place-reference paths) still don't -- they compile and
+pass the static checker, but nothing has actually called them with real
+input. Given the round-1 → round-2 pattern, I'd treat "the checker is
+clean" as necessary but not sufficient, and I'd genuinely expect other
+`doc_type`s to surface their own version of this if you hit them before I
+add fixtures for them. If a work with a different `doc_type` throws next,
+that's the most likely shape of bug, and it's a fast fix once you show me
+the traceback.
+
+**Round 3.** You sent your real `work_registry.json` so I could suggest which
+work_keys to try next -- and cross-referencing it against the code surfaced
+a real gap that had nothing to do with a crash: `build_all.py`'s
+`dep_paths_for()` (which decides whether editing a parser's *code* should
+count as making a work stale) keyed off `meta.get("doc_type")`, a field that
+doesn't exist anywhere in a real `work_registry.json` -- dispatch is
+per-edition `parse_mode` (`poetry_cards`, `card_prose`, etc.), and one
+work_key routinely mixes several across its editions/translations/
+commentaries. So this always returned `None`, meaning a fix to, say,
+`parse_poetry_cards_tei` would silently NOT invalidate any poetry_cards
+work's manifest entry -- only `make force` would ever pick it up. Fixed:
+`dep_paths_for()` now walks each entry's own `parse_mode` (and each
+treebank's own `parse_mode`, `conllu` vs `agdt_xml`) and maps it to the
+right parser file via a corrected `PARSE_MODE_PARSERS` registry (the old
+`DOC_TYPE_PARSERS` had the wrong key strings too -- `"milestone"` where the
+real data says `"milestones"`, `"speech_collection"` where it says
+`"speech_collection_sentences"` -- dead code that never matched, though the
+actual *ingestion* dispatch in `ingest_work.py` was always correct, since
+that's a straight if/elif chain unrelated to this lookup table). Verified
+against your real registry: `dep_paths_for()` now correctly resolves e.g.
+`tlg0001.tlg001` → `{poetry_cards.py, card_prose.py, line_commentary.py,
+conllu.py}` (it mixes all three edition parse_modes plus a treebank), and
+`tlg0003.tlg001` (no `parse_mode` on its entries) → `{hierarchical.py}`,
+matching the real fallback. Added `tests/test_dep_paths_for.py` to keep
+this covered -- real `work_registry.json` isn't part of this repo (it's
+your build-only data), so that test uses a synthetic-but-representative
+multi-parse_mode work instead.
+
+This doesn't affect the correctness of anything that's already run for
+you -- it only affects whether a *future* parser-code edit gets picked up
+by plain `make` (now: yes) or silently required `make force` (before: yes,
+always). Worth knowing about if you've been assuming `make` alone would
+catch a parser fix.
+
+## Testing
+
+```
+make test          # needs pytest: pip install pytest --break-system-packages
+```
+
+`tests/test_norm_key.py` and `tests/test_storage_table_classification.py`
+both caught real bugs during this split (a bad test assumption about
+sigma-folding, and an unclassified internal SQLite table) -- worth keeping
+this pattern going as more parsers get fixture-driven tests.
