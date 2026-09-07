@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Seven Against Thebes: N. Wecklein (1902), commentary OCR draft</title>
+        <author>N. Wecklein</author>
+        <respStmt>
+          <resp>OCR extraction and provisional reference placement</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Prepared for the Perseus Multitext Viewer; single-witness OCR draft, not proofread.</p>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg004.wecklein1902-com-ger1</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>N. Wecklein</author>
+          <title>Seven Against Thebes</title>
+          <date when="1902">1902</date>
+          <publisher>B. G. Teubner</publisher>
+          <pubPlace>Leipzig</pubPlace>
+          <biblScope unit="page">15–100</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="ocr">
+            <ref target="https://hdl.handle.net/2027/mdp.39015058551444">mdp.39015058551444</ref>
+            <p>Single supplied HathiTrust OCR export. SHA-256: 7ba6f205e4fedbb15d9f14fc6415cff5d5be43b8c18c244f379167f57eda4448</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Single-witness OCR is preserved without speculative prose corrections. Every entry is visibly uncollated; sic flags detected mixed-script corruption, not all possible errors. Original OCR and exact extraction coordinates are retained in the audit.</p>
+        <p>Running text, introductions, hypothesis and separate appendices are excluded. Reviewed starts separate running Greek from notes; source note headings determine units. Duplicate labels share one unit, with separate paragraphs and provenance.</p>
+        <p>All reference placements are provisional. An inherited 1885 correspondence is used only when its source Greek is found on the commentary page. Otherwise a local reference window is inferred from complete Greek lines in the running text. A window places the note for review; it does not assert its full scope or verified source lineation. Whole-page content matches can still reflect OCR/layout errors.</p>
+        <p>Physical line endings and printed spelling remain. Greek script uses mentioned; full quotation/citation/gloss semantic tagging remains for scholarly review. No unattested words are supplied. All heading repairs and unresolved layout fragments are recorded in the editorial manifest and extraction audit.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="commline"/>
+      </refsDecl>
+      <refsDecl>
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial single-witness draft; source/heading/alignment verification remains.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg004.wecklein1902-com-ger1">
+        <div type="textpart" subtype="commline" n="1-77" corresp="urn:cts:greekLit:tlg0085.tlg004.perseus-grc2:1" xml:id="comm-1-77">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=29">N. Wecklein, 1902, p. 15</ref>
+          </p>
+          <p><pb n="15" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=29"/>Prolog, in welchem mit tiefer Empfindung und stimmungs- voll die Situation und der Drang des Augenblicks gekennzeichnet wird, nachdem die vorausliegenden Begebenheiten durch die voran- gehenden beiden Dramen der Tri- logie gegeben sind. Dabei tritt uns der Charakter des Eteokles in seiner entschlossenen Tatkraft und patrioti- schen Begeisterung entgegen und wird durch V. 28f., 57f. der weitere Verlauf des Dramas vorbereitet. Eteokles kommt aus dem Palaste und spricht zu den vor dem Hause versammelten Kriegern, Jünglingen, Männern und Greisen, welche nach 35 abziehen. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="503" corresp="urn:cts:greekLit:tlg0085.tlg004.perseus-grc2:516" xml:id="comm-503">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=70">N. Wecklein, 1902, p. 56</ref>
+          </p>
+          <p><pb n="56" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=70"/>,,Wir gehören zur siegen- den Partei". Vgl. Eur. Rhes. 320 <mentioned xml:lang="grc">Ζεὺς</mentioned> <mentioned xml:lang="grc">πρὸς</mentioned> <mentioned xml:lang="grc">ἡμῶν</mentioned> <mentioned xml:lang="grc">ἐστιν</mentioned>. <mentioned xml:lang="grc">Ζεύς</mentioned> <mentioned xml:lang="grc">γε</mentioned> d. i. auch ein anderer Gott ist stärker als Typhos geschweige Zeus". <mentioned xml:lang="grc">του</mentioned> (so Elmsley für <mentioned xml:lang="grc">που</mentioned>) <mentioned xml:lang="grc">νικώμενον</mentioned> wie <mentioned xml:lang="grc">μὴ</mentioned> <mentioned xml:lang="grc">φόβου</mentioned> <mentioned xml:lang="grc">νικῶ</mentioned> Cho. 1050, <mentioned xml:lang="grc">ἱμέρου</mentioned> <mentioned xml:lang="grc">νικώμενος</mentioned> Hik. 1016, <mentioned xml:lang="grc">τῶν</mentioned> <mentioned xml:lang="grc">φίλων</mentioned> <mentioned xml:lang="grc">νικώμενος</mentioned> Soph. <sic source="#ocr"><mentioned xml:lang="grc">Α</mentioned>i.</sic> 1853. <pb n="57" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=71"/>Diese Stelle ahmt Eur. Heraklid. 347 nach: <mentioned xml:lang="grc">θεοῖσι</mentioned> <mentioned xml:lang="grc">δ</mentioned>' <mentioned xml:lang="grc">οὐ</mentioned> <mentioned xml:lang="grc">κακίοσιν</mentioned> <mentioned xml:lang="grc">χρώ</mentioned>- <mentioned xml:lang="grc">μεσθα</mentioned> <mentioned xml:lang="grc">συμμάχοισιν</mentioned> <mentioned xml:lang="grc">Αργείων</mentioned>, <mentioned xml:lang="grc">ἄναξ</mentioned>. <mentioned xml:lang="grc">τῶν</mentioned> <mentioned xml:lang="grc">μὲν</mentioned> <mentioned xml:lang="grc">γὰρ</mentioned> <mentioned xml:lang="grc">Ἥρα</mentioned> <mentioned xml:lang="grc">προστατεῖ</mentioned> <mentioned xml:lang="grc">Διὸς</mentioned> <mentioned xml:lang="grc">δάμαρ</mentioned>, <mentioned xml:lang="grc">ἡμῶν</mentioned> <mentioned xml:lang="grc">δ</mentioned>' <mentioned xml:lang="grc">Αθάνα</mentioned>· <mentioned xml:lang="grc">φημὶ</mentioned> <mentioned xml:lang="grc">δ᾽</mentioned> <mentioned xml:lang="grc">εἰς</mentioned> <mentioned xml:lang="grc">εὐπραξίαν</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">τοῦθ᾽</mentioned> <mentioned xml:lang="grc">ὑπάρχειν</mentioned> <mentioned xml:lang="grc">θεῶν</mentioned> <mentioned xml:lang="grc">ἀμεινόνων</mentioned> <mentioned xml:lang="grc">τυχεῖν</mentioned>· <mentioned xml:lang="grc">νικωμένη</mentioned> <mentioned xml:lang="grc">γὰρ</mentioned> <mentioned xml:lang="grc">Παλλὰς</mentioned> <mentioned xml:lang="grc">οὐκ</mentioned> <mentioned xml:lang="grc">ἀνέξεται</mentioned>. Vgl. übrigens Hom. <mentioned xml:lang="grc">Υ</mentioned> 104 <mentioned xml:lang="grc">ήρως</mentioned> (Äneas), <mentioned xml:lang="grc">ἀλλ</mentioned>' <mentioned xml:lang="grc">ἄγε</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">σὺ</mentioned> <mentioned xml:lang="grc">θεοῖς</mentioned> <mentioned xml:lang="grc">αἰειγενέτησιν</mentioned> <mentioned xml:lang="grc">εὔχεο</mentioned>· <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">δὲ</mentioned> <mentioned xml:lang="grc">σέ</mentioned> <mentioned xml:lang="grc">φασι</mentioned> <mentioned xml:lang="grc">Διὸς</mentioned> <mentioned xml:lang="grc">κούρης</mentioned> <mentioned xml:lang="grc">Αφροδίτης</mentioned> <mentioned xml:lang="grc">ἐκγεγάμεν</mentioned>, <mentioned xml:lang="grc">κεῖνος</mentioned> (Achil- leus) <mentioned xml:lang="grc">δὲ</mentioned> <mentioned xml:lang="grc">χερείονος</mentioned> <mentioned xml:lang="grc">ἐκ</mentioned> <mentioned xml:lang="grc">Θεοῦ</mentioned> <mentioned xml:lang="grc">ἐστιν</mentioned>. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1070" corresp="urn:cts:greekLit:tlg0085.tlg004.perseus-grc2:1084" xml:id="comm-1070">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=114">N. Wecklein, 1902, p. 100</ref>
+          </p>
+          <p><pb n="100" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551444&amp;seq=114"/>Schol. <mentioned xml:lang="grc">ἀκολούθως</mentioned> <mentioned xml:lang="grc">τῷ</mentioned> <mentioned xml:lang="grc">κύ</mentioned> <mentioned xml:lang="grc">ματι</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">τὸ</mentioned> <mentioned xml:lang="grc">κατακλυσθῆναι</mentioned> <mentioned xml:lang="grc">ἐπή</mentioned>- <mentioned xml:lang="grc">νεγκεν</mentioned>. Vgl. zu 2. <mentioned xml:lang="grc">μάλιστα</mentioned> ist mit <mentioned xml:lang="grc">ἤρυξε</mentioned> zu verbinden: nächst den Göttern hat zumeist Eteokles die Stadt gerettet". Aber và µá- <mentioned xml:lang="grc">λιστα</mentioned> schleppt nach, weshalb L. Dindorf die Symmetrie der beiden Halbchorpartien dadurch herstellt, daß er <mentioned xml:lang="grc">κύματι</mentioned> <mentioned xml:lang="grc">φωτῶν</mentioned> <mentioned xml:lang="grc">κατακλυσθῆν</mentioned> zum abschließenden Parömiakos macht. Diese Infinitivform ist für den Gebrauch des Äschylos durch <mentioned xml:lang="grc">χριμφθῆν</mentioned> Hik. 798 verbürgt. </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

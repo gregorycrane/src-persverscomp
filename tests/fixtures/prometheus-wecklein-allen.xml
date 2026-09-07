@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Prometheus Bound: N. Wecklein, translated by F. D. Allen (1893; compared with 1891), English commentary OCR draft</title>
+        <author>N. Wecklein</author>
+        <editor role="translator">F. D. Allen</editor>
+        <respStmt>
+          <resp>Conservative OCR extraction, page comparison and provisional alignment</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Local Perseus Multitext Viewer OCR draft; not a proofread edition.</p>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg003.wecklein-allen1893-com-eng1</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <listWit>
+          <witness xml:id="w1893">
+            <bibl>
+              <author>N. Wecklein</author>
+              <editor role="translator">F. D. Allen</editor>
+              <title>The Prometheus Bound of Aeschylus and the fragments of the Prometheus Unbound</title>
+              <publisher>Ginn &amp; Company</publisher>
+              <pubPlace>Boston and London</pubPlace>
+              <date when="1893">1893</date>
+              <biblScope unit="page">31–144</biblScope>
+              <ref target="https://hdl.handle.net/2027/oxu1.601566764">oxu1.601566764</ref>
+            </bibl>
+          </witness>
+          <witness xml:id="w1891">
+            <bibl>
+              <author>N. Wecklein</author>
+              <editor role="translator">F. D. Allen</editor>
+              <title>The Prometheus Bound of Aeschylus and the fragments of the Prometheus Unbound</title>
+              <publisher>Ginn &amp; Company</publisher>
+              <pubPlace>Boston and London</pubPlace>
+              <date when="1891">1891</date>
+              <biblScope unit="page">31–144</biblScope>
+              <ref target="https://hdl.handle.net/2027/oxu1.601623131">oxu1.601623131</ref>
+            </bibl>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>1893 is the base OCR. Printed pages 31–144 only: introduction, hypothesis, Prometheus Unbound fragments, metre section, appendix and separate handwritten interleaves are excluded. The translator states that this English adaptation derives from Wecklein’s second edition (1878), with alterations; it is not the 1888 German Oresteia commentary.</p>
+        <p>The 1891 PDF text layer is extracted in two columns. Page-local normalized word occurrence counts identify unmatched base words. These are flagged with sic; agreement is not proof of correctness. Punctuation, accents, word order, missing text and true printing differences remain unresolved. No automatic lexical corrections or silent conflation are made.</p>
+        <p>On page 120 the 1893 OCR interleaves columns; the reconstructed 1891 text is displayed instead, explicitly labeled. Both page texts remain in the audit. Selected handwritten intrusions are excluded in the editorial manifest; uncertain residue remains flagged for review.</p>
+        <p>Source heading segmentation and all reference placements remain provisional. Complete Greek lines in nearby running text supply a local reference window. Such windows are placement aids, not claims about the complete scope of a note. Physical hyphenation is retained.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="commline"/>
+      </refsDecl>
+      <refsDecl>
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="eng">English</language>
+        <language ident="grc">Greek</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial two-source comparison draft.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="eng">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg003.wecklein-allen1893-com-eng1">
+        <div type="textpart" subtype="commline" n="1" corresp="urn:cts:greekLit:tlg0085.tlg003.perseus-grc2:3-14" xml:id="comm-1">
+          <p type="ocr-status">
+            <note type="ocr">Two-source OCR draft: unmatched words are bracketed; readings, punctuation, possible marginalia and note boundaries remain unverified. Agreement between OCR sources is not proof of correctness.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: local window supported by running Greek. Source note 1; verify numbering and scope.</note>
+          </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=41">1893, p. 31</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=44">1891, p. 31</ref></p>
+          <p><pb n="31"/>1. <mentioned xml:lang="grc">χθονὸς</mentioned> <mentioned xml:lang="grc">πέδον</mentioned> : poetical periphra- sis for <mentioned xml:lang="grc">χθόνα.</mentioned> Cp. Suppl. 260 <mentioned xml:lang="grc">χώρας</mentioned> <mentioned xml:lang="grc">᾿Απίας</mentioned> <mentioned xml:lang="grc">πέδον,</mentioned> 662 <mentioned xml:lang="grc">πέδον</mentioned> <mentioned xml:lang="grc">γᾶς,</mentioned> Pers. 488 <mentioned xml:lang="grc">γῆς</mentioned> <mentioned xml:lang="grc">᾿Αχαιίδος</mentioned> <mentioned xml:lang="grc">πέδον.</mentioned> In such expres- sions, the adjective does not agree with the genitive, but with the sub- stantive which makes the periphrasis, because this substantive forms one idea with the genitive. See below, 91, 110, 823; also Sept. 304 <mentioned xml:lang="grc">ποῖον</mentioned> <mentioned xml:lang="grc">δ᾽</mentioned> <mentioned xml:lang="grc">ἀμείψεσθε</mentioned> <mentioned xml:lang="grc">γαίας</mentioned> <mentioned xml:lang="grc">πέδον,</mentioned> <mentioned xml:lang="grc">Εum.</mentioned> 292 <mentioned xml:lang="grc">χώ-</mentioned> <mentioned xml:lang="grc">ρας</mentioned> <mentioned xml:lang="grc">ἐν</mentioned> <mentioned xml:lang="grc">τόποις</mentioned> <mentioned xml:lang="grc">Λιβυστικοῖς,</mentioned> 326 <mentioned xml:lang="grc">ματρῷον</mentioned> <mentioned xml:lang="grc">ἅγνισμα</mentioned> <mentioned xml:lang="grc">κύριον</mentioned> <mentioned xml:lang="grc">φόνου,</mentioned> 718 <mentioned xml:lang="grc">πρωτοκτό-</mentioned> <mentioned xml:lang="grc">νοισι</mentioned> <mentioned xml:lang="grc">προστροπαῖς</mentioned> <mentioned xml:lang="grc">᾿Ιξίονος.</mentioned> – <mentioned xml:lang="grc">μέν</mentioned> : an- swered by <mentioned xml:lang="grc">σοὶ</mentioned> <mentioned xml:lang="grc">δέ</mentioned> in 3; the first part of the task (bringing Prometheus to the spot) is contrasted with the sec- ond part (nailing him to the rock). "We have done our duty, and here we are <sic source="#w1893">(ἥκομεν),</sic> now you must do yours." - <mentioned xml:lang="grc">τηλουρόν:</mentioned> this accent is expressly attested by the gramma- rian Arcadius <mentioned xml:lang="grc">περὶ</mentioned> <mentioned xml:lang="grc">τόνων,</mentioned> p. 73, 6. <mentioned xml:lang="grc">τηλουρός</mentioned> is formed from <mentioned xml:lang="grc">τηλοῦ</mentioned> as <mentioned xml:lang="grc">πο-</mentioned> <mentioned xml:lang="grc">νηρός</mentioned> from <mentioned xml:lang="grc">πόνος.</mentioned> Others derive the word from <mentioned xml:lang="grc">τῆλε</mentioned> and <mentioned xml:lang="grc">ὅρος</mentioned> <mentioned xml:lang="grc">(οὗρος)</mentioned> boun- dary, so that it means cuius ter- mini procul sunt; or from <mentioned xml:lang="grc">τῆλε</mentioned> and <mentioned xml:lang="grc">oὗρον</mentioned> space (cp. Curtius Etym.5 p. 346); but these derivations would require the accent <mentioned xml:lang="grc">τήλουρος.</mentioned> </p>
+        </div>
+        <div type="textpart" subtype="commline" n="2" corresp="urn:cts:greekLit:tlg0085.tlg003.perseus-grc2:3-14" xml:id="comm-2">
+          <p type="ocr-status">
+            <note type="ocr">Two-source OCR draft: unmatched words are bracketed; readings, punctuation, possible marginalia and note boundaries remain unverified. Agreement between OCR sources is not proof of correctness.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: local window supported by running Greek. Source note 2; verify numbering and scope.</note>
+          </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=41">1893, p. 31</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=44">1891, p. 31</ref></p>
+          <p><pb n="31"/>2. <mentioned xml:lang="grc">Σκύθην:</mentioned> here used adjectively, as in 417. So Sept. 817 <mentioned xml:lang="grc">Σκύθῃ</mentioned> <mentioned xml:lang="grc">σιδήρῳ,</mentioned> Eur. Rhes. 426 <mentioned xml:lang="grc">Σκύθης</mentioned> <mentioned xml:lang="grc">λέως,</mentioned> Martial iv. 28, 4 Scythas zmaragdos. Cp. also 805; Ag. 109 <mentioned xml:lang="grc">Ἑλλάδος</mentioned> <mentioned xml:lang="grc">ἥβας,</mentioned> Prom. Solut. Frg. <sic source="#w1893">Χ.</sic> 9 below <mentioned xml:lang="grc">Λίγυν</mentioned> <mentioned xml:lang="grc">στρα-</mentioned> <mentioned xml:lang="grc">τόν,</mentioned> Frg. 322 <mentioned xml:lang="grc">Κουρῆτα</mentioned> <mentioned xml:lang="grc">λαόν.</mentioned> See also note on 761 below. - <mentioned xml:lang="grc">οἶμον</mentioned> : originally road, then strip, tract; cp. Il. xi. 24 <mentioned xml:lang="grc">τοῦ</mentioned> <mentioned xml:lang="grc">δ᾽</mentioned> (sc. <mentioned xml:lang="grc">θώρηκος)</mentioned> <mentioned xml:lang="grc">ἤτοι</mentioned> <mentioned xml:lang="grc">δέκα</mentioned> <mentioned xml:lang="grc">οἶμοι</mentioned> <mentioned xml:lang="grc">ἔσαν</mentioned> <mentioned xml:lang="grc">μέλανος</mentioned> <mentioned xml:lang="grc">κυάνοιο,</mentioned> ten stripes of blue steel. – <mentioned xml:lang="grc">ἄβροτον:</mentioned> <mentioned xml:lang="grc">ἀπάνθρωπον,</mentioned> Hesych. Hermann, following Buttmann Lexil. I. <sic source="#w1893">p.</sic> 136, thinks this use of <mentioned xml:lang="grc">ἄβροτος</mentioned> a blunder, due to a misinterpretation of the Homeric <mentioned xml:lang="grc">νὺξ</mentioned> <mentioned xml:lang="grc">ἀβρότη</mentioned> <sic source="#w1893">(Il.</sic> xiv. 78), which was wrongly explained by some of the ancients as the time "when mortals are not abroad," <mentioned xml:lang="grc">καθ'</mentioned> <mentioned xml:lang="grc">ἣν</mentioned> <mentioned xml:lang="grc">βροτοὶ</mentioned> <mentioned xml:lang="grc">οὐ</mentioned> <mentioned xml:lang="grc">φοιτῶσιν,</mentioned> whereas it is really an equivalent of <mentioned xml:lang="grc">νὺξ</mentioned> <mentioned xml:lang="grc">ἄμβροτος</mentioned> (Od. xi. 330), <sic source="#w1893">νὺξ</sic> <mentioned xml:lang="grc">ἀμβροσίη.</mentioned> But this is not necessary. <sic source="#w1893">As</sic> <mentioned xml:lang="grc">ἄνανδρος</mentioned> means both unmanly and destitute of men, <mentioned xml:lang="grc">ἀπάνθρωπος</mentioned> both inhuman and deserted of mankind, so <mentioned xml:lang="grc">ἄβροτος</mentioned> means immortal and void of mortals. - Similar resolu- </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=42">1893, p. 32</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=45">1891, p. 32</ref></p>
+          <p><pb n="32"/>tions in the third foot occur eight times in this play. The tribrach in the first foot always consists of a sin- gle word (see on 116); but in the second and fifth, and still more in the third and fourth feet, the first short of the tribrach is usually the final syllable of a word, or a monosyllabic particle closely connected with the preceding word <mentioned xml:lang="grc">(τέ</mentioned> 351, <mentioned xml:lang="grc">γέ</mentioned> 746, <mentioned xml:lang="grc">δέ</mentioned> 993). In the third foot, the caesura thus made is followed, in six of the examples, by a word consisting of three short syllables; in the other two cases a proper name of four syllables follows <mentioned xml:lang="grc">(Κιλικίων</mentioned> 351, <mentioned xml:lang="grc">Ιόνιος</mentioned> 840). The repetition of the prep- osition gives to <mentioned xml:lang="grc">Σκύθην</mentioned> <mentioned xml:lang="grc">οἶμον</mentioned> and <mentioned xml:lang="grc">ἄβρο-</mentioned> <mentioned xml:lang="grc">τον</mentioned> <mentioned xml:lang="grc">ἐρημίαν,</mentioned> which otherwise would be close appositives, more the air of two separate statements. See Krüg. I. § 57, 10, 4. - The scholiast remarks on this verse: <mentioned xml:lang="grc">τοῦτο</mentioned> <mentioned xml:lang="grc">εἰς</mentioned> <mentioned xml:lang="grc">τὸ</mentioned> <mentioned xml:lang="grc">ἀπαραμύθη-</mentioned> <mentioned xml:lang="grc">τον</mentioned> <mentioned xml:lang="grc">τοῦ</mentioned> <mentioned xml:lang="grc">δεθησομένου·</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">Σοφοκλῆς</mentioned> <mentioned xml:lang="grc">τὸ</mentioned> <mentioned xml:lang="grc">αὐτὸ</mentioned> <mentioned xml:lang="grc">περὶ</mentioned> <mentioned xml:lang="grc">Φιλοκτήτου</mentioned> <mentioned xml:lang="grc">λέγει.</mentioned> Cp. Intro- duction, p. 25, footnote 2, and verses 20, 270; also Ar. Ach. 704, <mentioned xml:lang="grc">ξυμπλα-</mentioned> <mentioned xml:lang="grc">κέντα</mentioned> <mentioned xml:lang="grc">τῇ</mentioned> <mentioned xml:lang="grc">Σκυθῶν</mentioned> <mentioned xml:lang="grc">ἐρημίᾳ.</mentioned> </p>
+        </div>
+        <div type="textpart" subtype="commline" n="817" corresp="urn:cts:greekLit:tlg0085.tlg003.perseus-grc2:810-832" xml:id="comm-817">
+          <p type="ocr-status">
+            <note type="ocr">Two-source OCR draft: unmatched words are bracketed; readings, punctuation, possible marginalia and note boundaries remain unverified. Agreement between OCR sources is not proof of correctness.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: local window supported by running Greek. Source note 817; verify numbering and scope.</note>
+          </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=218">1893, p. 120</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=133">1891, p. 120</ref></p>
+          <p type="ocr-status">
+            <note type="ocr">This page uses the reconstructed 1891 OCR because the 1893 OCR interleaves columns. Word order and readings require scan review.</note>
+          </p>
+          <p><pb n="120"/>817. For the resolution in the first foot , see on 116 . </p>
+        </div>
+        <div type="textpart" subtype="commline" n="830" corresp="urn:cts:greekLit:tlg0085.tlg003.perseus-grc2:810-832" xml:id="comm-830">
+          <p type="ocr-status">
+            <note type="ocr">Two-source OCR draft: unmatched words are bracketed; readings, punctuation, possible marginalia and note boundaries remain unverified. Agreement between OCR sources is not proof of correctness.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: local window supported by running Greek. Source note 830; verify numbering and scope.</note>
+          </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=218">1893, p. 120</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=133">1891, p. 120</ref></p>
+          <p type="ocr-status">
+            <note type="ocr">This page uses the reconstructed 1891 OCR because the 1893 OCR interleaves columns. Word order and readings require scan review.</note>
+          </p>
+          <p><pb n="120"/>830 ff . <mentioned xml:lang="grc">ἰπύνωτον</mentioned> : Dodona lay on the flank of the Tomaros or Tmaros range . At the foot of the mountain stood the temple . <mentioned xml:lang="grc">ἀμφί</mentioned> : cp . 1029 , - Soph . <mentioned xml:lang="grc">Αi</mentioned> . 1064 <mentioned xml:lang="grc">ἀμφὶ</mentioned> <mentioned xml:lang="grc">χλωρὰν</mentioned> <mentioned xml:lang="grc">ψάμαθον</mentioned> <mentioned xml:lang="grc">ἐκβεβλημένος</mentioned> . – <mentioned xml:lang="grc">Δωδώνην</mentioned> : Hdt . ii . 52 <mentioned xml:lang="grc">τὸ</mentioned> <mentioned xml:lang="grc">γὰρ</mentioned> <mentioned xml:lang="grc">δὴ</mentioned> <mentioned xml:lang="grc">μαντήιον</mentioned> <mentioned xml:lang="grc">τοῦτο</mentioned> <mentioned xml:lang="grc">νενόμισται</mentioned> <mentioned xml:lang="grc">ἀρχαιότατον</mentioned> <mentioned xml:lang="grc">τῶν</mentioned> <mentioned xml:lang="grc">ἐν</mentioned> <mentioned xml:lang="grc">῞Ἕλλησι</mentioned> <mentioned xml:lang="grc">χρηστηρίων</mentioned> <mentioned xml:lang="grc">εἶναι.</mentioned> It was a <sic source="#w1891">sign</sic> - <sic source="#w1891">oracle</sic> ; the rus- tling of a sacred oak ( <mentioned xml:lang="grc">φηγός</mentioned> ) was interpreted , originally by the <mentioned xml:lang="grc">Σελλοί</mentioned> , afterwards by three priestesses ( <mentioned xml:lang="grc">πε-</mentioned> <mentioned xml:lang="grc">λιαί</mentioned> , <mentioned xml:lang="grc">ί.ε.</mentioned> <mentioned xml:lang="grc">πολιαί</mentioned> ) . Cp . Od . xiv . 327 <mentioned xml:lang="grc">τὸν</mentioned> <mentioned xml:lang="grc">δ᾽</mentioned> <mentioned xml:lang="grc">ἐς</mentioned> <mentioned xml:lang="grc">Δωδώνην</mentioned> <mentioned xml:lang="grc">φάτο</mentioned> <mentioned xml:lang="grc">βήμεναι</mentioned> , <mentioned xml:lang="grc">ὄφρα</mentioned> </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=221">1893, p. 121</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=134">1891, p. 121</ref></p>
+          <p><pb n="121"/><mentioned xml:lang="grc">θεοῖο</mentioned> <mentioned xml:lang="grc">ἐκ</mentioned> <mentioned xml:lang="grc">δρυὸς</mentioned> <mentioned xml:lang="grc">ὑψικόμοιο</mentioned> <mentioned xml:lang="grc">Διὸς</mentioned> <mentioned xml:lang="grc">βουλὴν</mentioned> <mentioned xml:lang="grc">ἐπακούσαι,</mentioned> <mentioned xml:lang="grc">Ιl.</mentioned> xvi. 233 <mentioned xml:lang="grc">Ζεῦ</mentioned> <mentioned xml:lang="grc">ἄνα</mentioned> <mentioned xml:lang="grc">Δωδω-</mentioned> <mentioned xml:lang="grc">ναῖε</mentioned> <mentioned xml:lang="grc">Πελασγικέ,</mentioned> <mentioned xml:lang="grc">τηλόθι</mentioned> <mentioned xml:lang="grc">ναίων,</mentioned> <mentioned xml:lang="grc">Δωδώνης</mentioned> <mentioned xml:lang="grc">μεδέων</mentioned> <mentioned xml:lang="grc">δυσχειμέρου·</mentioned> <mentioned xml:lang="grc">ἀμφὶ</mentioned> <mentioned xml:lang="grc">δὲ</mentioned> <mentioned xml:lang="grc">Σελλοὶ</mentioned> <mentioned xml:lang="grc">σοὶ</mentioned> <mentioned xml:lang="grc">ναίουσ᾽</mentioned> <mentioned xml:lang="grc">ὑποφῆται</mentioned> <mentioned xml:lang="grc">ἀνιπτόποδες</mentioned> <mentioned xml:lang="grc">χαμαιεῦ-</mentioned> <mentioned xml:lang="grc">ναι.</mentioned> – <mentioned xml:lang="grc">Θεσπρωτοῦ:</mentioned> cp. Eur. Phoen. 982 <mentioned xml:lang="grc">Θεσπρωτὸν</mentioned> <mentioned xml:lang="grc">οἶδας</mentioned> ... <mentioned xml:lang="grc">σεμνὰ</mentioned> <mentioned xml:lang="grc">Δωδώνης</mentioned> <mentioned xml:lang="grc">βά-</mentioned> <mentioned xml:lang="grc">θρα,</mentioned> Strabo p. 328 <mentioned xml:lang="grc">Δωδώνη</mentioned> <mentioned xml:lang="grc">τοίνυν</mentioned> <mentioned xml:lang="grc">τὸ</mentioned> <mentioned xml:lang="grc">μὲν</mentioned> <mentioned xml:lang="grc">παλαιὸν</mentioned> <mentioned xml:lang="grc">ὑπὸ</mentioned> <mentioned xml:lang="grc">Θεσπρωτοῖς</mentioned> <mentioned xml:lang="grc">ἦν</mentioned> ... <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">οἱ</mentioned> <mentioned xml:lang="grc">τραγικοὶ</mentioned> <mentioned xml:lang="grc">δὲ</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">Πίνδαρος</mentioned> <mentioned xml:lang="grc">Θεσπρωτίδα</mentioned> <mentioned xml:lang="grc">εἰρήκασι</mentioned> <mentioned xml:lang="grc">τὴν</mentioned> <mentioned xml:lang="grc">Δωδώνην·</mentioned> <mentioned xml:lang="grc">ὕστερον</mentioned> <mentioned xml:lang="grc">δὲ</mentioned> <mentioned xml:lang="grc">ὑπὸ</mentioned> <mentioned xml:lang="grc">Μολοττοῖς</mentioned> <mentioned xml:lang="grc">ἐλέγετο.</mentioned> – <mentioned xml:lang="grc">αἱ</mentioned> <mentioned xml:lang="grc">προσήγοροι</mentioned> <mentioned xml:lang="grc">δρύες:</mentioned> cp. Soph. Trach. 171, 1166 &amp; <mentioned xml:lang="grc">τῶν</mentioned> <mentioned xml:lang="grc">ὀρείων</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">χαμαικοιτῶν</mentioned> <mentioned xml:lang="grc">ἐγὼ</mentioned> <mentioned xml:lang="grc">Σελλῶν</mentioned> <mentioned xml:lang="grc">ἐσελθὼν</mentioned> <mentioned xml:lang="grc">ἄλσος</mentioned> <mentioned xml:lang="grc">εἰσεγραψάμην</mentioned> <mentioned xml:lang="grc">πρὸς</mentioned> <mentioned xml:lang="grc">τῆς</mentioned> <mentioned xml:lang="grc">πατρώας</mentioned> <mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">πολυγλώσσου</mentioned> <mentioned xml:lang="grc">δρυός,</mentioned> Sen. Herc. Oet. 1475 quercus fatidica. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1093" corresp="urn:cts:greekLit:tlg0085.tlg003.perseus-grc2:1072-1093" xml:id="comm-1093">
+          <p type="ocr-status">
+            <note type="ocr">Two-source OCR draft: unmatched words are bracketed; readings, punctuation, possible marginalia and note boundaries remain unverified. Agreement between OCR sources is not proof of correctness.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: local window supported by running Greek. Source note 1093; verify numbering and scope.</note>
+          </p>
+          <p type="source"><ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601566764&amp;seq=266">1893, p. 144</ref>; <ref target="https://babel.hathitrust.org/cgi/pt?id=oxu1.601623131&amp;seq=157">1891, p. 144</ref></p>
+          <p><pb n="144"/>1093. Prometheus sinks into the depths, with the rock on which he hangs (1019). </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

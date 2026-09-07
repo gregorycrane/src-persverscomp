@@ -1,0 +1,126 @@
+{
+  "seven:15:42": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:15:80": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:19:61": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:22:46": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:23:45": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:25:45": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:39:29": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:57:65": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:68:22": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:79:27": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:84:85": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:85:82": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:94:86": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "seven:62:30": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:31:101": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:46:43": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:62:34": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:63:87": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:69:26": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:85:66": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:86:83": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:100:85": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:105:65": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:119:55": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:120:20": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:82:19": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:88:34": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "suppliants:99:26": {
+    "not_heading": true,
+    "reason": "Continuation/cross-reference, not a new note heading"
+  },
+  "persians:87:74": {
+    "heading": true,
+    "reason": "Explicit V. 527–531 note printed here; retain source order"
+  },
+  "seven:52:26": {
+    "replace": "443. ἐκλαπάξαι (Schol. ἐκβαλεῖν):",
+    "reason": "Clear local sequence and lemma; original heading retained in audit; scan verification pending"
+  },
+  "suppliants:48:46": {
+    "replace": "246. κηρύκων υπο, unter dem",
+    "reason": "Clear local sequence and lemma; original heading retained in audit; scan verification pending"
+  }
+}

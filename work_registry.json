@@ -2364,7 +2364,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "wecklein1902-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.wecklein1902-com-ger1.xml",
+        "label": "Commentary (N. Wecklein, 1902; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg001.tbanktrans2.xml",
@@ -2470,7 +2481,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "teuffel-wecklein1886-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.teuffel-wecklein1886-com-ger1.xml",
+        "label": "Commentary (W. S. Teuffel; revised by N. Wecklein, 1886; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Teuff.–Weck.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg002.tbanktrans2.xml",
@@ -2576,7 +2598,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "wecklein-allen1893-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.wecklein-allen1893-com-eng1.xml",
+        "label": "Commentary (N. Wecklein; translated by F. D. Allen, 1893/1891; English OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.–Allen.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg003.tbanktrans2.conllu",
@@ -2688,7 +2721,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "wecklein1902-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.wecklein1902-com-ger1.xml",
+        "label": "Commentary (N. Wecklein, 1902; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg004.tbanktrans2.xml",
@@ -2813,7 +2857,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "wecklein1888-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.wecklein1888-com-ger1.xml",
+        "label": "Commentary (N. Wecklein, 1888; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg005.tbanktrans.conllu",
@@ -2896,7 +2951,7 @@
         "parse_mode": "poetry_cards"
       },
       "potter1779-eng2": {
-        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.potter-eng2.xml",
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.potter1779-eng2.xml",
         "label": "English (Robert Potter, 1779)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
@@ -2938,7 +2993,18 @@
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "wecklein1888-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.wecklein1888-com-ger1.xml",
+        "label": "Commentary (N. Wecklein, 1888; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "perseus-tb-grc1": {
         "path": "/Users/gcrane/github/GRC_misc/aesch/AeschTBTrans/tlg0085.tlg006.tbanktrans2.conllu",
@@ -3109,6 +3175,16 @@
         "class": "commentary-text",
         "parse_mode": "line_commentary",
         "lineno_sigil": "Bl.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Smyth",
+        "show_reference_line": true
+      },
+      "wecklein1888-com-ger1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.wecklein1888-com-ger1.xml",
+        "label": "Commentary (N. Wecklein, 1888; German; OCR draft)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Weck.",
         "anchor_axis": "corresp",
         "reference_sigil": "Smyth",
         "show_reference_line": true

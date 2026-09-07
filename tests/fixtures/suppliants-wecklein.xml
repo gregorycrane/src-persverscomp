@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Suppliants: N. Wecklein (1902), commentary OCR draft</title>
+        <author>N. Wecklein</author>
+        <respStmt>
+          <resp>OCR extraction and provisional reference placement</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Prepared for the Perseus Multitext Viewer; single-witness OCR draft, not proofread.</p>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg001.wecklein1902-com-ger1</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>N. Wecklein</author>
+          <title>Suppliants</title>
+          <date when="1902">1902</date>
+          <publisher>B. G. Teubner</publisher>
+          <pubPlace>Leipzig</pubPlace>
+          <biblScope unit="page">24–120</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="ocr">
+            <ref target="https://hdl.handle.net/2027/mdp.39015058551436">mdp.39015058551436</ref>
+            <p>Single supplied HathiTrust OCR export. SHA-256: 61affa37b3f55c094c8d688c01f9f3743fbe7d06e0f29873db32e3033dd729d2</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Single-witness OCR is preserved without speculative prose corrections. Every entry is visibly uncollated; sic flags detected mixed-script corruption, not all possible errors. Original OCR and exact extraction coordinates are retained in the audit.</p>
+        <p>Running text, introductions, hypothesis and separate appendices are excluded. Reviewed starts separate running Greek from notes; source note headings determine units. Duplicate labels share one unit, with separate paragraphs and provenance.</p>
+        <p>All reference placements are provisional. An inherited 1885 correspondence is used only when its source Greek is found on the commentary page. Otherwise a local reference window is inferred from complete Greek lines in the running text. A window places the note for review; it does not assert its full scope or verified source lineation. Whole-page content matches can still reflect OCR/layout errors.</p>
+        <p>Physical line endings and printed spelling remain. Greek script uses mentioned; full quotation/citation/gloss semantic tagging remains for scholarly review. No unattested words are supplied. All heading repairs and unresolved layout fragments are recorded in the editorial manifest and extraction audit.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="commline"/>
+      </refsDecl>
+      <refsDecl>
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial single-witness draft; source/heading/alignment verification remains.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg001.wecklein1902-com-ger1">
+        <div type="textpart" subtype="commline" n="1-181" corresp="urn:cts:greekLit:tlg0085.tlg001.perseus-grc2:1" xml:id="comm-1-181">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=36">N. Wecklein, 1902, p. 24</ref>
+          </p>
+          <p><pb n="24" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=36"/>Parodos. An Stelle des <mentioned xml:lang="grc">προλογίζων</mentioned> wie in den Persern hat der Chor zunächst die Aufgabe die vorausliegenden Begebenheiten und das Motiv der Handlung (Flucht vor den Söhnen des Ägyptos, welche die Danaiden zur Ehe zwingen wollen) anzugeben. Dann richtet er an Götter und Menschen, an das stammverwandte Argos die Bitte um Schutz gegen Ver- gewaltigung vonseiten der die Danaiden verfolgenden Ägyptiaden. Damit wird das Ziel der Handlung bezeichnet. Endlich dient die Paro- dos zur Charakteristik des Chors, um dessen Schicksal sich die Hand- lung dreht (zu 118-181). Parodos zerfällt in drei Teile. Die anapästische Partie 1-39 trägt der Koryphäos vor, die melische 40-117 der Gesamtchor; von der zweiten melischen Partie 118-181, deren drei Strophen mit Ephymnien (zu 134) schließen, scheint jeder der drei oroixo ein Strophenpaar ge- sungen zu haben, während die Ephymnien dem Gesamtchor zu- fielen. Vgl. Jahrb. f. Philol. Suppl. XIII S. 219 ff. Als Schutz- flehende sind die Danaiden durch einen mit weißer Wolle umwundenen Olivenzweig gekennzeichnet (21f.), den sie in der linken Hand halten (197-199). Ihre Tracht ist ägyp- tisch (240 ff.). Während der Paro- dos steht Danaos auf dem hohen Götteraltare und späht bald nach Idem Meere bald nach dem Lande hin (184). </p>
+        </div>
+        <div type="textpart" subtype="commline" n="527" corresp="urn:cts:greekLit:tlg0085.tlg001.perseus-grc2:510-529" xml:id="comm-527">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: provisional local reference window from running Greek. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=85">N. Wecklein, 1902, p. 73</ref>
+          </p>
+          <p><pb n="73" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=85"/><mentioned xml:lang="grc">πατῶ</mentioned> (so für <mentioned xml:lang="grc">πιετω</mentioned>), <mentioned xml:lang="grc">εἶμι</mentioned>, wie Ag. 1297 <mentioned xml:lang="grc">πρὸς</mentioned> <mentioned xml:lang="grc">βωμὸν</mentioned> <mentioned xml:lang="grc">εὐτόλμως</mentioned> <mentioned xml:lang="grc">πατεῖς</mentioned>. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1082-1083" corresp="urn:cts:greekLit:tlg0085.tlg001.perseus-grc2:1054-1069" xml:id="comm-1082-1083">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: provisional local reference window from running Greek. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=132">N. Wecklein, 1902, p. 120</ref>
+          </p>
+          <p><pb n="120" facs="https://babel.hathitrust.org/cgi/pt?id=mdp.39015058551436&amp;seq=132"/><mentioned xml:lang="grc">καὶ</mentioned> <mentioned xml:lang="grc">δίκα</mentioned> <mentioned xml:lang="grc">δίκας</mentioned> (<mentioned xml:lang="grc">δίκαν</mentioned> Todt) <mentioned xml:lang="grc">ἕπεσθαι</mentioned> <mentioned xml:lang="grc">κτἑ</mentioned>., und ich gebe mich zufrieden, wenn dem Rechte sein Recht wird meinem Flehen entsprechend durch das erlösende Eingreifen vonseiten der Götter. Vgl. 81 1. 1 I 14 SEP 1 - 1927 UNIVERSITY OF MICHIGAN </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

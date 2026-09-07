@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Persians: W. S. Teuffel, revised by N. Wecklein (1886), commentary OCR draft</title>
+        <author>W. S. Teuffel</author>
+        <editor role="reviser">N. Wecklein</editor>
+        <respStmt>
+          <resp>OCR extraction and provisional reference placement</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <p>Prepared for the Perseus Multitext Viewer; single-witness OCR draft, not proofread.</p>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg002.teuffel-wecklein1886-com-ger1</idno>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <author>W. S. Teuffel</author>
+          <title>Persians</title>
+          <date when="1886">1886</date>
+          <publisher>B. G. Teubner</publisher>
+          <pubPlace>Leipzig</pubPlace>
+          <editor role="reviser">N. Wecklein</editor>
+          <edition>Third edition</edition>
+          <biblScope unit="page">43–97</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="ocr">
+            <ref target="https://hdl.handle.net/2027/hvd.hw2bkq">hvd.hw2bkq</ref>
+            <p>Single supplied HathiTrust OCR export. SHA-256: 92c364062ede7adb4a0302555e42a949778bf1a83174ff07db2e8eb4921be524</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Single-witness OCR is preserved without speculative prose corrections. Every entry is visibly uncollated; sic flags detected mixed-script corruption, not all possible errors. Original OCR and exact extraction coordinates are retained in the audit.</p>
+        <p>Running text, introductions, hypothesis and separate appendices are excluded. Reviewed starts separate running Greek from notes; source note headings determine units. Duplicate labels share one unit, with separate paragraphs and provenance.</p>
+        <p>All reference placements are provisional. An inherited 1885 correspondence is used only when its source Greek is found on the commentary page. Otherwise a local reference window is inferred from complete Greek lines in the running text. A window places the note for review; it does not assert its full scope or verified source lineation. Whole-page content matches can still reflect OCR/layout errors.</p>
+        <p>Physical line endings and printed spelling remain. Greek script uses mentioned; full quotation/citation/gloss semantic tagging remains for scholarly review. No unattested words are supplied. All heading repairs and unresolved layout fragments are recorded in the editorial manifest and extraction audit.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])" n="commline"/>
+      </refsDecl>
+      <refsDecl>
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial single-witness draft; source/heading/alignment verification remains.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg002.teuffel-wecklein1886-com-ger1">
+        <div type="textpart" subtype="commline" n="1-64" corresp="urn:cts:greekLit:tlg0085.tlg002.perseus-grc2:1" xml:id="comm-1-64">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=57">W. S. Teuffel, 1886, p. 43</ref>
+          </p>
+          <p><pb n="43" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=57"/>Parodos ohne Prologos. Der Chor durchschreitet die Orchestra unter dem Takte der Anapäste des Koryphaios: erster Teil der Paro- dos, 1-64. Anapästische Dime- ter; vgl. Westphal¹ II. S. 413f. Das Auftreten des Chors wird V. 140- 149 motiviert. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="521-526" corresp="urn:cts:greekLit:tlg0085.tlg002.perseus-grc2:518" xml:id="comm-521-526">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: 1885 correspondence corroborated by source Greek on this page. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=84">W. S. Teuffel, 1886, p. 70</ref>
+          </p>
+          <p><pb n="70" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=84"/><mentioned xml:lang="grc">ἐκύρωσεν</mentioned> (dahin entschieden hat), scil. <mentioned xml:lang="grc">ἐμὲ</mentioned> <mentioned xml:lang="grc">τοῦτο</mentioned> <mentioned xml:lang="grc">ποιῆσαι</mentioned>. Vgl. 227. 522 vgl. 216. 523 nach 220. Ar. nub. 305: <mentioned xml:lang="grc">οὐρανίοις</mentioned> <mentioned xml:lang="grc">τε</mentioned> <mentioned xml:lang="grc">θεοῖς</mentioned> <mentioned xml:lang="grc">δωρήματα</mentioned>. Vgl. 981. Als Geschenk einen <mentioned xml:lang="grc">πέλα</mentioned>- <mentioned xml:lang="grc">νος</mentioned> (204). Ausführung der anfäng- lichen Absicht (229), woran At. durch die Zwischenfragen 230 ff. und das Auftreten des Boten ver- hindert worden war. Zwar kommt sie damit zu spät; doch hilft es <mentioned xml:lang="grc">ὡς</mentioned> vielleicht für die Zukunft. (<mentioned xml:lang="grc">ταῦτα</mentioned> <mentioned xml:lang="grc">ποιήσω</mentioned>) <mentioned xml:lang="grc">ἐπ᾿</mentioned> <mentioned xml:lang="grc">ἐξειργασμένοις</mentioned>, vgl. Cho. 739. Soph. Ai. 377: <mentioned xml:lang="grc">τί</mentioned> <mentioned xml:lang="grc">δῆτ᾽</mentioned> <mentioned xml:lang="grc">ἂν</mentioned> <mentioned xml:lang="grc">ἀλγοίης</mentioned> <mentioned xml:lang="grc">ἐπ᾽</mentioned> <mentioned xml:lang="grc">ἐξειργασμένοις</mentioned>; Herod. VIII 94: <mentioned xml:lang="grc">ἐπ᾿</mentioned> <mentioned xml:lang="grc">ἐξειργασμένοισι</mentioned> <mentioned xml:lang="grc">ἐλθεῖν</mentioned>. <mentioned xml:lang="grc">εἴ</mentioned> <mentioned xml:lang="grc">τι</mentioned>, Kr. 65, 1. <mentioned xml:lang="grc">Α</mentioned>. 10. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1066-1077" corresp="urn:cts:greekLit:tlg0085.tlg002.perseus-grc2:1038-1076" xml:id="comm-1066-1077">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated. Source layout and readings require scan review; automatic flags are not exhaustive.</note>
+          </p>
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference placement provisional: provisional local reference window from running Greek. Verify the printed source numbering and note scope against the scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=111">W. S. Teuffel, 1886, p. 97</ref>
+          </p>
+          <p><pb n="97" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw2bkq&amp;seq=111"/>Augenscheinlich ist die durch die Verteilung zwischen Xerxes u. den Chor bedingte Respon- sion, zweifelhaft, ob sie auch bei diesem letzten Teile sich auf anti- strophische Gliederung erstreckte. <mentioned xml:lang="grc">αἰακτός</mentioned> 8. <mentioned xml:lang="grc">ν</mentioned>. <mentioned xml:lang="grc">α</mentioned>. <mentioned xml:lang="grc">αἰάζων</mentioned> vgl. 931. <mentioned xml:lang="grc">κίε</mentioned> Suppl. 504. Cho. 680. Begriffe selbst in den Palast ein- zutreten, den er unter so ganz Im anderen Verkältnissen verlassen, empfindet Xerxes dessen Anblick als einen Vorwurf. <mentioned xml:lang="grc">ἁβροβάται</mentioned> die weiche Fufsbekleidung als nationales Kennzeichen. Vgl. <mentioned xml:lang="grc">Λυδὲ</mentioned> <mentioned xml:lang="grc">ποδαβρέ</mentioned> bei Herod. I 55. <mentioned xml:lang="grc">τρί</mentioned>- <mentioned xml:lang="grc">σκαλμος</mentioned> 679. <mentioned xml:lang="grc">βάρισιν</mentioned> 554. <mentioned xml:lang="grc">πέμψω</mentioned> 8. v. a. <mentioned xml:lang="grc">προπέμψω</mentioned> (Schol.). Vgl. 530. <mentioned xml:lang="grc">δυσθρόοις</mentioned> 941. Der Chor ist inzwischen auf der Bühne angelangt (vgl. 1038) und zieht dem Xerxes nach durch die Mittel- thür (im Hintergrund) in den Palast hinein. ÄSCHYLOS, Perser. </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

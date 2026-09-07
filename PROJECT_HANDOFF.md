@@ -323,25 +323,55 @@ Validation from that build:
 
 No rebuilt Wecklein segment retained the erroneous visible sigil `Wil.`.
 
-### Next likely task: Wecklein Agamemnon commentary
+### Wecklein 1888 Agamemnon commentary: OCR draft integration
 
-Two recent OCR files were initially thought to be duplicate scans, but they
-are different books:
+The existing Agamemnon work now registers `wecklein1888-com-ger1` as a German
+commentary using `line_commentary`, `anchor_axis=corresp`, and Weck./Smyth
+source/reference badges. The 1885 Greek edition and apparatus are unchanged.
 
-- `/Users/gcrane/Downloads/aesch-ag-weckcomm-hvd-hw42j8-1788741259.txt`
-  is N. Wecklein's 1888 complete *Oresteia*. Use this for the Wecklein German
-  commentary. Agamemnon occupies printed pages 30-160; explanatory commentary
-  runs through p. 140.
-- `/Users/gcrane/Downloads/aesch-ag-weckcomm-mdp-39015011872879-1788741462.txt`
-  is F. W. Schneidewin's *Agamemnon*, second edition revised by Otto Hense
-  (title page 1883). It is not an alternate OCR of Wecklein and must not be
-  used to repair him. It may later become an independent commentary.
+- Source XML: grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.wecklein1888-com-ger1.xml.
+- Reproducible conversion, raw OCR and collation audit:
+  src-persverscomp/tools/wecklein1888/ (read its README before editing).
+- Base witness: Iowa 31858021876903; comparison: Harvard HW42J8.
+  Michigan 39015011872879 is Schneidewin/Hense and is excluded.
+- 899 source notes, 898 distinct line/range entries, printed pp. 30–140.
+  Introduction, running Greek and separate textual appendix are excluded.
+- The audit retains 2,186 OCR disagreement spans. Unresolved base readings use
+  sic; possible omissions/layout disagreement are visibly flagged.
+- 709 notes have Greek-page content corroboration for the inherited 1885
+  reference mapping; 190 retain visible provisional-alignment warnings.
+  Do not describe this as a fully verified 1888 crosswalk or proofread edition.
+- Work-level CTS metadata is updated; existing author-level CTS identity was
+  verified and kept in its existing groupname-only format.
+- Regression fixture: tests/fixtures/wecklein1888_commentary.xml; tests cover
+  beginning/middle/end rendering, reference-card placement, OCR uncertainty,
+  scan links and local pointers. validate.py performs whole-resource strict QA.
 
-The existing Wecklein 1885 Agamemnon edition already has 784 `<app>` entries,
-783 with explicit line correspondence. Therefore extract the explanatory
-commentary from the 1888 volume, but do not duplicate its separate textual
-appendix (printed pp. 141-160) as another apparatus. Preserve textual
-discussion occurring naturally inside the commentary.
+### Wecklein 1888 Choephoroi and Eumenides integration (2026-09-07)
+
+Both later plays now register `wecklein1888-com-ger1` as German OCR-draft
+commentary, with the same source/reference badge conventions as Agamemnon.
+Conversion inputs, scripts, README and complete audits are retained under
+`tools/wecklein1888/oresteia/`.
+
+- Choephoroi: printed pp. 163–234, 591 entries, HW42J8 alone as requested.
+  Every entry visibly identifies single-witness, uncollated OCR. 434 anchors
+  have page-content corroboration; 157 retain provisional warnings.
+- Eumenides: printed pp. 251–322, 542 entries, HW42J8 base and HXJHA8 comparison.
+  HXJHA8 is a verified later Oresteia section within a composite scan. Its
+  export lacks pp. 294–295: 22 notes are wholly or partly affected and visibly
+  distinguish this comparison-source gap from an ancient lacuna. 1,189
+  disagreement spans remain in the audit. 428 anchors have page-content
+  corroboration; 114 retain provisional warnings.
+- Running Greek and separate textual appendices are excluded. Source note
+  headings and page milestones survive; uncertain OCR is retained and flagged.
+- Strict whole-resource QA and reproducible conversion checks pass. New
+  regression fixtures cover both plays, reference placement, visible warnings,
+  and continuation handling across missing comparison pages.
+
+Next: scan proofreading and provisional reference-map verification across all
+three plays; further semantic quotation/gloss tagging. All three must remain
+labeled OCR drafts. Page-content matches are not fully verified 1888 lineation.
 
 ### Other important additions
 
@@ -411,3 +441,32 @@ At handoff creation, the complete automated suite passed: **29 tests passed**.
 5. Continue developing a comprehensive apparatus that can represent readings
    chosen by each edition plus every reading recorded by their individual
    apparatus critici. Do not collapse source-specific claims prematurely.
+
+## Additional Wecklein-related commentaries installed 2026-09-07
+
+Persians (Teuffel, revised by Wecklein, 1886), Seven Against Thebes (Wecklein,
+1902), and Suppliants (Wecklein, 1902) have single-witness OCR drafts installed
+in the original corpus and local viewer. Source/metadata identity is verified:
+Persians tlg002, Seven tlg004, Suppliants tlg001; tlg003 is Prometheus.
+There are 155, 691, and 662 distinct commentary entries respectively.
+All reference placements remain provisional and all entries carry OCR warnings.
+Read tools/wecklein-additional/README.md for reconstruction and editorial limits.
+Installation succeeded after scoped folder permissions were granted. All 28
+prepared files matched their reviewed hashes. The original repository suite
+passes all 37 tests; targeted builds of tlg001, tlg002 and tlg004 succeeded.
+Generated shards contain every new label and OCR/alignment warning across
+51 Persians, 71 Seven and 96 Suppliants cards; database integrity checks pass.
+The full local viewer was rebuilt. No commit, push or remote publication occurred.
+Next: scan proofreading, heading/layout and reference-window refinement;
+Suppliants p. 81 especially needs column-order reconstruction.
+
+## 2026-09-07: English Wecklein–Allen Prometheus installed locally
+
+- Work **tlg0085.tlg003**, Prometheus Bound; version `wecklein-allen1893-com-eng1`. It is registered as an English `line_commentary` with `anchor_axis: corresp`, separate from the 1885 Greek edition and Hermann apparatus.
+- Supplied Oxford witnesses: `oxu1.601566764` (1893 plain-text OCR) and `oxu1.601623131` (1891 PDF text layer). Both credit N. Wecklein, translated by F. D. Allen, Ginn & Company. Allen describes the German second edition (1878) as his starting point.
+- Printed commentary pp. 31–144 only: 688 source-heading units, 52 generated viewer cards. Excludes introduction, hypothesis, separate handwritten interleaves, Unbound fragments, metres and appendix. Some marginalia may remain within OCR and require review.
+- Base 1893 text is compared by page-local normalized word occurrence counts against reconstructed 1891 PDF columns. This is a conservative OCR comparison, **not an ordered critical collation**. 699 unmatched tokens are visibly bracketed; punctuation, accents, omissions, order and true printing variants remain unresolved. Agreement is not proof of correctness.
+- Printed p. 120 uses the 1891 OCR because the 1893 OCR interleaves columns; this substitution is explicitly visible. Both page texts remain in the audit. Three excluded marginal intrusions are documented separately. All reference windows and source-note segmentation remain provisional.
+- Reproducible tools, source export, PDF bbox derivative, page boundaries, editorial decisions, hashes and full audit: `tools/wecklein-allen/`. The PDF remains at the supplied Downloads path identified in `sources.json`.
+- Validation confirms all 114 pages, extraction-to-TEI content equality, reference endpoints, witness/translator metadata, unique IDs, and all flags. New parser fixture covers beginning, p. 120 substitution and final note. Full suite: **38 passed**. Targeted `python3 -B -m pipeline.build_all --work tlg0085.tlg003` succeeded. Generated shard checked for all 688 entries and 699 flags, correct commentary classification, and 52 cards.
+- Existing registry entries preserved. Earlier Oresteia and three German commentary integrations remain intact. Installed and rebuilt locally only; no commit, push or remote publication.

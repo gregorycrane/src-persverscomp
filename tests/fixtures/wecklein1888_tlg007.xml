@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Wecklein’s explanatory commentary on Aeschylus, Eumenides (1888): OCR draft</title>
+        <author>N. Wecklein</author>
+        <respStmt xml:id="conversion">
+          <resp>Conservative OCR extraction, collation where available, and TEI conversion with explicit uncertainty</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Perseus Multitext project</publisher>
+        <date when="2026-09-07">2026-09-07</date>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg007.wecklein1888-com-ger1</idno>
+        <availability>
+          <p>Public-domain print source, as stated in the preserved HathiTrust OCR exports.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Äschylos Orestie mit erklärenden Anmerkungen von N. Wecklein</title>
+          <editor>N. Wecklein</editor>
+          <pubPlace>Leipzig</pubPlace>
+          <publisher>B. G. Teubner</publisher>
+          <date when="1888">1888</date>
+          <biblScope unit="page">251–322</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="hw42j8">
+            <ref target="https://hdl.handle.net/2027/hvd.hw42j8">hvd.hw42j8</ref>
+            <p>Google-digitized Harvard copy; original HathiTrust OCR and rights statement preserved. SHA-256: 10200e9c45ca2cf4a25ea683146691f23a71d2f127b7eec3c9990faf6fc22a61</p>
+          </witness>
+          <witness xml:id="hxjha8">
+            <ref target="https://hdl.handle.net/2027/hvd.hxjha8">hvd.hxjha8</ref>
+            <p>Google-digitized Harvard copy; original HathiTrust OCR and rights statement preserved. SHA-256: bc06b90171ed390d32577f1caca0e28ce39111b4fe4682edf36e8849a644befb</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Only explanatory notes are included. Running Greek, title/cast lists and the separate textual appendix are excluded. Page milestones stay inside passage-addressable notes.</p>
+        <p>HW42J8 is the base. Choephoroi uses that single witness as requested. Eumenides is collated against HXJHA8, whose export lacks printed pages 294–295. Those pages use the base alone; the comparison-witness absence is explicitly marked as an OCR-source gap.</p>
+        <p>Unresolved OCR is retained in sic. A single witness is not treated as a confirmed reading. Note headings are repaired only from clear local sequence/Greek context or an alternate witness; original headings and every intervention remain in the audit. Physical line-end hyphenation is joined mechanically; historical spelling is preserved.</p>
+        <p>Reference alignment reuses the existing Wecklein 1885-to-Smyth mapping, with documented supplements. Matching Greek in the 1888 running-text page corroborates content but does not fully verify 1888 line numbers. Other mappings and bounding ranges are visibly provisional.</p>
+        <p>An explicit f. covers two lines; ff. anchors only its starting line. Ranges preserve the printed note scope. Greek discussion uses mentioned; recognized citation-following Greek quotations use cit/quote/bibl. Cross-work passage correspondences are not invented. Further proofreading and semantic tagging remain necessary.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern n="commline" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+          <p>Select the source commentary line or range.</p>
+        </cRefPattern>
+      </refsDecl>
+      <refsDecl xml:id="CTS-modern">
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+        <language ident="grc">Ancient Greek</language>
+        <language ident="lat">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial conservative commentary integration with original OCR and alignment audit.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg007.wecklein1888-com-ger1">
+        <div type="textpart" subtype="commline" n="1-139" corresp="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2:1-139" xml:id="comm-1-139">
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=259">Wecklein 1888, p. 251</ref>
+          </p>
+          <p><pb n="251" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=259"/>Prolog, wenn man das Erwachen der Erinyen 140-178 als Parodos und das zweite Erscheinen derselben 244-275 als Epiparodos gelten läfst. Andernfalls müfste man den Prolog bis zum eigentlichen Auftreten des Chors als der wirklichen Parodos, also 1-243 rechnen. Die Pythia, welche als Greisin (38) sich auf einen Stab stützt, kommt (durch eine Seitenthüre der Hinterwand) aus einem Nebenraume des Tempels zum Haupteingange desselben und verrichtet vor dem Eintritt ein Gebet (30 f.). Sie hat die <mentioned xml:lang="grc">χρηστηρία ἐσθής</mentioned> wie Kasandra in Agamemnon (zu <bibl n="Ag. 774">Ag. 774</bibl>). Gut bemerkt der Schol.: <mentioned xml:lang="grc">φαίνεται ἐπὶ σκηνῆς τὸ μαντεῖον</mentioned>· <sic source="#hw42j8" resp="#conversion"><mentioned xml:lang="grc">η</mentioned></sic> <mentioned xml:lang="grc">δὲ προφῆτις πρόεισιν ἐπικλήσεις</mentioned>, <mentioned xml:lang="grc">ὡς ἔθος</mentioned>, <mentioned xml:lang="grc">τῶν θεῶν ποιησομένη</mentioned>, <mentioned xml:lang="grc">ἀπροόπτως τε ἰδοῦσα τὰς Ἐρινύας κύκλῳ τοῦ Ὀρέστου καθευδούσας πάντα μηνύει τοῖς θεαταῖς</mentioned>, <mentioned xml:lang="grc">οὐχ ὡς διηγουμένη τὰ ὑπὸ τὴν σκηνήν</mentioned>, <mentioned xml:lang="grc">τοῦτο γὰρ νεωτερικὸν Εὐριπίδειον</mentioned>, <mentioned xml:lang="grc">ὑπὸ δὲ τῆς ἐκπλήξεως τὰ θορυβήσαντα αὐτὴν καταμηνύουσα φιλοτέχνως</mentioned> (d. h. die Exposition ist nicht unvermittelt wie bei Euripides, sondern wohl motiviert). <mentioned xml:lang="grc">τὰ δὲ πρῶτα εὐχαὶ καὶ ἐπικλήσεις θεῶν</mentioned>, <mentioned xml:lang="grc">ἵνα ἀπὸ τῶν εὐφημοτέρων ἄρξηται ἡ προφῆτις</mentioned> (in der That breitet das Gebet der Priesterin über den Anfang eine weihevolle Stimmung aus). <mentioned xml:lang="grc">οἰκονομικῶς δὲ οὐκ ἐν ἀρχῇ διώκεται Ὀρέστης</mentioned>, <mentioned xml:lang="grc">ἀλλὰ τοῦτο ἐν μέσῳ τοῦ δράματος κατατάττει</mentioned>, <mentioned xml:lang="grc">ταμιευόμενος τὰ ἀκμαιότατα ἐν μέσῳ</mentioned>. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="592" corresp="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2:589" xml:id="comm-592">
+          <p type="ocr-status">
+            <note type="ocr">Second-witness OCR is unavailable for printed page(s) 294. HW42J8 text is retained; this is not a lacuna in the ancient text.</note>
+            <gap reason="ocr-source-unavailable" source="#hxjha8" unit="page" quantity="1"/>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=301">Wecklein 1888, p. 293</ref>
+          </p>
+          <p><pb n="293" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=301"/>D. i. mit diesem Zugeständ- <pb n="294" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=302"/><sic source="#hw42j8" resp="#conversion">nis ist deine Sache schon fast verloren. Schol. <mentioned xml:lang="grc">ἡ μεταφορὰ δέ ἐστιν ἀπὸ τῶν παλαιόντων</mentioned>, <mentioned xml:lang="grc">οἳ ἐπὶ τοῖς τρισὶ πτώμασιν ὁρίζουσι τὴν ἧτταν</mentioned>. Vgl. zu <bibl n="Ag. 181">Ag. 181</bibl>, Hom. <mentioned xml:lang="grc">Ψ</mentioned> 733 <mentioned xml:lang="grc">και νύ κε τὸ τρίτον αὖτις ἀναΐξαντε πάλαιον κτέ</mentioned>, Soph. frg. 678 <mentioned xml:lang="grc">τίν οὐ παλαίουσ᾽ ἐς τρὶς ἐκβάλλει θεῶν</mentioned>; Plat. Phaedr. p. 256 <mentioned xml:lang="grc">Β τῶν τριῶν παλαισμάτων τῶν ὡς ἀληθῶς Ὀλυμπιακῶν ἓν νενικήκασιν</mentioned>, Anthol. <mentioned xml:lang="grc">ΙΙ</mentioned> 1, 11 <mentioned xml:lang="grc">ἀνστὰς δ᾽ ἐν μέσσοισιν ἀνέκραγεν</mentioned>· <mentioned xml:lang="grc">οὐχὶ τρί᾽ ἐστίν</mentioned>· <mentioned xml:lang="grc">ἓν κείμαι</mentioned>, <mentioned xml:lang="grc">λοιπὸν τἄλλα μέ τις βαλέτω</mentioned>.</sic> </p>
+        </div>
+        <div type="textpart" subtype="commline" n="593" corresp="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2:590" xml:id="comm-593">
+          <p type="ocr-status">
+            <note type="ocr">Second-witness OCR is unavailable for printed page(s) 294. HW42J8 text is retained; this is not a lacuna in the ancient text.</note>
+            <gap reason="ocr-source-unavailable" source="#hxjha8" unit="page" quantity="1"/>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=302">Wecklein 1888, p. 294</ref>
+          </p>
+          <p><pb n="294" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=302"/><mentioned xml:lang="grc">οὐ κειμένῳ πω</mentioned>, <mentioned xml:lang="grc">οὔπω κει μένῳ</mentioned>. Vgl. <bibl n="Prom. 527">Prom. 527</bibl>. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="630-631" corresp="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2:627-628" xml:id="comm-630-631">
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=304">Wecklein 1888, p. 296</ref>
+          </p>
+          <p><pb n="296" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=304"/><bibl n="Cho. 344">Cho. 344</bibl>f. Nicht auf ehrenvolle Weise wurde er durch ein Weib getötet, etwa in der Schlacht durch die Pfeile einer Amazone, sondern auf ganz niederträchtige Art, die du vernehmen sollst. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1045-1046" corresp="urn:cts:greekLit:tlg0085.tlg007.perseus-grc2:1044-1045" xml:id="comm-1045-1046">
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference alignment provisional: inherited from the 1885 edition or a documented bounding range; verify against the 1888 scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=330">Wecklein 1888, p. 322</ref>
+          </p>
+          <p><pb n="322" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=330"/>Erweiset euch den Spenden der Bürger der Pallas gegenüber als volle Huldinnen. Zu <bibl n="Ag. 517">Ag. 517</bibl>. <sic source="#hw42j8" resp="#conversion"><mentioned xml:lang="grc">Ζη</mentioned></sic> <mentioned xml:lang="grc">Ζεὺς ο πανόπτας</mentioned> vgl. <cit><bibl n="Suppl. 145">Suppl. 145</bibl> <quote xml:lang="grc">πατὴρ ὁ παντόπτας</quote></cit>, <bibl n="Soph. Oed. K. 1086">Soph. Oed. K. 1086</bibl> <sic source="#hw42j8" resp="#conversion">là Zev, náv<mentioned xml:lang="grc">ταρχε</mentioned></sic> <mentioned xml:lang="grc">θεῶν</mentioned>, <mentioned xml:lang="grc">παντόπτα</mentioned>. Der Text dieser Stelle ist unsicher, s. Anhang. </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

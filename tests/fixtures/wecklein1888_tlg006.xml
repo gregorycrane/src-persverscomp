@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Wecklein’s explanatory commentary on Aeschylus, Choephoroi / Libation Bearers (1888): OCR draft</title>
+        <author>N. Wecklein</author>
+        <respStmt xml:id="conversion">
+          <resp>Conservative OCR extraction, collation where available, and TEI conversion with explicit uncertainty</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Perseus Multitext project</publisher>
+        <date when="2026-09-07">2026-09-07</date>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg006.wecklein1888-com-ger1</idno>
+        <availability>
+          <p>Public-domain print source, as stated in the preserved HathiTrust OCR exports.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Äschylos Orestie mit erklärenden Anmerkungen von N. Wecklein</title>
+          <editor>N. Wecklein</editor>
+          <pubPlace>Leipzig</pubPlace>
+          <publisher>B. G. Teubner</publisher>
+          <date when="1888">1888</date>
+          <biblScope unit="page">163–234</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="hw42j8">
+            <ref target="https://hdl.handle.net/2027/hvd.hw42j8">hvd.hw42j8</ref>
+            <p>Google-digitized Harvard copy; original HathiTrust OCR and rights statement preserved. SHA-256: 10200e9c45ca2cf4a25ea683146691f23a71d2f127b7eec3c9990faf6fc22a61</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Only explanatory notes are included. Running Greek, title/cast lists and the separate textual appendix are excluded. Page milestones stay inside passage-addressable notes.</p>
+        <p>HW42J8 is the base. Choephoroi uses that single witness as requested. Eumenides is collated against HXJHA8, whose export lacks printed pages 294–295. Those pages use the base alone; the comparison-witness absence is explicitly marked as an OCR-source gap.</p>
+        <p>Unresolved OCR is retained in sic. A single witness is not treated as a confirmed reading. Note headings are repaired only from clear local sequence/Greek context or an alternate witness; original headings and every intervention remain in the audit. Physical line-end hyphenation is joined mechanically; historical spelling is preserved.</p>
+        <p>Reference alignment reuses the existing Wecklein 1885-to-Smyth mapping, with documented supplements. Matching Greek in the 1888 running-text page corroborates content but does not fully verify 1888 line numbers. Other mappings and bounding ranges are visibly provisional.</p>
+        <p>An explicit f. covers two lines; ff. anchors only its starting line. Ranges preserve the printed note scope. Greek discussion uses mentioned; recognized citation-following Greek quotations use cit/quote/bibl. Cross-work passage correspondences are not invented. Further proofreading and semantic tagging remain necessary.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern n="commline" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+          <p>Select the source commentary line or range.</p>
+        </cRefPattern>
+      </refsDecl>
+      <refsDecl xml:id="CTS-modern">
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+        <language ident="grc">Ancient Greek</language>
+        <language ident="lat">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-07">Initial conservative commentary integration with original OCR and alignment audit.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg006.wecklein1888-com-ger1">
+        <div type="textpart" subtype="commline" n="1-21" corresp="urn:cts:greekLit:tlg0085.tlg006.perseus-grc2:1-21" xml:id="comm-1-21">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated; flagged readings require scan review.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=171">Wecklein 1888, p. 163</ref>
+          </p>
+          <p><pb n="163" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=171"/>Prolog Orestes und Pylades stehen am Grabe des Agamemnon, welches, wie es scheint, an der Grenze von Bühne und Orchestra seitwärts angebracht ist. Bei V. 10 kommt Elektra mit dem Chore aus dem Atridenpalaste, welchen die Hauptdekoration vorstellt. Orestes und Pylades treten zur Seite. Während der Chor in die Orchestra hinabsteigt und sich dort bei dem Grabe aufstellt, nähert sich Elektra dem Grabhügel auf der Bühne. - V. 18 f. wird das aufregende Moment der Handlung angegeben. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="587-588" corresp="urn:cts:greekLit:tlg0085.tlg006.perseus-grc2:589-590" xml:id="comm-587-588">
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference alignment provisional: inherited from the 1885 edition or a documented bounding range; verify against the 1888 scan.</note>
+          </p>
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated; flagged readings require scan review.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=210">Wecklein 1888, p. 202</ref>
+          </p>
+          <p><pb n="202" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=210"/><mentioned xml:lang="grc">πλάθουσι</mentioned>, <mentioned xml:lang="grc">πελάζουσι</mentioned>, vgl. <bibl n="Soph. El. 220">Soph. El. 220</bibl>, <bibl n="Phil. 728">Phil. 728</bibl>, Eur. Alk. 220. - <mentioned xml:lang="grc">πεδαίχμιοι</mentioned>, <mentioned xml:lang="grc">μεταίχμιοι</mentioned>, zwischen Himmel und Erde. Die äolische Form <mentioned xml:lang="grc">πέδα</mentioned> kommt nur vor in den Composita <mentioned xml:lang="grc">πεδαίχμιος</mentioned>, <mentioned xml:lang="grc">πεδάορος</mentioned>, <mentioned xml:lang="grc">πεδάρσιος</mentioned>, <mentioned xml:lang="grc">πέδοικος</mentioned>. <mentioned xml:lang="grc">λαμπάδες</mentioned>, feurige Erscheinungen (Meteore). <mentioned xml:lang="grc">πεδάοροι</mentioned>, <mentioned xml:lang="grc">μετέωροι</mentioned>, in der Höhe, aus der Höhe. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1074" corresp="urn:cts:greekLit:tlg0085.tlg006.perseus-grc2:1076" xml:id="comm-1074">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated; flagged readings require scan review.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=242">Wecklein 1888, p. 234</ref>
+          </p>
+          <p><pb n="234" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=242"/><mentioned xml:lang="grc">μετακοιμισθέν</mentioned>, wieder (abwechselnd) beschwichtigt. Vgl. µɛ<mentioned xml:lang="grc">ταστένομαι</mentioned> Eur. Med. 996, <mentioned xml:lang="grc">μετακλαίομαι</mentioned> Hek.214. Franz vermutet <mentioned xml:lang="grc">κατακοιμισθέν</mentioned>. Der Chor ab in den Palast. </p>
+        </div>
+      <div type="textpart" subtype="commline" n="1-2" corresp="urn:cts:greekLit:tlg0085.tlg006.perseus-grc2:1-2" xml:id="comm-1-2">
+          <p type="ocr-status">
+            <note type="ocr">Single-witness OCR: uncollated; flagged readings require scan review.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=171">Wecklein 1888, p. 163</ref>
+          </p>
+          <p><pb n="163" facs="https://babel.hathitrust.org/cgi/pt?id=hvd.hw42j8&amp;seq=171"/>Hermes <mentioned xml:lang="grc">χθόνιος</mentioned> (Soph. <sic source="#hw42j8" resp="#conversion"><mentioned xml:lang="grc">Α</mentioned>i.</sic> 832, Eur. Alk. 743) hat als <mentioned xml:lang="grc">ψυχοπομπός</mentioned> das Amt, die Sache der abgeschiedenen Seelen auf der Oberwelt zu wahren. Vgl. 124. Auf dem Grabmal war vielleicht eine Säule (<mentioned xml:lang="grc">Ερμής</mentioned>) angebracht. Vgl. Cic. de legg. 11 26. - <mentioned xml:lang="grc">χθόνιε</mentioned> : zu <bibl n="Ag. 1590">Ag. 1590</bibl>. <mentioned xml:lang="grc">ἐποπτεύειν</mentioned> wie <bibl n="Ag. 1579">Ag. 1579</bibl>, <bibl n="Cho. 983">Cho. 983</bibl>, <bibl n="Eum. 220">Eum. 220</bibl>, <mentioned xml:lang="grc">ἐπωπᾶν</mentioned> <bibl n="Cho. 689">Cho. 689</bibl>, <bibl n="Eum. 275">Eum. 275</bibl>, <mentioned xml:lang="grc">ἐπισκόπους</mentioned> <bibl n="Cho. 126">Cho. 126</bibl>, <mentioned xml:lang="grc">ἐφορᾶν</mentioned> <bibl n="Soph. El. 175">Soph. El. 175</bibl> von dem zornigen Blicke strafgerechter Götter. Vgl. <mentioned xml:lang="grc">ἔπις θεῶν</mentioned>. Die richtige Erklärung ,in unwilligem Hinblick auf die Vergewaltigung meines Vaters (vgl. 126) werde mir Retter" u. s. w. legt Aristophanes Frö. 1141 dem Euripides in den Mund: <mentioned xml:lang="grc">πότερ᾽ οὖν τὸν Ἑρμῆν</mentioned>, <mentioned xml:lang="grc">ὡς ὁ πατὴρ ἀπώλετο αὐτοῦ βιαίως ἐκ γυναικείας χερὸς δόλοις λαθραίοις</mentioned>, <mentioned xml:lang="grc">ταῦτ᾽ ἐποπτεύειν ἔφης</mentioned> während er zum Scherze Aschylos selbst eine falsche Erklärung geben lafst: <mentioned xml:lang="grc">οὐ δῆτ᾽ ἐκεῖνος</mentioned>, <mentioned xml:lang="grc">ἀλλὰ τὸν ἐριούνιον Ἑρμῆν χθόνιον προσείπε</mentioned>, <mentioned xml:lang="grc">κἀδήλου λέγων ὁτιὴ πατρῷον τοῦτο κέκτηται γέρας</mentioned>. Vgl. Schol. zu d. St. <mentioned xml:lang="grc">Αρίσταρχος δέ φησι τῶν ἐξηγή σεων τοῦ στίχου τὴν προτέραν κατὰ τὸν ποιητὴν εἶναι</mentioned>, <mentioned xml:lang="grc">ἣν ὁ Εὐριπίδης ἔφη</mentioned>· <mentioned xml:lang="grc">τὰ τοῦ ἐμοῦ πατρὸς κράτη ἐποπτεύων</mentioned>, <mentioned xml:lang="grc">ὃς κρατηθεὶς ὑπὸ τῶν περὶ Αἴγισθον ἀπώλετο</mentioned>. </p>
+        </div>
+        </div>
+    </body>
+  </text>
+</TEI>

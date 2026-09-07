@@ -1,0 +1,224 @@
+{
+  "lines": {
+    "hw42j8": {
+      "174": {
+        "32": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        },
+        "59": {
+          "replace": "171. ὅστις κείραιτο: zu Ag. 625.",
+          "reason": "Heading repaired from local note sequence and Greek lemma; original retained."
+        }
+      },
+      "176": {
+        "39": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        },
+        "68": {
+          "replace": "210 f. δὶς καταφθορά von",
+          "reason": "Heading repaired from local note sequence and Greek lemma; original retained."
+        }
+      },
+      "179": {
+        "25": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        }
+      },
+      "192": {
+        "88": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        }
+      },
+      "208": {
+        "93": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        }
+      },
+      "231": {
+        "74": {
+          "not_heading": true,
+          "reason": "Cross-reference continuing preceding note; inspected syntax."
+        }
+      },
+      "202": {
+        "17": {
+          "replace": "587 f. πλάθουσι, πελάζουσι, vgl.",
+          "reason": "Heading repaired from local note sequence and Greek lemma; original retained."
+        }
+      },
+      "203": {
+        "23": {
+          "replace": "603 f. τὰν (ἃν) πυρδαῆτιν πρό-",
+          "reason": "Heading repaired from local note sequence and Greek lemma; original retained."
+        }
+      },
+      "255": {
+        "54": {
+          "replace": "37. Gegen die Ansicht des Schol.",
+          "reason": "Obvious heading OCR error: note between 36 and 38 discusses running verse 37."
+        }
+      },
+      "260": {
+        "49": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        }
+      },
+      "262": {
+        "59": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        }
+      },
+      "301": {
+        "59": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        }
+      },
+      "265": {
+        "56": {
+          "replace": "177 f. ποτιτρόπαιος, ἐναγής Schol.,",
+          "reason": "Heading confirmed by corresponding note in the other witness."
+        }
+      },
+      "271": {
+        "62": {
+          "replace": "261 ff. αἷμα μητρῷον τὸ (ὃ) χαμαὶ",
+          "reason": "Heading confirmed by corresponding note in the other witness."
+        }
+      },
+      "288": {
+        "74": {
+          "replace": "502 ff. βροτοσκόπους: bisher ach-",
+          "reason": "Heading confirmed by corresponding note in the other witness."
+        }
+      },
+      "314": {
+        "39": {
+          "replace": "914 ff. τῶν ἀρειφάτων ἀγώνων",
+          "reason": "Heading confirmed by corresponding note in the other witness."
+        }
+      },
+      "199": {
+        "45": {
+          "not_heading": true,
+          "reason": "Standalone continuation citation, not a commentary heading."
+        }
+      },
+      "207": {
+        "65": {
+          "not_heading": true,
+          "reason": "Standalone continuation citation, not a commentary heading."
+        }
+      },
+      "224": {
+        "21": {
+          "not_heading": true,
+          "reason": "Standalone continuation citation, not a commentary heading."
+        }
+      }
+    },
+    "hxjha8": {
+      "255": {
+        "62": {
+          "replace": "37. Gegen die Ansicht des Schol.",
+          "reason": "Obvious heading OCR error: note between 36 and 38 discusses running verse 37."
+        }
+      },
+      "260": {
+        "49": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        }
+      },
+      "262": {
+        "60": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        },
+        "47": {
+          "skip": "Printed running-verse number displaced into commentary."
+        }
+      },
+      "301": {
+        "58": {
+          "not_heading": true,
+          "reason": "Continuation cross-reference, not a new note."
+        }
+      },
+      "287": {
+        "31": {
+          "replace": "486. φανῶ wie Hom. Ο 26 εἰς ὅ",
+          "reason": "Heading confirmed by corresponding note in the other witness."
+        }
+      }
+    }
+  },
+  "orders": {
+    "hxjha8": {
+      "282": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        27,
+        25,
+        26,
+        28,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        76,
+        77,
+        78,
+        79
+      ]
+    }
+  }
+}

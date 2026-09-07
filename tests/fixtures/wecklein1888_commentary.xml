@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Wecklein’s explanatory commentary on Aeschylus, Agamemnon (1888): collated OCR draft</title>
+        <author>N. Wecklein</author>
+        <respStmt xml:id="ocr-conversion">
+          <resp>OCR collation and TEI conversion; unresolved OCR and unverified alignment explicitly retained</resp>
+          <name>OpenAI Codex, for Gregory Crane</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Perseus Multitext project</publisher>
+        <date when="2026-09-06">2026-09-06</date>
+        <idno type="CTS-URN">urn:cts:greekLit:tlg0085.tlg005.wecklein1888-com-ger1</idno>
+        <availability>
+          <p>Public-domain print source, as identified by the HathiTrust exports. Original OCR provenance and rights statements are retained with the conversion inputs.</p>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>
+          <title>Äschylos Orestie mit erklärenden Anmerkungen von N. Wecklein. Erster Teil: Agamemnon.</title>
+          <editor>N. Wecklein</editor>
+          <pubPlace>Leipzig</pubPlace>
+          <publisher>B. G. Teubner</publisher>
+          <date when="1888">1888</date>
+          <biblScope unit="page">30–140</biblScope>
+        </bibl>
+        <listWit>
+          <witness xml:id="iowa">
+            <ref target="https://hdl.handle.net/2027/iau.31858021876903">iau.31858021876903</ref>
+            <p>Google-digitized HathiTrust OCR; University of Iowa copy. SHA-256: cf377ae4f00f54d34fa33c0bad6c2016704cd9f27e78e5431aeecdf20600090b</p>
+          </witness>
+          <witness xml:id="harvard">
+            <ref target="https://hdl.handle.net/2027/hvd.hw42j8">hvd.hw42j8</ref>
+            <p>Google-digitized HathiTrust OCR; Harvard University copy. SHA-256: 10200e9c45ca2cf4a25ea683146691f23a71d2f127b7eec3c9990faf6fc22a61</p>
+          </witness>
+        </listWit>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <editorialDecl>
+        <p>Explanatory notes only, pp. 30–140. The introduction, Greek running text and separate textual appendix (pp. 141–160) are excluded. Greek readings naturally discussed within notes are retained.</p>
+        <p>Iowa is the base OCR. Harvard is collated entry by entry. Disagreements are not automatically emended: base readings appear in sic, with alternate readings in collation.json. Identical OCR may still be wrong. Line-end hyphenation is mechanically joined; no spelling modernization is applied.</p>
+        <p>Source note numbers remain in n. Corresp reuses the existing Wecklein 1885-to-Smyth crosswalk. Content corroboration against the 1888 Greek page text is recorded per entry; otherwise the alignment is explicitly provisional. This is not a newly verified complete 1888 crosswalk.</p>
+        <p>f. is expanded to one following line; ff. anchors only its starting line. Broad source ranges remain ranges. Repeated source numbers are combined into one addressable entry. Physical pages remain pb milestones within notes.</p>
+        <p>Greek script is marked as mentioned. Recognizable abbreviated citations are marked bibl; unverified cross-work line correspondences are not invented. Further quotation/gloss tagging and scan proofreading remain necessary.</p>
+      </editorialDecl>
+      <refsDecl n="CTS">
+        <cRefPattern n="commline" matchPattern="(.+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@n='$1'])">
+          <p>Select an entry by its printed source line or range.</p>
+        </cRefPattern>
+      </refsDecl>
+      <refsDecl xml:id="CTS-modern">
+        <citeStructure match="/TEI/text/body/div" use="@n">
+          <citeStructure match="div[@subtype='commline']" use="@n" unit="commline" delim=":"/>
+        </citeStructure>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="ger">German</language>
+        <language ident="grc">Ancient Greek</language>
+        <language ident="lat">Latin</language>
+      </langUsage>
+    </profileDesc>
+    <revisionDesc>
+      <change when="2026-09-06">Initial conservative two-witness integration; unresolved OCR and provisional alignment retained.</change>
+    </revisionDesc>
+  </teiHeader>
+  <text xml:lang="ger">
+    <body>
+      <div type="commentary" n="urn:cts:greekLit:tlg0085.tlg005.wecklein1888-com-ger1">
+        <div type="textpart" subtype="commline" n="1-39" corresp="urn:cts:greekLit:tlg0085.tlg005.perseus-grc2:1-39" xml:id="comm-1-39">
+          <p type="alignment-status">
+            <note type="alignment" cert="low">Reference alignment provisional: inherited from Wecklein 1885; verify against the 1888 scan.</note>
+          </p>
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=12">Wecklein 1888, p. 30</ref>
+          </p>
+          <p><pb n="30" facs="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=12"/>Prolog. Man erblickt den Wächter auf dem Dache des Atridenpalastes liegend. - Der Prolog besteht in den drei Stücken dieser Trilogie aus einem Monologe, welcher gut motiviert erscheint, auch in den Eumeniden (vgl. zu 1). Einer ausführlicheren Exposition bedarf es hier nicht. Das aufregende Moment <sic source="#iowa" resp="#ocr-conversion">wird.</sic> 18 f. und 36 ff. von ferne angedeutet. Aus denselben Stellen ergiebt sich, <sic source="#iowa" resp="#ocr-conversion">dafs</sic> der immer wieder durchbrechende Unmut des treuen Dieners (34 f.) einen <sic source="#iowa" resp="#ocr-conversion">tieferen</sic> Grund hat. So erweckt schon der Prolog die der Tragödie entsprechende Stimmung. Für die Illusion beginnt die Handlung vor Tagesanbruch. Troja fiel um Mitternacht (Eur. Hek. 914 <mentioned xml:lang="grc">μεσονύκτιος</mentioned> <sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">ὠλλύμαν</mentioned>,</sic> wozu der Schol. den Vers der kleinen <sic source="#iowa" resp="#ocr-conversion">Ilias:</sic> <mentioned xml:lang="grc">νὺξ μὲν ἔην</mentioned> <sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">μέσση</mentioned>,</sic> <mentioned xml:lang="grc">λαμπρὰ δ᾽ ἐπέτελλε σελήνη</mentioned> anführt). </p>
+        </div>
+        <div type="textpart" subtype="commline" n="895" corresp="urn:cts:greekLit:tlg0085.tlg005.perseus-grc2:904" xml:id="comm-895">
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=74">Wecklein 1888, p. 92</ref>
+          </p>
+          <p><pb n="92" facs="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=74"/><sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">γὰρ</mentioned>:</sic> das <sic source="#iowa" resp="#ocr-conversion">Übermaſs</sic> meines Glückes, das sich in meiner Begrüfsung ausgesprochen hat, darf keinen Neid erwecken, da ich es durch viele Leiden mir wohl verdient habe. </p>
+        </div>
+        <div type="textpart" subtype="commline" n="1673" corresp="urn:cts:greekLit:tlg0085.tlg005.perseus-grc2:1673" xml:id="comm-1673">
+          <p type="source">
+            <ref target="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=122">Wecklein 1888, p. 140</ref>
+          </p>
+          <p><pb n="140" facs="https://babel.hathitrust.org/cgi/pt?id=iau.31858021876903&amp;seq=122"/><mentioned xml:lang="grc">θήσομεν</mentioned>, scil. <mentioned xml:lang="grc">τὰ περὶ τὰ δώματα</mentioned>, was aus <mentioned xml:lang="grc">κρατοῦντε τῶνδε δωμάτων</mentioned> zu entnehmen ist, wenn es nicht voraus <mentioned xml:lang="grc">ὕλαγμα</mentioned>· <mentioned xml:lang="grc">ταῦτ᾽ ἐγὼ</mentioned> oder (nach der Vermutung von Musgrave) <mentioned xml:lang="grc">ὕλαγμα</mentioned>· <mentioned xml:lang="grc">πάντ᾽</mentioned> <sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">ἐγὰ</mentioned></sic> geheifsen hat. Minder hart ist der absolute Gebrauch von <mentioned xml:lang="grc">θέσθαι</mentioned> <sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">καλῶς</mentioned></sic> Soph. frg. 321 D. <mentioned xml:lang="grc">ταῦτ᾽ ἐστὶν</mentioned> <sic source="#iowa" resp="#ocr-conversion"><mentioned xml:lang="grc">ἄλγιστ᾽</mentioned>,</sic> <mentioned xml:lang="grc">ἣν παρὸν θέσθαι καλῶς αὐτός τις αὑτῷ τὴν βλάβην προσθῇ φέρων</mentioned>. <sic source="#iowa" resp="#ocr-conversion">–</sic> Facit Clytaemestra finem tragoediae, quoniam chorus, cuius alias hoc officium esse solet, susceptis hac in scena actoris partibus non recte potuit ad perorandum adhiberi. Ad id aptior erat Clytaemestra, quae nunc quidem, postquam explevit suum in Agamemnonem odium, vacuum motu animum habens, idonea videbatur ad componendam rixam, quae est inter Aegisthum et chorum exorta (Hermann). </p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
