@@ -277,7 +277,7 @@ def ingest_editions_and_structure(conn, target_keys):
                 for _bk, _s in _book_summaries_this_edition.items():
                     _work_book_summaries.setdefault(_bk, _s)
             else:
-                parsed = parse_hierarchical_tei(cfg["path"])
+                parsed = parse_hierarchical_tei(cfg["path"], include_nonparagraph_blocks=work_meta.get("strict_section_alignment", False))
             
             if parsed is not None and sum(len(secs) for chs in parsed.values() for secs in chs.values()) > 0:
                 work_corpus[v_id] = parsed
@@ -455,7 +455,9 @@ def ingest_editions_and_structure(conn, target_keys):
                 for v_id in editions_combined:
                     ch_data = work_corpus.get(v_id, {}).get(lookup_bk, {}).get(ch_id, {})
                     raw_html = ch_data.get(sec)
-                    if raw_html is None:
+                    # Strictly aligned prose must never copy section 1 into
+                    # a citation present only in another edition's structure.
+                    if raw_html is None and not work_meta.get("strict_section_alignment", False):
                         raw_html = ch_data.get("1")
                     if raw_html is None:
                         # This edition genuinely has no content at this card --

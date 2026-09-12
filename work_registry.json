@@ -263,6 +263,14 @@
         "label": "English (Edward P. Coleridge, 1906)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg001/tlg0006.tlg001.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -301,6 +309,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg002/tlg0006.tlg002.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -339,6 +355,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg003/tlg0006.tlg003.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -377,6 +401,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg004/tlg0006.tlg004.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -415,6 +447,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg005/tlg0006.tlg005.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -453,6 +493,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg006/tlg0006.tlg006.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -491,6 +539,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg007/tlg0006.tlg007.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -529,6 +585,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg008/tlg0006.tlg008.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -567,6 +631,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg009/tlg0006.tlg009.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -634,6 +706,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Verrall"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg010/tlg0006.tlg010.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -691,6 +771,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg011/tlg0006.tlg011.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -729,6 +817,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1852-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg012/tlg0006.tlg012.donner1852-deu1.xml",
+        "label": "German (J. J. C. Donner, 1852; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -767,6 +863,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg013/tlg0006.tlg013.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -805,6 +909,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg014/tlg0006.tlg014.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -843,6 +955,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg015/tlg0006.tlg015.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -881,6 +1001,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1841-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg016/tlg0006.tlg016.donner1841-deu1.xml",
+        "label": "German (J. J. C. Donner, 1841; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -919,6 +1047,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg017/tlg0006.tlg017.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -957,6 +1093,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Potter"
+      },
+      "donner1845-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg018/tlg0006.tlg018.donner1845-deu1.xml",
+        "label": "German (J. J. C. Donner, 1845; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {},
@@ -1439,6 +1583,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg001/tlg0011.tlg001.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -1633,6 +1785,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg002/tlg0011.tlg002.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -1728,6 +1888,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg003/tlg0011.tlg003.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -1813,6 +1981,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg005/tlg0011.tlg005.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -1898,6 +2074,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg006/tlg0011.tlg006.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -1983,6 +2167,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg007/tlg0011.tlg007.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2099,6 +2291,14 @@
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
         "lineno_sigil": "Francklin"
+      },
+      "donner1875-deu1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg004/tlg0011.tlg004.donner1875-deu1.xml",
+        "label": "German (J. J. C. Donner, 1875; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2362,6 +2562,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1908-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.morshead1908-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1908)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg001/tlg0085.tlg001.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2479,6 +2694,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1908-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.morshead1908-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1908)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg002/tlg0085.tlg002.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2596,6 +2826,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1908-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.morshead1908-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1908)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2719,6 +2964,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1908-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.morshead1908-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1908)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg004/tlg0085.tlg004.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2855,6 +3115,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1889-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.morshead1889-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1889, second edition)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -2991,6 +3266,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1889-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.morshead1889-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1889, second edition)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg006/tlg0085.tlg006.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -3150,6 +3440,21 @@
         "label": "English (Anna Swanwick, 1886)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
+      },
+      "morshead1889-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.morshead1889-eng1.xml",
+        "label": "English (E. D. A. Morshead, 1889, second edition)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "donner1854-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.donner1854-deu1.xml",
+        "label": "German (J. J. C. Donner, 1854; OCR review)",
+        "class": "german-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "D."
       }
     },
     "commentaries": {
@@ -3369,6 +3674,1196 @@
       "book": "Book",
       "chapter": "Chapter",
       "section": "Section"
+    }
+  },
+  "phi1348.abo011": {
+    "textgroup": "phi1348",
+    "work": "abo011",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo011/phi1348.abo011.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "rolfe-lat1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo011/phi1348.abo011.rolfe-lat1.xml",
+        "label": "Latin (Rolfe, 1914)",
+        "class": "latin-text"
+      },
+      "butlercary1927-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.butlercary1927-lat1.xml",
+        "label": "Latin (Butler and Cary, 1927; OCR draft)",
+        "class": "latin-text"
+      },
+      "peck1893-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.peck1893-lat1.xml",
+        "label": "Latin (Peck, 1893, second edition; OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo011/phi1348.abo011.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo011/phi1348.abo011.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "butlercary1927-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.butlercary1927-com-eng1.xml",
+        "label": "Commentary (Butler and Cary, 1927; English; OCR draft)",
+        "class": "english-text"
+      },
+      "peck1893-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.peck1893-com-eng1.xml",
+        "label": "Commentary (Peck, 1893, second edition; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo012": {
+    "textgroup": "phi1348",
+    "work": "abo012",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo012/phi1348.abo012.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "peck1893-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.peck1893-lat1.xml",
+        "label": "Latin (Peck, 1893, second edition; OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo012/phi1348.abo012.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo012/phi1348.abo012.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "peck1893-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.peck1893-com-eng1.xml",
+        "label": "Commentary (Peck, 1893, second edition; English; OCR draft)",
+        "class": "english-text"
+      },
+      "shuckburgh1896-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.shuckburgh1896-com-eng1.xml",
+        "label": "Commentary (Shuckburgh, 1896; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo013": {
+    "textgroup": "phi1348",
+    "work": "abo013",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo013/phi1348.abo013.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo013/phi1348.abo013.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo013/phi1348.abo013.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo013/phi1348.abo013.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo013/phi1348.abo013.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {},
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo014": {
+    "textgroup": "phi1348",
+    "work": "abo014",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo014/phi1348.abo014.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo014/phi1348.abo014.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo014/phi1348.abo014.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo014/phi1348.abo014.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo014/phi1348.abo014.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {},
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo015": {
+    "textgroup": "phi1348",
+    "work": "abo015",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo015/phi1348.abo015.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo015/phi1348.abo015.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo015/phi1348.abo015.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo015/phi1348.abo015.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo015/phi1348.abo015.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {},
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo016": {
+    "textgroup": "phi1348",
+    "work": "abo016",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo016/phi1348.abo016.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo016/phi1348.abo016.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo016/phi1348.abo016.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo016/phi1348.abo016.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo016/phi1348.abo016.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {},
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo017": {
+    "textgroup": "phi1348",
+    "work": "abo017",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo017/phi1348.abo017.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo017/phi1348.abo017.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo017/phi1348.abo017.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo017/phi1348.abo017.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo017/phi1348.abo017.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo017/phi1348.abo017.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo017/phi1348.abo017.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo017/phi1348.abo017.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo018": {
+    "textgroup": "phi1348",
+    "work": "abo018",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo018/phi1348.abo018.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo018/phi1348.abo018.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo018/phi1348.abo018.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo019": {
+    "textgroup": "phi1348",
+    "work": "abo019",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo019/phi1348.abo019.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo019/phi1348.abo019.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo019/phi1348.abo019.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo020": {
+    "textgroup": "phi1348",
+    "work": "abo020",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo020/phi1348.abo020.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo020/phi1348.abo020.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo020/phi1348.abo020.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      },
+      "braithwaite1927-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo020/phi1348.abo020.braithwaite1927-com-eng1.xml",
+        "label": "Commentary (Braithwaite, 1927; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo021": {
+    "textgroup": "phi1348",
+    "work": "abo021",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo021/phi1348.abo021.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo021/phi1348.abo021.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo021/phi1348.abo021.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "phi1348.abo022": {
+    "textgroup": "phi1348",
+    "work": "abo022",
+    "editions": {
+      "perseus-lat2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo022/phi1348.abo022.perseus-lat2.xml",
+        "label": "Latin (Ihm, 1908)",
+        "class": "latin-text"
+      },
+      "mooney1930-lat1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo022/phi1348.abo022.mooney1930-lat1.xml",
+        "label": "Latin (Mooney, 1930; two-witness OCR draft)",
+        "class": "latin-text"
+      }
+    },
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo022/phi1348.abo022.perseus-eng2.xml",
+        "label": "English (Thomson, 1883)",
+        "class": "english-text"
+      },
+      "rolfe-eng1": {
+        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo022/phi1348.abo022.rolfe-eng1.xml",
+        "label": "English (Rolfe, inherited canonical XML)",
+        "class": "english-text"
+      },
+      "holland1899-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo022/phi1348.abo022.holland1899-eng1.xml",
+        "label": "English (Holland, 1899; selective 1606 variants)",
+        "class": "english-text"
+      },
+      "rolfe1914review-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo022/phi1348.abo022.rolfe1914review-eng1.xml",
+        "label": "English (Rolfe, 1914; reviewed XML)",
+        "class": "english-text"
+      },
+      "mooney1930-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo022/phi1348.abo022.mooney1930-eng1.xml",
+        "label": "English (Mooney, 1930; two-witness OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "appcrits": {},
+    "commentaries": {
+      "mooney1930-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo022/phi1348.abo022.mooney1930-com-eng1.xml",
+        "label": "Commentary (Mooney, 1930; English; OCR draft)",
+        "class": "english-text"
+      }
+    },
+    "treebanks": {},
+    "strict_section_alignment": true
+  },
+  "tlg0019.tlg001": {
+    "textgroup": "tlg0019",
+    "work": "tlg001",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg001/tlg0019.tlg001.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg001/tlg0019.tlg001.perseus-eng1.xml",
+        "label": "English (Anonymous; Liveright, 192?)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg001/tlg0019.tlg001.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg001/tlg0019.tlg001.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg001/tlg0019.tlg001.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg001.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg002": {
+    "textgroup": "tlg0019",
+    "work": "tlg002",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg002/tlg0019.tlg002.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg002/tlg0019.tlg002.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg002/tlg0019.tlg002.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg002/tlg0019.tlg002.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg002/tlg0019.tlg002.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg002.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg003": {
+    "textgroup": "tlg0019",
+    "work": "tlg003",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg003/tlg0019.tlg003.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg003/tlg0019.tlg003.perseus-eng2.xml",
+        "label": "English (William James Hickie, 1853)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg003/tlg0019.tlg003.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg003/tlg0019.tlg003.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg003/tlg0019.tlg003.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg003.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg004": {
+    "textgroup": "tlg0019",
+    "work": "tlg004",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg004/tlg0019.tlg004.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg004/tlg0019.tlg004.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg004/tlg0019.tlg004.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg004/tlg0019.tlg004.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg004/tlg0019.tlg004.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg004.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg005": {
+    "textgroup": "tlg0019",
+    "work": "tlg005",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg005/tlg0019.tlg005.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg005/tlg0019.tlg005.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg005/tlg0019.tlg005.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg005/tlg0019.tlg005.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg005/tlg0019.tlg005.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg005.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg006": {
+    "textgroup": "tlg0019",
+    "work": "tlg006",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg006/tlg0019.tlg006.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg006/tlg0019.tlg006.perseus-eng2.xml",
+        "label": "English (Anonymous; 1938 compilation, revised canonical XML)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg006/tlg0019.tlg006.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation, legacy source)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg006/tlg0019.tlg006.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg006/tlg0019.tlg006.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg006/tlg0019.tlg006.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg006.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg007": {
+    "textgroup": "tlg0019",
+    "work": "tlg007",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg007/tlg0019.tlg007.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg007/tlg0019.tlg007.perseus-eng1.xml",
+        "label": "English (Jack Lindsay)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "tr."
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg007/tlg0019.tlg007.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg007/tlg0019.tlg007.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg007/tlg0019.tlg007.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg007.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg008": {
+    "textgroup": "tlg0019",
+    "work": "tlg008",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg008/tlg0019.tlg008.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg008/tlg0019.tlg008.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg008/tlg0019.tlg008.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg008/tlg0019.tlg008.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg008/tlg0019.tlg008.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg008.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg009": {
+    "textgroup": "tlg0019",
+    "work": "tlg009",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg009/tlg0019.tlg009.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg009/tlg0019.tlg009.perseus-eng1.xml",
+        "label": "English (Matthew Dillon)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones",
+        "lineno_sigil": "tr."
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg009/tlg0019.tlg009.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg009/tlg0019.tlg009.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg009/tlg0019.tlg009.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg009.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg010": {
+    "textgroup": "tlg0019",
+    "work": "tlg010",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg010/tlg0019.tlg010.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg010/tlg0019.tlg010.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg010/tlg0019.tlg010.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg010/tlg0019.tlg010.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg010/tlg0019.tlg010.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg010.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
+    }
+  },
+  "tlg0019.tlg011": {
+    "textgroup": "tlg0019",
+    "work": "tlg011",
+    "editions": {
+      "perseus-grc2": {
+        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0019/tlg011/tlg0019.tlg011.perseus-grc2.xml",
+        "label": "Greek (F. W. Hall and W. M. Geldart, 1906–1907)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "perseus-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg011/tlg0019.tlg011.perseus-eng1.xml",
+        "label": "English (Anonymous; 1938 compilation)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      },
+      "sanjaya-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg011/tlg0019.tlg011.sanjaya-eng1.xml",
+        "label": "English (Sanjaya, generated; selected passages)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "commentaries": {
+      "sanjaya-com-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg011/tlg0019.tlg011.sanjaya-com-eng1.xml",
+        "label": "Commentary (Sanjaya, generated; selected passages)",
+        "class": "commentary-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "milestones"
+      }
+    },
+    "treebanks": {
+      "sanjaya-tb-grc1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0019/tlg011/tlg0019.tlg011.sanjaya-tb-grc1.conllu",
+        "label": "Treebank + glosses + translations (Sanjaya, generated)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "https://github.com/pnadelofficial/aristophanes-sanjaya/tree/c319590c139e5603e71f0699caa0663d823af8ad"
+      },
+      "perseus-grc2-oga020-src": {
+        "path": "/Users/gcrane/github/oga_src/data/tlg0019.tlg011.perseus-grc2_oga020_src.glossed.conllu",
+        "label": "Treebank (Perseus AGDT/OGA, glossed)",
+        "class": "treebank-text",
+        "parse_mode": "conllu"
+      }
     }
   }
 }

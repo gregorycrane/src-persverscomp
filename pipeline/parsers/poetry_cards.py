@@ -337,6 +337,10 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
             rendered = extract_text_recursive(elem, strip_paragraphs=True, lineno_sigil=lineno_sigil)
             if tag == "l": rendered = _attach_standoff(elem, rendered)
             _add_content(current_book, label, rendered)
+            # The leaf renderer excludes the XML tail: it belongs after the
+            # stage/verse, and may contain the rest of a prose speech.
+            if elem.tail:
+                _add_content(current_book, cur_label, elem.tail)
             return
         elif tag == "p":
             has_verse_children = any(
@@ -351,6 +355,8 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                 return
             t = extract_text_recursive(elem, strip_paragraphs=True).strip()
             if t: _add_content(current_book, label, f"<p>{t}</p>")
+            if elem.tail:
+                _add_content(current_book, cur_label, elem.tail)
             return
         elif tag == "note":
             t = extract_text_recursive(elem, strip_paragraphs=True).strip()
@@ -366,6 +372,8 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                     note_id = note_id[1:]
                 id_prefix = f'<b class="note-id">{note_id}</b> ' if note_id else ''
                 _add_content(current_book, label, f'<span class="note">[{id_prefix}{t}]</span>')
+            if elem.tail:
+                _add_content(current_book, cur_label, elem.tail)
             return
 
         if elem.text and elem.text.strip():

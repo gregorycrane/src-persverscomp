@@ -24,12 +24,25 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                 label_parts = interval['label'].split('-')
                 if len(label_parts) < 2:
                     continue
-                start = int(label_parts[0])
-                end   = int(label_parts[1])
+                bounds = [re.fullmatch(r'(\d+)([a-zA-Z]*)', part)
+                          for part in label_parts]
+                if len(bounds) != 2 or not all(bounds):
+                    continue
+                start, end = (int(bound.group(1)) for bound in bounds)
+                lettered = any(bound.group(2) for bound in bounds)
                 for ln in range(start, end + 1):
                     # Key as BOOK.LINE (multi-book) and bare LINE (flat works)
-                    line_to_card[f"{bk}.{ln}"] = interval['label']
-                    line_to_card[str(ln)] = interval['label']
+                    for key in (f"{bk}.{ln}", str(ln)):
+                        if lettered:
+                            # Keep a preceding plain-line card at a shared
+                            # boundary (531 vs 531b), but fill its gaps.
+                            line_to_card.setdefault(key, interval['label'])
+                        else:
+                            line_to_card[key] = interval['label']
+                for part, bound in zip(label_parts, bounds):
+                    if bound.group(2):
+                        line_to_card[f"{bk}.{part}"] = interval['label']
+                        line_to_card[part] = interval['label']
             except (ValueError, KeyError, IndexError):
                 continue
 
@@ -204,6 +217,12 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                 if tok.get('ref'):
                     first_ref = tok['ref']
                     break
+            if card_intervals and first_ref and _lookup_card(first_ref) is None:
+                # A damaged first citation (e.g. Pl._NaN) must not hide
+                # a sentence whose later tokens have a valid line.
+                first_ref = next((tok['ref'] for tok in sent['tokens']
+                                  if tok.get('ref') and _lookup_card(tok['ref']) is not None),
+                                 first_ref)
             if first_ref is not None:
                 sent['subdoc'] = first_ref
 
@@ -330,6 +349,22 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                 if has_books and '.' in sent['chapter']:
                     sent['book'] = sent['chapter'].split('.')[0]
                 
+        # Optional explicit alignment supplied by a source adapter after
+        # matching the annotation to the reference XML's actual card.
+        # Unlike numeric containment, this preserves lettered and anomalous
+        # line labels without changing either the reference text or Ref.
+        explicit_card = sent.pop('_pmv_card', None)
+        if explicit_card:
+            card_book, separator, card_label = explicit_card.partition(':')
+            valid = separator and any(
+                str(iv['book']) == card_book and iv['label'] == card_label
+                for iv in (card_intervals or [])
+            )
+            if not valid:
+                raise ValueError(f"Unknown explicit PMV card: {explicit_card}")
+            sent['book'] = card_book if has_books else None
+            sent['chapter'] = card_label
+            sent['section'] = '1'
         sentences.append(sent)
 
     for path in paths:
@@ -378,6 +413,9 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                 def mval(key, ln=line):
                     m = re.match(rf'^#\s*{key}\s*=\s*(.+)', ln)
                     return m.group(1).strip() if m else None
+                explicit_card = mval('pmv_card')
+                if explicit_card:
+                    cur['_pmv_card'] = explicit_card
                 v = mval('subdoc')
                 if v:
                     cur['subdoc'] = v
@@ -388,7 +426,7 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                 # just the header key your Boeckh/Propertius conllu files
                 # already use. prose_translation still wins if a file
                 # somehow has both.
-                p = mval('prose_translation') or mval('reading_translation')
+                p = mval('prose_translation') or mval('reading_translation') or mval('readable_translation')
                 if p: cur['prose'] = p
                 lt = mval('literal_translation')
                 if lt: cur['literal'] = lt
@@ -515,6 +553,13 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                     # some other corpus's bare "1", no dot) is left untouched.
                     _m_ref = re.search(r'(\d+\.\d+[a-zA-Z]*)$', _raw_ref)
                     ref = _m_ref.group(1) if _m_ref else _raw_ref
+                    # OGA single-play citations use TITLE_LINE, e.g.
+                    # Cl._1214 or Birds_1. Remove only that explicit
+                    # title prefix, keeping bare/lettered lines intact.
+                    if not _m_ref:
+                        _m_line = re.fullmatch(r'[^0-9]+_(\d+[a-zA-Z]*)', _raw_ref)
+                        if _m_line:
+                            ref = _m_line.group(1)
                 if k2 in ('Translit', 'translit'):      translit  = v2.strip()
                 if k2 in ('LTranslit', 'ltranslit'):    ltranslit = v2.strip()
             if gloss is None and gloss_trailing:

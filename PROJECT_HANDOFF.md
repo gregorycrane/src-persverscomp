@@ -470,3 +470,93 @@ Suppliants p. 81 especially needs column-order reconstruction.
 - Reproducible tools, source export, PDF bbox derivative, page boundaries, editorial decisions, hashes and full audit: `tools/wecklein-allen/`. The PDF remains at the supplied Downloads path identified in `sources.json`.
 - Validation confirms all 114 pages, extraction-to-TEI content equality, reference endpoints, witness/translator metadata, unique IDs, and all flags. New parser fixture covers beginning, p. 120 substitution and final note. Full suite: **38 passed**. Targeted `python3 -B -m pipeline.build_all --work tlg0085.tlg003` succeeded. Generated shard checked for all 688 entries and 699 flags, correct commentary classification, and 52 cards.
 - Existing registry entries preserved. Earlier Oresteia and three German commentary integrations remain intact. Installed and rebuilt locally only; no commit, push or remote publication.
+
+
+### Donner Sophocles: seven installed OCR review translations (2026-09-08)
+
+All seven `tlg0011` works now include `donner1875-deu1`, installed alongside
+existing Sophocles material in `AntigonesPublic/data/tlg0011`, with work CTS
+entries and registry metadata. Existing author/work titles were already present.
+The PMV was rebuilt for all seven works and its index regenerated.
+
+- Copy text: Cornell OCR of the 1875 eighth edition. Corroborating witness:
+  California OCR of the 1889 eleventh edition. The supplied Illinois files are
+  volumes I and II of the 1850 third, newly revised edition, preserved separately
+  in each review; they are not interchangeable copies of the later edition.
+- 476 Storr card milestones, reviewed at speech/stanza/clause openings, with
+  containing-card `corresp` on verses and speeches. This is not exact word or
+  line equivalence. The Jebb OCR numbering anomaly around OC 1014–1098 was
+  bypassed by checking the Greek reference directly.
+- Donner has native `<l n>` citations. Shared parts retain citations; 52
+  unresolved verse-division intervals use explicitly editorial `u` suffixes.
+  Do not turn these into numeric printed citations without checking scans.
+- 388 note entries have corroborating printed labels and native citation
+  targets. 82 extracted entries remain unattributed. All note wording and
+  extraction boundaries still need proofreading. Complete appendix OCR from
+  both later witnesses is preserved in each notes JSON; page-split notes join
+  across page references. These counts are extraction counts, not a claim that
+  every printed note has been independently verified.
+- 285 structural repair records, one facsimile-verified reconstruction batch
+  for OT displaced replies and ending, and 88 corroborated token repairs.
+  Original OCR, page comparisons, changes and remaining numbering are retained.
+- All 32 metrical pages are local PNGs under
+  `persverscomp/site/data/tlg0011/donner1875/facsimiles/`, described by TEI
+  surfaces, linked from the translations, and shown in `Metrical-facsimiles.html`.
+  Source: Internet Archive `sophoklesdeutsc02donngoog`, an independent 1875 scan.
+- Antigone pp.254–255 reprint the 1839 Bacchus hymn. This is kept in a separate
+  TEI back appendix and linked from the relevant passage, not added to the
+  running translation. Detailed earlier-edition variant collation is unfinished.
+- `make test`: 46 passed. Strict XML, IDs, target resolution, source text
+  retention, reference endpoints, ordered card coverage and graphic checks pass.
+  All 476 installed cards have text; all 32 images respond locally. Live PMV
+  check confirms Donner numbering, notes, Greek correspondence and gallery link.
+
+Review landing page:
+`http://localhost:8000/site/data/tlg0011/donner1875/Review-inventory.html`
+
+Workspace scripts and staged data:
+`/Users/gcrane/Documents/Codex/2026-09-06/referenced-chatgpt-conversation-this-is-an/work/donner-sophocles/`
+Outputs, downloaded PDFs and inventories: sibling `outputs/Donner-Sophocles/`.
+Next scholarly work: proofread residual OCR, resolve `u` intervals from printed
+pages, verify note boundaries and missing/corrupt labels, and collate earlier
+variants more fully. Keep the OCR-review label meanwhile.
+
+## Donner Euripides — installed OCR review editions (2026-09-08)
+
+Installed all eighteen translations in `/Users/gcrane/github/grcnewxml/data/tlg0006/tlg001` through `tlg018`, with per-work `__cts__.xml` and work_registry.json entries. Rhesus is not part of the supplied set. Versions follow the source volume: `donner1841-deu1` (Hecuba, Phoenician Women, Orestes, Medea, Hippolytus, Alcestis); `donner1845-deu1` (Iphigenia at Aulis, Iphigenia among Taurians, Bacchae, Cyclops, Helen, Andromache); `donner1852-deu1` (Trojan Women, Ion, Electra, Heracles, Suppliant Women, Children of Heracles). Existing Euripides author/work tables already covered these plays and were retained.
+
+Sources: Harvard supplied OCR `eur-donner1-hvd-hw2j3v-1788883331.txt` contains volumes I AND II (1841, 1845); `eur-donner2-hvd-hw2j3w-1788883389.txt` contains III (1852). Independent BSB copies were found for all three: bsb10232928, bsb10232929, bsb10232930. All 1,164 BSB hOCR pages and coordinates are preserved in the working directory, with source hashes. Harvard remains running-text copy text; the BSB note transcription is expressly identified, not silently represented as unchanged Harvard OCR.
+
+Installed assets: `persverscomp/site/data/tlg0006/donner1841-1852/`. Start with `Review-inventory.html`, `EDITORIAL_STATE.md`, `Editorial-inventory.json`, `Edition-inventory.json`, and `Metrical-facsimiles.html`. There are 40 metrical-chart pages and 78 note-page facsimiles. Later volumes discuss metre in the notes, not separate chart appendices. Source-page hash links expand the appropriate image panel. Original pagewise OCR, repair audits, final card mappings, all extracted notes and unattributed notes are retained for review.
+
+Citation and alignment: 994 Murray reference cards, reviewed at speech/stanza/clause openings. Native Donner l/@n citations; shared verses retain I/F parts. corresp means containing Murray card, not exact one-to-one verse correspondence. Iphigenia at Aulis preserves Donner's opening order, whereas Murray moves Greek 49–114 before 1–48: milestones occur 1, 0, 80, 115 in Donner order. Card 0 corresp excludes empty Greek placeholder 0. Exact installed database rows for 1–48 and 0–79 were checked for correct, separate text. The reference English IT typo n=188 between 1187 and 1189 was normalized to 1188 locally for alignment only; canonical sources were not changed.
+
+Notes: 1,224 entries attached where a label resolves; 152 candidates remain unattributed with reasons. Hecuba's complete two-page appendix was visually checked for all 34 note divisions, recovering five entries previously merged by OCR. Other attachments require explicit labels at line openings in both OCR copies and a matching native citation. This is not a claim that every note's wording or every extraction boundary has been exhaustively proofread. The full appendix OCR remains available for finding further missed entries.
+
+Remaining editorial work: 479 numbering intervals remain unresolved, with u suffixes rather than guessed printed numbers. Some wrapping, speaker debris and word OCR remain. Preserve historical language; never globally substitute å with ä (it can also represent ü). Printed errata are preserved in Printed-errata.json but not comprehensively integrated. Do not describe this as a fully clean critical edition or complete word-level collation.
+
+Validation: strict XML, unique IDs, valid local targets and Murray endpoints, verse retention, shared-part-only duplicate citations, complete card rendering, 18 installed XML files matching staged files, and all 118 installed facsimiles checked. All 18 targeted builds succeeded; PMV was recompiled. All 49 pipeline tests passed (including three new source-reference tests). Live viewer check showed Donner's Hecuba and native line numbers next to Murray. A renderer issue discovered during live checking was fixed: HTTP(S) and /site/ TEI ref targets now become clickable links; CTS and non-web references retain non-navigating span behavior. Existing xml_utils.py modifications were preserved.
+
+Working files: `/Users/gcrane/Documents/Codex/2026-09-06/referenced-chatgpt-conversation-this-is-an/work/donner-euripides/`; deliverables in sibling `outputs/Donner-Euripides/`. Manual card maps contain stable record IDs; after any structural reparse they must be checked again. Do not blindly regenerate automatic alignment proposals over reviewed mappings. The numbering routine distinguishes shared-group identifiers from ordinary record identifiers: a collision discovered during verification was fixed before installation. A mistaken preliminary Trojan Women 350→330 repair was explicitly rejected and reverted; its audit records the rejection. Installation backups and exact pre-change hashes are in work/donner-euripides/install/.
+
+
+Final Euripides navigation check: an exact requested IA card `1-48` was being resolved to overlapping card `0-79`. Updated `web/app.js` to prefer exact flat-card labels before raw-line containment. Five JavaScript checks passed (both overlapping cards, a normal card, a within-card range, and a single line). This preserves Donner's native text order and the existing Murray card mapping.
+Live browser verification after compilation: IA `1-48` now opens Donner “Komm, Alter” alongside Murray Greek line 1, with native Donner citations and clickable source-note links. The 49-test suite passes after the navigation change.
+
+## Aristophanes translations (2026-09-08)
+
+All ten XML translation sources in the supplied OldMacintoshHD Aristophanes/copyright directory are migrated to grcnewxml/data/tlg0019, with group/work __cts__.xml. Clouds is absent from that directory and uses canonical perseus-eng2; canonical Birds perseus-eng2 is retained alongside the expressly requested legacy Birds perseus-eng1. All eleven Greek references and twelve English versions are registered. Canonical XML and tracking JSON fingerprints are unchanged.
+
+Ten new TEI files pass the local TEI P5 schema. Exact normalized source wording and note order are preserved except one unmarked Beta Code speaker *mnhsi/loxos → Μνησίλοχος. All original parentheses are retained and counted. All 120 source notes retained; note locations were not independently verified against print. Card mapping adjustments, source defects and attribution limitations are in grcnewxml/data/tlg0019/migration-review/EDITORIAL_STATE.md and Migration-inventory.json. Verse-only editorial ordinals in Lindsay/Dillon are translation-specific (tr.), not Greek line numbers. All substantive cards render; Frogs 0-0 is an empty reference-only placeholder.
+
+Poetry parser now retains XML tails following stage/verse/p/note leaf elements; the prior behavior omitted spoken text after inline stages in mixed prose. Regression tests/test_poetry_mixed_tails.py and all 50 tests pass. Rendered body word sequences of all ten migrations match the XML. All eleven works compiled and deployed shards verified. Review index: http://localhost:8000/site/data/tlg0019/migration-review/Review-inventory.html . Workspace scripts: work/aristophanes (install.py and add_birds.py are one-shot).
+
+Aristophanes also added to web/app.js isPoetryWork display classification (11 new-work checks plus two existing-work checks passed). Without this entry, the correct shard contents displayed in prose layout. Viewer index recompiled after the addition.
+
+## Aristophanes Sanjaya annotations (2026-09-08)
+
+Installed all eleven plays from local aristophanes-sanjaya commit c319590c139e5603e71f0699caa0663d823af8ad. Registry versions: sanjaya-tb-grc1 (CoNLL-U), sanjaya-eng1 (TEI translation), sanjaya-com-eng1 (TEI commentary). Sources/CTS under grcnewxml/data/tlg0019; audits under sanjaya-review. 92,682 glossed tokens, 15,591 dependency segments, 13,915 source line rows, 854 commentary notes. Coverage is partial; 13 rows lack linguistic annotation, 17 lack translation, eight dangling heads are preserved and reported. No Greek change; canonical hashes verified.
+
+Existing gloss/translation/linguistic display code is reused. A small importer extension accepts # pmv_card = BOOK:CARD-LABEL, validated against master intervals. This corrects 163 misrouted segments at lettered/anomalous Greek line labels, without altering token Ref values. Flat plays must keep sent.book=None even when pmv_card says book 1, because alignment_grid.book is null; otherwise every treebank row silently misses deployed shards. Regression tests cover flat and multi-book handling and invalid-card rejection. All 51 tests pass; 22 TEI files validate; rendered translation/commentary words match XML. All 15,591 segments and 92,682 tokens counted in actual deployed shards. All eleven works and viewer index rebuilt.
+
+Review: http://localhost:8000/site/data/tlg0019/sanjaya-review/Review-inventory.html . Opens each play at an annotated passage with Greek, treebank and Sanjaya translation. Commentary is an additional edition choice. Source-manifest.json pins hashes; Line-map.json records exact text mapping. Workspace scripts work/aristophanes-sanjaya reproduce conversion; install.py is one-shot. No UI code changed during this import.

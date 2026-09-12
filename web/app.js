@@ -1378,7 +1378,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085.") || wKey.startsWith("ariosto.");
+        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0019.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085.") || wKey.startsWith("ariosto.");
     }
     // Generic per-work terminology, replacing the old hardcoded "Book"/
     // "Chapter" literals scattered through the nav UI. Sourced from
@@ -1754,9 +1754,8 @@ function resolveChapterForRawLine(workKey, book, rawLine) {
 // database lookup -- this preserves exact behavior for links generated
 // elsewhere in the app (e.g. the treebank search tool) that already pass a
 // valid internal chapter id rather than a raw external line citation. A
-// dash-range always skips that fast path and resolves both endpoints as
-// raw lines, since a range is unambiguously a line citation, not a
-// chapter-to-chapter span.
+// dash-range that exactly names a flat card uses that card first; otherwise
+// both endpoints resolve as raw lines. This matters when cards overlap.
 function resolvePassageSpec(workKey, spec) {
     spec = (spec || "").replace(/\s+/g, "");
     const isRange = spec.includes('-');
@@ -1768,6 +1767,11 @@ function resolvePassageSpec(workKey, spec) {
     if (isFlatStructure(workKey)) {
         const startLine = startSegs[startSegs.length - 1];
         const endLine = endSegs[endSegs.length - 1];
+
+        // Prefer a named card before containment: IA has overlapping 0-79 and 1-48.
+        if (isRange && (GLOBAL_STRUCTURES[workKey] || []).includes(spec)) {
+            return { book: null, chapter: spec, sectionRange: null };
+        }
 
         if (!isRange && (GLOBAL_STRUCTURES[workKey] || []).includes(startLine)) {
             return { book: null, chapter: startLine, sectionRange: null };

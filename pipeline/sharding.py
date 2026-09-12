@@ -177,6 +177,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
     # WORK_TITLES) -- moved here so it's typed exactly once, in the one
     # place that already has to know about every work in WORK_REGISTRY.
     AUTHOR_NAMES = {
+        "phi1348": "Suetonius",
         "phi0620": "Propertius",
 
         "ariosto": "Ludovico Ariosto",
@@ -189,12 +190,26 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "tlg0006": "Euripides",
         "tlg0011": "Sophocles",
         "tlg0012": "Homer",
+        "tlg0019": "Aristophanes",
         "tlg0020": "Hesiod",
         "tlg0085": "Aeschylus",
         "tlg0086": "Aristotle",
         "tlg2045": "Nonnus",
     }
     WORK_TITLES = {
+        "phi1348.abo011": "Julius Caesar",
+        "phi1348.abo012": "Augustus",
+        "phi1348.abo013": "Tiberius",
+        "phi1348.abo014": "Caligula",
+        "phi1348.abo015": "Claudius",
+        "phi1348.abo016": "Nero",
+        "phi1348.abo017": "Galba",
+        "phi1348.abo018": "Otho",
+        "phi1348.abo019": "Vitellius",
+        "phi1348.abo020": "Vespasian",
+        "phi1348.abo021": "Titus",
+        "phi1348.abo022": "Domitian",
+
         "phi0620.phi001": "Elegies",
 
         "ariosto.orlandofurioso": "Orlando Furioso",
@@ -234,6 +249,17 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "tlg0011.tlg008": "Ichneutae",
         "tlg0012.tlg001": "Iliad",
         "tlg0012.tlg002": "Odyssey",
+        "tlg0019.tlg001": "Acharnians",
+        "tlg0019.tlg002": "Knights",
+        "tlg0019.tlg003": "Clouds",
+        "tlg0019.tlg004": "Wasps",
+        "tlg0019.tlg005": "Peace",
+        "tlg0019.tlg006": "Birds",
+        "tlg0019.tlg007": "Lysistrata",
+        "tlg0019.tlg008": "Thesmophoriazusae",
+        "tlg0019.tlg009": "Frogs",
+        "tlg0019.tlg010": "Ecclesiazusae",
+        "tlg0019.tlg011": "Wealth",
         "tlg0020.tlg001": "Theogony",
         "tlg0020.tlg002": "Works and Days",
         "tlg0020.tlg003": "Shield of Heracles",

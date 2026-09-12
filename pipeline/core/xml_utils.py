@@ -186,6 +186,7 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     # too, breaking the Focus column's own line numbers and the alignment
     # grid that depends on them.)
     parts = []
+    link_ref = False
     tag = elem.tag.split('}')[-1]
     
     if tag == 'l':
@@ -230,6 +231,8 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'hi':
         rend = elem.get('rend', 'italic')
         parts.append(f'<span class="render-{rend}">')
+    elif tag == 'mentioned':
+        parts.append('<span class="lemma render-bold">')
     elif tag == 'emph':
         # TEI <emph> is authored rhetorical emphasis, distinct from a
         # lexicographic/translation <gloss>.  It was previously unwrapped,
@@ -264,13 +267,32 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
         if cref: attrs.append(f'data-cref="{_attr(cref)}"')
         if n: attrs.append(f'data-label="{_attr(n)}"')
         parts.append(f'<cite {" ".join(attrs)}>')
+    elif tag == 'graphic':
+        # Preserve source facsimiles (e.g. metrical schemes) as images.  Restrict
+        # URLs to web/local asset paths; never emit executable URL schemes.
+        from urllib.parse import urlsplit
+        src = (elem.get('url') or '').strip()
+        parsed = urlsplit(src)
+        safe = bool(src) and parsed.scheme in ('', 'http', 'https') and not src.startswith('//')
+        if safe:
+            label = elem.get('n') or 'Source facsimile'
+            parts.append(f'<a class="tei-facsimile" href="{_attr(src)}" target="_blank" rel="noopener noreferrer">'
+                         f'<img src="{_attr(src)}" alt="{_attr(label)}" loading="lazy" '
+                         'style="max-width:100%;max-height:26rem;height:auto;object-fit:contain;display:block"/></a>')
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
         ref_type = (elem.get('type') or '').strip()
         attrs = ['class="tei-ref"']
         if target: attrs.append(f'data-cref="{_attr(target)}"')
         if ref_type: attrs.append(f'data-ref-type="{_attr(ref_type)}"')
-        parts.append(f'<span {" ".join(attrs)}>')
+        from urllib.parse import urlsplit
+        parsed = urlsplit(target)
+        link_ref = (target.startswith('/site/') or
+                    (parsed.scheme in ('http', 'https') and bool(parsed.netloc)))
+        if link_ref:
+            attrs.extend([f'href="{_attr(target)}"', 'target="_blank"',
+                          'rel="noopener noreferrer"'])
+        parts.append(f'<{"a" if link_ref else "span"} {" ".join(attrs)}>')
     elif tag == 'p' and not strip_paragraphs:
         parts.append('<div class="prose-para">')
     elif tag == 'milestone' and elem.get('unit') == 'line':
@@ -313,7 +335,18 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
         child_tag = child.tag.split('}')[-1]
         if child_tag == 'note':
             note_text = extract_text_recursive(child, strip_paragraphs, _nested=True).strip()
-            if note_text: parts.append(f'<span class="note">[{note_text}]</span>')
+            # A note linked to a mentioned lemma is the commentary itself,
+            # not a footnote inserted into that commentary.
+            note_id = child.get('{http://www.w3.org/XML/1998/namespace}id')
+            linked_commentary = child.get('type') == 'commentary' and note_id and any(
+                sibling.tag.split('}')[-1] == 'mentioned'
+                and ('#' + note_id) in (sibling.get('ana') or '').split()
+                for sibling in elem if isinstance(sibling.tag, str))
+            if note_text:
+                if linked_commentary:
+                    parts.append(f'<span class="commentary-note">{note_text}</span>')
+                else:
+                    parts.append(f'<span class="note">[{note_text}]</span>')
         elif child_tag == 'lb':
             # <lb/> marks a physical line break in the PRINTED PAGE layout
             # (these commentary/apparatus files were transcribed line-for-line
@@ -369,6 +402,7 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'speaker': parts.append(': </strong>')
     elif tag == 'stage': parts.append('</div>')
     elif tag == 'hi': parts.append('</span>')
+    elif tag == 'mentioned': parts.append('</span>')
     elif tag == 'emph': parts.append('</em>')
     elif tag == 'gloss': parts.append('</span>')
     elif tag == 's': parts.append('</span>')
@@ -384,7 +418,7 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'bibl':
         parts.append('</cite>')
     elif tag == 'ref':
-        parts.append('</span>')
+        parts.append('</a>' if link_ref else '</span>')
     elif tag == 'p' and not strip_paragraphs: parts.append('</div>')
     elif tag == 'q':
         parts.append('\u201d')

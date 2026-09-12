@@ -4,7 +4,7 @@ import os
 import re
 from pipeline.core.xml_utils import NS, safe_parse, find_text_root, extract_text_recursive
 
-def parse_hierarchical_tei(path):
+def parse_hierarchical_tei(path, include_nonparagraph_blocks=False):
     if not os.path.exists(path): return None
     tree = safe_parse(path)
     text_entry = find_text_root(tree.getroot())
@@ -97,6 +97,12 @@ def parse_hierarchical_tei(path):
                 new_path = current_path
 
         paragraphs = node.findall('{http://www.tei-c.org/ns/1.0}p') or node.findall('p')
+        if include_nonparagraph_blocks:
+            # Prose sources can encode entire sections with l/quote/ab
+            # rather than p. Preserve their document order and contents.
+            paragraphs = [child for child in node
+                          if isinstance(child.tag, str) and child.tag.split('}')[-1]
+                          in ('p', 'l', 'lg', 'quote', 'ab')]
         if paragraphs and new_path:
             key_map = {t: v for t, v in new_path}
             bk = key_map.get('book', '1')
@@ -113,7 +119,9 @@ def parse_hierarchical_tei(path):
                 else:
                     data[bk][ch][sec] = combined_txt
 
-        for child in node: 
+        for child in node:
+            if include_nonparagraph_blocks and child in paragraphs:
+                continue  # Already rendered, including nested verse and notes.
             walk_divisions(child, new_path)
 
     walk_divisions(text_entry, [])
