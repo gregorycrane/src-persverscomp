@@ -255,6 +255,10 @@ def rebuild(conn=None):
     _shell  = open(WEB_SRC / "index_shell.html", encoding="utf-8", newline="").read()
     _styles = open(WEB_SRC / "styles.css",       encoding="utf-8", newline="").read()
     _app_js = open(WEB_SRC / "app.js",           encoding="utf-8", newline="").read()
+    # Optional, URL-gated collections trial. Default routes remain unchanged.
+    if (WEB_SRC / "fragment-collections.js").exists():
+        _styles += (WEB_SRC / "fragment-collections.css").read_text(encoding="utf-8")
+        _app_js = (WEB_SRC / "fragment-collections.js").read_text(encoding="utf-8") + "\n" + _app_js
     INDEX_HTML_CONTENT = (
         _shell
         .replace("%%PERSEUS_STYLES%%", _styles)

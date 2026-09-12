@@ -1286,6 +1286,7 @@ let activeWorkKey = "tlg0003.tlg001";
             .then(async catalog => {
                 console.log("[v40] Catalog loaded");
                 buildWorkPickerFromCatalog(catalog);
+                if (window.PMVFragmentCollections) await window.PMVFragmentCollections.attach(catalog);
                 
                 // Check if URL specifies a work (e.g., ?w=tlg0011.tlg004:1-13)
                 const params = new URLSearchParams(window.location.search);

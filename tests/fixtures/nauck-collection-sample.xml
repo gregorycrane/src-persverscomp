@@ -1,0 +1,6 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body><div>
+<div type="textpart" subtype="play" xml:id="aeschylus-athamas" n="ΑΘΑΜΑΣ"><head>ΑΘΑΜΑΣ</head><div type="fragment" n="1"><lg><l xml:id="f1l1">τρίπους</l></lg><p><cit><quote>λέβητας</quote></cit></p></div></div>
+<div type="textpart" subtype="play" xml:id="aeschylus-danaides" n="ΔΑΝΑΙΔΕΣ"><div type="fragment" n="44"><lg><l>ἐρᾷ</l></lg></div></div>
+<div type="textpart" subtype="play" xml:id="aeschylus-atalante" n="ΑΤΑΛΑΝΤΗ"><div type="commentary"><p>Vide catalogum.</p></div></div>
+<div type="fragment" n="999"><p>Unassigned.</p></div>
+</div></body></text></TEI>
