@@ -62,7 +62,7 @@ SCORE_GAP_PAGES = {
 }
 
 
-def extract_pages(source):
+def extract_pages(source, first_page=11, final_page=62, running_titles=('LES EUMÉNIDES',)):
     """Return cleaned dramatic-text lines keyed by printed page number."""
     raw = Path(source).read_text(encoding='utf8')
     markers = list(PAGE_MARKER.finditer(raw))
@@ -73,13 +73,13 @@ def extract_pages(source):
             last_page = int(explicit)
         elif last_page is not None:
             last_page += 1
-        if last_page is None or not 11 <= last_page <= 62:
+        if last_page is None or not first_page <= last_page <= final_page:
             continue
         end = markers[i + 1].start() if i + 1 < len(markers) else len(raw)
         lines = []
         for raw_line in raw[marker.end():end].replace('\f', '').splitlines():
             line = ' '.join(raw_line.strip().split())
-            if not line or line in (str(last_page), 'LES EUMÉNIDES'):
+            if not line or line == str(last_page) or line in running_titles:
                 continue
             if lines and re.search(r'[A-Za-zÀ-ÖØ-öø-ÿ]-$', lines[-1]) and re.match(r'^[a-zà-öø-ÿ]', line):
                 lines[-1] = lines[-1][:-1] + line
@@ -104,7 +104,7 @@ def _bounds(chapter):
     return int(numbers[0]), int(numbers[-1])
 
 
-def align_pages(pages, grid):
+def align_pages(pages, grid, ranges=ACTS):
     """Distribute OCR lines across Greek cards within three explicit acts.
 
     This is deliberately described as approximate alignment. The act anchors
@@ -112,7 +112,7 @@ def align_pages(pages, grid):
     covered by each existing PMV card.
     """
     aligned = {row[0]: [] for row in grid}
-    for first_page, last_page, first_line, last_line in ACTS:
+    for first_page, last_page, first_line, last_line in ranges:
         source_lines = [(page, line) for page in range(first_page, last_page + 1)
                         for line in pages.get(page, [])]
         targets = []
