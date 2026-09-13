@@ -37,9 +37,27 @@ window.PMVFragmentCollections = (() => {
     const standard=Object.entries(catalog.works).filter(([id,w])=>!w.experimental_fragment && (!author||w.textgroup===author) && (!genre||tragedyKeys.has(id))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
     const fragments=!genre&&(!author||author==='tlg0085') ? Object.values(data.works).map(w=>({...w,author:'Aeschylus'})) : [];
     const works=[...standard,...fragments].sort((a,b)=>a.author.localeCompare(b.author)||a.title.localeCompare(b.title));
-    root.innerHTML=`<main class="fc-page"><h1>${escape(title)}</h1>${genre?'<p>Currently cataloged surviving plays of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.</p>':''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div class="fc-work-list" id="fc-library-results"></div></main>`;
+    root.innerHTML=`<main class="fc-page"><h1>${escape(title)}</h1>${genre?'<p>Currently cataloged surviving plays of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.</p>':''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
     const input=root.querySelector('#fc-library-filter');
-    const draw=()=>{const q=normalize(input.value.trim());const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')).includes(q));root.querySelector('#fc-library-count').textContent=matches.length+(matches.length===1?' work':' works');root.querySelector('#fc-library-results').innerHTML=matches.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong><span>${escape(w.author)}</span>${w.status?`<div class="fc-meta">${escape(w.status)}</div>`:''}</a>`).join('')||'<p>No matching works.</p>';};
+    let expanded={};
+    try {expanded=JSON.parse(sessionStorage.getItem('pmv-author-groups')||'{}');} catch(e) {}
+    const draw=()=>{
+      const q=normalize(input.value.trim());
+      const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')).includes(q));
+      const groups=new Map();
+      matches.forEach(w=>{if(!groups.has(w.author))groups.set(w.author,[]);groups.get(w.author).push(w);});
+      root.querySelector('#fc-library-count').textContent=matches.length+(matches.length===1?' work':' works');
+      const results=root.querySelector('#fc-library-results');
+      results.innerHTML=[...groups].map(([name,items])=>{
+        const open=q || author || expanded[name];
+        return `<details class="fc-author-group" data-author-name="${escape(name)}" ${open?'open':''}><summary>${escape(name)} <span>(${items.length})</span></summary><div class="fc-work-list">${items.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong>${w.status?`<div class="fc-meta">${escape(w.status)}</div>`:''}</a>`).join('')}</div></details>`;
+      }).join('')||'<p>No matching works.</p>';
+      results.querySelectorAll('.fc-author-group').forEach(group=>group.addEventListener('toggle',()=>{
+        if(q)return;
+        expanded[group.dataset.authorName]=group.open;
+        try {sessionStorage.setItem('pmv-author-groups',JSON.stringify(expanded));} catch(e) {}
+      }));
+    };
     input.addEventListener('input',draw);draw();
   }
   async function attach(catalog) {
