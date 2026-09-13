@@ -5,7 +5,7 @@ window.PMVFragmentCollections = (() => {
   const enabled = new URLSearchParams(location.search).get('collections') !== 'off';
   const escape = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ς/g,'σ');
-  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks','author','genre','browse','focus','cols','right','right2','right3','right4','right5','right6'].forEach(k=>u.searchParams.delete(k)); u.searchParams.set('collections','1'); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
+  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks','author','scope','genre','browse','focus','cols','right','right2','right3','right4','right5','right6'].forEach(k=>u.searchParams.delete(k)); u.searchParams.set('collections','1'); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
   let data;
   // Explicit initial genre membership: extant dramatic works in this catalog.
   // Cyclops and Ichneutae are excluded; fragmentary genre is not inferred
@@ -34,7 +34,7 @@ window.PMVFragmentCollections = (() => {
   }
   function fragmentTotals(works) {
     const n=works.reduce((n,w)=>n+(w.fragments||[]).length,0),words=works.reduce((n,w)=>n+wordCount(w),0);
-    return n+' fragment'+(n===1?'':'s')+' · '+words.toLocaleString()+' words of Aeschylus';
+    return n+' fragment'+(n===1?'':'s')+' · '+words.toLocaleString()+' word'+(words===1?'':'s')+' of Aeschylus';
   }
   function fragmentMeta(w) {
     if(!w.fragments) {
@@ -46,27 +46,35 @@ window.PMVFragmentCollections = (() => {
   }
   function browseNavigation(catalog) {
     const p=new URLSearchParams(location.search), raw=p.get('w')||'';
-    const tg=p.get('author') || (raw.startsWith('urn:cts:') ? raw.split(':')[3].split('.')[0] : raw.split('.')[0]) || 'tlg0085';
-    const author=(catalog.authors||{})[tg]||tg;
+    const globalLibrary=p.has('browse');
+    const tg=globalLibrary ? null : p.get('author') || (raw.startsWith('urn:cts:') ? raw.split(':')[3].split('.')[0] : raw.split('.')[0]) || 'tlg0085';
+    const author=tg&&((catalog.authors||{})[tg]||tg);
     const nav=document.createElement('nav');nav.className='fc-browse-nav';nav.setAttribute('aria-label','Browse the library');
-    const links=[];
-    if(tg==='tlg0085')links.push(['Fragments',{collection:'aeschylus-fragments'}]);
-    links.push(['All works of '+author,{author:tg}],['Tragedy',{genre:'tragedy'}],['All works',{browse:'all'}]);
+    const links=[['Fragments',{collection:'aeschylus-fragments'}]];
+    if(tg==='tlg0085') {
+      links.push(['Surviving works of '+author,{author:tg,scope:'surviving'}]);
+    }
+    if(tg) links.push(['All works of '+author,{author:tg}]);
+    links.push(['Tragedy',{genre:'tragedy'}],['All works',{browse:'all'}]);
     nav.innerHTML='<span>Browse:</span>'+links.map(([label,route])=>`<a href="${escape(href(route))}">${escape(label)}</a>`).join('');
     const banner=document.getElementById('perseus-banner');if(banner)banner.after(nav);
     const indexNav=nav.cloneNode(true);indexNav.classList.add('fc-index-nav');
     document.getElementById('splash-view-root').prepend(indexNav);
   }
   function renderLibrary(root,catalog,params) {
-    const author=params.get('author'), genre=params.get('genre');
-    const title=genre ? 'Tragedy' : author ? 'All works of '+((catalog.authors||{})[author]||author) : 'All works';
+    const author=params.get('author'), genre=params.get('genre'), scope=params.get('scope');
+    const authorName=author&&((catalog.authors||{})[author]||author);
+    const title=genre ? 'Tragedy' : author ? (scope==='surviving'?'Surviving works of ':'All works of ')+authorName : 'All works';
     const standard=Object.entries(catalog.works).filter(([id,w])=>!w.experimental_fragment && (!author||w.textgroup===author) && (!genre||tragedyKeys.has(id))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
-    const fragments=!genre&&(!author||author==='tlg0085') ? Object.values(data.works).map(w=>({...w,author:'Aeschylus'})) : [];
+    const fragments=!genre&&scope!=='surviving'&&(!author||author==='tlg0085') ? Object.values(data.works).map(w=>({...w,author:'Aeschylus'})) : [];
     const works=[...standard,...fragments].sort((a,b)=>a.author.localeCompare(b.author)||a.title.localeCompare(b.title));
-    root.innerHTML=`<main class="fc-page"><h1>${escape(title)}</h1>${genre?'<p>Currently cataloged surviving plays of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.</p>':''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
+    const authorScope=author==='tlg0085' ? `<nav class="fc-scope-links" aria-label="Aeschylus work scope"><a href="${escape(href({author,scope:'surviving'}))}" ${scope==='surviving'?'aria-current="page"':''}>Surviving works</a><span>→</span><a href="${escape(href({author}))}" ${scope!=='surviving'?'aria-current="page"':''}>All works</a></nav>` : '';
+    root.innerHTML=`<main class="fc-page"><h1>${escape(title)}</h1>${authorScope}${genre?'<p>Currently cataloged surviving plays of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.</p>':''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
     const input=root.querySelector('#fc-library-filter');
     let expanded={};
-    try {expanded=JSON.parse(sessionStorage.getItem('pmv-author-groups')||'{}');} catch(e) {}
+    // Global All works is a reset point: it starts with no author privileged.
+    // Author and genre views may remember independently opened groups.
+    if(!params.has('browse')) try {expanded=JSON.parse(sessionStorage.getItem('pmv-author-groups')||'{}');} catch(e) {}
     const draw=()=>{
       const q=normalize(input.value.trim());
       const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')+' '+(w.fragments||[]).map(f=>f.number).join(' ')).includes(q));
@@ -81,7 +89,7 @@ window.PMVFragmentCollections = (() => {
       results.querySelectorAll('.fc-author-group').forEach(group=>group.addEventListener('toggle',()=>{
         if(q)return;
         expanded[group.dataset.authorName]=group.open;
-        try {sessionStorage.setItem('pmv-author-groups',JSON.stringify(expanded));} catch(e) {}
+        if(!params.has('browse')) try {sessionStorage.setItem('pmv-author-groups',JSON.stringify(expanded));} catch(e) {}
       }));
     };
     input.addEventListener('input',draw);draw();

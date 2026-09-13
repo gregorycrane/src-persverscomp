@@ -20,7 +20,8 @@ def build_preview(source, output, db):
     data=build(source)
     additions=build_shards(data,output,Path('/Users/gcrane/github/persverscomp'))
     from pipeline.tragedy_statistics import build as build_statistics
-    data['tragedy_statistics']=build_statistics(Path('/Users/gcrane/github/canonical-greekLit/data'), json.loads((output/'site/catalog.json').read_text()))
+    existing_catalog=Path('/Users/gcrane/github/persverscomp/site/catalog.json')
+    data['tragedy_statistics']=build_statistics(Path('/Users/gcrane/github/canonical-greekLit/data'), json.loads(existing_catalog.read_text()))
     (output/'site/fragment-collections.json').write_text(json.dumps(data,ensure_ascii=False))
     index_builder.SRC_DIR=SRC
     index_builder.WORKSPACE_DIR=output
