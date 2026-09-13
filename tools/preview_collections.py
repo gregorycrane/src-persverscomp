@@ -11,25 +11,33 @@ from urllib.parse import unquote, urlsplit
 SRC = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(SRC))
 
-def build_preview(source, output, db):
+def build_preview(source, output, db, existing, claudel=None):
     from pipeline import index_builder
     from pipeline.fragment_collections import build
     from pipeline.fragment_shards import build_shards
     output.mkdir(parents=True,exist_ok=True)
     (output/'site').mkdir(exist_ok=True)
     data=build(source)
-    additions=build_shards(data,output,Path('/Users/gcrane/github/persverscomp'))
+    additions=build_shards(data,output,existing)
     from pipeline.tragedy_statistics import build as build_statistics
-    existing_catalog=Path('/Users/gcrane/github/persverscomp/site/catalog.json')
+    existing_catalog=existing/'site/catalog.json'
     data['tragedy_statistics']=build_statistics(Path('/Users/gcrane/github/canonical-greekLit/data'), json.loads(existing_catalog.read_text()))
     (output/'site/fragment-collections.json').write_text(json.dumps(data,ensure_ascii=False))
     index_builder.SRC_DIR=SRC
     index_builder.WORKSPACE_DIR=output
     index_builder.DB_PATH=db
+    claudel_db=None
+    if claudel and claudel.exists():
+        from pipeline.claudel_translation import build_translation
+        claudel_db=build_translation(claudel,output,existing)
     with sqlite3.connect(db.resolve().as_uri()+'?mode=ro',uri=True) as conn:
         conn.execute('ATTACH DATABASE ? AS fragments',(str(additions),))
+        schemas=['main','fragments']
+        if claudel_db:
+            conn.execute('ATTACH DATABASE ? AS claudel',(str(claudel_db),))
+            schemas.append('claudel')
         for table in ('text_units','alignment_grid','text_segments','edition_chapter_order'):
-            conn.execute('CREATE TEMP VIEW '+table+' AS SELECT * FROM main.'+table+' UNION ALL SELECT * FROM fragments.'+table)
+            conn.execute('CREATE TEMP VIEW '+table+' AS '+' UNION ALL '.join('SELECT * FROM '+schema+'.'+table for schema in schemas))
         index_builder.rebuild(conn=conn)
 
 class PreviewHandler(SimpleHTTPRequestHandler):
@@ -46,10 +54,11 @@ def main():
     p.add_argument('--output',type=Path,required=True)
     p.add_argument('--db',type=Path,default=Path('/tmp/persvers_build/corpus_alignment_grid.db'))
     p.add_argument('--existing',type=Path,default=Path('/Users/gcrane/github/persverscomp'))
+    p.add_argument('--claudel',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-eumenides-claudel-wu-89013526876-1789301260.txt'))
     p.add_argument('--port',type=int,default=8001)
     p.add_argument('--build-only',action='store_true')
     a=p.parse_args()
-    build_preview(a.source.resolve(),a.output.resolve(),a.db)
+    build_preview(a.source.resolve(),a.output.resolve(),a.db,a.existing.resolve(),a.claudel.resolve())
     if a.build_only: return
     PreviewHandler.preview=a.output.resolve()
     PreviewHandler.existing=a.existing.resolve()
