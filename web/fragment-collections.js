@@ -57,10 +57,39 @@ window.PMVFragmentCollections = (() => {
     const n=works.reduce((n,w)=>n+(w.fragments||[]).length,0),words=works.reduce((n,w)=>n+wordCount(w),0);
     return n+' fragment'+(n===1?'':'s')+' · '+words.toLocaleString()+' word'+(words===1?'':'s')+' of Aeschylus';
   }
+  function versionLang(shortId) {
+    let found=null;
+    String(shortId||'').split('-').forEach(part=>{const code=part.replace(/\d+$/,'').toLowerCase();if(/^[a-z]{2,4}$/.test(code)&&code!=='tb')found=code;});
+    return found;
+  }
+  function resourceMeta(w) {
+    const counts={edition:0,translation:0,commentary:0,scholia:0}, treebanks={};
+    const versions=w.versions||[];
+    const sourceVersion=versions.find(v=>v&&v.doc_type==='edition');
+    const sourceLang=sourceVersion&&versionLang(sourceVersion.short_id);
+    versions.forEach(v=>{
+      if(!v)return;
+      if(Object.prototype.hasOwnProperty.call(counts,v.doc_type))counts[v.doc_type]++;
+      else if(v.doc_type==='treebank') {
+        const raw=versionLang(v.short_id), scriptCodes=new Set(['grc','ara','fas']);
+        const source=raw&&scriptCodes.has(raw)?raw:(sourceLang||'?');
+        const annotation=raw&&scriptCodes.has(raw)?'en':(raw||'en');
+        const pair=source+'-'+annotation;treebanks[pair]=(treebanks[pair]||0)+1;
+      }
+    });
+    const bits=[];
+    if(counts.edition)bits.push(counts.edition+' ed'+(counts.edition===1?'':'s'));
+    if(counts.translation)bits.push(counts.translation+' tr');
+    if(counts.commentary)bits.push(counts.commentary+' comm');
+    if(counts.scholia)bits.push(counts.scholia+' schol');
+    Object.keys(treebanks).sort().forEach(lang=>bits.push(treebanks[lang]+' tb '+lang));
+    return bits.join(' · ');
+  }
   function fragmentMeta(w) {
     if(!w.fragments) {
       const stats=(data.tragedy_statistics||{})[w.id];
-      return stats ? `<div class="fc-fragment-refs">Lines ${escape(stats.citation_span)} · ${stats.words.toLocaleString()} Greek words</div><div class="fc-meta" title="Citation span, not a count of encoded verse segments. Words count the printed Greek verse, including bracketed text; notes and speaker labels are excluded.">${escape(stats.edition)}</div>` : '';
+      const resources=resourceMeta(w);
+      return `${resources?`<div class="fc-resources">${escape(resources)}</div>`:''}${stats ? `<div class="fc-fragment-refs">Lines ${escape(stats.citation_span)} · ${stats.words.toLocaleString()} Greek words</div><div class="fc-meta" title="Citation span, not a count of encoded verse segments. Words count the printed Greek verse, including bracketed text; notes and speaker labels are excluded.">${escape(stats.edition)}</div>` : ''}`;
     }
     const refs=fragmentNumbers(w);
     return `<div class="fc-fragment-refs">${refs?(w.fragments.length===1?'Fragment ':'Fragments ')+escape(refs)+' (Nauck)':'No numbered fragments'}</div><div class="fc-meta" title="Word count includes only quoted authorial lines in this transcription; sources and editorial notes are excluded. Punctuation-only tokens are not counted.">${fragmentTotals([w])}${w.line_count?'':' · Evidence only'}</div>`;
