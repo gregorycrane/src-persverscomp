@@ -53,3 +53,10 @@ JavaScript files pass syntax checks. The complete preview index was built
 using the existing read-only monolith. Browser visual and navigation checks
 remain unverified: this session prohibited starting a listening server and
 its browser prohibited file:// navigation.
+
+
+## PMV integration update
+
+The trial now materializes 69 per-work PMV shards with 281 fragment cards. Collection links open the standard PMV reader with cols=1. Text and context are stacked in one column; the navigation label is Fragments. Six metadata-only play headings retain their evidence pages. No translations, treebanks or metrical data were created. This supersedes the earlier statement that no shard importer exists. The shared XML and original monolith remain unchanged; the preview builds a temporary union view for index generation and writes new shards only below the preview directory. Search on the collection page still isolates the authorial verse layer; no production global search index has been rebuilt. Work identifiers remain experimental.
+
+Browser-verified: Aigyptioi loads in PMV, Danaides navigates from fragment 43 to 44, and only the Focus column is visible with sources and notes beneath the Greek. The Fragments toolbar link returns to the collection.

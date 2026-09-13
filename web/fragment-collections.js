@@ -4,7 +4,7 @@ window.PMVFragmentCollections = (() => {
     (document.documentElement.dataset.collectionPreview === 'offline' && new URLSearchParams(location.search).get('collections') !== 'off');
   const escape = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ς/g,'σ');
-  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks'].forEach(k=>u.searchParams.delete(k)); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
+  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks','focus','cols','right','right2','right3','right4','right5','right6'].forEach(k=>u.searchParams.delete(k)); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
   let data;
   async function attach(catalog) {
     if (!enabled) return;
@@ -12,11 +12,13 @@ window.PMVFragmentCollections = (() => {
     const banner=document.createElement('div'); banner.className='fc-experiment';
     banner.innerHTML=`<span>Collection preview</span><a href="${escape(href({collections:'off'}))}">Turn off experiment</a>`;
     document.body.prepend(banner);
+    const toolbar=document.querySelector('.mode-toggle-panel');
+    if(toolbar){const back=document.createElement('a'); back.className='toggle-btn';back.href=href({collection:'aeschylus-fragments'});back.textContent='Fragments';toolbar.append(back);}
     try {
       const embedded=document.getElementById('fragment-collection-data');
       if(embedded) data=JSON.parse(embedded.textContent);
       else {
-        const r=await fetch('./site/fragment-collections.json');
+        const r=await fetch('./site/fragment-collections.json', {cache:'no-store'});
         if(!r.ok) throw new Error('Fragment collection could not be loaded');
         data=await r.json();
       }
@@ -38,7 +40,7 @@ window.PMVFragmentCollections = (() => {
     const coll=data.collections.find(c=>c.id===collectionId) || data.collections[0];
     const ids=new Set(coll.members);
     const fragmentWorks=Object.values(data.works).filter(w=>ids.has(w.id));
-    const extant=all ? Object.entries(catalog.works).filter(([k,w])=>w.textgroup==='tlg0085').map(([k,w])=>({id:k,title:w.title,status:'Survives complete',extant:true})) : [];
+    const extant=all ? Object.entries(catalog.works).filter(([k,w])=>w.textgroup==='tlg0085'&&!w.experimental_fragment).map(([k,w])=>({id:k,title:w.title,status:'Survives complete',extant:true})) : [];
     const pool=[...extant,...fragmentWorks].sort((a,b)=>a.title.localeCompare(b.title));
     root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({}))}">All authors</a> / Aeschylus</nav>
       <h1>${all?'Aeschylus — works':escape(coll.title)}</h1>
@@ -55,7 +57,8 @@ window.PMVFragmentCollections = (() => {
         const matched=q&&!w.extant ? w.fragments.flatMap(f=>f.lines.filter(l=>normalize(l.text).includes(q)).map(l=>({ref:f.number+'.'+l.ref,text:l.text}))) : [];
         if(q&&!matched.length) return '';
         hits++;
-        return `<a class="fc-work" href="${escape(href(w.extant?{w:w.id}:{fragment:w.id}))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div><div class="fc-meta">${escape(w.status)}${w.extant?'':' · '+w.fragments.length+' fragments'}</div>${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
+        const target=w.extant?{w:w.id}:w.pmv_work_key?{w:w.pmv_work_key,focus:w.pmv_focus,cols:'1'}:{fragment:w.id};
+        return `<a class="fc-work" href="${escape(href(target))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div><div class="fc-meta">${escape(w.status)}${w.extant?'':' · '+w.fragments.length+' fragments'}</div>${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
       }).join('');
       root.querySelector('#fc-results').innerHTML=rows||'<p>No matching works.</p>';
       root.querySelector('#fc-count').textContent=hits+' works'+(q?' with matching verses':'');

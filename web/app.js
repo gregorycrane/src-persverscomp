@@ -1139,6 +1139,7 @@ let activeWorkKey = "tlg0003.tlg001";
         // Group work keys by author (textgroup).
         const byAuthor = {};
         for (const wk of Object.keys(works)) {
+            if (works[wk].experimental_fragment) continue;
             const tg = works[wk].textgroup || wk.split(".")[0];
             (byAuthor[tg] = byAuthor[tg] || []).push(wk);
         }
@@ -1865,6 +1866,7 @@ function initializeRoutingFromURL() {
             activeColumnsCount = parseInt(colParam, 10) || 3;
             setTimeout(() => {
                 const ow = document.getElementById('outer-wrapper');
+                if (activeColumnsCount === 1) ow.classList.add('one-column');
                 if (activeColumnsCount === 4) ow.classList.add('four-columns');
                 if (activeColumnsCount === 5) ow.classList.add('five-columns');
                 if (activeColumnsCount === 6) ow.classList.add('six-columns');
@@ -2939,13 +2941,14 @@ function initializeRoutingFromURL() {
         params.set("w", `${activeWorkKey}:${passageValue}`);
 
         if (columnEditions.f) params.set("focus", columnEditions.f);
-        if (columnEditions.c1) params.set("right", columnEditions.c1);
-        if (columnEditions.c2) params.set("right2", columnEditions.c2);
-        if (columnEditions.c3) params.set("right3", columnEditions.c3);
-        if (columnEditions.c4) params.set("right4", columnEditions.c4);
-        if (columnEditions.c5) params.set("right5", columnEditions.c5);
-        if (columnEditions.c6) params.set("right6", columnEditions.c6);
+        if (activeColumnsCount > 1 && columnEditions.c1) params.set("right", columnEditions.c1);
+        if (activeColumnsCount > 2 && columnEditions.c2) params.set("right2", columnEditions.c2);
+        if (activeColumnsCount > 3 && columnEditions.c3) params.set("right3", columnEditions.c3);
+        if (activeColumnsCount > 4 && columnEditions.c4) params.set("right4", columnEditions.c4);
+        if (activeColumnsCount > 5 && columnEditions.c5) params.set("right5", columnEditions.c5);
+        if (activeColumnsCount > 6 && columnEditions.c6) params.set("right6", columnEditions.c6);
         params.set("cols", activeColumnsCount.toString());
+        if (new URLSearchParams(location.search).get("collections") === "1") params.set("collections", "1");
 
         window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
 
@@ -3073,7 +3076,7 @@ function initializeRoutingFromURL() {
         }
 
         const bookLabelEl = document.getElementById("chapter-row-label");
-        if (bookLabelEl) bookLabelEl.innerText = isDramaOrPoetry ? "Lines:" : `${getUnitLabels(activeWorkKey).chapter}s:`;
+        if (bookLabelEl) bookLabelEl.innerText = (CATALOG.works[activeWorkKey] || {}).experimental_fragment ? "Fragments:" : isDramaOrPoetry ? "Lines:" : `${getUnitLabels(activeWorkKey).chapter}s:`;
 
         const chapterContainer = document.getElementById("chapter-items-container");
         // Canonical union order (shared default) vs. the Focus edition's own
@@ -4557,6 +4560,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         
         if (mode === 'classic') {
             frame.className = "mode-classic";
+            if (activeColumnsCount === 1) frame.classList.add('one-column');
             if (activeColumnsCount === 4) frame.classList.add('four-columns');
             if (activeColumnsCount === 5) frame.classList.add('five-columns');
             if (activeColumnsCount === 6) frame.classList.add('six-columns');
@@ -4564,6 +4568,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             btnClassic.classList.add("active-mode"); btnParallel.classList.remove("active-mode");
         } else {
             frame.className = "mode-parallel";
+            if (activeColumnsCount === 1) frame.classList.add('one-column');
             if (activeColumnsCount === 4) frame.classList.add('four-columns');
             if (activeColumnsCount === 5) frame.classList.add('five-columns');
             if (activeColumnsCount === 6) frame.classList.add('six-columns');
@@ -4580,15 +4585,17 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         else if (activeColumnsCount === 4) activeColumnsCount = 5;
         else if (activeColumnsCount === 5) activeColumnsCount = 6;
         else if (activeColumnsCount === 6) activeColumnsCount = 7;
+        else if (activeColumnsCount === 7) activeColumnsCount = 1;
         else activeColumnsCount = 3;
 
         const btn = document.getElementById('btn-column-scaler');
         const ow = document.getElementById('outer-wrapper');
         
-        ow.classList.remove('four-columns', 'five-columns', 'six-columns', 'seven-columns');
+        ow.classList.remove('one-column', 'four-columns', 'five-columns', 'six-columns', 'seven-columns');
         btn.innerText = `Columns: ${activeColumnsCount}`;
         
-        if (activeColumnsCount === 4) ow.classList.add('four-columns');
+        if (activeColumnsCount === 1) ow.classList.add('one-column');
+                if (activeColumnsCount === 4) ow.classList.add('four-columns');
         if (activeColumnsCount === 5) ow.classList.add('five-columns');
         if (activeColumnsCount === 6) ow.classList.add('six-columns');
         if (activeColumnsCount === 7) ow.classList.add('seven-columns');

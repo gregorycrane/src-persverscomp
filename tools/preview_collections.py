@@ -14,13 +14,19 @@ sys.path.insert(0,str(SRC))
 def build_preview(source, output, db):
     from pipeline import index_builder
     from pipeline.fragment_collections import build
+    from pipeline.fragment_shards import build_shards
     output.mkdir(parents=True,exist_ok=True)
     (output/'site').mkdir(exist_ok=True)
-    (output/'site/fragment-collections.json').write_text(json.dumps(build(source),ensure_ascii=False))
+    data=build(source)
+    additions=build_shards(data,output,Path('/Users/gcrane/github/persverscomp'))
+    (output/'site/fragment-collections.json').write_text(json.dumps(data,ensure_ascii=False))
     index_builder.SRC_DIR=SRC
     index_builder.WORKSPACE_DIR=output
     index_builder.DB_PATH=db
     with sqlite3.connect(db.resolve().as_uri()+'?mode=ro',uri=True) as conn:
+        conn.execute('ATTACH DATABASE ? AS fragments',(str(additions),))
+        for table in ('text_units','alignment_grid','text_segments','edition_chapter_order'):
+            conn.execute('CREATE TEMP VIEW '+table+' AS SELECT * FROM main.'+table+' UNION ALL SELECT * FROM fragments.'+table)
         index_builder.rebuild(conn=conn)
 
 class PreviewHandler(SimpleHTTPRequestHandler):
