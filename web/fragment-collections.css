@@ -3,3 +3,5 @@
 #outer-wrapper.one-column .cross-panel,#outer-wrapper.one-column .resize-handle{display:none!important}#outer-wrapper.one-column #main-container{display:block!important}#outer-wrapper.one-column #col_f{width:100%!important;max-width:100%;flex:1} .pmv-fragment{display:block;grid-column:1 / -1;width:100%;box-sizing:border-box}.pmv-fragment .fc-context{margin-top:12px}.pmv-fragment .fc-verse{box-sizing:border-box}
 
 body:has(#outer-wrapper.one-column) #row-alignment-panel{display:none!important}
+
+.fc-browse-nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px 22px;padding:12px 20px;background:#f5efe4;border-bottom:1px solid #d4c8b6;font:14px system-ui;color:#554838}.fc-browse-nav a{color:#660000;font-weight:600;text-decoration:none;padding:4px 0}.fc-browse-nav a:hover{text-decoration:underline}.fc-browse-nav a:focus-visible{outline:2px solid #660000;outline-offset:4px}.fc-library-filter{display:flex;flex-direction:column;gap:8px;font:14px system-ui}.fc-library-filter input{padding:12px;font:16px system-ui;border:1px solid #c8bba2;border-radius:4px;width:100%;box-sizing:border-box}

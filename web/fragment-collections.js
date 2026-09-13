@@ -1,19 +1,53 @@
 /* Optional collection browser. No persistence or changes to existing work routes. */
 window.PMVFragmentCollections = (() => {
-  const enabled = new URLSearchParams(location.search).get('collections') === '1' ||
-    (document.documentElement.dataset.collectionPreview === 'offline' && new URLSearchParams(location.search).get('collections') !== 'off');
+  // This module ships only in the isolated trial; ordinary navigation should
+  // not silently lose its collections. Explicit off remains the rollback.
+  const enabled = new URLSearchParams(location.search).get('collections') !== 'off';
   const escape = s => String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const normalize = s => s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ς/g,'σ');
-  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks','focus','cols','right','right2','right3','right4','right5','right6'].forEach(k=>u.searchParams.delete(k)); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
+  const href = fields => {const u=new URL(location.href); ['w','fragment','collection','allworks','author','genre','browse','focus','cols','right','right2','right3','right4','right5','right6'].forEach(k=>u.searchParams.delete(k)); u.searchParams.set('collections','1'); for(const [k,v] of Object.entries(fields)) u.searchParams.set(k,v); return u.pathname+u.search;};
   let data;
+  // Explicit initial genre membership: extant dramatic works in this catalog.
+  // Cyclops and Ichneutae are excluded; fragmentary genre is not inferred
+  // from author identity or from absence of a satyr-play label.
+  const tragedyKeys = new Set([
+    ...Array.from({length:7},(_,i)=>'tlg0085.tlg00'+(i+1)),
+    ...Array.from({length:7},(_,i)=>'tlg0011.tlg00'+(i+1)),
+    ...Array.from({length:18},(_,i)=>'tlg0006.tlg'+String(i+2).padStart(3,'0'))
+  ]);
+  function workTarget(w) {
+    return w.pmv_work_key ? {w:w.pmv_work_key,focus:w.pmv_focus,cols:'1'} : w.fragments ? {fragment:w.id} : {w:w.id};
+  }
+  function browseNavigation(catalog) {
+    const p=new URLSearchParams(location.search), raw=p.get('w')||'';
+    const tg=p.get('author') || (raw.startsWith('urn:cts:') ? raw.split(':')[3].split('.')[0] : raw.split('.')[0]) || 'tlg0085';
+    const author=(catalog.authors||{})[tg]||tg;
+    const nav=document.createElement('nav');nav.className='fc-browse-nav';nav.setAttribute('aria-label','Browse the library');
+    const links=[];
+    if(tg==='tlg0085')links.push(['Fragments',{collection:'aeschylus-fragments'}]);
+    links.push(['All works of '+author,{author:tg}],['Tragedy',{genre:'tragedy'}],['All works',{browse:'all'}]);
+    nav.innerHTML='<span>Browse:</span>'+links.map(([label,route])=>`<a href="${escape(href(route))}">${escape(label)}</a>`).join('');
+    const banner=document.getElementById('perseus-banner');if(banner)banner.after(nav);
+    const indexNav=nav.cloneNode(true);indexNav.classList.add('fc-index-nav');
+    document.getElementById('splash-view-root').prepend(indexNav);
+  }
+  function renderLibrary(root,catalog,params) {
+    const author=params.get('author'), genre=params.get('genre');
+    const title=genre ? 'Tragedy' : author ? 'All works of '+((catalog.authors||{})[author]||author) : 'All works';
+    const standard=Object.entries(catalog.works).filter(([id,w])=>!w.experimental_fragment && (!author||w.textgroup===author) && (!genre||tragedyKeys.has(id))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
+    const fragments=!genre&&(!author||author==='tlg0085') ? Object.values(data.works).map(w=>({...w,author:'Aeschylus'})) : [];
+    const works=[...standard,...fragments].sort((a,b)=>a.author.localeCompare(b.author)||a.title.localeCompare(b.title));
+    root.innerHTML=`<main class="fc-page"><h1>${escape(title)}</h1>${genre?'<p>Currently cataloged surviving plays of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.</p>':''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div class="fc-work-list" id="fc-library-results"></div></main>`;
+    const input=root.querySelector('#fc-library-filter');
+    const draw=()=>{const q=normalize(input.value.trim());const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')).includes(q));root.querySelector('#fc-library-count').textContent=matches.length+(matches.length===1?' work':' works');root.querySelector('#fc-library-results').innerHTML=matches.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong><span>${escape(w.author)}</span>${w.status?`<div class="fc-meta">${escape(w.status)}</div>`:''}</a>`).join('')||'<p>No matching works.</p>';};
+    input.addEventListener('input',draw);draw();
+  }
   async function attach(catalog) {
     if (!enabled) return;
     const root=document.getElementById('splash-view-root');
     const banner=document.createElement('div'); banner.className='fc-experiment';
     banner.innerHTML=`<span>Collection preview</span><a href="${escape(href({collections:'off'}))}">Turn off experiment</a>`;
     document.body.prepend(banner);
-    const toolbar=document.querySelector('.mode-toggle-panel');
-    if(toolbar){const back=document.createElement('a'); back.className='toggle-btn';back.href=href({collection:'aeschylus-fragments'});back.textContent='Fragments';toolbar.append(back);}
     try {
       const embedded=document.getElementById('fragment-collection-data');
       if(embedded) data=JSON.parse(embedded.textContent);
@@ -32,8 +66,10 @@ window.PMVFragmentCollections = (() => {
         const all=document.createElement('a'); all.className='fc-all-link'; all.href=href({allworks:'aeschylus'}); all.textContent='Browse surviving and fragmentary works together'; group.append(all);
       }
       const params=new URLSearchParams(location.search);
-      if(params.has('fragment')) renderWork(root,params.get('fragment'));
+      if(params.has('browse') || params.has('author') || params.has('genre')) renderLibrary(root,catalog,params);
+      else if(params.has('fragment')) renderWork(root,params.get('fragment'));
       else if(params.has('collection') || params.has('allworks')) renderCollection(root,catalog,params.has('allworks'),params.get('collection'));
+      browseNavigation(catalog);
     } catch(e) {banner.append(document.createTextNode(' · '+e.message));}
   }
   function renderCollection(root,catalog,all,collectionId) {
