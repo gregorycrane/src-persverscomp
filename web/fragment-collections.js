@@ -18,6 +18,29 @@ window.PMVFragmentCollections = (() => {
   function workTarget(w) {
     return w.pmv_work_key ? {w:w.pmv_work_key,focus:w.pmv_focus,cols:'1'} : w.fragments ? {fragment:w.id} : {w:w.id};
   }
+  // Count whitespace-delimited tokens containing letters only in the quoted
+  // authorial lines. Punctuation and lacuna marks alone do not count as words.
+  function wordCount(w) {
+    return (w.fragments||[]).reduce((n,f)=>n+f.lines.reduce((m,l)=>m+l.text.split(/\s+/u).filter(t=>/\p{L}/u.test(t)).length,0),0);
+  }
+  function fragmentNumbers(w) {
+    const nums=w.fragments.map(f=>String(f.number)), ranges=[];
+    for(let i=0;i<nums.length;i++) {
+      const start=nums[i];let end=start;
+      while(i+1<nums.length && /^\d+$/.test(end) && /^\d+$/.test(nums[i+1]) && Number(nums[i+1])===Number(end)+1)end=nums[++i];
+      ranges.push(start===end?start:start+'–'+end);
+    }
+    return ranges.join(', ');
+  }
+  function fragmentTotals(works) {
+    const n=works.reduce((n,w)=>n+(w.fragments||[]).length,0),words=works.reduce((n,w)=>n+wordCount(w),0);
+    return n+' fragment'+(n===1?'':'s')+' · '+words.toLocaleString()+' words of Aeschylus';
+  }
+  function fragmentMeta(w) {
+    if(!w.fragments)return '';
+    const refs=fragmentNumbers(w);
+    return `<div class="fc-fragment-refs">${refs?(w.fragments.length===1?'Fragment ':'Fragments ')+escape(refs)+' (Nauck)':'No numbered fragments'}</div><div class="fc-meta" title="Word count includes only quoted authorial lines in this transcription; sources and editorial notes are excluded. Punctuation-only tokens are not counted.">${fragmentTotals([w])}${w.line_count?'':' · Evidence only'}</div>`;
+  }
   function browseNavigation(catalog) {
     const p=new URLSearchParams(location.search), raw=p.get('w')||'';
     const tg=p.get('author') || (raw.startsWith('urn:cts:') ? raw.split(':')[3].split('.')[0] : raw.split('.')[0]) || 'tlg0085';
@@ -43,14 +66,14 @@ window.PMVFragmentCollections = (() => {
     try {expanded=JSON.parse(sessionStorage.getItem('pmv-author-groups')||'{}');} catch(e) {}
     const draw=()=>{
       const q=normalize(input.value.trim());
-      const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')).includes(q));
+      const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')+' '+(w.fragments||[]).map(f=>f.number).join(' ')).includes(q));
       const groups=new Map();
       matches.forEach(w=>{if(!groups.has(w.author))groups.set(w.author,[]);groups.get(w.author).push(w);});
       root.querySelector('#fc-library-count').textContent=matches.length+(matches.length===1?' work':' works');
       const results=root.querySelector('#fc-library-results');
       results.innerHTML=[...groups].map(([name,items])=>{
         const open=q || author || expanded[name];
-        return `<details class="fc-author-group" data-author-name="${escape(name)}" ${open?'open':''}><summary>${escape(name)} <span>(${items.length})</span></summary><div class="fc-work-list">${items.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong>${w.status?`<div class="fc-meta">${escape(w.status)}</div>`:''}</a>`).join('')}</div></details>`;
+        return `<details class="fc-author-group" data-author-name="${escape(name)}" ${open?'open':''}><summary>${escape(name)} <span>(${items.length})</span>${items.some(w=>w.fragments)?`<small class="fc-author-fragments">${fragmentTotals(items)}</small>`:''}</summary><div class="fc-work-list">${items.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong>${fragmentMeta(w)}</a>`).join('')}</div></details>`;
       }).join('')||'<p>No matching works.</p>';
       results.querySelectorAll('.fc-author-group').forEach(group=>group.addEventListener('toggle',()=>{
         if(q)return;
@@ -79,7 +102,7 @@ window.PMVFragmentCollections = (() => {
         group.open=true;
         const row=document.createElement('li'); row.className='fc-collection-entry';
         row.dataset.search='aeschylus fragments nauck'; row.dataset.work='collection:aeschylus-fragments';
-        row.innerHTML=`<a href="${escape(href({collection:'aeschylus-fragments'}))}"><strong>Fragments</strong><span>Collection · ${data.scope.play_headings} play headings</span></a>`;
+        row.innerHTML=`<a href="${escape(href({collection:'aeschylus-fragments'}))}"><strong>Fragments</strong><span>Collection · ${data.scope.play_headings} play headings · ${fragmentTotals(Object.values(data.works))}</span></a>`;
         group.querySelector('ul').append(row);
         const all=document.createElement('a'); all.className='fc-all-link'; all.href=href({allworks:'aeschylus'}); all.textContent='Browse surviving and fragmentary works together'; group.append(all);
       }
@@ -99,23 +122,23 @@ window.PMVFragmentCollections = (() => {
     root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({}))}">All authors</a> / Aeschylus</nav>
       <h1>${all?'Aeschylus — works':escape(coll.title)}</h1>
       <div class="fc-tabs"><a href="${escape(href({collection:'aeschylus-fragments'}))}">Fragments</a><a href="${escape(href({allworks:'aeschylus'}))}">All Aeschylus works</a><a href="${escape(href({collection:'nauck1889'}))}">Nauck 1889</a></div>
-      <p>${all ? 'Surviving plays and individually identified fragmentary works.' : data.scope.play_headings+' play headings · '+data.scope.included_fragments+' numbered fragments in the supplied Nauck file.'}</p>
-      <div class="fc-controls"><label>Find a work<input id="fc-filter" placeholder="Athamas, Danaides, Niobe…"></label><label>Search fragment verses<input id="fc-search" placeholder="ποδῶκες"></label></div>
+      <p>${all ? 'Surviving plays and individually identified fragmentary works.' : data.scope.play_headings+' play headings · '+fragmentTotals(fragmentWorks)+' in the supplied Nauck file.'}</p>
+      <div class="fc-controls"><label>Find a work or fragment number<input id="fc-filter" placeholder="Athamas, Danaides, 149…"></label><label>Search fragment verses<input id="fc-search" placeholder="ποδῶκες"></label></div>
       <div id="fc-count" aria-live="polite"></div><div id="fc-results" class="fc-work-list"></div>
-      <details class="fc-scope"><summary>About this experimental collection</summary><p>${escape(data.editorial_note)}</p><p>${data.scope.outside_play_containers} numbered fragments outside play containers are not included in this preview. Counts describe markup, not a settled total of historical plays. Verse search covers this collection, not the surviving plays.</p></details></main>`;
+      <details class="fc-scope"><summary>About this experimental collection</summary><p>${escape(data.editorial_note)}</p><p>${data.scope.outside_play_containers} numbered fragments outside play containers are not included in this preview. Counts describe markup, not a settled total of historical plays. Verse search covers this collection, not the surviving plays. Word counts count space-separated tokens containing letters in the encoded authorial lines; transmitting sources, editorial notes, and punctuation-only tokens are excluded.</p></details></main>`;
     const filter=root.querySelector('#fc-filter'), search=root.querySelector('#fc-search');
     function draw() {
       const q=normalize(search.value.trim()), title=normalize(filter.value.trim());
       let hits=0;
-      const rows=pool.filter(w=>normalize(w.title+' '+(w.source_title||'')).includes(title)).map(w=>{
+      const rows=pool.filter(w=>normalize(w.title+' '+(w.source_title||'')+' '+(w.fragments||[]).map(f=>f.number).join(' ')).includes(title)).map(w=>{
         const matched=q&&!w.extant ? w.fragments.flatMap(f=>f.lines.filter(l=>normalize(l.text).includes(q)).map(l=>({ref:f.number+'.'+l.ref,text:l.text}))) : [];
         if(q&&!matched.length) return '';
         hits++;
         const target=w.extant?{w:w.id}:w.pmv_work_key?{w:w.pmv_work_key,focus:w.pmv_focus,cols:'1'}:{fragment:w.id};
-        return `<a class="fc-work" href="${escape(href(target))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div><div class="fc-meta">${escape(w.status)}${w.extant?'':' · '+w.fragments.length+' fragments'}</div>${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
+        return `<a class="fc-work" href="${escape(href(target))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div>${w.extant?'<div class="fc-meta">Survives complete</div>':fragmentMeta(w)}${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
       }).join('');
       root.querySelector('#fc-results').innerHTML=rows||'<p>No matching works.</p>';
-      root.querySelector('#fc-count').textContent=hits+' works'+(q?' with matching verses':'');
+      root.querySelector('#fc-count').textContent=hits+(hits===1?' work':' works')+(q?' with matching verses':'');
     }
     filter.addEventListener('input',draw);search.addEventListener('input',draw);draw();
   }
