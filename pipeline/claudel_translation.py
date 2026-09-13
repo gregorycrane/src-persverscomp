@@ -16,6 +16,50 @@ CANONICAL_ID = 'tlg0085_tlg007_claudel_1920_translation'
 LABEL = 'French (Paul Claudel, 1920; OCR, approximate alignment)'
 ACTS = ((11, 23, 1, 234), (25, 39, 235, 565), (41, 62, 566, 1047))
 PAGE_MARKER = re.compile(r'^## p\.\s*(?:(\d+)\s*)?\(#(\d+)\)\s*#+\s*$', re.M)
+SCORE_GAP_PAGES = {
+    30: [
+        'Veulent que pas à pas',
+        'Les Furies à chaque bras',
+        "Tiennent et suivent l'insensé qui a fait œuvre de mal",
+        "Jusqu'il trouve sous la terre la mort,",
+        'La mort,',
+        'Non point la mort qui libère.',
+        'Autour, tout autour',
+        'De ce veau pour notre table,',
+        'Strident et sourd, corde et tambour,',
+        'Que chant de fou, chant du diable,',
+        'Repli pour le dévorer',
+        'Tourne mon hymne ensorcelé !',
+        'Cette tâche nous fut donnée,',
+        'Pour elle nous fûmes créées.',
+        'Vous Immortels, bas les mains,',
+        'Rien entre nous de commun.',
+        'Robes blanches,',
+        "Nous n'avons point de part avec vous,",
+        "Nous n'avons point notre séjour avec vous.",
+    ],
+    31: [
+        'Le meurtre filial,',
+        'Le crime familial,',
+        'Le sang frais qui nous fascine,',
+        'Nous fait de haut',
+        'Fondre sur la tête assassine !',
+        'Cette passion est la nôtre,',
+        "Ce soin nous l'épargnons à d'autres.",
+        "Aux dieux selon qu'il sied",
+        'Ce droit de nous le confirmer,',
+        'Zeus a privé de lui-même cette race de blasphème.',
+        'Le meurtre filial,',
+        'Le crime familial,',
+        'Le sang frais qui nous fascine,',
+        'Nous fait de haut',
+        'Fondre sur la tête assassine,',
+        'La gloire humaine avec toute son aile déployée',
+        'Et réduite en poudre et cendre,',
+        'Au souffle de notre voile noir,',
+        'Au trépignement de notre danse.',
+    ],
+}
 
 
 def extract_pages(source):
@@ -44,6 +88,15 @@ def extract_pages(source):
         if lines:
             pages[last_page] = lines
     return pages
+
+
+def extract_score_gap(source):
+    """Reconstruct the gap from score OCR split across staves and syllables."""
+    raw = Path(source).read_text(encoding='utf8')
+    anchors = ('Lachesis Atropos', "m'emportent dans les flancs", 'Le meurtre fi')
+    if not all(anchor in raw for anchor in anchors):
+        raise ValueError('The supplemental score does not contain the expected Claudel passage')
+    return {page: list(lines) for page, lines in SCORE_GAP_PAGES.items()}
 
 
 def _bounds(chapter):
@@ -78,7 +131,7 @@ def align_pages(pages, grid):
     return aligned
 
 
-def _render(lines, first=False):
+def _render(lines, first=False, patched=False):
     chunks, current_page = [], None
     for page, line in lines:
         if page != current_page:
@@ -89,16 +142,19 @@ def _render(lines, first=False):
         chunks.append('<div class="claudel-line">%s</div>' % html.escape(line))
     if current_page is not None:
         chunks.append('</div>')
+    gap_note = ("Printed pp. 30–31 have been reconstructed from Claudel's text "
+                'in the 1927 Milhaud vocal score. ' if patched else
+                'The supplied OCR has no extracted text for printed pp. 30–31. ')
     note = ('<div class="claudel-alignment-note"><strong>OCR preview.</strong> '
             'The source has no Aeschylean line numbers; its three acts are aligned approximately '
-            'to the Greek passage cards. The supplied OCR has no extracted text for printed pp. 30–31. '
+            'to the Greek passage cards. ' + gap_note +
             'Source: <cite>Les Euménides d\'Eschyle</cite>, trans. Paul Claudel '
             '(Paris: Nouvelle revue française, 1920), pp. 11–62; '
             '<a href="https://hdl.handle.net/2027/wu.89013526876" target="_blank" rel="noopener">HathiTrust scan</a>.</div>')
     return (note if first else '') + ''.join(chunks)
 
 
-def build_translation(source, output, existing):
+def build_translation(source, output, existing, score=None):
     """Create an aggregate layer and a shadow copy of the Eumenides shard."""
     source, output, existing = Path(source), Path(output), Path(existing)
     original = existing / 'site/data' / TEXTGROUP / WORK / (TEXTGROUP + '.' + WORK + '.part1.db')
@@ -110,9 +166,12 @@ def build_translation(source, output, existing):
         grid = conn.execute(
             'SELECT passage_urn,chapter,sort_order FROM alignment_grid ORDER BY sort_order').fetchall()
     pages = extract_pages(source)
+    patched = bool(score)
+    if score:
+        pages.update(extract_score_gap(score))
     aligned = align_pages(pages, grid)
     unit = (CANONICAL_ID, URN, LABEL, 'french-text', TEXTGROUP, WORK, VERSION, 'translation')
-    segments = [(urn, VERSION, _render(aligned[urn], first=index == 0))
+    segments = [(urn, VERSION, _render(aligned[urn], first=index == 0, patched=patched))
                 for index, (urn, _, _) in enumerate(grid)]
     order = [(TEXTGROUP, WORK, VERSION, None, chapter, index)
              for index, (_, chapter, _) in enumerate(grid)]
@@ -141,7 +200,11 @@ def build_translation(source, output, existing):
     audit = {
         'source': str(source), 'source_url': 'https://hdl.handle.net/2027/wu.89013526876',
         'version_urn': URN, 'label': LABEL, 'alignment': 'approximate within act boundaries',
-        'printed_pages_with_text': sorted(pages), 'missing_ocr_pages': [30, 31],
+        'supplemental_score': str(score) if score else None,
+        'supplemental_score_url': 'https://hdl.handle.net/2027/uc1.31822002779502' if score else None,
+        'printed_pages_with_text': sorted(pages),
+        'missing_ocr_pages': [] if patched else [30, 31],
+        'patched_pages': [30, 31] if patched else [],
         'passage_cards': len(segments),
     }
     (output / 'site/claudel1920-alignment.json').write_text(

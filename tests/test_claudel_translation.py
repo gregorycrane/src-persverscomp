@@ -1,6 +1,6 @@
 import sqlite3
 
-from pipeline.claudel_translation import build_translation, extract_pages
+from pipeline.claudel_translation import build_translation, extract_pages, extract_score_gap
 from pipeline.core.storage import init_storage_engine
 
 
@@ -45,3 +45,12 @@ Texte trois.
         assert 'approximate' in segments[0][0]
         assert '&lt;deux&gt;' in ''.join(row[0] for row in segments)
     assert 'claudel1920-fra1' in (preview / 'site/catalog.json').read_text()
+
+
+def test_score_supplies_missing_printed_pages(tmp_path):
+    score = tmp_path / 'score.txt'
+    score.write_text("Lachesis Atropos\nm'emportent dans les flancs\nLe meurtre filial")
+    pages = extract_score_gap(score)
+    assert sorted(pages) == [30, 31]
+    assert pages[30][0] == 'Veulent que pas à pas'
+    assert pages[31][-1] == 'Au trépignement de notre danse.'

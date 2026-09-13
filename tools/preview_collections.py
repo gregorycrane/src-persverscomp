@@ -11,7 +11,7 @@ from urllib.parse import unquote, urlsplit
 SRC = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(SRC))
 
-def build_preview(source, output, db, existing, claudel=None):
+def build_preview(source, output, db, existing, claudel=None, claudel_score=None):
     from pipeline import index_builder
     from pipeline.fragment_collections import build
     from pipeline.fragment_shards import build_shards
@@ -29,7 +29,8 @@ def build_preview(source, output, db, existing, claudel=None):
     claudel_db=None
     if claudel and claudel.exists():
         from pipeline.claudel_translation import build_translation
-        claudel_db=build_translation(claudel,output,existing)
+        score=claudel_score if claudel_score and claudel_score.exists() else None
+        claudel_db=build_translation(claudel,output,existing,score)
     with sqlite3.connect(db.resolve().as_uri()+'?mode=ro',uri=True) as conn:
         conn.execute('ATTACH DATABASE ? AS fragments',(str(additions),))
         schemas=['main','fragments']
@@ -55,10 +56,11 @@ def main():
     p.add_argument('--db',type=Path,default=Path('/tmp/persvers_build/corpus_alignment_grid.db'))
     p.add_argument('--existing',type=Path,default=Path('/Users/gcrane/github/persverscomp'))
     p.add_argument('--claudel',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-eumenides-claudel-wu-89013526876-1789301260.txt'))
+    p.add_argument('--claudel-score',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-eumenides-claudel-uc1-31822002779502-1789305538.txt'))
     p.add_argument('--port',type=int,default=8001)
     p.add_argument('--build-only',action='store_true')
     a=p.parse_args()
-    build_preview(a.source.resolve(),a.output.resolve(),a.db,a.existing.resolve(),a.claudel.resolve())
+    build_preview(a.source.resolve(),a.output.resolve(),a.db,a.existing.resolve(),a.claudel.resolve(),a.claudel_score.resolve())
     if a.build_only: return
     PreviewHandler.preview=a.output.resolve()
     PreviewHandler.existing=a.existing.resolve()
