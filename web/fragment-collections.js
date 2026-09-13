@@ -37,7 +37,10 @@ window.PMVFragmentCollections = (() => {
     return n+' fragment'+(n===1?'':'s')+' · '+words.toLocaleString()+' words of Aeschylus';
   }
   function fragmentMeta(w) {
-    if(!w.fragments)return '';
+    if(!w.fragments) {
+      const stats=(data.tragedy_statistics||{})[w.id];
+      return stats ? `<div class="fc-fragment-refs">Lines ${escape(stats.citation_span)} · ${stats.words.toLocaleString()} Greek words</div><div class="fc-meta" title="Citation span, not a count of encoded verse segments. Words count the printed Greek verse, including bracketed text; notes and speaker labels are excluded.">${escape(stats.edition)}</div>` : '';
+    }
     const refs=fragmentNumbers(w);
     return `<div class="fc-fragment-refs">${refs?(w.fragments.length===1?'Fragment ':'Fragments ')+escape(refs)+' (Nauck)':'No numbered fragments'}</div><div class="fc-meta" title="Word count includes only quoted authorial lines in this transcription; sources and editorial notes are excluded. Punctuation-only tokens are not counted.">${fragmentTotals([w])}${w.line_count?'':' · Evidence only'}</div>`;
   }
@@ -135,7 +138,7 @@ window.PMVFragmentCollections = (() => {
         if(q&&!matched.length) return '';
         hits++;
         const target=w.extant?{w:w.id}:w.pmv_work_key?{w:w.pmv_work_key,focus:w.pmv_focus,cols:'1'}:{fragment:w.id};
-        return `<a class="fc-work" href="${escape(href(target))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div>${w.extant?'<div class="fc-meta">Survives complete</div>':fragmentMeta(w)}${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
+        return `<a class="fc-work" href="${escape(href(target))}"><div><strong>${escape(w.title)}</strong>${w.source_title?`<span lang="grc">${escape(w.source_title)}</span>`:''}</div>${fragmentMeta(w)}${matched.slice(0,3).map(m=>`<p class="fc-hit" lang="grc">${escape(m.ref)} · ${escape(m.text)}</p>`).join('')}</a>`;
       }).join('');
       root.querySelector('#fc-results').innerHTML=rows||'<p>No matching works.</p>';
       root.querySelector('#fc-count').textContent=hits+(hits===1?' work':' works')+(q?' with matching verses':'');
