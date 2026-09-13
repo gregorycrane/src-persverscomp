@@ -23,4 +23,9 @@ def test_source_unchanged_and_fragment_number_preserved():
     before=SOURCE.read_bytes(); d=build(SOURCE)
     assert SOURCE.read_bytes()==before
     assert d['works']['aeschylus-danaides']['fragments'][0]['number']=='44'
-    assert d['scope']['outside_play_containers']==1
+    assert d['scope']['outside_play_containers']==2
+    assert d['scope']['included_fragments']==4
+    assert d['works']['aeschylus-incertae']['fragments'][0]['number']=='999'
+    assert d['works']['aeschylus-dubia-spuria']['fragments'][0]['number']=='1000'
+    assert d['scope']['uncertain_fragments']==1
+    assert d['scope']['dubious_spurious_fragments']==1

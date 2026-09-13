@@ -13,7 +13,7 @@ def test_real_shards_have_one_edition_navigation_and_separate_context(tmp_path):
     out=tmp_path/'preview';(out/'site').mkdir(parents=True)
     aggregate=build_shards(data,out,existing)
     with sqlite3.connect(aggregate) as c:
-        assert c.execute('select count(*) from text_units').fetchone()[0]==2
+        assert c.execute('select count(*) from text_units').fetchone()[0]==4
         assert c.execute('select count(*) from treebank_sentences').fetchone()[0]==0
         assert c.execute('select count(*) from text_units where doc_type="translation"').fetchone()[0]==0
         html=c.execute('select content_html from text_segments order by passage_urn').fetchone()[0]

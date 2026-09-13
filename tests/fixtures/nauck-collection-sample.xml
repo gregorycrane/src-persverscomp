@@ -3,4 +3,5 @@
 <div type="textpart" subtype="play" xml:id="aeschylus-danaides" n="ΔΑΝΑΙΔΕΣ"><div type="fragment" n="44"><lg><l>ἐρᾷ</l></lg></div></div>
 <div type="textpart" subtype="play" xml:id="aeschylus-atalante" n="ΑΤΑΛΑΝΤΗ"><div type="commentary"><p>Vide catalogum.</p></div></div>
 <div type="fragment" n="999"><p>Unassigned.</p></div>
+<div type="textpart" subtype="section" xml:id="aeschylus-dubia-spuria"><head>FRAGMENTA DVBIA ET SPVRIA</head><div type="fragment" n="1000"><lg><l>ἀμφίβολον</l></lg></div></div>
 </div></body></text></TEI>
