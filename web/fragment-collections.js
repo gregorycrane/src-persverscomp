@@ -128,12 +128,15 @@ window.PMVFragmentCollections = (() => {
     const coll=data.collections.find(c=>c.id===collectionId) || data.collections[0];
     const ids=new Set(coll.members);
     const fragmentWorks=Object.values(data.works).filter(w=>ids.has(w.id));
-    const extant=all ? Object.entries(catalog.works).filter(([k,w])=>w.textgroup==='tlg0085'&&!w.experimental_fragment).map(([k,w])=>({id:k,title:w.title,status:'Survives complete',extant:true})) : [];
-    const pool=[...extant,...fragmentWorks].sort((a,b)=>a.title.localeCompare(b.title));
+    const extant=Object.entries(catalog.works).filter(([k,w])=>w.textgroup==='tlg0085'&&!w.experimental_fragment).map(([k,w])=>({id:k,title:w.title,status:'Survives complete',extant:true})).sort((a,b)=>a.title.localeCompare(b.title));
+    const pool=(all?[...extant,...fragmentWorks]:fragmentWorks).sort((a,b)=>a.title.localeCompare(b.title));
+    const survivingContext=!all&&coll.id==='aeschylus-fragments' ? `<details class="fc-surviving-context" open><summary>Surviving works <span>(${extant.length})</span></summary><div class="fc-work-list">${extant.map(w=>`<a class="fc-work" href="${escape(href({w:w.id}))}"><strong>${escape(w.title)}</strong>${fragmentMeta(w)}</a>`).join('')}</div></details>` : '';
     root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({}))}">All authors</a> / Aeschylus</nav>
       <h1>${all?'Aeschylus — works':escape(coll.title)}</h1>
       <div class="fc-tabs"><a href="${escape(href({collection:'aeschylus-fragments'}))}">Fragments</a><a href="${escape(href({allworks:'aeschylus'}))}">All Aeschylus works</a><a href="${escape(href({collection:'nauck1889'}))}">Nauck 1889</a></div>
       <p>${all ? 'Surviving plays and individually identified fragmentary works.' : data.scope.play_headings+' play headings · '+fragmentTotals(fragmentWorks)+' in the supplied Nauck file.'}</p>
+      ${survivingContext}
+      ${!all?'<h2 class="fc-fragment-heading">Fragmentary works</h2>':''}
       <div class="fc-controls"><label>Find a work or fragment number<input id="fc-filter" placeholder="Athamas, Danaides, 149…"></label><label>Search fragment verses<input id="fc-search" placeholder="ποδῶκες"></label></div>
       <div id="fc-count" aria-live="polite"></div><div id="fc-results" class="fc-work-list"></div>
       <details class="fc-scope"><summary>About this experimental collection</summary><p>${escape(data.editorial_note)}</p><p>${data.scope.outside_play_containers} numbered fragments outside play containers are not included in this preview. Counts describe markup, not a settled total of historical plays. Verse search covers this collection, not the surviving plays. Word counts count space-separated tokens containing letters in the encoded authorial lines; transmitting sources, editorial notes, and punctuation-only tokens are excluded.</p></details></main>`;

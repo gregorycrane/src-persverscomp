@@ -11,3 +11,5 @@ body:has(#outer-wrapper.one-column) #row-alignment-panel{display:none!important}
 .fc-fragment-refs{font:15px system-ui;color:#660000;margin-top:10px}.fc-fragment-refs+.fc-meta{margin-top:6px}.fc-author-fragments{display:block;font:13px system-ui;color:#655a4d;margin:6px 0 0 22px}
 
 .fc-scope-links{display:flex;align-items:center;gap:12px;margin:12px 0 22px!important}.fc-scope-links a{font-weight:600;text-decoration:none}.fc-scope-links a[aria-current="page"]{border-bottom:3px solid #660000;padding-bottom:3px}.fc-scope-links span{color:#8b8175}
+
+.fc-surviving-context{margin:22px 0 30px}.fc-surviving-context>summary{cursor:pointer;padding:10px 0;border-bottom:1px solid #d4c8b6;color:#660000;font:22px Georgia,serif}.fc-surviving-context>summary span{color:#888;font-size:17px}.fc-fragment-heading{margin:28px 0 8px;color:#660000;font-size:24px}
