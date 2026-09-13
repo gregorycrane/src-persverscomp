@@ -12,7 +12,7 @@ SRC = Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(SRC))
 
 def build_preview(source, output, db, existing, claudel=None, claudel_score=None,
-                  claudel_agamemnon=None):
+                  claudel_agamemnon=None, claudel_choephoroi=None):
     from pipeline import index_builder
     from pipeline.fragment_collections import build
     from pipeline.fragment_shards import build_shards
@@ -36,6 +36,10 @@ def build_preview(source, output, db, existing, claudel=None, claudel_score=None
     if claudel_agamemnon and claudel_agamemnon.exists():
         from pipeline.claudel_agamemnon import build_translation as build_agamemnon
         agamemnon_db=build_agamemnon(claudel_agamemnon,output,existing)
+    choephoroi_db=None
+    if claudel_choephoroi and claudel_choephoroi.exists():
+        from pipeline.claudel_choephoroi import build_translation as build_choephoroi
+        choephoroi_db=build_choephoroi(claudel_choephoroi,output,existing)
     with sqlite3.connect(db.resolve().as_uri()+'?mode=ro',uri=True) as conn:
         conn.execute('ATTACH DATABASE ? AS fragments',(str(additions),))
         schemas=['main','fragments']
@@ -45,6 +49,9 @@ def build_preview(source, output, db, existing, claudel=None, claudel_score=None
         if agamemnon_db:
             conn.execute('ATTACH DATABASE ? AS claudel_agamemnon',(str(agamemnon_db),))
             schemas.append('claudel_agamemnon')
+        if choephoroi_db:
+            conn.execute('ATTACH DATABASE ? AS claudel_choephoroi',(str(choephoroi_db),))
+            schemas.append('claudel_choephoroi')
         for table in ('text_units','alignment_grid','text_segments','edition_chapter_order'):
             conn.execute('CREATE TEMP VIEW '+table+' AS '+' UNION ALL '.join('SELECT * FROM '+schema+'.'+table for schema in schemas))
         index_builder.rebuild(conn=conn)
@@ -66,10 +73,11 @@ def main():
     p.add_argument('--claudel',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-eumenides-claudel-wu-89013526876-1789301260.txt'))
     p.add_argument('--claudel-score',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-eumenides-claudel-uc1-31822002779502-1789305538.txt'))
     p.add_argument('--claudel-agamemnon',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-agamemnon-claudel-chi-084972221-1789306121.txt'))
+    p.add_argument('--claudel-choephoroi',type=Path,default=Path('/Users/gcrane/Downloads/aeschylus-libation-bearers-claudel-chi-084972239-1789306657.txt'))
     p.add_argument('--port',type=int,default=8001)
     p.add_argument('--build-only',action='store_true')
     a=p.parse_args()
-    build_preview(a.source.resolve(),a.output.resolve(),a.db,a.existing.resolve(),a.claudel.resolve(),a.claudel_score.resolve(),a.claudel_agamemnon.resolve())
+    build_preview(a.source.resolve(),a.output.resolve(),a.db,a.existing.resolve(),a.claudel.resolve(),a.claudel_score.resolve(),a.claudel_agamemnon.resolve(),a.claudel_choephoroi.resolve())
     if a.build_only: return
     PreviewHandler.preview=a.output.resolve()
     PreviewHandler.existing=a.existing.resolve()
