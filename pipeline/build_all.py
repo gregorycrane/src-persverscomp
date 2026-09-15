@@ -61,6 +61,12 @@ def dep_paths_for(work_key: str, meta: dict) -> list:
             parser_fn = PARSE_MODE_PARSERS.get(entry.get("parse_mode"))
             if parser_fn is not None:
                 parser_files.add(Path(parser_fn.__globals__["__file__"]))
+    # Fragment editions are published by experimental_collections rather than
+    # the ordinary TEI parsers, but their shared source still participates in
+    # manifest invalidation for every registered fragmentary play.
+    for entry in meta.get("fragment_editions", {}).values():
+        if "path" in entry:
+            _add_path(entry["path"])
     for tb in meta.get("treebanks", {}).values():
         if "path" in tb:
             _add_path(tb["path"])

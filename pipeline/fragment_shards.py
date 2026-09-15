@@ -3,31 +3,35 @@ import html
 import json
 from pathlib import Path
 from pipeline.core.storage import init_storage_engine
+from pipeline.fragment_collections import materialize_work_views
 
 VERSION='nauck1889grc1'
 
 def build_shards(data, output, existing):
+    data = materialize_work_views(data)
     output=Path(output)
     catalog=json.loads((Path(existing)/'site/catalog.json').read_text())
     aggregate=init_storage_engine(output/'fragment-editions.db')
     for record in data['works'].values():
         if not record['fragments']:
             continue  # Metadata-only works never acquire an invented passage.
-        work='frag_'+record['id'].replace('aeschylus-','',1).replace('-','_')
+        work=record.get('work') or record['id'].replace('aeschylus-','',1).replace('-','_')
         key='tlg0085.'+work
-        urn='urn:cts:perseusDemo:'+key
-        record['work_urn']=urn
-        record['edition_urn']=urn+'.'+VERSION
+        record['object_urn'] = record.get(
+            'object_urn', f'urn:cite2:perseus:fragmentaryplays.v1:{work}')
         record['pmv_work_key']=key
         record['pmv_focus']=key.replace('.','_')+'_nauck1889'
         folder=output/'site/data/tlg0085'/work
         folder.mkdir(parents=True,exist_ok=True)
         shard=folder/(key+'.part1.db')
         conn=init_storage_engine(shard)
-        unit=(record['pmv_focus'],urn+'.'+VERSION,'Greek (Nauck, 1889; transcription preview)',
+        edition_urn=record.get('versions',[{}])[0].get(
+            'edition_urn','urn:cts:greekLit:tlg0085.fragmenta.'+VERSION)
+        unit=(record['pmv_focus'],edition_urn,'Greek (Nauck, 1889; transcription preview)',
               'greek-text','tlg0085',work,VERSION,'edition')
         fragments=record['fragments']
-        refs=[urn+':'+f['number']+'.1' for f in fragments]
+        refs=[f.get('source_fragment_urn', edition_urn+':'+f['number'])+'.1'
+              for f in fragments]
         for db in (conn,aggregate):
             db.execute('INSERT INTO text_units VALUES (?,?,?,?,?,?,?,?)',unit)
         for i,f in enumerate(fragments):
@@ -44,7 +48,8 @@ def build_shards(data, output, existing):
         catalog['works'][key]=dict(textgroup='tlg0085',work=work,title=record['title'],
             experimental_fragment=True,default_columns=1,unit_labels={'chapter':'Fragment','section':'Section'},
             parts=[dict(part=1,file=shard.name,books=[],chapters=[f['number'] for f in fragments],bytes=shard.stat().st_size)],
-            versions=[dict(short_id=VERSION,urn=urn+'.'+VERSION,label=unit[2],doc_type='edition',text_class='greek-text')],annotations={})
+            object_urn=record['object_urn'],
+            versions=[dict(short_id=VERSION,urn=edition_urn,label=unit[2],doc_type='edition',text_class='greek-text')],annotations={})
     aggregate.commit();aggregate.close()
     (output/'site/catalog.json').write_text(json.dumps(catalog,ensure_ascii=False))
     return output/'fragment-editions.db'

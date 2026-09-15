@@ -4897,5 +4897,1622 @@
         "parse_mode": "conllu"
       }
     }
+  },
+  "tlg0085.athamas": {
+    "textgroup": "tlg0085",
+    "work": "athamas",
+    "title": "Athamas",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:athamas"
+  },
+  "tlg0085.aigyptioi": {
+    "textgroup": "tlg0085",
+    "work": "aigyptioi",
+    "title": "Aigyptioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:aigyptioi"
+  },
+  "tlg0085.aitnaiai": {
+    "textgroup": "tlg0085",
+    "work": "aitnaiai",
+    "title": "Aitnaiai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:aitnaiai"
+  },
+  "tlg0085.alkmene": {
+    "textgroup": "tlg0085",
+    "work": "alkmene",
+    "title": "Alkmene",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:alkmene"
+  },
+  "tlg0085.amymone": {
+    "textgroup": "tlg0085",
+    "work": "amymone",
+    "title": "Amymone",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:amymone"
+  },
+  "tlg0085.argeioi": {
+    "textgroup": "tlg0085",
+    "work": "argeioi",
+    "title": "Argeioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:argeioi"
+  },
+  "tlg0085.argo": {
+    "textgroup": "tlg0085",
+    "work": "argo",
+    "title": "Argo",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:argo"
+  },
+  "tlg0085.atalante": {
+    "textgroup": "tlg0085",
+    "work": "atalante",
+    "title": "Atalante",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:atalante"
+  },
+  "tlg0085.bakchai": {
+    "textgroup": "tlg0085",
+    "work": "bakchai",
+    "title": "Bakchai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:bakchai"
+  },
+  "tlg0085.bassarai": {
+    "textgroup": "tlg0085",
+    "work": "bassarai",
+    "title": "Bassarai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:bassarai"
+  },
+  "tlg0085.glaykoi": {
+    "textgroup": "tlg0085",
+    "work": "glaykoi",
+    "title": "Glaykoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:glaykoi"
+  },
+  "tlg0085.glaykos_pontios": {
+    "textgroup": "tlg0085",
+    "work": "glaykos_pontios",
+    "title": "Glaykos Pontios",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:glaykos_pontios"
+  },
+  "tlg0085.glaykos_potnieys": {
+    "textgroup": "tlg0085",
+    "work": "glaykos_potnieys",
+    "title": "Glaykos Potnieys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:glaykos_potnieys"
+  },
+  "tlg0085.danaides": {
+    "textgroup": "tlg0085",
+    "work": "danaides",
+    "title": "Danaides",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:danaides"
+  },
+  "tlg0085.diktyoylkoi": {
+    "textgroup": "tlg0085",
+    "work": "diktyoylkoi",
+    "title": "Diktyoylkoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:diktyoylkoi"
+  },
+  "tlg0085.dionysoy_trophoi": {
+    "textgroup": "tlg0085",
+    "work": "dionysoy_trophoi",
+    "title": "Dionysoy Trophoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:dionysoy_trophoi"
+  },
+  "tlg0085.eleysinioi": {
+    "textgroup": "tlg0085",
+    "work": "eleysinioi",
+    "title": "Eleysinioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:eleysinioi"
+  },
+  "tlg0085.epigonoi": {
+    "textgroup": "tlg0085",
+    "work": "epigonoi",
+    "title": "Epigonoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:epigonoi"
+  },
+  "tlg0085.edonoi": {
+    "textgroup": "tlg0085",
+    "work": "edonoi",
+    "title": "Edonoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:edonoi"
+  },
+  "tlg0085.heliades": {
+    "textgroup": "tlg0085",
+    "work": "heliades",
+    "title": "Heliades",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:heliades"
+  },
+  "tlg0085.herakleidai": {
+    "textgroup": "tlg0085",
+    "work": "herakleidai",
+    "title": "Herakleidai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:herakleidai"
+  },
+  "tlg0085.thalamopoioi": {
+    "textgroup": "tlg0085",
+    "work": "thalamopoioi",
+    "title": "Thalamopoioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:thalamopoioi"
+  },
+  "tlg0085.theoroi": {
+    "textgroup": "tlg0085",
+    "work": "theoroi",
+    "title": "Theoroi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:theoroi"
+  },
+  "tlg0085.threissai": {
+    "textgroup": "tlg0085",
+    "work": "threissai",
+    "title": "Threissai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:threissai"
+  },
+  "tlg0085.iereiai": {
+    "textgroup": "tlg0085",
+    "work": "iereiai",
+    "title": "Iereiai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:iereiai"
+  },
+  "tlg0085.ixion": {
+    "textgroup": "tlg0085",
+    "work": "ixion",
+    "title": "Ixion",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:ixion"
+  },
+  "tlg0085.iphigeneia": {
+    "textgroup": "tlg0085",
+    "work": "iphigeneia",
+    "title": "Iphigeneia",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:iphigeneia"
+  },
+  "tlg0085.kabeiroi": {
+    "textgroup": "tlg0085",
+    "work": "kabeiroi",
+    "title": "Kabeiroi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kabeiroi"
+  },
+  "tlg0085.kallisto": {
+    "textgroup": "tlg0085",
+    "work": "kallisto",
+    "title": "Kallisto",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kallisto"
+  },
+  "tlg0085.kares": {
+    "textgroup": "tlg0085",
+    "work": "kares",
+    "title": "Kares",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kares"
+  },
+  "tlg0085.kerkyon": {
+    "textgroup": "tlg0085",
+    "work": "kerkyon",
+    "title": "Kerkyon",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kerkyon"
+  },
+  "tlg0085.kerykes": {
+    "textgroup": "tlg0085",
+    "work": "kerykes",
+    "title": "Kerykes",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kerykes"
+  },
+  "tlg0085.kirke": {
+    "textgroup": "tlg0085",
+    "work": "kirke",
+    "title": "Kirke",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kirke"
+  },
+  "tlg0085.kressai": {
+    "textgroup": "tlg0085",
+    "work": "kressai",
+    "title": "Kressai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kressai"
+  },
+  "tlg0085.kyknos": {
+    "textgroup": "tlg0085",
+    "work": "kyknos",
+    "title": "Kyknos",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:kyknos"
+  },
+  "tlg0085.laios": {
+    "textgroup": "tlg0085",
+    "work": "laios",
+    "title": "Laios",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:laios"
+  },
+  "tlg0085.leon": {
+    "textgroup": "tlg0085",
+    "work": "leon",
+    "title": "Leon",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:leon"
+  },
+  "tlg0085.lemnioi": {
+    "textgroup": "tlg0085",
+    "work": "lemnioi",
+    "title": "Lemnioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:lemnioi"
+  },
+  "tlg0085.lykourgos": {
+    "textgroup": "tlg0085",
+    "work": "lykourgos",
+    "title": "Lykourgos",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:lykourgos"
+  },
+  "tlg0085.memnon": {
+    "textgroup": "tlg0085",
+    "work": "memnon",
+    "title": "Memnon",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:memnon"
+  },
+  "tlg0085.myrmidones": {
+    "textgroup": "tlg0085",
+    "work": "myrmidones",
+    "title": "Myrmidones",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:myrmidones"
+  },
+  "tlg0085.mysoi": {
+    "textgroup": "tlg0085",
+    "work": "mysoi",
+    "title": "Mysoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:mysoi"
+  },
+  "tlg0085.neaniskoi": {
+    "textgroup": "tlg0085",
+    "work": "neaniskoi",
+    "title": "Neaniskoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:neaniskoi"
+  },
+  "tlg0085.nemea": {
+    "textgroup": "tlg0085",
+    "work": "nemea",
+    "title": "Nemea",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:nemea"
+  },
+  "tlg0085.nereides": {
+    "textgroup": "tlg0085",
+    "work": "nereides",
+    "title": "Nereides",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:nereides"
+  },
+  "tlg0085.niobe": {
+    "textgroup": "tlg0085",
+    "work": "niobe",
+    "title": "Niobe",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:niobe"
+  },
+  "tlg0085.xantriai": {
+    "textgroup": "tlg0085",
+    "work": "xantriai",
+    "title": "Xantriai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:xantriai"
+  },
+  "tlg0085.oidipoys": {
+    "textgroup": "tlg0085",
+    "work": "oidipoys",
+    "title": "Oidipoys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:oidipoys"
+  },
+  "tlg0085.oplon_krisis": {
+    "textgroup": "tlg0085",
+    "work": "oplon_krisis",
+    "title": "Oplon Krisis",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:oplon_krisis"
+  },
+  "tlg0085.ostologoi": {
+    "textgroup": "tlg0085",
+    "work": "ostologoi",
+    "title": "Ostologoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:ostologoi"
+  },
+  "tlg0085.palamedes": {
+    "textgroup": "tlg0085",
+    "work": "palamedes",
+    "title": "Palamedes",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:palamedes"
+  },
+  "tlg0085.pentheys": {
+    "textgroup": "tlg0085",
+    "work": "pentheys",
+    "title": "Pentheys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:pentheys"
+  },
+  "tlg0085.perraibides": {
+    "textgroup": "tlg0085",
+    "work": "perraibides",
+    "title": "Perraibides",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:perraibides"
+  },
+  "tlg0085.penelope": {
+    "textgroup": "tlg0085",
+    "work": "penelope",
+    "title": "Penelope",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:penelope"
+  },
+  "tlg0085.promethes": {
+    "textgroup": "tlg0085",
+    "work": "promethes",
+    "title": "Promethes",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:promethes"
+  },
+  "tlg0085.prometheys_lyomenos": {
+    "textgroup": "tlg0085",
+    "work": "prometheys_lyomenos",
+    "title": "Prometheys Lyomenos",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:prometheys_lyomenos"
+  },
+  "tlg0085.prometheys_pyrkaeys": {
+    "textgroup": "tlg0085",
+    "work": "prometheys_pyrkaeys",
+    "title": "Prometheys Pyrkaeys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:prometheys_pyrkaeys"
+  },
+  "tlg0085.prometheys_pyrphoros": {
+    "textgroup": "tlg0085",
+    "work": "prometheys_pyrphoros",
+    "title": "Prometheys Pyrphoros",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:prometheys_pyrphoros"
+  },
+  "tlg0085.propompoi": {
+    "textgroup": "tlg0085",
+    "work": "propompoi",
+    "title": "Propompoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:propompoi"
+  },
+  "tlg0085.proteys": {
+    "textgroup": "tlg0085",
+    "work": "proteys",
+    "title": "Proteys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:proteys"
+  },
+  "tlg0085.salaminai": {
+    "textgroup": "tlg0085",
+    "work": "salaminai",
+    "title": "Salaminai",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:salaminai"
+  },
+  "tlg0085.semele": {
+    "textgroup": "tlg0085",
+    "work": "semele",
+    "title": "Semele",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:semele"
+  },
+  "tlg0085.sisyphos": {
+    "textgroup": "tlg0085",
+    "work": "sisyphos",
+    "title": "Sisyphos",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:sisyphos"
+  },
+  "tlg0085.sphigx": {
+    "textgroup": "tlg0085",
+    "work": "sphigx",
+    "title": "Sphigx",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:sphigx"
+  },
+  "tlg0085.telephos": {
+    "textgroup": "tlg0085",
+    "work": "telephos",
+    "title": "Telephos",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:telephos"
+  },
+  "tlg0085.toxotides": {
+    "textgroup": "tlg0085",
+    "work": "toxotides",
+    "title": "Toxotides",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:toxotides"
+  },
+  "tlg0085.hypsipyle": {
+    "textgroup": "tlg0085",
+    "work": "hypsipyle",
+    "title": "Hypsipyle",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:hypsipyle"
+  },
+  "tlg0085.philoktetes": {
+    "textgroup": "tlg0085",
+    "work": "philoktetes",
+    "title": "Philoktetes",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:philoktetes"
+  },
+  "tlg0085.phineys": {
+    "textgroup": "tlg0085",
+    "work": "phineys",
+    "title": "Phineys",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:phineys"
+  },
+  "tlg0085.phorkides": {
+    "textgroup": "tlg0085",
+    "work": "phorkides",
+    "title": "Phorkides",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:phorkides"
+  },
+  "tlg0085.phryges": {
+    "textgroup": "tlg0085",
+    "work": "phryges",
+    "title": "Phryges",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:phryges"
+  },
+  "tlg0085.phrygioi": {
+    "textgroup": "tlg0085",
+    "work": "phrygioi",
+    "title": "Phrygioi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {},
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:phrygioi"
+  },
+  "tlg0085.psychagogoi": {
+    "textgroup": "tlg0085",
+    "work": "psychagogoi",
+    "title": "Psychagogoi",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:psychagogoi"
+  },
+  "tlg0085.psychostasia": {
+    "textgroup": "tlg0085",
+    "work": "psychostasia",
+    "title": "Psychostasia",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:psychostasia"
+  },
+  "tlg0085.oreithyia": {
+    "textgroup": "tlg0085",
+    "work": "oreithyia",
+    "title": "Oreithyia",
+    "fragmentary": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:oreithyia"
+  },
+  "tlg0085.fragmenta": {
+    "textgroup": "tlg0085",
+    "work": "fragmenta",
+    "title": "Fragments",
+    "fragment_corpus": true,
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "nauck1889grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/experimental/aeschylus/fragment-collections.json",
+        "urn": "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1",
+        "label": "Greek (Nauck, 1889; transcription preview)",
+        "class": "greek-text",
+        "format": "fragment_collection",
+        "corresp_axis": "work"
+      }
+    }
   }
 }

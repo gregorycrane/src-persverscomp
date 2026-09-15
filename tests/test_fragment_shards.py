@@ -20,6 +20,8 @@ def test_real_shards_have_one_edition_navigation_and_separate_context(tmp_path):
         assert 'fc-verse' in html and 'fc-context' in html
         assert c.execute('pragma integrity_check').fetchone()[0]=='ok'
     assert 'pmv_work_key' not in data['works']['aeschylus-atalante']
+    published=json.loads((out/'site/catalog.json').read_text())
+    assert 'tlg0085.athamas' in published['works']
     assert json.loads((existing/'site/catalog.json').read_text())==catalog
     for file in (out/'site/data').rglob('*.db'):
         with sqlite3.connect(file) as c:
