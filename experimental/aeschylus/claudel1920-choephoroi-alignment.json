@@ -1,0 +1,73 @@
+{
+  "source": "/Users/gcrane/Downloads/aeschylus-libation-bearers-claudel-chi-084972239-1789306657.txt",
+  "source_url": "https://hdl.handle.net/2027/chi.084972239",
+  "version_urn": "urn:cts:greekLit:tlg0085.tlg006.claudel1920-fra1",
+  "label": "French (Paul Claudel, 1920; OCR, approximate alignment)",
+  "alignment": "approximate across the whole play",
+  "dramatic_text_pages": [
+    9,
+    56
+  ],
+  "printed_pages_with_text": [
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56
+  ],
+  "missing_ocr_pages": [],
+  "excluded_paratext_pages": {
+    "front_matter": [
+      1,
+      8
+    ],
+    "staging_essay_and_notes": [
+      57,
+      69
+    ]
+  },
+  "passage_cards": 87
+}

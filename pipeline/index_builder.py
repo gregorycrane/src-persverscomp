@@ -17,6 +17,28 @@ import sqlite3
 from pathlib import Path
 from pipeline.config import WORKSPACE_DIR, BUILD_DIR, DB_PATH, SRC_DIR
 
+
+def _merge_catalog_only_versions(structures, registries):
+    """Add published overlay works and versions that live outside the monolith."""
+    catalog_path = WORKSPACE_DIR / "site" / "catalog.json"
+    if not catalog_path.exists():
+        return
+    catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
+    for work_key, meta in catalog.get("works", {}).items():
+        if meta.get("experimental_fragment"):
+            structures[work_key] = [str(chapter) for part in meta.get("parts", [])
+                                    for chapter in part.get("chapters", [])]
+        for version in meta.get("versions", []):
+            canonical_id = version.get("canonical_id")
+            if not canonical_id or canonical_id in registries:
+                continue
+            registries[canonical_id] = {
+                "urn": version["urn"], "label": version["label"],
+                "class": version["text_class"], "textgroup": meta["textgroup"],
+                "work": meta["work"], "short_id": version["short_id"],
+                "doc_type": version["doc_type"],
+            }
+
 def rebuild(conn=None):
     """Rebuild index.html (+ README.md, .nojekyll) from the monolith at
     DB_PATH. Pass an open connection to reuse one from a build_all.py run;
@@ -198,6 +220,8 @@ def rebuild(conn=None):
         print("  ⚠ No alignment data found in DB.")
         print("    → Did you re-run Cell 0 after adding the 'alignments' keys to WORK_REGISTRY?")
         print("    → Check that the JSON files exist at the paths in WORK_REGISTRY.")
+
+    _merge_catalog_only_versions(extracted_structures, extracted_registries)
 
     # Serialize configurations directly into JS injection tokens
     struct_map_json      = json.dumps(extracted_structures)

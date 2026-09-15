@@ -20,7 +20,7 @@ from pipeline.treebank.agdt import parse_agdt_treebank
 from pipeline.ingest_work import ingest_works
 from pipeline.core.storage import init_storage_engine
 from pipeline.reconstitute import reconstitute_monolith
-from pipeline import sharding, index_builder
+from pipeline import sharding, index_builder, experimental_collections
 
 _CORE_DIR = Path(__file__).parent / "core"
 _CORE_FILES = [_CORE_DIR / "xml_utils.py", _CORE_DIR / "storage.py",
@@ -144,6 +144,7 @@ def main(argv=None):
             init_storage_engine(DB_PATH).close()
 
     if args.index_only:
+        experimental_collections.publish()
         conn = sqlite3.connect(str(DB_PATH))
         index_builder.rebuild(conn)
         conn.close()
@@ -170,6 +171,8 @@ def main(argv=None):
     if changed:
         sharding.split_corpus_by_work(
             str(DB_PATH), str(WORKSPACE_DIR / "site"), only_work_keys=changed)
+
+        experimental_collections.publish()
 
         # Special case (not a general lexicon pipeline): the Orlando Furioso
         # Italian glossary. Ingest just that lexicon into the monolith and

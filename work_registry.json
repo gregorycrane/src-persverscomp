@@ -2216,22 +2216,51 @@
     "work": "tlg008",
     "editions": {
       "perseus-grc2": {
-        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-grc2.xml",
-        "label": "Greek (F. Storr, 1912)",
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.perseus-grc2.xml",
+        "label": "Greek (A. S. Hunt, 1912; Perseus reference)",
         "class": "greek-text",
         "parse_mode": "poetry_cards"
+      },
+      "pearson1917-grc1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.pearson1917-grc1.xml",
+        "label": "Greek (A. C. Pearson, 1917; OCR review)",
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "lineno_sigil": "Pear."
       }
     },
-    "appcrits": {},
+    "appcrits": {
+      "pearson1917-app-lat1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.pearson1917-app-lat1.xml",
+        "label": "Apparatus (A. C. Pearson, 1917; OCR review)",
+        "class": "appcrit-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Pear.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Hunt",
+        "show_reference_line": true
+      }
+    },
     "translations": {
-      "perseus-eng3": {
-        "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0011/tlg008/tlg0011.tlg008.perseus-eng2.xml",
-        "label": "English (Sir Richard Jebb, 1904)",
+      "perseus-eng2": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.perseus-eng2.xml",
+        "label": "English (Anne Mahoney, adapted from Walker)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
       }
     },
-    "commentaries": {},
+    "commentaries": {
+      "pearson1917-com-eng1": {
+        "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.pearson1917-com-eng1.xml",
+        "label": "Commentary (A. C. Pearson, 1917; OCR review)",
+        "class": "commentary-text",
+        "parse_mode": "line_commentary",
+        "lineno_sigil": "Pear.",
+        "anchor_axis": "corresp",
+        "reference_sigil": "Hunt",
+        "show_reference_line": true
+      }
+    },
     "treebanks": {
       "daphne-tb-grc1": {
         "path": "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.conllu",
@@ -2240,7 +2269,10 @@
         "parse_mode": "conllu",
         "speakers_csv": ""
       }
-    }
+    },
+    "edition_alignments": [
+      "/Users/gcrane/github/AntigonesPublic/data/tlg0011/tlg008/tlg0011.tlg008.pearson1917-grc1--perseus-grc2.align.tsv"
+    ]
   },
   "tlg0011.tlg004": {
     "textgroup": "tlg0011",
