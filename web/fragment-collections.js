@@ -136,6 +136,7 @@ window.PMVFragmentCollections = (() => {
     const breadcrumb=language ? languageNames[language] : genre ? 'Greek' : '';
     root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({}))}">Language collections</a>${breadcrumb?' / '+escape(breadcrumb):''}</nav><h1>${escape(title)}</h1>${greekCollections}${authorScope}${description?`<p>${escape(description)}</p>`:''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
     const input=root.querySelector('#fc-library-filter');
+    const survivingAeschylusPlays=standard.filter(w=>w.author==='Aeschylus').length;
     let expanded={};
     // Global All works is a reset point: it starts with no author privileged.
     // Author and genre views may remember independently opened groups.
@@ -149,7 +150,10 @@ window.PMVFragmentCollections = (() => {
       const results=root.querySelector('#fc-library-results');
       results.innerHTML=[...groups].map(([name,items])=>{
         const open=q || author || expanded[name];
-        return `<details class="fc-author-group" data-author-name="${escape(name)}" ${open?'open':''}><summary>${escape(name)} <span>(${items.length})</span>${items.some(w=>w.fragments)?`<small class="fc-author-fragments">${fragmentTotals(items)}</small>`:''}</summary><div class="fc-work-list">${items.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong>${fragmentMeta(w)}</a>`).join('')}</div></details>`;
+        const authorSummary=name==='Aeschylus'&&items.some(w=>w.fragments)
+          ? `<small class="fc-author-fragments">${survivingAeschylusPlays} surviving plays, ${data.scope.included_fragments} fragments of ${data.scope.play_headings} plays</small>`
+          : items.some(w=>w.fragments)?`<small class="fc-author-fragments">${fragmentTotals(items)}</small>`:'';
+        return `<details class="fc-author-group" data-author-name="${escape(name)}" ${open?'open':''}><summary>${escape(name)} <span>(${items.length})</span>${authorSummary}</summary><div class="fc-work-list">${items.map(w=>`<a class="fc-work" href="${escape(href(workTarget(w)))}"><strong>${escape(w.title)}</strong>${fragmentMeta(w)}</a>`).join('')}</div></details>`;
       }).join('')||'<p>No matching works.</p>';
       results.querySelectorAll('.fc-author-group').forEach(group=>group.addEventListener('toggle',()=>{
         if(q)return;
