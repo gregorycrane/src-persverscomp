@@ -1139,7 +1139,6 @@ let activeWorkKey = "tlg0003.tlg001";
         // Group work keys by author (textgroup).
         const byAuthor = {};
         for (const wk of Object.keys(works)) {
-            if (works[wk].experimental_fragment) continue;
             const tg = works[wk].textgroup || wk.split(".")[0];
             (byAuthor[tg] = byAuthor[tg] || []).push(wk);
         }
