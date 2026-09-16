@@ -1,8 +1,9 @@
 """Monolith schema + canonical-id generation. Relocated from Cell 4.
 
 NATURAL_KEY_TABLES / SURROGATE_ID_TABLES classify every table for
-reconstitute.py: natural-key tables merge from shards with a plain
-`INSERT SELECT *` (their primary key is already globally unique per work);
+reconstitute.py: natural-key tables merge from shards with
+`INSERT OR IGNORE SELECT *` (their primary key is globally unique, while
+work-level metadata is repeated in every part of a multi-part shard);
 surrogate-id tables use an AUTOINCREMENT `id` that only guarantees
 uniqueness within a single build process, so reconstitute.py must drop the
 old id and let SQLite reassign fresh ones on merge. treebank_tokens is

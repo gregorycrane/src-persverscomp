@@ -9,6 +9,7 @@ something changed.
 """
 import argparse
 import sqlite3
+from datetime import datetime, timezone
 from pathlib import Path
 
 from pipeline.config import DB_PATH, WORKSPACE_DIR
@@ -32,6 +33,87 @@ _TREEBANK_PARSE_MODE_PARSERS = {
     "conllu": parse_conllu_treebank,
     "agdt_xml": parse_agdt_treebank,
 }
+
+
+def _quick_check(db_path: Path):
+    """Return (healthy, diagnostic) without modifying the database."""
+    try:
+        conn = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+        try:
+            row = conn.execute("PRAGMA quick_check").fetchone()
+        finally:
+            conn.close()
+        diagnostic = row[0] if row else "PRAGMA quick_check returned no result"
+        # SQLite can return hundreds of page errors in one string.  The first
+        # line identifies the failure without flooding normal build output.
+        display = diagnostic if diagnostic == "ok" else diagnostic.splitlines()[0]
+        return diagnostic == "ok", display
+    except sqlite3.DatabaseError as exc:
+        return False, str(exc)
+
+
+def _ensure_monolith(db_path: Path, shard_root: Path, *, index_only=False):
+    """Ensure the build monolith exists and passes SQLite's quick check.
+
+    The monolith is a disposable build artifact; published shards are its
+    recovery source.  A damaged copy is retained with a timestamped name so
+    diagnosis remains possible, and the replacement is built separately and
+    installed atomically only after its own integrity check succeeds.
+    """
+    db_path = Path(db_path)
+    shard_root = Path(shard_root)
+    quarantine = None
+
+    if db_path.exists():
+        healthy, diagnostic = _quick_check(db_path)
+        if healthy:
+            return
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        quarantine = db_path.with_name(f"{db_path.stem}.malformed-{stamp}{db_path.suffix}")
+        db_path.replace(quarantine)
+        for suffix in ("-wal", "-shm"):
+            sidecar = Path(str(db_path) + suffix)
+            if sidecar.exists():
+                sidecar.replace(Path(str(quarantine) + suffix))
+        print(f"[monolith] integrity check failed: {diagnostic}")
+        print(f"[monolith] retained damaged database as {quarantine}")
+
+    shards_exist = shard_root.exists() and any(shard_root.rglob("*.db"))
+    if shards_exist:
+        db_path.parent.mkdir(parents=True, exist_ok=True)
+        rebuilding = db_path.with_name(f".{db_path.name}.rebuilding")
+        rebuilding.unlink(missing_ok=True)
+        try:
+            conn = reconstitute_monolith(rebuilding, shard_root)
+            row = conn.execute("PRAGMA quick_check").fetchone()
+            conn.close()
+            if not row or row[0] != "ok":
+                raise sqlite3.DatabaseError(
+                    row[0] if row else "reconstructed database returned no integrity result")
+            rebuilding.replace(db_path)
+            print(f"[monolith] installed verified reconstruction at {db_path}")
+            return
+        except Exception:
+            rebuilding.unlink(missing_ok=True)
+            if quarantine is not None and not db_path.exists():
+                quarantine.replace(db_path)
+            raise
+
+    if quarantine is not None:
+        quarantine.replace(db_path)
+        raise SystemExit(
+            f"The build monolith is malformed and no recovery shards exist under {shard_root}."
+        )
+    if index_only:
+        raise SystemExit(
+            "--index-only: no monolith and no shards found under "
+            f"{shard_root} -- nothing to build index.html from. "
+            "Run a normal `make` (or `make force`) at least once first."
+        )
+    print(f"[monolith] not present and no shards found under {shard_root} "
+          f"-- initializing an empty monolith (every work is stale).")
+    db_path.parent.mkdir(parents=True, exist_ok=True)
+    init_storage_engine(db_path).close()
 
 
 def dep_paths_for(work_key: str, meta: dict) -> list:
@@ -134,20 +216,8 @@ def main(argv=None):
                           "pick the change up by wastefully re-ingesting everything.")
     args = ap.parse_args(argv)
 
-    if not DB_PATH.exists():
-        shard_root = WORKSPACE_DIR / "site" / "data"
-        if shard_root.exists() and any(shard_root.rglob("*.db")):
-            reconstitute_monolith(DB_PATH, shard_root).close()
-        elif args.index_only:
-            raise SystemExit(
-                "--index-only: no monolith and no shards found under "
-                f"{shard_root} -- nothing to build index.html from. "
-                "Run a normal `make` (or `make force`) at least once first."
-            )
-        else:
-            print(f"[monolith] not present and no shards found under {shard_root} "
-                  f"-- initializing an empty monolith (every work is stale).")
-            init_storage_engine(DB_PATH).close()
+    shard_root = WORKSPACE_DIR / "site" / "data"
+    _ensure_monolith(DB_PATH, shard_root, index_only=args.index_only)
 
     if args.index_only:
         experimental_collections.publish()

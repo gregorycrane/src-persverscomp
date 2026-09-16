@@ -13,13 +13,24 @@ from pathlib import Path
 from pipeline.core.storage import init_storage_engine, NATURAL_KEY_TABLES, SURROGATE_ID_TABLES
 from pipeline.treebank.flatten import flatten_treebank_tokens
 
+# These tables are copied wholesale into every numbered part of a split work
+# by sharding.py.  They therefore belong in the monolith once per work, not
+# once per part.  text_units is also wholesale, but its natural primary key is
+# coalesced by INSERT OR IGNORE below.
+_REPEATED_SURROGATE_TABLES = {
+    "treebank_speakers", "token_alignments", "edition_line_alignments",
+}
+_OPTIONAL_NATURAL_TABLES = {"place_references"}
+_OPTIONAL_SURROGATE_TABLES = {"edition_line_alignments"}
+
 
 def reconstitute_monolith(out_path, shard_root, glob_pattern="*/*/*.db"):
     """Build a fresh monolith at out_path by merging every shard under
     shard_root (default layout: shard_root/<textgroup>/<work>/<tg>.<wk>.db).
 
-    Natural-key tables merge with a plain `INSERT SELECT *` -- their
-    primary key is already globally unique per work. Surrogate-id tables
+Natural-key tables merge with `INSERT OR IGNORE SELECT *` -- their
+primary key is already globally unique per work, while work metadata is
+deliberately repeated in every part of a multi-part shard. Surrogate-id tables
     (AUTOINCREMENT `id`) have the `id` column dropped and reassigned fresh
     on merge, ordered by the shard's own `id` so each work's relative
     sequence survives -- nothing downstream depends on the specific id
@@ -40,17 +51,45 @@ def reconstitute_monolith(out_path, shard_root, glob_pattern="*/*/*.db"):
         raise FileNotFoundError(f"No shards found under {shard_root} matching {glob_pattern}")
 
     n_merged = 0
+    seen_work_dirs = set()
     for shard_path in shard_paths:
+        work_dir = shard_path.parent.resolve()
+        first_part_for_work = work_dir not in seen_work_dirs
         conn.execute("ATTACH DATABASE ? AS s", (str(shard_path),))
         try:
             existing = {r[0] for r in conn.execute(
                 "SELECT name FROM s.sqlite_master WHERE type='table'"
             ).fetchall()}
 
-            for t in sorted(NATURAL_KEY_TABLES & existing):
-                conn.execute(f"INSERT INTO main.{t} SELECT * FROM s.{t}")
+            # Some annotation tables are created only when their ingest step
+            # runs, so they are absent from the base storage schema.  Recover
+            # their schema directly from the first shard that contains them.
+            main_tables = {r[0] for r in conn.execute(
+                "SELECT name FROM main.sqlite_master WHERE type='table'"
+            ).fetchall()}
+            for t in sorted(((_OPTIONAL_NATURAL_TABLES | _OPTIONAL_SURROGATE_TABLES)
+                             & existing) - main_tables):
+                schema = conn.execute(
+                    "SELECT sql FROM s.sqlite_master WHERE type='table' AND name=?", (t,)
+                ).fetchone()
+                if schema and schema[0]:
+                    conn.execute(schema[0])
+                    for (index_sql,) in conn.execute(
+                        "SELECT sql FROM s.sqlite_master "
+                        "WHERE type='index' AND tbl_name=? AND sql IS NOT NULL", (t,)
+                    ).fetchall():
+                        conn.execute(index_sql)
 
-            for t in sorted(SURROGATE_ID_TABLES & existing):
+            for t in sorted((NATURAL_KEY_TABLES | _OPTIONAL_NATURAL_TABLES) & existing):
+                # text_units (and potentially other work-level metadata) is
+                # copied into every part of a split work.  Its natural key
+                # makes those rows safe to coalesce here.  A plain INSERT
+                # made reconstruction fail as soon as it reached part 2.
+                conn.execute(f"INSERT OR IGNORE INTO main.{t} SELECT * FROM s.{t}")
+
+            for t in sorted((SURROGATE_ID_TABLES | _OPTIONAL_SURROGATE_TABLES) & existing):
+                if t in _REPEATED_SURROGATE_TABLES and not first_part_for_work:
+                    continue
                 cols = [r[1] for r in conn.execute(f"PRAGMA table_info({t})") if r[1] != "id"]
                 col_list = ", ".join(cols)
                 conn.execute(
@@ -59,6 +98,14 @@ def reconstitute_monolith(out_path, shard_root, glob_pattern="*/*/*.db"):
                 )
             n_merged += 1
             conn.commit()  # DETACH requires no pending transaction on the attached db
+            seen_work_dirs.add(work_dir)
+        except Exception:
+            # A failed INSERT leaves a transaction open, and SQLite refuses
+            # DETACH while that transaction is active.  Roll it back so the
+            # original error is preserved instead of being masked by
+            # "database s is locked" from DETACH.
+            conn.rollback()
+            raise
         finally:
             conn.execute("DETACH DATABASE s")
 
