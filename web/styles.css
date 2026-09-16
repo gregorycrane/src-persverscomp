@@ -175,6 +175,11 @@
         .cross-panel { background: #fafafa; }
         .column-content-scroll { flex: 1; overflow-y: auto; padding: 15px; }
         .panel-header { background: #660000; color: #fff; padding: 4px 8px; font-size: 11px; font-weight: bold; position: sticky; top: 0; z-index: 5; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+        /* Wrap controls before long edition labels can push display modes offscreen. */
+        .panel-header { flex-wrap: wrap; gap: 4px 8px; }
+        .column-edition-controls { display: flex; flex: 1 1 240px; flex-wrap: wrap; align-items: center; gap: 4px; min-width: 0; max-width: 100%; }
+        .column-edition-controls .edition-select-dropdown { flex: 1 1 160px; min-width: 0; max-width: 100%; }
+        .column-edition-controls .translit-mode-select { flex: 0 0 auto; max-width: 100%; margin-left: 0; }
         .edition-select-dropdown { background: #fff; color: #333; font-size: 10px; padding: 1px 4px; border: 1px solid #ccc; border-radius: 2px; outline: none; cursor: pointer; }
         .translit-mode-select { background: #fdf3e3; color: #660000; font-size: 10px; padding: 1px 4px; margin-left: 4px; border: 1px solid #d8c090; border-radius: 2px; outline: none; cursor: pointer; }
 
