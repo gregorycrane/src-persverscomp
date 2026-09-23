@@ -27,10 +27,14 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
 
     rebuilt = json.loads((site / "catalog.json").read_text(encoding="utf-8"))
     fragments = {k: v for k, v in rebuilt["works"].items()
-                 if v.get("fragmentary")}
+                 if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
+    sophocles = {k: v for k, v in rebuilt["works"].items()
+                 if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
     assert result == {"fragment_works": 71, "claudel_versions": 3}
     assert len(fragments) == 71
+    assert len(sophocles) == 102
     assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 466
+    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 1128
     assert (site / "fragment-collections.json").exists()
 
     assert "tlg0085.athamas" in fragments

@@ -37,6 +37,10 @@ def _merge_catalog_only_versions(structures, registries):
                 "class": version["text_class"], "textgroup": meta["textgroup"],
                 "work": meta["work"], "short_id": version["short_id"],
                 "doc_type": version["doc_type"],
+                "source_version": version.get("source_version"),
+                "source_certainty": version.get("source_certainty"),
+                "source_note": version.get("source_note"),
+                "translation_of": version.get("translation_of"),
             }
 
 def rebuild(conn=None):
@@ -52,7 +56,7 @@ def rebuild(conn=None):
     cursor = conn.cursor()
 
     # 1. Dynamically reconstruct GLOBAL_REGISTRIES from text_units table
-    cursor.execute("SELECT canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type FROM text_units")
+    cursor.execute("SELECT canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type, source_version, source_certainty, source_note, translation_of FROM text_units")
     extracted_registries = {}
     for row in cursor.fetchall():
         extracted_registries[row[0]] = {
@@ -62,7 +66,11 @@ def rebuild(conn=None):
             "textgroup": row[4],
             "work": row[5],
             "short_id": row[6],
-            "doc_type": row[7]
+            "doc_type": row[7],
+            "source_version": row[8],
+            "source_certainty": row[9],
+            "source_note": row[10],
+            "translation_of": row[11]
         }
 
     # 2. Dynamically reconstruct GLOBAL_STRUCTURES from alignment_grid table

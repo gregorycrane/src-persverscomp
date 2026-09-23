@@ -18,6 +18,7 @@ from pathlib import Path
 
 TEXTGROUP_NAMESPACE = {
     "tlg": "greekLit", "phi": "latinLit",
+    "anon": "angLit",
     "ferdowsi": "persLit", "boeckh": "latinLit",
     "heike": "japaneseLit", "ariosto": "itaLit",
 }
@@ -42,7 +43,11 @@ def init_storage_engine(db_path):
             textgroup TEXT NOT NULL,
             work TEXT NOT NULL,
             short_id TEXT NOT NULL,
-            doc_type TEXT NOT NULL
+            doc_type TEXT NOT NULL,
+            source_version TEXT,
+            source_certainty TEXT,
+            source_note TEXT,
+            translation_of TEXT
         );
     """)
     cursor.execute("""

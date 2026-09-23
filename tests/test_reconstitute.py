@@ -9,7 +9,7 @@ def _write_part(path, section):
     path.parent.mkdir(parents=True, exist_ok=True)
     conn = init_storage_engine(path)
     conn.execute(
-        "INSERT INTO text_units VALUES (?,?,?,?,?,?,?,?)",
+        "INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)",
         ("tlg9999_tlg001_ed1", "urn:cts:greekLit:tlg9999.tlg001.ed1",
          "Test edition", "greek-text", "tlg9999", "tlg001", "ed1", "poetry_cards"),
     )

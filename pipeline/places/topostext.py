@@ -1,5 +1,4 @@
-"""ToposText place-citation ingestion (Thucydides/Iliad/Agamemnon/Apollonius/
-Nonnus pilot). Relocated from Cell 7.
+"""ToposText place-citation ingestion.
 
 PLACE_REFERENCE_WORKS is its own small registry keyed by CSV-filename label,
 not by WORK_REGISTRY's work_key -- ingest_place_references() now accepts an
@@ -17,6 +16,7 @@ PLACE_REFERENCE_WORKS = {
     "iliad":      ("tlg0012", "tlg001"),
     "agamemnon":  ("tlg0085", "tlg005"),
     "nonnus":  ("tlg2045", "tlg001"),
+    "pausanias": ("tlg0525", "tlg001"),
 }
 
 def _citation_to_card_chapter(citation, book_intervals, has_books):
@@ -64,19 +64,20 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
     WORK_HAS_BOOKS = work_has_books or {}
     cur = conn.cursor()
     target_labels = labels or list(PLACE_REFERENCE_WORKS.keys())
-    # Drop and recreate rather than CREATE TABLE IF NOT EXISTS: earlier runs
-    # of this cell (before the book/chapter-separation fix) created this
-    # table WITHOUT a book column, and IF NOT EXISTS would silently keep
-    # that stale schema around, breaking every insert below with "no column
-    # named book". Safe to drop unconditionally since the table is always
-    # fully repopulated from the CSVs on every run regardless.
-    conn.execute("DROP TABLE IF EXISTS place_references")
+    # Keep unrelated works intact during a targeted rebuild.  Old databases
+    # without the book column predate the current schema and must be upgraded.
+    existing_columns = {
+        row[1] for row in conn.execute("PRAGMA table_info(place_references)")
+    }
+    if existing_columns and "book" not in existing_columns:
+        conn.execute("DROP TABLE place_references")
     conn.execute("""
-        CREATE TABLE place_references (
+        CREATE TABLE IF NOT EXISTS place_references (
             textgroup TEXT NOT NULL,
             work TEXT NOT NULL,
             book TEXT,
             chapter TEXT NOT NULL,
+            section TEXT,
             mention_type TEXT,
             mention_name TEXT,
             place_id TEXT,
@@ -86,8 +87,13 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
             feature_type TEXT
         )
     """)
+    existing_columns = {
+        row[1] for row in conn.execute("PRAGMA table_info(place_references)")
+    }
+    if "section" not in existing_columns:
+        conn.execute("ALTER TABLE place_references ADD COLUMN section TEXT")
 
-    # Idempotent re-run: clear any previously-loaded rows for these three
+    # Idempotent re-run: clear any previously-loaded rows for the selected
     # works before inserting, so running this cell twice doesn't duplicate
     # every row.
     for label in target_labels:
@@ -106,6 +112,10 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
         work_meta = WORK_REGISTRY[work_key]
         is_poetry = any(c.get("parse_mode") == "poetry_cards"
                          for c in work_meta.get("editions", {}).values())
+        is_book_chapter_section = any(
+            c.get("parse_mode") == "book_chapter_section"
+            for c in work_meta.get("editions", {}).values()
+        )
         has_books = WORK_HAS_BOOKS.get(work_key, True)
 
         book_intervals = None
@@ -119,17 +129,25 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
             for row in reader:
                 book_val = None
                 chapter = row["citation"]
+                section = None
                 if is_poetry:
                     book_val, mapped = _citation_to_card_chapter(row["citation"], book_intervals, has_books)
                     if mapped is None:
                         unmatched += 1
                         continue
                     chapter = mapped
+                elif is_book_chapter_section:
+                    parts = row["citation"].split(".")
+                    if len(parts) < 3:
+                        unmatched += 1
+                        continue
+                    book_val, chapter = parts[0], parts[1]
+                    section = ".".join(parts[2:])
 
                 lat = float(row["lat"]) if row["lat"] not in (None, "") else None
                 lon = float(row["lon"]) if row["lon"] not in (None, "") else None
                 rows_for_work.append((
-                    tg, wk, book_val, chapter,
+                    tg, wk, book_val, chapter, section,
                     row["mention_type"], row["mention_name"],
                     row["place_id"], row["place_name"], lat, lon,
                     row["feature_type"],
@@ -137,9 +155,9 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
 
         conn.executemany(
             "INSERT INTO place_references "
-            "(textgroup, work, book, chapter, mention_type, mention_name, "
+            "(textgroup, work, book, chapter, section, mention_type, mention_name, "
             " place_id, place_name, lat, lon, feature_type) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             rows_for_work,
         )
         conn.commit()

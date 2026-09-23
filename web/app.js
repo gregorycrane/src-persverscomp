@@ -761,7 +761,15 @@ async function shardPartPathsForWorkKey(workKey, shardPathHint) {
         const meta = catalog.works && catalog.works[workKey];
         if (meta && Array.isArray(meta.parts) && meta.parts.length) {
             const [tg, wk] = workKey.split(".");
-            return meta.parts.map(p => `${DATA_DIR}/${tg}/${wk}/${p.file}`);
+            return meta.parts.map(p => {
+                // SQLite shards are long-lived static assets. Their schema
+                // and content can change while the filename remains stable,
+                // so key the request by the published digest (or byte size
+                // for catalogs generated before digests were added).
+                const revision = p.sha256 || p.bytes;
+                const path = `${DATA_DIR}/${tg}/${wk}/${p.file}`;
+                return revision ? `${path}?v=${encodeURIComponent(revision)}` : path;
+            });
         }
     } catch (e) {
         console.warn(`Could not read catalog.json parts for ${workKey}, falling back to a guessed path:`, e);
@@ -862,8 +870,16 @@ function queryAll(db, sql, params = []) {
     while (st.step()) out.push(st.getAsObject());
     st.free(); return out;
 }
+function textUnitProjection(db, includeCanonicalId = false) {
+    const available = new Set(queryAll(db, "PRAGMA table_info(text_units)").map(row => row.name));
+    const required = includeCanonicalId
+        ? ["canonical_id", "urn", "label", "text_class", "textgroup", "work", "short_id", "doc_type"]
+        : ["short_id", "urn", "label", "doc_type", "text_class"];
+    const optional = ["source_version", "source_certainty", "source_note", "translation_of"];
+    return required.concat(optional.map(name => available.has(name) ? name : `NULL AS ${name}`)).join(", ");
+}
 function registryForWork(db) {
-    return queryAll(db, "SELECT short_id, urn, label, doc_type, text_class FROM text_units ORDER BY doc_type, short_id");
+    return queryAll(db, `SELECT ${textUnitProjection(db)} FROM text_units ORDER BY doc_type, short_id`);
 }
 function treebankForChapter(db, version, chapter) {
     return queryAll(db,
@@ -895,9 +911,20 @@ function metricalForChapter(db, version, chapter) {
 // per (mention, place) pair; the same place can legitimately appear more
 // than once if it's mentioned more than once in the same chapter --
 // callers that want one pin per place should de-duplicate by place_id.
-function placesForChapter(db, chapter, book) {
+function placeReferencesHaveSection(db) {
+    return queryAll(db, "PRAGMA table_info(place_references)")
+        .some(row => row.name === "section");
+}
+function placesForChapter(db, chapter, book, section = null) {
+    if (placeReferencesHaveSection(db)) {
+        return queryAll(db,
+            "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, section " +
+            "FROM place_references WHERE chapter=? AND (? IS NULL OR book IS NULL OR book=?) " +
+            "AND (? IS NULL OR section IS NULL OR section=?)",
+            [chapter, book || null, book || null, section, section]);
+    }
     return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book " +
+        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, NULL AS section " +
         "FROM place_references WHERE chapter=? AND (? IS NULL OR book IS NULL OR book=?)",
         [chapter, book || null, book || null]);
 }
@@ -911,8 +938,9 @@ function placesForChapter(db, chapter, book) {
 // bare card-label chapter (e.g. "1-21") never contains a "." so it can
 // never spuriously match the prose-style prefix check either.
 function placesForBook(db, book) {
+    const sectionExpr = placeReferencesHaveSection(db) ? "section" : "NULL AS section";
     return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book " +
+        `SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, ${sectionExpr} ` +
         "FROM place_references WHERE book=? OR chapter=? OR chapter LIKE ?",
         [book, book, `${book}.%`]);
 }
@@ -920,8 +948,9 @@ function placesForBook(db, book) {
 // Agamemnon) where there's no book to scope to -- the natural "show
 // everything" equivalent of placesForBook for a flat-structured text.
 function placesForWork(db) {
+    const sectionExpr = placeReferencesHaveSection(db) ? "section" : "NULL AS section";
     return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter " +
+        `SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, ${sectionExpr} ` +
         "FROM place_references");
 }
 // The next (book, chapter) passage after the given one, in true global
@@ -971,6 +1000,7 @@ let activeWorkKey = "tlg0003.tlg001";
     let currentActiveMode = "parallel";
     let activeColumnsCount = 3;
     let columnEditions = { f: "", c1: "", c2: "", c3: "", c4: "", c5: "", c6: "" };
+    let columnCommentaryLanguage = { f: "translation", c1: "translation", c2: "translation", c3: "translation", c4: "translation", c5: "translation", c6: "translation" };
 
     // Minimal default styling for TOC buttons the current Focus edition has
     // no real content at (see getChaptersWithContent / renderNavigationControls).
@@ -1548,7 +1578,22 @@ let activeWorkKey = "tlg0003.tlg001";
             validEditions.forEach(([canonicalId, meta]) => {
                 const opt = document.createElement("option");
                 opt.value = canonicalId;
-                opt.textContent = meta.label;
+                const source = meta.source_version && validEditions.find(
+                    ([, candidate]) => candidate.short_id === meta.source_version
+                );
+                opt.textContent = source
+                    ? `${meta.label} — based on ${source[1].label}`
+                    : meta.label;
+                if (source) {
+                    const certainty = meta.source_certainty
+                        ? ` (${meta.source_certainty.replaceAll("_", " ")})`
+                        : "";
+                    opt.title = meta.source_note
+                        ? `Source edition: ${source[1].label}${certainty}. ${meta.source_note}`
+                        : `Source edition: ${source[1].label}${certainty}`;
+                } else if (["translation", "commentary", "appcrit"].includes(meta.doc_type)) {
+                    opt.title = "Source edition not identified";
+                }
                 
                 if (categories[meta.doc_type]) {
                     categories[meta.doc_type].appendChild(opt);
@@ -1652,7 +1697,7 @@ function populateNavigationFromShard() {
         
         // 2. Build TEXT_REGISTRY using the proper canonical_id to match the dropdowns
         const editions_result = window.dbInstance.exec(
-            "SELECT canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type FROM text_units");
+            `SELECT ${textUnitProjection(window.dbInstance, true)} FROM text_units`);
         if (editions_result[0]) {
             window.TEXT_REGISTRY = window.TEXT_REGISTRY || {};
             editions_result[0].values.forEach(row => {
@@ -1663,7 +1708,11 @@ function populateNavigationFromShard() {
                     textgroup: row[4],
                     work: row[5],
                     short_id: row[6],
-                    doc_type: row[7]
+                    doc_type: row[7],
+                    source_version: row[8],
+                    source_certainty: row[9],
+                    source_note: row[10],
+                    translation_of: row[11]
                 };
             });
             console.log("[v40] populated TEXT_REGISTRY with " + editions_result[0].values.length + " editions");
@@ -2043,7 +2092,9 @@ function initializeRoutingFromURL() {
             renderActiveContentLayers(payload);
         } catch(err) {
             console.error("renderActiveContentLayers error:", err);
-            document.getElementById("status-readout").innerText = "Render error: " + err.message;
+            const statusReadout = document.getElementById("status-readout");
+            if (statusReadout) statusReadout.innerText = "Render error: " + err.message;
+            else alert("Render error: " + err.message);
         }
         if (activeSectionRange) {
             // Center the FIRST highlighted line, not the whole match set --
@@ -2897,6 +2948,7 @@ function initializeRoutingFromURL() {
 
         const params = new URLSearchParams({ work: activeWorkKey, chapter: chapterValue });
         if (currentBk) params.set("book", currentBk);
+        if (activeSectionFilter !== null) params.set("section", activeSectionFilter);
         window.open(`./map.html?${params.toString()}`, "_blank");
     }
 
@@ -3197,12 +3249,19 @@ function initializeRoutingFromURL() {
     // (rare, but some lexicon/apparatus-style sections use non-digit keys).
     function sectionValueInRange(secValue) {
         if (!activeSectionRange || secValue == null) return false;
-        const n = parseInt(secValue, 10);
+        const rawValue = String(secValue);
+        // Multi-book poetry keeps the source citation in subdoc as BOOK.LINE
+        // (for example Nonnus ``7.166``).  parseInt("7.166") is 7, so the
+        // sentence was incorrectly hidden while viewing the 166-174 card.
+        // Compare the line component after the numeric book prefix instead.
+        const qualifiedLine = rawValue.match(/^\d+\.(\d+)/);
+        const localValue = qualifiedLine ? qualifiedLine[1] : rawValue;
+        const n = parseInt(localValue, 10);
         const a = parseInt(activeSectionRange.start, 10);
         const b = parseInt(activeSectionRange.end, 10);
         if (!isNaN(n) && !isNaN(a) && !isNaN(b)) return n >= a && n <= b;
-        return String(secValue) === String(activeSectionRange.start) ||
-               String(secValue) === String(activeSectionRange.end);
+        return localValue === String(activeSectionRange.start) ||
+               localValue === String(activeSectionRange.end);
     }
 
     function tbSentMatchesSection(sent, filter, isPoetry) {
@@ -3215,8 +3274,9 @@ function initializeRoutingFromURL() {
             // caused EVERY sentence to fail this check, get tb-sent-dimmed,
             // and vanish (that class is display:none, not a dim effect --
             // see styles.css). sent.subdoc is the sentence's own citation
-            // (the raw verse line, e.g. "377") and is what should actually
-            // be compared against a raw-line range like 377-379.
+            // (a raw verse line such as "377", or a book-qualified citation
+            // such as "7.166") and is what should actually be compared
+            // against a raw-line range like 166-174.
             return isPoetry ? sectionValueInRange(sent.subdoc) : sectionValueInRange(sent.section);
         }
         if (!filter) return true;
@@ -4355,6 +4415,19 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
     };
     function tbPosColor(pos) { return TB_POS_COLORS[pos] || '#444'; }
 
+    function _versionLanguageLabel(meta, fallback) {
+        if (!meta) return fallback;
+        const id = meta.short_id || "";
+        const match = id.match(/-(eng|deu|ger|fra|ita|lat|grc)\d+$/i);
+        const names = { eng: "English", deu: "German", ger: "German", fra: "French", ita: "Italian", lat: "Latin", grc: "Greek" };
+        return match ? names[match[1].toLowerCase()] : fallback;
+    }
+
+    window.setCommentaryLanguage = function(prefix, mode) {
+        columnCommentaryLanguage[prefix] = mode;
+        triggerViewRefresh();
+    };
+
     function renderActiveContentLayers(payload) {
         ['f', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'].forEach(prefix => {
             const targetContainer = document.getElementById(`content_${prefix}`);
@@ -4383,6 +4456,36 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const isAlnTgt   = alnPair && (shortId === alnPair.tgt_version);
             const hasAln     = isAlnSrc || isAlnTgt;
 
+            // A translated commentary can explicitly name the commentary it
+            // translates. Keep both registered versions independent in the
+            // selector, while also offering an immediate language switch in
+            // the translated column so readers do not lose their passage or
+            // column layout when checking the source wording.
+            const originalCommentaryId = activeEditionMeta && activeEditionMeta.translation_of;
+            const originalCommentaryMeta = originalCommentaryId
+                ? Object.values(TEXT_REGISTRY).find(meta =>
+                    meta.textgroup === activeEditionMeta.textgroup &&
+                    meta.work === activeEditionMeta.work &&
+                    meta.short_id === originalCommentaryId)
+                : null;
+            const hasBilingualCommentary = Boolean(originalCommentaryMeta) &&
+                naturalSectionKeys(payload.sections).some(sec =>
+                    payload.sections[sec][shortId] || payload.sections[sec][originalCommentaryId]);
+            const commentaryMode = columnCommentaryLanguage[prefix] || "translation";
+            if (hasBilingualCommentary) {
+                const controls = document.createElement("div");
+                controls.className = "commentary-language-controls";
+                const translatedLabel = _versionLanguageLabel(activeEditionMeta, "Translation");
+                const originalLabel = _versionLanguageLabel(originalCommentaryMeta, "Original");
+                controls.innerHTML = `
+                    <span class="commentary-language-label">Show</span>
+                    <button type="button" class="commentary-language-btn ${commentaryMode === 'translation' ? 'active' : ''}"
+                        onclick="setCommentaryLanguage('${prefix}', 'translation')">${translatedLabel}</button>
+                    <button type="button" class="commentary-language-btn ${commentaryMode === 'original' ? 'active' : ''}"
+                        onclick="setCommentaryLanguage('${prefix}', 'original')">${originalLabel}</button>`;
+                targetContainer.appendChild(controls);
+            }
+
             naturalSectionKeys(payload.sections).forEach(sec => {
                 // For card-based poetry works (Sophocles, Homer, Hesiod,
                 // Aeschylus -- anything ingested via poetry_cards/card_prose),
@@ -4404,7 +4507,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     : (activeSectionFilter !== null && activeSectionFilter !== sec));
                 const row = document.createElement("div");
                 row.className = `section-row s-idx-${sec} ${isHidden ? 'hidden-section' : ''} ${inRange ? 'urn-range-highlight' : ''}`;
-                let txt = payload.sections[sec][shortId] || "<i>Not divided separately in this edition.</i>";
+                const contentShortId = hasBilingualCommentary && commentaryMode === "original"
+                    ? originalCommentaryId : shortId;
+                let txt = payload.sections[sec][contentShortId] || "<i>Not divided separately in this edition.</i>";
                 const visualIndexLabel = isPoetry ? sec : `[${sec}]`;
 
                 // Apply token alignment wrapping for source/target columns
@@ -4428,6 +4533,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     }
                 }
 
+            const hasNumberedLines = txt.includes('class="line-num-cell"');
             if (isPoetry) {
                 const wrapper = document.createElement("div");
                 wrapper.className = `${cssClass} poetry-grid-layout`;
@@ -4463,6 +4569,13 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     });
                 }
                 row.appendChild(wrapper);
+            } else if (hasNumberedLines) {
+                    row.innerHTML = `
+                        <div class="lineated-prose-layout ${cssClass}">
+                            <span class="prose-marker"><a href="javascript:void(0)" onclick="selectSectionDirectly('${sec}')">${visualIndexLabel}</a></span>
+                            <div class="poetry-grid-layout lineated-section">${txt}</div>
+                        </div>
+                    `;
             } else {
                     row.innerHTML = `
                         <div class="prose-inline-layout ${cssClass}">
@@ -4900,4 +5013,62 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             if (el && !el.hidden && !(el.contains(e.target))) hide();
         });
         document.addEventListener('keydown', e => { if (e.key === 'Escape') hide(); });
+    })();
+
+    // ── Source-footnote popover ──────────────────────────────────────────
+    // Stand-off TEI notes are embedded on their linked <ref type="note">
+    // markers during ingestion. Hover gives a quick preview; click or
+    // keyboard activation pins the note so it remains readable.
+    (function initTeiNotePopover() {
+        let el = null, pinned = false, hideTimer = null;
+        const ensure = () => {
+            if (el) return el;
+            el = document.createElement('div');
+            el.id = 'tei-note-popover';
+            el.hidden = true;
+            el.setAttribute('role', 'note');
+            el.addEventListener('mouseenter', () => clearTimeout(hideTimer));
+            el.addEventListener('mouseleave', () => { if (!pinned) hide(); });
+            document.body.appendChild(el);
+            return el;
+        };
+        const esc = s => { const d = document.createElement('div'); d.innerText = s == null ? '' : s; return d.innerHTML; };
+        const show = anchor => {
+            clearTimeout(hideTimer);
+            const box = ensure();
+            const label = anchor.getAttribute('data-note-label') || anchor.textContent.trim();
+            const body = anchor.getAttribute('data-note') || '';
+            box.innerHTML = `<div class="note-pop-label">Footnote ${esc(label)}</div><div>${esc(body)}</div>` +
+                (pinned ? '<div class="note-pop-hint">click outside or press Escape to dismiss</div>' : '');
+            box.hidden = false;
+            const r = anchor.getBoundingClientRect();
+            const w = box.offsetWidth, h = box.offsetHeight;
+            let left = r.left, top = r.bottom + 6;
+            if (left + w > window.innerWidth - 8) left = window.innerWidth - w - 8;
+            if (top + h > window.innerHeight - 8) top = r.top - h - 6;
+            box.style.left = Math.max(8, Math.round(left)) + 'px';
+            box.style.top = Math.max(8, Math.round(top)) + 'px';
+        };
+        const hide = () => { if (el) el.hidden = true; pinned = false; };
+        document.addEventListener('mouseover', e => {
+            const a = e.target.closest && e.target.closest('.tei-note-ref[data-note]');
+            if (a && !pinned) show(a);
+        });
+        document.addEventListener('mouseout', e => {
+            if (pinned) return;
+            const a = e.target.closest && e.target.closest('.tei-note-ref[data-note]');
+            if (a) hideTimer = setTimeout(hide, 120);
+        });
+        document.addEventListener('click', e => {
+            const a = e.target.closest && e.target.closest('.tei-note-ref[data-note]');
+            if (a) { e.stopPropagation(); pinned = true; show(a); return; }
+            if (el && !el.hidden && !el.contains(e.target)) hide();
+        });
+        document.addEventListener('keydown', e => {
+            const a = e.target.closest && e.target.closest('.tei-note-ref[data-note]');
+            if (a && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault(); pinned = true; show(a); return;
+            }
+            if (e.key === 'Escape') hide();
+        });
     })();

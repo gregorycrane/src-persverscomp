@@ -162,6 +162,16 @@ def dep_paths_for(work_key: str, meta: dict) -> list:
         paths.append(Path(tsv))
     if meta.get("speakers_csv"):
         paths.append(Path(meta["speakers_csv"]))
+    # A work's ToposText CSV is an input just like its TEI. Without this,
+    # correcting or refreshing place data would leave the manifest green
+    # and silently skip the map rebuild.
+    from pipeline.places.topostext import (
+        PLACE_REFERENCE_WORKS, TOPOTEXT_CSV_DIR, ingest_place_references,
+    )
+    for label, pair in PLACE_REFERENCE_WORKS.items():
+        if work_key == f"{pair[0]}.{pair[1]}":
+            paths.append(TOPOTEXT_CSV_DIR / f"citations_{label}.csv")
+            paths.append(Path(ingest_place_references.__globals__["__file__"]))
     paths.extend(sorted(parser_files, key=str))
     return paths
 

@@ -182,7 +182,7 @@ def build_translation(source, output, existing, score=None):
     for database in (aggregate, shadow):
         conn = init_storage_engine(database) if database == aggregate else sqlite3.connect(str(database))
         try:
-            conn.execute('INSERT OR REPLACE INTO text_units VALUES (?,?,?,?,?,?,?,?)', unit)
+            conn.execute('INSERT OR REPLACE INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)', unit)
             conn.executemany('INSERT OR REPLACE INTO text_segments VALUES (?,?,?)', segments)
             conn.executemany('INSERT OR REPLACE INTO edition_chapter_order VALUES (?,?,?,?,?,?)', order)
             conn.commit()

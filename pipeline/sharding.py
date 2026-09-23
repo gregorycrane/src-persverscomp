@@ -1,6 +1,7 @@
 """Shards the monolith into site/data/<textgroup>/<work>/<tg>.<wk>.db.
 Relocated from Cell 9.
 """
+import hashlib
 import json
 import sqlite3
 from pathlib import Path
@@ -25,6 +26,14 @@ _HEAVY_COLS = {
     "treebank_tokens": ["form", "lemma", "feats", "gloss", "translit", "ltranslit"],
     "metrical_lines": ["line_json"],
 }
+
+
+def _file_sha256(path):
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for chunk in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 def _table_cols(src, table):
     return [c[1] for c in src.execute(f"PRAGMA table_info({table})").fetchall()]
@@ -184,6 +193,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "boeckh1858": "August Boeckh",
         "ferdowsi": "Ferdowsi",
         "heike": "Heike Monogatari",
+        "anon": "Beowulf Poet",
 
         "tlg0001": "Apollonius of Rhodes",
         "tlg0003": "Thucydides",
@@ -192,7 +202,10 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "tlg0012": "Homer",
         "tlg0019": "Aristophanes",
         "tlg0020": "Hesiod",
+        "tlg0059": "Plato",
         "tlg0085": "Aeschylus",
+        "tlg0525": "Pausanias",
+        "tlg0527": "Septuaginta",
         "tlg0086": "Aristotle",
         "tlg2045": "Nonnus",
     }
@@ -219,6 +232,8 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
 
         "tlg0001.tlg001": "Argonautica",
         "tlg0003.tlg001": "History",
+        "tlg0059.tlg003": "Crito",
+        "tlg0525.tlg001": "Description of Greece",
         "tlg0006.tlg001": "Cyclops",
         "tlg0006.tlg002": "Alcestis",
         "tlg0006.tlg003": "Medea",
@@ -264,6 +279,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "tlg0020.tlg002": "Works and Days",
         "tlg0020.tlg003": "Shield of Heracles",
         "tlg0085.tlg001": "Suppliant Women",
+        "tlg0527.tlg032": "Job",
         "tlg0085.tlg002": "Persians",
         "tlg0085.tlg003": "Prometheus Bound",
         "tlg0085.tlg004": "Seven Against Thebes",
@@ -486,6 +502,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
                 "part": i, "file": part_file,
                 split_mode + "s": [str(x) for x in group],
                 "bytes": sz,
+                "sha256": _file_sha256(shard_path),
             })
 
         # ── Work-level metadata (unchanged in spirit: computed against the
@@ -493,7 +510,9 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         metadata = {"textgroup": tg, "work": wk, "parts": parts_meta, "annotations": {}}
 
         versions = [dict(r) for r in src.execute(
-            "SELECT short_id, urn, label, doc_type, text_class FROM text_units WHERE textgroup=? AND work=?",
+            "SELECT short_id, urn, label, doc_type, text_class, source_version, "
+            "source_certainty, source_note, translation_of "
+            "FROM text_units WHERE textgroup=? AND work=?",
             (tg, wk))]
         metadata["versions"] = versions
 
@@ -510,8 +529,13 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
 
         work_label = src.execute(
             "SELECT MIN(label) FROM text_units WHERE textgroup=? AND work=?", (tg, wk)).fetchone()
-        metadata["label"] = work_label[0] if work_label[0] else work_key
-        metadata["title"] = WORK_TITLES.get(work_key, metadata["label"])
+        metadata["label"] = WORK_REGISTRY.get(work_key, {}).get(
+            "title", work_label[0] if work_label[0] else work_key
+        )
+        metadata["title"] = WORK_TITLES.get(
+            work_key,
+            WORK_REGISTRY.get(work_key, {}).get("title", metadata["label"]),
+        )
 
         # Static, per-work display metadata (not derived from the shard,
         # doesn't vary by part). unit_labels overrides the client's default

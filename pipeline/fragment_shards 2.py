@@ -29,7 +29,7 @@ def build_shards(data, output, existing):
         fragments=record['fragments']
         refs=[urn+':'+f['number']+'.1' for f in fragments]
         for db in (conn,aggregate):
-            db.execute('INSERT INTO text_units VALUES (?,?,?,?,?,?,?,?)',unit)
+            db.execute('INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)',unit)
         for i,f in enumerate(fragments):
             verse=''.join('<div class="fc-line"><span>'+html.escape(l['ref'])+'</span><div lang="grc">'+html.escape(l['text'])+'</div></div>' for l in f['lines'])
             if not verse: verse='<p>No quoted verse is encoded in this testimonium.</p>'

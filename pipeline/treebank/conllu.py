@@ -3,7 +3,8 @@ import os
 import re
 from collections import OrderedDict
 
-def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, has_books=True):
+def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None,
+                          has_books=True, citation_scheme=None):
     paths = [path] if isinstance(path, (str, os.PathLike)) else list(path)
     missing = [p for p in paths if not os.path.exists(p)]
     if missing:
@@ -74,6 +75,15 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
     # change behavior for anything that already works.
     _SENT_ID_CITATION_RE = re.compile(r'^\D*(\d+)\.(\d+)\.(\d+)$')
 
+    def _normalized_sent_id_citation(sid):
+        """Return a display citation when sent_id carries the configured
+        chapter.section.sentence address. The source identifier may retain a
+        work prefix (``job13.17.1``); PMV's passage label should not."""
+        if citation_scheme != 'chapter.section.sentence' or not sid:
+            return None
+        m = _SENT_ID_CITATION_RE.match(str(sid))
+        return '.'.join(m.groups()) if m else None
+
     def _derive_prose_chapter_section(ref, sid=None):
         """For prose (no card_intervals) addressing. Two distinct shapes are
         possible depending on whether the WORK itself has book divisions
@@ -108,6 +118,12 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
         see _SENT_ID_CITATION_RE above -- since it's frequently a more
         trustworthy source than Ref for prose collections.
         """
+        if sid and citation_scheme == 'chapter.section.sentence':
+            m = _SENT_ID_CITATION_RE.match(str(sid))
+            if m:
+                chapter, section, _sentence = m.groups()
+                return chapter, section
+
         if sid and has_books:
             # Scoped to has_books=True only -- that's Boeckh's actual case
             # and the only one this fix has been validated against. Leaving
@@ -307,8 +323,9 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                     # Boeckh's Ref is a stale page/line count, unrelated to
                     # the oration.paragraph.sentence scheme sent_id encodes).
                     sent['subdoc'] = (
-                        sid if (sid and _SENT_ID_CITATION_RE.match(str(sid)))
-                        else (first_ref if first_ref is not None else sid)
+                        _normalized_sent_id_citation(sid)
+                        or (sid if (sid and _SENT_ID_CITATION_RE.match(str(sid)))
+                            else (first_ref if first_ref is not None else sid))
                     )
                 elif first_ref is not None:
                     sent['subdoc'] = first_ref
@@ -551,7 +568,7 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None, h
                     # can't match as-is. Strip everything before the trailing
                     # BOOK.LINE[suffix] shape; a ref with no such shape (e.g.
                     # some other corpus's bare "1", no dot) is left untouched.
-                    _m_ref = re.search(r'(\d+\.\d+[a-zA-Z]*)$', _raw_ref)
+                    _m_ref = re.search(r'(\d+\.\d+\.\d+[a-zA-Z]*|\d+\.\d+[a-zA-Z]*)$', _raw_ref)
                     ref = _m_ref.group(1) if _m_ref else _raw_ref
                     # OGA single-play citations use TITLE_LINE, e.g.
                     # Cl._1214 or Birds_1. Remove only that explicit

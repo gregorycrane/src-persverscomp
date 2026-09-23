@@ -4,11 +4,14 @@ import re
 from html import escape
 from collections import OrderedDict
 import os
+from urllib.parse import urlsplit
 from pipeline.core.xml_utils import NS, safe_parse, find_text_root, extract_text_recursive
 
 def parse_line_commentary_tei(path, master_intervals, lineno_sigil=None,
                               anchor_axis="native", reference_sigil=None,
-                              show_reference_line=False):
+                              show_reference_line=False,
+                              content_view="original",
+                              translation_storage="parallel"):
     """Line-keyed verse commentary (e.g. Jebb on Sophocles).
 
     Bins every comment into the SAME canonical card as the verse baseline, using
@@ -158,6 +161,57 @@ def parse_line_commentary_tei(path, master_intervals, lineno_sigil=None,
             quietly loses the lemma/note distinction, which is what made it
             easy to miss.
         """
+        if content_view == "translation":
+            # Machine-translated commentaries retain the source note and put
+            # its translated rendering in a sibling <seg type="translation">.
+            # Render only those top-level translated notes here: nested
+            # translation segments (for an individual <mentioned> or <quote>)
+            # are already incorporated into the complete translated note.
+            translations = [
+                child for child in p
+                if child.tag.split("}")[-1] == "seg"
+                and child.get("type") == "translation"
+                and child.get("{http://www.w3.org/XML/1998/namespace}lang") == "eng"
+            ]
+            if translations:
+                entries = []
+                for node in translations:
+                    body = extract_text_recursive(node, strip_paragraphs=True).strip()
+                    if body:
+                        entries.append(
+                            f'<div class="comm-entry"><span class="comm-note">{body}</span></div>'
+                        )
+                return "".join(entries)
+
+            source_notes = [
+                child for child in p
+                if child.tag.split("}")[-1] == "seg"
+                and child.get("type") == "comment"
+            ]
+            entries = []
+            for node in source_notes:
+                body = extract_text_recursive(node, strip_paragraphs=True).strip()
+                if body:
+                    if translation_storage == "in_place":
+                        # Some translated commentary files replace the source
+                        # prose inside <seg type="comment"> rather than adding
+                        # a sibling <seg type="translation">. In that encoding
+                        # this body is already English; labelling it as a German
+                        # fallback is both noisy and factually wrong.
+                        entries.append(
+                            f'<div class="comm-entry"><span class="comm-note">{body}</span></div>'
+                        )
+                    else:
+                        # Do not make genuinely untranslated source notes
+                        # disappear. The marker exposes partial coverage to
+                        # editors when the parallel-translation encoding is used.
+                        entries.append(
+                            '<div class="comm-entry">'
+                            '<span class="comm-note"><em>English translation unavailable; '
+                            f'German original follows.</em> {body}</span></div>'
+                        )
+            return "".join(entries)
+
         lemma_nodes = []
         note_nodes = []
         for gc in p.iter():
@@ -265,6 +319,7 @@ def parse_line_commentary_tei(path, master_intervals, lineno_sigil=None,
     cur_anchor_display = None  # human-facing label for the current anchor, used for the visible badge
     cur_reference_display = None  # reference-edition passage from @corresp
     last_emitted_display = None  # avoids repeating the same lineno badge for every sibling <p>
+    emitted_source_pages = set()  # OCR often repeats the same <pb> in adjacent commline divs
 
     def _maybe_emit_lineno_badge():
         nonlocal last_emitted_display
@@ -282,6 +337,29 @@ def parse_line_commentary_tei(path, master_intervals, lineno_sigil=None,
                 parts.append(f'<span class="comm-reference-line">→ {escape(reference)}</span>')
             _emit(cur_bk, cur_anchor, f'<div class="comm-lineno">{" ".join(parts)}</div>')
             last_emitted_display = display_key
+
+    def _entry_reference(elem):
+        """Find a precise reference-edition passage carried by a lemma."""
+        for node in elem.iter():
+            if node is elem:
+                continue
+            node_tag = node.tag.split("}")[-1]
+            is_lemma = (
+                node_tag in ("mentioned", "lem")
+                or (node_tag == "seg" and node.get("type") == "lemma")
+            )
+            if not is_lemma or node.get("type") == "translation":
+                continue
+            for target in (node.get("corresp") or "").split():
+                if target.startswith("#") or ":" not in target:
+                    continue
+                passage = target.rsplit(":", 1)[-1].strip()
+                book_prefix = f"{cur_bk}."
+                if cur_bk and passage.startswith(book_prefix):
+                    passage = passage[len(book_prefix):]
+                if _LEAD_NUM_RE.match(passage):
+                    return _display_label(passage)
+        return None
 
     def _walk(elem):
         nonlocal cur_bk, cur_anchor, cur_anchor_display, cur_reference_display
@@ -369,9 +447,36 @@ def parse_line_commentary_tei(path, master_intervals, lineno_sigil=None,
                 _maybe_emit_lineno_badge()
                 _emit(cur_bk, cur_anchor, f'<div class="comm-head">{h}</div>')
             return
+        if tag == "pb":
+            page = (elem.get("n") or "").strip()
+            facs = (elem.get("facs") or "").strip()
+            parsed = urlsplit(facs)
+            safe_facs = parsed.scheme in ("http", "https") and bool(parsed.netloc)
+            page_key = (page, facs)
+            if safe_facs and page_key not in emitted_source_pages:
+                emitted_source_pages.add(page_key)
+                _maybe_emit_lineno_badge()
+                label = f"Source page {page}" if page else "Source page"
+                _emit(
+                    cur_bk,
+                    cur_anchor,
+                    '<div class="comm-source-page">'
+                    f'<a href="{escape(facs, quote=True)}" target="_blank" '
+                    f'rel="noopener noreferrer" title="Open {escape(label)} scan">'
+                    f'{escape(label)} <span aria-hidden="true">↗</span></a></div>',
+                )
+            return
         if tag == "p":
             _maybe_emit_lineno_badge()
-            _emit(cur_bk, cur_anchor, _render_p(elem))
+            entry_html = _render_p(elem)
+            entry_reference = _entry_reference(elem)
+            if entry_reference and entry_reference != cur_reference_display:
+                prefix = f"{reference_sigil} " if reference_sigil else "reference "
+                entry_html = (
+                    '<div class="comm-entry-reference">'
+                    f'→ {escape(prefix + entry_reference)}</div>{entry_html}'
+                )
+            _emit(cur_bk, cur_anchor, entry_html)
             return
         for ch in elem:
             _walk(ch)

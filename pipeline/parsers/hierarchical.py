@@ -4,12 +4,39 @@ import os
 import re
 from pipeline.core.xml_utils import NS, safe_parse, find_text_root, extract_text_recursive
 
-def parse_hierarchical_tei(path, include_nonparagraph_blocks=False):
+def parse_hierarchical_tei(path, include_nonparagraph_blocks=False,
+                           line_citation_scheme=None):
     if not os.path.exists(path): return None
     tree = safe_parse(path)
     text_entry = find_text_root(tree.getroot())
     if text_entry is None: return None
     data = OrderedDict()
+
+    def render_block(block, citation_prefix):
+        """Render direct verse lines as citation-bearing text while leaving
+        verse quoted inside prose as ordinary quotation content."""
+        block_tag = block.tag.split('}')[-1]
+        if block_tag == 'l':
+            return extract_text_recursive(
+                block, strip_paragraphs=False,
+                citation_prefix=citation_prefix,
+            ).strip()
+        if block_tag == 'lg':
+            rendered = []
+            for child in block:
+                if not isinstance(child.tag, str):
+                    continue
+                if child.tag.split('}')[-1] == 'l':
+                    rendered.append(extract_text_recursive(
+                        child, strip_paragraphs=False,
+                        citation_prefix=citation_prefix,
+                    ).strip())
+                else:
+                    rendered.append(extract_text_recursive(
+                        child, strip_paragraphs=False, _nested=True,
+                    ).strip())
+            return ' '.join(part for part in rendered if part)
+        return extract_text_recursive(block, strip_paragraphs=False).strip()
 
     def walk_divisions(node, current_path):
         tag = node.tag.split('}')[-1]
@@ -112,7 +139,12 @@ def parse_hierarchical_tei(path, include_nonparagraph_blocks=False):
             if bk not in data: data[bk] = OrderedDict()
             if ch not in data[bk]: data[bk][ch] = OrderedDict()
             
-            combined_txt = ' '.join(extract_text_recursive(p, strip_paragraphs=False).strip() for p in paragraphs)
+            citation_prefix = (
+                f"{ch}.{sec}"
+                if line_citation_scheme == 'chapter.section.line'
+                else None
+            )
+            combined_txt = ' '.join(render_block(p, citation_prefix) for p in paragraphs)
             if combined_txt:
                 if sec in data[bk][ch]:
                     data[bk][ch][sec] += " " + combined_txt

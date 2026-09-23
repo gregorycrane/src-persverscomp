@@ -42,6 +42,7 @@ from pipeline.parsers.hierarchical import parse_hierarchical_tei
 from pipeline.parsers.speech_collection import parse_speech_collection_tei
 from pipeline.parsers.book_chapter_section import parse_book_chapter_section_tei
 from pipeline.parsers.line_commentary import parse_line_commentary_tei
+from pipeline.parsers.section_sentences import parse_section_sentences_tei
 from pipeline.parsers.speakers import parse_speakers_csv
 from pipeline.parsers.metrical import parse_metrical_tsv
 from pipeline.treebank.conllu import parse_conllu_treebank
@@ -121,12 +122,21 @@ def ingest_editions_and_structure(conn, target_keys):
                 }[category]
 
         for v_id, cfg in work_meta.get("treebanks", {}).items():
+            source_version = cfg.get("source_version")
+            if source_version not in work_meta.get("editions", {}):
+                raise ValueError(
+                    f"{work_key}.{v_id}: treebank source_version {source_version!r} "
+                    "must name a registered edition"
+                )
             canonical_id = f"{tg}_{wk}_{v_id}_treebank"
             cursor.execute("""
-                INSERT OR REPLACE INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+                INSERT OR REPLACE INTO text_units
+                (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type,
+                 source_version, source_certainty, source_note)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
             """, (canonical_id, f"urn:cts:{_ns(work_key)}:{work_key}.{v_id}",
-                  cfg["label"], cfg["class"], tg, wk, v_id, "treebank"))
+                  cfg["label"], cfg["class"], tg, wk, v_id, "treebank", source_version,
+                  cfg.get("source_certainty"), cfg.get("source_note")))
 
         # ── Ingest metrical annotation files ──────────────────────────────
         for v_id, cfg in work_meta.get("metrics", {}).items():
@@ -167,10 +177,26 @@ def ingest_editions_and_structure(conn, target_keys):
                 # is already guaranteed unique by construction.
                 canonical_id = f"{canonical_id}_" + re.sub(r"[^0-9a-zA-Z]+", "_", v_id).strip("_").lower()
             _used_canonical_ids.add(canonical_id)
+            source_version = cfg.get("source_version")
+            if source_version is not None and source_version not in work_meta.get("editions", {}):
+                raise ValueError(
+                    f"{work_key}.{v_id}: source_version {source_version!r} "
+                    "must name a registered edition"
+                )
+            translation_of = cfg.get("translation_of")
+            if translation_of is not None and translation_of not in editions_combined:
+                raise ValueError(
+                    f"{work_key}.{v_id}: translation_of {translation_of!r} "
+                    "must name a registered text version"
+                )
             cursor.execute("""
-                INSERT OR REPLACE INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?);
-            """, (canonical_id, f"urn:cts:{_ns(work_key)}:{work_key}.{v_id}", cfg["label"], cfg["class"], tg, wk, v_id, doc_type))
+                INSERT OR REPLACE INTO text_units
+                (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type,
+                 source_version, source_certainty, source_note, translation_of)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+            """, (canonical_id, f"urn:cts:{_ns(work_key)}:{work_key}.{v_id}",
+                  cfg["label"], cfg["class"], tg, wk, v_id, doc_type, source_version,
+                  cfg.get("source_certainty"), cfg.get("source_note"), translation_of))
 
 
         master_intervals = None
@@ -240,7 +266,9 @@ def ingest_editions_and_structure(conn, target_keys):
                                                    lineno_sigil=cfg.get("lineno_sigil"),
                                                    anchor_axis=cfg.get("anchor_axis", "native"),
                                                    reference_sigil=cfg.get("reference_sigil"),
-                                                   show_reference_line=cfg.get("show_reference_line", False))
+                                                   show_reference_line=cfg.get("show_reference_line", False),
+                                                   content_view=cfg.get("content_view", "original"),
+                                                   translation_storage=cfg.get("translation_storage", "parallel"))
             elif p_mode == "milestones":
                 # Translation whose own div hierarchy (e.g. Twining's Part/Section) does
                 # NOT match the canonical chapter:section scheme, but which carries inline
@@ -252,6 +280,8 @@ def ingest_editions_and_structure(conn, target_keys):
                                              milestone_scheme=cfg.get("milestone_scheme", "chapter_section"))
             elif p_mode == "reading_lines":
                 parsed = parse_reading_lines_tei(cfg["path"])
+            elif p_mode == "section_sentences":
+                parsed = parse_section_sentences_tei(cfg["path"])
             elif p_mode == "book_chapter_section":
                 # Strict book>chapter>section div hierarchy where a section may
                 # bundle several <s> sentences under one <p> (e.g. Heike Monogatari).
@@ -277,7 +307,11 @@ def ingest_editions_and_structure(conn, target_keys):
                 for _bk, _s in _book_summaries_this_edition.items():
                     _work_book_summaries.setdefault(_bk, _s)
             else:
-                parsed = parse_hierarchical_tei(cfg["path"], include_nonparagraph_blocks=work_meta.get("strict_section_alignment", False))
+                parsed = parse_hierarchical_tei(
+                    cfg["path"],
+                    include_nonparagraph_blocks=work_meta.get("strict_section_alignment", False),
+                    line_citation_scheme=cfg.get("line_citation_scheme"),
+                )
             
             if parsed is not None and sum(len(secs) for chs in parsed.values() for secs in chs.values()) > 0:
                 work_corpus[v_id] = parsed
@@ -491,7 +525,7 @@ def ingest_treebank_and_metrical(conn, target_keys, pending_metrical, work_has_b
         tg = work_meta["textgroup"]
         wk = work_meta["work"]
 
-        # Build card intervals once per work (needed by both treebank and metrical)
+        # Build the work-wide card intervals used by metrical annotations.
         tb_card_intervals = None
         if any(c.get("parse_mode") == "poetry_cards"
                for c in work_meta.get("editions", {}).values()):
@@ -512,14 +546,24 @@ def ingest_treebank_and_metrical(conn, target_keys, pending_metrical, work_has_b
 
         # ── Treebank sentences ────────────────────────────────────────────
         for v_id, cfg in work_meta.get("treebanks", {}).items():
+            # Route annotations through the work's shared display cards.  A
+            # source edition can have a finer physical segmentation than the
+            # canonical viewer grid: Nonnus's Greek yields one interval per
+            # verse (``166-166``), while its shared Greek/translation card is
+            # ``166-174``.  Rebuilding intervals from the source edition alone
+            # therefore stored valid sentences under keys the client could
+            # never request.  source_version remains the provenance link; it
+            # must not replace the work's canonical navigation axis.
+            treebank_card_intervals = tb_card_intervals
             p_mode = cfg.get("parse_mode")
             if p_mode == "conllu":
                 sentences, doc_credits = parse_conllu_treebank(cfg["path"], v_id, tg, wk,
-                                                  card_intervals=tb_card_intervals,
-                                                  has_books=WORK_HAS_BOOKS.get(work_key, True))
+                                                  card_intervals=treebank_card_intervals,
+                                                  has_books=WORK_HAS_BOOKS.get(work_key, True),
+                                                  citation_scheme=cfg.get("citation_scheme"))
             elif p_mode == "agdt_xml":
                 sentences, doc_credits = parse_agdt_treebank(cfg["path"], v_id, tg, wk,
-                                                  card_intervals=tb_card_intervals)
+                                                  card_intervals=treebank_card_intervals)
             else:
                 print(f"  ✗ {v_id}: unsupported treebank parse_mode {p_mode!r}")
                 continue
@@ -659,6 +703,25 @@ def ingest_works(conn, work_keys=None, delete_existing=True):
     """
     target_keys = work_keys or list(WORK_REGISTRY.keys())
 
+    # Incremental builds reuse the monolith created by earlier releases.
+    # Add the nullable column in place before deleting or inserting any work.
+    text_unit_columns = {
+        row[1] for row in conn.execute("PRAGMA table_info(text_units)")
+    }
+    optional_provenance_columns = {
+        "source_version": "TEXT",
+        "source_certainty": "TEXT",
+        "source_note": "TEXT",
+        "translation_of": "TEXT",
+    }
+    added_provenance_column = False
+    for column, sql_type in optional_provenance_columns.items():
+        if column not in text_unit_columns:
+            conn.execute(f"ALTER TABLE text_units ADD COLUMN {column} {sql_type}")
+            added_provenance_column = True
+    if added_provenance_column:
+        conn.commit()
+
     if delete_existing:
         _delete_existing_rows(conn, target_keys)
 
@@ -667,5 +730,16 @@ def ingest_works(conn, work_keys=None, delete_existing=True):
     ingest_token_alignments(conn, target_keys)
     ingest_edition_alignments(conn, target_keys)
     flatten_treebank_tokens(conn, target_keys)
+    # Place citations are work-level annotations. Replace only the targeted
+    # works so an incremental build leaves every other map intact.
+    from pipeline.places.topostext import PLACE_REFERENCE_WORKS, ingest_place_references
+    place_labels = [
+        label for label, pair in PLACE_REFERENCE_WORKS.items()
+        if f"{pair[0]}.{pair[1]}" in target_keys
+    ]
+    if place_labels:
+        ingest_place_references(
+            conn, labels=place_labels, work_has_books=work_has_books
+        )
     conn.commit()
     return work_has_books

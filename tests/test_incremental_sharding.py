@@ -10,7 +10,7 @@ def test_incremental_sharding_rewrites_only_requested_work(tmp_path):
     for work in ("tlg001", "tlg002"):
         urn = f"urn:cts:greekLit:tlg9999.{work}:1.1"
         conn.execute(
-            "INSERT INTO text_units VALUES (?,?,?,?,?,?,?,?)",
+            "INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)",
             (f"tlg9999_{work}_ed1", f"urn:cts:greekLit:tlg9999.{work}.ed1",
              f"Edition {work}", "greek-text", "tlg9999", work, "ed1", "poetry_cards"))
         conn.execute(
@@ -37,3 +37,5 @@ def test_incremental_sharding_rewrites_only_requested_work(tmp_path):
     catalog = json.loads((site / "catalog.json").read_text(encoding="utf-8"))
     assert catalog["works"]["tlg9999.tlg002"] == {"sentinel": True}
     assert "tlg9999.tlg001" in catalog["works"]
+    part = catalog["works"]["tlg9999.tlg001"]["parts"][0]
+    assert len(part["sha256"]) == 64

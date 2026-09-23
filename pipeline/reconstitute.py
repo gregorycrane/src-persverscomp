@@ -85,7 +85,14 @@ deliberately repeated in every part of a multi-part shard. Surrogate-id tables
                 # copied into every part of a split work.  Its natural key
                 # makes those rows safe to coalesce here.  A plain INSERT
                 # made reconstruction fail as soon as it reached part 2.
-                conn.execute(f"INSERT OR IGNORE INTO main.{t} SELECT * FROM s.{t}")
+                main_cols = [r[1] for r in conn.execute(f"PRAGMA main.table_info({t})")]
+                shard_cols = {r[1] for r in conn.execute(f"PRAGMA s.table_info({t})")}
+                common_cols = [c for c in main_cols if c in shard_cols]
+                col_list = ", ".join(common_cols)
+                conn.execute(
+                    f"INSERT OR IGNORE INTO main.{t} ({col_list}) "
+                    f"SELECT {col_list} FROM s.{t}"
+                )
 
             for t in sorted((SURROGATE_ID_TABLES | _OPTIONAL_SURROGATE_TABLES) & existing):
                 if t in _REPEATED_SURROGATE_TABLES and not first_part_for_work:

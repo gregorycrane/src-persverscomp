@@ -46,6 +46,21 @@ def test_play_cross_reference_preserves_cts_targets():
     assert '>l. 243</span>' in html
 
 
+def test_linked_footnote_ref_carries_note_for_accessible_popover():
+    line = node(
+        '<l xmlns="{ns}" n="5">Phoebus<ref type="note" '
+        'target="#chs-note-2">2</ref>.</l>'
+    )
+    note = node(
+        '<note xmlns="{ns}" xml:id="chs-note-2" n="2">'
+        'Phoibos means radiant.</note>'
+    )
+    html = extract_text_recursive(line, footnote_lookup={'chs-note-2': note})
+    assert 'class="tei-ref tei-note-ref"' in html
+    assert 'data-note="Phoibos means radiant."' in html
+    assert 'aria-label="Footnote 2: Phoibos means radiant."' in html
+
+
 def test_citation_with_block_quote_keeps_following_prose_in_a_block():
     p = node(
         '<p xmlns="{ns}"><cit><bibl n="Aesch. Eum. 1"/>'

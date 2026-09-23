@@ -343,6 +343,36 @@
             font-weight: 600;
             border-bottom: 1px dotted currentColor;
         }
+        .tei-note-ref {
+            display: inline-block;
+            min-width: 1.15em;
+            margin-left: 0.08em;
+            color: #7a0000;
+            font: 700 0.72em/1.2 Georgia, serif;
+            text-align: center;
+            vertical-align: super;
+            cursor: help;
+            border-bottom: 1px dotted currentColor;
+        }
+        .tei-note-ref:focus { outline: 2px solid #b68b32; outline-offset: 2px; }
+        #tei-note-popover {
+            position: fixed;
+            z-index: 10001;
+            max-width: min(32rem, calc(100vw - 24px));
+            padding: 0.7rem 0.85rem;
+            color: #2f241f;
+            background: #fffdf7;
+            border: 1px solid #b9a88d;
+            border-radius: 5px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+            font: 0.92rem/1.45 Georgia, serif;
+        }
+        #tei-note-popover .note-pop-label {
+            margin-bottom: 0.3rem;
+            color: #790000;
+            font-weight: 700;
+        }
+        #tei-note-popover .note-pop-hint { margin-top: 0.4rem; color: #756b62; font-size: 0.78rem; }
         .commentary-text .tei-quote {
             color: #3f3028;
         }
@@ -401,9 +431,36 @@
         .prose-inline-layout .prose-marker { font-weight: bold; color: #336699; margin-right: 8px; display: inline-block; }
         .prose-inline-layout .prose-body-inline { display: inline; }
         .prose-body-inline p, .prose-body-inline div { display: inline !important; margin: 0 !important; padding: 0 !important; }
+        .lineated-prose-layout { display: grid; grid-template-columns: 36px minmax(0, 1fr); column-gap: 4px; width: 100%; }
+        .lineated-prose-layout > .prose-marker { grid-column: 1; text-align: right; padding-top: 1px; font-weight: bold; color: #336699; }
+        .lineated-prose-layout > .lineated-section { grid-column: 2; }
 
         .speaker-attr { color: #660000; font-weight: bold; font-variant: small-caps; letter-spacing: 0.5px; display: block; margin-top: 8px; margin-bottom: 4px; }
-        .poetry-grid-layout .speaker-attr { grid-column: 1 / span 2; display: block !important; font-weight: bold; color: #660000; }        .render-italic, .render-italics { font-style: italic; }
+        .poetry-grid-layout .speaker-attr { grid-column: 1 / span 2; display: block !important; font-weight: bold; color: #660000; }
+        .poetry-grid-layout .tei-page-break { grid-column: 1 / -1; }
+        .render-italic, .render-italics { font-style: italic; }
+
+.tei-page-break {
+    display: block;
+    width: max-content;
+    margin: 0.55em 0 0.25em;
+    padding: 1px 6px;
+    border: 1px solid #c9c3b6;
+    border-radius: 3px;
+    color: #705738;
+    background: #f7f3e9;
+    font-family: sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    text-decoration: none;
+}
+a.tei-page-break:hover,
+a.tei-page-break:focus-visible {
+    color: #fff;
+    border-color: #7a541a;
+    background: #7a541a;
+}
         .render-bold { font-weight: bold; }
         
         .note { font-size: 11px; color: #555; background: #fdfbf7; border-left: 2px solid #880000; padding: 2px 6px; margin: 4px 0 4px 1em; display: block; }
@@ -419,6 +476,11 @@
         .app-crit:hover { background: #f6efe2; }
         .app-crit-empty { border-bottom: 0; }
         .app-crit-empty::after { margin-left: 0; }
+        .tei-expan {
+            text-decoration: underline dotted rgba(92, 48, 28, 0.45);
+            text-underline-offset: 0.16em;
+            cursor: help;
+        }
 
         /* JS-driven apparatus popover (see initAppCritPopover in app.js) */
         #app-crit-popover {
@@ -463,6 +525,23 @@
     font-style: italic;
     color: #332211;
     line-height: 1.65;
+}
+
+/* Keep a displayed quotation and its CHS source attribution together. */
+.tei-cit-block {
+    grid-column: 1 / -1;
+    display: block;
+    margin: 0.65em 0 1em;
+}
+.tei-cit-block .quote-block {
+    margin-bottom: 0.35em !important;
+}
+.tei-cit-block .tei-bibl-right {
+    display: block;
+    margin: 0 1.5em 0.8em 3em;
+    text-align: right;
+    color: #6d553e;
+    font-style: normal;
 }
 
 /* Prose introduction to a "reading" selection (e.g. Pizzi Shahnameh excerpts),
@@ -573,6 +652,19 @@
             letter-spacing: 0.02em;
         }
         .foreign-xgrc:hover { color: #0a4d46; }
+
+        /* CHS sourcebook terms: semantically TEI <term xml:lang="grc-Latn">. */
+        .tei-term[data-lang="grc-Latn"] {
+            font-style: italic;
+            color: #0f6e64;
+            letter-spacing: 0.02em;
+            cursor: help;
+        }
+        .tei-term[data-lang="grc-Latn"]:hover {
+            color: #0a4d46;
+            text-decoration: underline dotted;
+            text-underline-offset: 2px;
+        }
 
         /* Inline line-number markers: <seg rend="subscript"|"superscript"> */
         .seg-subscript, .seg-superscript {
@@ -923,6 +1015,40 @@
 }
 
 .commentary-text .comm-entry { margin: 0.4em 0; }
+.commentary-language-controls {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    padding: 5px 10px 7px;
+    background: #fff;
+    border-bottom: 1px solid #e3dfd3;
+}
+.commentary-language-label {
+    margin-right: 2px;
+    color: #999;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+}
+.commentary-language-btn {
+    padding: 2px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    color: #777;
+    background: #f5f4ef;
+    font-size: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.commentary-language-btn.active {
+    color: #fff;
+    border-color: #660000;
+    background: #660000;
+}
 .commentary-text .comm-lineno {
     display: inline-block;
     font-family: monospace;
@@ -954,3 +1080,85 @@
 }
 .commentary-text .comm-entry:first-child,
 .commentary-text .comm-lineno:first-child { margin-top: 0; }
+
+.commentary-text .comm-source-page {
+    margin: 0.15em 0 0.45em;
+    font-size: 10.5px;
+}
+.commentary-text .comm-source-page a {
+    display: inline-block;
+    padding: 2px 7px;
+    border: 1px solid #c9c3b6;
+    border-radius: 3px;
+    color: #60451d;
+    background: #f7f3e9;
+    font-family: sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+}
+.commentary-text .comm-source-page a:hover,
+.commentary-text .comm-source-page a:focus-visible {
+    border-color: #7a541a;
+    color: #fff;
+    background: #7a541a;
+    text-decoration: none;
+}
+
+.commentary-text .comm-entry-reference {
+    display: inline-block;
+    margin: 0.2em 0 0.05em;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: #2a4b7c;
+    background: #eef2f7;
+    font-family: monospace;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+/* Commentary is stored as prose, but its generated line labels and entries
+   are real structural blocks. The general prose rule above deliberately
+   flattens nested divs with !important; restore the commentary hierarchy so
+   a label cannot run into the end of the preceding note and every new lemma
+   begins on a readable line. */
+.commentary-text .prose-body-inline .comm-lineno {
+    display: inline-block !important;
+    margin: 1.05em 0 0.3em !important;
+    padding: 1px 6px !important;
+}
+.commentary-text .prose-body-inline .comm-lineno:first-child {
+    margin-top: 0 !important;
+}
+.commentary-text .prose-body-inline .comm-entry {
+    display: block !important;
+    margin: 0 0 0.85em !important;
+    padding: 0.15em 0.35em 0.65em !important;
+    border-bottom: 1px solid #e7ddcb;
+}
+.commentary-text .prose-body-inline .comm-head,
+.commentary-text .prose-body-inline .comm-source-page {
+    display: block !important;
+    margin: 0.75em 0 0.35em !important;
+}
+.commentary-text .prose-body-inline .comm-entry-reference {
+    display: inline-block !important;
+    margin: 0.2em 0 0.15em !important;
+    padding: 1px 6px !important;
+}
+
+/* Machine translations attached to quoted Greek are editorial aids rather
+   than part of the running commentary. Brackets remain in the HTML so the
+   distinction survives copy/paste and unstyled views as well as the UI. */
+.tei-inline-translation {
+    display: inline;
+    margin: 0 0.12em;
+    padding: 0.04em 0.2em;
+    border: 1px solid #c8d8e6;
+    border-radius: 3px;
+    color: #244f73;
+    background: #f1f6fa;
+    font-family: inherit;
+    font-size: 0.94em;
+    font-style: normal;
+    font-weight: normal;
+}

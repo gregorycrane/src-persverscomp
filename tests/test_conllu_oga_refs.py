@@ -40,3 +40,17 @@ def test_lettered_card_and_damaged_first_reference(tmp_path):
     assert ss[0]['chapter'] == '100-150'
     assert ss[0]['book'] is None
     assert ss[0]['tokens'][0]['ref'] == 'Pl._NaN'
+
+
+def test_oga_three_level_prose_reference_keeps_book():
+    import tempfile
+    from pathlib import Path
+    with tempfile.TemporaryDirectory() as directory:
+        source = Path(directory) / 'source.conllu'
+        source.write_text('# sent_id = 1\n1\tword\tlemma\tNOUN\t_\t_\t0\troot\t_\tref=Descr.Gr._1.12.3|gloss=word\n')
+        sentences, _ = parse_conllu_treebank(
+            source, 'oga', 'tlg0525', 'tlg001', None, True)
+    sentence = sentences[0]
+    assert sentence['tokens'][0]['ref'] == '1.12.3'
+    assert (sentence['book'], sentence['chapter'], sentence['section']) == (
+        '1', '1.12', '3')

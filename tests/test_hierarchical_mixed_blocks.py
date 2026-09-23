@@ -15,3 +15,21 @@ def test_section_with_lines_and_mixed_prose(tmp_path):
     html = data['3']
     assert html.count('Quoted verse.') == 1
     assert html.index('Third start.') < html.index('Quoted verse.') < html.index('Third end.')
+
+
+def test_line_group_preserves_local_line_numbers_and_full_citations(tmp_path):
+    from pipeline.parsers.hierarchical import parse_hierarchical_tei
+    p = tmp_path / 'lineated.xml'
+    p.write_text('''<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+      <div type="chapter" n="13"><div type="section" n="17">
+        <lg><l n="1">First line.</l><l n="2">Second line.</l></lg>
+      </div></div>
+    </body></text></TEI>''')
+    html = parse_hierarchical_tei(
+        str(p), include_nonparagraph_blocks=True,
+        line_citation_scheme='chapter.section.line',
+    )['1']['13']['17']
+    assert html.count('class="line-num-cell"') == 2
+    assert 'data-n="1" data-cite="13.17.1"' in html
+    assert 'data-n="2" data-cite="13.17.2"' in html
+    assert html.index('First line.') < html.index('Second line.')

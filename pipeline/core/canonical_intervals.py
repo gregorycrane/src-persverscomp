@@ -88,7 +88,7 @@ def build_poetry_canonical_intervals(editions_dict):
         n_val = (elem.get("n") or "").strip()
         if subtype == "book" and n_val:
             current_book = n_val
-        elif subtype == "poem" and n_val:
+        elif subtype in ("poem", "card") and n_val:
             lines = []
             for l in elem.iter():
                 if l.tag.split("}")[-1] == "l":
@@ -97,9 +97,13 @@ def build_poetry_canonical_intervals(editions_dict):
                     if m: lines.append(int(m.group(1)))
             first_l = min(lines) if lines else 1
             last_l = max(lines) if lines else first_l
+            # A numbered poem is itself the reader-facing citation. Legacy
+            # Perseus ``card`` divs instead mark a run of continuous verse
+            # lines, so expose their actual line range in the navigation.
+            label = n_val if subtype == "poem" or not lines else f"{first_l}-{last_l}"
             book_intervals.setdefault(current_book, []).append({
                 "card_n": n_val,
-                "label": n_val,
+                "label": label,
                 "book": current_book,
                 "start_line": first_l,
                 "end_line": last_l
@@ -296,4 +300,3 @@ def build_milestone_remap(xml_path):
             if gl and cur_s is not None:
                 remap[gl] = cur_s
     return remap
-

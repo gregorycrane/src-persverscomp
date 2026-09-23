@@ -56,10 +56,11 @@ def parse_book_chapter_section_tei(path):
                         for s_el in s_elements
                     )
                 else:
-                    # No <s> children at all (stray prose) -- fall back to
-                    # whatever <p> text exists so nothing silently vanishes.
+                    # No <s> children at all (stray prose) -- preserve every
+                    # direct paragraph.  This includes nested block citations
+                    # such as CHS Pausanias <cit><quote/><bibl/></cit> pairs.
                     ps = (node.findall('{http://www.tei-c.org/ns/1.0}p')
-                          or node.findall('p'))
+                              or node.findall('p'))
                     sent_txt = ' '.join(
                         extract_text_recursive(p_el, strip_paragraphs=False).strip()
                         for p_el in ps

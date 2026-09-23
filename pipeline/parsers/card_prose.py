@@ -94,6 +94,11 @@ def parse_card_prose_tei(path, master_intervals, lineno_sigil=None):
                 _ivs = master_intervals.get(current_book)        # ← add
                 if _ivs:                                         # ← add
                     cur_label = _ivs[0]["label"]                 # ← add  (kill stale carry-over)
+            elif st == 'card' and elem.get('n'):
+                next_label = card_n_to_label.get((current_book, elem.get('n').strip()))
+                if next_label and next_label != cur_label:
+                    flush()
+                    cur_label = next_label
         elif tag == 'milestone':
             u = elem.get('unit') or ''
             nv = (elem.get('n') or '').strip()
@@ -124,20 +129,24 @@ def parse_card_prose_tei(path, master_intervals, lineno_sigil=None):
             # and, when @corresp is present, prefix the paragraph with a
             # bracketed line-range badge.
             #
-            # The corresp tail is BOOK.LINE-BOOK.LINE (e.g. "1.1-1.4", both
-            # ends repeat the book), not "BOOK.LINE-LINE" -- stripping only a
-            # single leading "book." from the whole string (as the Wendel
-            # commentary fix does for its OWN, differently-shaped fallback
-            # case) left the second half's book number in place, producing
-            # "[1-1.4]" instead of "[1-4]". Strip the book prefix from EACH
-            # dash-separated endpoint independently instead.
+            # The first numeric component may be either BOOK (the usual
+            # multi-book shape, ``1.57-1.64``) or CARD (single-book carded
+            # poetry, e.g. Beowulf ``53.53-53.58``).  Prefer an actual card
+            # number in the current book.  This both keeps the paragraph in
+            # that card and strips the correct prefix from the visible badge.
             corresp = elem.get('corresp') or ''
             line_label = None
+            _m_bl = re.search(r':(\d+)\.(\d+)', corresp)
+            corresp_card_label = None
+            corresp_prefix = None
+            if _m_bl:
+                corresp_prefix = _m_bl.group(1)
+                corresp_card_label = card_n_to_label.get((current_book, corresp_prefix))
             if ':' in corresp:
                 rng = corresp.rsplit(':', 1)[-1].strip()
-                book_prefix = f"{current_book}."
+                display_prefix = f"{corresp_prefix if corresp_card_label else current_book}."
                 parts = [p.strip() for p in rng.split('-')]
-                parts = [p[len(book_prefix):] if p.startswith(book_prefix) else p for p in parts]
+                parts = [p[len(display_prefix):] if p.startswith(display_prefix) else p for p in parts]
                 rng = '-'.join(p for p in parts if p).replace('_', '-')
                 if rng:
                     line_label = rng
@@ -149,14 +158,18 @@ def parse_card_prose_tei(path, master_intervals, lineno_sigil=None):
             # line_label badge above is cosmetic only; this is what actually
             # buckets the content. flush() first commits whatever preceded
             # this <p> under the OLD cur_label, then cur_label advances.
-            _m_bl = re.search(r':(\d+)\.(\d+)', corresp)
             if _m_bl:
-                _iv = _find_interval_for_line(_m_bl.group(1), int(_m_bl.group(2)))
-                if _iv:
+                if corresp_card_label:
                     if not in_p:
                         flush()
-                    cur_label = _iv["label"]
-                    current_book = _iv["book"]
+                    cur_label = corresp_card_label
+                else:
+                    _iv = _find_interval_for_line(_m_bl.group(1), int(_m_bl.group(2)))
+                    if _iv:
+                        if not in_p:
+                            flush()
+                        cur_label = _iv["label"]
+                        current_book = _iv["book"]
             flush()  # close out whatever preceded this <p> as its own block
             if line_label:
                 emit(f'<span class="prose-lineno">[{line_label}]</span>')
@@ -199,13 +212,11 @@ def parse_card_prose_tei(path, master_intervals, lineno_sigil=None):
             if elem.tail and elem.tail.strip(): emit(elem.tail)
             return
         elif tag == 'choice':
-            sic_txt = corr_txt = ''
-            for ch in elem:
-                ct = ch.tag.split('}')[-1]
-                txt = ''.join(ch.itertext()).strip()
-                if ct == 'sic': sic_txt = txt
-                elif ct == 'corr': corr_txt = txt
-            emit(f'<span class="tei-sic">[{sic_txt}]</span> <span class="tei-corr">{corr_txt}</span>')
+            # Keep choice handling identical across parser modes: show the
+            # normalized reading/expansion and retain the diplomatic form in
+            # tooltip metadata.  Rendering both <abbr> and <expan> produced
+            # strings such as ``q;que``.
+            emit(extract_text_recursive(elem, strip_paragraphs=True))
             if elem.tail and elem.tail.strip(): emit(elem.tail)
             return
 

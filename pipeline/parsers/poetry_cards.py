@@ -4,7 +4,7 @@ import re
 from collections import OrderedDict
 from pipeline.core.xml_utils import (
     NS, safe_parse, find_text_root, extract_text_recursive,
-    leading_card_milestone_after_speaker, render_app_crit,
+    leading_card_milestone_after_speaker, render_app_crit, render_page_break,
 )
 
 def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap=None):
@@ -26,6 +26,17 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
     # same for commentary <note target="#line-id"> blocks.
     def _tag(e): return e.tag.split("}")[-1]
     parent = {child: par for par in text_entry.iter() for child in par}
+    note_targets = {
+        (e.get("target") or "").lstrip("#")
+        for e in text_entry.iter()
+        if _tag(e) == "ref" and e.get("type") == "note" and e.get("target")
+    }
+    footnote_lookup = {
+        e.get("{http://www.w3.org/XML/1998/namespace}id"): e
+        for e in text_entry.iter()
+        if (_tag(e) == "note"
+            and e.get("{http://www.w3.org/XML/1998/namespace}id") in note_targets)
+    }
     lines = [e for e in text_entry.iter() if _tag(e) == "l" and e.get("n")]
     line_by_n = {e.get("n"): e for e in lines}
     line_id_to_n = {
@@ -190,6 +201,7 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
     current_book = next(iter(master_intervals))
     cur_label = None
     buffer_map = {}
+    pending_page_breaks = []
 
     def _add_content(bk, label, html):
         if html and html.strip():
@@ -224,6 +236,13 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
         tag = elem.tag.split("}")[-1]
 
         if elem in detached_containers:
+            return
+
+        # Dramatic editions may include a TEI cast list before the text.
+        # It supplies identifiers for <sp @who> but is metadata, not part of
+        # the running passage, so do not print the entire dramatis personae in
+        # the first card.
+        if tag == "castList":
             return
 
         # A few dramatic editions put the opening card milestone immediately
@@ -332,9 +351,21 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                     f'<span class="inline-line-milestone" title="Line Milestone {ln_num}">{ln_num}</span>')
 
 
+        if tag == "pb":
+            # A physical page boundary commonly precedes running headers and
+            # a new card milestone. Delay its visible marker until the next
+            # verse so it lands in that verse's card and below the viewer's
+            # sticky navigation rather than being hidden behind it.
+            pending_page_breaks.append(render_page_break(elem))
+            return
 
         if tag in ("l", "stage"):
-            rendered = extract_text_recursive(elem, strip_paragraphs=True, lineno_sigil=lineno_sigil)
+            for page_break in pending_page_breaks:
+                _add_content(current_book, label, page_break)
+            pending_page_breaks.clear()
+            rendered = extract_text_recursive(
+                elem, strip_paragraphs=True, lineno_sigil=lineno_sigil,
+                footnote_lookup=footnote_lookup)
             if tag == "l": rendered = _attach_standoff(elem, rendered)
             _add_content(current_book, label, rendered)
             # The leaf renderer excludes the XML tail: it belongs after the
@@ -359,6 +390,12 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                 _add_content(current_book, cur_label, elem.tail)
             return
         elif tag == "note":
+            note_id = elem.get("{http://www.w3.org/XML/1998/namespace}id") or elem.get("xml:id") or ""
+            if note_id in footnote_lookup:
+                # Linked source notes are rendered at their in-text <ref>
+                # markers. Do not collect the stand-off register into the
+                # final card as an unrelated block of notes.
+                return
             t = extract_text_recursive(elem, strip_paragraphs=True).strip()
             if t:
                 # Standalone end-of-poem notes (apparatus criticus etc.) carry
@@ -367,7 +404,6 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                 # Once detached from that anchor down here, the bare note
                 # text alone doesn't say which line it's about -- show the
                 # id (dropping the leading "n") so it's actually useful.
-                note_id = elem.get("{http://www.w3.org/XML/1998/namespace}id") or elem.get("xml:id") or ""
                 if note_id.startswith("n"):
                     note_id = note_id[1:]
                 id_prefix = f'<b class="note-id">{note_id}</b> ' if note_id else ''

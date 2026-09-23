@@ -1,6 +1,7 @@
 """Shared XML/TEI helpers used by every parser. Relocated from Cell 4."""
 import re
 import xml.etree.ElementTree as ET
+from urllib.parse import urlparse
 from pipeline.config import NS, _LXML
 from pipeline.core.storage import TEXTGROUP_NAMESPACE
 try:
@@ -105,6 +106,27 @@ def _attr(s):
              .replace("<", "&lt;").replace(">", "&gt;"))
 
 
+def render_page_break(pb_elem):
+    """Render a TEI page boundary, linking a safe published facsimile.
+
+    Page numbers remain visible even while an edition has only ``@n``.  When
+    a later cleanup supplies an absolute HTTP(S) ``@facs`` URL, the same
+    marker becomes a link without requiring another parser change.
+    """
+    number = (pb_elem.get("n") or "").strip()
+    facs = (pb_elem.get("facs") or "").strip()
+    label = f"[p. {number}]" if number else "[page]"
+    title = f"View source page {number}" if number else "View source page"
+    attrs = f'class="tei-page-break" data-page="{_attr(number)}"'
+    parsed = urlparse(facs) if facs else None
+    if parsed and parsed.scheme in {"http", "https"} and parsed.netloc:
+        return (
+            f'<a {attrs} href="{_attr(facs)}" target="_blank" '
+            f'rel="noopener noreferrer" title="{_attr(title)}">{label}</a>'
+        )
+    return f'<span {attrs} title="Source page {_attr(number)}">{label}</span>'
+
+
 def render_app_crit(app_elem, show_lemma=True):
     """TEI critical apparatus <app> rendered *inline*: the <lem> reading
     stays in the running text (so the line still scans, and alignment /
@@ -166,9 +188,31 @@ def render_app_crit(app_elem, show_lemma=True):
     return f'<span class="app-crit app-crit-empty{extra}" {data} title="{tip}"></span>'
 
 
-def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nested=False):
-    if elem.tag.split("}")[-1] == "app":
+def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
+                           _nested=False, citation_prefix=None,
+                           footnote_lookup=None):
+    element_tag = elem.tag.split("}")[-1]
+    if element_tag == "app":
         return render_app_crit(elem)
+    if element_tag == "choice":
+        children = {child.tag.split("}")[-1]: child for child in elem}
+        preferred = next((children[name] for name in ("expan", "corr", "reg")
+                          if name in children), None)
+        original = next((children[name] for name in ("abbr", "sic", "orig")
+                         if name in children), None)
+        if preferred is None:
+            preferred = next(iter(elem), None)
+        if preferred is None:
+            return elem.text or ""
+        rendered = extract_text_recursive(
+            preferred, strip_paragraphs=strip_paragraphs, _nested=True,
+            footnote_lookup=footnote_lookup
+        )
+        original_text = "" if original is None else "".join(original.itertext()).strip()
+        if not original_text:
+            return rendered
+        return (f'<span class="tei-expan" data-original="{_attr(original_text)}" '
+                f'title="Original: {_attr(original_text)}">{rendered}</span>')
     # _nested: True whenever this call is reached by recursing INTO a
     # parent element's children (see the `for child in elem` loop and the
     # note-handling branch below), as opposed to being the original,
@@ -187,7 +231,24 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     # grid that depends on them.)
     parts = []
     link_ref = False
-    tag = elem.tag.split('}')[-1]
+    tag = element_tag
+    inline_translation = (
+        elem.get('type') == 'translation'
+        and tag in ('mentioned', 'foreign', 'quote')
+    )
+
+    def open_inline_translation(source_tag):
+        lang = (elem.get('{http://www.w3.org/XML/1998/namespace}lang') or '').strip()
+        attrs = [
+            f'class="tei-inline-translation translation-{source_tag}"',
+            'title="Translation of the preceding text"',
+        ]
+        if lang:
+            attrs.append(f'lang="{_attr(lang)}"')
+        corresp = (elem.get('corresp') or '').strip()
+        if corresp:
+            attrs.append(f'data-corresp="{_attr(corresp)}"')
+        parts.append(f'<span {" ".join(attrs)}>[')
     
     if tag == 'l':
         # An <l> reached via recursion (_nested=True) is a quotation of
@@ -208,14 +269,16 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
         if not _nested:
             line_num = (elem.get('n') or '').strip()
             if line_num:
+                cite_attr = (f' data-cite="{_attr(f"{citation_prefix}.{line_num}")}"'
+                             if citation_prefix else '')
                 if lineno_sigil:
-                    parts.append(f'<div class="line-num-cell" data-n="{line_num}">'
+                    parts.append(f'<div class="line-num-cell" data-n="{line_num}"{cite_attr}>'
                                  f'<span class="src-lineno">[{line_num} {lineno_sigil}]</span></div>')
                 else:
                     # data-n is the stable hook used by range navigation and
                     # poetry token alignment.  It belongs on every numbered
                     # line, not only editions with an alternate line sigil.
-                    parts.append(f'<div class="line-num-cell" data-n="{_attr(line_num)}">{line_num}</div>')
+                    parts.append(f'<div class="line-num-cell" data-n="{_attr(line_num)}"{cite_attr}>{line_num}</div>')
             else:
                 parts.append('<div class="line-num-cell\">&nbsp;</div>')
             parts.append('<div class="line-text-cell">')
@@ -232,7 +295,10 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
         rend = elem.get('rend', 'italic')
         parts.append(f'<span class="render-{rend}">')
     elif tag == 'mentioned':
-        parts.append('<span class="lemma render-bold">')
+        if inline_translation:
+            open_inline_translation('mentioned')
+        else:
+            parts.append('<span class="lemma render-bold">')
     elif tag == 'emph':
         # TEI <emph> is authored rhetorical emphasis, distinct from a
         # lexicographic/translation <gloss>.  It was previously unwrapped,
@@ -240,6 +306,15 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
         parts.append('<em class="tei-emph">')
     elif tag == 'gloss':
         parts.append('<span class="tei-gloss">')
+    elif tag == 'term':
+        lang = (elem.get('{http://www.w3.org/XML/1998/namespace}lang') or '').strip()
+        key = (elem.get('key') or '').strip()
+        ana = (elem.get('ana') or '').strip()
+        attrs = ['class="tei-term"']
+        if lang: attrs.extend([f'lang="{_attr(lang)}"', f'data-lang="{_attr(lang)}"'])
+        if key: attrs.append(f'data-term-key="{_attr(key)}"')
+        if ana: attrs.append(f'data-ana="{_attr(ana)}"')
+        parts.append(f'<span {" ".join(attrs)}>')
     elif tag == 's':
         parts.append('<span class="lemma">')
     elif tag == 'del':
@@ -247,23 +322,34 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'add':
         parts.append('<span class="tei-add">\u27e8')   # ⟨
     elif tag == 'quote':
-        # TEI <quote> is phrase-level as well as block-level.  Treat explicit
-        # blockquotes and verse quotations as blocks; prose quotations inside
-        # <cit> remain inline and receive normal quotation marks from HTML <q>.
-        is_block_quote = (
-            elem.get('rend') == 'blockquote'
-            or elem.get('type') == 'blockquote'
-            or any(ch.tag.split('}')[-1] == 'l' for ch in elem)
-        )
-        if is_block_quote:
-            q_type = elem.get('type', 'blockquote')
-            parts.append(f'<div class="quote-block type-{q_type}">')
+        if inline_translation:
+            open_inline_translation('quote')
         else:
-            parts.append('<q class="tei-quote">')
+            # TEI <quote> is phrase-level as well as block-level. Treat explicit
+            # blockquotes and verse quotations as blocks; prose quotations inside
+            # <cit> remain inline and receive normal quotation marks from HTML <q>.
+            is_block_quote = (
+                elem.get('rend') == 'blockquote'
+                or elem.get('type') == 'blockquote'
+                or any(ch.tag.split('}')[-1] == 'l' for ch in elem)
+            )
+            if is_block_quote:
+                q_type = elem.get('type', 'blockquote')
+                parts.append(f'<div class="quote-block type-{q_type}">')
+            else:
+                parts.append('<q class="tei-quote">')
+    elif tag == 'cit':
+        # CHS prose translations use a block citation to keep the quoted
+        # passage and its source attribution together.  Phrase-level TEI
+        # citations remain transparent so existing commentary keeps flowing.
+        if elem.get('type') == 'block':
+            parts.append('<div class="tei-cit tei-cit-block">')
     elif tag == 'bibl':
         cref = (elem.get('corresp') or elem.get('cRef') or '').strip()
         n = (elem.get('n') or '').strip()
+        rend = (elem.get('rend') or '').strip()
         attrs = ['class="tei-bibl"']
+        if rend == 'right': attrs[0] = 'class="tei-bibl tei-bibl-right"'
         if cref: attrs.append(f'data-cref="{_attr(cref)}"')
         if n: attrs.append(f'data-label="{_attr(n)}"')
         parts.append(f'<cite {" ".join(attrs)}>')
@@ -282,9 +368,20 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
         ref_type = (elem.get('type') or '').strip()
-        attrs = ['class="tei-ref"']
+        note = (footnote_lookup or {}).get(target.lstrip('#')) if ref_type == 'note' else None
+        note_text = re.sub(r'\s+', ' ', ''.join(note.itertext())).strip() if note is not None else ''
+        attrs = ['class="tei-ref tei-note-ref"' if note_text else 'class="tei-ref"']
         if target: attrs.append(f'data-cref="{_attr(target)}"')
         if ref_type: attrs.append(f'data-ref-type="{_attr(ref_type)}"')
+        if note_text:
+            number = ''.join(elem.itertext()).strip() or (note.get('n') or '').strip()
+            attrs.extend([
+                f'data-note="{_attr(note_text)}"',
+                f'data-note-label="{_attr(number)}"',
+                f'aria-label="Footnote {_attr(number)}: {_attr(note_text)}"',
+                'role="button"', 'tabindex="0"',
+                f'title="Footnote {_attr(number)}: {_attr(note_text)}"',
+            ])
         from urllib.parse import urlsplit
         parsed = urlsplit(target)
         link_ref = (target.startswith('/site/') or
@@ -308,9 +405,12 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'q':
         parts.append('\u201c')
     elif tag == 'foreign':
-        lang = (elem.get('{http://www.w3.org/XML/1998/namespace}lang') or '').strip()
-        cls  = f'foreign foreign-{lang}' if lang else 'foreign'
-        parts.append(f'<span class="{cls}" lang="{lang}">')
+        if inline_translation:
+            open_inline_translation('foreign')
+        else:
+            lang = (elem.get('{http://www.w3.org/XML/1998/namespace}lang') or '').strip()
+            cls  = f'foreign foreign-{lang}' if lang else 'foreign'
+            parts.append(f'<span class="{cls}" lang="{lang}">')
     elif tag == 'seg' and elem.get('type') == 'metrical-part':
         part_n = elem.get('n', '')
         parts.append(f'<span class="metrical-part metrical-part-{part_n}">')
@@ -334,7 +434,9 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     for child in elem:
         child_tag = child.tag.split('}')[-1]
         if child_tag == 'note':
-            note_text = extract_text_recursive(child, strip_paragraphs, _nested=True).strip()
+            note_text = extract_text_recursive(
+                child, strip_paragraphs, _nested=True,
+                footnote_lookup=footnote_lookup).strip()
             # A note linked to a mentioned lemma is the commentary itself,
             # not a footnote inserted into that commentary.
             note_id = child.get('{http://www.w3.org/XML/1998/namespace}id')
@@ -362,7 +464,16 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
             if parts and not parts[-1].endswith((' ', chr(10))):
                 parts.append(' ')
         else: 
-            parts.append(extract_text_recursive(child, strip_paragraphs, _nested=True))
+            parts.append(extract_text_recursive(
+                child, strip_paragraphs, _nested=True,
+                footnote_lookup=footnote_lookup))
+            # A TEI <s> boundary is a word boundary even when the source XML
+            # serializes adjacent sentence elements as </s><s> with no tail
+            # whitespace. Without this fallback, rendered prose joins the
+            # final punctuation of one sentence directly to the first word
+            # of the next. Authored tail whitespace still wins below.
+            if child_tag == 's' and child.tail is None:
+                parts.append(' ')
         # Tail text after a block-level child must go in its own div,
         # not raw text, to avoid invalid HTML and browser reflow bugs.
         if child.tail and child.tail.strip():
@@ -402,19 +513,26 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'speaker': parts.append(': </strong>')
     elif tag == 'stage': parts.append('</div>')
     elif tag == 'hi': parts.append('</span>')
-    elif tag == 'mentioned': parts.append('</span>')
+    elif tag == 'mentioned': parts.append(']</span>' if inline_translation else '</span>')
     elif tag == 'emph': parts.append('</em>')
     elif tag == 'gloss': parts.append('</span>')
+    elif tag == 'term': parts.append('</span>')
     elif tag == 's': parts.append('</span>')
     elif tag == 'del': parts.append(']</span>')
     elif tag == 'add': parts.append('\u27e9</span>')
     elif tag == 'quote':
-        is_block_quote = (
-            elem.get('rend') == 'blockquote'
-            or elem.get('type') == 'blockquote'
-            or any(ch.tag.split('}')[-1] == 'l' for ch in elem)
-        )
-        parts.append('</div>' if is_block_quote else '</q>')
+        if inline_translation:
+            parts.append(']</span>')
+        else:
+            is_block_quote = (
+                elem.get('rend') == 'blockquote'
+                or elem.get('type') == 'blockquote'
+                or any(ch.tag.split('}')[-1] == 'l' for ch in elem)
+            )
+            parts.append('</div>' if is_block_quote else '</q>')
+    elif tag == 'cit':
+        if elem.get('type') == 'block':
+            parts.append('</div>')
     elif tag == 'bibl':
         parts.append('</cite>')
     elif tag == 'ref':
@@ -423,7 +541,7 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None, _nes
     elif tag == 'q':
         parts.append('\u201d')
     elif tag == 'foreign':
-        parts.append('</span>')
+        parts.append(']</span>' if inline_translation else '</span>')
     elif tag == 'seg' and elem.get('type') == 'metrical-part':
         parts.append('</span>')
     elif tag == 'seg':

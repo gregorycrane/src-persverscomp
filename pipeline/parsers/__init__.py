@@ -19,6 +19,7 @@ from pipeline.parsers.hierarchical import parse_hierarchical_tei
 from pipeline.parsers.speech_collection import parse_speech_collection_tei
 from pipeline.parsers.book_chapter_section import parse_book_chapter_section_tei
 from pipeline.parsers.line_commentary import parse_line_commentary_tei
+from pipeline.parsers.section_sentences import parse_section_sentences_tei
 
 PARSE_MODE_PARSERS = {
     "poetry_cards": parse_poetry_cards_tei,
@@ -29,6 +30,7 @@ PARSE_MODE_PARSERS = {
     "speech_collection_sentences": parse_speech_collection_tei,
     "book_chapter_section": parse_book_chapter_section_tei,
     "line_commentary": parse_line_commentary_tei,
+    "section_sentences": parse_section_sentences_tei,
 }
 
 # Kept as an alias -- some callers may still refer to the old name.
