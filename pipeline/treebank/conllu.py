@@ -540,6 +540,7 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None,
             # prefer MISC's own gloss= if present, else the trailing column.
             gloss_trailing = tail[3] if len(tail) > 3 else None
             gloss = None
+            base_gloss = None
             ref   = None
             translit  = None
             ltranslit = None
@@ -549,8 +550,11 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None,
                 # some source files write "Translit"/"LTranslit" (capitalized,
                 # the original convention here), others (e.g. the Heike
                 # DeepSeek treebank) write lowercase "translit"/"ltranslit".
-                # "gloss" has only ever appeared lowercase, so stays exact-
-                # match. "Ref" previously only ever appeared capitalized too
+                # Contextual ``gloss`` stays the preferred display value.
+                # Brunetti's Beowulf data also preserves its independent
+                # dictionary gloss as ``BrunettiGloss``; retain that as a
+                # fallback when a contextual gloss was not generated.
+                # "Ref" previously only ever appeared capitalized too
                 # -- but the Nonnus/Dionysiaca OGA source uses lowercase
                 # "ref=" throughout, so the old exact-match on 'Ref' silently
                 # found nothing for every single token: first_ref never got
@@ -560,6 +564,7 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None,
                 # ingested zero usable rows despite the reassuring sentence
                 # COUNT printed (that count is taken before this filtering).
                 if k2 == 'gloss':                       gloss     = v2.strip()
+                if k2 == 'BrunettiGloss':               base_gloss = v2.strip()
                 if k2 in ('Ref', 'ref'):
                     _raw_ref = v2.strip()
                     # This source may also embed the work's own title
@@ -581,6 +586,8 @@ def parse_conllu_treebank(path, version_short_id, tg, wk, card_intervals=None,
                 if k2 in ('LTranslit', 'ltranslit'):    ltranslit = v2.strip()
             if gloss is None and gloss_trailing:
                 gloss = gloss_trailing.strip()
+            if gloss is None and base_gloss:
+                gloss = base_gloss
 
             # A real token's basic HEAD is normally an integer (or '_'/0 for
             # root). Some Daphne-annotated ellipsis constructions instead

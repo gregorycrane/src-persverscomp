@@ -22,8 +22,8 @@ window.PMVFragmentCollections = (() => {
     'tlg0001.tlg001','tlg2045.tlg001'
   ]);
   const historyKeys = new Set(['tlg0003.tlg001']);
-  const languageNames = {greek:'Greek',latin:'Latin',persian:'Persian',italian:'Italian',japanese:'Japanese'};
-  const languageClasses = {greek:'greek-text',latin:'latin-text',persian:'persian-text',italian:'italian-text',japanese:'japanese-text'};
+  const languageNames = {greek:'Greek',latin:'Latin','old-english':'Old English',persian:'Persian',italian:'Italian',japanese:'Japanese'};
+  const languageClasses = {greek:'greek-text',latin:'latin-text','old-english':'old-english-text',persian:'persian-text',italian:'italian-text',japanese:'japanese-text'};
   const genreNames = {tragedy:'Tragedy','greek-drama':'Greek drama',hexameter:'Hexametrical poetry',history:'History'};
   function workLanguage(w) {
     const edition=(w.versions||[]).find(v=>v.doc_type==='edition' && Object.values(languageClasses).includes(v.text_class));
