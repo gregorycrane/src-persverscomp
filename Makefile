@@ -18,7 +18,7 @@
 
 PY := python3
 
-.PHONY: build force index clean test
+.PHONY: build force index dashboard clean test
 
 build:
 	$(PY) -m pipeline.build_all $(if $(work),--work $(work))
@@ -27,6 +27,10 @@ force:
 	$(PY) -m pipeline.build_all --force $(if $(work),--work $(work))
 
 index:
+	$(PY) -m pipeline.build_all --index-only
+
+dashboard:
+	$(PY) -m pipeline.word_dashboard
 	$(PY) -m pipeline.build_all --index-only
 
 clean:

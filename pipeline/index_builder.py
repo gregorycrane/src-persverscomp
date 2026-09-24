@@ -14,6 +14,7 @@ imported from or run.
 """
 import json
 import sqlite3
+import shutil
 from pathlib import Path
 from pipeline.config import WORKSPACE_DIR, BUILD_DIR, DB_PATH, SRC_DIR
 
@@ -304,6 +305,15 @@ def rebuild(conn=None):
     )
 
     (WORKSPACE_DIR / "index.html").write_text(INDEX_HTML_CONTENT, encoding='utf-8')
+    # Plain static assets kept under web/ so rebuilding PMV also republishes
+    # the maintained dashboard instead of leaving an ad-hoc copy behind.
+    for dashboard_asset in (
+        "word-dashboard.html", "word-dashboard.css", "word-dashboard.js",
+        "word-dashboard-data.json",
+    ):
+        source = WEB_SRC / dashboard_asset
+        if source.exists():
+            shutil.copy2(source, WORKSPACE_DIR / dashboard_asset)
     (WORKSPACE_DIR / ".nojekyll").write_text("", encoding='utf-8')
     print("[SUCCESS] Production Standalone Workspace compiled cleanly.")
     return WORKSPACE_DIR / "index.html"
