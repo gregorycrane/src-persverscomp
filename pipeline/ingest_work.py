@@ -635,6 +635,51 @@ def ingest_treebank_and_metrical(conn, target_keys, pending_metrical, work_has_b
     conn.commit()
 
 # ── Phase 3: cross-version token alignments ─────────────────────────────────
+def _merge_groups_sharing_target_indices(groups):
+    """Reconstitute authored many-to-many groups split across source rows.
+
+    Some alignment exports represent a group such as Greek tokens 3 and 5
+    mapping to Persian tokens 5 and 6 as two rows with the same target-index
+    set. Keeping those rows separate makes the target tokens belong to only
+    one source row in the viewer. An exact shared target-index set identifies
+    one alignment group, so combine its source indices and tokens here.
+
+    Empty target sets are deliberately not merged: they do not identify a
+    correspondence and could otherwise collapse unrelated unaligned rows.
+    """
+    merged = []
+    by_target = {}
+
+    for group in groups:
+        target_key = tuple(group.get("tgt_indices", []))
+        if not target_key or target_key not in by_target:
+            copied = {
+                **group,
+                "src_indices": list(group.get("src_indices", [])),
+                "tgt_indices": list(group.get("tgt_indices", [])),
+                "src_tokens": list(group.get("src_tokens", [])),
+                "tgt_tokens": list(group.get("tgt_tokens", [])),
+                "meta": dict(group.get("meta", {})),
+            }
+            merged.append(copied)
+            if target_key:
+                by_target[target_key] = copied
+            continue
+
+        current = by_target[target_key]
+        indexed_tokens = dict(zip(current["src_indices"], current["src_tokens"]))
+        for index, token in zip(group.get("src_indices", []), group.get("src_tokens", [])):
+            indexed_tokens.setdefault(index, token)
+        for index in group.get("src_indices", []):
+            indexed_tokens.setdefault(index, "")
+
+        current["src_indices"] = sorted(indexed_tokens)
+        current["src_tokens"] = [indexed_tokens[index] for index in current["src_indices"]]
+        current["score"] = min(current.get("score", 1.0), group.get("score", 1.0))
+
+    return merged
+
+
 def ingest_token_alignments(conn, target_keys):
     cursor = conn.cursor()
     # The monolith is persistent across incremental builds. Upgrade older
@@ -661,7 +706,8 @@ def ingest_token_alignments(conn, target_keys):
             tgt_ver  = aln_cfg["tgt_version"]
             rows = 0
             for seg_id, seg in segments.items():
-                for grp in seg.get("alignments", []):
+                groups = _merge_groups_sharing_target_indices(seg.get("alignments", []))
+                for grp in groups:
                     cursor.execute("""
                         INSERT INTO token_alignments
                         (textgroup, work, pair_id, src_version, tgt_version,

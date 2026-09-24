@@ -2789,7 +2789,7 @@ function initializeRoutingFromURL() {
         return wrapper.innerHTML;
     }
 
-    // Filter alignment groups to meaningful 1-to-1 correspondences.
+    // Filter alignment groups to meaningful, bounded correspondences.
     // Returns [{group, origIdx}] — origIdx is position in the original array,
     // used as the stable cross-column group key.
     function filterGroups(groups, nSrcToks, nTgtToks) {
@@ -2834,6 +2834,78 @@ function initializeRoutingFromURL() {
             .replace(/>/g,"&gt;").replace(/"/g,"&quot;");
     }
 
+    function alignmentTokenNorm(token) {
+        return String(token || "").normalize("NFC").toLowerCase()
+            .replace(/^[\p{P}\p{S}]+/gu, "")
+            .replace(/[\p{P}\p{S}]+$/gu, "")
+            .trim();
+    }
+
+    // Convert authored token indices into display-token positions without
+    // using the word form as a global key.  Forms are used only to verify an
+    // ordered occurrence while the stored index controls occurrence order and
+    // expected distance.  This keeps repeated words distinct and lets every
+    // source member of a many-to-many group receive the same group key.
+    //
+    // The ordered match is intentional: Crito's Greek indices come from its
+    // treebank and can include punctuation-only positions, while the Persian
+    // indices come from whitespace tokens with edge punctuation stripped.
+    // A raw index cannot therefore be applied directly to both rendered text
+    // streams, but its relative position remains authoritative.
+    function buildPositionalAlignmentMap(displayToks, usable, isSrc, segKey) {
+        const authored = [];
+        usable.forEach(({ group: g, origIdx }) => {
+            const indices = isSrc ? g.s : g.t;
+            const tokens = isSrc ? g.st : g.tt;
+            const info = {
+                groupKey: `${segKey}__${origIdx}`,
+                score: g.sc,
+                color: scoreToColor(g.sc)
+            };
+            indices.forEach((authoredIndex, tokenOffset) => {
+                authored.push({
+                    authoredIndex,
+                    token: tokens[tokenOffset] || "",
+                    info,
+                    origIdx,
+                    tokenOffset
+                });
+            });
+        });
+        authored.sort((a, b) =>
+            a.authoredIndex - b.authoredIndex ||
+            a.origIdx - b.origIdx ||
+            a.tokenOffset - b.tokenOffset);
+
+        const normalizedDisplay = displayToks.map(alignmentTokenNorm);
+        const indexMap = new Map();
+        let cursor = 0;
+        let previousAuthored = null;
+        let previousDisplay = null;
+
+        authored.forEach(item => {
+            const expected = alignmentTokenNorm(item.token);
+            if (!expected) return;
+            const candidates = [];
+            for (let displayIndex = cursor; displayIndex < normalizedDisplay.length; displayIndex++) {
+                if (normalizedDisplay[displayIndex] === expected) candidates.push(displayIndex);
+            }
+            if (!candidates.length) return;
+
+            const predicted = previousAuthored === null
+                ? item.authoredIndex
+                : previousDisplay + Math.max(1, item.authoredIndex - previousAuthored);
+            const displayIndex = candidates.reduce((best, candidate) =>
+                Math.abs(candidate - predicted) < Math.abs(best - predicted) ? candidate : best);
+            indexMap.set(displayIndex, item.info);
+            cursor = displayIndex + 1;
+            previousAuthored = item.authoredIndex;
+            previousDisplay = displayIndex;
+        });
+
+        return indexMap;
+    }
+
     // Render a prose section with aligned tokens wrapped in interactive spans.
     // segKey is "chapter.section" e.g. "1.8" — namespaces the group keys.
     function renderAlignedProse(rawHtml, versionShortId, groups, pair, segKey) {
@@ -2857,38 +2929,7 @@ function initializeRoutingFromURL() {
             isTgt ? displayToks.length : 0);
         if (usable.length === 0) return rawHtml;
 
-        // normalise for surface matching: lowercase, strip punctuation
-        const norm = s => s.toLowerCase()
-            .replace(/^[.,;:·῾᾿''"([\]]+/, "")
-            .replace(/[.,;:!?·῾᾿''"")\]]+$/, "")
-            .trim();
-
-        // Build surface → {groupKey, score, color} using "segKey__origIdx" as key
-        const surfaceMap = new Map();
-        usable.forEach(({ group: g, origIdx }) => {
-            const color = scoreToColor(g.sc);
-            const toks  = isSrc ? g.st : g.tt;
-            toks.forEach(tok => {
-                const key = norm(tok);
-                if (!key) return;
-                const existing = surfaceMap.get(key);
-                if (!existing || g.sc > existing.score) {
-                    surfaceMap.set(key, {
-                        groupKey: `${segKey}__${origIdx}`,
-                        score: g.sc,
-                        color
-                    });
-                }
-            });
-        });
-
-        if (surfaceMap.size === 0) return rawHtml;
-
-        const indexMap = new Map();
-        displayToks.forEach((tok, idx) => {
-            const info = surfaceMap.get(norm(tok));
-            if (info) indexMap.set(idx, info);
-        });
+        const indexMap = buildPositionalAlignmentMap(displayToks, usable, isSrc, segKey);
 
         if (indexMap.size === 0) return rawHtml;
 
