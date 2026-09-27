@@ -18,6 +18,70 @@ XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 XML_LANG = "{http://www.w3.org/XML/1998/namespace}lang"
 
+def _compact_old_english_key(s):
+    """Klaeber prints productive compounds with editorial hyphens while
+    Brunetti's Beowulf lemmas often omit them (``ge-sēon`` / ``geseon``).
+    Keep the printed headword intact, but index this compact lookup alias.
+    """
+    key = norm_key(s)
+    return re.sub(r'[-\s]', '', key) if key else None
+
+def _klaeber_orth_variants(orth_text):
+    """Expand Klaeber display notation into lookupable printed forms.
+
+    Examples: ``hē, hēo, hit`` yields three forms; ``eal(l)`` yields
+    ``eal`` and ``eall``; ``sē (se)`` yields ``sē`` and ``se``. The original
+    display string remains the panel heading and is never rewritten.
+    """
+    variants = []
+    # A handful of OCR/editorial markers occur inside <orth>. They belong in
+    # the faithful display string, but never in a lookup key.
+    lookup_text = re.sub(r'\((?:Dagger;|\+|†|‡|\?)\)', '', orth_text)
+    lookup_text = lookup_text.replace('†', '').replace('‡', '').strip(' *.')
+    for part in re.split(r'[,;]', lookup_text):
+        part = part.strip()
+        if not part:
+            continue
+        # A spaced parenthesis is normally a complete alternative: hēo
+        # (hīo), būton (būtan). A leading parenthesis is an optional prefix:
+        # (ge-)bǣtan. Parentheses touching a stem contain optional letters:
+        # eal(l), māð(ð)um, (e)aldor.
+        spaced = re.fullmatch(r'(.+?)\s+\(([^()]*)\)', part)
+        if spaced:
+            outside, inside = (piece.strip() for piece in spaced.groups())
+            variants.append(outside)
+            inside = inside.lstrip('= ').strip()
+            if inside.startswith('-') and '-' in outside:
+                inside = outside.rsplit('-', 1)[0] + inside
+            if inside and re.fullmatch(r"[A-Za-zÀ-žĀ-ſÞþÐðÆæŒœȜȝ\-]+", inside):
+                variants.append(inside)
+            continue
+
+        match = re.fullmatch(r'(.*?)\(([^()]*)\)(.*)', part)
+        if match:
+            before, optional, after = match.groups()
+            if re.fullmatch(r"[A-Za-zÀ-žĀ-ſÞþÐðÆæŒœȜȝ\-]*", optional):
+                variants.extend([before + after, before + optional + after])
+                continue
+        variants.append(part)
+    return list(dict.fromkeys(v for v in variants if v))
+
+def _klaeber_variant_keys(variant):
+    """Exact plus solid-compound lookup keys for a printed variant.
+
+    Bound morphemes such as ``on-`` and ``-on`` keep only their exact key;
+    otherwise compacting them would make an ordinary lemma ``on`` retrieve
+    every prefix and suffix entry in the glossary.
+    """
+    exact = norm_key(variant)
+    keys = [exact] if exact else []
+    stripped = variant.strip()
+    if stripped and not stripped.startswith('-') and not stripped.endswith('-'):
+        compact = _compact_old_english_key(variant)
+        if compact and compact not in keys:
+            keys.append(compact)
+    return keys
+
 def _tag(el):
     return el.tag.split('}')[-1]
 
@@ -71,6 +135,19 @@ LEXICON_REGISTRY = {
         "entry_kind": "word",
         "textgroups": ["tlg0085"],           # Aeschylus
         "shard_file": "lexica_aeschylus.db",
+    },
+    "klaeber-beowulf": {
+        # This XML lives with the canonical Anglo-Saxon sources, but it is a
+        # lexical resource for Beowulf rather than a second Old English work.
+        "path": "/Users/gcrane/github/canonical-angLit/data/anon/klaeber_glossary/anon.klaeber_glossary.perseus-mul1.xml",
+        "format": "klaeber",
+        "title": "Klaeber's Beowulf Glossary",
+        "author": "Fr. Klaeber",
+        "citation": "Klaeber, Fr. (1922). Beowulf and the Fight at Finnsburg. D. C. Heath.",
+        "entry_kind": "word",
+        "textgroups": [],
+        "works": ["anon.beowulf"],          # Beowulf only, not every anonymous work
+        "shard_file": "lexica_beowulf.db",
     },
     "pizzi-persian": {
         "path": "/Users/gcrane/github/Shahnameh/pizzi-glossary.en.xml",
@@ -150,10 +227,9 @@ def _lang_toggle_class(elem):
 
 def _lex_inline_html(elem, lexicon_id, entry_id_by_target=None):
     """Renders one lexicon entry element (and its children) to HTML.
-    `entry_id_by_target` is unused here (cross-refs are resolved at click
-    time in the browser, not at build time), kept as a parameter in case a
-    future pass wants to grey out dead links whose target never got
-    ingested.
+    `entry_id_by_target`, when supplied, resolves a text-only <ref> such as
+    Klaeber's ``<ref>bēgen</ref>`` to an ingested entry id. Other lexica use
+    an explicit target attribute and continue to resolve exactly as before.
 
     The lat/eng toggle-class logic (tb-lex-lat / tb-lex-eng, hidden/shown by
     the existing "Hide Latin" control) originally only applied to <gloss>,
@@ -229,6 +305,10 @@ def _lex_inline_html(elem, lexicon_id, entry_id_by_target=None):
         parts.append('<span class="tb-lex-hi">')
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
+        if not target and entry_id_by_target:
+            ref_text = ''.join(elem.itertext()).strip()
+            target = (entry_id_by_target.get(norm_key(ref_text)) or
+                      entry_id_by_target.get(_compact_old_english_key(ref_text)) or '')
         if target:
             parts.append(
                 f'<a href="javascript:void(0)" class="tb-lex-ref" '
@@ -272,6 +352,10 @@ def _lex_inline_html(elem, lexicon_id, entry_id_by_target=None):
         parts.append('</span>')
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
+        if not target and entry_id_by_target:
+            ref_text = ''.join(elem.itertext()).strip()
+            target = (entry_id_by_target.get(norm_key(ref_text)) or
+                      entry_id_by_target.get(_compact_old_english_key(ref_text)) or '')
         parts.append('</a>' if target else '</span>')
 
     return ''.join(parts)
@@ -675,6 +759,98 @@ def parse_lexicon_betant_tei(path, lexicon_id):
 
     return entries, aliases, citations
 
+def _klaeber_entry_html(entry, lexicon_id, target_index):
+    """Render an ``entryFree`` while suppressing only its first ``orth``.
+
+    The first orth is already the panel headword. Later orths are genuine
+    alternate headwords embedded in the prose and must remain visible.
+    """
+    parts = [entry.text or '']
+    first_orth_seen = False
+    for child in entry:
+        if _tag(child) == 'orth':
+            orth_text = ''.join(child.itertext()).strip()
+            if first_orth_seen:
+                parts.append(f'<span class="tb-lex-term">{html.escape(orth_text)}</span>')
+            else:
+                first_orth_seen = True
+        else:
+            parts.append(_lex_inline_html(child, lexicon_id, target_index))
+        if child.tail:
+            parts.append(child.tail)
+    return ''.join(parts).strip()
+
+def parse_lexicon_klaeber_tei(path, lexicon_id):
+    """Parse Klaeber's TEI ``entryFree`` glossary as a Beowulf lexicon.
+
+    Klaeber hyphenates many compounds that Brunetti's treebank writes
+    solid. Each printed orthography therefore gets both its faithful key
+    and a compact alias; the displayed headword is never altered.
+    """
+    tree = safe_parse_lexicon(path)
+    root = tree.getroot()
+    raw_entries = []
+    target_index = {}
+
+    for entry in root.iter(f'{TEI_NS}entryFree'):
+        entry_id = entry.get(XML_ID) or (entry.get('n') or '').strip()
+        orths = [
+            ''.join(orth.itertext()).strip()
+            for orth in entry.findall(f'{TEI_NS}orth')
+            if ''.join(orth.itertext()).strip()
+        ]
+        if not entry_id or not orths:
+            continue
+        variants = list(dict.fromkeys(
+            variant for orth in orths for variant in _klaeber_orth_variants(orth)
+        ))
+        raw_entries.append((entry_id, orths, variants, entry))
+        for variant in variants:
+            for key in _klaeber_variant_keys(variant):
+                if key and key not in target_index:
+                    target_index[key] = entry_id
+
+    entries, aliases = [], []
+    alias_seen = set()
+    for entry_id, orths, variants, entry in raw_entries:
+        headword_display = orths[0]
+        primary_variant = variants[0] if variants else headword_display
+        headword_key = norm_key(primary_variant)
+        entries.append({
+            "entry_id": entry_id,
+            "headword_display": headword_display,
+            "headword_key": headword_key,
+            "sort_key": _compact_old_english_key(primary_variant) or headword_key or '',
+            "entry_html": _klaeber_entry_html(entry, lexicon_id, target_index),
+        })
+
+        refs = list(entry.iter(f'{TEI_NS}ref'))
+        alias_target = entry_id
+        if len(refs) == 1:
+            visible = re.sub(r'<[^>]+>', '', _klaeber_entry_html(entry, lexicon_id, target_index))
+            if len(visible) < 80:
+                ref_text = ''.join(refs[0].itertext()).strip()
+                alias_target = (target_index.get(norm_key(ref_text)) or
+                                target_index.get(_compact_old_english_key(ref_text)) or
+                                entry_id)
+
+        # Alternate printed forms, compact spellings, and short "see X"
+        # entries all resolve through aliases. The reader consults aliases
+        # before direct rows so a pointer opens Klaeber's substantive entry.
+        for variant in variants:
+            for alias_key in _klaeber_variant_keys(variant):
+                pair = (alias_key, alias_target)
+                if alias_key and alias_key != headword_key and pair not in alias_seen:
+                    aliases.append({"alias_key": alias_key, "entry_id": alias_target})
+                    alias_seen.add(pair)
+        if alias_target != entry_id:
+            pair = (headword_key, alias_target)
+            if headword_key and pair not in alias_seen:
+                aliases.append({"alias_key": headword_key, "entry_id": alias_target})
+                alias_seen.add(pair)
+
+    return entries, aliases, []
+
 def parse_lexicon_logeion_tsv(path, lexicon_id):
     entries, aliases, citations = [], [], []
     seen_ids = {}
@@ -721,6 +897,6 @@ LEXICON_FORMAT_PARSERS = {
     "tei_dict": parse_lexicon_dict_tei,
     "pizzi": parse_lexicon_pizzi_tei,
     "betant": parse_lexicon_betant_tei,
+    "klaeber": parse_lexicon_klaeber_tei,
     "logeion": parse_lexicon_logeion_tsv,
 }
-

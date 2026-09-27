@@ -162,6 +162,21 @@ def dep_paths_for(work_key: str, meta: dict) -> list:
         paths.append(Path(tsv))
     if meta.get("speakers_csv"):
         paths.append(Path(meta["speakers_csv"]))
+    # Author/work lexica are inputs to the reading experience just as the
+    # treebank is. Keeping their source XML and parser in this fingerprint
+    # means a corrected Klaeber entry rebuilds Beowulf even though the XML
+    # is deliberately absent from WORK_REGISTRY.
+    from pipeline.lexicon.parsers import LEXICON_REGISTRY
+    textgroup = meta.get("textgroup") or work_key.split(".", 1)[0]
+    scoped_lexica = [cfg for cfg in LEXICON_REGISTRY.values()
+                     if (textgroup in cfg.get("textgroups", []) or
+                         work_key in cfg.get("works", []))]
+    for cfg in scoped_lexica:
+        paths.append(Path(cfg["path"]))
+    if scoped_lexica:
+        paths.append(Path(__file__).parent / "lexicon" / "parsers.py")
+        paths.append(Path(__file__).parent / "lexicon" / "ingest.py")
+        paths.append(Path(__file__).parent / "lexicon" / "shard.py")
     # A work's ToposText CSV is an input just like its TEI. Without this,
     # correcting or refreshing place data would leave the manifest green
     # and silently skip the map rebuild.
@@ -260,17 +275,28 @@ def main(argv=None):
 
         experimental_collections.publish()
 
-        # Special case (not a general lexicon pipeline): the Orlando Furioso
-        # Italian glossary. Ingest just that lexicon into the monolith and
-        # shard only its .db, merging into the existing lexica.json.
-        if "ariosto.orlandofurioso" in changed:
+        # Rebuild every author/work lexicon scoped to a changed textgroup.
+        # This keeps resources such as Dindorf and Klaeber in the lexicon
+        # subsystem rather than masquerading as independent corpus works.
+        from pipeline.lexicon.parsers import LEXICON_REGISTRY
+        changed_textgroups = {
+            WORK_REGISTRY[key].get("textgroup") or key.split(".", 1)[0]
+            for key in changed
+        }
+        lexicon_ids = [
+            lexicon_id for lexicon_id, cfg in LEXICON_REGISTRY.items()
+            if (changed_textgroups.intersection(cfg.get("textgroups", [])) or
+                set(changed).intersection(cfg.get("works", [])))
+        ]
+        if lexicon_ids:
             from pipeline.lexicon.ingest import ingest_lexica
             from pipeline.lexicon.shard import shard_lexica
             conn = sqlite3.connect(str(DB_PATH))
-            ingest_lexica(conn, lexicon_ids=["orlando-furioso-ita"])
+            ingest_lexica(conn, lexicon_ids=lexicon_ids)
             conn.close()
+            shard_files = sorted({LEXICON_REGISTRY[i]["shard_file"] for i in lexicon_ids})
             shard_lexica(DB_PATH, WORKSPACE_DIR / "site" / "data" / "lexica",
-                         WORKSPACE_DIR / "site", only_shard_files=["lexica_ariosto.db"])
+                         WORKSPACE_DIR / "site", only_shard_files=shard_files)
 
         if not args.skip_index:
             conn = sqlite3.connect(str(DB_PATH))

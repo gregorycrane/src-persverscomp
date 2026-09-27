@@ -11,6 +11,7 @@ still produced by the notebook.
 import json
 import sqlite3
 from pathlib import Path
+from pipeline.lexicon.parsers import LEXICON_REGISTRY
 
 _LEXICON_TABLES = ["lexicon_meta", "lexicon_scope", "lexicon_entries",
                    "lexicon_aliases", "lexicon_citations"]
@@ -37,7 +38,7 @@ def shard_lexica(monolith_path, lexica_dir, site_root, only_shard_files=None):
         wanted = set(only_shard_files)
         shard_files = [s for s in shard_files if s in wanted]
 
-    processed = {"lexica": {}, "textgroups": {}}   # what THIS run produced
+    processed = {"lexica": {}, "textgroups": {}, "works": {}}  # what THIS run produced
 
     for shard_file in shard_files:
         lexicon_ids = [r[0] for r in src.execute(
@@ -85,6 +86,10 @@ def shard_lexica(monolith_path, lexica_dir, site_root, only_shard_files=None):
                 processed["textgroups"].setdefault(tg, [])
                 if lexicon_id not in processed["textgroups"][tg]:
                     processed["textgroups"][tg].append(lexicon_id)
+            for work_key in LEXICON_REGISTRY.get(lexicon_id, {}).get("works", []):
+                processed["works"].setdefault(work_key, [])
+                if lexicon_id not in processed["works"][work_key]:
+                    processed["works"][work_key].append(lexicon_id)
 
         print(f"  ✓ lexicon shard {shard_file}: {len(lexicon_ids)} lexicon(s)")
 
@@ -98,9 +103,10 @@ def shard_lexica(monolith_path, lexica_dir, site_root, only_shard_files=None):
         try:
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
         except (FileNotFoundError, json.JSONDecodeError):
-            manifest = {"lexica": {}, "textgroups": {}}
+            manifest = {"lexica": {}, "textgroups": {}, "works": {}}
         manifest.setdefault("lexica", {})
         manifest.setdefault("textgroups", {})
+        manifest.setdefault("works", {})
         new_ids = set(processed["lexica"])
         manifest["lexica"].update(processed["lexica"])
         # drop our lexicon_ids from every textgroup list, then re-add fresh
@@ -113,6 +119,14 @@ def shard_lexica(monolith_path, lexica_dir, site_root, only_shard_files=None):
                     manifest["textgroups"][tg].append(i)
             if not manifest["textgroups"][tg]:
                 del manifest["textgroups"][tg]
+        for work_key, ids in list(manifest["works"].items()):
+            manifest["works"][work_key] = [i for i in ids if i not in new_ids]
+        for work_key, ids in processed["works"].items():
+            manifest["works"].setdefault(work_key, [])
+            for i in ids:
+                if i not in manifest["works"][work_key]:
+                    manifest["works"][work_key].append(i)
+        manifest["works"] = {k: v for k, v in manifest["works"].items() if v}
 
     manifest_path.parent.mkdir(parents=True, exist_ok=True)
     manifest_path.write_text(

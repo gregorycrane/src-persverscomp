@@ -4142,11 +4142,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo011/phi1348.abo011.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo011/phi1348.abo011.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4204,11 +4199,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo012/phi1348.abo012.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo012/phi1348.abo012.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4255,11 +4245,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo013/phi1348.abo013.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo013/phi1348.abo013.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4290,11 +4275,6 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo014/phi1348.abo014.perseus-eng2.xml",
         "label": "English (Thomson, 1883)",
-        "class": "english-text"
-      },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo014/phi1348.abo014.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
         "class": "english-text"
       },
       "holland1899-eng1": {
@@ -4329,11 +4309,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo015/phi1348.abo015.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo015/phi1348.abo015.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4364,11 +4339,6 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo016/phi1348.abo016.perseus-eng2.xml",
         "label": "English (Thomson, 1883)",
-        "class": "english-text"
-      },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo016/phi1348.abo016.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
         "class": "english-text"
       },
       "holland1899-eng1": {
@@ -4406,11 +4376,6 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo017/phi1348.abo017.perseus-eng2.xml",
         "label": "English (Thomson, 1883)",
-        "class": "english-text"
-      },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo017/phi1348.abo017.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
         "class": "english-text"
       },
       "holland1899-eng1": {
@@ -4467,11 +4432,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo018/phi1348.abo018.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo018/phi1348.abo018.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4526,11 +4486,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo019/phi1348.abo019.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo019/phi1348.abo019.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4583,11 +4538,6 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo020/phi1348.abo020.perseus-eng2.xml",
         "label": "English (Thomson, 1883)",
-        "class": "english-text"
-      },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo020/phi1348.abo020.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
         "class": "english-text"
       },
       "holland1899-eng1": {
@@ -4649,11 +4599,6 @@
         "label": "English (Thomson, 1883)",
         "class": "english-text"
       },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo021/phi1348.abo021.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
-        "class": "english-text"
-      },
       "holland1899-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/phi1348/abo021/phi1348.abo021.holland1899-eng1.xml",
         "label": "English (Holland, 1899; selective 1606 variants) (OCR draft)",
@@ -4706,11 +4651,6 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo022/phi1348.abo022.perseus-eng2.xml",
         "label": "English (Thomson, 1883)",
-        "class": "english-text"
-      },
-      "rolfe-eng1": {
-        "path": "/Users/gcrane/github/canonical-latinLit/data/phi1348/abo022/phi1348.abo022.rolfe-eng1.xml",
-        "label": "English (Rolfe, inherited canonical XML)",
         "class": "english-text"
       },
       "holland1899-eng1": {
@@ -7145,22 +7085,5 @@
         "source_version": "perseus-ang1"
       }
     }
-  },
-  "anon.klaeber_glossary": {
-    "textgroup": "anon",
-    "work": "klaeber_glossary",
-    "title": "Klaeber's Beowulf Glossary",
-    "editions": {
-      "perseus-mul1": {
-        "path": "/Users/gcrane/github/canonical-angLit/data/anon/klaeber_glossary/anon.klaeber_glossary.perseus-mul1.xml",
-        "label": "Old English–English glossary (Fr. Klaeber, 1922)",
-        "class": "glossary-text",
-        "parse_mode": "card_prose"
-      }
-    },
-    "appcrits": {},
-    "translations": {},
-    "commentaries": {},
-    "treebanks": {}
   }
 }

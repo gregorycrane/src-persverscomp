@@ -470,15 +470,18 @@ async function loadLexicaCatalog() {
         LEXICA_CATALOG = await r.json();
     } catch (e) {
         console.warn("[lexica] no lexica.json (no lexica configured for this build):", e.message);
-        LEXICA_CATALOG = { lexica: {}, textgroups: {} };
+        LEXICA_CATALOG = { lexica: {}, textgroups: {}, works: {} };
     }
     return LEXICA_CATALOG;
 }
 
-// Which lexicon_ids apply to a textgroup, each with its shard file + display meta.
-async function lexiconsForTextgroup(textgroup) {
+// Which lexicon_ids apply to an author/textgroup or to one exact work.
+async function lexiconsForScope(textgroup, workKey = null) {
     const catalog = await loadLexicaCatalog();
-    const ids = catalog.textgroups[textgroup] || [];
+    const ids = [...new Set([
+        ...(catalog.textgroups[textgroup] || []),
+        ...((workKey && catalog.works && catalog.works[workKey]) || [])
+    ])];
     return ids.map(id => ({ lexicon_id: id, ...catalog.lexica[id] }));
 }
 
@@ -516,10 +519,6 @@ function normalizeHeadwordKey(s) {
 // on an alias returns the fuller target entry instead of a stub.
 function lookupLexiconEntries(db, lexiconId, headwordKey) {
     if (!headwordKey) return [];
-    const direct = queryAll(db,
-        "SELECT entry_id, headword_display, headword_translit, entry_html FROM lexicon_entries " +
-        "WHERE lexicon_id=? AND headword_key=?", [lexiconId, headwordKey]);
-    if (direct.length) return direct;
     const aliasHit = queryAll(db,
         "SELECT entry_id FROM lexicon_aliases WHERE lexicon_id=? AND alias_key=?",
         [lexiconId, headwordKey]);
@@ -530,7 +529,9 @@ function lookupLexiconEntries(db, lexiconId, headwordKey) {
             `SELECT entry_id, headword_display, headword_translit, entry_html FROM lexicon_entries ` +
             `WHERE lexicon_id=? AND entry_id IN (${placeholders})`, [lexiconId, ...ids]);
     }
-    return [];
+    return queryAll(db,
+        "SELECT entry_id, headword_display, headword_translit, entry_html FROM lexicon_entries " +
+        "WHERE lexicon_id=? AND headword_key=?", [lexiconId, headwordKey]);
 }
 
 function lookupLexiconEntryById(db, lexiconId, entryId) {
@@ -552,7 +553,7 @@ async function ensureLogeionShardsLoaded(textgroup, onLoaded) {
     if (LOGEION_SHARDS_FOR_TEXTGROUP.has(textgroup)) return;
     let logeionLexica = [];
     try {
-        const lexica = await lexiconsForTextgroup(textgroup);
+        const lexica = await lexiconsForScope(textgroup);
         logeionLexica = lexica.filter(l => l.lexicon_id && l.lexicon_id.startsWith('logeion-'));
     } catch (e) {
         console.warn('[logeion] could not resolve lexica for', textgroup, e);
@@ -594,8 +595,11 @@ function logeionGlossFor(tok, textgroup) {
 
 function _tbHeadwordScriptClass(s) {
     // Arabic/Persian script range -- gets RTL + Perso-Arabic font styling
-    // instead of the Greek serif used for Cunliffe/Dindorf headwords.
-    return /[\u0600-\u06FF]/.test(s || '') ? 'tb-lex-fa' : 'tb-greek';
+    // instead of the Greek serif used for Greek headwords. Latin-script
+    // lexica such as Klaeber use the panel's normal serif styling.
+    if (/[\u0600-\u06FF]/.test(s || '')) return 'tb-lex-fa';
+    if (/[\u0370-\u03FF\u1F00-\u1FFF]/.test(s || '')) return 'tb-greek';
+    return '';
 }
 
 function renderLexiconBlock(lexMeta, entryRows) {
@@ -640,8 +644,8 @@ function renderLexiconBlock(lexMeta, entryRows) {
 // `slot` is an empty <div> already in the DOM; this fills it in place once
 // the relevant shard(s) have loaded, tolerating a work with no configured
 // lexica (slot just stays empty, nothing printed).
-async function populateLexiconSlot(slot, tok, textgroup) {
-    const lexica = await lexiconsForTextgroup(textgroup);
+async function populateLexiconSlot(slot, tok, textgroup, workKey = null) {
+    const lexica = await lexiconsForScope(textgroup, workKey);
     if (!lexica.length) return;
 
     const key = normalizeHeadwordKey(tok.lemma && tok.lemma !== '_' ? tok.lemma : tok.form);
@@ -4197,7 +4201,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         _tbApplyTranslitToPanel(panel);
         const slot = panel.querySelector('.tb-lex-slot');
         const textgroup = (typeof activeWorkKey === 'string' ? activeWorkKey.split('.')[0] : null);
-        if (slot && textgroup) populateLexiconSlot(slot, tok, textgroup);
+        if (slot && textgroup) populateLexiconSlot(slot, tok, textgroup, activeWorkKey);
     }
 
     // ── Dependency syntax-tree renderer (Tree mode) ──

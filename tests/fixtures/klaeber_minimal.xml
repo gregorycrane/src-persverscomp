@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text><body><div type="edition"><div type="textpart" subtype="card" n="g">
+    <p><entryFree n="he" xml:id="entry-he"><orth xml:lang="ang">hē, hēo, hit</orth>, pron., <seg type="translation"><gloss>he, she, it</gloss></seg>.</entryFree></p>
+    <p><entryFree n="geseon" xml:id="entry-geseon"><orth xml:lang="ang">ge-sēon</orth>, vb., <seg type="translation"><gloss>see</gloss></seg>.</entryFree></p>
+    <p><entryFree n="eall" xml:id="entry-eall"><orth xml:lang="ang">eal(l)</orth>, adj., <seg type="translation"><gloss>all</gloss></seg>.</entryFree></p>
+    <p><entryFree n="gesion" xml:id="entry-gesion"><orth xml:lang="ang">ge-sīon</orth>, see <ref>ge-sēon</ref>.</entryFree></p>
+  </div></div></body></text>
+</TEI>
