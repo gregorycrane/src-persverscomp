@@ -10,7 +10,8 @@ from pipeline.core.xml_utils import (
 def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap=None):
     if not os.path.exists(path): return None
     tree = safe_parse(path)
-    text_entry = find_text_root(tree.getroot())
+    root = tree.getroot()
+    text_entry = find_text_root(root)
 
     data = OrderedDict((bk, OrderedDict()) for bk in master_intervals)
     flat_intervals, card_n_to_label = [], {}
@@ -26,17 +27,34 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
     # same for commentary <note target="#line-id"> blocks.
     def _tag(e): return e.tag.split("}")[-1]
     parent = {child: par for par in text_entry.iter() for child in par}
+    xml_id = "{http://www.w3.org/XML/1998/namespace}id"
+    elements_by_id = {
+        e.get(xml_id): e for e in root.iter() if e.get(xml_id)
+    }
+    note_container_ids = {
+        key for key, elem in elements_by_id.items()
+        if (_tag(elem) == "note"
+            or (_tag(elem) == "app" and any(_tag(e) == "note" for e in elem.iter())))
+    }
     note_targets = {
         (e.get("target") or "").lstrip("#")
         for e in text_entry.iter()
-        if _tag(e) == "ref" and e.get("type") == "note" and e.get("target")
+        if _tag(e) == "ref" and e.get("target") and (
+            e.get("type") == "note"
+            or (e.get("target") or "").lstrip("#") in note_container_ids
+        )
     }
-    footnote_lookup = {
-        e.get("{http://www.w3.org/XML/1998/namespace}id"): e
-        for e in text_entry.iter()
-        if (_tag(e) == "note"
-            and e.get("{http://www.w3.org/XML/1998/namespace}id") in note_targets)
-    }
+    footnote_lookup = {}
+    for target in note_targets:
+        linked = elements_by_id.get(target)
+        if linked is None:
+            continue
+        if _tag(linked) == "note":
+            footnote_lookup[target] = linked
+        elif _tag(linked) == "app":
+            note = next((e for e in linked.iter() if _tag(e) == "note"), None)
+            if note is not None:
+                footnote_lookup[target] = note
     lines = [e for e in text_entry.iter() if _tag(e) == "l" and e.get("n")]
     line_by_n = {e.get("n"): e for e in lines}
     line_id_to_n = {
@@ -113,6 +131,15 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
     detached_containers = set()
     for app in (e for e in text_entry.iter() if _tag(e) == "app"):
         anc = parent.get(app)
+        app_id = app.get(xml_id)
+        if app_id in footnote_lookup:
+            # Potter and similar translations wrap explanatory endnotes in
+            # <app xml:id="…"><note>…</note></app>.  Their in-text <ref>
+            # marker owns the display; do not also render them as empty
+            # critical-apparatus widgets at @loc.
+            if anc is not None and _tag(anc) == "div" and (anc.get("type") or "").lower() == "apparatus":
+                detached_containers.add(anc)
+            continue
         if anc is not None and _tag(anc) == "l":
             continue                         # existing inline behavior
         targets = _pointer_lines(app)

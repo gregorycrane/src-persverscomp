@@ -368,7 +368,10 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
         ref_type = (elem.get('type') or '').strip()
-        note = (footnote_lookup or {}).get(target.lstrip('#')) if ref_type == 'note' else None
+        # A reference can point directly to a <note>, or to an apparatus
+        # wrapper whose child <note> is indexed by the caller.  Do not require
+        # @type="note": historical TEI commonly relies on the target alone.
+        note = (footnote_lookup or {}).get(target.lstrip('#'))
         note_text = re.sub(r'\s+', ' ', ''.join(note.itertext())).strip() if note is not None else ''
         attrs = ['class="tei-ref tei-note-ref"' if note_text else 'class="tei-ref"']
         if target: attrs.append(f'data-cref="{_attr(target)}"')

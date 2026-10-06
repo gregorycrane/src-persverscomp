@@ -3368,7 +3368,7 @@
         "lineno_sigil": "H."
       },
       "mazon1920-grc2": {
-        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.dindorf1882-grc2.xml",
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.mazon1920-grc2.xml",
         "label": "Greek (P. Mazon, 1920) (OCR draft)",
         "class": "greek-text",
         "parse_mode": "poetry_cards",
@@ -3430,6 +3430,12 @@
       "buckley1849-eng2": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.buckley1849-eng2.xml",
         "label": "English (T. Buckley, 1849) (OCR draft)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg005/tlg0085.tlg005.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779) (OCR draft)",
         "class": "english-text",
         "parse_mode": "poetry_cards"
       },
