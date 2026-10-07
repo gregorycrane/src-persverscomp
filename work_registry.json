@@ -398,7 +398,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg002/tlg0006.tlg002.donner1841-deu1.xml",
@@ -445,7 +446,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg003/tlg0006.tlg003.donner1841-deu1.xml",
@@ -492,7 +494,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1852-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg004/tlg0006.tlg004.donner1852-deu1.xml",
@@ -539,7 +542,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg005/tlg0006.tlg005.donner1841-deu1.xml",
@@ -586,7 +590,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1845-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg006/tlg0006.tlg006.donner1845-deu1.xml",
@@ -633,7 +638,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg007/tlg0006.tlg007.donner1841-deu1.xml",
@@ -680,7 +686,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1852-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg008/tlg0006.tlg008.donner1852-deu1.xml",
@@ -727,7 +734,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1852-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg009/tlg0006.tlg009.donner1852-deu1.xml",
@@ -795,7 +803,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "verrall1890-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg010/tlg0006.tlg010.verrall1890-eng1.xml",
@@ -881,7 +890,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1852-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg011/tlg0006.tlg011.donner1852-deu1.xml",
@@ -928,7 +938,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1852-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg012/tlg0006.tlg012.donner1852-deu1.xml",
@@ -975,7 +986,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1845-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg013/tlg0006.tlg013.donner1845-deu1.xml",
@@ -1022,7 +1034,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1845-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg014/tlg0006.tlg014.donner1845-deu1.xml",
@@ -1069,7 +1082,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg015/tlg0006.tlg015.donner1841-deu1.xml",
@@ -1116,7 +1130,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1841-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg016/tlg0006.tlg016.donner1841-deu1.xml",
@@ -1163,7 +1178,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1845-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg017/tlg0006.tlg017.donner1845-deu1.xml",
@@ -1210,7 +1226,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "donner1845-deu1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0006/tlg018/tlg0006.tlg018.donner1845-deu1.xml",
@@ -1266,7 +1283,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       }
     },
     "commentaries": {},
