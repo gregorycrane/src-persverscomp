@@ -406,6 +406,44 @@ def best_line(body: etree._Element, target: str) -> tuple[etree._Element | None,
     return best, best_score
 
 
+def repair_alignment_gaps(body: etree._Element, work_id: str) -> list[str]:
+    """Restore reviewed Storr card boundaries hidden by collapsed alignment."""
+    if work_id != "tlg003":
+        return []
+    changes = []
+    boundary_targets = {"609": "597.2", "622": "597.10", "635": "598.5"}
+    for card, line_n in boundary_targets.items():
+        target = body.xpath(f'.//t:l[@n="{line_n}"]', namespaces=NS)
+        if not target:
+            continue
+        speech = next(target[0].iterancestors(Q("sp")), None)
+        if speech is not None:
+            speech.set("corresp", "urn:cts:greekLit:tlg0011.tlg003.perseus-grc2:596-644")
+        if not body.xpath(f'.//t:milestone[@unit="card"][@n="{card}"]', namespaces=NS):
+            milestone = etree.Element(Q("milestone"), unit="card", n=card, edRef="Storr")
+            target[0].addprevious(milestone)
+            changes.append(card)
+
+    correspondences = {
+        "597.10": "622-624", "597.11": "622-624", "597.12": "625",
+        "597.13": "626", "597.14": "627", "597.15": "628-629",
+        "598": "630", "598.2": "631", "598.3": "632", "598.4": "633",
+    }
+    for line_n, target_range in correspondences.items():
+        matches = body.xpath(f'.//t:l[@n="{line_n}"]', namespaces=NS)
+        if matches:
+            matches[0].set(
+                "corresp",
+                f"urn:cts:greekLit:tlg0011.tlg003.campbell1879-grc1:{target_range}",
+            )
+    corrections = {"597.5": "To gloomy sadness now a prey;", "598": "But she will give loud griefs to rise,", "598.6": "Far better were thy doom to rest,"}
+    for line_n, corrected in corrections.items():
+        matches = body.xpath(f'.//t:l[@n="{line_n}"]', namespaces=NS)
+        if matches and not len(matches[0]):
+            matches[0].text = corrected
+    return changes
+
+
 def sanitize_note_texts(
     notes: list[dict[str, object]], body: etree._Element, work_id: str
 ) -> None:
@@ -523,6 +561,7 @@ def repair(source: Path, ocr_path: Path, output: Path, audit_path: Path) -> None
     removed_notes, end_note = remove_note_pollution(body, note_keys, work_id)
     ocr_keys = {key(line) for page in range(low, high + 1) for line in pages.get(page, []) if key(line)}
     line_repairs = repair_lines(body, ocr_keys)
+    line_repairs["restored_card_boundaries"] = repair_alignment_gaps(body, work_id)
     if end_note:
         notes.append({"printed_line": "end", "page": high, "text": end_note})
     note_results = add_notes(root, body, work_id, notes, verse_by_number)
