@@ -373,6 +373,35 @@
             font-weight: 700;
         }
         #tei-note-popover .note-pop-hint { margin-top: 0.4rem; color: #756b62; font-size: 0.78rem; }
+        .tei-note-register {
+            grid-column: 1 / -1;
+            margin: 1.15rem 0 0.35rem;
+            padding: 0.8rem 0.95rem;
+            color: #3b3029;
+            background: #faf6ec;
+            border: 1px solid #d8ccb9;
+            border-radius: 5px;
+            font: 0.9rem/1.48 Georgia, serif;
+        }
+        .tei-note-register-title {
+            margin: 0 0 0.55rem;
+            color: #68422c;
+            font: 700 0.76rem/1.2 system-ui, sans-serif;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+        .tei-note-register dl { margin: 0; }
+        .tei-note-register-entry {
+            display: grid;
+            grid-template-columns: 1.5rem 1fr;
+            gap: 0.35rem;
+            padding-top: 0.55rem;
+            border-top: 1px solid #e3dacb;
+        }
+        .tei-note-register-entry:first-child { padding-top: 0; border-top: 0; }
+        .tei-note-register dt { color: #7a0000; font-weight: 700; }
+        .tei-note-register dd { margin: 0 0 0.55rem; }
+        .tei-note-register-entry:last-child dd { margin-bottom: 0; }
         .commentary-text .tei-quote {
             color: #3f3028;
         }

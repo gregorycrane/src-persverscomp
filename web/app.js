@@ -2248,6 +2248,53 @@ function initializeRoutingFromURL() {
         return text.split(/\s+/).filter(t => t && isWord(t));
     }
 
+    // Render source notes visibly below the passage as well as on the small
+    // inline markers. Popovers remain useful for quick consultation, but a
+    // reader should not have to discover a hover-only interaction to know
+    // that Potter (and other source editions) supplied substantive notes.
+    function appendVisibleSourceNotes(container) {
+        const refs = Array.from(container.querySelectorAll('.tei-note-ref[data-note]'));
+        if (!refs.length) return;
+
+        const notes = [];
+        const seen = new Map();
+        refs.forEach((ref, index) => {
+            const label = ref.getAttribute('data-note-label') || ref.textContent.trim() || String(index + 1);
+            const body = ref.getAttribute('data-note') || '';
+            const key = ref.getAttribute('data-cref') || `${label}\u0000${body}`;
+            let note = seen.get(key);
+            if (!note) {
+                note = { label, body, id: `source-note-${++appendVisibleSourceNotes.serial}` };
+                seen.set(key, note);
+                notes.push(note);
+            }
+            ref.setAttribute('aria-describedby', note.id);
+        });
+
+        const register = document.createElement('aside');
+        register.className = 'tei-note-register';
+        register.setAttribute('aria-label', 'Source notes');
+        const title = document.createElement('h4');
+        title.className = 'tei-note-register-title';
+        title.textContent = notes.length === 1 ? 'Source note' : 'Source notes';
+        register.appendChild(title);
+        const list = document.createElement('dl');
+        notes.forEach(note => {
+            const entry = document.createElement('div');
+            entry.className = 'tei-note-register-entry';
+            entry.id = note.id;
+            const term = document.createElement('dt');
+            term.textContent = note.label;
+            const definition = document.createElement('dd');
+            definition.textContent = note.body;
+            entry.append(term, definition);
+            list.appendChild(entry);
+        });
+        register.appendChild(list);
+        container.appendChild(register);
+    }
+    appendVisibleSourceNotes.serial = 0;
+
     // For a poetry row, map line-number -> its .line-text-cell element.
     // .line-num-cell and .line-text-cell are written as separate adjacent
     // sibling divs per line (see renderNavigationControls' urn-range-highlight
@@ -4621,7 +4668,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                             <div class="poetry-grid-layout lineated-section">${txt}</div>
                         </div>
                     `;
-            } else {
+                } else {
                     row.innerHTML = `
                         <div class="prose-inline-layout ${cssClass}">
                             <span class="prose-marker"><a href="javascript:void(0)" onclick="selectSectionDirectly('${sec}')">${visualIndexLabel}</a></span>
@@ -4629,6 +4676,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                         </div>
                     `;
                 }
+                appendVisibleSourceNotes(row);
                 targetContainer.appendChild(row);
             });
 
