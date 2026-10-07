@@ -3116,6 +3116,12 @@
         "class": "english-text",
         "parse_mode": "poetry_cards"
       },
+      "potter1779-eng2": {
+        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.potter1779-eng2.xml",
+        "label": "English (Robert Potter, 1779) (OCR draft)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards"
+      },
       "mazon1920-fra2": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg003/tlg0085.tlg003.mazon1920-fra2.xml",
         "label": "French (P. Mazon, 1920) (OCR draft)",
