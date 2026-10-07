@@ -1738,7 +1738,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg001/tlg0011.tlg001.francklin1758-eng1.xml",
@@ -1951,7 +1952,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg002/tlg0011.tlg002.francklin1758-eng1.xml",
@@ -2059,7 +2061,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg003/tlg0011.tlg003.francklin1758-eng1.xml",
@@ -2151,7 +2154,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg005/tlg0011.tlg005.francklin1758-eng1.xml",
@@ -2249,7 +2253,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg006/tlg0011.tlg006.francklin1758-eng1.xml",
@@ -2347,7 +2352,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg007/tlg0011.tlg007.francklin1758-eng1.xml",
@@ -2530,7 +2536,8 @@
         "class": "english-text",
         "parse_mode": "poetry_cards",
         "card_anchor": "milestones",
-        "lineno_sigil": "Potter"
+        "lineno_sigil": "Potter",
+        "require_full_card_coverage": true
       },
       "francklin1758-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0011/tlg004/tlg0011.tlg004.francklin1758-eng1.xml",

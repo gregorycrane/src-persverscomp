@@ -60,6 +60,25 @@ _DIRECTLY_KEYED_TABLES = [
     "metrical_lines", "token_alignments",
 ]
 
+
+def missing_required_cards(parsed, master_intervals):
+    """List canonical cards that a coverage-required edition failed to fill."""
+    missing = []
+    if parsed is None:
+        return [
+            (book, interval["label"])
+            for book, intervals in master_intervals.items()
+            for interval in intervals
+        ]
+    for book, intervals in master_intervals.items():
+        chapters = parsed.get(book, {})
+        for interval in intervals:
+            label = interval["label"]
+            sections = chapters.get(label, {})
+            if not sections or not any(str(value).strip() for value in sections.values()):
+                missing.append((book, label))
+    return missing
+
 def _delete_existing_rows(conn, target_keys):
     cur = conn.cursor()
     for work_key in target_keys:
@@ -313,6 +332,16 @@ def ingest_editions_and_structure(conn, target_keys):
                     line_citation_scheme=cfg.get("line_citation_scheme"),
                 )
             
+            if cfg.get("require_full_card_coverage"):
+                missing_cards = missing_required_cards(parsed, _intervals_for_this_edition)
+                if missing_cards:
+                    labels = ", ".join(
+                        f"{book}:{label}" for book, label in missing_cards
+                    )
+                    raise RuntimeError(
+                        f"{v_id} is missing {len(missing_cards)} required canonical card(s): {labels}"
+                    )
+
             if parsed is not None and sum(len(secs) for chs in parsed.values() for secs in chs.values()) > 0:
                 work_corpus[v_id] = parsed
                 # Capture this edition's OWN document-order sequence of chapters,

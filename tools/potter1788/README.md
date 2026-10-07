@@ -21,3 +21,11 @@ python3 tools/potter1788/rebuild_sophocles.py \
 The seven canonical XML files remain in `grcnewxml/data/tlg0011/`; this tool
 belongs here because `src-persverscomp` owns the ingestion and repair tooling,
 not the source texts.
+
+`repair_card_coverage.py` performs a separate, review-first repair of Storr
+card coverage. It retains the largest internally consistent set of inherited
+anchors, partitions intervening Potter lines against the canonical card widths
+and the available English comparison texts, and writes both review XML and a
+JSON boundary audit. Potter's registry entries require complete card coverage,
+so a future build fails instead of silently publishing an empty comparison
+panel.
