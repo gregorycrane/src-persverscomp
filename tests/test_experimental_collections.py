@@ -30,12 +30,44 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
-    assert result == {"fragment_works": 71, "claudel_versions": 3}
+    assert result == {"fragment_works": 71, "fragment_authors": 55,
+                      "claudel_versions": 3}
     assert len(fragments) == 71
-    assert len(sophocles) == 102
+    assert len(sophocles) == 116
     assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 466
-    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 1128
+    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 3120
     assert (site / "fragment-collections.json").exists()
+    assert (site / "tlg0011-fragment-concordance.json").exists()
+    concordance = json.loads(
+        (site / "tlg0011-fragment-concordance.json").read_text(encoding="utf-8")
+    )
+    assert len(concordance["matches"]) == 567
+    aigeys_meta = rebuilt["works"]["tlg0011.aigeys"]
+    assert [v["short_id"] for v in aigeys_meta["versions"]] == [
+        "pearson1917-grc1", "nauck1889grc1"
+    ]
+    assert aigeys_meta["parts"][0]["chapters"][:2] == ["P19=N18", "P20=N19"]
+    assert "P34=N31" in rebuilt["works"]["tlg0011.aichmalotides"]["parts"][0]["chapters"]
+    with sqlite3.connect(site / "data/tlg0011/aigeys/tlg0011.aigeys.part1.db") as conn:
+        rows = conn.execute(
+            "SELECT version_short_id FROM text_segments "
+            "WHERE passage_urn LIKE '%:P19-N18.1' ORDER BY version_short_id"
+        ).fetchall()
+        assert rows == [("nauck1889grc1",), ("pearson1917-grc1",)]
+    assert "tlg0303.fragmenta" in rebuilt["works"]
+    assert "tlg0303.aigyptioi" in rebuilt["works"]
+    assert rebuilt["authors"]["tlg0303"] == "Phrynichus"
+    assert rebuilt["works"]["tlg0331.iphigeneia"]["evidence_only"] is True
+    assert rebuilt["works"]["tlg0331.iphigeneia"]["parts"][0]["chapters"] == []
+    phrynichus = site / "data/tlg0303/fragmenta/tlg0303.fragmenta.part1.db"
+    with sqlite3.connect(phrynichus) as conn:
+        assert conn.execute("SELECT count(*) FROM alignment_grid").fetchone()[0] == 24
+        assert "ΑΙΓΥΠΤΙΟΙ" in conn.execute(
+            "SELECT content_html FROM text_segments ORDER BY passage_urn LIMIT 1"
+        ).fetchone()[0]
+    assert rebuilt["works"]["tlg0303.aigyptioi"]["object_urn"] == (
+        "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi"
+    )
 
     assert "tlg0085.athamas" in fragments
     assert "tlg0085.frag_athamas" not in rebuilt["works"]
@@ -46,9 +78,12 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
     with sqlite3.connect(athamas) as conn:
         assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
         assert conn.execute("SELECT count(*) FROM alignment_grid").fetchone()[0] == 4
-        assert "τὸν μὲν τρίπους" in conn.execute(
+        fragment_html = conn.execute(
             "SELECT content_html FROM text_segments ORDER BY passage_urn LIMIT 1"
         ).fetchone()[0]
+        assert "τὸν μὲν τρίπους" in fragment_html
+        assert '<l n="1" lang="grc">' in fragment_html
+        assert 'class="fc-line"' not in fragment_html
 
     for work, short_id, count in (
         ("tlg005", "claudel1896-fra1", 99),
@@ -67,7 +102,16 @@ def test_fragmentary_plays_are_registered_as_stable_works():
     athamas = registry["tlg0085.athamas"]
     assert athamas["fragmentary"] is True
     assert "nauck1889grc1" in athamas["fragment_editions"]
+    source = athamas["fragment_editions"]["nauck1889grc1"]
+    assert source["path"].endswith("tlg0085.fragmenta.nauck1889grc1.xml")
+    assert source["format"] == "tei_fragment_collection"
+    assert registry["tlg0085.fragmenta"]["fragment_editions"]["nauck1889grc1"]["path"] == source["path"]
+    assert registry["tlg0085.incertae"]["fragment_collection"] is True
+    assert registry["tlg0085.dubia_spuria"]["fragment_collection"] is True
     assert "tlg0085.frag_athamas" not in registry
+    assert set(registry["tlg0011.aigeys"]["fragment_editions"]) == {
+        "nauck1889grc1", "pearson1917-grc1"
+    }
 
 
 def test_one_fragmentary_play_accepts_multiple_editorial_versions(tmp_path, monkeypatch):

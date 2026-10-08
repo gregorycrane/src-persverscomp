@@ -100,9 +100,31 @@ def parse_fragment(fragment, volume):
     line_nodes = fragment.xpath('.//t:quote[@type="fragtext"]//t:l', namespaces=NS)
     if not line_nodes:
         line_nodes = fragment.xpath(".//t:lg/t:l", namespaces=NS)
+    inferred_line_nodes = []
+    if not line_nodes:
+        # Several lexicographical fragments print the quoted Sophoclean word
+        # or verse as a standalone paragraph before the source discussion.
+        # Retain that quotation as a numbered line instead of treating it as
+        # commentary merely because the OCR did not wrap it in <lg>/<l>.
+        for child in fragment:
+            if etree.QName(child).localname != "p":
+                continue
+            value = content(child)
+            if value == number:
+                continue
+            greek = len(re.findall(r"[\u0370-\u03ff\u1f00-\u1fff]", value))
+            latin = len(re.findall(r"[A-Za-z]", value))
+            if (greek >= 3 and latin <= 3 and not re.search(r"\d", value)
+                    and greek / max(1, greek + latin) >= 0.7 and ":" not in value):
+                inferred_line_nodes.append(child)
+                continue
+            if inferred_line_nodes or latin or ":" in value:
+                break
+        line_nodes = inferred_line_nodes
     lines = [{"ref": line.get("n") or str(i), "source_id": line.get(XML_ID),
               "text": content(line)} for i, line in enumerate(line_nodes, 1)]
     excluded = set(fragment.xpath('.//t:quote[@type="fragtext"]', namespaces=NS))
+    excluded.update(inferred_line_nodes)
     context_parts = []
     for child in fragment:
         if child in excluded or etree.QName(child).localname in {"head", "pb"}:

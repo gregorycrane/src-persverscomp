@@ -35,7 +35,7 @@ def build_shards(data, output, existing):
         for db in (conn,aggregate):
             db.execute('INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)',unit)
         for i,f in enumerate(fragments):
-            verse=''.join('<div class="fc-line"><span>'+html.escape(l['ref'])+'</span><div lang="grc">'+html.escape(l['text'])+'</div></div>' for l in f['lines'])
+            verse=''.join('<l n="'+html.escape(l['ref'])+'" lang="grc">'+html.escape(l['text'])+'</l>' for l in f['lines'])
             if not verse: verse='<p>No quoted verse is encoded in this testimonium.</p>'
             intro='<details><summary>Editorial evidence for this play</summary><p>'+html.escape(record['introduction'])+'</p></details>' if i==0 and record['introduction'] else ''
             body='<div class="pmv-fragment"><h3>'+html.escape(record['title'])+' · Fragment '+html.escape(f['number'])+'</h3>'+intro+'<div class="fc-verse">'+verse+'</div><details class="fc-context" open><summary>Transmitting source and Nauck’s notes</summary><p>'+html.escape(f['context']).replace('\n\n','</p><p>')+'</p></details></div>'

@@ -1821,13 +1821,25 @@ function resolvePassageSpec(workKey, spec) {
     if (isFlatStructure(workKey)) {
         const startLine = startSegs[startSegs.length - 1];
         const endLine = endSegs[endSegs.length - 1];
+        const flatChapters = GLOBAL_STRUCTURES[workKey] || [];
+
+        // A fragment-concordance card retains both editions' native labels
+        // (for example P34=N31). Old and external links may cite either
+        // component alone; resolve both to the shared card.
+        if (!isRange) {
+            const concordanceCard = flatChapters.find(label =>
+                String(label).split("=").includes(startLine));
+            if (concordanceCard) {
+                return { book: null, chapter: concordanceCard, sectionRange: null };
+            }
+        }
 
         // Prefer a named card before containment: IA has overlapping 0-79 and 1-48.
-        if (isRange && (GLOBAL_STRUCTURES[workKey] || []).includes(spec)) {
+        if (isRange && flatChapters.includes(spec)) {
             return { book: null, chapter: spec, sectionRange: null };
         }
 
-        if (!isRange && (GLOBAL_STRUCTURES[workKey] || []).includes(startLine)) {
+        if (!isRange && flatChapters.includes(startLine)) {
             return { book: null, chapter: startLine, sectionRange: null };
         }
 
@@ -1919,6 +1931,7 @@ function initializeRoutingFromURL() {
             setTimeout(() => {
                 const ow = document.getElementById('outer-wrapper');
                 if (activeColumnsCount === 1) ow.classList.add('one-column');
+                if (activeColumnsCount === 2) ow.classList.add('two-columns');
                 if (activeColumnsCount === 4) ow.classList.add('four-columns');
                 if (activeColumnsCount === 5) ow.classList.add('five-columns');
                 if (activeColumnsCount === 6) ow.classList.add('six-columns');
@@ -3435,11 +3448,15 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         }
 
         // Reader row-visibility state (persists across treebank re-renders)
-        if (!window.__tbRowVis) window.__tbRowVis = { original: true, translit: true };
+        if (!window.__tbRowVis) window.__tbRowVis = { original: true, translit: true, literal: true };
+        // Preserve preferences created by older builds while giving the new
+        // sentence-level literal row an explicit visibility setting.
+        if (window.__tbRowVis.literal === undefined) window.__tbRowVis.literal = true;
         if (!window.__tbMode) window.__tbMode = 'text';
         if (!window.__tbGridRows) window.__tbGridRows = { translit:true, lemma:true, relation:true, pos:true, morph:true, gloss:true };
         container.classList.toggle('tb-hide-original', !window.__tbRowVis.original);
         container.classList.toggle('tb-hide-translit', !window.__tbRowVis.translit);
+        container.classList.toggle('tb-hide-literal', !window.__tbRowVis.literal);
 
         const filter = activeSectionFilter;
 
@@ -3495,7 +3512,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             };
             ['translit','lemma','relation','pos','morph','gloss'].forEach(k => visBar.appendChild(mkGridToggle(k)));
         } else {
-            // Text mode: show/hide the Arabic and transliteration rows
+            // Text mode exposes only the four readable sentence layers.
+            // Token-level transliteration and glosses remain available in
+            // Tree mode, where their one-to-one alignment is meaningful.
             const mkVisToggle = (text, key) => {
                 const b = document.createElement('button');
                 b.type = 'button';
@@ -3511,6 +3530,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             };
             visBar.appendChild(mkVisToggle('Original', 'original'));
             if (!isPoetry) visBar.appendChild(mkVisToggle('Translit', 'translit'));
+            visBar.appendChild(mkVisToggle('Literal', 'literal'));
         }
         container.appendChild(visBar);
 
@@ -3600,7 +3620,8 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             // trigger the same cross-row highlight even though they're built first.
             let tbSelectRef = null;
 
-            if (sent.translit) {
+            const tbMode = window.__tbMode || 'text';
+            if (tbMode === 'text' && sent.translit) {
                 const trLine = document.createElement('div');
                 trLine.className = 'tb-trans-translit';
                 trLine.setAttribute('dir', 'ltr');
@@ -3637,7 +3658,6 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
 
 
             // ── View mode: 'tree' = full annotation grid + collapsible dependency tree; 'text' = interlinear rows ──
-            const tbMode = window.__tbMode || 'text';
             if (tbMode === 'tree') {
                 tbRenderGrid(block, sent);   // grid: every annotation as a row, one column per word (replaces interlinear)
                 tbRenderTree(block, sent);   // collapsible dependency syntax tree below the grid
@@ -3815,28 +3835,18 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 block.appendChild(litRow);
             }
 
-            // Parallel clickable transliteration row (one span per token, same selection)
-            if (!isPoetry && sent.tokens.some(t => t.translit)) {
-                const trRow = document.createElement('div');
-                trRow.className = 'tb-translit-row';
-                sent.tokens.forEach(tok => {
-                    const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
-                    const span = document.createElement('span');
-                    span.className = 'tb-tok tb-translit-tok' + (isPunct ? ' tb-punct' : '');
-                    span.dataset.tokId = tok.id;
-                    span.textContent = tok.translit || tok.form;
-                    if (!isPunct) span.addEventListener('click', (e) => { e.stopPropagation(); tbSelect(tok.id); });
-                    trRow.appendChild(span);
-                    if (!isPunct) trRow.appendChild(document.createTextNode(' '));
-                });
-                block.appendChild(trRow);
-            }
-
-            // Parallel clickable GLOSS row (one span per token, same selection) —
-            // replaces the literal translation so Arabic / translit / gloss align one-to-one.
+            // The per-token English gloss is not a second prose translation:
+            // it is the one-to-one analytical layer aligned with the source
+            // tokens.  Keep it in Text view so selecting Arabic, transliteration,
+            // or English highlights the same token across all three rows.
             if (!isPoetry && sent.tokens.some(t => t.gloss || logeionGlossFor(t, tgKey))) {
                 const glRow = document.createElement('div');
-                glRow.className = 'tb-gloss-row';
+                glRow.className = 'tb-gloss-row tb-aligned-gloss-row';
+                const glLabel = document.createElement('span');
+                glLabel.className = 'tb-trans-label';
+                glLabel.textContent = 'Word by word';
+                glRow.appendChild(glLabel);
+                glRow.appendChild(document.createTextNode(' '));
                 sent.tokens.forEach(tok => {
                     const isPunct = tok.upos === 'PUNCT' || tok.upos === '_';
                     if (isPunct) return;
@@ -3853,6 +3863,22 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 });
                 block.appendChild(glRow);
             }
+
+            // Reading order for the sentence layers: fluent translation,
+            // continuous literal rendering, aligned English glosses,
+            // transliteration, then the original script.  appendChild moves
+            // the existing interactive rows without rebuilding them, so all
+            // cross-row token-selection handlers remain intact.
+            [
+                'tb-literal-row',
+                'tb-aligned-gloss-row',
+                'tb-trans-translit',
+                'tb-token-row',
+            ].forEach(className => {
+                const row = Array.from(block.children).find(el => el.classList.contains(className));
+                if (row) block.appendChild(row);
+            });
+
             } // end view-mode branch
 
             const detailPanel = document.createElement('div');
@@ -4625,6 +4651,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     }
                 }
 
+            const isFragmentBlock = txt.includes('class="pmv-fragment"');
             const hasNumberedLines = txt.includes('class="line-num-cell"');
             if (isPoetry) {
                 const wrapper = document.createElement("div");
@@ -4661,7 +4688,14 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     });
                 }
                 row.appendChild(wrapper);
-            } else if (hasNumberedLines) {
+            } else if (isFragmentBlock) {
+                    // Fragment editions provide their own block structure and
+                    // verse-line numbers.  Wrapping them in prose-body-inline
+                    // would trigger the generic prose rule that forces every
+                    // nested div inline, collapsing all <div class="fc-line">
+                    // rows into one paragraph.
+                    row.innerHTML = `<div class="fragment-block-layout ${cssClass}">${txt}</div>`;
+                } else if (hasNumberedLines) {
                     row.innerHTML = `
                         <div class="lineated-prose-layout ${cssClass}">
                             <span class="prose-marker"><a href="javascript:void(0)" onclick="selectSectionDirectly('${sec}')">${visualIndexLabel}</a></span>
@@ -4766,6 +4800,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         if (mode === 'classic') {
             frame.className = "mode-classic";
             if (activeColumnsCount === 1) frame.classList.add('one-column');
+            if (activeColumnsCount === 2) frame.classList.add('two-columns');
             if (activeColumnsCount === 4) frame.classList.add('four-columns');
             if (activeColumnsCount === 5) frame.classList.add('five-columns');
             if (activeColumnsCount === 6) frame.classList.add('six-columns');
@@ -4774,6 +4809,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         } else {
             frame.className = "mode-parallel";
             if (activeColumnsCount === 1) frame.classList.add('one-column');
+            if (activeColumnsCount === 2) frame.classList.add('two-columns');
             if (activeColumnsCount === 4) frame.classList.add('four-columns');
             if (activeColumnsCount === 5) frame.classList.add('five-columns');
             if (activeColumnsCount === 6) frame.classList.add('six-columns');
@@ -4786,20 +4822,23 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
     };
   
     window.cycleColumns = function() {
-        if (activeColumnsCount === 3) activeColumnsCount = 4;
+        if (activeColumnsCount === 1) activeColumnsCount = 2;
+        else if (activeColumnsCount === 2) activeColumnsCount = 3;
+        else if (activeColumnsCount === 3) activeColumnsCount = 4;
         else if (activeColumnsCount === 4) activeColumnsCount = 5;
         else if (activeColumnsCount === 5) activeColumnsCount = 6;
         else if (activeColumnsCount === 6) activeColumnsCount = 7;
         else if (activeColumnsCount === 7) activeColumnsCount = 1;
-        else activeColumnsCount = 3;
+        else activeColumnsCount = 1;
 
         const btn = document.getElementById('btn-column-scaler');
         const ow = document.getElementById('outer-wrapper');
         
-        ow.classList.remove('one-column', 'four-columns', 'five-columns', 'six-columns', 'seven-columns');
+        ow.classList.remove('one-column', 'two-columns', 'four-columns', 'five-columns', 'six-columns', 'seven-columns');
         btn.innerText = `Columns: ${activeColumnsCount}`;
         
         if (activeColumnsCount === 1) ow.classList.add('one-column');
+        if (activeColumnsCount === 2) ow.classList.add('two-columns');
                 if (activeColumnsCount === 4) ow.classList.add('four-columns');
         if (activeColumnsCount === 5) ow.classList.add('five-columns');
         if (activeColumnsCount === 6) ow.classList.add('six-columns');
@@ -4814,7 +4853,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         const colF = document.getElementById('col_f');
         if (!ow || !colF || !ow.classList.contains('mode-classic')) return;
         
-        if (activeColumnsCount === 7) {
+        if (activeColumnsCount === 2) {
+            colF.style.gridRow = '1 / span 1';
+        } else if (activeColumnsCount === 7) {
             colF.style.gridRow = '1 / span 6';
         } else if (activeColumnsCount === 6) {
             colF.style.gridRow = '1 / span 5';
@@ -5024,7 +5065,8 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 }
                 setTimeout(positionClassicHandles, 50);
             } else {
-                if (h1) h1.style.display = ''; if (h2) h2.style.display = ''; 
+                if (h1) h1.style.display = activeColumnsCount >= 2 ? '' : 'none';
+                if (h2) h2.style.display = activeColumnsCount >= 3 ? '' : 'none';
                 if (h3) h3.style.display = activeColumnsCount >= 4 ? '' : 'none';
                 if (h4) h4.style.display = activeColumnsCount >= 5 ? '' : 'none';
                 if (h5) h5.style.display = activeColumnsCount >= 6 ? '' : 'none';

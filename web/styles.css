@@ -752,8 +752,10 @@ a.tei-page-break:focus-visible {
    .tb-gloss-tok { font-style: normal; }
    .tb-gloss-tok.tb-active { color: #440000; }
    /* Reader row-visibility toggles */
-   .tb-hide-original .tb-token-row   { display: none; }
+   .tb-hide-original .tb-token-row { display: none; }
+   .tb-hide-translit .tb-trans-translit,
    .tb-hide-translit .tb-translit-row { display: none; }
+   .tb-hide-literal .tb-literal-row { display: none; }
    .tb-vis-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; padding: 4px 0 8px; position: sticky; top: 0; background: #fff; z-index: 3; }
    .tb-vis-label { font-size: 9px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; color: #bbb; margin-right: 2px; }
    .tb-vis-btn { font-size: 10px; font-weight: bold; text-transform: uppercase; letter-spacing: .5px; padding: 2px 9px; border: 1px solid #ccc; border-radius: 10px; background: #f5f4ef; color: #999; cursor: pointer; transition: all .12s; }

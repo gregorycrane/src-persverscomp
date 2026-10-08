@@ -3,6 +3,21 @@ import xml.etree.ElementTree as ET
 from pipeline.fragment_collections import build,materialize_work_views,NS
 
 SOURCE=Path(__file__).parent/'fixtures/nauck-collection-sample.xml'
+CANONICAL_SOURCE=Path(
+    '/Users/gcrane/github/grcnewxml/data/tlg0085/fragments/source/'
+    'tlg0085.fragmenta.nauck1889grc1.xml')
+
+
+def test_canonical_tei_is_complete_source_of_fragment_collection():
+    raw = build(CANONICAL_SOURCE)
+    assert raw['source_format'] == 'tei'
+    assert raw['canonical_source'] == CANONICAL_SOURCE.name
+    assert len(raw['fragments']) == 466
+    assert sum(len(fragment['lines']) for fragment in raw['fragments']) == 643
+    assert len(raw['works']) == 77
+    assert len(raw['attributions']) == 71
+    assert raw['works']['aeschylus-incertae']['record_type'] == 'fragment_collection'
+    assert raw['works']['aeschylus-athamas']['record_type'] == 'fragmentary_play'
 
 def test_shared_source_separate_works_and_collection_membership():
     raw=build(SOURCE); d=materialize_work_views(raw)

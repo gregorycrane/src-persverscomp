@@ -7,15 +7,18 @@ from pipeline.core.storage import init_storage_engine
 REGISTRY_PATH = Path(__file__).resolve().parents[1] / "work_registry.json"
 
 
-def test_every_treebank_names_a_registered_edition():
+def test_every_treebank_names_a_registered_source_text():
     registry = json.loads(REGISTRY_PATH.read_text(encoding="utf-8"))
     checked = 0
     for work_key, work in registry.items():
-        editions = work.get("editions", {})
+        source_texts = {
+            **work.get("editions", {}),
+            **work.get("translations", {}),
+        }
         for treebank_id, treebank in work.get("treebanks", {}).items():
             source_version = treebank.get("source_version")
-            assert source_version in editions, (
-                f"{work_key}.{treebank_id} does not name a registered source edition"
+            assert source_version in source_texts, (
+                f"{work_key}.{treebank_id} does not name a registered source text"
             )
             checked += 1
     assert checked > 0

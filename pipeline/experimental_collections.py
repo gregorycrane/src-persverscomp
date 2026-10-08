@@ -1,16 +1,30 @@
-"""Publish the recoverable Aeschylus fragment and Claudel trial collections."""
+"""Publish TEI-first fragment collections and the Claudel trial collections."""
 from html import escape
 import json
+import os
 from pathlib import Path
 import shutil
 import sqlite3
 
 from pipeline.config import WORKSPACE_DIR
 from pipeline.core.storage import init_storage_engine
+from pipeline.fragment_collections import build as build_aeschylus_fragments
 from pipeline.fragment_collections import materialize_work_views
+from pipeline.nauck_corpus import AUTHORS as NAUCK_AUTHORS
+from pipeline.nauck_corpus import publication_model as build_nauck_author_fragments
+from pipeline.sophocles_fragment_concordance import (
+    NAUCK as SOPHOCLES_NAUCK,
+    PEARSON as SOPHOCLES_PEARSON,
+    align_fragments as align_sophocles_fragments,
+    merge_work_views as merge_sophocles_work_views,
+    safe_card_id,
+)
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "experimental" / "aeschylus"
-FRAGMENTS_PATH = DATA_DIR / "fragment-collections.json"
+CORPUS_DATA_DIR = Path(os.environ.get(
+    "GRCNEWXML_DATA_DIR", "/Users/gcrane/github/grcnewxml/data"))
+FRAGMENTS_PATH = (CORPUS_DATA_DIR / "tlg0085" / "fragments" / "source" /
+                  "tlg0085.fragmenta.nauck1889grc1.xml")
 SOPHOCLES_FRAGMENTS_PATH = (Path(__file__).resolve().parents[1] / "experimental" /
                              "sophocles" / "fragment-collections.json")
 CLAUDEL_PATH = DATA_DIR / "claudel-passages.json"
@@ -46,8 +60,7 @@ def _fragment_html(work, fragment, source_label="Nauck’s notes"):
         locator = (f'<div class="fc-source-locator">Pearson 1917 · Vol. '+
                    f'{escape(volume_label)}{(" · " + escape(page_label)) if page_label else ""}</div>')
     lines = "".join(
-        f'<div lang="grc" class="fc-line"><span>{escape(str(line["ref"]))}</span>'
-        f'<div>{escape(line["text"])}</div></div>'
+        f'<l n="{escape(str(line["ref"]))}" lang="grc">{escape(line["text"])}</l>'
         for line in fragment.get("lines", [])
     ) or "<p>Testimonium only in this encoding.</p>"
     context = "</div><div>".join(escape(fragment.get("context", "")).split("\n\n"))
@@ -61,7 +74,10 @@ def _fragment_html(work, fragment, source_label="Nauck’s notes"):
         intro += (f'<p class="fc-related-work"><a href="?w={escape(external_key)}">'
                   f'Pearson fragment {escape(external_number)}: open the separately installed '
                   'Ichneutae</a></p>')
-    return (f'<div class="pmv-fragment"><h3>{escape(work["title"])} · Fragment '
+    display_title = work["title"]
+    if work.get("fragment_corpus") and fragment.get("play_title"):
+        display_title = f'{display_title} · {fragment["play_title"]}'
+    return (f'<div class="pmv-fragment"><h3>{escape(display_title)} · Fragment '
             f'{escape(str(fragment["number"]))}</h3>{locator}{intro}<div class="fc-verse">{lines}</div>'
             f'<details class="fc-context" open><summary>Transmitting source and {escape(source_label)}</summary>'
             f'<div>{context}</div></details></div>')
@@ -85,7 +101,11 @@ def _publish_fragment_corpus(site_root, catalog, source):
             _fragment_focus(textgroup, work_id, version["short_id"]),
             version["edition_urn"], version["label"], "greek-text",
             textgroup, work_id, version["short_id"], "edition"))
-    corpus_view = {"title": source.get("author", "Aeschylus"), "fragments": fragments}
+    corpus_view = {
+        "title": source.get("author", "Aeschylus"),
+        "fragments": fragments,
+        "fragment_corpus": True,
+    }
     for index, fragment in enumerate(fragments):
         version_id = fragment["edition"]
         version = next(v for v in versions if v["short_id"] == version_id)
@@ -120,13 +140,22 @@ def _publish_fragment_corpus(site_root, catalog, source):
                       "text_class": "greek-text"} for v in versions],
         "annotations": {},
     }
+    catalog.setdefault("authors", {})[textgroup] = source.get("author", textgroup)
 
 
-def _publish_fragment_source(site_root, catalog, source_path):
-    source = json.loads(source_path.read_text(encoding="utf-8"))
+def _publish_fragment_source(
+    site_root, catalog, source_path, xml_builder=None, include_empty_works=False
+):
+    source_path = Path(source_path)
+    source = ((xml_builder or build_aeschylus_fragments)(source_path)
+              if source_path.suffix.lower() == ".xml"
+              else json.loads(source_path.read_text(encoding="utf-8")))
     textgroup = source.get("textgroup", "tlg0085")
     published = materialize_work_views(source)
-    works = [w for w in published["works"].values() if w.get("fragments")]
+    works = [
+        w for w in published["works"].values()
+        if include_empty_works or w.get("fragments")
+    ]
     # Remove both the former frag_-prefixed demo records and records from a
     # previous fragment publication.  Ordinary registered works are retained.
     catalog["works"] = {
@@ -193,7 +222,10 @@ def _publish_fragment_source(site_root, catalog, source_path):
         conn.close()
         catalog["works"][work_key] = {
             "textgroup": textgroup_for_work, "work": work_id, "title": work["title"],
+            "source_title": work.get("source_title", work["title"]),
             "experimental_fragment": True, "fragmentary": True,
+            "evidence_only": not bool(fragments),
+            "status": "Fragmentary text" if fragments else "Evidence only",
             "object_urn": object_urn, "default_columns": 1,
             "unit_labels": {"chapter": "Fragment", "section": "Section"},
             "parts": [{"part": 1, "file": db_path.name, "books": [],
@@ -215,6 +247,166 @@ def _publish_fragment_source(site_root, catalog, source_path):
 
 def _publish_fragments(site_root, catalog):
     return _publish_fragment_source(site_root, catalog, FRAGMENTS_PATH)
+
+
+def _write_aligned_fragment_work(site_root, catalog, work, textgroup="tlg0011"):
+    """Write one work whose card may contain segments from two editions."""
+    work_id = work["work"]
+    work_key = f"{textgroup}.{work_id}"
+    work_dir = site_root / "data" / textgroup / work_id
+    if work_dir.exists():
+        shutil.rmtree(work_dir)
+    work_dir.mkdir(parents=True)
+    db_path = work_dir / f"{work_key}.part1.db"
+    conn = init_storage_engine(db_path)
+    versions = work.get("versions", [])
+    version_map = {v["short_id"]: v for v in versions}
+    for version in versions:
+        conn.execute(
+            "INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)",
+            (_fragment_focus(textgroup, work_id, version["short_id"]),
+             version["edition_urn"], version["label"], "greek-text", textgroup,
+             work_id, version["short_id"], "edition"),
+        )
+    cards = work.get("cards", [])
+    card_for_source = {}
+    urns = [f"urn:cts:greekLit:{work_key}:{safe_card_id(card['label'])}.1"
+            for card in cards]
+    for index, (card, urn) in enumerate(zip(cards, urns)):
+        conn.execute(
+            "INSERT INTO alignment_grid VALUES (?,?,?,?,?,?,?,?,?)",
+            (urn, textgroup, work_id, None, card["label"], "1",
+             urns[index - 1] if index else None,
+             urns[index + 1] if index + 1 < len(urns) else None, index),
+        )
+        for field, version_id, source_label in (
+            ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
+            ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
+        ):
+            fragment = card.get(field)
+            if fragment is None:
+                continue
+            conn.execute("INSERT INTO text_segments VALUES (?,?,?)", (
+                urn, version_id, _fragment_html(work, fragment, source_label)))
+            card_for_source[fragment["source_fragment_urn"]] = card["label"]
+    for version_id, field in ((SOPHOCLES_PEARSON, "pearson"),
+                              (SOPHOCLES_NAUCK, "nauck")):
+        if version_id not in version_map:
+            continue
+        local_index = 0
+        for card in cards:
+            fragment = card.get(field)
+            if fragment is not None:
+                conn.execute("INSERT INTO edition_chapter_order VALUES (?,?,?,?,?,?)",
+                             (textgroup, work_id, version_id, None,
+                              card_for_source[fragment["source_fragment_urn"]], local_index))
+                local_index += 1
+    conn.commit()
+    conn.execute("VACUUM")
+    conn.close()
+    catalog["works"][work_key] = {
+        "textgroup": textgroup, "work": work_id, "title": work["title"],
+        "source_title": work.get("source_title", work["title"]),
+        "experimental_fragment": True, "fragmentary": True,
+        "evidence_only": not bool(cards), "status": work.get("status", "Fragmentary text"),
+        "object_urn": work.get("object_urn"), "default_columns": min(2, len(versions)) or 1,
+        "unit_labels": {"chapter": "Fragment alignment", "section": "Section"},
+        "parts": [{"part": 1, "file": db_path.name, "books": [],
+                   "chapters": [card["label"] for card in cards],
+                   "bytes": db_path.stat().st_size}],
+        "versions": [{"canonical_id": _fragment_focus(textgroup, work_id, v["short_id"]),
+                      "short_id": v["short_id"], "urn": v["edition_urn"],
+                      "label": v["label"], "doc_type": "edition",
+                      "text_class": "greek-text"} for v in versions],
+        "annotations": {},
+    }
+
+
+def _aggregate_sophocles_work(pearson, nauck):
+    """Build an author-level union; only unique exact text is aligned here."""
+    pfrags = [dict(fragment) for fragment in pearson.get("fragments", [])]
+    nfrags = [dict(fragment) for fragment in nauck.get("fragments", [])]
+    pairs = align_sophocles_fragments(pfrags, nfrags, fuzzy=False)
+    by_p = {id(p): n for p, n, _, _ in pairs}
+    paired_n = {n["number"] for _, n, _, _ in pairs}
+    cards = []
+    for fragment in pfrags:
+        other = by_p.get(id(fragment))
+        if other:
+            cards.append({"label": f"P{fragment['number']}=N{other['number']}",
+                          "pearson": fragment, "nauck": other})
+        else:
+            cards.append({"label": f"P{fragment['number']}", "pearson": fragment})
+    cards.extend({"label": f"N{f['number']}", "nauck": f}
+                 for f in nfrags if f["number"] not in paired_n)
+    return {
+        "id": "sophocles-fragmenta", "work": "fragmenta",
+        "title": "Sophocles, Fragments", "source_title": "FRAGMENTA",
+        "object_urn": "urn:cts:greekLit:tlg0011.fragmenta",
+        "fragments": pfrags + nfrags, "cards": cards,
+        "versions": pearson["versions"] + nauck["versions"],
+        "status": "Fragmentary text", "fragment_corpus": True,
+    }
+
+
+def _publish_sophocles_fragments(site_root, catalog):
+    pearson_source = json.loads(SOPHOCLES_FRAGMENTS_PATH.read_text(encoding="utf-8"))
+    nauck_path = (CORPUS_DATA_DIR / "tlg0011" / "fragments" / "source" /
+                  "tlg0011.fragmenta.nauck1889grc1.xml")
+    nauck_source = build_nauck_author_fragments(nauck_path)
+    pearson = materialize_work_views(pearson_source)
+    nauck = materialize_work_views(nauck_source)
+    works, concordance = merge_sophocles_work_views(pearson, nauck)
+    catalog["works"] = {
+        key: value for key, value in catalog.get("works", {}).items()
+        if not ((value.get("fragmentary") or value.get("fragment_corpus"))
+                and value.get("textgroup") == "tlg0011")
+    }
+    aggregate = _aggregate_sophocles_work(pearson_source, nauck_source)
+    _write_aligned_fragment_work(site_root, catalog, aggregate)
+    for work in works.values():
+        _write_aligned_fragment_work(site_root, catalog, work)
+    catalog.setdefault("authors", {})["tlg0011"] = "Sophocles"
+    browser_data = {
+        "schema_version": 5, "textgroup": "tlg0011", "author": "Sophocles",
+        "corpus_title": "Fragments", "versions": aggregate["versions"],
+        "works": works,
+        "collections": [{"id": "sophocles-fragments", "title": "Fragments",
+                         "author": "Sophocles", "textgroup": "tlg0011",
+                         "members": list(works)}],
+        "scope": {"play_headings": len(works),
+                  "pearson_fragments": len(pearson_source["fragments"]),
+                  "nauck_fragments": len(nauck_source["fragments"]),
+                  "aligned_fragment_pairs": len(concordance)},
+        "editorial_note": (
+            "Pearson 1917 and Nauck 1889 retain their own fragment numbers. "
+            "Shared cards record only text-supported correspondences; unmatched "
+            "fragments remain visible as edition-specific cards."),
+    }
+    (site_root / "tlg0011-fragment-collections.json").write_text(
+        json.dumps(browser_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    (site_root / "tlg0011-fragment-concordance.json").write_text(
+        json.dumps({"schema_version": 1, "editions": [SOPHOCLES_PEARSON, SOPHOCLES_NAUCK],
+                    "matches": concordance}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
+    return len(works)
+
+
+def _publish_nauck_author_corpora(site_root, catalog):
+    published = 0
+    for spec in NAUCK_AUTHORS:
+        if spec.textgroup == "tlg0011":
+            continue  # Published above as a two-edition aligned corpus.
+        source = (CORPUS_DATA_DIR / spec.textgroup / "fragments" / "source" /
+                  f"{spec.textgroup}.fragmenta.nauck1889grc1.xml")
+        if not source.exists():
+            continue
+        _publish_fragment_source(
+            site_root, catalog, source, xml_builder=build_nauck_author_fragments,
+            include_empty_works=True,
+        )
+        published += 1
+    return published
 
 
 def _publish_claudel(site_root, catalog):
@@ -261,13 +453,14 @@ def publish(site_root=None):
         raise FileNotFoundError(f"Catalog not found: {catalog_path}")
     catalog = json.loads(catalog_path.read_text(encoding="utf-8"))
     fragments = _publish_fragments(site_root, catalog)
-    sophocles_fragments = (
-        _publish_fragment_source(site_root, catalog, SOPHOCLES_FRAGMENTS_PATH)
-        if SOPHOCLES_FRAGMENTS_PATH.exists() else 0
-    )
+    sophocles_fragments = (_publish_sophocles_fragments(site_root, catalog)
+                           if SOPHOCLES_FRAGMENTS_PATH.exists() else 0)
+    nauck_authors = _publish_nauck_author_corpora(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = fragments + sophocles_fragments
     print(f"  ✓ Published experimental collections: {total_fragments} fragment works "
-          f"({sophocles_fragments} Sophocles), {claudel} Claudel versions")
-    return {"fragment_works": fragments, "claudel_versions": claudel}
+          f"({sophocles_fragments} Sophocles), {nauck_authors} Nauck author corpora, "
+          f"{claudel} Claudel versions")
+    return {"fragment_works": fragments, "fragment_authors": nauck_authors,
+            "claudel_versions": claudel}

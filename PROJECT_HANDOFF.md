@@ -114,6 +114,42 @@ before relying on those sections.
 
 ## TEI and CTS conventions
 
+### Fragment corpora
+
+- Nauck's complete *Tragicorum Graecorum Fragmenta* is TEI-first. The diplomatic
+  master is
+  `/Users/gcrane/github/grcnewxml/data/nauck1889/source/nauck1889.tragicorum-graecorum-fragmenta.xml`,
+  imported from `GRC_misc/nauck.tragfrag-2.xml` with its malformed namespace
+  URI repaired. `data/nauck1889/corpus.xml` is the `<teiCorpus>` manifest and
+  `authority.xml` records the ancient-author identities.
+- Aeschylus' finished Nauck fragments remain the authoritative Aeschylean slice at
+  `/Users/gcrane/github/grcnewxml/data/tlg0085/fragments/source/tlg0085.fragmenta.nauck1889grc1.xml`.
+- Sophocles, Euripides, 53 named minor tragedians, and the adespota have
+  generated author-level TEI editions under their textgroup directories.
+  Thirty-nine minor tragedians use the CTS textgroups documented by the LSJ
+  author-source coverage table; `authority.xml` records their Perseus author
+  URNs and LSJ coverage rows. Fourteen further named authors are reconciled to
+  TLG textgroups from `canon-keys.txt`, whose author blocks explicitly identify
+  their tragic material; their `TLGCanonKey` evidence is also recorded in
+  `authority.xml`. Only the anonymous adespota retain the local
+  `tragfragadesp` textgroup.
+- Regenerate the complete master, author editions, CTS metadata, authority
+  file, build report, and registry entries with
+  `python -m pipeline.nauck_corpus /Users/gcrane/github/GRC_misc/nauck.tragfrag-2.xml /Users/gcrane/github/grcnewxml/data --registry work_registry.json`.
+- `fragment-collections.json` files are derived compatibility/index artifacts;
+  never edit fragment text or attribution there as if JSON were canonical.
+- `work_registry.json` points every `nauck1889grc1` fragment view at the shared
+  TEI file with format `tei_fragment_collection`.  The publisher derives the
+  author-level corpus, lost-play views, and collection-level uncertain/dubious
+  views from that one TEI source. Lost-play work IDs are readable ASCII
+  transliterations of the printed play names (for example `medeia` and
+  `philoctetes`), not positional `playNNN` labels. The printed title is retained
+  unchanged in `<head>`; duplicate normalized titles receive a deterministic
+  numeric suffix. Publication also carries that printed title onto every
+  attributed fragment in the author-level reading view. A printed play heading
+  with no encoded fragment text is still published to the library as a visible,
+  non-clickable `Evidence only` record rather than silently dropped.
+
 ### General document requirements
 
 - Use TEI XML in the TEI namespace: `http://www.tei-c.org/ns/1.0`.

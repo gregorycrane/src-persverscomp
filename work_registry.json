@@ -1673,10 +1673,12 @@
       },
       "bishrmatta-tb-ara1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0086/tlg034/tlg0086.tlg034.matta-ara.conllu",
-        "label": "Treebank (Bishr Mattā Arabic, UD) (OCR draft)",
+        "label": "Treebank (Abū Bishr Mattā Arabic, UD 2026) (experimental LLM draft; scholarly review pending)",
         "class": "treebank-text",
         "parse_mode": "conllu",
-        "source_version": "perseus-grc2"
+        "source_version": "tkatsch-ara1",
+        "source_certainty": "direct_annotation",
+        "source_note": "The token text matches the registered Tkatsch Arabic version; subdoc identifiers follow the Kassel 1965 chapter.section alignment grid."
       }
     },
     "alignments": {
@@ -3890,13 +3892,13 @@
     },
     "commentaries": {
       "sidgwick1887-com-eng1": {
-        "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.sidgwick1887-com-eng1.xml",
+        "path": "/Users/gcrane/github/canonical-pdlrefwk/data/viaf54220216/viaf001/viaf54220216.viaf001.perseus-eng1.xml",
         "label": "Commentary (Arthur Sidgwick, 1887) (OCR draft)",
         "class": "commentary-text",
         "parse_mode": "line_commentary",
         "source_version": "sidgwick1887-grc1",
         "source_certainty": "inferred_same_publication",
-        "source_note": "Creator and publication year match the registered source edition; verify against the original volume when available."
+        "source_note": "Live TEI: urn:cts:greekLit:viaf54220216.viaf001.perseus-eng1 in canonical-pdlrefwk. Creator and publication year match the registered Sidgwick Greek edition; verify against the original volume when available."
       },
       "paley1885-com-eng1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0085/tlg007/tlg0085.tlg007.paley1885-com-eng1.xml",

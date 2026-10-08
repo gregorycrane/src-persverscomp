@@ -142,10 +142,14 @@ def ingest_editions_and_structure(conn, target_keys):
 
         for v_id, cfg in work_meta.get("treebanks", {}).items():
             source_version = cfg.get("source_version")
-            if source_version not in work_meta.get("editions", {}):
+            source_texts = {
+                **work_meta.get("editions", {}),
+                **work_meta.get("translations", {}),
+            }
+            if source_version not in source_texts:
                 raise ValueError(
                     f"{work_key}.{v_id}: treebank source_version {source_version!r} "
-                    "must name a registered edition"
+                    "must name a registered edition or translation"
                 )
             canonical_id = f"{tg}_{wk}_{v_id}_treebank"
             cursor.execute("""

@@ -1,4 +1,8 @@
-"""Experimental source-region adapter; no corpus or existing shard mutations."""
+"""Parse the canonical Aeschylus fragment TEI into derived collection views.
+
+TEI is the source of truth.  The dictionaries returned here are transient
+publication/index models and may be serialized as compatibility artifacts.
+"""
 import argparse
 import copy
 import hashlib
@@ -26,7 +30,7 @@ def parse_fragment(frag, play_urn=None):
     record = dict(number=number, source_id=frag.get(XID), lines=lines,
                   context='\n\n'.join(content(c) for c in frag
                       if c.tag not in ('{'+NS['t']+'}lg', '{'+NS['t']+'}head')))
-    if play_urn:
+    if play_urn is not None:
         raw_corresp = (frag.get('corresp') or '').split()
         corresp = []
         for target in raw_corresp:
@@ -117,12 +121,24 @@ def materialize_work_views(data):
             'Testimonia only' if work['fragments'] else 'Evidence only')
     return result
 
+def fragment_children(element):
+    return [child for child in element
+            if child.tag == '{'+NS['t']+'}div'
+            and (child.get('type') == 'fragment' or child.get('subtype') == 'fragment')]
+
+
+def all_fragment_elements(tree):
+    return [element for element in tree.findall('.//t:div', NS)
+            if element.get('type') == 'fragment' or element.get('subtype') == 'fragment']
+
+
 def grouped_record(record_id, title, source_title, fragments, selector, source):
     work, wid = work_identity(record_id)
     parsed = [parse_fragment(frag, wid) for frag in fragments]
     lines = sum(len(f['lines']) for f in parsed)
     return dict(id=record_id, work=work, object_urn=wid,
-        title=title, source_title=source_title, source='nauck-aeschylus.xml', selector=selector,
+        title=title, source_title=source_title, source=Path(source).name, selector=selector,
+        record_type='fragment_collection',
         status='Fragmentary text' if lines else 'Evidence only', line_count=lines,
         fragments=parsed, introduction='')
 
@@ -136,7 +152,7 @@ def build(source):
         root_id = play.get(XID)
         if not root_id or root_id in works:
             raise ValueError('Missing or duplicate play identity: ' + str(root_id))
-        source_fragments = play.findall('t:div[@type="fragment"]', NS)
+        source_fragments = fragment_children(play)
         assigned_fragments.update(source_fragments)
         work, wid = work_identity(root_id)
         fragments = [parse_fragment(frag, wid) for frag in source_fragments]
@@ -147,16 +163,18 @@ def build(source):
         lines = sum(len(f['lines']) for f in fragments)
         works[root_id] = dict(id=root_id, work=work, object_urn=wid,
             title=work.replace('_',' ').title(),
-            source_title=play.get('n'), source='nauck-aeschylus.xml', selector='#'+root_id,
+            source_title=play.get('n'), source=source.name, selector='#'+root_id,
+            record_type='fragmentary_play',
             status='Fragmentary text' if lines else 'Evidence only', line_count=lines,
             fragments=fragments,
-            introduction='\n\n'.join(content(c) for c in play if c.get('type')!='fragment'
+            introduction='\n\n'.join(content(c) for c in play
+                                       if c not in source_fragments
                                        and c.tag!='{'+NS['t']+'}head'))
     play_headings = len(works)
-    all_fragments = tree.findall('.//t:div[@type="fragment"]', NS)
+    all_fragments = all_fragment_elements(tree)
     dubia_section = next((div for div in tree.findall('.//t:div[@subtype="section"]', NS)
                           if div.get(XID) == 'aeschylus-dubia-spuria'), None)
-    dubia = dubia_section.findall('t:div[@type="fragment"]', NS) if dubia_section is not None else []
+    dubia = fragment_children(dubia_section) if dubia_section is not None else []
     dubia_fragments = set(dubia)
     uncertain = [frag for frag in all_fragments
                  if frag not in assigned_fragments and frag not in dubia_fragments]
@@ -194,7 +212,10 @@ def build(source):
         for key in ('fragments', 'versions', 'line_count', 'status'):
             work.pop(key, None)
     total = len(all_fragments)
-    return dict(schema_version=4, source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
+    return dict(schema_version=4, textgroup=TEXTGROUP, author='Aeschylus',
+                corpus_title='Fragments', source_label="Nauck’s notes",
+                canonical_source=source.name, source_format='tei',
+                source_sha256=hashlib.sha256(source.read_bytes()).hexdigest(),
                 versions=[source_version_record(source)], fragments=source_fragments,
                 works=works, attributions=attributions,
                 collections=[dict(id='aeschylus-fragments', title='Fragments',
