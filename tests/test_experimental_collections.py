@@ -30,12 +30,15 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
-    assert result == {"fragment_works": 81, "fragment_authors": 55,
+    assert result == {"fragment_works": 75, "fragment_authors": 55,
                       "claudel_versions": 3}
-    assert len(fragments) == 82  # 81 work views plus the author-level corpus
-    assert len(sophocles) == 119
-    assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 1404
-    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 3692
+    assert len(fragments) == 75
+    assert len(sophocles) == 118
+    assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 702
+    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 1846
+    assert "tlg0011.fragmenta" not in rebuilt["works"]
+    assert "tlg0006.fragmenta" not in rebuilt["works"]
+    assert "tlg0019.fragmenta" not in rebuilt["works"]
     assert (site / "fragment-collections.json").exists()
     assert (site / "tlg0085-fragment-concordance.json").exists()
     assert (site / "tlg0011-fragment-concordance.json").exists()
@@ -72,14 +75,15 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
 
     assert "tlg0085.athamas" in fragments
     assert "tlg0085.frag_athamas" not in rebuilt["works"]
-    assert rebuilt["works"]["tlg0085.fragmenta"]["fragment_corpus"] is True
+    assert "tlg0085.fragmenta" not in rebuilt["works"]
     assert fragments["tlg0085.athamas"]["object_urn"] == "urn:cite2:perseus:fragmentaryplays.v1:athamas"
     assert [v["short_id"] for v in fragments["tlg0085.athamas"]["versions"]] == [
-        "dindorf1893-grc1", "nauck1889grc1"
+        "dindorf1893-grc1", "nauck1889-grc1"
     ]
     assert fragments["tlg0085.athamas"]["parts"][0]["chapters"][:3] == [
         "D1=N1", "D2=N3", "D3=N4"
     ]
+    assert len(fragments["tlg0085.athamas"]["parts"][0]["sha256"]) == 64
     athamas = site / "data" / "tlg0085" / "athamas" / "tlg0085.athamas.part1.db"
     with sqlite3.connect(athamas) as conn:
         assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
@@ -107,11 +111,13 @@ def test_fragmentary_plays_are_registered_as_stable_works():
     registry = json.loads((Path(__file__).parents[1] / "work_registry.json").read_text())
     athamas = registry["tlg0085.athamas"]
     assert athamas["fragmentary"] is True
-    assert "nauck1889grc1" in athamas["fragment_editions"]
-    source = athamas["fragment_editions"]["nauck1889grc1"]
-    assert source["path"].endswith("tlg0085.fragmenta.nauck1889grc1.xml")
-    assert source["format"] == "tei_fragment_collection"
-    assert registry["tlg0085.fragmenta"]["fragment_editions"]["nauck1889grc1"]["path"] == source["path"]
+    assert list(athamas["fragment_editions"]) == [
+        "dindorf1893-grc1", "nauck1889-grc1"]
+    source = athamas["fragment_editions"]["nauck1889-grc1"]
+    assert source["path"].endswith("tlg0085.athamas.nauck1889-grc1.xml")
+    assert source["urn"] == "urn:cts:greekLit:tlg0085.athamas.nauck1889-grc1"
+    assert source["format"] == "tei_fragment_work"
+    assert "tlg0085.fragmenta" not in registry
     assert registry["tlg0085.incertae"]["fragment_collection"] is True
     assert registry["tlg0085.dubia_spuria"]["fragment_collection"] is True
     assert "tlg0085.frag_athamas" not in registry

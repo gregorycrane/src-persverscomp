@@ -1,4 +1,66 @@
 
+        :root,
+        html[data-pmv-theme="aegean"] {
+            --pmv-primary: #17324d;
+            --pmv-primary-dark: #0e2235;
+            --pmv-primary-soft: #dce8ed;
+            --pmv-accent: #147d78;
+            --pmv-accent-dark: #0d5d59;
+            --pmv-accent-wash: #edf7f6;
+            --pmv-link: #17617d;
+            --pmv-nav: #e4ecef;
+            --pmv-nav-border: #aebfc7;
+            --pmv-pill: #dce8ec;
+            --pmv-pill-border: #a9c0c9;
+            --pmv-on-primary: #ffffff;
+            --pmv-on-primary-muted: #d8edf0;
+        }
+        html[data-pmv-theme="slate"] {
+            --pmv-primary: #303a46;
+            --pmv-primary-dark: #1f2730;
+            --pmv-primary-soft: #e6e9ec;
+            --pmv-accent: #b46f16;
+            --pmv-accent-dark: #88520d;
+            --pmv-accent-wash: #fff6e7;
+            --pmv-link: #7a4d12;
+            --pmv-nav: #e8eaec;
+            --pmv-nav-border: #b9bec3;
+            --pmv-pill: #e3e6e8;
+            --pmv-pill-border: #b6bdc4;
+            --pmv-on-primary: #ffffff;
+            --pmv-on-primary-muted: #f5d7a8;
+        }
+        html[data-pmv-theme="olive"] {
+            --pmv-primary: #34483b;
+            --pmv-primary-dark: #243329;
+            --pmv-primary-soft: #e5ebe6;
+            --pmv-accent: #a15c38;
+            --pmv-accent-dark: #784128;
+            --pmv-accent-wash: #faf1eb;
+            --pmv-link: #426249;
+            --pmv-nav: #e8ede7;
+            --pmv-nav-border: #b8c4b8;
+            --pmv-pill: #e1e9e1;
+            --pmv-pill-border: #b5c3b5;
+            --pmv-on-primary: #ffffff;
+            --pmv-on-primary-muted: #f0d5c7;
+        }
+        html[data-pmv-theme="legacy"] {
+            --pmv-primary: #660000;
+            --pmv-primary-dark: #440000;
+            --pmv-primary-soft: #eee6df;
+            --pmv-accent: #993333;
+            --pmv-accent-dark: #660000;
+            --pmv-accent-wash: #fdfbef;
+            --pmv-link: #880000;
+            --pmv-nav: #ddddcc;
+            --pmv-nav-border: #999988;
+            --pmv-pill: #e0e0d0;
+            --pmv-pill-border: #bbbb99;
+            --pmv-on-primary: #ffffff;
+            --pmv-on-primary-muted: #ffccaa;
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html, body {
             height: 100%; width: 100%;
@@ -1192,4 +1254,129 @@ a.tei-page-break:focus-visible {
     font-size: 0.94em;
     font-style: normal;
     font-weight: normal;
+}
+
+/* ── Viewer color themes ────────────────────────────────────────────────
+   Keep these overrides together: the older rules above retain their proven
+   layout behavior, while every piece of application chrome now draws from
+   a small semantic palette.  Red/green textual corrections and diff colors
+   remain fixed because they communicate meaning rather than branding. */
+a { color: var(--pmv-link); }
+#splash-view-root { background: color-mix(in srgb, var(--pmv-nav) 30%, white); }
+#splash-wrapper { border-color: var(--pmv-primary); }
+.brand-banner-frame { border-bottom-color: var(--pmv-primary); }
+.file-upload-zone:hover { border-color: var(--pmv-primary); background: var(--pmv-accent-wash); }
+.mount-data-title {
+    color: var(--pmv-primary);
+    font-family: Georgia, serif;
+    font-size: 16px;
+}
+.start-reading-btn {
+    display: none;
+    margin: 25px auto;
+    padding: 14px 36px;
+    border: none;
+    border-radius: 4px;
+    color: var(--pmv-on-primary);
+    background: var(--pmv-primary);
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+.start-reading-btn:hover { background: var(--pmv-primary-dark); }
+#manifesto-render-target blockquote { border-left-color: var(--pmv-primary); }
+
+#perseus-banner,
+.panel-header { background: var(--pmv-primary); }
+.toggle-btn {
+    color: var(--pmv-on-primary-muted);
+    background: var(--pmv-primary-dark);
+    border-color: color-mix(in srgb, var(--pmv-accent) 70%, white);
+}
+.toggle-btn:hover,
+.toggle-btn:focus-visible { color: white; border-color: white; }
+.toggle-btn.active-mode {
+    color: var(--pmv-primary);
+    background: var(--pmv-on-primary);
+    border-color: var(--pmv-on-primary);
+}
+.theme-picker {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-left: 2px;
+    color: var(--pmv-on-primary-muted);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.theme-picker select {
+    max-width: 112px;
+    padding: 2px 4px;
+    border: 1px solid color-mix(in srgb, var(--pmv-accent) 70%, white);
+    border-radius: 3px;
+    color: var(--pmv-primary-dark);
+    background: white;
+    font: inherit;
+    cursor: pointer;
+}
+
+#nav-bar {
+    background: var(--pmv-nav);
+    border-bottom-color: var(--pmv-nav-border);
+}
+.browse-items a {
+    color: var(--pmv-link);
+    background: var(--pmv-pill);
+    border-color: var(--pmv-pill-border);
+}
+.browse-items a.current,
+.browse-items a.sec-pill.active-pill,
+.rail-tree-item.active-rail-node {
+    color: var(--pmv-on-primary) !important;
+    background: var(--pmv-primary);
+    border-color: var(--pmv-primary-dark);
+}
+.rail-tree-item { color: var(--pmv-link); }
+.rail-tree-item:hover { background: var(--pmv-primary-soft); }
+.translit-mode-select {
+    color: var(--pmv-primary);
+    background: var(--pmv-accent-wash);
+    border-color: color-mix(in srgb, var(--pmv-accent) 50%, white);
+}
+#row-alignment-panel {
+    background: color-mix(in srgb, var(--pmv-nav) 55%, white) !important;
+    border-top-color: var(--pmv-nav-border) !important;
+}
+
+.speaker-attr,
+.poetry-grid-layout .speaker-attr,
+.tb-credits-toggle,
+.tb-speaker strong,
+.tb-detail-word,
+.tb-lex-headword,
+.tb-lex-sense-num { color: var(--pmv-primary); }
+.note,
+.tb-detail-panel { border-left-color: var(--pmv-primary); }
+.tb-vis-btn.tb-vis-on,
+.action-btn {
+    color: var(--pmv-on-primary) !important;
+    background: var(--pmv-primary);
+    border-color: var(--pmv-primary);
+}
+.tb-annot-link:hover,
+.tb-lex-latin-toggle-label:hover,
+.tb-cit-label a:hover { color: var(--pmv-primary); }
+.tb-lex-ref { color: var(--pmv-primary); border-bottom-color: var(--pmv-primary); }
+.tb-lex-ref:hover { color: var(--pmv-primary-dark); }
+.resize-handle:hover,
+.resize-handle.dragging { background: var(--pmv-primary); }
+
+@media (max-width: 1120px) {
+    #perseus-banner { align-items: flex-start; }
+    .mode-toggle-panel { flex-wrap: wrap; justify-content: flex-end; }
 }

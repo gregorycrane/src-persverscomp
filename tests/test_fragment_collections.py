@@ -3,15 +3,15 @@ import xml.etree.ElementTree as ET
 from pipeline.fragment_collections import build,materialize_work_views,NS
 
 SOURCE=Path(__file__).parent/'fixtures/nauck-collection-sample.xml'
-CANONICAL_SOURCE=Path(
-    '/Users/gcrane/github/grcnewxml/data/tlg0085/fragments/source/'
+LEGACY_AGGREGATE_SOURCE=Path(
+    '/Users/gcrane/github/grcnewxml/deprecated/data/tlg0085/fragments-aggregate/source/'
     'tlg0085.fragmenta.nauck1889grc1.xml')
 
 
-def test_canonical_tei_is_complete_source_of_fragment_collection():
-    raw = build(CANONICAL_SOURCE)
+def test_archived_aggregate_parser_preserves_the_complete_legacy_source():
+    raw = build(LEGACY_AGGREGATE_SOURCE)
     assert raw['source_format'] == 'tei'
-    assert raw['canonical_source'] == CANONICAL_SOURCE.name
+    assert raw['canonical_source'] == LEGACY_AGGREGATE_SOURCE.name
     assert len(raw['fragments']) == 466
     assert sum(len(fragment['lines']) for fragment in raw['fragments']) == 643
     assert len(raw['works']) == 77

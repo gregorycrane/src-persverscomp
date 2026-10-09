@@ -22,3 +22,23 @@ body:has(#outer-wrapper.one-column) #row-alignment-panel{display:none!important}
 .claudel-alignment-note{padding:10px 12px;margin:0 0 16px;background:#fff4d8;border-left:3px solid #b58a2a;font:13px system-ui;line-height:1.45}.claudel-page{margin:0 0 18px}.claudel-page-number{color:#75695d;font:12px system-ui;margin-bottom:6px}.claudel-line{font-size:17px;line-height:1.5;margin:2px 0}
 
 .fc-home>p{font:16px system-ui;color:#5e554b}.fc-language-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px;margin:26px 0}.fc-language-card{border:1px solid #d4c8b6;border-radius:6px;background:#faf8f4;padding:20px}.fc-language-title{display:flex;justify-content:space-between;gap:12px;align-items:baseline;color:#660000;text-decoration:none;font-size:25px;font-weight:bold}.fc-language-title span{color:#776d62;font:14px system-ui}.fc-language-card nav,.fc-subcollections{display:flex;flex-wrap:wrap;gap:10px 18px;margin:18px 0 0!important;font:14px system-ui}.fc-language-card nav a,.fc-subcollections a{font-weight:600;text-decoration:none}.fc-language-card nav a:hover,.fc-subcollections a:hover{text-decoration:underline}.fc-home-all{margin-top:28px}.fc-subcollections{padding:12px 0 18px;border-bottom:1px solid #d4c8b6;margin-bottom:22px!important}
+
+/* Collection-preview chrome uses the same selectable palette as the reader. */
+.fc-experiment {
+  color: var(--pmv-primary-dark);
+  background: var(--pmv-primary-soft);
+  border-bottom: 1px solid var(--pmv-nav-border);
+}
+.fc-experiment-actions,.fc-theme-picker{display:flex;align-items:center;gap:12px}.fc-theme-picker{gap:5px;font-size:12px;font-weight:600}.fc-theme-picker select{padding:2px 5px;border:1px solid var(--pmv-nav-border);border-radius:3px;color:var(--pmv-primary-dark);background:#fff;font:12px system-ui}.fc-experiment a,.fc-collection-entry>a,.fc-all-link,.fc-page a,.fc-page h1,.fc-fragment h2,.fc-browse-nav a,.fc-author-group>summary,.fc-fragment-refs,.fc-surviving-context>summary,.fc-fragment-heading,.fc-fragment-categories strong,.fc-language-title{color:var(--pmv-primary)}
+.fc-browse-nav{color:var(--pmv-primary-dark);background:var(--pmv-nav);border-bottom-color:var(--pmv-nav-border)}
+.fc-browse-nav a:focus-visible,.fc-author-group>summary:focus-visible{outline-color:var(--pmv-accent)}
+.fc-scope-links a[aria-current="page"]{border-bottom-color:var(--pmv-accent)}
+.fc-collection-entry,.fc-work,.fc-language-card,.fc-verse,.fc-fragment-categories>div,.fc-fragment-categories>a{border-color:var(--pmv-pill-border);background:color-mix(in srgb,var(--pmv-nav) 26%,white)}
+.fc-work:hover{background:var(--pmv-accent-wash)}
+.fc-controls input,.fc-library-filter input{border-color:var(--pmv-nav-border)}
+.fc-author-group>summary,.fc-surviving-context>summary,.fc-subcollections,.fc-fragment{border-color:var(--pmv-nav-border)}
+.fc-scope,.fc-empty,.fc-context{background:color-mix(in srgb,var(--pmv-nav) 45%,white)}
+@media(max-width:700px){.fc-experiment-actions{width:100%;justify-content:space-between}}
+/* The preview strip already exposes the same persistent picker. Avoid a
+   duplicate control when the full reading banner is visible underneath it. */
+body:has(.fc-experiment) #perseus-banner .theme-picker{display:none}

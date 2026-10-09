@@ -205,6 +205,10 @@ def merge_three_work_views(pearson_source, nauck_source, dindorf_source):
             if any(fragment.get("edition") == version for fragment in template["fragments"]):
                 present.append(version)
         template["versions"] = [deepcopy(versions[v]) for v in present]
+        for version in template["versions"]:
+            if not version.get("edition_urn"):
+                version["edition_urn"] = (
+                    f"urn:cts:greekLit:tlg0011.{slug}.{version['short_id']}")
         template["line_count"] = sum(len(f.get("lines", [])) for f in template["fragments"])
         template["evidence_only"] = not bool(cards)
         template["status"] = "Fragmentary text" if cards else "Evidence only"

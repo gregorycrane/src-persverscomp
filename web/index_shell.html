@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Perseus Serverless Multitext Browser (Prototype)</title>
+    <script>
+      (function () {
+        const allowed = ['aegean', 'slate', 'olive', 'legacy'];
+        let saved = 'aegean';
+        try { saved = localStorage.getItem('pmv-color-theme') || saved; } catch (_) {}
+        document.documentElement.dataset.pmvTheme = allowed.includes(saved) ? saved : 'aegean';
+      })();
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     
@@ -17,14 +25,14 @@
           </div>
 
           <div class="file-upload-zone" id="drop-zone">
-              <strong style="color: #660000; font-family: Georgia, serif; font-size: 16px;">Mount Local Data Asset</strong><br/>
+              <strong class="mount-data-title">Mount Local Data Asset</strong><br/>
               <span style="font-size: 12px; color: #555; display: inline-block; margin-top: 8px;">Drag & Drop `corpus_alignment_grid.db` here, or click to browse files</span>
               <input type="file" id="file-picker" class="file-input-hidden" accept=".db" onchange="handleFileSelection(this.files)"/>
           </div>
           
           <div id="status-readout" style="font-size: 11px; color: #777; font-style: italic; margin-bottom: 15px;">Awaiting compilation asset attachment...</div>
           
-          <button id="start-reading-btn" onclick="launchReadingEnvironment()" style="display:none; margin: 25px auto; padding: 14px 36px; background: #660000; color: #fff; border: none; border-radius: 4px; font-size: 16px; font-family: Georgia, serif; font-weight: bold; cursor: pointer; letter-spacing: 0.5px; transition: background 0.2s ease;" onmouseover="this.style.background='#440000'" onmouseout="this.style.background='#660000'">Start Reading Environment</button>
+          <button id="start-reading-btn" class="start-reading-btn" onclick="launchReadingEnvironment()">Start Reading Environment</button>
           
           <div id="manifesto-render-target"></div>
       </div>
@@ -48,6 +56,15 @@
             <a class="toggle-btn" href="./lexicon-browser.html" style="text-decoration:none;display:inline-flex;align-items:center;">Browse Lexica</a>
             <button class="toggle-btn" onclick="openMapForCurrentPassage()">Map this passage</button>
             <button class="toggle-btn" onclick="openMapForCurrentBook()">Map this book</button>
+            <label class="theme-picker" title="Try another viewer color scheme">
+              <span>Theme</span>
+              <select id="pmv-theme-select" class="pmv-theme-select" aria-label="Viewer color theme">
+                <option value="aegean">Aegean</option>
+                <option value="slate">Slate &amp; amber</option>
+                <option value="olive">Olive &amp; copper</option>
+                <option value="legacy">Legacy burgundy</option>
+              </select>
+            </label>
         </div>
       </div>
       <div id="nav-bar">

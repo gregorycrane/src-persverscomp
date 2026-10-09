@@ -509,9 +509,23 @@ def write_corpus_manifest(specs: tuple[AuthorSpec, ...], data_dir: Path, path: P
     etree.SubElement(ps, qname("p")).text = "TEI corpus manifest"
     sd = etree.SubElement(fd, qname("sourceDesc"))
     etree.SubElement(sd, qname("bibl")).text = "Nauck, Tragicorum Graecorum Fragmenta, 2nd ed. (1889)."
-    aesch = data_dir / "tlg0085/fragments/source/tlg0085.fragmenta.nauck1889grc1.xml"
-    etree.SubElement(root, f"{{{xi}}}include", href="../" + str(aesch.relative_to(path.parent.parent)))
+    for textgroup, version in (
+        ("tlg0085", "nauck1889-grc1"),
+        ("tlg0011", VERSION),
+        ("tlg0006", VERSION),
+    ):
+        editions = sorted(
+            (data_dir / textgroup).glob(f"*/{textgroup}.*.{version}.xml"))
+        if not editions:
+            raise FileNotFoundError(
+                f"No play-level Nauck {textgroup} editions found")
+        for edition in editions:
+            etree.SubElement(
+                root, f"{{{xi}}}include",
+                href="../" + str(edition.relative_to(path.parent.parent)))
     for spec in specs:
+        if spec.textgroup in {"tlg0011", "tlg0006"}:
+            continue
         author_path = data_dir / spec.textgroup / "fragments/source" / f"{spec.textgroup}.fragmenta.{VERSION}.xml"
         etree.SubElement(root, f"{{{xi}}}include", href="../" + str(author_path.relative_to(path.parent.parent)))
     write_xml(etree.ElementTree(root), path)

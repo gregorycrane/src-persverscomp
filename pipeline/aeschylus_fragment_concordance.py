@@ -20,11 +20,88 @@ from pipeline.sophocles_fragment_concordance import align_fragments
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 DINDORF = "dindorf1893-grc1"
-NAUCK = "nauck1889grc1"
+NAUCK = "nauck1889-grc1"
 
 
 def _text(element):
     return " ".join("".join(element.itertext()).split())
+
+
+def build_play_level(data_root: Path, version: str) -> dict:
+    """Read one edition from the canonical play-level CTS package.
+
+    Each XML file is now a genuine CTS work edition.  This function derives
+    PMV's transient collection model without reintroducing an aggregate source
+    file as a second authority.
+    """
+    data_root = Path(data_root)
+    paths = sorted(data_root.glob(f"*/tlg0085.*.{version}.xml"))
+    if not paths:
+        raise FileNotFoundError(f"No tlg0085 play-level {version} files in {data_root}")
+    fragments, works, attributions = [], {}, []
+    editor = "Wilhelm Dindorf" if version == DINDORF else "Augustus Nauck"
+    label = ("Greek (Dindorf, 1893; OCR draft)" if version == DINDORF
+             else "Greek (Nauck, 1889; OCR draft)")
+
+    for source in paths:
+        tree = etree.parse(str(source))
+        edition = tree.xpath("//tei:div[@type='edition']", namespaces=NS)[0]
+        edition_urn = edition.get("n")
+        urn_parts = edition_urn.split(":")[-1].split(".")
+        work = urn_parts[1]
+        object_urn = edition.get("corresp")
+        title = edition.xpath("string(tei:head[1])", namespaces=NS).strip()
+        record_id = f"aeschylus-{version}-{work}"
+        targets = []
+        for fragment in edition.xpath("./tei:div[@subtype='fragment']", namespaces=NS):
+            number = fragment.get("n")
+            source_urn = f"{edition_urn}:{number}"
+            lines = [
+                {"ref": line.get("n") or str(index),
+                 "source_id": line.get(XML_ID), "text": _text(line)}
+                for index, line in enumerate(fragment.xpath(".//tei:l", namespaces=NS), 1)
+            ]
+            context = "\n\n".join(
+                _text(child) for child in fragment
+                if etree.QName(child).localname not in {"head", "lg"} and _text(child)
+            )
+            fragments.append({
+                "number": number, "source_id": fragment.get(XML_ID),
+                "edition": version, "source_fragment_urn": source_urn,
+                "same_as": (fragment.get("sameAs") or "").split(),
+                "lines": lines, "context": context,
+                "play_title": title, "play_work": work, "play_urn": object_urn,
+            })
+            targets.append(source_urn)
+        record_type = ("fragment_collection" if "fragmentarycollections" in object_urn
+                       else "fragmentary_play")
+        works[record_id] = {
+            "id": record_id, "work": work, "object_urn": object_urn,
+            "title": title, "source_title": title, "source": source.name,
+            "selector": f"{source.name}#edition", "record_type": record_type,
+            "introduction": "\n\n".join(
+                _text(child) for child in edition
+                if etree.QName(child).localname not in {"head", "div", "pb"}
+                and _text(child)
+            ),
+        }
+        if targets:
+            attribution_id = f"{version}-tlg0085-{work}"
+            attributions.append({
+                "id": attribution_id,
+                "urn": f"urn:cite2:perseus:fragmentattributions.v1:{attribution_id}",
+                "resp": editor, "edition": version,
+                "play_urn": object_urn, "corresp": targets,
+            })
+
+    return {
+        "schema_version": 5, "textgroup": "tlg0085", "author": "Aeschylus",
+        "corpus_title": "Aeschylus, Fragments", "source_label": label,
+        "canonical_source": str(data_root), "source_format": "tei-play-level",
+        "versions": [{"short_id": version, "edition_urn": None,
+                      "label": label, "source": str(data_root)}],
+        "fragments": fragments, "works": works, "attributions": attributions,
+    }
 
 
 def build_dindorf(source: Path) -> dict:
@@ -147,12 +224,84 @@ def merge_work_views(dindorf_source, nauck_source):
         template["fragments"] = dfrags + nfrags
         present = ([DINDORF] if dfrags else []) + ([NAUCK] if nfrags else [])
         template["versions"] = [deepcopy(versions[v]) for v in present]
+        for version in template["versions"]:
+            version["edition_urn"] = (
+                f"urn:cts:greekLit:tlg0085.{slug}.{version['short_id']}")
         template["cards"] = cards
         template["line_count"] = sum(len(f.get("lines", [])) for f in template["fragments"])
         template["evidence_only"] = not bool(cards)
         template["status"] = "Fragmentary text" if cards else "Evidence only"
         works[template["id"]] = template
     return works, concordance
+
+
+def update_play_level_registry(registry_path: Path, data_root: Path) -> None:
+    """Replace aggregate Aeschylus fragment records with CTS work editions."""
+    registry_path, data_root = Path(registry_path), Path(data_root)
+    registry = json.loads(registry_path.read_text(encoding="utf-8"))
+    canonical = {}
+    cts_ns = {"ti": "http://chs.harvard.edu/xmlns/cts"}
+    for metadata_path in sorted(data_root.glob("*/__cts__.xml")):
+        edition_paths = sorted(metadata_path.parent.glob(
+            "tlg0085.*.dindorf1893-grc1.xml")) + sorted(metadata_path.parent.glob(
+            "tlg0085.*.nauck1889-grc1.xml"))
+        if not edition_paths:
+            continue
+        metadata = etree.parse(str(metadata_path))
+        work_element = metadata.getroot()
+        work_urn = work_element.get("urn")
+        slug = work_urn.rsplit(".", 1)[-1]
+        title = metadata.xpath("string(/ti:work/ti:title[1])", namespaces=cts_ns).strip()
+        editions = {}
+        for edition_path in edition_paths:
+            short_id = edition_path.stem.split(".")[-1]
+            edition_urn = f"urn:cts:greekLit:tlg0085.{slug}.{short_id}"
+            label = metadata.xpath(
+                "string(/ti:work/ti:edition[@urn=$urn]/ti:label[1])",
+                namespaces=cts_ns, urn=edition_urn).strip()
+            editions[short_id] = {
+                "path": str(edition_path), "urn": edition_urn,
+                "label": label or short_id, "class": "greek-text",
+                "format": "tei_fragment_work", "corresp_axis": "fragment",
+            }
+        source_tree = etree.parse(str(edition_paths[0]))
+        object_urn = source_tree.xpath(
+            "string(//tei:div[@type='edition']/@corresp)", namespaces=NS).strip()
+        record_type = ("fragment_collection" if "fragmentarycollections" in object_urn
+                       else "fragmentary_play")
+        record = {
+            "textgroup": "tlg0085", "work": slug, "title": title,
+            "fragmentary": True, "record_type": record_type,
+            "editions": {}, "appcrits": {}, "translations": {},
+            "commentaries": {}, "treebanks": {},
+            "fragment_editions": editions, "object_urn": object_urn,
+            "source_title": title,
+            "source_edition": ("multiple-fragment-editions"
+                               if len(editions) > 1 else short_id.rsplit("-grc", 1)[0]),
+        }
+        if record_type == "fragment_collection":
+            record["fragment_collection"] = True
+        canonical[f"tlg0085.{slug}"] = record
+
+    stale = {key for key, record in registry.items()
+             if key.startswith("tlg0085.")
+             and (record.get("fragmentary") or record.get("fragment_corpus"))}
+    retained = [(key, record) for key, record in registry.items()
+                if key not in stale and key not in canonical]
+    core_aeschylus = [key for key, record in retained
+                      if record.get("textgroup") == "tlg0085"]
+    insert_after = core_aeschylus[-1] if core_aeschylus else None
+    ordered = {}
+    inserted = False
+    for key, record in retained:
+        ordered[key] = record
+        if key == insert_after:
+            ordered.update(canonical)
+            inserted = True
+    if not inserted:
+        ordered.update(canonical)
+    registry_path.write_text(
+        json.dumps(ordered, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def update_registry(registry_path: Path, dindorf_path: Path, nauck_path: Path) -> None:

@@ -3,8 +3,36 @@
     window.SQL_WASM_ENGINE = null;
     window.dbInstance = null;
 
+    // Color themes are deliberately independent of layout/data state.  The
+    // preference is local to the browser and can always be changed in the
+    // banner; Aegean is the non-burgundy default.
+    const PMV_COLOR_THEMES = new Set(['aegean', 'slate', 'olive', 'legacy']);
+    function setPmvColorTheme(theme, persist = true) {
+        const chosen = PMV_COLOR_THEMES.has(theme) ? theme : 'aegean';
+        document.documentElement.dataset.pmvTheme = chosen;
+        document.querySelectorAll('.pmv-theme-select').forEach(picker => {
+            if (picker.value !== chosen) picker.value = chosen;
+        });
+        if (persist) {
+            try { localStorage.setItem('pmv-color-theme', chosen); } catch (_) {}
+        }
+    }
+    window.setPmvColorTheme = setPmvColorTheme;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const chosen = document.documentElement.dataset.pmvTheme || 'aegean';
+        const picker = document.getElementById('pmv-theme-select');
+        if (!picker) return;
+        picker.value = PMV_COLOR_THEMES.has(chosen) ? chosen : 'aegean';
+        picker.addEventListener('change', () => setPmvColorTheme(picker.value));
+    });
+
     const GLOBAL_STRUCTURES = STRUCT_REPLACE;
     const TEXT_REGISTRY    = REGISTRY_REPLACE;
+    // The shard loader updates window.*. These aliases make those updates
+    // mutate the same objects used by the lexical render-path variables.
+    window.GLOBAL_STRUCTURES = GLOBAL_STRUCTURES;
+    window.TEXT_REGISTRY = TEXT_REGISTRY;
     // ── Treebank search-app link config ─────────────────────────────────
     // Path from this reader (repo root) to the sibling treebank search app,
     // used by the Gloss/Lemma links in the annotation detail panel below.
@@ -1209,7 +1237,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
             html += "<details class='author-group' data-author='" + tg + "'" +
                     (isOpen ? " open" : "") + " style='margin:10px 0;'>";
-            html += "<summary style='cursor:pointer;font-size:1.05em;color:#7a1f1f;" +
+            html += "<summary style='cursor:pointer;font-size:1.05em;color:var(--pmv-primary);" +
                     "border-bottom:1px solid #e0d8c8;padding-bottom:3px;list-style:revert;'>" +
                     author + " <span class='author-count' style='color:#999;font-weight:normal;" +
                     "font-size:0.85em;'>(" + workKeys.length + ")</span></summary>";
@@ -1986,6 +2014,17 @@ function initializeRoutingFromURL() {
                 b = Object.keys(GLOBAL_STRUCTURES[activeWorkKey])[0];
                 ch = GLOBAL_STRUCTURES[activeWorkKey][b][0] || "1";
             }
+        }
+
+        // A collection alignment card such as D12=N14 is intrinsically a
+        // comparison. Old/bookmarked links may still say cols=1 and omit a
+        // right-hand edition; expand those links so both witnesses appear.
+        // A genuinely edition-specific card (D13 or N15) remains untouched.
+        if (params.get("collections") === "1" && activeColumnsCount === 1
+                && !params.get("right") && String(ch).includes("=")) {
+            activeColumnsCount = 2;
+            params.set("cols", "2");
+            history.replaceState(null, "", `${location.pathname}?${params.toString()}`);
         }
 
         const workPrefix = activeWorkKey.split(".")[1];
@@ -5086,7 +5125,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
 
     const dz = document.getElementById('drop-zone');
     if(dz) {
-        dz.addEventListener('dragover', e => { e.preventDefault(); dz.style.borderColor = '#660000'; dz.style.background = '#fdfbef'; });
+        dz.addEventListener('dragover', e => { e.preventDefault(); dz.style.borderColor = 'var(--pmv-primary)'; dz.style.background = 'var(--pmv-accent-wash)'; });
         dz.addEventListener('dragleave', () => { dz.style.borderColor = '#ccc'; dz.style.background = '#fafafa'; });
         dz.addEventListener('drop', e => { e.preventDefault(); dz.style.borderColor = '#ccc'; dz.style.background = '#fafafa'; handleFileSelection(e.dataTransfer.files); });
     }

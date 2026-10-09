@@ -21,7 +21,13 @@ def test_complete_nauck_source_and_manifest_are_tei():
 
     manifest = etree.parse(str(CORPUS / "corpus.xml"))
     includes = manifest.xpath("//*[local-name()='include']/@href")
-    assert len(includes) == 57  # finished Aeschylus plus 56 generated collections
+    aeschylus = [href for href in includes if "/tlg0085/" in href]
+    sophocles = [href for href in includes if "/tlg0011/" in href]
+    euripides = [href for href in includes if "/tlg0006/" in href]
+    assert len(aeschylus) == 71  # one include for each non-empty Nauck work
+    assert len(sophocles) == 104
+    assert len(euripides) == 57
+    assert len(includes) == len(aeschylus) + len(sophocles) + len(euripides) + len(AUTHORS) - 2
     assert all((CORPUS / href).resolve().exists() for href in includes)
     authority = etree.parse(str(CORPUS / "authority.xml"))
     assert len(authority.xpath("//tei:person", namespaces=NS)) == 56
@@ -56,9 +62,18 @@ def test_every_non_aeschylean_line_and_fragment_marker_is_preserved():
     assert source_fragments == 3144
     assert sum(author["fragments"] for author in report.values()) == 3143
 
-    euripides = etree.parse(str(DATA / "tlg0006/fragments/source/tlg0006.fragmenta.nauck1889grc1.xml"))
+    euripides = etree.parse(str(DATA / "tlg0006/phaethon/tlg0006.phaethon.nauck1889grc1.xml"))
     assert euripides.xpath("count(//tei:milestone[@unit='sourceLine'][@n='40'])", namespaces=NS) == 1
     for spec in AUTHORS:
+        if spec.textgroup in {"tlg0011", "tlg0006"}:
+            paths = sorted((DATA / spec.textgroup).glob(
+                f"*/{spec.textgroup}.*.nauck1889grc1.xml"))
+            numbers = []
+            for path in paths:
+                local = etree.parse(str(path)).xpath(
+                    "//tei:div[@subtype='fragment']/@n", namespaces=NS)
+                assert len(local) == len(set(local)), (spec.name, path)
+            continue
         path = DATA / spec.textgroup / "fragments/source" / f"{spec.textgroup}.fragmenta.nauck1889grc1.xml"
         numbers = etree.parse(str(path)).xpath("//tei:div[@subtype='fragment']/@n", namespaces=NS)
         assert len(numbers) == len(set(numbers)), spec.name
@@ -67,6 +82,17 @@ def test_every_non_aeschylean_line_and_fragment_marker_is_preserved():
 def test_generated_author_tei_and_registry_agree():
     registry = json.loads(REGISTRY.read_text())
     for spec in AUTHORS:
+        if spec.textgroup in {"tlg0011", "tlg0006"}:
+            paths = sorted((DATA / spec.textgroup).glob(
+                f"*/{spec.textgroup}.*.nauck1889grc1.xml"))
+            assert paths
+            for path in paths:
+                slug = path.name.split(".")[1]
+                record = registry[f"{spec.textgroup}.{slug}"]
+                version = record["fragment_editions"]["nauck1889grc1"]
+                assert version["path"] == str(path)
+                assert version["format"] == "tei_fragment_work"
+            continue
         path = DATA / spec.textgroup / "fragments/source" / f"{spec.textgroup}.fragmenta.nauck1889grc1.xml"
         tree = etree.parse(str(path))
         edition_urn = f"urn:cts:greekLit:{spec.textgroup}.fragmenta.nauck1889grc1"
@@ -80,7 +106,8 @@ def test_generated_author_tei_and_registry_agree():
         assert version["urn"] == edition_urn
         assert version["format"] == "tei_fragment_collection"
         assert record["source_edition"] == (
-            "multiple-fragment-editions" if spec.textgroup == "tlg0011" else "nauck1889"
+            "multiple-fragment-editions"
+            if spec.textgroup in {"tlg0011", "tlg0006"} else "nauck1889"
         )
 
         containers = tree.xpath(
@@ -102,27 +129,28 @@ def test_generated_author_tei_and_registry_agree():
 
 
 def test_play_names_drive_work_ids_and_publication_views():
-    source = DATA / "tlg0006/fragments/source/tlg0006.fragmenta.nauck1889grc1.xml"
+    source = DATA / "tlg0006/melanippe_e_sophe/tlg0006.melanippe_e_sophe.nauck1889grc1.xml"
     tree = etree.parse(str(source))
-    medeia = tree.xpath("//tei:div[@n='melanippe_e_sophe']", namespaces=NS)
+    medeia = tree.xpath("//tei:div[@type='edition']", namespaces=NS)
     assert medeia  # Greek title transliterates instead of collapsing to `untitled`.
     assert medeia[0].xpath("string(tei:head)", namespaces=NS) == "ΜΕΛΑΝΙΠΠΗ Η ΣΟΦΗ"
 
-    model = publication_model(source)
+    from pipeline.play_level_fragments import build as build_play_level
+    model = build_play_level(DATA / "tlg0006", "tlg0006", "nauck1889grc1",
+                             "Euripides", "Nauck", "August Nauck")
     assert any(work["work"] == "melanippe_e_sophe" for work in model["works"].values())
     assert model["attributions"]
-    melanippe_fragment = next(
-        fragment for fragment in model["fragments"]
-        if fragment.get("play_work") == "melanippe_e_sophe"
-    )
+    melanippe_fragment = next(fragment for fragment in model["fragments"]
+                              if fragment.get("play_work") == "melanippe_e_sophe")
     assert melanippe_fragment["play_title"] == "ΜΕΛΑΝΙΠΠΗ Η ΣΟΦΗ"
-    assert all(item["play_urn"].startswith(
-        "urn:cite2:perseus:fragmentaryplays.v1:tlg0006_"
-    ) for item in model["attributions"])
+    assert all(item["play_urn"].startswith((
+        "urn:cite2:perseus:fragmentaryplays.v1:tlg0006_",
+        "urn:cite2:perseus:fragmentarycollections.v1:tlg0006_",
+    )) for item in model["attributions"])
 
 
 def test_standalone_greek_quotation_is_promoted_to_numbered_line():
-    source = DATA / "tlg0011/fragments/source/tlg0011.fragmenta.nauck1889grc1.xml"
+    source = DATA / "tlg0011/aichmalotides/tlg0011.aichmalotides.nauck1889grc1.xml"
     tree = etree.parse(str(source))
     line = tree.xpath(
         "//tei:div[@subtype='fragment'][@n='31']/tei:lg/tei:l[@n='1']",
