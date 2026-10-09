@@ -30,28 +30,29 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
-    assert result == {"fragment_works": 71, "fragment_authors": 55,
+    assert result == {"fragment_works": 81, "fragment_authors": 55,
                       "claudel_versions": 3}
-    assert len(fragments) == 71
-    assert len(sophocles) == 116
-    assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 466
-    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 3120
+    assert len(fragments) == 82  # 81 work views plus the author-level corpus
+    assert len(sophocles) == 119
+    assert sum(len(v["parts"][0]["chapters"]) for v in fragments.values()) == 1404
+    assert sum(len(v["parts"][0]["chapters"]) for v in sophocles.values()) == 3692
     assert (site / "fragment-collections.json").exists()
+    assert (site / "tlg0085-fragment-concordance.json").exists()
     assert (site / "tlg0011-fragment-concordance.json").exists()
     concordance = json.loads(
         (site / "tlg0011-fragment-concordance.json").read_text(encoding="utf-8")
     )
-    assert len(concordance["matches"]) == 567
+    assert len(concordance["matches"]) == 1268
     aigeys_meta = rebuilt["works"]["tlg0011.aigeys"]
     assert [v["short_id"] for v in aigeys_meta["versions"]] == [
-        "pearson1917-grc1", "nauck1889grc1"
+        "dindorf1893-grc1", "nauck1889grc1", "pearson1917-grc1"
     ]
-    assert aigeys_meta["parts"][0]["chapters"][:2] == ["P19=N18", "P20=N19"]
-    assert "P34=N31" in rebuilt["works"]["tlg0011.aichmalotides"]["parts"][0]["chapters"]
+    assert aigeys_meta["parts"][0]["chapters"][:2] == ["N18=P19", "N19=P20"]
+    assert "N31=P34" in rebuilt["works"]["tlg0011.aichmalotides"]["parts"][0]["chapters"]
     with sqlite3.connect(site / "data/tlg0011/aigeys/tlg0011.aigeys.part1.db") as conn:
         rows = conn.execute(
             "SELECT version_short_id FROM text_segments "
-            "WHERE passage_urn LIKE '%:P19-N18.1' ORDER BY version_short_id"
+            "WHERE passage_urn LIKE '%:N18-P19.1' ORDER BY version_short_id"
         ).fetchall()
         assert rows == [("nauck1889grc1",), ("pearson1917-grc1",)]
     assert "tlg0303.fragmenta" in rebuilt["works"]
@@ -73,15 +74,20 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
     assert "tlg0085.frag_athamas" not in rebuilt["works"]
     assert rebuilt["works"]["tlg0085.fragmenta"]["fragment_corpus"] is True
     assert fragments["tlg0085.athamas"]["object_urn"] == "urn:cite2:perseus:fragmentaryplays.v1:athamas"
-    assert fragments["tlg0085.athamas"]["versions"][0]["urn"] == "urn:cts:greekLit:tlg0085.fragmenta.nauck1889grc1"
+    assert [v["short_id"] for v in fragments["tlg0085.athamas"]["versions"]] == [
+        "dindorf1893-grc1", "nauck1889grc1"
+    ]
+    assert fragments["tlg0085.athamas"]["parts"][0]["chapters"][:3] == [
+        "D1=N1", "D2=N3", "D3=N4"
+    ]
     athamas = site / "data" / "tlg0085" / "athamas" / "tlg0085.athamas.part1.db"
     with sqlite3.connect(athamas) as conn:
         assert conn.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
-        assert conn.execute("SELECT count(*) FROM alignment_grid").fetchone()[0] == 4
+        assert conn.execute("SELECT count(*) FROM alignment_grid").fetchone()[0] == 5
         fragment_html = conn.execute(
             "SELECT content_html FROM text_segments ORDER BY passage_urn LIMIT 1"
         ).fetchone()[0]
-        assert "τὸν μὲν τρίπους" in fragment_html
+        assert "Τὸν μὲν τρίπους" in fragment_html
         assert '<l n="1" lang="grc">' in fragment_html
         assert 'class="fc-line"' not in fragment_html
 
@@ -110,7 +116,7 @@ def test_fragmentary_plays_are_registered_as_stable_works():
     assert registry["tlg0085.dubia_spuria"]["fragment_collection"] is True
     assert "tlg0085.frag_athamas" not in registry
     assert set(registry["tlg0011.aigeys"]["fragment_editions"]) == {
-        "nauck1889grc1", "pearson1917-grc1"
+        "dindorf1893-grc1", "nauck1889grc1", "pearson1917-grc1"
     }
 
 

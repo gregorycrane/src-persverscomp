@@ -69,6 +69,16 @@ window.PMVFragmentCollections = (() => {
     if(!collection||!textgroup)return '';
     const collectionWorks=Object.values(collection.works||{});
     const surviving=Object.entries(catalog.works).filter(([id,w])=>w.textgroup===textgroup&&!w.experimental_fragment&&tragedyKeys.has(id)).length;
+    if(name==='Aeschylus'&&collection.scope&&collection.scope.dindorf_fragments!=null) {
+      const scope=collection.scope;
+      const words=collectionWorks.reduce((n,w)=>n+wordCount(w),0);
+      return `${surviving} surviving plays, ${scope.dindorf_fragments.toLocaleString()} Dindorf + ${scope.nauck_fragments.toLocaleString()} Nauck fragment records across ${scope.work_views.toLocaleString()} work views, ${words.toLocaleString()} words`;
+    }
+    if(name==='Sophocles'&&collection.scope&&collection.scope.dindorf_fragments!=null) {
+      const scope=collection.scope;
+      const words=collectionWorks.reduce((n,w)=>n+wordCount(w),0);
+      return `${surviving} surviving plays, ${scope.dindorf_fragments.toLocaleString()} Dindorf + ${scope.nauck_fragments.toLocaleString()} Nauck + ${scope.pearson_fragments.toLocaleString()} Pearson fragment records across ${scope.play_headings.toLocaleString()} work views, ${words.toLocaleString()} words`;
+    }
     const fragments=collection.scope&&collection.scope.included_fragments!=null
       ? collection.scope.included_fragments
       : collectionWorks.reduce((n,w)=>n+(w.fragments||[]).length,0);
@@ -113,13 +123,19 @@ window.PMVFragmentCollections = (() => {
       return `${resources?`<div class="fc-resources">${escape(resources)}</div>`:''}${stats ? `<div class="fc-fragment-refs">Lines ${escape(stats.citation_span)} · ${stats.words.toLocaleString()} Greek words</div><div class="fc-meta" title="Citation span, not a count of encoded verse segments. Words count the printed Greek verse, including bracketed text; notes and speaker labels are excluded.">${escape(stats.edition)}</div>` : ''}`;
     }
     const sophocles=w.author==='Sophocles'||String(w.id||'').startsWith('sophocles-');
+    const aeschylus=w.author==='Aeschylus'||String(w.id||'').startsWith('aeschylus-');
     let referenceText;
-    if(sophocles) {
-      const byEdition={pearson:[],nauck:[]};
-      (w.fragments||[]).forEach(f=>byEdition[String(f.edition||'').startsWith('pearson')?'pearson':'nauck'].push(f));
+    if(sophocles||aeschylus) {
+      const byEdition={dindorf:[],pearson:[],nauck:[]};
+      (w.fragments||[]).forEach(f=>{
+        const edition=String(f.edition||'');
+        const key=edition.startsWith('dindorf')?'dindorf':edition.startsWith('pearson')?'pearson':'nauck';
+        byEdition[key].push(f);
+      });
       const bits=[];
-      if(byEdition.pearson.length)bits.push('Pearson '+fragmentNumbers({fragments:byEdition.pearson}));
+      if(byEdition.dindorf.length)bits.push('Dindorf '+fragmentNumbers({fragments:byEdition.dindorf}));
       if(byEdition.nauck.length)bits.push('Nauck '+fragmentNumbers({fragments:byEdition.nauck}));
+      if(byEdition.pearson.length)bits.push('Pearson '+fragmentNumbers({fragments:byEdition.pearson}));
       referenceText=bits.join(' · ');
     } else {
       const refs=fragmentNumbers(w);
@@ -162,12 +178,18 @@ window.PMVFragmentCollections = (() => {
     const standard=Object.entries(catalog.works).filter(([id,w])=>scope!=='fragments'&&!w.experimental_fragment && (!author||w.textgroup===author) && (!language||workLanguage(w)===language) && (!genre||inGenre(id,w,genre))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
     const catalogFragments=Object.entries(catalog.works).filter(([id,w])=>w.experimental_fragment && w.textgroup!=='tlg0085' && w.textgroup!=='tlg0011' && (!author||w.textgroup===author) && (!language||language==='greek') && (!genre||genre==='greek-drama')).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
     const includeFragments=scope!=='surviving'&&(!author||author==='tlg0085')&&(!language||language==='greek')&&(!genre||genre==='greek-drama');
-    const fragments=includeFragments ? Object.values(data.works).map(w=>({...w,author:'Aeschylus'})) : [];
+    const fragments=includeFragments ? Object.values(data.works).map(w=>{
+      const versions=w.versions||[], first=versions[0];
+      const edition=first&&first.short_id.replace(/grc\d+$/,'').replace(/[-_]$/,'');
+      return {...w,author:'Aeschylus',pmv_work_key:'tlg0085.'+w.work,
+        pmv_focus:edition?'tlg0085_'+w.work+'_'+edition:'',
+        pmv_cols:Math.min(2,versions.length)||1};
+    }) : [];
     const includeSophoclesFragments=scope!=='surviving'&&(!author||author==='tlg0011')&&(!language||language==='greek')&&(!genre||genre==='greek-drama');
     const sophoclesFragments=includeSophoclesFragments&&sophoclesData ? Object.values(sophoclesData.works).filter(w=>(w.fragments||[]).length).map(w=>{
-      const versions=w.versions||[], pearson=versions.find(v=>v.short_id==='pearson1917-grc1'), first=pearson||versions[0];
+      const versions=w.versions||[], first=versions[0];
       const edition=first&&first.short_id.replace(/grc\d+$/,'').replace(/[-_]$/,'');
-      return {...w,author:'Sophocles',pmv_work_key:'tlg0011.'+w.work,pmv_focus:edition?'tlg0011_'+w.work+'_'+edition:'',pmv_cols:Math.min(2,versions.length)||1};
+      return {...w,author:'Sophocles',pmv_work_key:'tlg0011.'+w.work,pmv_focus:edition?'tlg0011_'+w.work+'_'+edition:'',pmv_cols:Math.min(3,versions.length)||1};
     }) : [];
     const works=[...standard,...catalogFragments,...fragments,...sophoclesFragments].sort((a,b)=>a.author.localeCompare(b.author)||a.title.localeCompare(b.title));
     const authorScope=author==='tlg0085' ? `<nav class="fc-scope-links" aria-label="Aeschylus work scope"><a href="${escape(href({author,scope:'surviving'}))}" ${scope==='surviving'?'aria-current="page"':''}>Surviving works</a><span>→</span><a href="${escape(href({author}))}" ${scope!=='surviving'?'aria-current="page"':''}>All works</a></nav>` : author==='tlg0011' ? `<nav class="fc-scope-links" aria-label="Sophocles work scope"><a href="${escape(href({author,scope:'surviving'}))}" ${scope==='surviving'?'aria-current="page"':''}>Surviving works</a><span>→</span><a href="${escape(href({author}))}" ${!scope?'aria-current="page"':''}>All works</a><span>→</span><a href="${escape(href({author,scope:'fragments'}))}" ${scope==='fragments'?'aria-current="page"':''}>Fragments</a></nav>` : '';
@@ -221,6 +243,13 @@ window.PMVFragmentCollections = (() => {
         data=await aeschylusResponse.json();
         sophoclesData=sophoclesResponse.ok?await sophoclesResponse.json():{works:{}};
       }
+      Object.values(data.works||{}).forEach(w=>{
+        const versions=w.versions||[], first=versions[0];
+        const edition=first&&first.short_id.replace(/grc\d+$/,'').replace(/[-_]$/,'');
+        w.pmv_work_key='tlg0085.'+w.work;
+        w.pmv_focus=edition?'tlg0085_'+w.work+'_'+edition:'';
+        w.pmv_cols=Math.min(2,versions.length)||1;
+      });
       const params=new URLSearchParams(location.search);
       if(params.has('browse') || params.has('author') || params.has('genre') || params.has('language')) renderLibrary(root,catalog,params);
       else if(params.has('fragment')) renderWork(root,params.get('fragment'));

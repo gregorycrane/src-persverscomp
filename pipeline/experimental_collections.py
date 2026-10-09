@@ -1,4 +1,5 @@
 """Publish TEI-first fragment collections and the Claudel trial collections."""
+from copy import deepcopy
 from html import escape
 import json
 import os
@@ -10,6 +11,12 @@ from pipeline.config import WORKSPACE_DIR
 from pipeline.core.storage import init_storage_engine
 from pipeline.fragment_collections import build as build_aeschylus_fragments
 from pipeline.fragment_collections import materialize_work_views
+from pipeline.aeschylus_fragment_concordance import (
+    DINDORF as AESCHYLUS_DINDORF,
+    NAUCK as AESCHYLUS_NAUCK,
+    build_dindorf as build_dindorf_aeschylus,
+    merge_work_views as merge_aeschylus_work_views,
+)
 from pipeline.nauck_corpus import AUTHORS as NAUCK_AUTHORS
 from pipeline.nauck_corpus import publication_model as build_nauck_author_fragments
 from pipeline.sophocles_fragment_concordance import (
@@ -19,14 +26,24 @@ from pipeline.sophocles_fragment_concordance import (
     merge_work_views as merge_sophocles_work_views,
     safe_card_id,
 )
+from pipeline.sophocles_dindorf_concordance import (
+    DINDORF as SOPHOCLES_DINDORF,
+    aggregate_work as aggregate_sophocles_work,
+    build_dindorf as build_dindorf_sophocles,
+    merge_three_work_views as merge_three_sophocles_work_views,
+)
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "experimental" / "aeschylus"
 CORPUS_DATA_DIR = Path(os.environ.get(
     "GRCNEWXML_DATA_DIR", "/Users/gcrane/github/grcnewxml/data"))
 FRAGMENTS_PATH = (CORPUS_DATA_DIR / "tlg0085" / "fragments" / "source" /
                   "tlg0085.fragmenta.nauck1889grc1.xml")
+DINDORF_FRAGMENTS_PATH = (CORPUS_DATA_DIR / "tlg0085" / "fragments" / "source" /
+                          "tlg0085.fragmenta.dindorf1893-grc1.xml")
 SOPHOCLES_FRAGMENTS_PATH = (Path(__file__).resolve().parents[1] / "experimental" /
                              "sophocles" / "fragment-collections.json")
+SOPHOCLES_DINDORF_PATH = (CORPUS_DATA_DIR / "tlg0011" / "fragments" / "source" /
+                           "tlg0011.fragmenta.dindorf1893-grc1.xml")
 CLAUDEL_PATH = DATA_DIR / "claudel-passages.json"
 ALIGNMENT_FILES = (
     "claudel1896-agamemnon-alignment.json",
@@ -245,11 +262,81 @@ def _publish_fragment_source(
     return len(works)
 
 
+def _aggregate_aeschylus_work(works, versions):
+    """Build one author-level view from already play-constrained alignments."""
+    cards, fragments = [], []
+    for work in works.values():
+        fragments.extend(work.get("fragments", []))
+        for card in work.get("cards", []):
+            item = deepcopy(card)
+            item["label"] = f"{work['work']}-{card['label']}"
+            cards.append(item)
+    return {
+        "id": "aeschylus-fragmenta", "work": "fragmenta",
+        "title": "Aeschylus, Fragments", "source_title": "FRAGMENTA",
+        "object_urn": "urn:cts:greekLit:tlg0085.fragmenta",
+        "fragments": fragments, "cards": cards, "versions": versions,
+        "status": "Fragmentary text", "fragment_corpus": True,
+    }
+
+
 def _publish_fragments(site_root, catalog):
-    return _publish_fragment_source(site_root, catalog, FRAGMENTS_PATH)
+    """Publish Dindorf and Nauck as aligned, independently numbered editions."""
+    # Preserve the generic fixture/API used for ad-hoc JSON multi-edition
+    # collections; the production Aeschylus source is the paired TEI below.
+    if Path(FRAGMENTS_PATH).suffix.lower() == ".json":
+        return _publish_fragment_source(site_root, catalog, FRAGMENTS_PATH)
+    nauck_source = build_aeschylus_fragments(FRAGMENTS_PATH)
+    if not DINDORF_FRAGMENTS_PATH.exists():
+        return _publish_fragment_source(site_root, catalog, FRAGMENTS_PATH)
+    dindorf_source = build_dindorf_aeschylus(DINDORF_FRAGMENTS_PATH)
+    works, concordance = merge_aeschylus_work_views(dindorf_source, nauck_source)
+    catalog["works"] = {
+        key: value for key, value in catalog.get("works", {}).items()
+        if not ((value.get("fragmentary") or value.get("fragment_corpus"))
+                and value.get("textgroup") == "tlg0085")
+    }
+    versions = dindorf_source["versions"] + nauck_source["versions"]
+    aggregate = _aggregate_aeschylus_work(works, versions)
+    fields = (
+        ("dindorf", AESCHYLUS_DINDORF, "Dindorf's sources and notes"),
+        ("nauck", AESCHYLUS_NAUCK, "Nauck's notes and apparatus"),
+    )
+    _write_aligned_fragment_work(
+        site_root, catalog, aggregate, textgroup="tlg0085", edition_fields=fields)
+    for work in works.values():
+        _write_aligned_fragment_work(
+            site_root, catalog, work, textgroup="tlg0085", edition_fields=fields)
+    catalog.setdefault("authors", {})["tlg0085"] = "Aeschylus"
+    browser_data = {
+        "schema_version": 5, "textgroup": "tlg0085", "author": "Aeschylus",
+        "corpus_title": "Fragments", "versions": versions, "works": works,
+        "collections": [{"id": "aeschylus-fragments", "title": "Fragments",
+                         "author": "Aeschylus", "textgroup": "tlg0085",
+                         "members": list(works)}],
+        "scope": {"work_views": len(works),
+                  "dindorf_fragments": len(dindorf_source["fragments"]),
+                  "nauck_fragments": len(nauck_source["fragments"]),
+                  "aligned_fragment_pairs": len(concordance)},
+        "editorial_note": (
+            "Dindorf 1893 and Nauck 1889 retain their own fragment numbers. "
+            "Shared cards record conservative, text-supported correspondences; "
+            "unmatched fragments remain visible as edition-specific cards."),
+    }
+    rendered = json.dumps(browser_data, ensure_ascii=False, indent=2) + "\n"
+    (site_root / "tlg0085-fragment-collections.json").write_text(rendered, encoding="utf-8")
+    (site_root / "fragment-collections.json").write_text(rendered, encoding="utf-8")
+    (site_root / "tlg0085-fragment-concordance.json").write_text(
+        json.dumps({"schema_version": 1,
+                    "editions": [AESCHYLUS_DINDORF, AESCHYLUS_NAUCK],
+                    "matches": concordance}, ensure_ascii=False, indent=2) + "\n",
+        encoding="utf-8")
+    return len(works)
 
 
-def _write_aligned_fragment_work(site_root, catalog, work, textgroup="tlg0011"):
+def _write_aligned_fragment_work(
+    site_root, catalog, work, textgroup="tlg0011", edition_fields=None
+):
     """Write one work whose card may contain segments from two editions."""
     work_id = work["work"]
     work_key = f"{textgroup}.{work_id}"
@@ -272,6 +359,10 @@ def _write_aligned_fragment_work(site_root, catalog, work, textgroup="tlg0011"):
     card_for_source = {}
     urns = [f"urn:cts:greekLit:{work_key}:{safe_card_id(card['label'])}.1"
             for card in cards]
+    edition_fields = edition_fields or (
+        ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
+        ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
+    )
     for index, (card, urn) in enumerate(zip(cards, urns)):
         conn.execute(
             "INSERT INTO alignment_grid VALUES (?,?,?,?,?,?,?,?,?)",
@@ -279,18 +370,14 @@ def _write_aligned_fragment_work(site_root, catalog, work, textgroup="tlg0011"):
              urns[index - 1] if index else None,
              urns[index + 1] if index + 1 < len(urns) else None, index),
         )
-        for field, version_id, source_label in (
-            ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
-            ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
-        ):
+        for field, version_id, source_label in edition_fields:
             fragment = card.get(field)
             if fragment is None:
                 continue
             conn.execute("INSERT INTO text_segments VALUES (?,?,?)", (
                 urn, version_id, _fragment_html(work, fragment, source_label)))
             card_for_source[fragment["source_fragment_urn"]] = card["label"]
-    for version_id, field in ((SOPHOCLES_PEARSON, "pearson"),
-                              (SOPHOCLES_NAUCK, "nauck")):
+    for field, version_id, _ in edition_fields:
         if version_id not in version_map:
             continue
         local_index = 0
@@ -308,8 +395,9 @@ def _write_aligned_fragment_work(site_root, catalog, work, textgroup="tlg0011"):
         "textgroup": textgroup, "work": work_id, "title": work["title"],
         "source_title": work.get("source_title", work["title"]),
         "experimental_fragment": True, "fragmentary": True,
+        "fragment_corpus": bool(work.get("fragment_corpus")),
         "evidence_only": not bool(cards), "status": work.get("status", "Fragmentary text"),
-        "object_urn": work.get("object_urn"), "default_columns": min(2, len(versions)) or 1,
+        "object_urn": work.get("object_urn"), "default_columns": min(3, len(versions)) or 1,
         "unit_labels": {"chapter": "Fragment alignment", "section": "Section"},
         "parts": [{"part": 1, "file": db_path.name, "books": [],
                    "chapters": [card["label"] for card in cards],
@@ -354,18 +442,39 @@ def _publish_sophocles_fragments(site_root, catalog):
     nauck_path = (CORPUS_DATA_DIR / "tlg0011" / "fragments" / "source" /
                   "tlg0011.fragmenta.nauck1889grc1.xml")
     nauck_source = build_nauck_author_fragments(nauck_path)
-    pearson = materialize_work_views(pearson_source)
-    nauck = materialize_work_views(nauck_source)
-    works, concordance = merge_sophocles_work_views(pearson, nauck)
+    dindorf_source = (build_dindorf_sophocles(SOPHOCLES_DINDORF_PATH)
+                       if SOPHOCLES_DINDORF_PATH.exists() else None)
+    if dindorf_source:
+        works, concordance = merge_three_sophocles_work_views(
+            pearson_source, nauck_source, dindorf_source)
+        versions = (dindorf_source["versions"] + nauck_source["versions"]
+                    + pearson_source["versions"])
+        edition_fields = (
+            ("dindorf", SOPHOCLES_DINDORF, "Dindorf’s sources and notes"),
+            ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
+            ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
+        )
+    else:
+        pearson = materialize_work_views(pearson_source)
+        nauck = materialize_work_views(nauck_source)
+        works, concordance = merge_sophocles_work_views(pearson, nauck)
+        versions = nauck_source["versions"] + pearson_source["versions"]
+        edition_fields = (
+            ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
+            ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
+        )
     catalog["works"] = {
         key: value for key, value in catalog.get("works", {}).items()
         if not ((value.get("fragmentary") or value.get("fragment_corpus"))
                 and value.get("textgroup") == "tlg0011")
     }
-    aggregate = _aggregate_sophocles_work(pearson_source, nauck_source)
-    _write_aligned_fragment_work(site_root, catalog, aggregate)
+    aggregate = (aggregate_sophocles_work(works, versions) if dindorf_source
+                 else _aggregate_sophocles_work(pearson_source, nauck_source))
+    _write_aligned_fragment_work(
+        site_root, catalog, aggregate, edition_fields=edition_fields)
     for work in works.values():
-        _write_aligned_fragment_work(site_root, catalog, work)
+        _write_aligned_fragment_work(
+            site_root, catalog, work, edition_fields=edition_fields)
     catalog.setdefault("authors", {})["tlg0011"] = "Sophocles"
     browser_data = {
         "schema_version": 5, "textgroup": "tlg0011", "author": "Sophocles",
@@ -375,18 +484,21 @@ def _publish_sophocles_fragments(site_root, catalog):
                          "author": "Sophocles", "textgroup": "tlg0011",
                          "members": list(works)}],
         "scope": {"play_headings": len(works),
-                  "pearson_fragments": len(pearson_source["fragments"]),
+                  "dindorf_fragments": len(dindorf_source["fragments"]) if dindorf_source else 0,
                   "nauck_fragments": len(nauck_source["fragments"]),
+                  "pearson_fragments": len(pearson_source["fragments"]),
                   "aligned_fragment_pairs": len(concordance)},
         "editorial_note": (
-            "Pearson 1917 and Nauck 1889 retain their own fragment numbers. "
+            "Dindorf, Nauck, and Pearson retain their own fragment numbers. "
             "Shared cards record only text-supported correspondences; unmatched "
             "fragments remain visible as edition-specific cards."),
     }
     (site_root / "tlg0011-fragment-collections.json").write_text(
         json.dumps(browser_data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (site_root / "tlg0011-fragment-concordance.json").write_text(
-        json.dumps({"schema_version": 1, "editions": [SOPHOCLES_PEARSON, SOPHOCLES_NAUCK],
+        json.dumps({"schema_version": 1,
+                    "editions": ([SOPHOCLES_DINDORF, SOPHOCLES_NAUCK, SOPHOCLES_PEARSON]
+                                 if dindorf_source else [SOPHOCLES_NAUCK, SOPHOCLES_PEARSON]),
                     "matches": concordance}, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8")
     return len(works)
