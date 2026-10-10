@@ -17,6 +17,7 @@ import sqlite3
 import shutil
 from pathlib import Path
 from pipeline.config import WORKSPACE_DIR, BUILD_DIR, DB_PATH, SRC_DIR
+from tools.build_toc_metadata import build as build_toc_metadata
 
 
 def _merge_catalog_only_versions(structures, registries):
@@ -305,6 +306,10 @@ def rebuild(conn=None):
     )
 
     (WORKSPACE_DIR / "index.html").write_text(INDEX_HTML_CONTENT, encoding='utf-8')
+    # The complete contents page loads edition-aware word and fragment counts
+    # at runtime. Keep that companion artifact reproducible from the same
+    # source build instead of requiring a manual script in the deployed repo.
+    build_toc_metadata(WORKSPACE_DIR / "site")
     # Plain static assets kept under web/ so rebuilding PMV also republishes
     # the maintained dashboard instead of leaving an ad-hoc copy behind.
     for dashboard_asset in (

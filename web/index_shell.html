@@ -81,11 +81,10 @@
           <div class="browse-items" id="chapter-items-container"></div>
         </div>
         <!-- ── Text Diff / Alignment combined row ──────────────── -->
-        <div class="browse-row" id="row-alignment-panel"
-             style="background:#f5f0e8; border-top:1px solid #d0c8b8; flex-wrap:wrap; gap:4px 12px;">
+        <div class="browse-row" id="row-alignment-panel">
 
           <!-- Diff toggle -->
-          <div id="diff-toggle-row" style="display:none; align-items:center; gap:6px;">
+          <div id="diff-toggle-row">
             <label style="font-weight:bold;color:#555">Text diff:</label>
             <label style="cursor:pointer;font-size:12px">
               <input type="checkbox" id="diff-toggle-checkbox"
@@ -100,7 +99,7 @@
                 style="display:none;font-weight:bold;color:#999;font-size:11px;align-self:center">— or —</span>
 
           <!-- Alignment selector -->
-          <div style="display:flex;align-items:center;gap:6px;">
+          <div class="alignment-controls">
             <label style="font-weight:bold;color:#555;font-size:12px">Alignment:</label>
             <select id="alignment-pair-select" onchange="onAlignmentPairChange(this.value)"
                     style="font-size:12px;padding:2px 6px;border:1px solid #bbb;border-radius:3px;background:#fff;color:#333;cursor:pointer" disabled>

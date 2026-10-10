@@ -1340,6 +1340,26 @@ let activeWorkKey = "tlg0003.tlg001";
     }
 
 
+    // Safari/WebKit can restore this single-document viewer from its
+    // back-forward cache while retaining the reader DOM for the preceding
+    // query string. Reload only when Back/Forward actually changes the
+    // query; hash-only fragment navigation remains untouched.
+    window.__pmvHistorySearch = window.location.search;
+    window.addEventListener("popstate", () => {
+        if (window.location.search !== window.__pmvHistorySearch) {
+            window.location.reload();
+        }
+    });
+    window.addEventListener("pageshow", event => {
+        if (!event.persisted) return;
+        requestAnimationFrame(() => {
+            const wantsReader = new URLSearchParams(window.location.search).has("w");
+            const appRoot = document.getElementById("app-view-root");
+            const readerVisible = appRoot && getComputedStyle(appRoot).display !== "none";
+            if (Boolean(wantsReader) !== Boolean(readerVisible)) window.location.reload();
+        });
+    });
+
     initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` }).then(SQL => {
         window.SQL_WASM_ENGINE = SQL;
         document.getElementById("status-readout").innerText = "WebAssembly layer compiled. Auto-loading default database...";
@@ -1733,9 +1753,15 @@ function populateNavigationFromShard() {
         if (editions_result[0]) {
             window.TEXT_REGISTRY = window.TEXT_REGISTRY || {};
             editions_result[0].values.forEach(row => {
+                // Catalog metadata is the single maintained source for labels.
+                // Shards repeat text_units for autonomous use, but a label
+                // correction must not require rewriting hundreds of binaries.
+                const catalogWork = CATALOG && CATALOG.works && CATALOG.works[`${row[4]}.${row[5]}`];
+                const catalogVersion = catalogWork && (catalogWork.versions || []).find(version =>
+                    version.canonical_id === row[0] || version.short_id === row[6]);
                 window.TEXT_REGISTRY[row[0]] = {
                     urn: row[1],
-                    label: row[2],
+                    label: (catalogVersion && catalogVersion.label) || row[2],
                     class: row[3],
                     textgroup: row[4],
                     work: row[5],
@@ -2058,8 +2084,24 @@ function initializeRoutingFromURL() {
             || payload.textgroup;
         const _workTitle = (CATALOG && CATALOG.works && CATALOG.works[_labelWorkKey]
             && CATALOG.works[_labelWorkKey].title) || payload.work;
-        document.getElementById("frame-context-label").innerText =
-            _authorName + ", " + _workTitle + "  —  " + payload.urn;
+        const _workAnchor = "work-" + _labelWorkKey.replace(/[^A-Za-z0-9_-]+/g, "-");
+        const _authorUrl = new URL(window.location.pathname, window.location.origin);
+        _authorUrl.searchParams.set("collections", "1");
+        _authorUrl.searchParams.set("author", payload.textgroup);
+        const _authorHref = _authorUrl.pathname + _authorUrl.search;
+        const _contextLabel = document.getElementById("frame-context-label");
+        const _authorLink = document.createElement("a");
+        _authorLink.href = _authorHref;
+        _authorLink.textContent = _authorName;
+        const _workLink = document.createElement("a");
+        _workLink.href = _authorHref + "#" + encodeURIComponent(_workAnchor);
+        _workLink.textContent = _workTitle;
+        _contextLabel.replaceChildren(
+            _authorLink,
+            document.createTextNode(", "),
+            _workLink,
+            document.createTextNode("  —  " + payload.urn)
+        );
         
         const validEditions = Object.entries(TEXT_REGISTRY).filter(([key, meta]) => {
             return meta.textgroup === payload.textgroup && meta.work === payload.work;
@@ -2207,7 +2249,10 @@ function initializeRoutingFromURL() {
             .replace(/[­​-‏⁠﻿᠎]/g, "")   // invisible/format chars
             .replace(/[‐-―−⁃－]/g, "")         // all dash/hyphen variants
             .replace(/['’‘"“”ʼ᾽᾿῾ʾʿ]/g, "")                            // apostrophe/breathing/quotes
-            // .toLowerCase()
+            // Capitalization at the start of an edition's printed line is
+            // layout, not a substantive variant (especially in fragments,
+            // whose editors often divide the same quotation differently).
+            .toLowerCase()
             .replace(/[.,;:·!?"()\[\]{}«»·;…]/g, "")
             .trim();
     }
@@ -2259,7 +2304,7 @@ function initializeRoutingFromURL() {
     // Find pairs of columns that share the same language class.
     // Returns [{leftPrefix, rightPrefix, cssClass}] for each same-lang pair.
     function findSameLangColumnPairs() {
-        const prefixes = ['f', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'];
+        const prefixes = visibleColumnPrefixes();
         // Only diff critical editions (doc_type="edition"), not translations.
         // Two translations of the same work are intentionally different —
         // diffing them produces noise, not scholarly signal.
@@ -2283,6 +2328,15 @@ function initializeRoutingFromURL() {
             }
         }
         return pairs;
+    }
+
+    // Column state is retained when the user reduces the layout from, say,
+    // seven columns to three. Only prefixes that are actually visible may
+    // participate in diff and alignment controls.
+    function visibleColumnPrefixes() {
+        const prefixes = ['f', 'c1', 'c2', 'c3', 'c4', 'c5', 'c6'];
+        const count = Math.max(1, Math.min(activeColumnsCount || 1, prefixes.length));
+        return prefixes.slice(0, count);
     }
 
     // Shared by both the prose and poetry diff paths: reads a text container's
@@ -2367,6 +2421,15 @@ function initializeRoutingFromURL() {
         return map;
     }
 
+    // Fragment editions use semantic TEI-like <l n="…"> elements inside
+    // .fc-verse rather than the viewer's ordinary line-num-cell / line-text-cell
+    // grid.  Return only those quoted verse lines: headings, testimonia,
+    // transmitting-source prose, and apparatus deliberately do not participate
+    // in the textual diff.
+    function _fragmentQuoteCells(row) {
+        return Array.from(row.querySelectorAll('.pmv-fragment .fc-verse > l'));
+    }
+
     // Apply diff highlighting to already-rendered column content.
     // Skips treebank, metrical, and any column with an active alignment pair
     // (which would destroy aln-token spans). Handles two DOM shapes:
@@ -2393,7 +2456,7 @@ function initializeRoutingFromURL() {
 
         const leftRows = leftCol.querySelectorAll('.section-row');
         console.log(`[diff] applyColumnDiff(${leftPrefix}, ${rightPrefix}): ${leftRows.length} .section-row in left column`);
-        let matchedRows = 0, proseRows = 0, poetryRows = 0, diffsApplied = 0;
+        let matchedRows = 0, proseRows = 0, poetryRows = 0, fragmentRows = 0, diffsApplied = 0;
 
         leftRows.forEach(leftRow => {
             const secClass = [...leftRow.classList].find(c => c.startsWith('s-idx-'));
@@ -2404,6 +2467,52 @@ function initializeRoutingFromURL() {
 
             const leftBody  = leftRow.querySelector('.prose-body-inline');
             const rightBody = rightRow.querySelector('.prose-body-inline');
+
+            const leftFragmentLines  = _fragmentQuoteCells(leftRow);
+            const rightFragmentLines = _fragmentQuoteCells(rightRow);
+
+            if (leftFragmentLines.length && rightFragmentLines.length) {
+                fragmentRows++;
+                // Fragment editions need not divide the same quotation at the
+                // same places. Diff one continuous token stream per witness,
+                // then put each token back into its edition's original <l>.
+                const flatten = lines => lines.flatMap((cell, lineIndex) =>
+                    _diffTokensFromCell(cell).map(tok => ({tok, lineIndex, cell})));
+                const leftFlat  = flatten(leftFragmentLines);
+                const rightFlat = flatten(rightFragmentLines);
+                if (!leftFlat.length || !rightFlat.length) return;
+
+                const {leftOut, rightOut} = tokenDiff(
+                    leftFlat.map(x => x.tok), rightFlat.map(x => x.tok));
+                const hasDiff = leftOut.some(x => x.type !== "same") ||
+                                rightOut.some(x => x.type !== "same");
+                if (!hasDiff) return;
+                diffsApplied++;
+
+                const regroup = (flat, out) => {
+                    const byLine = new Map();
+                    out.forEach((item, k) => {
+                        const lineIndex = flat[k].lineIndex;
+                        if (!byLine.has(lineIndex)) byLine.set(lineIndex, []);
+                        byLine.get(lineIndex).push(item);
+                    });
+                    return byLine;
+                };
+                const leftByLine  = regroup(leftFlat, leftOut);
+                const rightByLine = regroup(rightFlat, rightOut);
+                leftFragmentLines.forEach((cell, i) => {
+                    const items = leftByLine.get(i);
+                    // <l> is itself a two-column CSS grid (number + text).
+                    // Keep the rebuilt line in one grid child; otherwise each
+                    // text node surrounding a diff span becomes a new row.
+                    if (items) cell.innerHTML = `<span class="fragment-diff-line">${renderDiffTokens(items)}</span>`;
+                });
+                rightFragmentLines.forEach((cell, i) => {
+                    const items = rightByLine.get(i);
+                    if (items) cell.innerHTML = `<span class="fragment-diff-line">${renderDiffTokens(items)}</span>`;
+                });
+                return;
+            }
 
             if (leftBody && rightBody) {
                 proseRows++;
@@ -2487,7 +2596,7 @@ function initializeRoutingFromURL() {
                 if (items) cell.innerHTML = renderDiffTokens(items);
             });
         });
-        console.log(`[diff] done: ${matchedRows} rows matched left<->right (${proseRows} prose, ${poetryRows} poetry), ${diffsApplied} diffs actually applied`);
+        console.log(`[diff] done: ${matchedRows} rows matched left<->right (${proseRows} prose, ${poetryRows} poetry, ${fragmentRows} fragments), ${diffsApplied} diffs actually applied`);
     }
 
     function clearColumnDiff() {
@@ -2504,7 +2613,7 @@ function initializeRoutingFromURL() {
         const hasDiff  = pairs.length > 0;
         const hasAln   = alnSel && !alnSel.disabled;
 
-        if (diffRow) diffRow.style.display = hasDiff ? "flex" : "none";
+        if (diffRow) diffRow.style.display = hasDiff ? "grid" : "none";
         if (sep)     sep.style.display     = (hasDiff && hasAln) ? "inline" : "none";
 
         if (hasDiff && label) {
@@ -2581,7 +2690,7 @@ function initializeRoutingFromURL() {
 
         // Find which pair best matches the currently displayed columns
         const displayedVersions = new Set(
-            Object.values(columnEditions).filter(Boolean).map(cid => {
+            visibleColumnPrefixes().map(prefix => columnEditions[prefix]).filter(Boolean).map(cid => {
                 const meta = TEXT_REGISTRY[cid];
                 return meta ? meta.short_id : null;
             }).filter(Boolean)
@@ -2624,7 +2733,7 @@ function initializeRoutingFromURL() {
 
         // Warn if src or tgt column is not currently displayed
         const displayedVersions = new Set(
-            Object.values(columnEditions).filter(Boolean).map(cid => {
+            visibleColumnPrefixes().map(prefix => columnEditions[prefix]).filter(Boolean).map(cid => {
                 const meta = TEXT_REGISTRY[cid];
                 return meta ? meta.short_id : null;
             }).filter(Boolean)
@@ -3146,6 +3255,7 @@ function initializeRoutingFromURL() {
         if (new URLSearchParams(location.search).get("collections") === "1") params.set("collections", "1");
 
         window.history.replaceState(null, "", window.location.pathname + "?" + params.toString());
+        window.__pmvHistorySearch = window.location.search;
 
         // Report this in-app navigation to Analytics as its own pageview.
         // replaceState above doesn't trigger a real page load, so without
@@ -4696,6 +4806,19 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 const wrapper = document.createElement("div");
                 wrapper.className = `${cssClass} poetry-grid-layout`;
                 wrapper.innerHTML = txt;
+                // Several legacy poetry ingests preserve <speaker> content
+                // as a bare text node between the numbered-line divs. Bare
+                // nodes cannot be styled and therefore looked like another
+                // line of verse. Promote every non-whitespace direct text
+                // node to the same semantic speaker handle used by newer
+                // TEI conversions.
+                Array.from(wrapper.childNodes).forEach(node => {
+                    if (node.nodeType !== 3 || !node.textContent.trim()) return;
+                    const speaker = document.createElement("span");
+                    speaker.className = "speaker-attr";
+                    speaker.textContent = node.textContent.trim();
+                    node.replaceWith(speaker);
+                });
                 bindAlignmentTokenEvents(wrapper);
                 if (!wrapper.querySelector('.line-num-cell')) {
                     wrapper.classList.remove('poetry-grid-layout');
@@ -4810,7 +4933,17 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
         const parts = urn.split(":");
         const psg = parts[parts.length - 1].split(".");
         if (isFlatStructure(activeWorkKey)) {
-            triggerTargetNavigation(null, psg[0]);
+            // Fragment concordance cards use "=" between editions in the
+            // UI/database (D2=N3), while CTS passage URNs serialize that
+            // separator as "-" (D2-N3.1). Resolve the serialized form back
+            // to the exact stored card label before loading the next card.
+            const flatChapters = GLOBAL_STRUCTURES[activeWorkKey] || [];
+            const serializedChapter = psg[0];
+            const storedChapter = flatChapters.find(label =>
+                String(label) === serializedChapter ||
+                String(label).replace(/=/g, "-") === serializedChapter
+            ) || serializedChapter;
+            triggerTargetNavigation(null, storedChapter);
         } else {
             triggerTargetNavigation(psg[0], psg[1]);
         }
