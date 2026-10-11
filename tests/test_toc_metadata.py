@@ -20,6 +20,13 @@ def test_kock_volume_two_collection_label():
     assert metadata["source_edition_year"] == 1884
 
 
+def test_kock_volume_three_collection_label():
+    assert edition_name("kock1888-grc1") == "Kock"
+    metadata = collection_metadata("kock1888-grc1")
+    assert metadata["collection_label"] == "Kock, vol. 3"
+    assert metadata["source_edition_year"] == 1888
+
+
 def test_fragment_word_count_excludes_transmitting_context():
     html = (
         '<div class="pmv-fragment"><div class="fc-verse">'

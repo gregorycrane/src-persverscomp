@@ -672,6 +672,8 @@ def _publish_kock_fragments(site_root, catalog):
          "Kock vol. I sources and notes"),
         ("kock1884-grc1", "Greek (Kock, 1884; OCR draft)",
          "Kock vol. II sources and notes"),
+        ("kock1888-grc1", "Greek (Kock, 1888; OCR draft)",
+         "Kock vol. III sources and notes"),
     )
     return sum(
         _publish_kock_edition(site_root, catalog, registry, *volume)
@@ -802,7 +804,7 @@ def publish(site_root=None):
     print(f"  ✓ Published experimental collections: {total_fragments} fragment works "
           f"({sophocles_fragments} Sophocles, {euripides_fragments} Euripides, "
           f"{aristophanes_fragments} Aristophanes), "
-          f"{kock_fragments} Kock CAF I–II work editions, "
+          f"{kock_fragments} Kock CAF I–III work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,

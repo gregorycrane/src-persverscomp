@@ -45,6 +45,14 @@ COLLECTION_METADATA = {
         "collection_label": "Kock, vol. 2",
         "collection_volume": 2,
     },
+    "kock1888": {
+        "collection_year": 1880,
+        "collection_order": 2,
+        "source_edition_year": 1888,
+        "source_edition_statement": "vol. 3, 1888",
+        "collection_label": "Kock, vol. 3",
+        "collection_volume": 3,
+    },
     "kock": {
         "collection_year": 1880,
         "collection_order": 2,
