@@ -7,6 +7,7 @@ import os
 from pathlib import Path
 import shutil
 import sqlite3
+from lxml import etree
 
 from pipeline.config import WORKSPACE_DIR
 from pipeline.core.storage import init_storage_engine
@@ -48,7 +49,8 @@ from pipeline.play_level_fragments import build as build_play_level_fragments
 
 DATA_DIR = Path(__file__).resolve().parents[1] / "experimental" / "aeschylus"
 CORPUS_DATA_DIR = Path(os.environ.get(
-    "GRCNEWXML_DATA_DIR", "/Users/gcrane/github/grcnewxml/data"))
+    "GRCNEWFRAGMENTS_DATA_DIR",
+    os.environ.get("GRCNEWXML_DATA_DIR", "/Users/gcrane/github/grcnewfragments/data")))
 FRAGMENTS_PATH = CORPUS_DATA_DIR / "tlg0085"
 DINDORF_FRAGMENTS_PATH = CORPUS_DATA_DIR / "tlg0085"
 SOPHOCLES_FRAGMENTS_PATH = (Path(__file__).resolve().parents[1] / "experimental" /
@@ -56,6 +58,7 @@ SOPHOCLES_FRAGMENTS_PATH = (Path(__file__).resolve().parents[1] / "experimental"
 SOPHOCLES_DATA_PATH = CORPUS_DATA_DIR / "tlg0011"
 EURIPIDES_DATA_PATH = CORPUS_DATA_DIR / "tlg0006"
 ARISTOPHANES_DATA_PATH = CORPUS_DATA_DIR / "tlg0019"
+WORK_REGISTRY_PATH = Path(__file__).resolve().parents[1] / "work_registry.json"
 CLAUDEL_PATH = DATA_DIR / "claudel-passages.json"
 ALIGNMENT_FILES = (
     "claudel1896-agamemnon-alignment.json",
@@ -174,7 +177,7 @@ def _publish_fragment_corpus(site_root, catalog, source):
 
 def _publish_fragment_source(
     site_root, catalog, source_path, xml_builder=None, include_empty_works=False,
-    publish_corpus=True,
+    publish_corpus=True, write_browser_data=True,
 ):
     source_path = Path(source_path)
     source = ((xml_builder or build_aeschylus_fragments)(source_path)
@@ -273,11 +276,12 @@ def _publish_fragment_source(
                           "text_class": "greek-text"} for v in versions],
             "annotations": {},
         }
-    rendered = json.dumps(published, ensure_ascii=False, indent=2) + "\n"
-    (site_root / f"{textgroup}-fragment-collections.json").write_text(
-        rendered, encoding="utf-8")
-    if textgroup == "tlg0085":
-        (site_root / "fragment-collections.json").write_text(rendered, encoding="utf-8")
+    if write_browser_data:
+        rendered = json.dumps(published, ensure_ascii=False, indent=2) + "\n"
+        (site_root / f"{textgroup}-fragment-collections.json").write_text(
+            rendered, encoding="utf-8")
+        if textgroup == "tlg0085":
+            (site_root / "fragment-collections.json").write_text(rendered, encoding="utf-8")
     return len(works)
 
 
@@ -587,6 +591,143 @@ def _publish_aristophanes_fragments(site_root, catalog):
     )
 
 
+def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_label):
+    """Publish one registered Kock volume across its comic textgroups.
+
+    The ordinary corpus builder does not ingest ``fragment_editions``.  Kock is
+    therefore materialized here, after the special tragic-fragment publishers,
+    so that it can coexist with Dindorf for Aristophanes and with any other
+    edition already present in a work database.
+    """
+    by_textgroup = {}
+    for work_key, record in registry.items():
+        edition = record.get("fragment_editions", {}).get(short_id)
+        if edition:
+            by_textgroup.setdefault(record["textgroup"], []).append(work_key)
+    published = 0
+    for textgroup, expected_keys in sorted(by_textgroup.items()):
+        group_meta = CORPUS_DATA_DIR / textgroup / "__cts__.xml"
+        author = catalog.get("authors", {}).get(textgroup)
+        if not author and group_meta.exists():
+            tree = etree.parse(str(group_meta))
+            author = tree.xpath("string(//*[local-name()='groupname'][1])").strip()
+        author = author or textgroup
+        # Preserve the canonical author label even when this is an idempotent
+        # republish and every work database already exists. Previously the
+        # assignment lived only in the new-work branch, so a rebuilt catalog
+        # could fall back to bare identifiers such as ``tlg0252``.
+        catalog.setdefault("authors", {})[textgroup] = author
+        source = build_play_level_fragments(
+            CORPUS_DATA_DIR / textgroup, textgroup, short_id,
+            author, label, "Theodor Kock")
+        published_model = materialize_work_views(source)
+        model_by_work = {work["work"]: work
+                         for work in published_model["works"].values()}
+        existing_keys = {key for key in expected_keys
+                         if catalog.get("works", {}).get(key, {}).get("versions")}
+        new_work_ids = {key.split(".", 1)[1] for key in expected_keys
+                        if key not in existing_keys}
+        if new_work_ids:
+            raw_ids = {key for key, value in source["works"].items()
+                       if value["work"] in new_work_ids}
+            filtered = dict(source)
+            filtered["works"] = {key: value for key, value in source["works"].items()
+                                 if key in raw_ids}
+            filtered["fragments"] = [fragment for fragment in source["fragments"]
+                                     if fragment["play_work"] in new_work_ids]
+            filtered["attributions"] = [item for item in source["attributions"]
+                                        if item["id"].rsplit("-", 1)[-1] in new_work_ids]
+            scratch = {"works": {}, "authors": {}}
+            _publish_fragment_source(
+                site_root, scratch, CORPUS_DATA_DIR / textgroup,
+                xml_builder=lambda _, model=filtered: model,
+                publish_corpus=False, write_browser_data=False)
+            catalog.setdefault("works", {}).update(scratch["works"])
+            published += len(scratch["works"])
+        for work_key in sorted(existing_keys):
+            work_id = work_key.split(".", 1)[1]
+            work = model_by_work.get(work_id)
+            if not work or not work.get("fragments"):
+                continue
+            registered = registry[work_key]["fragment_editions"][short_id]
+            version = dict(work["versions"][0])
+            version["edition_urn"] = registered["urn"]
+            version["label"] = registered["label"]
+            _append_fragment_version(site_root, catalog, work_key, work,
+                                     version, source_label)
+            published += 1
+    return published
+
+
+def _publish_kock_fragments(site_root, catalog):
+    """Publish all registered Kock CAF work files.
+
+    The ordinary corpus builder does not ingest ``fragment_editions``. Each
+    volume is therefore materialized here so that independently numbered Kock
+    witnesses can coexist with one another and with other editions.
+    """
+    registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
+    volumes = (
+        ("kock1880-grc1", "Greek (Kock, 1880; OCR draft)",
+         "Kock vol. I sources and notes"),
+        ("kock1884-grc1", "Greek (Kock, 1884; OCR draft)",
+         "Kock vol. II sources and notes"),
+    )
+    return sum(
+        _publish_kock_edition(site_root, catalog, registry, *volume)
+        for volume in volumes
+    )
+
+
+def _append_fragment_version(site_root, catalog, work_key, work, version, source_label):
+    """Append one independently numbered fragment edition to an existing work."""
+    meta = catalog["works"][work_key]
+    textgroup, work_id = work_key.split(".", 1)
+    db_path = site_root / "data" / textgroup / work_id / meta["parts"][0]["file"]
+    conn = sqlite3.connect(db_path)
+    short_id = version["short_id"]
+    conn.execute("DELETE FROM text_segments WHERE version_short_id=?", (short_id,))
+    conn.execute("DELETE FROM edition_chapter_order WHERE version_short_id=?", (short_id,))
+    conn.execute("DELETE FROM text_units WHERE short_id=?", (short_id,))
+    conn.execute(
+        "INSERT INTO text_units (canonical_id, urn, label, text_class, textgroup, work, short_id, doc_type) VALUES (?,?,?,?,?,?,?,?)",
+        (_fragment_focus(textgroup, work_id, short_id), version["edition_urn"],
+         version["label"], "greek-text", textgroup, work_id, short_id, "edition"))
+    fragments = work.get("fragments", [])
+    card_urns = [_fragment_passage_urn(fragment, version["edition_urn"])
+                 for fragment in fragments]
+    for index, fragment in enumerate(fragments):
+        chapter = f"K{fragment['number']}"
+        card_urn = card_urns[index]
+        sort_order = conn.execute(
+            "SELECT COALESCE(MAX(sort_order), -1) + 1 FROM alignment_grid").fetchone()[0]
+        conn.execute("INSERT OR IGNORE INTO alignment_grid VALUES (?,?,?,?,?,?,?,?,?)",
+                     (card_urn, textgroup, work_id, None, chapter, "1",
+                      card_urns[index - 1] if index else None,
+                      card_urns[index + 1] if index + 1 < len(card_urns) else None,
+                      sort_order))
+        conn.execute("INSERT OR REPLACE INTO text_segments VALUES (?,?,?)",
+                     (card_urn, short_id,
+                      _fragment_html(work, fragment, source_label)))
+        conn.execute("INSERT INTO edition_chapter_order VALUES (?,?,?,?,?,?)",
+                     (textgroup, work_id, short_id, None, chapter, index))
+    conn.commit()
+    conn.execute("VACUUM")
+    conn.close()
+    meta["versions"] = [v for v in meta.get("versions", [])
+                        if v.get("short_id") != short_id]
+    meta["versions"].append({
+        "canonical_id": _fragment_focus(textgroup, work_id, short_id),
+        "short_id": short_id, "urn": version["edition_urn"],
+        "label": version["label"], "doc_type": "edition",
+        "text_class": "greek-text"})
+    chapters = meta["parts"][0].setdefault("chapters", [])
+    chapters.extend(chapter for chapter in (f"K{f['number']}" for f in fragments)
+                    if chapter not in chapters)
+    meta["parts"][0]["bytes"] = db_path.stat().st_size
+    meta["parts"][0]["sha256"] = hashlib.sha256(db_path.read_bytes()).hexdigest()
+
+
 def _publish_nauck_author_corpora(site_root, catalog):
     published = 0
     for spec in NAUCK_AUTHORS:
@@ -653,6 +794,7 @@ def publish(site_root=None):
     euripides_fragments = _publish_euripides_fragments(site_root, catalog)
     aristophanes_fragments = _publish_aristophanes_fragments(site_root, catalog)
     nauck_authors = _publish_nauck_author_corpora(site_root, catalog) + 1
+    kock_fragments = _publish_kock_fragments(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = (fragments + sophocles_fragments + euripides_fragments
@@ -660,7 +802,9 @@ def publish(site_root=None):
     print(f"  ✓ Published experimental collections: {total_fragments} fragment works "
           f"({sophocles_fragments} Sophocles, {euripides_fragments} Euripides, "
           f"{aristophanes_fragments} Aristophanes), "
+          f"{kock_fragments} Kock CAF I–II work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
-    return {"fragment_works": fragments, "fragment_authors": nauck_authors,
+    return {"fragment_works": fragments, "kock_works": kock_fragments,
+            "fragment_authors": nauck_authors,
             "claudel_versions": claudel}

@@ -5,7 +5,7 @@ from pipeline.aeschylus_fragment_concordance import (
 )
 
 
-SOURCE_DIR = Path("/Users/gcrane/github/grcnewxml/data/tlg0085")
+SOURCE_DIR = Path("/Users/gcrane/github/grcnewfragments/data/tlg0085")
 
 
 def test_dindorf_tei_has_stable_work_scoped_fragment_citations():

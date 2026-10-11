@@ -7,7 +7,7 @@ from lxml import etree
 from pipeline.nauck_corpus import AUTHORS, NS, load_source, publication_model
 
 
-DATA = Path("/Users/gcrane/github/grcnewxml/data")
+DATA = Path("/Users/gcrane/github/grcnewfragments/data")
 SOURCE = Path("/Users/gcrane/github/GRC_misc/nauck.tragfrag-2.xml")
 CORPUS = DATA / "nauck1889"
 REGISTRY = Path(__file__).parents[1] / "work_registry.json"

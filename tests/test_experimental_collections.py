@@ -30,7 +30,8 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
-    assert result == {"fragment_works": 75, "fragment_authors": 55,
+    assert result == {"fragment_works": 75, "kock_works": 1033,
+                      "fragment_authors": 55,
                       "claudel_versions": 3}
     assert len(fragments) == 75
     assert len(sophocles) == 118
@@ -72,6 +73,14 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
     assert rebuilt["works"]["tlg0303.aigyptioi"]["object_urn"] == (
         "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi"
     )
+    assert "kock1880-grc1" in {
+        version["short_id"]
+        for version in rebuilt["works"]["tlg0019.adelon_dramaton"]["versions"]
+    }
+    assert "kock1884-grc1" in {
+        version["short_id"]
+        for version in rebuilt["works"]["tlg0410.adelon_dramaton"]["versions"]
+    }
 
     assert "tlg0085.athamas" in fragments
     assert "tlg0085.frag_athamas" not in rebuilt["works"]
@@ -124,6 +133,46 @@ def test_fragmentary_plays_are_registered_as_stable_works():
     assert set(registry["tlg0011.aigeys"]["fragment_editions"]) == {
         "dindorf1893-grc1", "nauck1889grc1", "pearson1917-grc1"
     }
+
+
+def test_kock_republish_preserves_canonical_author_name(tmp_path, monkeypatch):
+    data = tmp_path / "data"
+    group = data / "tlg0252"
+    group.mkdir(parents=True)
+    (group / "__cts__.xml").write_text(
+        '<ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts" '
+        'urn="urn:cts:greekLit:tlg0252">'
+        '<ti:groupname xml:lang="eng">Hermippus</ti:groupname>'
+        '</ti:textgroup>',
+        encoding="utf-8",
+    )
+    monkeypatch.setattr(experimental_collections, "CORPUS_DATA_DIR", data)
+    monkeypatch.setattr(
+        experimental_collections, "build_play_level_fragments",
+        lambda *args, **kwargs: {"works": {}},
+    )
+    monkeypatch.setattr(
+        experimental_collections, "materialize_work_views",
+        lambda source: {"works": {}},
+    )
+    registry = {
+        "tlg0252.test": {
+            "textgroup": "tlg0252",
+            "fragment_editions": {"kock1880-grc1": {"urn": "urn:test"}},
+        }
+    }
+    catalog = {
+        "authors": {},
+        "works": {"tlg0252.test": {"versions": [{"short_id": "kock1880-grc1"}]}},
+    }
+
+    published = experimental_collections._publish_kock_edition(
+        tmp_path, catalog, registry, "kock1880-grc1",
+        "Greek (Kock, 1880; OCR draft)", "Kock vol. I sources and notes",
+    )
+
+    assert published == 0
+    assert catalog["authors"]["tlg0252"] == "Hermippus"
 
 
 def test_one_fragmentary_play_accepts_multiple_editorial_versions(tmp_path, monkeypatch):

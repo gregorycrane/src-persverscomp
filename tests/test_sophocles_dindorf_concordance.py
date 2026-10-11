@@ -7,7 +7,7 @@ from pipeline.sophocles_dindorf_concordance import build_dindorf
 
 
 SOURCE = Path(
-    "/Users/gcrane/github/grcnewxml/data/tlg0011/fragments/source/"
+    "/Users/gcrane/github/grcnewfragments/data/tlg0011/fragments/source/"
     "tlg0011.fragmenta.dindorf1893-grc1.xml"
 )
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
@@ -33,7 +33,9 @@ def test_registry_orders_dindorf_nauck_pearson_as_independent_editions():
     registry = json.loads(
         (Path(__file__).parents[1] / "work_registry.json").read_text(encoding="utf-8")
     )
-    for key in ("tlg0011.fragmenta", "tlg0011.aigeys", "tlg0011.aichmalotides"):
+    for key in ("tlg0011.aigeys", "tlg0011.aichmalotides"):
         editions = registry[key]["fragment_editions"]
         assert "dindorf1893-grc1" in editions
-        assert editions["dindorf1893-grc1"]["format"] == "tei_fragment_collection"
+        assert {edition["format"] for edition in editions.values()} == {
+            "tei_fragment_work"
+        }

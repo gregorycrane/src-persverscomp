@@ -106,12 +106,15 @@ window.PMVFragmentCollections = (() => {
     if(surviving)bits.push(`${surviving.toLocaleString()} surviving play${surviving===1?'':'s'}`);
     if((stats.editions||[]).length===1) {
       const edition=stats.editions[0], fragments=edition.fragment_count||0;
-      if(plays)bits.push(`${plays.toLocaleString()} play${plays===1?'':'s'}`);
-      bits.push(`${fragments.toLocaleString()} fragment${fragments===1?'':'s'}`);
-      bits.push(edition.edition);
+      if(plays)bits.push(`${plays.toLocaleString()} ${fragments?'play':'fragmentary work'}${plays===1?'':'s'}`);
+      if(fragments)bits.push(`${fragments.toLocaleString()} fragment${fragments===1?'':'s'}`);
+      bits.push(edition.collection_label||edition.edition);
     } else if(plays) {
       bits.push(`${plays.toLocaleString()} fragmentary work${plays===1?'':'s'}`);
-      (stats.editions||[]).forEach(edition=>bits.push(`${edition.edition} ${edition.fragment_count.toLocaleString()} fragments`));
+      (stats.editions||[]).forEach(edition=>{
+        const source=edition.collection_label||edition.edition, fragments=edition.fragment_count||0;
+        bits.push(fragments?`${source} ${fragments.toLocaleString()} fragments`:source);
+      });
     }
     return bits.join(' · ');
   }
@@ -172,7 +175,8 @@ window.PMVFragmentCollections = (() => {
     const rows=(toc.editions||[]).map(edition=>{
       const numbers=fragmentNumbers(edition.numbers||[]);
       const fragments=edition.fragment_count||0, words=edition.word_count||0;
-      return `<div class="fc-fragment-edition"><span><b>${escape(edition.edition)}</b>${numbers?' '+escape(numbers):''}</span><small>${fragments.toLocaleString()} fr · ${words.toLocaleString()} word${words===1?'':'s'}</small></div>`;
+      const source=edition.collection_label||edition.edition;
+      return `<div class="fc-fragment-edition"><span><b>${escape(source)}</b>${numbers?' '+escape(numbers):''}</span><small>${fragments?`${fragments.toLocaleString()} fr · ${words.toLocaleString()} word${words===1?'':'s'}`:'evidence only'}</small></div>`;
     }).join('');
     return rows
       ? `<div class="fc-fragment-editions" title="${escape(tocMetadata.counting_note||'')}">${rows}</div>`
@@ -289,7 +293,7 @@ window.PMVFragmentCollections = (() => {
     if (!enabled) return;
     const root=document.getElementById('splash-view-root');
     const banner=document.createElement('div'); banner.className='fc-experiment';
-    banner.innerHTML=`<span>Complete collection contents</span><span class="fc-experiment-actions"><label class="fc-theme-picker">Theme <select class="pmv-theme-select" aria-label="Viewer color theme"><option value="aegean">Aegean</option><option value="slate">Slate &amp; amber</option><option value="olive">Olive &amp; copper</option><option value="legacy">Legacy burgundy</option></select></label><a href="${escape(href({collections:'off'}))}">Use compact contents</a></span>`;
+    banner.innerHTML=`<span>Complete collection contents</span><span class="fc-experiment-actions"><label class="fc-theme-picker">Theme <select class="pmv-theme-select" aria-label="Viewer color theme"><option value="aegean">Aegean</option><option value="slate">Slate &amp; amber</option><option value="olive">Olive &amp; copper</option><option value="legacy">Legacy burgundy</option></select></label><a href="${escape(href({collections:'off'}))}">Turn off navigation</a></span>`;
     const collectionThemePicker=banner.querySelector('.pmv-theme-select');
     collectionThemePicker.value=document.documentElement.dataset.pmvTheme||'aegean';
     collectionThemePicker.addEventListener('change',()=>window.setPmvColorTheme(collectionThemePicker.value));

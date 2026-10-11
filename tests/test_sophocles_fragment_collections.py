@@ -3,7 +3,7 @@ from pathlib import Path
 
 from pipeline.sophocles_fragment_collections import build
 
-SOURCES = [Path('/Users/gcrane/github/grcnewxml/data/tlg0011/fragments/source') /
+SOURCES = [Path('/Users/gcrane/github/grcnewfragments/data/tlg0011/fragments/source') /
            f'sophocles.fragments.jebbetal1917v{i}-mul1.xml' for i in (1, 2, 3)]
 
 

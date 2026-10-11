@@ -33,13 +33,29 @@ COLLECTION_METADATA = {
     },
     "nauck": {
         "collection_year": 1889,
-        "collection_order": 2,
+        "collection_order": 3,
         "source_edition_year": 1889,
         "source_edition_statement": "1889 ed.",
     },
+    "kock1884": {
+        "collection_year": 1880,
+        "collection_order": 2,
+        "source_edition_year": 1884,
+        "source_edition_statement": "vol. 2, 1884",
+        "collection_label": "Kock, vol. 2",
+        "collection_volume": 2,
+    },
+    "kock": {
+        "collection_year": 1880,
+        "collection_order": 2,
+        "source_edition_year": 1880,
+        "source_edition_statement": "vol. 1, 1880",
+        "collection_label": "Kock, vol. 1",
+        "collection_volume": 1,
+    },
     "pearson": {
         "collection_year": 1917,
-        "collection_order": 3,
+        "collection_order": 4,
         "source_edition_year": 1917,
         "source_edition_statement": "1917 ed.",
     },
@@ -100,6 +116,30 @@ class VisibleText(HTMLParser):
         return " ".join(self.line_text or self.all_text)
 
 
+class FragmentVerseText(HTMLParser):
+    """Extract only quoted authorial lines from a fragment card."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.line_depth = 0
+        self.text_parts: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() == "l":
+            self.line_depth += 1
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.lower() == "l" and self.line_depth:
+            self.line_depth -= 1
+
+    def handle_data(self, data: str) -> None:
+        if self.line_depth:
+            self.text_parts.append(data)
+
+    def text(self) -> str:
+        return " ".join(self.text_parts)
+
+
 def count_words(text: str) -> int:
     return len(WORD_RE.findall(text))
 
@@ -110,11 +150,18 @@ def count_html(html: str) -> int:
     return count_words(parser.text())
 
 
+def count_fragment_html(html: str) -> int:
+    parser = FragmentVerseText()
+    parser.feed(html)
+    return count_words(parser.text())
+
+
 def edition_name(short_id: str, label: str = "") -> str:
     known = {
         "dindorf": "Dindorf",
         "nauck": "Nauck",
         "pearson": "Pearson",
+        "kock": "Kock",
         "jebb": "Jebb",
     }
     lowered = short_id.lower()
@@ -298,12 +345,146 @@ def complete_work_metadata(site: Path, catalog: dict) -> tuple[dict, dict]:
     return works, surviving_by_author
 
 
+def _catalog_fragment_version(site: Path, work: dict, version: dict) -> dict:
+    """Count one fragment edition from its published work databases."""
+    short_id = version.get("short_id", "")
+    numbers: list[str] = []
+    fragment_count = 0
+    word_count = 0
+    for part in work.get("parts", []):
+        db_path = site / "data" / work["textgroup"] / work["work"] / part["file"]
+        if not db_path.exists():
+            continue
+        connection = sqlite3.connect(f"file:{db_path}?mode=ro", uri=True)
+        try:
+            if not has_table(connection, "text_segments"):
+                continue
+            rows = connection.execute(
+                "SELECT content_html FROM text_segments WHERE version_short_id=?",
+                (short_id,),
+            ).fetchall()
+            fragment_count += len(rows)
+            word_count += sum(count_fragment_html(row[0]) for row in rows)
+            if has_table(connection, "edition_chapter_order"):
+                chapter_rows = connection.execute(
+                    "SELECT chapter FROM edition_chapter_order "
+                    "WHERE version_short_id=? ORDER BY local_sort_index",
+                    (short_id,),
+                ).fetchall()
+                numbers.extend(str(row[0]) for row in chapter_rows if row[0] is not None)
+        finally:
+            connection.close()
+    # Shared alignment cards carry an edition prefix (D, N, P, K). The
+    # collection name already identifies the edition, so expose native-looking
+    # fragment numbers in the TOC.
+    prefix = edition_name(short_id, version.get("label", ""))[:1].upper()
+    normalized_numbers = [
+        number[1:] if prefix and number.startswith(prefix) and number[1:] else number
+        for number in numbers
+    ]
+    row = {
+        "short_id": short_id,
+        "edition": edition_name(short_id, version.get("label", "")),
+        "numbers": normalized_numbers,
+        "fragment_count": fragment_count,
+        "word_count": word_count,
+    }
+    row.update(collection_metadata(short_id))
+    return row
+
+
+def merge_catalog_fragments(
+    site: Path, catalog: dict, works: dict, authors: dict
+) -> tuple[dict, dict]:
+    """Add registry-published fragment editions, including Kock, to the TOC."""
+    fragment_keys: list[str] = []
+    for work_key, work in catalog.get("works", {}).items():
+        if not (work.get("fragmentary") or work.get("experimental_fragment")):
+            continue
+        versions = [
+            version for version in work.get("versions", [])
+            if version.get("doc_type") == "edition"
+        ]
+        if not versions:
+            continue
+        fragment_keys.append(work_key)
+        current = works.setdefault(
+            work_key,
+            {"record_type": "fragmentary_play", "editions": [], "evidence_only": False},
+        )
+        known = {row.get("short_id") for row in current.get("editions", [])}
+        for version in versions:
+            if version.get("short_id") in known:
+                continue
+            row = _catalog_fragment_version(site, work, version)
+            # A zero-fragment row is still bibliographically significant: it
+            # records the printed collection in which a title or attribution
+            # is attested, even when that edition quotes no authorial text.
+            current.setdefault("editions", []).append(row)
+            known.add(row["short_id"])
+
+    # Recompute author summaries from the merged work rows so an author drawn
+    # from two or more collections reports every witness exactly once.
+    grouped: dict[str, list[tuple[str, dict]]] = {}
+    for work_key in fragment_keys:
+        textgroup = work_key.split(".", 1)[0]
+        grouped.setdefault(textgroup, []).append((work_key, works[work_key]))
+    for textgroup, rows in grouped.items():
+        edition_totals: dict[tuple, dict] = {}
+        for _, metadata in rows:
+            for edition in metadata.get("editions", []):
+                short_id = edition.get("short_id", "")
+                # Registry versions sometimes spell the same identifier with
+                # and without a separator (for example nauck1889-grc1 and
+                # nauck1889grc1).  The author summary reports collections,
+                # not internal version IDs, so consolidate bibliographically.
+                collection_key = (
+                    edition.get("collection_label") or edition.get("edition", short_id),
+                    edition.get("collection_volume"),
+                    edition.get("collection_year"),
+                )
+                summary = edition_totals.setdefault(
+                    collection_key,
+                    {
+                        "short_id": short_id,
+                        "edition": edition.get("edition", short_id),
+                        "fragment_count": 0,
+                        "word_count": 0,
+                    },
+                )
+                summary.update(collection_metadata(short_id))
+                summary["fragment_count"] += edition.get("fragment_count", 0)
+                summary["word_count"] += edition.get("word_count", 0)
+        previous = authors.get(textgroup, {})
+        authors[textgroup] = {
+            "author": catalog.get("authors", {}).get(
+                textgroup, previous.get("author", textgroup)
+            ),
+            "fragmentary_play_count": len(rows),
+            "evidence_only_play_count": sum(
+                bool(metadata.get("evidence_only")) for _, metadata in rows
+            ),
+            "editions": sorted(
+                edition_totals.values(),
+                key=lambda row: (
+                    row.get("collection_order", 999), row.get("edition", "")
+                ),
+            ),
+            **({"surviving_play_count": previous["surviving_play_count"]}
+               if "surviving_play_count" in previous else {}),
+        }
+    return works, authors
+
+
 def build(site: Path, output: Optional[Path] = None) -> dict:
     """Build TOC metadata for an already-published PMV site."""
     site = site.resolve()
     output = output or site / "toc-metadata.json"
     catalog = json.loads((site / "catalog.json").read_text(encoding="utf-8"))
     fragment_works, authors = fragment_metadata(site)
+    fragment_works, authors = merge_catalog_fragments(
+        site, catalog, fragment_works, authors
+    )
     complete_works, surviving = complete_work_metadata(site, catalog)
     for textgroup, count in surviving.items():
         authors.setdefault(

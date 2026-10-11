@@ -11,7 +11,7 @@ from lxml import etree
 
 REPO = Path(__file__).resolve().parents[1]
 REGISTRY = REPO / "work_registry.json"
-DATA = Path("/Users/gcrane/github/grcnewxml/data")
+DATA = Path("/Users/gcrane/github/grcnewfragments/data")
 TEXTGROUPS = ("tlg0011", "tlg0006", "tlg0019")
 CTS_NS = {"ti": "http://chs.harvard.edu/xmlns/cts"}
 TEI_NS = {"tei": "http://www.tei-c.org/ns/1.0"}
