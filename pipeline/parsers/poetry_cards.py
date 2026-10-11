@@ -1,6 +1,7 @@
 """doc_type: poetry_cards. Relocated from Cell 4."""
 import os
 import re
+from html import escape
 from collections import OrderedDict
 from pipeline.core.xml_utils import (
     NS, safe_parse, find_text_root, extract_text_recursive,
@@ -283,6 +284,38 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                 if n_val and (current_book, n_val) in card_n_to_label:
                     cur_label = card_n_to_label[(current_book, n_val)]
 
+            # Prose translations of drama (Buckley 1849, for example) use
+            # TEI <sp> turns but no <l> elements.  Treating <sp>/<speaker> as
+            # transparent containers flattened the speaker into the running
+            # paragraph: "...herd. CHORUS Royal Apollo...".  Preserve the
+            # turn as an explicit block and expose the source line/range from
+            # @corresp.  Do not use .line-num-cell here: that class denotes a
+            # verse grid and would make the runtime misclassify the prose as
+            # individually lineated poetry.
+            speaker = next((ch for ch in elem if _tag(ch) == "speaker"), None)
+            if speaker is not None:
+                speaker_text = " ".join("".join(speaker.itertext()).split())
+                corresp_values = (elem.get("corresp") or "").split()
+                corresp = corresp_values[0] if corresp_values else ""
+                line_label = corresp.rsplit(":", 1)[-1].replace("-", "–") if corresp else ""
+                line_html = (
+                    f'<span class="speech-line-range">{escape(line_label)}</span>'
+                    if line_label else ""
+                )
+                _add_content(
+                    current_book,
+                    cur_label or (master_intervals.get(current_book) or [{}])[0].get("label", "1"),
+                    '<div class="speaker-attr pmv-speech-heading">'
+                    f'{line_html}<span class="speech-speaker-name">{escape(speaker_text)}</span>'
+                    '</div>',
+                )
+            for child in elem:
+                if _tag(child) != "speaker":
+                    _walk(child)
+            if elem.tail:
+                _add_content(current_book, cur_label, elem.tail)
+            return
+
         # Some editions (e.g. Evelyn-White's 1914 Theogony translation) embed
         # the card milestone AS THE FIRST CHILD of <l> rather than as a
         # preceding sibling (contrast the Greek baseline, which always puts
@@ -411,8 +444,22 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
                 if elem.tail:
                     _add_content(current_book, label, elem.tail)
                 return
-            t = extract_text_recursive(elem, strip_paragraphs=True).strip()
+            t = extract_text_recursive(
+                elem, strip_paragraphs=True, footnote_lookup=footnote_lookup).strip()
             if t: _add_content(current_book, label, f"<p>{t}</p>")
+            if elem.tail:
+                _add_content(current_book, cur_label, elem.tail)
+            return
+        elif tag == "ref":
+            # A prose paragraph containing card milestones is streamed child
+            # by child so that its text can be divided between cards.  Render
+            # references semantically during that walk; flattening them to
+            # elem.text preserved only the visible numeral and discarded the
+            # linked Buckley/Potter note payload.
+            rendered = extract_text_recursive(
+                elem, strip_paragraphs=True, footnote_lookup=footnote_lookup).strip()
+            if rendered:
+                _add_content(current_book, label, rendered)
             if elem.tail:
                 _add_content(current_book, cur_label, elem.tail)
             return

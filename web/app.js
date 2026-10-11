@@ -4809,18 +4809,24 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                 // Several legacy poetry ingests preserve <speaker> content
                 // as a bare text node between the numbered-line divs. Bare
                 // nodes cannot be styled and therefore looked like another
-                // line of verse. Promote every non-whitespace direct text
-                // node to the same semantic speaker handle used by newer
-                // TEI conversions.
-                Array.from(wrapper.childNodes).forEach(node => {
-                    if (node.nodeType !== 3 || !node.textContent.trim()) return;
-                    const speaker = document.createElement("span");
-                    speaker.className = "speaker-attr";
-                    speaker.textContent = node.textContent.trim();
-                    node.replaceWith(speaker);
-                });
+                // line of verse. This repair only applies when the rendered
+                // card actually contains numbered poetry lines. Prose
+                // translations of dramatic works (notably Buckley 1849)
+                // are also classified under a poetic work, but their whole
+                // card may be one bare text node; promoting that node made
+                // the entire translation look like a small-caps speaker.
+                const hasPoetryLineCells = Boolean(wrapper.querySelector('.line-num-cell'));
+                if (hasPoetryLineCells) {
+                    Array.from(wrapper.childNodes).forEach(node => {
+                        if (node.nodeType !== 3 || !node.textContent.trim()) return;
+                        const speaker = document.createElement("span");
+                        speaker.className = "speaker-attr";
+                        speaker.textContent = node.textContent.trim();
+                        node.replaceWith(speaker);
+                    });
+                }
                 bindAlignmentTokenEvents(wrapper);
-                if (!wrapper.querySelector('.line-num-cell')) {
+                if (!hasPoetryLineCells) {
                     wrapper.classList.remove('poetry-grid-layout');
                 }
                 // Line-level highlight for a requested raw-line range (see

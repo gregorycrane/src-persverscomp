@@ -70,7 +70,9 @@ def leading_card_milestone_after_speaker(elem):
     before it encounters the milestone.  Only recognize the tightly scoped
     leading pattern: the milestone must be a direct child of ``sp`` and must
     immediately follow its ``speaker`` (apart from non-textual page/line-break
-    markers).  A milestone after authored speech content is a real mid-speech
+    markers).  It may also be the first meaningful child of the paragraph
+    immediately following ``speaker`` (Buckley's dramatic prose uses that
+    shape).  A milestone after authored speech content is a real mid-speech
     boundary and must not be pulled forward.
     """
     if elem.tag.split("}")[-1] != "sp":
@@ -89,6 +91,14 @@ def leading_card_milestone_after_speaker(elem):
 
         if tag == "milestone" and child.get("unit") == "card":
             return child
+        if tag == "p" and not (child.text or "").strip():
+            for grandchild in child:
+                grandtag = grandchild.tag.split("}")[-1]
+                if grandtag == "milestone" and grandchild.get("unit") == "card":
+                    return grandchild
+                if grandtag in ("pb", "lb") and not (grandchild.tail or "").strip():
+                    continue
+                break
         if tag in ("pb", "lb"):
             continue
         return None

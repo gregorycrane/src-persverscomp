@@ -553,6 +553,28 @@
             letter-spacing: 0.045em;
             line-height: 1.25;
         }
+        /* TEI prose-drama turns: keep the citation and speaker together as
+           an unmistakable block even inside the viewer's inline prose mode. */
+        .pmv-speech-heading,
+        .prose-body-inline .pmv-speech-heading {
+            display: flex !important;
+            align-items: baseline;
+            gap: 0.65em;
+            width: fit-content;
+            margin: 12px 0 5px !important;
+            padding: 2px 8px 3px !important;
+        }
+        .speech-line-range {
+            min-width: 3.5em;
+            color: #6f6a61;
+            font-family: monospace;
+            font-size: 0.72em;
+            font-variant: normal;
+            font-weight: 700;
+            letter-spacing: 0;
+            text-align: right;
+        }
+        .speech-speaker-name { white-space: nowrap; }
         .poetry-grid-layout .speaker-attr {
             grid-column: 1 / span 2;
             display: block !important;
