@@ -412,6 +412,15 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
 
 
         if tag == "pb":
+            # In prose, a page break marks the exact point where printed
+            # footnote numbering restarts. Emit every prose <pb> in place so
+            # PAGE.NOTE labels (187.3 -> [p. 188] -> 188.1) remain intelligible,
+            # including breaks serialized between speech blocks rather than
+            # inside a paragraph. Verse-page breaks retain the delayed behavior
+            # below, which keeps them with the following numbered line.
+            if not lines:
+                _add_content(current_book, label, render_page_break(elem))
+                return
             # A physical page boundary commonly precedes running headers and
             # a new card milestone. Delay its visible marker until the next
             # verse so it lands in that verse's card and below the viewer's

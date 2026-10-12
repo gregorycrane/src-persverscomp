@@ -55,7 +55,43 @@ def test_card_milestone_prose_keeps_linked_buckley_note_payload(tmp_path):
     html = cards[None]["34"]["1"]
     assert 'class="tei-ref tei-note-ref"' in html
     assert 'data-note="The shrine was wreathed with garlands."' in html
-    assert '>3</span>' in html
+    assert 'data-note-label="180.3"' in html
+    assert '>180.3</span>' in html
+
+
+def test_buckley_page_break_explains_page_note_number_reset(tmp_path):
+    source = tmp_path / "buckley-page-notes.xml"
+    source.write_text(
+        '''<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+        <div type="translation"><sp corresp="urn:cts:x:254-275"><speaker>CHORUS</speaker><p>
+          <milestone unit="card" n="254"/>deed<ref n="187.3" target="#n187.3">3</ref>.
+          <pb n="188"/>Blood<ref n="188.1" target="#n188.1">1</ref>.
+        </p></sp></div></body><back><div type="notes">
+          <note xml:id="n187.3">Last note on page 187.</note>
+          <note xml:id="n188.1">First note on page 188.</note>
+        </div></back></text></TEI>''', encoding="utf-8")
+    cards = parse_poetry_cards_tei(
+        str(source), {None: [{"card_n": "254", "label": "254-275", "start_line": 254, "end_line": 275}]})
+    html = cards[None]["254-275"]["1"]
+    assert '>187.3</span>' in html
+    assert 'class="tei-page-break" data-page="188"' in html
+    assert '[p. 188]' in html
+    assert '>188.1</span>' in html
+    assert html.index('>187.3</span>') < html.index('[p. 188]') < html.index('>188.1</span>')
+
+
+def test_buckley_page_break_survives_atomic_prose_paragraph(tmp_path):
+    source = tmp_path / "buckley-atomic-page.xml"
+    source.write_text(
+        '''<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+        <div type="translation"><sp corresp="urn:cts:x:1"><speaker>WATCHMAN</speaker>
+          <p>End of one page.<pb n="42"/>Start of the next.</p>
+        </sp></div></body></text></TEI>''', encoding="utf-8")
+    cards = parse_poetry_cards_tei(
+        str(source), {None: [{"card_n": "1", "label": "1", "start_line": 1, "end_line": 1}]})
+    html = cards[None]["1"]["1"]
+    assert 'class="tei-page-break" data-page="42"' in html
+    assert html.index('End of one page.') < html.index('[p. 42]') < html.index('Start of the next.')
 
 
 def test_buckley_prose_preserves_numbered_speaker_turns_as_blocks(tmp_path):

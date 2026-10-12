@@ -241,6 +241,7 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
     # grid that depends on them.)
     parts = []
     link_ref = False
+    ref_visible_label = None
     tag = element_tag
     inline_translation = (
         elem.get('type') == 'translation'
@@ -375,6 +376,11 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
             parts.append(f'<a class="tei-facsimile" href="{_attr(src)}" target="_blank" rel="noopener noreferrer">'
                          f'<img src="{_attr(src)}" alt="{_attr(label)}" loading="lazy" '
                          'style="max-width:100%;max-height:26rem;height:auto;object-fit:contain;display:block"/></a>')
+    elif tag == 'pb':
+        # Preserve printed pagination even when a prose paragraph is rendered
+        # atomically rather than streamed by the card parser. This makes
+        # per-page footnote resets visible at their actual textual boundary.
+        parts.append(render_page_break(elem))
     elif tag == 'ref':
         target = (elem.get('target') or '').strip()
         ref_type = (elem.get('type') or '').strip()
@@ -387,7 +393,15 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
         if target: attrs.append(f'data-cref="{_attr(target)}"')
         if ref_type: attrs.append(f'data-ref-type="{_attr(ref_type)}"')
         if note_text:
-            number = ''.join(elem.itertext()).strip() or (note.get('n') or '').strip()
+            # Historical printed notes commonly restart at 1 on every page.
+            # When the TEI supplies the stable PAGE.NOTE identifier in @n
+            # (Buckley: 187.3, 188.1, ...), use it both visibly and in the
+            # accessible label. The bare element text remains the fallback
+            # for editions whose notes are numbered continuously.
+            number = ((elem.get('n') or '').strip()
+                      or ''.join(elem.itertext()).strip()
+                      or (note.get('n') or '').strip())
+            ref_visible_label = number
             attrs.extend([
                 f'data-note="{_attr(note_text)}"',
                 f'data-note-label="{_attr(number)}"',
@@ -441,8 +455,8 @@ def extract_text_recursive(elem, strip_paragraphs=False, lineno_sigil=None,
         if ana: attrs.append(f'data-ana="{_attr(ana)}"')
         if elem.get('n'): attrs.append(f'data-cue="{_attr(elem.get("n"))}"')
         parts.append(f'<span {" ".join(attrs)}>')
-    if elem.text: 
-        parts.append(elem.text)
+    if elem.text:
+        parts.append(ref_visible_label if ref_visible_label is not None else elem.text)
         
     for child in elem:
         child_tag = child.tag.split('}')[-1]
