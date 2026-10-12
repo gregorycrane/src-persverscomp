@@ -17,6 +17,7 @@ PLACE_REFERENCE_WORKS = {
     "agamemnon":  ("tlg0085", "tlg005"),
     "nonnus":  ("tlg2045", "tlg001"),
     "pausanias": ("tlg0525", "tlg001"),
+    "skz":       ("skz", "inscription"),
 }
 
 def _citation_to_card_chapter(citation, book_intervals, has_books):
@@ -84,7 +85,12 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
             place_name TEXT,
             lat REAL,
             lon REAL,
-            feature_type TEXT
+            feature_type TEXT,
+            certainty TEXT,
+            coord_source TEXT,
+            coord_precision TEXT,
+            place_note TEXT,
+            resolution_note TEXT
         )
     """)
     existing_columns = {
@@ -92,6 +98,19 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
     }
     if "section" not in existing_columns:
         conn.execute("ALTER TABLE place_references ADD COLUMN section TEXT")
+    optional_columns = {
+        "certainty": "TEXT",
+        "coord_source": "TEXT",
+        "coord_precision": "TEXT",
+        "place_note": "TEXT",
+        "resolution_note": "TEXT",
+    }
+    existing_columns = {
+        row[1] for row in conn.execute("PRAGMA table_info(place_references)")
+    }
+    for name, sql_type in optional_columns.items():
+        if name not in existing_columns:
+            conn.execute(f"ALTER TABLE place_references ADD COLUMN {name} {sql_type}")
 
     # Idempotent re-run: clear any previously-loaded rows for the selected
     # works before inserting, so running this cell twice doesn't duplicate
@@ -150,14 +169,19 @@ def ingest_place_references(conn, labels=None, work_has_books=None):
                     tg, wk, book_val, chapter, section,
                     row["mention_type"], row["mention_name"],
                     row["place_id"], row["place_name"], lat, lon,
-                    row["feature_type"],
+                    row["feature_type"], row.get("certainty") or None,
+                    row.get("coord_source") or None,
+                    row.get("coord_precision") or None,
+                    row.get("place_note") or None,
+                    row.get("resolution_note") or None,
                 ))
 
         conn.executemany(
             "INSERT INTO place_references "
             "(textgroup, work, book, chapter, section, mention_type, mention_name, "
-            " place_id, place_name, lat, lon, feature_type) "
-            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            " place_id, place_name, lat, lon, feature_type, certainty, coord_source, "
+            " coord_precision, place_note, resolution_note) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
             rows_for_work,
         )
         conn.commit()

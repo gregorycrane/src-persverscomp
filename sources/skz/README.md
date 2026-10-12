@@ -14,8 +14,9 @@ python3 tools/skz/build_pmv_sources.py
 make work=skz.inscription
 ```
 
-The converter writes four line-aligned TEI witnesses, two PMV token-alignment
-files (Greek–Parthian and Greek–Middle Persian), and
+The converter writes a HookTest-ready CTS package under `generated/data/`,
+including four line-aligned TEI witnesses, two PMV token-alignment files
+(Greek–Parthian and Greek–Middle Persian), and
 `lodcache/citations_skz.csv` for PMV's map. The Parthian transliteration is a
 fourth reading column; the upstream word-pair table aligns the Greek text to
 the Parthian and Middle Persian transcriptions.

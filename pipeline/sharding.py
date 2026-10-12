@@ -194,6 +194,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "ferdowsi": "Ferdowsi",
         "heike": "Heike Monogatari",
         "anon": "Beowulf Poet",
+        "skz": "Šābuhr I",
 
         "tlg0001": "Apollonius of Rhodes",
         "tlg0003": "Thucydides",
@@ -229,6 +230,7 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "boeckh1858.orationes": "Orationes",
         "ferdowsi.shahnameh": "Shahnameh",
         "heike.tokyo1933": "The Tale of the Heike",
+        "skz.inscription": "Trilingual inscription at the Kaʿba-ye Zartošt (ŠKZ)",
 
         "tlg0001.tlg001": "Argonautica",
         "tlg0003.tlg001": "History",

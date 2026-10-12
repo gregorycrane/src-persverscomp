@@ -929,8 +929,9 @@ function metricalForChapter(db, version, chapter) {
         "SELECT line_ref, line_json FROM metrical_lines WHERE version_short_id=? AND chapter=?",
         [version, chapter]);
 }
-// Places attested in a given chapter, sourced from ToposText's place-mention
-// index (see the place_references ingestion cell). Unlike treebank/metrical
+// Places attested in a given chapter, sourced from the work's place-mention
+// index (ToposText for the original pilots, project data for works such as
+// ŠKZ). Unlike treebank/metrical
 // data, this isn't per-edition -- a work has one place index regardless of
 // which translation/edition column is showing -- so there's no version_id
 // filter. `book` is optional (pass it whenever the reader has one selected,
@@ -947,16 +948,23 @@ function placeReferencesHaveSection(db) {
     return queryAll(db, "PRAGMA table_info(place_references)")
         .some(row => row.name === "section");
 }
+function placeReferenceProjection(db) {
+    const available = new Set(queryAll(db, "PRAGMA table_info(place_references)").map(row => row.name));
+    const required = ["mention_type", "mention_name", "place_id", "place_name", "lat", "lon", "feature_type", "chapter", "book"];
+    const optional = ["section", "certainty", "coord_source", "coord_precision", "place_note", "resolution_note"];
+    return required.concat(optional.map(name => available.has(name) ? name : `NULL AS ${name}`)).join(", ");
+}
 function placesForChapter(db, chapter, book, section = null) {
+    const projection = placeReferenceProjection(db);
     if (placeReferencesHaveSection(db)) {
         return queryAll(db,
-            "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, section " +
+            `SELECT ${projection} ` +
             "FROM place_references WHERE chapter=? AND (? IS NULL OR book IS NULL OR book=?) " +
             "AND (? IS NULL OR section IS NULL OR section=?)",
             [chapter, book || null, book || null, section, section]);
     }
     return queryAll(db,
-        "SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, NULL AS section " +
+        `SELECT ${projection} ` +
         "FROM place_references WHERE chapter=? AND (? IS NULL OR book IS NULL OR book=?)",
         [chapter, book || null, book || null]);
 }
@@ -970,9 +978,9 @@ function placesForChapter(db, chapter, book, section = null) {
 // bare card-label chapter (e.g. "1-21") never contains a "." so it can
 // never spuriously match the prose-style prefix check either.
 function placesForBook(db, book) {
-    const sectionExpr = placeReferencesHaveSection(db) ? "section" : "NULL AS section";
+    const projection = placeReferenceProjection(db);
     return queryAll(db,
-        `SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, ${sectionExpr} ` +
+        `SELECT ${projection} ` +
         "FROM place_references WHERE book=? OR chapter=? OR chapter LIKE ?",
         [book, book, `${book}.%`]);
 }
@@ -980,9 +988,9 @@ function placesForBook(db, book) {
 // Agamemnon) where there's no book to scope to -- the natural "show
 // everything" equivalent of placesForBook for a flat-structured text.
 function placesForWork(db) {
-    const sectionExpr = placeReferencesHaveSection(db) ? "section" : "NULL AS section";
+    const projection = placeReferenceProjection(db);
     return queryAll(db,
-        `SELECT mention_type, mention_name, place_id, place_name, lat, lon, feature_type, chapter, book, ${sectionExpr} ` +
+        `SELECT ${projection} ` +
         "FROM place_references");
 }
 // The next (book, chapter) passage after the given one, in true global

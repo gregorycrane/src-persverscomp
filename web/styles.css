@@ -86,6 +86,16 @@
         }
 
         .persian-text { font-size: 16px; line-height: 1.9; font-family: "Noto Naskh Arabic", "Scheherazade New", Tahoma, serif; direction: rtl; text-align: right; color: #000; }
+        .parthian-transliteration-text,
+        .parthian-transcription-text,
+        .middle-persian-transcription-text {
+            font-size: 17px;
+            line-height: 1.8;
+            font-family: "Noto Serif", "Gentium Plus", Georgia, serif;
+            direction: ltr;
+            text-align: left;
+            color: #000;
+        }
 
         .diff-active .diff-token-del,
         .diff-active .diff-token-ins {

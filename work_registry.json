@@ -1,4 +1,59 @@
 {
+  "skz.inscription": {
+    "textgroup": "skz",
+    "work": "inscription",
+    "title": "Trilingual inscription at the Kaʿba-ye Zartošt (ŠKZ)",
+    "editions": {
+      "canaliderossi2004-grc1": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/skz.inscription.canaliderossi2004-grc1.xml",
+        "label": "Greek (Canali De Rossi, 2004; PHI digital text)",
+        "class": "greek-text",
+        "parse_mode": "section_sentences"
+      },
+      "huyse1999-xpr1": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/skz.inscription.huyse1999-xpr1.xml",
+        "label": "Parthian transliteration (Huyse, 1999; via Parthian Sources)",
+        "class": "parthian-transliteration-text",
+        "parse_mode": "section_sentences"
+      },
+      "huyse1999-xpr2": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/skz.inscription.huyse1999-xpr2.xml",
+        "label": "Parthian transcription (Huyse, 1999; via Parthian Sources)",
+        "class": "parthian-transcription-text",
+        "parse_mode": "section_sentences"
+      },
+      "huyse1999-pal1": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/skz.inscription.huyse1999-pal1.xml",
+        "label": "Middle Persian transcription (Huyse, 1999; Shamsian)",
+        "class": "middle-persian-transcription-text",
+        "parse_mode": "section_sentences"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "alignments": {
+      "canaliderossi2004-grc1__huyse1999-xpr2": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/canaliderossi2004-grc1__huyse1999-xpr2.json",
+        "label": "Greek to Parthian transcription (Shamsian/Ugarit)",
+        "src_version": "canaliderossi2004-grc1",
+        "tgt_version": "huyse1999-xpr2"
+      },
+      "canaliderossi2004-grc1__huyse1999-pal1": {
+        "path": "/Users/gcrane/github/src-persverscomp/sources/skz/generated/data/skz/inscription/canaliderossi2004-grc1__huyse1999-pal1.json",
+        "label": "Greek to Middle Persian transcription (Shamsian/Ugarit)",
+        "src_version": "canaliderossi2004-grc1",
+        "tgt_version": "huyse1999-pal1"
+      }
+    },
+    "strict_section_alignment": true,
+    "unit_labels": {
+      "book": "Inscription",
+      "chapter": "Line",
+      "section": "Segment"
+    }
+  },
   "tlg0059.tlg003": {
     "textgroup": "tlg0059",
     "work": "tlg003",

@@ -21,6 +21,7 @@ TEXTGROUP_NAMESPACE = {
     "anon": "angLit",
     "ferdowsi": "persLit", "boeckh": "latinLit",
     "heike": "japaneseLit", "ariosto": "itaLit",
+    "skz": "iranianLit",
 }
 
 def init_storage_engine(db_path):

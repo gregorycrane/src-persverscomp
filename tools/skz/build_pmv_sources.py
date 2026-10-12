@@ -21,6 +21,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 UPSTREAM = ROOT / "sources" / "skz" / "upstream"
 GENERATED = ROOT / "sources" / "skz" / "generated"
+CTS_TEXTGROUP_DIR = GENERATED / "data" / "skz"
+CTS_WORK_DIR = CTS_TEXTGROUP_DIR / "inscription"
 PLACE_CSV = ROOT / "lodcache" / "citations_skz.csv"
 
 WORK_KEY = "skz.inscription"
@@ -73,7 +75,8 @@ def _sentence_rows() -> list[dict[str, str]]:
     for row in rows:
         # Preserve the upstream spellings while hiding its two header typos
         # behind stable internal names.
-        row["Parthian transcription"] = row.pop("Parthian transčription")
+        if "Parthian transčription" in row:
+            row["Parthian transcription"] = row.pop("Parthian transčription")
         row["Middle Persian transcription"] = row.pop("Middle Persian transčription")
         match = re.fullmatch(r"ŠKZ Line\s+(\d+)", row["Gr. ŠKZ Lines"])
         if not match:
@@ -82,6 +85,20 @@ def _sentence_rows() -> list[dict[str, str]]:
     if len(rows) != 51:
         raise ValueError(f"Expected 51 SKZ lines, found {len(rows)}")
     return rows
+
+
+def _indent(element: ET.Element, level: int = 0) -> None:
+    """Backport ElementTree.indent for the Python 3.8 build environment."""
+    whitespace = "\n" + level * "  "
+    child_whitespace = "\n" + (level + 1) * "  "
+    if len(element):
+        if not element.text or not element.text.strip():
+            element.text = child_whitespace
+        for child in element:
+            _indent(child, level + 1)
+            if not child.tail or not child.tail.strip():
+                child.tail = child_whitespace
+        element[-1].tail = whitespace
 
 
 def _tei(version: str, cfg: dict[str, str], rows: list[dict[str, str]]) -> ET.ElementTree:
@@ -114,22 +131,41 @@ def _tei(version: str, cfg: dict[str, str], rows: list[dict[str, str]]) -> ET.El
     ref.text = SOURCE_URL
 
     encoding = ET.SubElement(header, q("encodingDesc"))
-    refs_decl = ET.SubElement(encoding, q("refsDecl"), {f"{{{XML_NS}}}id": "CTS"})
-    outer = ET.SubElement(refs_decl, q("citeStructure"), {
-        "match": "/TEI/text/body", "use": "@xml:base",
+    # HookTest/CapiTainS currently consumes the CTS cRefPattern form rather
+    # than TEI's newer citeStructure vocabulary.  Keep the most-specific
+    # level first, as CTS expects.
+    refs_decl = ET.SubElement(encoding, q("refsDecl"), {"n": "CTS"})
+    segment_pattern = ET.SubElement(refs_decl, q("cRefPattern"), {
+        "n": "segment",
+        "matchPattern": r"(\w+)\.(\w+)",
+        "replacementPattern": (
+            "#xpath(/tei:TEI/tei:text/tei:body/tei:div/"
+            "tei:div[@subtype='section' and @n='$1']/tei:p[@n='$2'])"
+        ),
     })
-    line_cite = ET.SubElement(outer, q("citeStructure"), {
-        "unit": "line", "delim": ":", "match": "div/div[@subtype='section']", "use": "@n",
+    ET.SubElement(segment_pattern, q("p")).text = "This pattern extracts a segment within an inscription line."
+    line_pattern = ET.SubElement(refs_decl, q("cRefPattern"), {
+        "n": "line",
+        "matchPattern": r"(\w+)",
+        "replacementPattern": (
+            "#xpath(/tei:TEI/tei:text/tei:body/tei:div/"
+            "tei:div[@subtype='section' and @n='$1'])"
+        ),
     })
-    ET.SubElement(line_cite, q("citeStructure"), {
-        "unit": "segment", "delim": ".", "match": "p", "use": "@n",
-    })
+    ET.SubElement(line_pattern, q("p")).text = "This pattern extracts an inscription line."
     profile = ET.SubElement(header, q("profileDesc"))
     usage = ET.SubElement(profile, q("langUsage"))
     ET.SubElement(usage, q("language"), {"ident": cfg["lang"]}).text = cfg["description"]
 
-    text = ET.SubElement(root, q("text"), {f"{{{XML_NS}}}lang": cfg["lang"]})
-    body = ET.SubElement(text, q("body"), {f"{{{XML_NS}}}base": urn})
+    # HookTest's CapiTainS TEI profile discovers both the version URN and the
+    # document language on the same ``text`` node.  Keeping xml:base on body
+    # makes the citation XPath work, but leaves the witness invisible to the
+    # CTS inventory checks.
+    text = ET.SubElement(root, q("text"), {
+        f"{{{XML_NS}}}base": urn,
+        f"{{{XML_NS}}}lang": cfg["lang"],
+    })
+    body = ET.SubElement(text, q("body"))
     edition = ET.SubElement(body, q("div"), {
         "n": urn, "type": "edition", f"{{{XML_NS}}}lang": cfg["lang"],
     })
@@ -138,8 +174,46 @@ def _tei(version: str, cfg: dict[str, str], rows: list[dict[str, str]]) -> ET.El
             "type": "textpart", "subtype": "section", "n": row["line"],
         })
         ET.SubElement(section, q("p"), {"n": "1"}).text = row[cfg["column"]]
-    ET.indent(root, space="  ")
+    _indent(root)
     return ET.ElementTree(root)
+
+
+def _write_tei(tree: ET.ElementTree, path: Path) -> None:
+    body = ET.tostring(tree.getroot(), encoding="utf-8")
+    path.write_bytes(
+        b"<?xml version='1.0' encoding='UTF-8'?>\n"
+        b'<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" '
+        b'schematypens="http://relaxng.org/ns/structure/1.0"?>\n'
+        + body + b"\n"
+    )
+
+
+def _write_cts_metadata() -> None:
+    CTS_TEXTGROUP_DIR.mkdir(parents=True, exist_ok=True)
+    CTS_WORK_DIR.mkdir(parents=True, exist_ok=True)
+    (CTS_TEXTGROUP_DIR / "__cts__.xml").write_text("""<?xml version="1.0" encoding="UTF-8"?>
+<ti:textgroup xmlns:ti="http://chs.harvard.edu/xmlns/cts"
+  projid="iranianLit:skz" urn="urn:cts:iranianLit:skz">
+  <ti:groupname xml:lang="eng">Šābuhr I</ti:groupname>
+</ti:textgroup>
+""", encoding="utf-8")
+
+    editions = []
+    for version, cfg in VERSIONS.items():
+        urn = f"urn:cts:iranianLit:{WORK_KEY}.{version}"
+        editions.append(f"""  <ti:edition urn="{urn}" workUrn="urn:cts:iranianLit:{WORK_KEY}" xml:lang="{cfg['lang']}">
+    <ti:label xml:lang="eng">{cfg['label']}</ti:label>
+    <ti:description xml:lang="eng">{cfg['description']}; 51 lines aligned by Farnoosh Shamsian.</ti:description>
+  </ti:edition>""")
+    (CTS_WORK_DIR / "__cts__.xml").write_text(
+        """<?xml version="1.0" encoding="UTF-8"?>
+<ti:work xmlns:ti="http://chs.harvard.edu/xmlns/cts"
+  groupUrn="urn:cts:iranianLit:skz" projid="iranianLit:inscription"
+  urn="urn:cts:iranianLit:skz.inscription" xml:lang="grc">
+  <ti:title xml:lang="eng">Trilingual inscription at the Kaʿba-ye Zartošt (ŠKZ)</ti:title>
+""" + "\n".join(editions) + "\n</ti:work>\n",
+        encoding="utf-8",
+    )
 
 
 def _norm(token: str) -> str:
@@ -168,7 +242,8 @@ def _occurrences(text: str, phrase: str) -> list[list[int]]:
 
 
 def _alignment_json(
-    sentence_rows: list[dict[str, str]], target_column: str, target_version: str,
+    sentence_rows: list[dict[str, str]], target_column: str, pair_column: str,
+    target_version: str,
 ) -> tuple[dict, int]:
     by_line = {row["line"]: row for row in sentence_rows}
     segments: dict[str, dict] = {
@@ -187,7 +262,7 @@ def _alignment_json(
             continue
         line = line_match.group(1)
         greek = pair.get("Greek", "")
-        target = pair.get(target_column, "")
+        target = pair.get(pair_column, "")
         if not greek or not target or line not in by_line:
             unmatched += 1
             continue
@@ -280,24 +355,31 @@ def _place_rows() -> tuple[list[dict[str, str]], int]:
             "lat": place["latitude"],
             "lon": place["longitude"],
             "feature_type": place["type"],
+            "certainty": place["certainty"],
+            "coord_source": place["coord_source"],
+            "coord_precision": place["coord_precision"],
+            "place_note": place["note"],
+            "resolution_note": place["resolution"],
         })
     return output, unmatched
 
 
 def main() -> None:
-    GENERATED.mkdir(parents=True, exist_ok=True)
+    _write_cts_metadata()
     rows = _sentence_rows()
     for version, cfg in VERSIONS.items():
-        path = GENERATED / f"{WORK_KEY}.{version}.xml"
-        _tei(version, cfg, rows).write(path, encoding="utf-8", xml_declaration=True)
+        path = CTS_WORK_DIR / f"{WORK_KEY}.{version}.xml"
+        _write_tei(_tei(version, cfg, rows), path)
 
-    for target_column, target_version in (
-        ("Parthian transcription", "huyse1999-xpr2"),
-        ("Middle Persian transcription", "huyse1999-pal1"),
+    for target_column, pair_column, target_version in (
+        ("Parthian transcription", "Parthian", "huyse1999-xpr2"),
+        ("Middle Persian transcription", "Middle Persian", "huyse1999-pal1"),
     ):
-        payload, unmatched = _alignment_json(rows, target_column, target_version)
+        payload, unmatched = _alignment_json(
+            rows, target_column, pair_column, target_version
+        )
         name = f"canaliderossi2004-grc1__{target_version}.json"
-        (GENERATED / name).write_text(
+        (CTS_WORK_DIR / name).write_text(
             json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
         )
         groups = sum(len(segment["alignments"]) for segment in payload["segments"].values())
@@ -307,7 +389,8 @@ def main() -> None:
     with PLACE_CSV.open("w", encoding="utf-8", newline="") as stream:
         writer = csv.DictWriter(stream, fieldnames=[
             "citation", "mention_type", "mention_name", "place_id",
-            "place_name", "lat", "lon", "feature_type",
+            "place_name", "lat", "lon", "feature_type", "certainty",
+            "coord_source", "coord_precision", "place_note", "resolution_note",
         ])
         writer.writeheader()
         writer.writerows(place_rows)

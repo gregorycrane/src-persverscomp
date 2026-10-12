@@ -22,12 +22,18 @@ window.PMVFragmentCollections = (() => {
     'tlg0001.tlg001','tlg2045.tlg001'
   ]);
   const historyKeys = new Set(['tlg0003.tlg001']);
-  const languageNames = {greek:'Greek',latin:'Latin','old-english':'Old English',persian:'Persian',italian:'Italian',japanese:'Japanese'};
-  const languageClasses = {greek:'greek-text',latin:'latin-text','old-english':'old-english-text',persian:'persian-text',italian:'italian-text',japanese:'japanese-text'};
+  const languageNames = {greek:'Greek',latin:'Latin','old-english':'Old English',persian:'Persian',parthian:'Parthian','middle-persian':'Middle Persian',italian:'Italian',japanese:'Japanese'};
+  const languageClasses = {
+    greek:['greek-text'], latin:['latin-text'], 'old-english':['old-english-text'],
+    persian:['persian-text'],
+    parthian:['parthian-transliteration-text','parthian-transcription-text'],
+    'middle-persian':['middle-persian-transcription-text'],
+    italian:['italian-text'], japanese:['japanese-text']
+  };
   const genreNames = {tragedy:'Tragedy','greek-drama':'Greek drama',hexameter:'Hexametrical poetry',history:'History'};
-  function workLanguage(w) {
-    const edition=(w.versions||[]).find(v=>v.doc_type==='edition' && Object.values(languageClasses).includes(v.text_class));
-    return edition ? Object.keys(languageClasses).find(key=>languageClasses[key]===edition.text_class) : null;
+  function workHasLanguage(w, language) {
+    const classes=languageClasses[language]||[];
+    return (w.versions||[]).some(v=>v.doc_type==='edition' && classes.includes(v.text_class));
   }
   function inGenre(id,w,genre) {
     if(genre==='tragedy') return tragedyKeys.has(id);
@@ -206,7 +212,7 @@ window.PMVFragmentCollections = (() => {
   function renderHome(root,catalog) {
     const visible=Object.values(catalog.works).filter(w=>!w.fragment_corpus);
     const counts={};
-    Object.keys(languageNames).forEach(lang=>counts[lang]=visible.filter(w=>workLanguage(w)===lang).length);
+    Object.keys(languageNames).forEach(lang=>counts[lang]=visible.filter(w=>workHasLanguage(w,lang)).length);
     const greekLinks=[['Tragedy','tragedy'],['Greek drama','greek-drama'],['Hexametrical poetry','hexameter'],['History','history']];
     root.innerHTML=`<main class="fc-page fc-home"><h1>Language collections</h1><p>Choose the language of the original work.</p><div class="fc-language-grid">${Object.entries(languageNames).map(([id,title])=>`<section class="fc-language-card"><a class="fc-language-title" href="${escape(href({language:id}))}">${escape(title)} <span>${counts[id]} work${counts[id]===1?'':'s'}</span></a>${id==='greek'?`<nav aria-label="Greek collections">${greekLinks.map(([label,genre])=>`<a href="${escape(href({language:'greek',genre}))}">${escape(label)}</a>`).join('')}</nav>`:''}</section>`).join('')}</div><p class="fc-home-all"><a href="${escape(href({browse:'all'}))}">Browse all works and authors</a></p></main>`;
   }
@@ -214,7 +220,7 @@ window.PMVFragmentCollections = (() => {
     const author=params.get('author'), genre=params.get('genre'), language=params.get('language'), scope=params.get('scope');
     const authorName=author&&((catalog.authors||{})[author]||author);
     const title=genre ? genreNames[genre] : author ? (scope==='surviving'?'Surviving works of ':scope==='fragments'?'Fragments of ':'All works of ')+authorName : language ? languageNames[language] : 'All works';
-    const standard=Object.entries(catalog.works).filter(([id,w])=>scope!=='fragments'&&!w.experimental_fragment && (!author||w.textgroup===author) && (!language||workLanguage(w)===language) && (!genre||inGenre(id,w,genre))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
+    const standard=Object.entries(catalog.works).filter(([id,w])=>scope!=='fragments'&&!w.experimental_fragment && (!author||w.textgroup===author) && (!language||workHasLanguage(w,language)) && (!genre||inGenre(id,w,genre))).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
     const catalogFragments=Object.entries(catalog.works).filter(([id,w])=>w.experimental_fragment && !w.fragment_corpus && w.textgroup!=='tlg0085' && w.textgroup!=='tlg0011' && w.textgroup!=='tlg0006' && w.textgroup!=='tlg0019' && (!author||w.textgroup===author) && (!language||language==='greek') && (!genre||genre==='greek-drama')).map(([id,w])=>({...w,id,author:(catalog.authors||{})[w.textgroup]||w.textgroup}));
     const includeFragments=scope!=='surviving'&&(!author||author==='tlg0085')&&(!language||language==='greek')&&(!genre||genre==='greek-drama');
     const fragments=includeFragments ? Object.values(data.works).map(w=>{

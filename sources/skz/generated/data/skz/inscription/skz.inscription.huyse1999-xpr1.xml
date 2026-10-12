@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="eng">
+    <fileDesc>
+      <titleStmt>
+        <title>The trilingual inscription of Šābuhr I at the Kaʿba-ye Zartošt (ŠKZ)</title>
+        <author>Šābuhr I</author>
+        <respStmt>
+          <resp>Corpus preparation and alignment</resp>
+          <name>Farnoosh Shamsian and Monica Berti</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Perseus Digital Library</publisher>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parthian transliteration from Farnoosh Shamsian's open SKZ corpus. Line numbering follows Huyse (1999). Source: <ref target="https://github.com/farnoosh-shamsian/SKZ">https://github.com/farnoosh-shamsian/SKZ</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="segment" matchPattern="(\w+)\.(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='section' and @n='$1']/tei:p[@n='$2'])">
+          <p>This pattern extracts a segment within an inscription line.</p>
+        </cRefPattern>
+        <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='section' and @n='$1'])">
+          <p>This pattern extracts an inscription line.</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="xpr-Latn">Parthian transliteration</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:base="urn:cts:iranianLit:skz.inscription.huyse1999-xpr1" xml:lang="xpr-Latn">
+    <body>
+      <div n="urn:cts:iranianLit:skz.inscription.huyse1999-xpr1" type="edition" xml:lang="xpr-Latn">
+        <div type="textpart" subtype="section" n="1">
+          <p n="1">ANE mzdyzn ALHA šhypwhr MLKYN MLKA ’ry’n W ’ny’ry’n MNW šyhr MN y’ztn BRY mzdyzn ALHA’rthštr MLKYN MLKA ’ry’n MNW šyhr MN y’ztn BRYLBRY ALHA p’pk MLKA ’ry’nhštr hwtwy HWYm.</p>
+        </div>
+        <div type="textpart" subtype="section" n="2">
+          <p n="1">W HHSNWm hštr p’rs prtw vv hwztn myšn ’swrstn ntwšrkn ’rb’ystny ’trwptkn ’rmny wyršn sykn ’rd’nbl’skn HN prhš OL kpy ΘWRA W ’l’nn TROA W hmk pryšhwr ΘWRA</p>
+        </div>
+        <div type="textpart" subtype="section" n="3">
+          <p n="1">m’d wrkn mrgw hryw W hmk ’prhštr krmn skstn twgrn mkwrn p’rtn hndstn kwšnhštr HN prhš OL pškbwr W HNOL k’š swgd W š’šstn W MNhw ≺?≻ ŠΘRA YMA mzwnhštr.</p>
+        </div>
+        <div type="textpart" subtype="section" n="4">
+          <p n="1">W OBDWm prgwzšhypwhr ŠME dhhštr W OBDWm ’hwrmzd’rthštr ŠME.</p>
+        </div>
+        <div type="textpart" subtype="section" n="5">
+          <p n="1">W ZNE ’wnt hštr W hštrdry W ptykwspn hrw LN pty b’z W OBDkpy HQAYMWtHWYN.</p>
+        </div>
+        <div type="textpart" subtype="section" n="6">
+          <p n="1">W AMT nhwšt pty hštr HQAYMWt HWYm gwrtnyws kysr MN hmk prwm gwt W grm’ny’ hštr z’wry hngwšn  OBDt W OL ’swrstn ’pr ’ry’nhštr W LN ATYt W pty ’swrstn mrz B mšyk ptydymn RBA znbk YHWt</p>
+        </div>
+        <div type="textpart" subtype="section" n="7">
+          <p n="1">gwrtnyws kysr QΘLt prwmyn z’wry HWBDWt W prwmyn plypws kysr OBDt</p>
+        </div>
+        <div type="textpart" subtype="section" n="8">
+          <p n="1">W plypws kysr LN OL nymstyk ATYt W gy’n DME dynr IIIII-C ALPYN OLYN YNTNt pty b’z HQAYMWt WLN mšyk MN ZK krty prgwz šhypwhr ŠME HQAYMWt.</p>
+        </div>
+        <div type="textpart" subtype="section" n="9">
+          <p n="1">W kysr TWB MK≺DB≻Wt OL ’rmny wyns OBDt W LN ’pr prwmyn hštr whyšt HWYm W prwmyn z’wry XX-XX-XX-M B byb’lšy QΘLt</p>
+        </div>
+        <div type="textpart" subtype="section" n="10">
+          <p n="1">W ’swry’ hštr W ME ’pr ’swry’ hštr prybr YHWt hmk ’trwht ’wyrn W wrty’z OBDt W AHDt pty LHw HD y’wr MN prwmyn hštr BYRTA W MHWZA</p>
+        </div>
+        <div type="textpart" subtype="section" n="11">
+          <p n="1">’nty MHWZA OM prybr hmkwsy byrt ’rwpn OM prybr hmkwsy byrt ’spwrkn OM prybr hmkwsy swr’y MHWZA OM prybr hmkwsy byb’lšy MHWZA OM prybr hmkwsy mnbwk MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="12">
+          <p n="1">h≺l≻py MHWZA OM prybr hmkwsy knšr’y MHWZA OM prybr hmkwsy ’pwmy’ MHWZA OM prybr hmkwsy r≺pny≻ws MHWZA OM prybr hmkwsy zwm’ MHWZA OM prybr hmkwsy ’wrn’y MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="13">
+          <p n="1">gndrws MHWZA OM prybr hmkwsy ’rmn’š MHWZA OM prybr hmkwsy sylwky’ MHWZA OM prybr hmkwsy ’ndywk MHWZA OM prybr hmkwsy kyrws MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="14">
+          <p n="1">AHRN sylwky’ MHWZA OM prybr hmkwsy ’lyhsndry’ MHWZA OM prybr hmkwsy nykp≺l≻wsy MHWZA OM prybr hmkwsy syzry MHWZA OM prybr hmkwsy hm’ty MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="15">
+          <p n="1">’rstwn MHWZA OM prybr hmkwsy dykw≺r≻ MHWZA OM prybr hmkwsy dw≺r≻’y MHWZA OM prybr hmkwsy dw≺l≻hw MHWZA OM prybr hmkwsy krksy’ MHWZA OM prybr hmkwsy grmnyws MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="16">
+          <p n="1">btn’n MHWZA OM prybr hmkwsy h’nry MHWZA OM prybr hmkwsy B kpwtky’ s’t≺l≻y MHWZA OM prybr hmkwsy dwm’n MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="17">
+          <p n="1">’r≺t≻ngly’ MHWZA OM prybr hmkwsy swšy MHWZA OM prybr hmkwsy šwdy MHWZA OM prybr hmkwsy pr’ty MHWZA OM prybr hmkwsy hms’k MHWZA OM prybr hmkwsy XX-X-IIIIIII</p>
+        </div>
+        <div type="textpart" subtype="section" n="18">
+          <p n="1">hrtyk y’wr AMT LN ’pr h’rn W ’wrh’y wyhšt HWYm W h’rn W ’wrh’y p≺r≻wdywt w’lrnyws kysr ’pr LN ATYt</p>
+        </div>
+        <div type="textpart" subtype="section" n="19">
+          <p n="1">W YHWt LWT MN grm’ny’ hštr MN ryšy’ hštr MN nyrkws hštr MN d’ky’ hštr MN pndny’ hštr MN mwsy’ hštr MN ’stry’ hštr MN ’spny’ hštr MN ’pr≺k≻y’ hštr</p>
+        </div>
+        <div type="textpart" subtype="section" n="20">
+          <p n="1">MN tr’ky’ hštr MN b≺tw≻ny’ hštr MN ’s’y’ hštr MN pmp≺l≻’y’ hštr MN ’swry’ hštr MN l≺kw≻ny’ hštr MN gl’tyn’y hštr MN lwky’ hštr MN kylky’ hštr MN kpwtky’ hštr MN pr≺w≻k’y’ hštr MN swry’ hštr</p>
+        </div>
+        <div type="textpart" subtype="section" n="21">
+          <p n="1">MN pnk’y’ hštr MN ywt’y’ hštr MN ’rby’ hštr MN mwrn hštr MN grm’ny’ hštr MN rwt≺w≻s hštr MN ’snyws hštr MN mdynrwtn hštr z’wry XX-XX-XX-X ALPYN</p>
+        </div>
+        <div type="textpart" subtype="section" n="22">
+          <p n="1">W MNhw ŠΘRA h’rn W ’wrh’y LWT w’lrnyws kysr RBA rpy YHWt W w’lrnyws kysr BNPŠE pty NPŠE YDA dstgrb OBDt W ’wy’tk rbysyp s’ntwr W hykmwn MNW LHw z’wry s’rr YHWt hrw dstgrb OBDt W LBRA OL p’rs HYTYt HWYN</p>
+        </div>
+        <div type="textpart" subtype="section" n="23">
+          <p n="1">W swry’ hštr kylky’ hštr W kpwtky’ hštr ’trwht ’wyrn W wrty’z OBDt</p>
+        </div>
+        <div type="textpart" subtype="section" n="24">
+          <p n="1">W AHDt LHw y’wr MN prwmyn hštr ’lyhsndry’ {W} ktyswsy MHWZA OM prybr hmkwsy šmš’t MHWZA OM prybr hmkwsy krtr’y MHWZA OM prybr hmkwsy ’yg’y MHWZA OM prybr hmkwsy m’m’sty’ MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="25">
+          <p n="1">m’≺l≻ws MHWZA OM prybr hmkwsy ’t’≺n≻y’ MHWZA OM prybr hmkwsy trysst MHWZA OM prybr hmkwsy zpyrwn MHWZA OM prybr hmkwsy spsty’ MHWZA OM prybr hmkwsy kwlkws MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="26">
+          <p n="1">’n≺zr≻pws MHWZA OM prybr hmkwsy kstp≺l≻’y MHWZA OM prybr hmkwsy n≺rwn≻y’s MHWZA OM prybr hmkwsy p≺l≻’≺w≻y’s MHWZA OM prybr hmkwsy nykp≺l≻ws MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="27">
+          <p n="1">’ypy≺p≻n≺y≻’y MHWZA OM prybr hmkwsy ky≺l≻ndrws MHWZA OM prybr hmkwsy ’nym≺w≻rdny MHWZA OM prybr hmkwsy ≺sl≻ynwsy MHWZA OM prybr hmkwsy mydnp≺l≻ws MHWZA OM prybr hmkwsy ≺n≻tywky’ MHWZA OM prybr hmkwsy srty’p MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="28">
+          <p n="1">mwstynp≺l≻wsy MHWZA OM prybr hmkwsy twdyn’y MHWZA OM prybr hmkwsy kysry’ MHWZA OM prybr hmkwsy k≺w≻m’n’dy’ MHWZA OM prybr hmkwsy kwpstry’ MHWZA OM prybr hmkwsy</p>
+        </div>
+        <div type="textpart" subtype="section" n="29">
+          <p n="1">spstyd’y’ MHWZA OM prybr hmkwsy byrt MHWZA OM prybr hmkwsy r’kwndy’ MHWZA OM prybr hmkwsy l’≺r≻ndy’ MHWZA OM prybr hmkwsy ’ykwndy’ MHWZA OM prybr hmkwsy hmys’k MHWZA OM prybr hmkwsy XX-X-IIIIII</p>
+        </div>
+        <div type="textpart" subtype="section" n="30">
+          <p n="1">W mrthwmk ME MN prwmyn hštr MN ’ny’ry’n pty ’w’r HYTYt B ’ry’nhštr B p’rs prtw hwzstn ’swrstn W AHRN hštr L hštr ANw LN W ABYtr W ny’kn W hsynkn dstkrt YHWt TME YΘYBWt≺?≻</p>
+        </div>
+        <div type="textpart" subtype="section" n="31">
+          <p n="1">W LN AHRNš ŠGYA hštr YBOt W ŠGYA ŠME W ΘBpy OBDt ME TNE LA KTYBt byš ZK ’wnt MN ZK krty ’wpdšt KTYBtn AYK MNW BATR MNn YHYE ZNE ŠME ΘBpy W hwtwypy ME LN YDOEd</p>
+        </div>
+        <div type="textpart" subtype="section" n="32">
+          <p n="1">W LQBL {kd} AYK y’zt LN MN ZK gwnk dstkrt OBDWnt W pty y’ztn pwšt ZNE ’wnt hštr YBOEm W HHSNWm KN LNš hštr L hštr ŠGYA ’trw wrhr’n YΘYBWt ≺?≻ W ŠGYA mgwGBRA krpkpy OBDt W RBA y’ztn wyndršn OBDt</p>
+        </div>
+        <div type="textpart" subtype="section" n="33">
+          <p n="1">W TNEš pty npwšt YΘYBWm ’trw HD hwsrwš hypwhr ŠME pty LN ’rw’n W p’šn’m ’trw HD hwsrw’trw’nhtyE ŠME pty ’trw’nhtyE MLKTEn MLKTE LN BRTY ’rw’n W p’šn’m ’trw HD hwsrw’hwrmzd’rthštr ŠME pty ’hwrmzd’rthštr RBA MLKA ’rmnyn LN BRY ’rw’n W p’šn’m</p>
+        </div>
+        <div type="textpart" subtype="section" n="34">
+          <p n="1">AHRN ’trw HD hwsrwšhypwhr ŠME pty šhypwhr myšn MLKA LN BRY ’rw’n W p’šn’m ’trw HD hwsrwnryshw ŠME pty ’ry mzdyzn nryshw MLKA hndy skstn W twrgstn HN OL YMA znb LN BRY ’rw’n W p’šn’m</p>
+        </div>
+        <div type="textpart" subtype="section" n="35">
+          <p n="1">W LHw ME ZNHn ’trwn YNTNm W ME ’bdyn HQAYMWt ≺?≻ KNš hrw ’pr ptyhštr KTYBt W MNhw QYN I-M ME MN trkpyšn OLYN ’bdyn YHWt W LN ZNHn ’trwn YNTNt LHw vac. ’wpdysywm AYK hyp krhyd</p>
+        </div>
+        <div type="textpart" subtype="section" n="36">
+          <p n="1">pty LN ’rw’n YWMA OL YWMA QYN HD LHMA HD gryw W IIIII hwpn HMR IIII p’s pty s’sn hwtwy W p’pk MLKA W šhypwhr MLKA p’pkn W ’rthštr MLKYN MLKA hwr’nzmyE hštr MLKTE ’trw’nhtyE MLKTEn MLKTE dynkyE MLKTE wryhr’m gyln MLKA šhypwhr myšn MLKA</p>
+        </div>
+        <div type="textpart" subtype="section" n="37">
+          <p n="1">’hwrmzd’rthštr RBA MLKA ’rmnyn nryshw skn MLKA šhypwhrdwhtkyE skn MLKTE ššmkyE MRATY prgwz BRBYTA mrdwtyE MRATY šhypwhr MLKYN MLKA AMY nryshw BRBYTA rwddwhtyE BRBYTE ’nwškyE BRTY wr’zdwhtyE hwr’nzmyE BRTY</p>
+        </div>
+        <div type="textpart" subtype="section" n="38">
+          <p n="1">’sthrd’tyE MLKTE W ’hwrmzdk ’rmnyn MLKA BRY ’hwrmzd W ’hwrmzdk –’wt’ybht W wryhr’n –šhypwhr –prgwz myšn MLKA BRY šhypwhrdwht k yE myšn MLKA BRTY W ’hwrmzddwhtkyE skn MLKA BRTY ’rw’n QYN HD LHMA HD gryw W IIIII hwpn HMR IIII p’s</p>
+        </div>
+        <div type="textpart" subtype="section" n="39">
+          <p n="1">W LHw QYN ME MN TME prtšywd HN pty’wyd ’wtyn pty Lhwyn ’rw’n MNW LN ’wpdšt ’rw’n YOBDytn</p>
+        </div>
+        <div type="textpart" subtype="section" n="40">
+          <p n="1">W TNE KTYBt HQAYMWnt MNW ’pr p’pk MLKA hwtwypy YHWt HWYN s’sn ’wrnwkn prdk prdkn wrtrgnpt hwrkn ’spwrk ’spwrkn pwhrk mrtynkn zy’k nywdpty šhypwhr wyznkn šhypwhr mtrbwznkn</p>
+        </div>
+        <div type="textpart" subtype="section" n="41">
+          <p n="1">MNW ’pr ’rthštr MLKYN MLKA hwtwypy YHWt HWYN s’trp ’prynk MLKA ’rthštr mrgw MLKA ’rthštr krmn MLKA ’rthštr skn MLKA dynkyE p’pk MLKA AMY rwtkyE ’rthštr MLKYN MLKA AMY</p>
+        </div>
+        <div type="textpart" subtype="section" n="42">
+          <p n="1">dynkyE MLKTEn MLKTE p’pkn ’rthštr bythš p’pk hzrwpt dyhyn wr’z s’sn swryn s’sn ’ndykn hwtwy prgwz krny gwk krny ’pwrs’m ’rthštrpry gylm’n dwnb’wntš rhš sp’dpty m’rd dpyrwpt p’pk nywdpty</p>
+        </div>
+        <div type="textpart" subtype="section" n="43">
+          <p n="1">p’šhr wysprkn wyprd prdkn mtryhwšt bryskn hwmprd’t m’dknpty drn zynpty šhrk d’tbr wrdn ’hwrpty mtrk twsrkn zy’k zbrkn skpws nhšyrpty hwtwk grstpty z’hyn mdkdr</p>
+        </div>
+        <div type="textpart" subtype="section" n="44">
+          <p n="1">MNW ’pr LN hwtwypy YHWt ’rthštr ntwšrkn MLKA ’rthštr krmn MLKA dynkyE myšn MLKTE dstkrt šhypwhr hmz’sp wyršn MLKA wlgšy BRBYTA p’pkn</p>
+        </div>
+        <div type="textpart" subtype="section" n="45">
+          <p n="1">s’sn BRBYTA ME pty prdkn HHSNt AHRN s’sn BRBYTA ME pty ktwkn HHSNt nryshw BRBYTA prgwzkn nryshw BRBYTA šhypwhrkn šhypwhr bythš p’pk hzrwpt prgwz ’sppty ’rthštr wr’z</p>
+        </div>
+        <div type="textpart" subtype="section" n="46">
+          <p n="1">’rthštr swryn nryshw ’ndykn hwtwy ’rthštr krny whwn’m prmtr pry’k why’ntywkšhypwhr hštrp srytwd šhyhmwst ’rthštr ’rthštrhšnwm p’šhr thmšhypwhr ’rthštr gwdmn hštrp ššmk nywšhypwhr</p>
+        </div>
+        <div type="textpart" subtype="section" n="47">
+          <p n="1">whwn’m šhypwhrhšnwm tyrymtry hštrkrt dyzpty zy’k nywdpty ’rtbnw dwnb’wntš wyndprn ’bkn rzmywd W p’pyš prgwzšhypwhr šnbytkn w’rzn g’b hštrp krtsrw bythš p’pk wysprkn</p>
+        </div>
+        <div type="textpart" subtype="section" n="48">
+          <p n="1">wlgšy sylwkn y’zdpt MLKTEn hndrzpty p’pk spsyrdr nryshw rnd hštrp ty’nk ’hmtn hštrp wrdpt prštkpty ywdmrt rstkn ’rthštr wyprdkn ’pwrs’m šhypwhr drykn s’rr nryshw brdkn šhypwhr nryshwkn</p>
+        </div>
+        <div type="textpart" subtype="section" n="49">
+          <p n="1">nryshw grstpty ’hwrmzd dpyrpty n’dwk zyndnyk p’pk brypty p’sprd p’sprdkn ’bdgšy dyzptkn krtyr ’hrpty rstk why’rthštr hštrp ’rthštr bythškn mtryhwšt gnzbr šhypwhr prmtr</p>
+        </div>
+        <div type="textpart" subtype="section" n="50">
+          <p n="1">’rštt mtrn pty prwrtk SPRA s’sn špystn s’snkn wrwd w’šrpty ’rthštr nyryš hštrp bgdt wrdptykn krtyr ’rtbnw zrw’ndt bndkn wyn’r s’snkn m’nzk špystn s’sn d’tbr wrdn n’šptkn wrdk wr’zpty HD TWBn QYN HD LHMA HD gryw W IIIII hwpn HMR IIII p’s</p>
+        </div>
+        <div type="textpart" subtype="section" n="51">
+          <p n="1">’ws šwgwn LN ’pr y’ztn CBW W krtkny twhšywm W y’ztn dstkrt HWYm W pty y’ztn ’dywrpy ZNE ’wnt hštr YBOt W HHSNt ŠME W ΘBpy OBDt LHwyš MNW BATR MN LN YHYE W prnhw HWYt LHwyš ’pr y’ztn CBW W krtkny twhšywd AYK y’zt ’dywr YHYEnt W dstkrt OBDWnt .</p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>

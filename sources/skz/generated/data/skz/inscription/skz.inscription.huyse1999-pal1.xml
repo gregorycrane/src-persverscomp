@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="https://epidoc.stoa.org/schema/latest/tei-epidoc.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader xml:lang="eng">
+    <fileDesc>
+      <titleStmt>
+        <title>The trilingual inscription of Šābuhr I at the Kaʿba-ye Zartošt (ŠKZ)</title>
+        <author>Šābuhr I</author>
+        <respStmt>
+          <resp>Corpus preparation and alignment</resp>
+          <name>Farnoosh Shamsian and Monica Berti</name>
+        </respStmt>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Perseus Digital Library</publisher>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International</licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Middle Persian transcription from Farnoosh Shamsian's open SKZ corpus. Line numbering follows Huyse (1999). Source: <ref target="https://github.com/farnoosh-shamsian/SKZ">https://github.com/farnoosh-shamsian/SKZ</ref>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <refsDecl n="CTS">
+        <cRefPattern n="segment" matchPattern="(\w+)\.(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='section' and @n='$1']/tei:p[@n='$2'])">
+          <p>This pattern extracts a segment within an inscription line.</p>
+        </cRefPattern>
+        <cRefPattern n="line" matchPattern="(\w+)" replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div/tei:div[@subtype='section' and @n='$1'])">
+          <p>This pattern extracts an inscription line.</p>
+        </cRefPattern>
+      </refsDecl>
+    </encodingDesc>
+    <profileDesc>
+      <langUsage>
+        <language ident="pal-Latn">Middle Persian transcription</language>
+      </langUsage>
+    </profileDesc>
+  </teiHeader>
+  <text xml:base="urn:cts:iranianLit:skz.inscription.huyse1999-pal1" xml:lang="pal-Latn">
+    <body>
+      <div n="urn:cts:iranianLit:skz.inscription.huyse1999-pal1" type="edition" xml:lang="pal-Latn">
+        <div type="textpart" subtype="section" n="1">
+          <p n="1">An, mazdēsn bay Šābuhr, šāhān šāh Ērān ud Anērān, kē čihr az yazdān, pus mazdēsn bay Ardašīr, šāhān šāh Ērān, kē čihr az yazdān, nab bay Pābag šāh, Ērānšahr xwadāy hēm</p>
+        </div>
+        <div type="textpart" subtype="section" n="2">
+          <p n="1">ud darēm šahr Pārs, Pahlaw, Xūzestān, Mēšān, Asūrestān, Nōdšīragān, Arbāyestān, Ādurbāyagān, Armin, Wiruzān, Sīgān, Ar≺r≻ān, Balāsagān tā frāz ō Kaf kōf ud Alānān dar, ud hamag Parišxwār kōf,</p>
+        </div>
+        <div type="textpart" subtype="section" n="3">
+          <p n="1">Māh, Gurgān, Marw, Harēw, ud hamag Abaršahr, Kirmān, Sagestān, Tūrān, Mak≺u≻rān, Pār≺a≻dān, Hindestān, Kušānšahr tā frāz ō Paškabūr ud tā ō Kāš, Sugd ud Čāčestān ud az ān ≺?≻ ālag i drayā Mazūnšahr.</p>
+        </div>
+        <div type="textpart" subtype="section" n="4">
+          <p n="1">Ud kunēm Pērōz-Šābuhr nām * šahr (?) ud kunēm Ohrmezd-Ardašīr nām.</p>
+        </div>
+        <div type="textpart" subtype="section" n="5">
+          <p n="1">U-n ēn and šahr ud šahryār ud pāygōsbān harw pad bāz ud bandagīh nihād hēnd</p>
+        </div>
+        <div type="textpart" subtype="section" n="6">
+          <p n="1">ud ka naxust pad šahr ēstād hēm, Gōrdanyos Kēsar az hamag Hrōm, Gōt ud Garmān šahr zōr hangāwisn kerd ud ō Asūrestān abar Ērān šahr ud amā āmad ud pad Asūrestān marz pad Mišīk handēmān wuzurg ardīg būd.</p>
+        </div>
+        <div type="textpart" subtype="section" n="7">
+          <p n="1">Gōrdanyos Kēsar ōzad, Hrōmāyīn zōr wānīd ud Hrōmāyīn Filip≺p≻os kēsar kerd.</p>
+        </div>
+        <div type="textpart" subtype="section" n="8">
+          <p n="1">Ud Filip≺p≻os Kēsar amā ō lābag āmad ud gyān xōn ≺?≻ denār 500 hazār ō amā dād, pad bāz estād, ud amā Mišīk az ēd kerd Pērōz-Šābuhr nām nihād.</p>
+        </div>
+        <div type="textpart" subtype="section" n="9">
+          <p n="1">Ud Kēsar did druxt, ō Armin wināh kerd ud amā abar Hrōmāyin šahr wihist hēm ud Hrōmāyin zōr 60000 pad *Bēbāliš ōzad</p>
+        </div>
+        <div type="textpart" subtype="section" n="10">
+          <p n="1">u-n Asūriyā šahr ud čē abar Asūriyā šahr parwār būd hamag ādursōxt ud awērān ud wardyāz kerd u-n grift pad ān ēw jār az Hrōmāyin šahr diz ud šahrestān:</p>
+        </div>
+        <div type="textpart" subtype="section" n="11">
+          <p n="1">Ānāt šahrestān az parwār hammis, Bīrt *Arūbān az parwār hammis, Bīrt Aspōragān az parwār hammis, Sūrā šahrestān az parwār hammis, *Bebālis šahrestān az parwār hammis, Manbūg šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="12">
+          <p n="1">Halab šahrestān az parwār hammis, *Kinasrā šahrestān az parwār hammis, *Apōmiyā šahrestān az parwār hammis, *Refaniyos šahrestān az parwār hammis, Zōmā šahrestān az parwār hammis, Umā šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="13">
+          <p n="1">Gindaros šahrestān az parwār hammis, Armenāz šahrestān az parwār hammis, Selūkiyā šahrestān az parwār hammis, Andiyōk šahrestān az parwār hammis, Kir≺r≻os šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="14">
+          <p n="1">any Selūkiyā šahrestān az parwār hammis, Alexsandariyā šahrestān az parwār hammis, *Nīkopolos šahrestān az parwār hammis, Sinzar šahrestān az parwār hammis,  Hamāt šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="15">
+          <p n="1">Aristōn šahrestān az parwār hammis, Dīkōr šahrestān az parwār hammis, Dūrā šahrestān az parwār hammis, Dōlīx šahrestān az parwār hammis, Kirkīsiyā šahrestān az parwār hammis, Garmanos šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="16">
+          <p n="1">Batnān šahrestān az parwar hammis, Xānar šahrestān az parwār hammis, pad Kap≺p≻ōdakiyā Sātal šahrestān az parwār hammis, Domān šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="17">
+          <p n="1">*Artangiliyā šahrestān az parwār hammis, Sūš šahrestān az parwār hammis, Šūd šahrestān az parwār hammis, Frāt šahrestān az parwār hammis, āmār šahrestān az parwār hammis 37.</p>
+        </div>
+        <div type="textpart" subtype="section" n="18">
+          <p n="1">ud sidīgar jār ka amā abar Harrān ud Urhā wihist hēm ud Harrān ud Urhā - - - - Waliyāranos Kēsar abar amā āmad</p>
+        </div>
+        <div type="textpart" subtype="section" n="19">
+          <p n="1">u-š ≺?≻ būd abāg ōy ≺?≻ az Garmāniyā šahr, az Rēšiyā šahr, az *Nōrikos ≺?≻ šahr, az Dākiyā šahr, az Pannaniyā šahr, az Mōsiyā šahr, az *Astriyā ≺?≻ šahr, az Ispāniyā šahr, az Afrikē šahr,</p>
+        </div>
+        <div type="textpart" subtype="section" n="20">
+          <p n="1">az Trākiyā šahr, az *Bitūniyā šahr, az Āsiyā šahr, az *Pamfiliyā šahr, az Isawriyā šahr, az Likōniyā šahr, az Galātiyā šahr, az Lūkiyā šahr, az Kīlikiyā šahr, az Kap≺p≻ōdakiyā šahr, az Frūgē šahr, az Sūriyā šahr,</p>
+        </div>
+        <div type="textpart" subtype="section" n="21">
+          <p n="1">az Fōnikiyā šahr, az Yahūdiyā šahr, az Arabiyā šahr, az Mōrān šahr, az Garmāniyā šahr, az Rōdōs šahr, az  - - - - šahr, az Mayānrōdān šahr zōr 70 hazār.</p>
+        </div>
+        <div type="textpart" subtype="section" n="22">
+          <p n="1">Ud az ān ālag ī Harrān ud Urhā abāg Waliyāranos Kēsar ardīg būd, u-n Waliyāranos Kēsar xwad pad xwēbaš dast dastgraw kerd, ud abārīg, *rabēsēf, *sanātōr ud hēgemōn kē ān zōr sālār būd harw dastgraw kerd, ud bē ō Pārs ānīd hēnd.</p>
+        </div>
+        <div type="textpart" subtype="section" n="23">
+          <p n="1">Ud Sūriyā šahr, ud Kīlikiyā šahr, ud Kap≺p≻ōdakiyā šahr ādursōxt ud awērān ud wardyāz kerd.</p>
+        </div>
+        <div type="textpart" subtype="section" n="24">
+          <p n="1">U-n grift pad ān jār az Hrōmāyīn šahr: Šamīšāt šahrestān az parwār hammis, Alexsandariyā Katis≺s≻os šahrestān az parwār hammis, *Katabalā šahrestān az parwār hammis, Aygiyā šahrestān az parwār hammis, *Māmasastiyā šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="25">
+          <p n="1">Māl≺l≻os šahrestān az parwār hammis, Adāniyā šahrestān az parwār hammis, Tarsos šahrestān az parwār hammis, *Agōstiyā šahrestān az parwār hammis, Zefīrōn šahrestān az parwār hammis, Sebastiyā šahrestān az parwār hammis, Kōrikos šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="26">
+          <p n="1">Anazarbos šahrestān az parwār hammis, Kastābalāy Šahrestan az parwār hammis, Nerōniyās šahrestān az parwār hammis, Flāwiyās šahrestān az parwār hammis, *Nīkopolos šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="27">
+          <p n="1">Ēpīfaniyā šahrestān az parwār hammis, Kīlindiros šahrestān az parwār hammis, Anīmūrīn šahrestān az parwār hammis, Selīnūs šahrestān az parwār hammis, Miyanpolos šahrestān az parwār hammis, Andiyōk šahrestān az parwār hammis, Selūkiyā šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="28">
+          <p n="1">*Mōstinopolos šahrestān az parwār hammis, Tīyanā šahrestān az parwār hammis, Kēsariyā šahrestān az parwār hammis, Kōmānāy šahrestān az parwār hammis, Kūbistariyā šahrestān az parwār hammis,</p>
+        </div>
+        <div type="textpart" subtype="section" n="29">
+          <p n="1">Sebastiyā šahrestān az parwār hammis, Bīrt šahrestān az parwār hammis, Rākūndiyā šahrestān az parwār hammis, Lārandiyā šahrestān az parwār hammis, Īkōniyā šahrestān az parwār hammis, āmār šahrestān az parwār hammis 36.</p>
+        </div>
+        <div type="textpart" subtype="section" n="30">
+          <p n="1">U-n mardōhm čē az Hrōmāyīn šahr az Anērān pad *āyār ≺?≻ ānīd, ān-in andar Ērānšahr pad Pārs, Pahlaw, Xūzestān, Asūrestān, ud any šahr ō šahr kū amā ud pidar ud niyāgān ud ahēnagān dastgerd būd, ānōh nišāst</p>
+        </div>
+        <div type="textpart" subtype="section" n="31">
+          <p n="1">u-n anī-z was šahr xwāst ud was nām ud nēwīh kerd čē ēdar nē nibišt, bē ēn and az ēd kerd framād nibištan, kū kē pas bawād ān ēn nām ud nēwīh ud xwadāyīh čē amā dānād.</p>
+        </div>
+        <div type="textpart" subtype="section" n="32">
+          <p n="1">Ud ēd rōy kū yazad amā az ēn gōnag dastgerd kunēnd ud pad yazdān pušt ēd and šahr xwāhēm ud dārēm, ōh amā-z šahr ō šahr was ādur Warhrān nišāst ud was mōwmard kirbagīh kerd, ud wuzurg yazdān winnārišn kerd.</p>
+        </div>
+        <div type="textpart" subtype="section" n="33">
+          <p n="1">Ud ēdar-iz pad nibišt nišāyēm: ādur 1 Husraw-Šābuhr nām, pad amā ruwān ud pannām; ādur 1 Husraw-ādur-Anāhīd nām, pad Ādur-Anāhīd, bāmbišnān bāmbišn ī amā duxt ruwān ud pannām; ādur 1 Husraw-Ohrmezd-Ardašīr nām, pad Ohrmezd-Ardašīr, wuzurg šāh Arminān ī amā pusar ruwān ud pannām;</p>
+        </div>
+        <div type="textpart" subtype="section" n="34">
+          <p n="1">any ādur 1 Husraw-Šābuhr nām, pad Šābuhr ī Mēšān šāh ī amā pusar ruwān ud pannām; ādur 1 Husraw-Narseh nām, pad ēr mazdēsn Narseh, šāh Hind, Sagestān ud Tūrestān tā drayā damb ī amā pusar ruwān ud pannām.</p>
+        </div>
+        <div type="textpart" subtype="section" n="35">
+          <p n="1">ud ān čē imešān ādurān dād ud ī-šān pad ēwēn nihād, ān-in ōh-iz harw abar pādixšīr nibišt. bē az ān akbrīd 1000 ī az *tarkafišn ō amā ēwēn būd ud amā imēšan ādurān dād, ān framāyom kū ēw kīrēd:</p>
+        </div>
+        <div type="textpart" subtype="section" n="36">
+          <p n="1">pad amā ruwān rōz ō rōz akbrīd 1, nān g≺rīw≻ 1 h≺ōfan≻ 5, may p≺ās≻ 4; pad Sāsān ī xwadāy, ud Pābag šāh, ud Šābuhr šāh ≺ī≻ Pābagān, ud Ardašīr šāhān šāh, ud Xwar≺r≻ānzēm ī šahr bāmbišn, ud Ādur-Anāhid bāmbišnān bāmbišn, ud Dēnag bāmbišn, ud Warhrān ≺ī≻ Gēlān šāh, ≺ud≻ Šābuhr ī Mēšān šāh,</p>
+        </div>
+        <div type="textpart" subtype="section" n="37">
+          <p n="1">ud Ohrmezd-Ardašīr ī wuzurg šāh Arminān, ud Narseh ī Sagān šāh, ud Šābuhrduxtag ī Sagān bāmbišn, ud Narsehduxt ī Sagān bānūg, ud Čašmag ī bānūg, ud Pērōz ī wispuhr, ud *Murrōd ī bānūg ī Šābuhr šāhān šāh mād, ud Narseh ī wispuhr, ud Rōdduxt ī duxš ī Anōšag duxt, ud Warāzduxt ī Xwar≺r≻ānzēm duxt</p>
+        </div>
+        <div type="textpart" subtype="section" n="38">
+          <p n="1">≺ud≻ Staxryād bāmbišn, ud Hormezdag ī Arminān šāh pus, ≺ud≻ Hormezd, ud Hormezdag, ud Ōdābaxt, ud Warhrān, ud Šābuhr, ud Pērōz ī Mēšān šāh pusar, ud Šābuhrduxtag ī Mēšān šāh duxtar, ud Ohrmezd≺d≻uxtag ī Sagān šāh duxtar ruwān akbrīd 1, nān g≺rīw≻ 1 h≺ōfan≻ 5, may p≺ās≻ 4;</p>
+        </div>
+        <div type="textpart" subtype="section" n="39">
+          <p n="1">ud ān akbrīd ī abārīg, ān tā pattāyād andom pad awēšān ruwān kē šāhān šāh framād ruwān yaštan.</p>
+        </div>
+        <div type="textpart" subtype="section" n="40">
+          <p n="1">Ud nāmčišt pad nibišt abar stān nibišt ēstēd: rōz ō rōz akbrīd 1, nān g≺rīw≻ 1 h≺ōfan≻ 5, may p≺ās≻ 4 kē abar Pābag šāh būd: Sāsān ī *Orsigān, Farrag ī Farragān, *Warhrānbād ī *Hōragān, Aspōrag ī Aspōragān, Puhrag ī Mardēn≺a≻gān, *Zīg ī ayēnīg, Šābuhr ī Wēzān≺a≻gān, Šābuhr ī Mihrōzān≺a≻gān;</p>
+        </div>
+        <div type="textpart" subtype="section" n="41">
+          <p n="1">kē abar Ardašīr šāhān šāh bud: *Sadāluf ī Abrēnag šāh, Ardašīr ī Marw šāh, Ardašīr ī Kermān šāh, Ardašīr ī Sagān šāh, Dēnag ī Pābag šāh mād, Rōdag ī Ardašīr šāhān šāh mād,</p>
+        </div>
+        <div type="textpart" subtype="section" n="42">
+          <p n="1">Dēnag ī bāmbišnān bāmbišn ī Pābagān, Ardašīr ī bidaxš, Pābag ī hazāruft, Dēhēn ī Wārāz, Sāsān ī Sūrēn, Sāsān ī Andēgān xwadāy, Pērōz ī Kārin, Gōg ī Kārin, Abursān ī Ardašīr-Farr, Raxš ī spāhbed, *Mard ī dibīruft ≺?≻, Pābag ī ayēnīg,</p>
+        </div>
+        <div type="textpart" subtype="section" n="43">
+          <p n="1">Pā≺k≻čihr ī Wisfarr≺a≻gān, Wifr ī Farragān, Mihrxwāst ī Barēsagān, *Homfrād ī māyānbed, Dirām ī zēnbed, Čihrag ī dādwar, *Wardān ī āxwarrbed, Mihrag ī Tōsar≺a≻gān, Zig ī Zabr≺a≻gān, Sagbus ī naxčirbed, *Hudug ī grastbed, Jahēn ī mayyār;</p>
+        </div>
+        <div type="textpart" subtype="section" n="44">
+          <p n="1">kē abar Šābuhr šāhān šāh bud: Ardašīr ī Nodšīragān šāh, Ardašīr ī Kermān šah, Dēnag ī Mēšān bāmbišn, dastgerd Šābuhr, ≺H≻amāzāsp Wiruzān šāh, Wala≺x≻š ī wispuhr ī Pābagān,</p>
+        </div>
+        <div type="textpart" subtype="section" n="45">
+          <p n="1">Sāsān ī wispuhr ī pad Farragān dāšt, Sāsān ī wispuhr ī pad Kadugān dāšt, Narseh ī wispuhr ī Pērōzgan, Narseh ī wispuhr ī Zādspraxm≺a≻gān, Šābuhr ī bidaxš, Pābag ī hazāruft, Pērōz ī aspbed, Ardašīr ī Wārāz,</p>
+        </div>
+        <div type="textpart" subtype="section" n="46">
+          <p n="1">Ardašīr ī Sūrēn, Narseh ī Andēgān xwadāy, Ardašīr ī Kārin, Wohnām ī framādār, Frīg ī Weh-Andiyōk-Šābuhr šasab, *Sridōy ī Šāhmust, Ardašīr ī Ardašīr-Šnōm, Pā≺k≻čihr ī Tahm-Šābuhr, Ardašīr ī *Gō≺y≻mān šasab, Čašmag ī Nēw-Šābuhr,</p>
+        </div>
+        <div type="textpart" subtype="section" n="47">
+          <p n="1">Wohnām ī Šābuhr-Šnōm, Tīrmihr ī Šahrkerd dizbed, Zīg ī ayēnīg, Ardawān ī Dumbāwan-iz, Gundifarr ī *Ēwagān, Pābīg ī Pērōz-Šābuhr ī Šanbidgān, *Wārzan ī Gay šasab, Kerdsraw ī bidaxš, Pābag ī Wisfarr≺a≻gān,</p>
+        </div>
+        <div type="textpart" subtype="section" n="48">
+          <p n="1">Wala≺x≻š ī Selūkān, Yazadbed ī bānūgān handarzbed, Pābag ī šafšēlār, Narseh ī Rind šasab, Tiyānag ī Hamadān šasab, Wardbed ī paristagbed, J̆ōymard ī Rastagān, Ardašīr ī *Wifr≺a≻gān, Abursām ī Šabuhr i darīgān sālār, Narseh Barragān, Šābuhr ī Narsehgān,</p>
+        </div>
+        <div type="textpart" subtype="section" n="49">
+          <p n="1">Narseh ī grastbed, Hormezd ī dibīrbed, pus Hormezd ī dibīrbed, Nādug ī zēndānīg, Pābag ī darbed, *Pāsfal ī *Pāsfalgān, *Ēwaxš ī dizbedgān, Kerdīr ī ēhrbed, Rastag ī Weh-Ardašīr šasab, Ardašīr ī bidaxšgān, Mihrxwāst ī ganzwar, Šābuhr ī framādār,</p>
+        </div>
+        <div type="textpart" subtype="section" n="50">
+          <p n="1">Arštād ī dibīr ī Mihrān ī az Ray, Sāsān ī šābestān ī Sāsāngān, Wīrōy ī wāzārbed, Ardašīr ī Nīrīz šasab, Baydād ī Wardbed≺a≻gān, Kerdīr Ardawān, Zurwāndād ī Bandagān, Winnār ī Sāsāngān, Sāsān ī dādwar, Wardān ī *Nāsbed≺a≻gān, Gulag ī wārāzbed</p>
+        </div>
+        <div type="textpart" subtype="section" n="51">
+          <p n="1">kū kē pas amā xwadāy bawād, ān yazdān huparistādar ud hugāmagdar bawād, kū ōy-iz yazad ēn ōwōn hayār bawānd, čiyōn amā būd.</p>
+        </div>
+      </div>
+    </body>
+  </text>
+</TEI>
