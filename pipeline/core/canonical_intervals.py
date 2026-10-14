@@ -22,7 +22,7 @@ def build_poetry_canonical_intervals(editions_dict):
             tag = elem.tag.split("}")[-1]
             if tag == "div":
                 subtype = (elem.get("subtype") or elem.get("type") or "").lower()
-                if subtype == "book" and elem.get("n"):
+                if subtype in ("book", "canto") and elem.get("n"):
                     current_book = elem.get("n").strip()
             elif tag == "milestone" and elem.get("unit") == "card":
                 card_n = (elem.get("n") or "").strip()
@@ -228,7 +228,7 @@ def build_poetry_canonical_intervals(editions_dict):
         tag = elem.tag.split("}")[-1]
         if tag == "div":
             subtype = (elem.get("subtype") or elem.get("type") or "").lower()
-            if subtype == "book" and elem.get("n"):
+            if subtype in ("book", "canto") and elem.get("n"):
                 current_book = elem.get("n").strip()
         elif tag == "l":
             ln = (elem.get("n") or "").strip()

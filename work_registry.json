@@ -1,4 +1,45 @@
 {
+  "dante.inferno": {
+    "textgroup": "dante",
+    "work": "inferno",
+    "title": "Dante, Inferno",
+    "editions": {
+      "petrocchi1994-ita1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/dante/inferno/dante.inferno.petrocchi1994-ita1.xml",
+        "label": "Italian (Petrocchi, 1994; UD treebank)",
+        "class": "italian-text",
+        "parse_mode": "poetry_cards"
+      }
+    },
+    "appcrits": {},
+    "translations": {
+      "longfellow1867-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/dante/inferno/dante.inferno.longfellow1867-eng1.xml",
+        "label": "English (Longfellow, 1867)",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "source_version": "petrocchi1994-ita1",
+        "source_certainty": "aligned_by_citation",
+        "source_note": "Aligned by the Inferno's stable canto-and-line citation system; Petrocchi 1994 is the viewer's Italian reference axis, not Longfellow's historical source edition."
+      }
+    },
+    "commentaries": {},
+    "treebanks": {
+      "ud-italian-old-ita1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/dante/inferno/dante.inferno.ud-italian-old-ita1.conllu",
+        "label": "Treebank (UD Italian-Old; Corbetta et al.)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_repo": "UniversalDependencies/UD_Italian-Old",
+        "source_version": "petrocchi1994-ita1"
+      }
+    },
+    "unit_labels": {
+      "book": "Canto",
+      "chapter": "Lines",
+      "section": "Section"
+    }
+  },
   "skz.inscription": {
     "textgroup": "skz",
     "work": "inscription",

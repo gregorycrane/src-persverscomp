@@ -20,7 +20,7 @@ TEXTGROUP_NAMESPACE = {
     "tlg": "greekLit", "phi": "latinLit",
     "anon": "angLit",
     "ferdowsi": "persLit", "boeckh": "latinLit",
-    "heike": "japaneseLit", "ariosto": "itaLit",
+    "heike": "japaneseLit", "ariosto": "itaLit", "dante": "itaLit",
     "skz": "iranianLit",
 }
 
