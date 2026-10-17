@@ -1469,7 +1469,7 @@ let activeWorkKey = "tlg0003.tlg001";
 
     function isFlatStructure(wKey) { return Array.isArray(GLOBAL_STRUCTURES[wKey]); }
     function isPoetryWork(wKey) { 
-        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0019.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085.") || wKey.startsWith("ariosto.");
+        return  wKey.startsWith("tlg2045.") ||  wKey.startsWith("phi0620.") || wKey.startsWith("tlg0001.") || wKey.startsWith("tlg0006.") || wKey.startsWith("tlg0011.") || wKey.startsWith("tlg0012.") || wKey.startsWith("tlg0019.") || wKey.startsWith("tlg0020.") || wKey.startsWith("ferdowsi.") || wKey.startsWith("tlg0085.") || wKey.startsWith("ariosto.") || wKey.startsWith("dante.");
     }
     // Generic per-work terminology, replacing the old hardcoded "Book"/
     // "Chapter" literals scattered through the nav UI. Sourced from
