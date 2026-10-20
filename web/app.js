@@ -27,6 +27,40 @@
         picker.addEventListener('change', () => setPmvColorTheme(picker.value));
     });
 
+    // Keep the reader's large book/line/alignment navigation collapsible. The
+    // toggle lives in the persistent banner, so it remains available while the
+    // navigation rows are hidden. Remember the choice without adding it to the
+    // shareable passage URL.
+    const PMV_NAVIGATION_HIDDEN_KEY = 'pmv-navigation-bars-hidden';
+    function setNavigationBarHidden(hidden, persist = true) {
+        const isHidden = Boolean(hidden);
+        document.body.classList.toggle('navigation-bars-hidden', isHidden);
+        const button = document.getElementById('btn-toggle-navigation');
+        if (button) {
+            button.textContent = isHidden ? 'Show navigation bar' : 'Hide navigation bar';
+            button.setAttribute('aria-pressed', String(isHidden));
+            button.setAttribute('title', isHidden
+                ? 'Restore passage navigation controls'
+                : 'Collapse passage navigation controls');
+        }
+        if (persist) {
+            try {
+                localStorage.setItem(PMV_NAVIGATION_HIDDEN_KEY, isHidden ? '1' : '0');
+            } catch (_) {}
+        }
+    }
+    function toggleNavigationBar() {
+        setNavigationBarHidden(!document.body.classList.contains('navigation-bars-hidden'));
+    }
+    window.setNavigationBarHidden = setNavigationBarHidden;
+    window.toggleNavigationBar = toggleNavigationBar;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let hidden = false;
+        try { hidden = localStorage.getItem(PMV_NAVIGATION_HIDDEN_KEY) === '1'; } catch (_) {}
+        setNavigationBarHidden(hidden, false);
+    });
+
     const GLOBAL_STRUCTURES = STRUCT_REPLACE;
     const TEXT_REGISTRY    = REGISTRY_REPLACE;
     // The shard loader updates window.*. These aliases make those updates

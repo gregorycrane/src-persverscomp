@@ -56,6 +56,9 @@
             <a class="toggle-btn" href="./lexicon-browser.html" style="text-decoration:none;display:inline-flex;align-items:center;">Browse Lexica</a>
             <button class="toggle-btn" onclick="openMapForCurrentPassage()">Map this passage</button>
             <button class="toggle-btn" onclick="openMapForCurrentBook()">Map this book</button>
+            <button id="btn-toggle-navigation" class="toggle-btn" type="button"
+                    aria-controls="nav-bar browse-bar" aria-pressed="false"
+                    onclick="toggleNavigationBar()">Hide navigation bar</button>
             <label class="theme-picker" title="Try another viewer color scheme">
               <span>Theme</span>
               <select id="pmv-theme-select" class="pmv-theme-select" aria-label="Viewer color theme">
