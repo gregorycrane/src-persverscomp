@@ -2145,9 +2145,38 @@ function initializeRoutingFromURL() {
             document.createTextNode("  —  " + payload.urn)
         );
         
-        const validEditions = Object.entries(TEXT_REGISTRY).filter(([key, meta]) => {
+        let validEditions = Object.entries(TEXT_REGISTRY).filter(([key, meta]) => {
             return meta.textgroup === payload.textgroup && meta.work === payload.work;
         });
+
+        // SQLite does not guarantee row order when text_units is read without
+        // an ORDER BY, so insertion history must not decide which edition is
+        // shown in the Focus column.  catalog.json already carries the
+        // intentional version order (for example Meineke 1839 before Kock
+        // 1880); apply that order before choosing any default columns.  Keep
+        // uncatalogued layers after catalogued ones and preserve their
+        // relative database order.
+        const catalogWork = CATALOG && CATALOG.works
+            && CATALOG.works[`${payload.textgroup}.${payload.work}`];
+        const catalogVersionOrder = new Map();
+        ((catalogWork && catalogWork.versions) || []).forEach((version, index) => {
+            if (version.canonical_id) catalogVersionOrder.set(version.canonical_id, index);
+            if (version.short_id) catalogVersionOrder.set(version.short_id, index);
+        });
+        validEditions = validEditions
+            .map((entry, databaseIndex) => ({ entry, databaseIndex }))
+            .sort((a, b) => {
+                const [aId, aMeta] = a.entry;
+                const [bId, bMeta] = b.entry;
+                const aRank = catalogVersionOrder.get(aId)
+                    ?? catalogVersionOrder.get(aMeta.short_id);
+                const bRank = catalogVersionOrder.get(bId)
+                    ?? catalogVersionOrder.get(bMeta.short_id);
+                return (aRank ?? Number.MAX_SAFE_INTEGER)
+                    - (bRank ?? Number.MAX_SAFE_INTEGER)
+                    || a.databaseIndex - b.databaseIndex;
+            })
+            .map(item => item.entry);
         
         if (validEditions.length > 0) {
             const editions = validEditions.filter(([_, m]) => m.doc_type === 'edition');
