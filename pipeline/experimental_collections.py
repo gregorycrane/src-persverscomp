@@ -591,8 +591,9 @@ def _publish_aristophanes_fragments(site_root, catalog):
     )
 
 
-def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_label):
-    """Publish one registered Kock volume across its comic textgroups.
+def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_label,
+                          editor="Theodor Kock"):
+    """Publish one registered comic-fragment edition across its textgroups.
 
     The ordinary corpus builder does not ingest ``fragment_editions``.  Kock is
     therefore materialized here, after the special tragic-fragment publishers,
@@ -619,7 +620,7 @@ def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_
         catalog.setdefault("authors", {})[textgroup] = author
         source = build_play_level_fragments(
             CORPUS_DATA_DIR / textgroup, textgroup, short_id,
-            author, label, "Theodor Kock")
+            author, label, editor)
         published_model = materialize_work_views(source)
         model_by_work = {work["work"]: work
                          for work in published_model["works"].values()}
@@ -679,6 +680,43 @@ def _publish_kock_fragments(site_root, catalog):
         _publish_kock_edition(site_root, catalog, registry, *volume)
         for volume in volumes
     )
+
+
+def _publish_meineke_fragments(site_root, catalog):
+    """Publish Meineke FCG II beside the established Kock work identities."""
+    registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
+    short_id = "meineke1839-grc1"
+    registered = {
+        key for key, record in registry.items()
+        if short_id in record.get("fragment_editions", {})
+    }
+    stale = []
+    for work_key, meta in catalog.get("works", {}).items():
+        if work_key in registered or not any(
+                version.get("short_id") == short_id
+                for version in meta.get("versions", [])):
+            continue
+        db_path = (site_root / "data" / meta["textgroup"] / meta["work"] /
+                   meta["parts"][0]["file"])
+        if db_path.exists():
+            conn = sqlite3.connect(db_path)
+            conn.execute("DELETE FROM text_segments WHERE version_short_id=?", (short_id,))
+            conn.execute("DELETE FROM edition_chapter_order WHERE version_short_id=?", (short_id,))
+            conn.execute("DELETE FROM text_units WHERE short_id=?", (short_id,))
+            conn.commit()
+            conn.close()
+        meta["versions"] = [version for version in meta.get("versions", [])
+                            if version.get("short_id") != short_id]
+        if not meta["versions"]:
+            if db_path.exists():
+                db_path.unlink()
+            stale.append(work_key)
+    for work_key in stale:
+        catalog["works"].pop(work_key)
+    return _publish_kock_edition(
+        site_root, catalog, registry,
+        short_id, "Greek (Meineke, 1839; OCR draft)",
+        "Meineke FCG II sources and notes", "August Meineke")
 
 
 def _append_fragment_version(site_root, catalog, work_key, work, version, source_label):
@@ -797,6 +835,7 @@ def publish(site_root=None):
     aristophanes_fragments = _publish_aristophanes_fragments(site_root, catalog)
     nauck_authors = _publish_nauck_author_corpora(site_root, catalog) + 1
     kock_fragments = _publish_kock_fragments(site_root, catalog)
+    meineke_fragments = _publish_meineke_fragments(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = (fragments + sophocles_fragments + euripides_fragments
@@ -805,8 +844,10 @@ def publish(site_root=None):
           f"({sophocles_fragments} Sophocles, {euripides_fragments} Euripides, "
           f"{aristophanes_fragments} Aristophanes), "
           f"{kock_fragments} Kock CAF I–III work editions, "
+          f"{meineke_fragments} Meineke FCG II work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,
+            "meineke_works": meineke_fragments,
             "fragment_authors": nauck_authors,
             "claudel_versions": claudel}

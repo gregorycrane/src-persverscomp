@@ -30,8 +30,8 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0085"}
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
-    assert result == {"fragment_works": 75, "kock_works": 1033,
-                      "fragment_authors": 55,
+    assert result == {"fragment_works": 75, "kock_works": 1328,
+                      "meineke_works": 302, "fragment_authors": 55,
                       "claudel_versions": 3}
     assert len(fragments) == 75
     assert len(sophocles) == 118
@@ -77,6 +77,16 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
         version["short_id"]
         for version in rebuilt["works"]["tlg0019.adelon_dramaton"]["versions"]
     }
+    assert "meineke1839-grc1" in {
+        version["short_id"]
+        for version in rebuilt["works"]["tlg0423.tympanistai"]["versions"]
+    }
+    assert not any(
+        version["short_id"] == "meineke1839-grc1"
+        for key, work in rebuilt["works"].items()
+        if key.startswith(("tlg9002.", "tlg9003."))
+        for version in work.get("versions", [])
+    )
     assert "kock1884-grc1" in {
         version["short_id"]
         for version in rebuilt["works"]["tlg0410.adelon_dramaton"]["versions"]
