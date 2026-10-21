@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 from lxml import etree
 
@@ -13,6 +14,14 @@ XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
 
 def _text(element):
     return " ".join("".join(element.itertext()).split())
+
+
+def _fragment_number_key(fragment):
+    value = str(fragment.get("number") or "")
+    match = re.fullmatch(r"(\d+)(?:_(\d+))?", value)
+    if match:
+        return (0, int(match.group(1)), int(match.group(2) or 0))
+    return (1, value, 0)
 
 
 def build(data_root: Path, textgroup: str, version: str, author: str,
@@ -31,7 +40,7 @@ def build(data_root: Path, textgroup: str, version: str, author: str,
         object_urn = edition.get("corresp")
         title = edition.xpath("string(tei:head[1])", namespaces=NS).strip()
         record_id = f"{author.lower()}-{version}-{work}"
-        targets = []
+        source_fragments = []
         for fragment in edition.xpath("./tei:div[@subtype='fragment']", namespaces=NS):
             number = fragment.get("n")
             source_urn = f"{edition_urn}:{number}"
@@ -54,8 +63,10 @@ def build(data_root: Path, textgroup: str, version: str, author: str,
                 "play_title": title, "play_work": work,
                 "play_urn": object_urn,
             }
-            fragments.append(record)
-            targets.append(source_urn)
+            source_fragments.append(record)
+        source_fragments.sort(key=_fragment_number_key)
+        fragments.extend(source_fragments)
+        targets = [fragment["source_fragment_urn"] for fragment in source_fragments]
         record_type = ("fragment_collection"
                        if "fragmentarycollections" in (object_urn or "")
                        else "fragmentary_play")

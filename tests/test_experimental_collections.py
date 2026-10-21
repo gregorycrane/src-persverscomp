@@ -81,6 +81,19 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
         version["short_id"]
         for version in rebuilt["works"]["tlg0423.tympanistai"]["versions"]
     }
+    kretes_meta = rebuilt["works"]["tlg0414.kretes"]
+    assert [version["short_id"] for version in kretes_meta["versions"]] == [
+        "meineke1839-grc1", "kock1880-grc1"
+    ]
+    assert kretes_meta["parts"][0]["chapters"] == ["5", "6", "7", "8"]
+    with sqlite3.connect(
+            site / "data/tlg0414/kretes/tlg0414.kretes.part1.db") as conn:
+        aligned = conn.execute(
+            "SELECT s.version_short_id FROM alignment_grid g "
+            "JOIN text_segments s ON s.passage_urn=g.passage_urn "
+            "WHERE g.chapter='6' ORDER BY s.version_short_id"
+        ).fetchall()
+        assert aligned == [("kock1880-grc1",), ("meineke1839-grc1",)]
     assert not any(
         version["short_id"] == "meineke1839-grc1"
         for key, work in rebuilt["works"].items()

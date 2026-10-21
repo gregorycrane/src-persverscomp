@@ -1,10 +1,12 @@
 """Publish TEI-first fragment collections and the Claudel trial collections."""
 from copy import deepcopy
+from difflib import SequenceMatcher
 import hashlib
-from html import escape
+from html import escape, unescape
 import json
 import os
 from pathlib import Path
+import re
 import shutil
 import sqlite3
 from lxml import etree
@@ -27,6 +29,7 @@ from pipeline.sophocles_fragment_concordance import (
     PEARSON as SOPHOCLES_PEARSON,
     align_fragments as align_sophocles_fragments,
     merge_work_views as merge_sophocles_work_views,
+    normalized_context,
     safe_card_id,
 )
 from pipeline.sophocles_dindorf_concordance import (
@@ -592,7 +595,7 @@ def _publish_aristophanes_fragments(site_root, catalog):
 
 
 def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_label,
-                          editor="Theodor Kock"):
+                          editor="Theodor Kock", align_to_kock=False):
     """Publish one registered comic-fragment edition across its textgroups.
 
     The ordinary corpus builder does not ingest ``fragment_editions``.  Kock is
@@ -655,7 +658,7 @@ def _publish_kock_edition(site_root, catalog, registry, short_id, label, source_
             version["edition_urn"] = registered["urn"]
             version["label"] = registered["label"]
             _append_fragment_version(site_root, catalog, work_key, work,
-                                     version, source_label)
+                                     version, source_label, align_to_kock)
             published += 1
     return published
 
@@ -716,10 +719,71 @@ def _publish_meineke_fragments(site_root, catalog):
     return _publish_kock_edition(
         site_root, catalog, registry,
         short_id, "Greek (Meineke, 1839; OCR draft)",
-        "Meineke FCG II sources and notes", "August Meineke")
+        "Meineke FCG II sources and notes", "August Meineke", True)
 
 
-def _append_fragment_version(site_root, catalog, work_key, work, version, source_label):
+def _fragment_from_html(urn, chapter, content):
+    """Recover enough quoted text from a published card for concordance."""
+    verse_match = re.search(
+        r'<div class="fc-verse">(.*?)</div>', content, flags=re.DOTALL)
+    context_match = re.search(
+        r'<details class="fc-context"[^>]*>.*?<div>(.*?)</div></details>',
+        content, flags=re.DOTALL)
+
+    def plain(value):
+        return " ".join(unescape(re.sub(r"<[^>]+>", " ", value or "")).split())
+
+    verse = plain(verse_match.group(1) if verse_match else "")
+    if verse == "Testimonium only in this encoding.":
+        verse = ""
+    return {
+        "number": chapter, "source_fragment_urn": urn,
+        "lines": ([{"text": verse}] if verse else []),
+        "context": plain(context_match.group(1) if context_match else content),
+    }
+
+
+def _edition_year(short_id):
+    match = re.search(r"(?:18|19|20)\d{2}", short_id or "")
+    return int(match.group()) if match else 9999
+
+
+def _align_context_only(current, existing, already_matched):
+    """Conservatively align testimonia that have no separately quoted lines."""
+    left = [item for item in current
+            if id(item) not in already_matched and not item.get("lines")]
+    used = {id(item) for item in already_matched.values()}
+    right = [item for item in existing
+             if id(item) not in used and not item.get("lines")]
+    if not left or not right:
+        return {}
+
+    def scores(source, targets):
+        return {id(item): sorted(
+            ((SequenceMatcher(None, normalized_context(item),
+                              normalized_context(other)).ratio(), other)
+             for other in targets), key=lambda pair: pair[0], reverse=True)
+            for item in source}
+
+    forward, reverse = scores(left, right), scores(right, left)
+    answer = {}
+    for item in left:
+        ranked = forward[id(item)]
+        score, other = ranked[0]
+        runner_up = ranked[1][0] if len(ranked) > 1 else 0.0
+        backward = reverse[id(other)]
+        reverse_runner_up = backward[1][0] if len(backward) > 1 else 0.0
+        if (score >= 0.55 and score - runner_up >= 0.15
+                and backward[0][1] is item
+                and score - reverse_runner_up >= 0.15):
+            answer[id(item)] = other
+    return answer
+
+
+def _append_fragment_version(
+    site_root, catalog, work_key, work, version, source_label,
+    align_to_kock=False,
+):
     """Append one independently numbered fragment edition to an existing work."""
     meta = catalog["works"][work_key]
     textgroup, work_id = work_key.split(".", 1)
@@ -734,23 +798,67 @@ def _append_fragment_version(site_root, catalog, work_key, work, version, source
         (_fragment_focus(textgroup, work_id, short_id), version["edition_urn"],
          version["label"], "greek-text", textgroup, work_id, short_id, "edition"))
     fragments = work.get("fragments", [])
-    card_urns = [_fragment_passage_urn(fragment, version["edition_urn"])
-                 for fragment in fragments]
-    for index, fragment in enumerate(fragments):
-        chapter = f"K{fragment['number']}"
-        card_urn = card_urns[index]
-        sort_order = conn.execute(
-            "SELECT COALESCE(MAX(sort_order), -1) + 1 FROM alignment_grid").fetchone()[0]
-        conn.execute("INSERT OR IGNORE INTO alignment_grid VALUES (?,?,?,?,?,?,?,?,?)",
-                     (card_urn, textgroup, work_id, None, chapter, "1",
-                      card_urns[index - 1] if index else None,
-                      card_urns[index + 1] if index + 1 < len(card_urns) else None,
-                      sort_order))
+    matched = {}
+    if align_to_kock and fragments:
+        rows = conn.execute(
+            "SELECT g.passage_urn, g.chapter, s.content_html "
+            "FROM alignment_grid g JOIN text_segments s "
+            "ON s.passage_urn=g.passage_urn "
+            "WHERE s.version_short_id LIKE 'kock%-grc1' "
+            "ORDER BY s.version_short_id, g.sort_order").fetchall()
+        existing = [_fragment_from_html(*row) for row in rows]
+        for current, prior, _, _ in align_sophocles_fragments(
+                fragments, existing):
+            matched[id(current)] = prior
+        matched.update(_align_context_only(fragments, existing, matched))
+
+    assignments = []
+    occupied = {row[0] for row in conn.execute(
+        "SELECT chapter FROM alignment_grid").fetchall()}
+    for fragment in fragments:
+        prior = matched.get(id(fragment))
+        if prior:
+            assignments.append((prior["source_fragment_urn"], prior["number"]))
+            continue
+        chapter = str(fragment["number"])
+        if align_to_kock and chapter in occupied:
+            chapter = f"M{chapter}"
+        assignments.append(
+            (_fragment_passage_urn(fragment, version["edition_urn"]), chapter))
+        occupied.add(chapter)
+
+    for index, (fragment, (card_urn, chapter)) in enumerate(
+            zip(fragments, assignments)):
+        existing_row = conn.execute(
+            "SELECT sort_order FROM alignment_grid WHERE passage_urn=?", (card_urn,)
+        ).fetchone()
+        if existing_row is None:
+            sort_order = conn.execute(
+                "SELECT COALESCE(MAX(sort_order), -1) + 1 FROM alignment_grid"
+            ).fetchone()[0]
+            conn.execute("INSERT INTO alignment_grid VALUES (?,?,?,?,?,?,?,?,?)",
+                         (card_urn, textgroup, work_id, None, chapter, "1",
+                          assignments[index - 1][0] if index else None,
+                          assignments[index + 1][0] if index + 1 < len(assignments) else None,
+                          sort_order))
+        else:
+            if align_to_kock:
+                conn.execute("UPDATE alignment_grid SET chapter=? WHERE passage_urn=?",
+                             (chapter, card_urn))
+            else:
+                conn.execute(
+                    "UPDATE alignment_grid SET chapter=?, sort_order=? "
+                    "WHERE passage_urn=?", (chapter, index, card_urn))
         conn.execute("INSERT OR REPLACE INTO text_segments VALUES (?,?,?)",
                      (card_urn, short_id,
                       _fragment_html(work, fragment, source_label)))
         conn.execute("INSERT INTO edition_chapter_order VALUES (?,?,?,?,?,?)",
                      (textgroup, work_id, short_id, None, chapter, index))
+    conn.execute(
+        "DELETE FROM alignment_grid WHERE passage_urn NOT IN "
+        "(SELECT DISTINCT passage_urn FROM text_segments)")
+    ordered_chapters = [row[0] for row in conn.execute(
+        "SELECT chapter FROM alignment_grid ORDER BY sort_order").fetchall()]
     conn.commit()
     conn.execute("VACUUM")
     conn.close()
@@ -761,9 +869,9 @@ def _append_fragment_version(site_root, catalog, work_key, work, version, source
         "short_id": short_id, "urn": version["edition_urn"],
         "label": version["label"], "doc_type": "edition",
         "text_class": "greek-text"})
-    chapters = meta["parts"][0].setdefault("chapters", [])
-    chapters.extend(chapter for chapter in (f"K{f['number']}" for f in fragments)
-                    if chapter not in chapters)
+    meta["versions"].sort(key=lambda item: (
+        _edition_year(item.get("short_id")), item.get("short_id", "")))
+    meta["parts"][0]["chapters"] = ordered_chapters
     meta["parts"][0]["bytes"] = db_path.stat().st_size
     meta["parts"][0]["sha256"] = hashlib.sha256(db_path.read_bytes()).hexdigest()
 
