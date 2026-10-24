@@ -55,11 +55,9 @@ AUTHORS = {
     "clearchus": ("0432", "CLEARCHUS"),
     "antidotus": ("0409", "ANTIDOTUS"),
     "axionicus": ("0424", "AXIONICUS"),
-    # No TLG author records exist for these two minor comic poets in the
-    # supplied canon-keys.txt; the 9001/9002 identifiers are explicitly local.
-    "callicrates": ("9001", "CALLICRATES COMICUS [LOCAL ID]"),
+    "callicrates": ("1783", "CALLICRATES"),
     "epigenes": ("0452", "EPIGENES"),
-    "dromon": ("9002", "DROMON COMICUS [LOCAL ID]"),
+    "dromon": ("0448", "DROMO"),
     "diodorus": ("0444", "DIODORUS"),
     "dionysius": ("0445", "DIONYSIUS"),
     "eriphus": ("0455", "ERIPHUS"),
@@ -289,7 +287,7 @@ def main():
         "generated": records, "skipped_empty_headings": skipped,
         "generated_files": len(records),
         "generated_fragments": sum(record["fragments"] for record in records),
-        "local_authorities": {"tlg9001": "Callicrates Comicus", "tlg9002": "Dromon Comicus"},
+        "local_authorities": {},
     }
     if args.report:
         args.report.parent.mkdir(parents=True, exist_ok=True)

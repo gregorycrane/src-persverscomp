@@ -28785,7 +28785,7 @@
       "kock1888-grc1": {
         "path": "/Users/gcrane/github/grcnewfragments/data/tlg0497/nikai/tlg0497.nikai.kock1888-grc1.xml",
         "urn": "urn:cts:greekLit:tlg0497.nikai.kock1888-grc1",
-        "label": "Greek (Kock, 1888; OCR draft): ΝΙΚΑΙ",
+        "label": "Greek (Kock, 1888; OCR draft): Νίκαι",
         "class": "greek-text",
         "format": "tei_fragment_work",
         "corresp_axis": "fragment"
@@ -28800,7 +28800,7 @@
       }
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0497_nikai",
-    "source_title": "ΝΙΚΑΙ",
+    "source_title": "Νίκαι",
     "source_edition": "multiple-fragment-editions"
   },
   "tlg0497.nyx_makra": {
@@ -30857,7 +30857,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0398_megarike",
     "source_title": "ΜΕΓΑΡΙΚΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.agkylion": {
     "textgroup": "tlg0402",
@@ -30915,7 +30915,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_agonis",
     "source_title": "ΑΓΩΝΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.agonis_e_ippiskos": {
     "textgroup": "tlg0402",
@@ -31047,7 +31047,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_aipoloi",
     "source_title": "ΑΙΠΟΛΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.aisopos": {
     "textgroup": "tlg0402",
@@ -31105,7 +31105,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_aichmalotos",
     "source_title": "ΑΙΧΜΑΛΩΤΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.ampeloyrgos": {
     "textgroup": "tlg0402",
@@ -31328,7 +31328,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_asklepiokleides",
     "source_title": "ΑΣΚΛΗΠΙΟΚΛΕΙΔΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.asotodidaskalos": {
     "textgroup": "tlg0402",
@@ -31386,7 +31386,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_atalante",
     "source_title": "ΑΤΑΛΑΝΤΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.achaiis": {
     "textgroup": "tlg0402",
@@ -31444,7 +31444,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_bostrychos",
     "source_title": "ΒΟΣΤΡΥΧΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.brettia": {
     "textgroup": "tlg0402",
@@ -31700,7 +31700,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_diapleoysai",
     "source_title": "ΔΙΑΠΛΕΟΥΣΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.didymoi": {
     "textgroup": "tlg0402",
@@ -31758,7 +31758,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_dis_penthon",
     "source_title": "ΔΙΣ ΠΕΝΘΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.dorkis_e_poppyzoysa": {
     "textgroup": "tlg0402",
@@ -32047,7 +32047,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_ellenis",
     "source_title": "ΕΛΛΗΝΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.epidayrios": {
     "textgroup": "tlg0402",
@@ -32072,7 +32072,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_epidayrios",
     "source_title": "ΕΠΙΔΑΥΡΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.epikleros": {
     "textgroup": "tlg0402",
@@ -32130,7 +32130,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_epistole",
     "source_title": "ΕΠΙΣΤΟΛΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.epitropos": {
     "textgroup": "tlg0402",
@@ -32155,7 +32155,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_epitropos",
     "source_title": "ΕΠΙΤΡΟΠΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.epta_epi_thebais": {
     "textgroup": "tlg0402",
@@ -32180,7 +32180,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_epta_epi_thebais",
     "source_title": "ΕΠΤΑ ΕΠΙ ΘΗΒΑΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.eretrikos": {
     "textgroup": "tlg0402",
@@ -32436,7 +32436,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_iasis",
     "source_title": "ΙΑΣΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.ippeys": {
     "textgroup": "tlg0402",
@@ -32593,7 +32593,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_karchedonios",
     "source_title": "ΚΑΡΧΗΔΟΝΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.katapseydomenos": {
     "textgroup": "tlg0402",
@@ -32618,7 +32618,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_katapseydomenos",
     "source_title": "ΚΑΤΑΨΕΥΔΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.kaynioi": {
     "textgroup": "tlg0402",
@@ -32709,7 +32709,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.kleoboyline": {
     "textgroup": "tlg0402",
@@ -32734,7 +32734,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_kleoboyline",
     "source_title": "ΚΛΕΟΒΟΥΛΙΝΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.knidia": {
     "textgroup": "tlg0402",
@@ -32759,7 +32759,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_knidia",
     "source_title": "ΚΝΙΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.koniates": {
     "textgroup": "tlg0402",
@@ -32784,7 +32784,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_koniates",
     "source_title": "ΚΟΝΙΑΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.koyris": {
     "textgroup": "tlg0402",
@@ -32908,7 +32908,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_kybeytai",
     "source_title": "ΚΥΒΕΥΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.kyknos": {
     "textgroup": "tlg0402",
@@ -32933,7 +32933,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_kyknos",
     "source_title": "ΚΥΚΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.kyprios": {
     "textgroup": "tlg0402",
@@ -32991,7 +32991,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_lampas",
     "source_title": "ΛΑΜΠΑΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.lebes": {
     "textgroup": "tlg0402",
@@ -33412,7 +33412,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_mylothros",
     "source_title": "ΜΥΛΩΘΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.odysseys_aponizomenos": {
     "textgroup": "tlg0402",
@@ -33437,7 +33437,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_odysseys_aponizomenos",
     "source_title": "ΟΔΥΣΣΕΥΣ ΑΠΟΝΙΖΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.odysseys_yphainon": {
     "textgroup": "tlg0402",
@@ -33495,7 +33495,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_olympiodoros",
     "source_title": "ΟΛΥΜΠΙΟΔΩΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.olynthia": {
     "textgroup": "tlg0402",
@@ -33553,7 +33553,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_omoia",
     "source_title": "ΟΜΟΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.opora": {
     "textgroup": "tlg0402",
@@ -33809,7 +33809,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_pezonike",
     "source_title": "ΠΕΖΟΝΙΚΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.poietai": {
     "textgroup": "tlg0402",
@@ -34032,7 +34032,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_protochoros",
     "source_title": "ΠΡΩΤΟΧΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.pythagorizoysa": {
     "textgroup": "tlg0402",
@@ -34090,7 +34090,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_pylaia",
     "source_title": "ΠΥΛΑΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.pyraynos": {
     "textgroup": "tlg0402",
@@ -34742,7 +34742,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_pharmakopoles",
     "source_title": "ΦΑΡΜΑΚΟΠΩΛΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.pheidippos": {
     "textgroup": "tlg0402",
@@ -34767,7 +34767,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0402_pheidippos",
     "source_title": "ΦΕΙΔΙΠΠΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0402.philathenaios": {
     "textgroup": "tlg0402",
@@ -35196,7 +35196,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0404_alkmeon",
     "source_title": "ΑΛΚΜΕΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0404.ampeloyrgos": {
     "textgroup": "tlg0404",
@@ -35254,7 +35254,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0404_amphikrates",
     "source_title": "ΑΜΦΙΚΡΑΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0404.balaneion": {
     "textgroup": "tlg0404",
@@ -35576,7 +35576,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0404_kotris",
     "source_title": "ΚΟΤΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0404.koyris": {
     "textgroup": "tlg0404",
@@ -35634,7 +35634,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0404_kybeytai",
     "source_title": "ΚΥΒΕΥΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0404.leykadia": {
     "textgroup": "tlg0404",
@@ -35659,7 +35659,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0404_leykadia",
     "source_title": "ΛΕΥΚΑΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0404.odysseys": {
     "textgroup": "tlg0404",
@@ -36047,7 +36047,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_areos_paidion",
     "source_title": "ΑΡΕΟΣ ΠΑΙΔΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.achilleys": {
     "textgroup": "tlg0405",
@@ -36138,7 +36138,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_didymoi",
     "source_title": "ΔΙΔΥΜΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.elene": {
     "textgroup": "tlg0405",
@@ -36196,7 +36196,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_zographoi",
     "source_title": "ΖΩΓΡΑΦΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.erakles": {
     "textgroup": "tlg0405",
@@ -36254,7 +36254,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_thettaloi",
     "source_title": "ΘΕΤΤΑΛΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.thesayros": {
     "textgroup": "tlg0405",
@@ -36345,7 +36345,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_kanephoros",
     "source_title": "ΚΑΝΗΦΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.kerkios": {
     "textgroup": "tlg0405",
@@ -36370,7 +36370,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_kerkios",
     "source_title": "ΚΕΡΚΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.kitharistria": {
     "textgroup": "tlg0405",
@@ -36395,7 +36395,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_kitharistria",
     "source_title": "ΚΙΘΑΡΙΣΤΡΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.kynegetai": {
     "textgroup": "tlg0405",
@@ -36420,7 +36420,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_kynegetai",
     "source_title": "ΚΥΝΗΓΕΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.komoidotragoidia": {
     "textgroup": "tlg0405",
@@ -36445,7 +36445,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_komoidotragoidia",
     "source_title": "ΚΩΜΩΙΔΟΤΡΑΓΩΙΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.lokrides": {
     "textgroup": "tlg0405",
@@ -36470,7 +36470,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_lokrides",
     "source_title": "ΛΟΚΡΙΔΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.lykoyrgos": {
     "textgroup": "tlg0405",
@@ -36825,7 +36825,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_satyrias",
     "source_title": "ΣΑΤΥΡΙΑΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.sosippos": {
     "textgroup": "tlg0405",
@@ -36850,7 +36850,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_sosippos",
     "source_title": "ΣΩΣΙΠΠΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.tbris": {
     "textgroup": "tlg0405",
@@ -36875,7 +36875,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0405_tbris",
     "source_title": "ΤΒΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0405.tereys": {
     "textgroup": "tlg0405",
@@ -37139,7 +37139,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0406_glaykos",
     "source_title": "ΓΛΑΥΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0406.eyandria": {
     "textgroup": "tlg0406",
@@ -37164,7 +37164,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0406_eyandria",
     "source_title": "ΕΥΑΝΔΡΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0406.kalypso": {
     "textgroup": "tlg0406",
@@ -37387,7 +37387,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0406_nereys",
     "source_title": "ΝΗΡΕΥΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0406.ornithokomoi": {
     "textgroup": "tlg0406",
@@ -37412,7 +37412,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0406_ornithokomoi",
     "source_title": "ΟΡΝΙΘΟΚΟΜΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0406.ploysioi": {
     "textgroup": "tlg0406",
@@ -37602,7 +37602,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0409_mempsimoiros",
     "source_title": "ΜΕΜΨΙΜΟΙΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0409.protochoros": {
     "textgroup": "tlg0409",
@@ -37660,7 +37660,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0409_tyrrenos",
     "source_title": "ΤΥΡΡΗΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.agroikos": {
     "textgroup": "tlg0410",
@@ -37718,7 +37718,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_adelphai",
     "source_title": "ΑΔΕΛΦΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.adelon_dramaton": {
     "textgroup": "tlg0410",
@@ -38015,7 +38015,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_amphisbetesima",
     "source_title": "ΑΜΦΙΣΒΗΤΗΣΙΜΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.anasoizomenoi": {
     "textgroup": "tlg0410",
@@ -38040,7 +38040,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_anasoizomenoi",
     "source_title": "ΑΝΑΣΩΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.andromeda": {
     "textgroup": "tlg0410",
@@ -38065,7 +38065,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_andromeda",
     "source_title": "ΑΝΔΡΟΜΕΔΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.antaios": {
     "textgroup": "tlg0410",
@@ -38090,7 +38090,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_antaios",
     "source_title": "ΑΝΤΑΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.anteia": {
     "textgroup": "tlg0410",
@@ -38148,7 +38148,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_anterosa",
     "source_title": "ΑΝΤΕΡΩΣΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.apokarteron": {
     "textgroup": "tlg0410",
@@ -38173,7 +38173,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_apokarteron",
     "source_title": "ΑΠΟΚΑΡΤΕΡΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.argyrioy_aphanismos": {
     "textgroup": "tlg0410",
@@ -38198,7 +38198,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_argyrioy_aphanismos",
     "source_title": "ΑΡΓΥΡΙΟΥ ΑΦΑΝΙΣΜΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.arkas": {
     "textgroup": "tlg0410",
@@ -38355,7 +38355,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_asotoi",
     "source_title": "ΑΣΩΤΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.ayletes": {
     "textgroup": "tlg0410",
@@ -38512,7 +38512,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_aphrodisios_aphrodites_gonai",
     "source_title": "ΑΦΡΟΔΙΣΙΟΣ ΑΦΡΟΔΙΤΗΣ ΓΟΝΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.aphrodites_gonai": {
     "textgroup": "tlg0410",
@@ -38570,7 +38570,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_bakchai",
     "source_title": "ΒΑΚΧΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.batalos": {
     "textgroup": "tlg0410",
@@ -38595,7 +38595,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_batalos",
     "source_title": "ΒΑΤΑΛΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.boiotis": {
     "textgroup": "tlg0410",
@@ -38752,7 +38752,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_bybliographos",
     "source_title": "ΒΥΒΛΙΟΓΡΑΦΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.byzantios": {
     "textgroup": "tlg0410",
@@ -38777,7 +38777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_byzantios",
     "source_title": "ΒΥΖΑΝΤΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.gamos": {
     "textgroup": "tlg0410",
@@ -38868,7 +38868,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_glaykos",
     "source_title": "ΓΛΑΥΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.gorgythos": {
     "textgroup": "tlg0410",
@@ -38893,7 +38893,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_gorgythos",
     "source_title": "ΓΟΡΓΥΘΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.deykalion": {
     "textgroup": "tlg0410",
@@ -38951,7 +38951,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_delia",
     "source_title": "ΔΗΛΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.didymoi": {
     "textgroup": "tlg0410",
@@ -39042,7 +39042,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_drapetagogos",
     "source_title": "ΔΡΑΠΕΤΑΓΩΓΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.dyserotes": {
     "textgroup": "tlg0410",
@@ -39199,7 +39199,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_epikleros",
     "source_title": "ΕΠΙΚΛΗΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.eythydikos": {
     "textgroup": "tlg0410",
@@ -39653,7 +39653,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_kepoyros",
     "source_title": "ΚΗΠΟΥΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.kitharistes": {
     "textgroup": "tlg0410",
@@ -39777,7 +39777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_knapheys",
     "source_title": "ΚΝΑΦΕΥΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.knoithideys_e_gastron": {
     "textgroup": "tlg0410",
@@ -39934,7 +39934,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_kybeytai",
     "source_title": "ΚΥΒΕΥΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.kyklops": {
     "textgroup": "tlg0410",
@@ -40124,7 +40124,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_leonides",
     "source_title": "ΛΕΩΝΙΔΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.lemniai": {
     "textgroup": "tlg0410",
@@ -40182,7 +40182,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_lydos",
     "source_title": "ΛΥΔΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.lykon": {
     "textgroup": "tlg0410",
@@ -40405,7 +40405,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_medeia",
     "source_title": "ΜΗΔΕΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.metragyrtes": {
     "textgroup": "tlg0410",
@@ -40463,7 +40463,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_metrophon",
     "source_title": "ΜΗΤΡΟΦΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.midon": {
     "textgroup": "tlg0410",
@@ -40488,7 +40488,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_midon",
     "source_title": "ΜΙΔΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.minos": {
     "textgroup": "tlg0410",
@@ -40513,7 +40513,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_minos",
     "source_title": "ΜΙΝΩΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.misoponeros": {
     "textgroup": "tlg0410",
@@ -40637,7 +40637,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_mylon",
     "source_title": "ΜΥΛΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.mystis": {
     "textgroup": "tlg0410",
@@ -40794,7 +40794,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_oinomaos_e_pelops",
     "source_title": "ΟΙΝΟΜΑΟΣ Η ΠΕΛΟΨ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.omoioi": {
     "textgroup": "tlg0410",
@@ -40852,7 +40852,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_omopatrioi",
     "source_title": "ΟΜΟΠΑΤΡΙΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.omphale": {
     "textgroup": "tlg0410",
@@ -40976,7 +40976,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_paiderastes",
     "source_title": "ΠΑΙΔΕΡΑΣΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.parasitos": {
     "textgroup": "tlg0410",
@@ -41529,7 +41529,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_phaon",
     "source_title": "ΦΑΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.philetairos": {
     "textgroup": "tlg0410",
@@ -41587,7 +41587,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_philiskos",
     "source_title": "ΦΙΛΙΣΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.philothebaios": {
     "textgroup": "tlg0410",
@@ -41711,7 +41711,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_philopator",
     "source_title": "ΦΙΛΟΠΑΤΩΡ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.philotis": {
     "textgroup": "tlg0410",
@@ -42148,7 +42148,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0421_kallonides",
     "source_title": "ΚΑΛΛΩΝΙΔΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0421.parakatatheke": {
     "textgroup": "tlg0421",
@@ -42173,7 +42173,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0421_parakatatheke",
     "source_title": "ΠΑΡΑΚΑΤΑΘΗΚΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0421.perithoys": {
     "textgroup": "tlg0421",
@@ -42371,7 +42371,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0424_moschion",
     "source_title": "ΜΟΣΧΙΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0424.tyrrenos": {
     "textgroup": "tlg0424",
@@ -42429,7 +42429,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0424_tyrrenos_phileyripides",
     "source_title": "ΤΥΡΡΗΝΟΣ ΦΙΛΕΥΡΙΠΙΔΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0424.phileyripides": {
     "textgroup": "tlg0424",
@@ -42553,7 +42553,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0432_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0432.kitharoidos": {
     "textgroup": "tlg0432",
@@ -42578,7 +42578,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0432_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0432.korinthioi": {
     "textgroup": "tlg0432",
@@ -42603,7 +42603,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0432_korinthioi",
     "source_title": "ΚΟΡΙΝΘΙΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0432.pandrosos": {
     "textgroup": "tlg0432",
@@ -42628,7 +42628,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0432_pandrosos",
     "source_title": "ΠΑΝΔΡΟΣΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0435.adelon_dramaton": {
     "textgroup": "tlg0435",
@@ -42719,7 +42719,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0435_theramenes",
     "source_title": "ΘΗΡΑΜΕΝΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0435.omphale": {
     "textgroup": "tlg0435",
@@ -42777,7 +42777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0435_pythagorizoysa",
     "source_title": "ΠΥΘΑΓΟΡΙΖΟΥΣΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0435.titanes": {
     "textgroup": "tlg0435",
@@ -43041,7 +43041,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0445_omonymoi",
     "source_title": "ΟΜΩΝΥΜΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.agnoia": {
     "textgroup": "tlg0447",
@@ -43066,7 +43066,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_agnoia",
     "source_title": "ΑΓΝΟΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.adelphoi": {
     "textgroup": "tlg0447",
@@ -43091,7 +43091,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.adelon_dramaton": {
     "textgroup": "tlg0447",
@@ -43149,7 +43149,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_airesiteiches_eynoychos_e_stratiotes",
     "source_title": "ΑΙΡΗΣΙΤΕΙΧΗΣ ΕΥΝΟΥΧΟΣ Η ΣΤΡΑΤΙΩΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.amastris": {
     "textgroup": "tlg0447",
@@ -43174,7 +43174,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_amastris",
     "source_title": "ΑΜΑΣΤΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.amphisbetesima": {
     "textgroup": "tlg0447",
@@ -43199,7 +43199,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_amphisbetesima",
     "source_title": "ΑΜΦΙΣΒΗΤΗΣΙΜΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.anagyros": {
     "textgroup": "tlg0447",
@@ -43224,7 +43224,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_anagyros",
     "source_title": "ΑΝΑΓΥΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.anasoizomenoi": {
     "textgroup": "tlg0447",
@@ -43249,7 +43249,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_anasoizomenoi",
     "source_title": "ΑΝΑΣΩΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.aplestos": {
     "textgroup": "tlg0447",
@@ -43274,7 +43274,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_aplestos",
     "source_title": "ΑΠΛΗΣΤΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.apobates": {
     "textgroup": "tlg0447",
@@ -43299,7 +43299,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_apobates",
     "source_title": "ΑΠΟΒΑΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.apolipoysa": {
     "textgroup": "tlg0447",
@@ -43324,7 +43324,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_apolipoysa",
     "source_title": "ΑΠΟΛΙΠΟΥΣΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.apolipoysei": {
     "textgroup": "tlg0447",
@@ -43349,7 +43349,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_apolipoysei",
     "source_title": "ΑΠΟΛΙΠΟΥΣΗΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.balaneion": {
     "textgroup": "tlg0447",
@@ -43374,7 +43374,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_balaneion",
     "source_title": "ΒΑΛΑΝΕΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.boiotis": {
     "textgroup": "tlg0447",
@@ -43399,7 +43399,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_boiotis",
     "source_title": "ΒΟΙΩΤΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.gamos": {
     "textgroup": "tlg0447",
@@ -43424,7 +43424,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_gamos",
     "source_title": "ΓΑΜΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.danaides": {
     "textgroup": "tlg0447",
@@ -43449,7 +43449,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_danaides",
     "source_title": "ΔΑΝΑΙΔΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.diamartanoysa": {
     "textgroup": "tlg0447",
@@ -43474,7 +43474,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_diamartanoysa",
     "source_title": "ΔΙΑΜΑΡΤΑΝΟΥΣΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.egkaloyntes": {
     "textgroup": "tlg0447",
@@ -43499,7 +43499,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_egkaloyntes",
     "source_title": "ΕΓΚΑΛΟΥΝΤΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.ekate": {
     "textgroup": "tlg0447",
@@ -43524,7 +43524,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_ekate",
     "source_title": "ΕΚΑΤΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.elaion_e_phroyroyntes": {
     "textgroup": "tlg0447",
@@ -43549,7 +43549,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_elaion_e_phroyroyntes",
     "source_title": "ΕΛΑΙΩΝ Η ΦΡΟΥΡΟΥΝΤΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.elleborizomenoi": {
     "textgroup": "tlg0447",
@@ -43574,7 +43574,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_elleborizomenoi",
     "source_title": "ΕΛΛΕΒΟΡΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.emporos": {
     "textgroup": "tlg0447",
@@ -43599,7 +43599,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_emporos",
     "source_title": "ΕΜΠΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.enagismata": {
     "textgroup": "tlg0447",
@@ -43624,7 +43624,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_enagismata",
     "source_title": "ΕΝΑΓΙΣΜΑΤΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.epikleros": {
     "textgroup": "tlg0447",
@@ -43649,7 +43649,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_epikleros",
     "source_title": "ΕΠΙΚΛΗΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.epitropeys": {
     "textgroup": "tlg0447",
@@ -43674,7 +43674,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_epitropeys",
     "source_title": "ΕΠΙΤΡΟΠΕΥΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.eynoychos": {
     "textgroup": "tlg0447",
@@ -43699,7 +43699,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_eynoychos",
     "source_title": "ΕΥΝΟΥΧΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.zographos": {
     "textgroup": "tlg0447",
@@ -43724,7 +43724,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_zographos",
     "source_title": "ΖΩΓΡΑΦΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.erakles": {
     "textgroup": "tlg0447",
@@ -43749,7 +43749,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_erakles",
     "source_title": "ΗΡΑΚΛΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.eros": {
     "textgroup": "tlg0447",
@@ -43774,7 +43774,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_eros",
     "source_title": "ΗΡΩΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.thesayros": {
     "textgroup": "tlg0447",
@@ -43799,7 +43799,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_thesayros",
     "source_title": "ΘΗΣΑΥΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.theseys": {
     "textgroup": "tlg0447",
@@ -43824,7 +43824,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_theseys",
     "source_title": "ΘΗΣΕΥΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.kitharoidos": {
     "textgroup": "tlg0447",
@@ -43849,7 +43849,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.leykadia": {
     "textgroup": "tlg0447",
@@ -43874,7 +43874,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_leykadia",
     "source_title": "ΛΕΥΚΑΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.lemniai": {
     "textgroup": "tlg0447",
@@ -43899,7 +43899,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_lemniai",
     "source_title": "ΛΗΜΝΙΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.mainomenos": {
     "textgroup": "tlg0447",
@@ -43924,7 +43924,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_mainomenos",
     "source_title": "ΜΑΙΝΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.mnemation": {
     "textgroup": "tlg0447",
@@ -43949,7 +43949,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_mnemation",
     "source_title": "ΜΝΗΜΑΤΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.pagkratiastes": {
     "textgroup": "tlg0447",
@@ -43974,7 +43974,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_pagkratiastes",
     "source_title": "ΠΑΓΚΡΑΤΙΑΣΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.paiderastai": {
     "textgroup": "tlg0447",
@@ -43999,7 +43999,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_paiderastai",
     "source_title": "ΠΑΙΔΕΡΑΣΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.pallakis": {
     "textgroup": "tlg0447",
@@ -44024,7 +44024,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_pallakis",
     "source_title": "ΠΑΛΛΑΚΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.parasitos": {
     "textgroup": "tlg0447",
@@ -44049,7 +44049,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_parasitos",
     "source_title": "ΠΑΡΑΣΙΤΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.peliades": {
     "textgroup": "tlg0447",
@@ -44074,7 +44074,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_peliades",
     "source_title": "ΠΕΛΙΑΔΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.plinthophoros": {
     "textgroup": "tlg0447",
@@ -44099,7 +44099,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_plinthophoros",
     "source_title": "ΠΛΙΝΘΟΦΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.polypragmon": {
     "textgroup": "tlg0447",
@@ -44124,7 +44124,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_polypragmon",
     "source_title": "ΠΟΛΥΠΡΑΓΜΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.sappho": {
     "textgroup": "tlg0447",
@@ -44149,7 +44149,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_sappho",
     "source_title": "ΣΑΠΦΩ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.sikelikos": {
     "textgroup": "tlg0447",
@@ -44174,7 +44174,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_sikelikos",
     "source_title": "ΣΙΚΕΛΙΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.syntrophoi": {
     "textgroup": "tlg0447",
@@ -44199,7 +44199,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_syntrophoi",
     "source_title": "ΣΥΝΤΡΟΦΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.synoris": {
     "textgroup": "tlg0447",
@@ -44224,7 +44224,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_synoris",
     "source_title": "ΣΥΝΩΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.schedia": {
     "textgroup": "tlg0447",
@@ -44249,7 +44249,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_schedia",
     "source_title": "ΣΧΕΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.telesias": {
     "textgroup": "tlg0447",
@@ -44274,7 +44274,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_telesias",
     "source_title": "ΤΕΛΕΣΙΑΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.tithraystes": {
     "textgroup": "tlg0447",
@@ -44299,7 +44299,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_tithraystes",
     "source_title": "ΤΙΘΡΑΥΣΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.philadelphos": {
     "textgroup": "tlg0447",
@@ -44324,7 +44324,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_philadelphos",
     "source_title": "ΦΙΛΑΔΕΛΦΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0447.chrysochoos": {
     "textgroup": "tlg0447",
@@ -44349,7 +44349,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0447_chrysochoos",
     "source_title": "ΧΡΥΣΟΧΟΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0450.adelon_dramaton": {
     "textgroup": "tlg0450",
@@ -44984,7 +44984,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0451_triodoys_e_ropopoles",
     "source_title": "ΤΡΙΟΔΟΥΣ Η ΡΩΠΟΠΩΛΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0451.choros": {
     "textgroup": "tlg0451",
@@ -45042,7 +45042,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0452_bakchis",
     "source_title": "ΒΑΚΧΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0452.eroine": {
     "textgroup": "tlg0452",
@@ -45471,7 +45471,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_akontizomenos",
     "source_title": "ΑΚΟΝΤΙΖΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.amaltheia": {
     "textgroup": "tlg0458",
@@ -45529,7 +45529,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_anasoizomenoi",
     "source_title": "ΑΝΑΣΩΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.antiope": {
     "textgroup": "tlg0458",
@@ -45884,7 +45884,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_eirene",
     "source_title": "ΕΙΡΗΝΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.eyrope": {
     "textgroup": "tlg0458",
@@ -45909,7 +45909,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_eyrope",
     "source_title": "ΕΥΡΩΠΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.echo": {
     "textgroup": "tlg0458",
@@ -45934,7 +45934,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_echo",
     "source_title": "ΗΧΩ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.thesmophoros": {
     "textgroup": "tlg0458",
@@ -46058,7 +46058,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_kalathephoroi",
     "source_title": "ΚΑΛΑΘΗΦΟΡΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.kampylion": {
     "textgroup": "tlg0458",
@@ -46281,7 +46281,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_medeia",
     "source_title": "ΜΗΔΕΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.mylothris": {
     "textgroup": "tlg0458",
@@ -46306,7 +46306,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_mylothris",
     "source_title": "ΜΥΛΩΘΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.naysikaa": {
     "textgroup": "tlg0458",
@@ -46826,7 +46826,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_prosoysia_e_kyknos",
     "source_title": "ΠΡΟΣΟΥΣΙΑ Η ΚΥΚΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.semele_e_dionysos": {
     "textgroup": "tlg0458",
@@ -46884,7 +46884,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_skyteys",
     "source_title": "ΣΚΥΤΕΥΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.stephanopolides": {
     "textgroup": "tlg0458",
@@ -47008,7 +47008,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_titanes",
     "source_title": "ΤΙΤΑΝΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.titthai": {
     "textgroup": "tlg0458",
@@ -47066,7 +47066,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_philippos",
     "source_title": "ΦΙΛΙΠΠΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.phoinix": {
     "textgroup": "tlg0458",
@@ -47091,7 +47091,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_phoinix",
     "source_title": "ΦΟΙΝΙΞ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.charites": {
     "textgroup": "tlg0458",
@@ -47116,7 +47116,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_charites",
     "source_title": "ΧΑΡΙΤΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0458.chrysilla": {
     "textgroup": "tlg0458",
@@ -47174,7 +47174,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0458_psaltria",
     "source_title": "ΨΑΛΤΡΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0465.adela_dramata": {
     "textgroup": "tlg0465",
@@ -47430,7 +47430,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0476_alkmeon",
     "source_title": "ΑΛΚΜΕΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0476.boysiris": {
     "textgroup": "tlg0476",
@@ -47554,7 +47554,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0476_isthmionikes",
     "source_title": "ΙΣΘΜΙΟΝΙΚΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0476.pharmakopoles": {
     "textgroup": "tlg0476",
@@ -47579,7 +47579,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0476_pharmakopoles",
     "source_title": "ΦΑΡΜΑΚΟΠΩΛΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0476.philippos": {
     "textgroup": "tlg0476",
@@ -47637,7 +47637,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0478_naykleroi",
     "source_title": "ΝΑΥΚΛΗΡΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0478.persis": {
     "textgroup": "tlg0478",
@@ -47662,7 +47662,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0478_persis",
     "source_title": "ΠΕΡΣΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0484.abra": {
     "textgroup": "tlg0484",
@@ -47761,7 +47761,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0484_amphisbetesima",
     "source_title": "ΑΜΦΙΣΒΗΤΗΣΙΜΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0484.anterosa": {
     "textgroup": "tlg0484",
@@ -47786,7 +47786,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0484_anterosa",
     "source_title": "ΑΝΤΕΡΩΣΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0484.antyllos": {
     "textgroup": "tlg0484",
@@ -48108,7 +48108,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0484_oinopion",
     "source_title": "ΟΙΝΟΠΙΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0484.pandrosos": {
     "textgroup": "tlg0484",
@@ -48166,7 +48166,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0484_ploytos",
     "source_title": "ΠΛΟΥΤΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0484.syros": {
     "textgroup": "tlg0484",
@@ -48323,7 +48323,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0485_ialemos",
     "source_title": "ΙΑΛΕΜΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0485.kallaischros": {
     "textgroup": "tlg0485",
@@ -48348,7 +48348,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0485_kallaischros",
     "source_title": "ΚΑΛΛΑΙΣΧΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.agroikos": {
     "textgroup": "tlg0487",
@@ -48373,7 +48373,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_agroikos",
     "source_title": "ΑΓΡΟΙΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.agyrtes": {
     "textgroup": "tlg0487",
@@ -48398,7 +48398,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_agyrtes",
     "source_title": "ΑΓΥΡΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.adelphoi": {
     "textgroup": "tlg0487",
@@ -48423,7 +48423,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.adelon_dramaton": {
     "textgroup": "tlg0487",
@@ -48481,7 +48481,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_aitolos",
     "source_title": "ΑΙΤΩΛΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.amphisbetesima": {
     "textgroup": "tlg0487",
@@ -48506,7 +48506,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_amphisbetesima",
     "source_title": "ΑΜΦΙΣΒΗΤΗΣΙΜΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.anakalypton": {
     "textgroup": "tlg0487",
@@ -48531,7 +48531,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_anakalypton",
     "source_title": "ΑΝΑΚΑΛΥΠΤΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ananeoymene": {
     "textgroup": "tlg0487",
@@ -48556,7 +48556,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ananeoymene",
     "source_title": "ΑΝΑΝΕΟΥΜΕΝΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.androphonos": {
     "textgroup": "tlg0487",
@@ -48581,7 +48581,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_androphonos",
     "source_title": "ΑΝΔΡΟΦΟΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.apokarteron": {
     "textgroup": "tlg0487",
@@ -48606,7 +48606,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_apokarteron",
     "source_title": "ΑΠΟΚΑΡΤΕΡΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.apolis": {
     "textgroup": "tlg0487",
@@ -48631,7 +48631,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_apolis",
     "source_title": "ΑΠΟΛΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.arpazomenos": {
     "textgroup": "tlg0487",
@@ -48656,7 +48656,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_arpazomenos",
     "source_title": "ΑΡΠΑΖΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ayletes": {
     "textgroup": "tlg0487",
@@ -48681,7 +48681,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ayletes",
     "source_title": "ΑΥΛΗΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.babylonios": {
     "textgroup": "tlg0487",
@@ -48706,7 +48706,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_babylonios",
     "source_title": "ΒΑΒΥΛΩΝΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.gamos": {
     "textgroup": "tlg0487",
@@ -48731,7 +48731,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_gamos",
     "source_title": "ΓΑΜΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.egcheiridion": {
     "textgroup": "tlg0487",
@@ -48756,7 +48756,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_egcheiridion",
     "source_title": "ΕΓΧΕΙΡΙΔΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.emporos": {
     "textgroup": "tlg0487",
@@ -48781,7 +48781,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_emporos",
     "source_title": "ΕΜΠΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.exoikizomenos": {
     "textgroup": "tlg0487",
@@ -48806,7 +48806,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_exoikizomenos",
     "source_title": "ΕΞΟΙΚΙΖΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.epidikazomenos": {
     "textgroup": "tlg0487",
@@ -48831,7 +48831,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_epidikazomenos",
     "source_title": "ΕΠΙΔΙΚΑΖΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ephedritai": {
     "textgroup": "tlg0487",
@@ -48856,7 +48856,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ephedritai",
     "source_title": "ΕΦΕΔΡΙΤΑΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ephebos": {
     "textgroup": "tlg0487",
@@ -48881,7 +48881,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ephebos",
     "source_title": "ΕΦΗΒΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.eroes": {
     "textgroup": "tlg0487",
@@ -48906,7 +48906,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_eroes",
     "source_title": "ΗΡΩΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.thebaioi": {
     "textgroup": "tlg0487",
@@ -48931,7 +48931,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_thebaioi",
     "source_title": "ΘΗΒΑΙΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.thesayros": {
     "textgroup": "tlg0487",
@@ -48956,7 +48956,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_thesayros",
     "source_title": "ΘΗΣΑΥΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.thyroros": {
     "textgroup": "tlg0487",
@@ -48981,7 +48981,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_thyroros",
     "source_title": "ΘΥΡΩΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.iatros": {
     "textgroup": "tlg0487",
@@ -49006,7 +49006,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_iatros",
     "source_title": "ΙΑΤΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.katapseydomenos": {
     "textgroup": "tlg0487",
@@ -49031,7 +49031,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_katapseydomenos",
     "source_title": "ΚΑΤΑΨΕΥΔΟΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.koinonoi": {
     "textgroup": "tlg0487",
@@ -49056,7 +49056,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_koinonoi",
     "source_title": "ΚΟΙΝΩΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.kolax": {
     "textgroup": "tlg0487",
@@ -49081,7 +49081,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_kolax",
     "source_title": "ΚΟΛΑΞ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.korinthia": {
     "textgroup": "tlg0487",
@@ -49106,7 +49106,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_korinthia",
     "source_title": "ΚΟΡΙΝΘΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.krommyon_polis": {
     "textgroup": "tlg0487",
@@ -49131,7 +49131,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_krommyon_polis",
     "source_title": "ΚΡΟΜΜΥΩΝ ΠΟΛΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.metion_e_zomion": {
     "textgroup": "tlg0487",
@@ -49156,7 +49156,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_metion_e_zomion",
     "source_title": "ΜΕΤΙΩΝ Η ΖΩΜΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.metoikos": {
     "textgroup": "tlg0487",
@@ -49181,7 +49181,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_metoikos",
     "source_title": "ΜΕΤΟΙΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.moichos": {
     "textgroup": "tlg0487",
@@ -49206,7 +49206,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_moichos",
     "source_title": "ΜΟΙΧΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.myrmidones": {
     "textgroup": "tlg0487",
@@ -49231,7 +49231,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_myrmidones",
     "source_title": "ΜΥΡΜΙΔΟΝΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.mystis": {
     "textgroup": "tlg0487",
@@ -49256,7 +49256,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_mystis",
     "source_title": "ΜΥΣΤΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.neaira": {
     "textgroup": "tlg0487",
@@ -49281,7 +49281,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_neaira",
     "source_title": "ΝΕΑΙΡΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.nemomenoi": {
     "textgroup": "tlg0487",
@@ -49306,7 +49306,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_nemomenoi",
     "source_title": "ΝΕΜΟΜΕΝΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.nothos": {
     "textgroup": "tlg0487",
@@ -49331,7 +49331,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_nothos",
     "source_title": "ΝΟΘΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.nyx": {
     "textgroup": "tlg0487",
@@ -49356,7 +49356,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_nyx",
     "source_title": "ΝΥΞ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pagkratiastes": {
     "textgroup": "tlg0487",
@@ -49381,7 +49381,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pagkratiastes",
     "source_title": "ΠΑΓΚΡΑΤΙΑΣΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.paidarion": {
     "textgroup": "tlg0487",
@@ -49406,7 +49406,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_paidarion",
     "source_title": "ΠΑΙΔΑΡΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.paides": {
     "textgroup": "tlg0487",
@@ -49431,7 +49431,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_paides",
     "source_title": "ΠΑΙΔΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.palamedes": {
     "textgroup": "tlg0487",
@@ -49456,7 +49456,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_palamedes",
     "source_title": "ΠΑΛΑΜΗΔΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.panegyris": {
     "textgroup": "tlg0487",
@@ -49481,7 +49481,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_panegyris",
     "source_title": "ΠΑΝΗΓΥΡΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pareision": {
     "textgroup": "tlg0487",
@@ -49506,7 +49506,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pareision",
     "source_title": "ΠΑΡΕΙΣΙΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.paroinos": {
     "textgroup": "tlg0487",
@@ -49531,7 +49531,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_paroinos",
     "source_title": "ΠΑΡΟΙΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pittokopoymenos": {
     "textgroup": "tlg0487",
@@ -49556,7 +49556,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pittokopoymenos",
     "source_title": "ΠΙΤΤΟΚΟΠΟΥΜΕΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pterygion": {
     "textgroup": "tlg0487",
@@ -49581,7 +49581,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pterygion",
     "source_title": "ΠΤΕΡΥΓΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ptoche_e_rodia": {
     "textgroup": "tlg0487",
@@ -49606,7 +49606,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ptoche_e_rodia",
     "source_title": "ΠΤΩΧΗ Η ΡΟΔΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pyrros": {
     "textgroup": "tlg0487",
@@ -49631,7 +49631,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pyrros",
     "source_title": "ΠΥΡΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.pyrphoros": {
     "textgroup": "tlg0487",
@@ -49656,7 +49656,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_pyrphoros",
     "source_title": "ΠΥΡΦΟΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.sardios": {
     "textgroup": "tlg0487",
@@ -49681,7 +49681,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_sardios",
     "source_title": "ΣΑΡΔΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.sikelikos": {
     "textgroup": "tlg0487",
@@ -49706,7 +49706,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_sikelikos",
     "source_title": "ΣΙΚΕΛΙΚΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.stratiotes": {
     "textgroup": "tlg0487",
@@ -49731,7 +49731,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_stratiotes",
     "source_title": "ΣΤΡΑΤΙΩΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.synapothneiskontes": {
     "textgroup": "tlg0487",
@@ -49756,7 +49756,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_synapothneiskontes",
     "source_title": "ΣΥΝΑΠΟΘΝΗΙΣΚΟΝΤΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.synephebos": {
     "textgroup": "tlg0487",
@@ -49781,7 +49781,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_synephebos",
     "source_title": "ΣΥΝΕΦΗΒΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.ypobolimaios": {
     "textgroup": "tlg0487",
@@ -49806,7 +49806,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_ypobolimaios",
     "source_title": "ΥΠΟΒΟΛΙΜΑΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.phasma": {
     "textgroup": "tlg0487",
@@ -49831,7 +49831,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_phasma",
     "source_title": "ΦΑΣΜΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.philosophoi": {
     "textgroup": "tlg0487",
@@ -49856,7 +49856,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_philosophoi",
     "source_title": "ΦΙΛΟΣΟΦΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.phylake": {
     "textgroup": "tlg0487",
@@ -49881,7 +49881,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_phylake",
     "source_title": "ΦΥΛΑΚΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.charites": {
     "textgroup": "tlg0487",
@@ -49906,7 +49906,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_charites",
     "source_title": "ΧΑΡΙΤΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.chera": {
     "textgroup": "tlg0487",
@@ -49931,7 +49931,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_chera",
     "source_title": "ΧΗΡΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0488.adelon_dramaton": {
     "textgroup": "tlg0488",
@@ -49956,7 +49956,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0488_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0489.adelon_dramaton": {
     "textgroup": "tlg0489",
@@ -50550,7 +50550,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0505_kleptria",
     "source_title": "ΚΛΕΠΤΡΙΑ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0505.paralytroymenos": {
     "textgroup": "tlg0505",
@@ -50641,7 +50641,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_boiotis",
     "source_title": "ΒΟΙΩΤΙΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.epidayrios": {
     "textgroup": "tlg0512",
@@ -50666,7 +50666,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_epidayrios",
     "source_title": "ΕΠΙΔΑΥΡΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.iatros": {
     "textgroup": "tlg0512",
@@ -50691,7 +50691,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_iatros",
     "source_title": "ΙΑΤΡΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.kitharoidos": {
     "textgroup": "tlg0512",
@@ -50716,7 +50716,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.neoptolemos": {
     "textgroup": "tlg0512",
@@ -50807,7 +50807,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_proitides",
     "source_title": "ΠΡΟΙΤΙΔΕΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.philaylos": {
     "textgroup": "tlg0512",
@@ -50972,7 +50972,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0515_daktylios",
     "source_title": "ΔΑΚΤΥΛΙΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0515.delos": {
     "textgroup": "tlg0515",
@@ -51096,7 +51096,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0515_dionysos",
     "source_title": "ΔΙΟΝΥΣΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0515.drakontion": {
     "textgroup": "tlg0515",
@@ -51649,7 +51649,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0515_synergoi",
     "source_title": "ΣΥΝΕΡΓΟΙ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0515.philodikastes": {
     "textgroup": "tlg0515",
@@ -51740,7 +51740,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0517_kynarion",
     "source_title": "ΚΥΝΑΡΙΟΝ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0517.metaballomenos_e_metapheromenos_pyktes_parakatatheke": {
     "textgroup": "tlg0517",
@@ -51765,7 +51765,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0517_metaballomenos_e_metapheromenos_pyktes_parakatatheke",
     "source_title": "ΜΕΤΑΒΑΛΛΟΜΕΝΟΣ Η ΜΕΤΑΦΕΡΟΜΕΝΟΣ ΠΥΚΤΗΣ ΠΑΡΑΚΑΤΑΘΗΚΗ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0518.boytalion": {
     "textgroup": "tlg0518",
@@ -51988,7 +51988,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0518_stratiotes",
     "source_title": "ΣΤΡΑΤΙΩΤΗΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0518.ypnos": {
     "textgroup": "tlg0518",
@@ -52013,7 +52013,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0518_ypnos",
     "source_title": "ΥΠΝΟΣ",
-    "source_edition": "kock1884"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg1784.xenizon": {
     "textgroup": "tlg1784",
@@ -52059,16 +52059,7 @@
     "translations": {},
     "commentaries": {},
     "treebanks": {},
-    "fragment_editions": {
-      "kock1884-grc1": {
-        "path": "/Users/gcrane/github/grcnewfragments/data/tlg9001/moschion/tlg9001.moschion.kock1884-grc1.xml",
-        "urn": "urn:cts:greekLit:tlg9001.moschion.kock1884-grc1",
-        "label": "Greek (Kock, 1884; OCR draft): ΜΟΣΧΙΩΝ",
-        "class": "greek-text",
-        "format": "tei_fragment_work",
-        "corresp_axis": "fragment"
-      }
-    },
+    "fragment_editions": {},
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg9001_moschion",
     "source_title": "ΜΟΣΧΙΩΝ",
     "source_edition": "kock1884"
@@ -52084,16 +52075,7 @@
     "translations": {},
     "commentaries": {},
     "treebanks": {},
-    "fragment_editions": {
-      "kock1884-grc1": {
-        "path": "/Users/gcrane/github/grcnewfragments/data/tlg9002/psaltria/tlg9002.psaltria.kock1884-grc1.xml",
-        "urn": "urn:cts:greekLit:tlg9002.psaltria.kock1884-grc1",
-        "label": "Greek (Kock, 1884; OCR draft): ΨΑΛΤΡΙΑ",
-        "class": "greek-text",
-        "format": "tei_fragment_work",
-        "corresp_axis": "fragment"
-      }
-    },
+    "fragment_editions": {},
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg9002_psaltria",
     "source_title": "ΨΑΛΤΡΙΑ",
     "source_edition": "kock1884"
@@ -52121,7 +52103,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0395_metoikizomenos",
     "source_title": "ΜΕΤΟΙΚΙΖΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0399.naykleros": {
     "textgroup": "tlg0399",
@@ -52146,7 +52128,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0399_naykleros",
     "source_title": "ΝΑΥΚΛΗΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0399.ypobolimaios": {
     "textgroup": "tlg0399",
@@ -52171,7 +52153,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0399_ypobolimaios",
     "source_title": "ΥΠΟΒΟΛΙΜΑΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0401.adelon_dramaton": {
     "textgroup": "tlg0401",
@@ -52196,7 +52178,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0401_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0401.dionysos": {
     "textgroup": "tlg0401",
@@ -52221,7 +52203,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0401_dionysos",
     "source_title": "ΔΙΟΝΥΣΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0401.elene": {
     "textgroup": "tlg0401",
@@ -52246,7 +52228,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0401_elene",
     "source_title": "ΕΛΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0401.potos": {
     "textgroup": "tlg0401",
@@ -52271,7 +52253,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0401_potos",
     "source_title": "ΠΟΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0407.egkalyptomenos": {
     "textgroup": "tlg0407",
@@ -52296,7 +52278,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0407_egkalyptomenos",
     "source_title": "ΕΓΚΑΛΥΠΤΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0407.keraynos": {
     "textgroup": "tlg0407",
@@ -52321,7 +52303,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0407_keraynos",
     "source_title": "ΚΕΡΑΥΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0407.kitharoidos": {
     "textgroup": "tlg0407",
@@ -52346,7 +52328,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0407_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0408.adelon_dramaton": {
     "textgroup": "tlg0408",
@@ -52371,7 +52353,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0408_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0410.egkalyptomenos": {
     "textgroup": "tlg0410",
@@ -52396,7 +52378,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0410_egkalyptomenos",
     "source_title": "ΕΓΚΑΛΥΠΤΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.amphiareos": {
     "textgroup": "tlg0411",
@@ -52421,7 +52403,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_amphiareos",
     "source_title": "ΑΜΦΙΑΡΕΩΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.anteyergeton": {
     "textgroup": "tlg0411",
@@ -52446,7 +52428,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_anteyergeton",
     "source_title": "ΑΝΤΕΥΕΡΓΕΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.apokarteroyntes": {
     "textgroup": "tlg0411",
@@ -52471,7 +52453,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_apokarteroyntes",
     "source_title": "ΑΠΟΚΑΡΤΕΡΟΥΝΤΕΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.apoleipoysa": {
     "textgroup": "tlg0411",
@@ -52496,7 +52478,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_apoleipoysa",
     "source_title": "ΑΠΟΛΕΙΠΟΥΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.ekyra": {
     "textgroup": "tlg0411",
@@ -52521,7 +52503,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_ekyra",
     "source_title": "ΕΚΥΡΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.epidikazomenos": {
     "textgroup": "tlg0411",
@@ -52546,7 +52528,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_epidikazomenos",
     "source_title": "ΕΠΙΔΙΚΑΖΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.grammateidiopoios": {
     "textgroup": "tlg0411",
@@ -52571,7 +52553,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_grammateidiopoios",
     "source_title": "ΓΡΑΜΜΑΤΕΙΔΙΟΠΟΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.iereia": {
     "textgroup": "tlg0411",
@@ -52596,7 +52578,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_iereia",
     "source_title": "ΙΕΡΕΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0411.proikizomene_e_imatiopolis": {
     "textgroup": "tlg0411",
@@ -52621,7 +52603,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0411_proikizomene_e_imatiopolis",
     "source_title": "ΠΡΟΙΚΙΖΟΜΕΝΗ Η ΙΜΑΤΙΟΠΩΛΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.adelon_dramaton": {
     "textgroup": "tlg0412",
@@ -52646,7 +52628,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.adelphoi": {
     "textgroup": "tlg0412",
@@ -52671,7 +52653,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.aphanizomenos": {
     "textgroup": "tlg0412",
@@ -52696,7 +52678,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_aphanizomenos",
     "source_title": "ΑΦΑΝΙΖΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.diamartanon": {
     "textgroup": "tlg0412",
@@ -52721,7 +52703,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_diamartanon",
     "source_title": "ΔΙΑΜΑΡΤΑΝΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.galatai": {
     "textgroup": "tlg0412",
@@ -52746,7 +52728,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_galatai",
     "source_title": "ΓΑΛΑΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.kitharoidos": {
     "textgroup": "tlg0412",
@@ -52771,7 +52753,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.lakaina": {
     "textgroup": "tlg0412",
@@ -52796,7 +52778,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_lakaina",
     "source_title": "ΛΑΚΑΙΝΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.paidion": {
     "textgroup": "tlg0412",
@@ -52821,7 +52803,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_paidion",
     "source_title": "ΠΑΙΔΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.paralogizomenoi": {
     "textgroup": "tlg0412",
@@ -52846,7 +52828,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_paralogizomenoi",
     "source_title": "ΠΑΡΑΛΟΓΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.sphattomene": {
     "textgroup": "tlg0412",
@@ -52871,7 +52853,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_sphattomene",
     "source_title": "ΣΦΑΤΤΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0412.synepheboi": {
     "textgroup": "tlg0412",
@@ -52896,7 +52878,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0412_synepheboi",
     "source_title": "ΣΥΝΕΦΗΒΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0413.apokarteron": {
     "textgroup": "tlg0413",
@@ -52921,7 +52903,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0413_apokarteron",
     "source_title": "ΑΠΟΚΑΡΤΕΡΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0413.apoleipoysa": {
     "textgroup": "tlg0413",
@@ -52946,7 +52928,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0413_apoleipoysa",
     "source_title": "ΑΠΟΛΕΙΠΟΥΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0413.grammateidiopoios": {
     "textgroup": "tlg0413",
@@ -52971,7 +52953,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0413_grammateidiopoios",
     "source_title": "ΓΡΑΜΜΑΤΕΙΔΙΟΠΟΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0413.philadelphoi_e_apokarteron": {
     "textgroup": "tlg0413",
@@ -52996,7 +52978,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0413_philadelphoi_e_apokarteron",
     "source_title": "ΦΙΛΑΔΕΛΦΟΙ Η ΑΠΟΚΑΡΤΕΡΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0413.pseydaias": {
     "textgroup": "tlg0413",
@@ -53021,7 +53003,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0413_pseydaias",
     "source_title": "ΨΕΥΔΑΙΑΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0416.adelon_dramaton": {
     "textgroup": "tlg0416",
@@ -53046,7 +53028,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0416_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0416.diamartanon": {
     "textgroup": "tlg0416",
@@ -53071,7 +53053,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0416_diamartanon",
     "source_title": "ΔΙΑΜΑΡΤΑΝΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0416.thesayros": {
     "textgroup": "tlg0416",
@@ -53096,7 +53078,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0416_thesayros",
     "source_title": "ΘΗΣΑΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0419.adelon_dramaton": {
     "textgroup": "tlg0419",
@@ -53162,7 +53144,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0422_samothraikes",
     "source_title": "ΣΑΜΟΘΡΑΙΚΕΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0425.adelon_dramaton": {
     "textgroup": "tlg0425",
@@ -53187,7 +53169,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0425_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0425.aitolos": {
     "textgroup": "tlg0425",
@@ -53212,7 +53194,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0425_aitolos",
     "source_title": "ΑΙΤΩΛΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0425.androphonos": {
     "textgroup": "tlg0425",
@@ -53237,7 +53219,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0425_androphonos",
     "source_title": "ΑΝΔΡΟΦΟΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0425.eyergetai": {
     "textgroup": "tlg0425",
@@ -53262,7 +53244,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0425_eyergetai",
     "source_title": "ΕΥΕΡΓΕΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0425.synexapaton": {
     "textgroup": "tlg0425",
@@ -53287,7 +53269,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0425_synexapaton",
     "source_title": "ΣΥΝΕΞΑΠΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0427.pannychis": {
     "textgroup": "tlg0427",
@@ -53312,7 +53294,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0427_pannychis",
     "source_title": "ΠΑΝΝΥΧΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0430.alysis": {
     "textgroup": "tlg0430",
@@ -53337,7 +53319,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0430_alysis",
     "source_title": "ΑΛΥΣΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0436.aitolos": {
     "textgroup": "tlg0436",
@@ -53362,7 +53344,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0436_aitolos",
     "source_title": "ΑΙΤΩΛΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0436.messenia": {
     "textgroup": "tlg0436",
@@ -53387,7 +53369,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0436_messenia",
     "source_title": "ΜΕΣΣΗΝΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0436.philopragmon": {
     "textgroup": "tlg0436",
@@ -53412,7 +53394,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0436_philopragmon",
     "source_title": "ΦΙΛΟΠΡΑΓΜΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0437.adelon_dramaton": {
     "textgroup": "tlg0437",
@@ -53437,7 +53419,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0437_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0437.apagchomenos": {
     "textgroup": "tlg0437",
@@ -53462,7 +53444,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0437_apagchomenos",
     "source_title": "ΑΠΑΓΧΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0437.apoleipoysa": {
     "textgroup": "tlg0437",
@@ -53487,7 +53469,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0437_apoleipoysa",
     "source_title": "ΑΠΟΛΕΙΠΟΥΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0437.pseydypobolimaios": {
     "textgroup": "tlg0437",
@@ -53512,7 +53494,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0437_pseydypobolimaios",
     "source_title": "ΨΕΥΔΥΠΟΒΟΛΙΜΑΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0438.adelon_dramaton": {
     "textgroup": "tlg0438",
@@ -53537,7 +53519,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0438_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0438.ayton_penthon": {
     "textgroup": "tlg0438",
@@ -53562,7 +53544,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0438_ayton_penthon",
     "source_title": "ΑΥΤΟΝ ΠΕΝΘΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0438.syntrophoi": {
     "textgroup": "tlg0438",
@@ -53587,7 +53569,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0438_syntrophoi",
     "source_title": "ΣΥΝΤΡΟΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0439.areopagites": {
     "textgroup": "tlg0439",
@@ -53612,7 +53594,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0439_areopagites",
     "source_title": "ΑΡΕΟΠΑΓΙΤΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0441.acheloios": {
     "textgroup": "tlg0441",
@@ -53637,7 +53619,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0441_acheloios",
     "source_title": "ΑΧΕΛΩΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0442.yph_eayton_planomenoi": {
     "textgroup": "tlg0442",
@@ -53662,7 +53644,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0442_yph_eayton_planomenoi",
     "source_title": "ΥΦ ΕΑΥΤΩΝ ΠΛΑΝΩΜΕΝΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0446.adelon_dramaton": {
     "textgroup": "tlg0446",
@@ -53687,7 +53669,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0446_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0446.antipornoboskos": {
     "textgroup": "tlg0446",
@@ -53712,7 +53694,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0446_antipornoboskos",
     "source_title": "ΑΝΤΙΠΟΡΝΟΒΟΣΚΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0446.istoriographos": {
     "textgroup": "tlg0446",
@@ -53737,7 +53719,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0446_istoriographos",
     "source_title": "ΙΣΤΟΡΙΟΓΡΑΦΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0446.philargyros": {
     "textgroup": "tlg0446",
@@ -53762,7 +53744,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0446_philargyros",
     "source_title": "ΦΙΛΑΡΓΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0446.thesayros": {
     "textgroup": "tlg0446",
@@ -53787,7 +53769,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0446_thesayros",
     "source_title": "ΘΗΣΑΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0452.adelon_dramaton": {
     "textgroup": "tlg0452",
@@ -53812,7 +53794,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0452_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0454.mnesiptolemos": {
     "textgroup": "tlg0454",
@@ -53837,7 +53819,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0454_mnesiptolemos",
     "source_title": "ΜΝΗΣΙΠΤΟΛΕΜΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0454.ypoballomenai": {
     "textgroup": "tlg0454",
@@ -53862,7 +53844,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0454_ypoballomenai",
     "source_title": "ΥΠΟΒΑΛΛΟΜΕΝΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0456.anakalyptomene": {
     "textgroup": "tlg0456",
@@ -53887,7 +53869,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0456_anakalyptomene",
     "source_title": "ΑΝΑΚΑΛΥΠΤΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.adelon_dramaton": {
     "textgroup": "tlg0460",
@@ -53912,7 +53894,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.adelphoi": {
     "textgroup": "tlg0460",
@@ -53937,7 +53919,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.aischra": {
     "textgroup": "tlg0460",
@@ -53962,7 +53944,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_aischra",
     "source_title": "ΑΙΣΧΡΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.apodidoysa": {
     "textgroup": "tlg0460",
@@ -53987,7 +53969,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_apodidoysa",
     "source_title": "ΑΠΟΔΙΔΟΥΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.didymoi": {
     "textgroup": "tlg0460",
@@ -54012,7 +53994,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_didymoi",
     "source_title": "ΔΙΔΥΜΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.moysai": {
     "textgroup": "tlg0460",
@@ -54037,7 +54019,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_moysai",
     "source_title": "ΜΟΥΣΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.paradidomene": {
     "textgroup": "tlg0460",
@@ -54062,7 +54044,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_paradidomene",
     "source_title": "ΠΑΡΑΔΙΔΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.synepheboi": {
     "textgroup": "tlg0460",
@@ -54087,7 +54069,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_synepheboi",
     "source_title": "ΣΥΝΕΦΗΒΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.theon_agora": {
     "textgroup": "tlg0460",
@@ -54112,7 +54094,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_theon_agora",
     "source_title": "ΘΕΩΝ ΑΓΟΡΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0460.theoroi": {
     "textgroup": "tlg0460",
@@ -54137,7 +54119,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0460_theoroi",
     "source_title": "ΘΕΩΡΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0462.adelon_dramaton": {
     "textgroup": "tlg0462",
@@ -54162,7 +54144,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0462_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0464.adelon_dramaton": {
     "textgroup": "tlg0464",
@@ -54187,7 +54169,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0464_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0464.adelphoi": {
     "textgroup": "tlg0464",
@@ -54212,7 +54194,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0464_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0464.philetairoi": {
     "textgroup": "tlg0464",
@@ -54237,7 +54219,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0464_philetairoi",
     "source_title": "ΦΙΛΕΤΑΙΡΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0468.anasoizomenoi": {
     "textgroup": "tlg0468",
@@ -54262,7 +54244,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0468_anasoizomenoi",
     "source_title": "ΑΝΑΣΩΙΖΟΜΕΝΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0468.pannychis": {
     "textgroup": "tlg0468",
@@ -54287,7 +54269,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0468_pannychis",
     "source_title": "ΠΑΝΝΥΧΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0468.thais": {
     "textgroup": "tlg0468",
@@ -54312,7 +54294,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0468_thais",
     "source_title": "ΘΑΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0468.zographos": {
     "textgroup": "tlg0468",
@@ -54337,7 +54319,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0468_zographos",
     "source_title": "ΖΩΓΡΑΦΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0469.adelon_dramaton": {
     "textgroup": "tlg0469",
@@ -54362,7 +54344,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0469_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0471.kentayros": {
     "textgroup": "tlg0471",
@@ -54387,7 +54369,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0471_kentayros",
     "source_title": "ΚΕΝΤΑΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0473.agnoia": {
     "textgroup": "tlg0473",
@@ -54412,7 +54394,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0473_agnoia",
     "source_title": "ΑΓΝΟΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0473.epistole": {
     "textgroup": "tlg0473",
@@ -54437,7 +54419,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0473_epistole",
     "source_title": "ΕΠΙΣΤΟΛΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0474.adelon_dramaton": {
     "textgroup": "tlg0474",
@@ -54495,7 +54477,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0479_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0479.kitharoidos": {
     "textgroup": "tlg0479",
@@ -54520,7 +54502,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0479_kitharoidos",
     "source_title": "ΚΙΘΑΡΩΙΔΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0481.adelon_dramaton": {
     "textgroup": "tlg0481",
@@ -54545,7 +54527,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0481_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0482.adelon_dramaton": {
     "textgroup": "tlg0482",
@@ -54570,7 +54552,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0482_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0482.eileithyia": {
     "textgroup": "tlg0482",
@@ -54595,7 +54577,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0482_eileithyia",
     "source_title": "ΕΙΛΕΙΘΥΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0482.naymachia": {
     "textgroup": "tlg0482",
@@ -54620,7 +54602,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0482_naymachia",
     "source_title": "ΝΑΥΜΑΧΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0487.daktylios": {
     "textgroup": "tlg0487",
@@ -54645,7 +54627,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0487_daktylios",
     "source_title": "ΔΑΚΤΥΛΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.adelon_dramaton": {
     "textgroup": "tlg0490",
@@ -54670,7 +54652,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.adoniazoysai": {
     "textgroup": "tlg0490",
@@ -54695,7 +54677,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_adoniazoysai",
     "source_title": "ΑΔΩΝΙΑΖΟΥΣΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.amphiareos": {
     "textgroup": "tlg0490",
@@ -54720,7 +54702,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_amphiareos",
     "source_title": "ΑΜΦΙΑΡΕΩΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.ananeoysa": {
     "textgroup": "tlg0490",
@@ -54745,7 +54727,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_ananeoysa",
     "source_title": "ΑΝΑΝΕΟΥΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.argyrioy_aphanismos": {
     "textgroup": "tlg0490",
@@ -54770,7 +54752,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_argyrioy_aphanismos",
     "source_title": "ΑΡΓΥΡΙΟΥ ΑΦΑΝΙΣΜΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.ayloi": {
     "textgroup": "tlg0490",
@@ -54795,7 +54777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_ayloi",
     "source_title": "ΑΥΛΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.basanizomene": {
     "textgroup": "tlg0490",
@@ -54820,7 +54802,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_basanizomene",
     "source_title": "ΒΑΣΑΝΙΖΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.mastropos": {
     "textgroup": "tlg0490",
@@ -54845,7 +54827,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_mastropos",
     "source_title": "ΜΑΣΤΡΟΠΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.olynthia": {
     "textgroup": "tlg0490",
@@ -54870,7 +54852,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_olynthia",
     "source_title": "ΟΛΥΝΘΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.philadelphoi": {
     "textgroup": "tlg0490",
@@ -54895,7 +54877,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_philadelphoi",
     "source_title": "ΦΙΛΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.philarchos": {
     "textgroup": "tlg0490",
@@ -54920,7 +54902,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_philarchos",
     "source_title": "ΦΙΛΑΡΧΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.philargyros": {
     "textgroup": "tlg0490",
@@ -54945,7 +54927,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_philargyros",
     "source_title": "ΦΙΛΑΡΓΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.philathenaios": {
     "textgroup": "tlg0490",
@@ -54970,7 +54952,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_philathenaios",
     "source_title": "ΦΙΛΑΘΗΝΑΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.phileyripides": {
     "textgroup": "tlg0490",
@@ -54995,7 +54977,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_phileyripides",
     "source_title": "ΦΙΛΕΥΡΙΠΙΔΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.phileyrippides": {
     "textgroup": "tlg0490",
@@ -55020,7 +55002,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_phileyrippides",
     "source_title": "ΦΙΛΕΥΡΙΠΠΙΔΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.phrear": {
     "textgroup": "tlg0490",
@@ -55045,7 +55027,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_phrear",
     "source_title": "ΦΡΕΑΡ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0490.synekpleoysai": {
     "textgroup": "tlg0490",
@@ -55070,7 +55052,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0490_synekpleoysai",
     "source_title": "ΣΥΝΕΚΠΛΕΟΥΣΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0493.delios": {
     "textgroup": "tlg0493",
@@ -55095,7 +55077,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0493_delios",
     "source_title": "ΔΗΛΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0495.adelon_dramaton": {
     "textgroup": "tlg0495",
@@ -55120,7 +55102,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0495_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0495.ayletrides": {
     "textgroup": "tlg0495",
@@ -55145,7 +55127,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0495_ayletrides",
     "source_title": "ΑΥΛΗΤΡΙΔΕΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0495.misoymene": {
     "textgroup": "tlg0495",
@@ -55170,7 +55152,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0495_misoymene",
     "source_title": "ΜΙΣΟΥΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0495.phylarchos": {
     "textgroup": "tlg0495",
@@ -55195,7 +55177,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0495_phylarchos",
     "source_title": "ΦΥΛΑΡΧΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0498.adelon_dramaton": {
     "textgroup": "tlg0498",
@@ -55220,7 +55202,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0498_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.adelon_dramaton": {
     "textgroup": "tlg0500",
@@ -55245,7 +55227,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.anablepon": {
     "textgroup": "tlg0500",
@@ -55270,7 +55252,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_anablepon",
     "source_title": "ΑΝΑΒΛΕΠΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.apokleiomene": {
     "textgroup": "tlg0500",
@@ -55295,7 +55277,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_apokleiomene",
     "source_title": "ΑΠΟΚΛΕΙΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.apokleiomene_2": {
     "textgroup": "tlg0500",
@@ -55320,7 +55302,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_apokleiomene_2",
     "source_title": "ΑΠΟΚΛΗΙΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.arsinoe": {
     "textgroup": "tlg0500",
@@ -55345,7 +55327,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_arsinoe",
     "source_title": "ΑΡΣΙΝΟΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.choreyoysai": {
     "textgroup": "tlg0500",
@@ -55370,7 +55352,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_choreyoysai",
     "source_title": "ΧΟΡΕΥΟΥΣΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.demotai": {
     "textgroup": "tlg0500",
@@ -55395,7 +55377,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_demotai",
     "source_title": "ΔΗΜΟΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.ephesia": {
     "textgroup": "tlg0500",
@@ -55420,7 +55402,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_ephesia",
     "source_title": "ΕΦΕΣΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.epistathmos": {
     "textgroup": "tlg0500",
@@ -55445,7 +55427,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_epistathmos",
     "source_title": "ΕΠΙΣΤΑΘΜΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.ermaphroditos": {
     "textgroup": "tlg0500",
@@ -55470,7 +55452,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_ermaphroditos",
     "source_title": "ΕΡΜΑΦΡΟΔΙΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.galates": {
     "textgroup": "tlg0500",
@@ -55495,7 +55477,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_galates",
     "source_title": "ΓΑΛΑΤΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.kodon": {
     "textgroup": "tlg0500",
@@ -55520,7 +55502,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_kodon",
     "source_title": "ΚΩΔΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.lokrides": {
     "textgroup": "tlg0500",
@@ -55545,7 +55527,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_lokrides",
     "source_title": "ΛΟΚΡΙΔΕΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.metapheromenoi": {
     "textgroup": "tlg0500",
@@ -55570,7 +55552,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_metapheromenoi",
     "source_title": "ΜΕΤΑΦΕΡΟΜΕΝΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.myrmex": {
     "textgroup": "tlg0500",
@@ -55595,7 +55577,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_myrmex",
     "source_title": "ΜΥΡΜΗΞ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.omoioi": {
     "textgroup": "tlg0500",
@@ -55620,7 +55602,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_omoioi",
     "source_title": "ΟΜΟΙΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.paidion": {
     "textgroup": "tlg0500",
@@ -55645,7 +55627,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_paidion",
     "source_title": "ΠΑΙΔΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.philopator": {
     "textgroup": "tlg0500",
@@ -55670,7 +55652,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_philopator",
     "source_title": "ΦΙΛΟΠΑΤΩΡ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.pornoboskos": {
     "textgroup": "tlg0500",
@@ -55695,7 +55677,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_pornoboskos",
     "source_title": "ΠΟΡΝΟΒΟΣΚΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0500.syntrophoi": {
     "textgroup": "tlg0500",
@@ -55720,7 +55702,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0500_syntrophoi",
     "source_title": "ΣΥΝΤΡΟΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0503.adelon_dramaton": {
     "textgroup": "tlg0503",
@@ -55745,7 +55727,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0503_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0503.parakatatheke": {
     "textgroup": "tlg0503",
@@ -55770,7 +55752,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0503_parakatatheke",
     "source_title": "ΠΑΡΑΚΑΤΑΘΗΚΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0503.philadelphoi": {
     "textgroup": "tlg0503",
@@ -55795,7 +55777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0503_philadelphoi",
     "source_title": "ΦΙΛΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0504.katapseydomenos": {
     "textgroup": "tlg0504",
@@ -55820,7 +55802,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0504_katapseydomenos",
     "source_title": "ΚΑΤΑΨΕΥΔΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0506.philolakon": {
     "textgroup": "tlg0506",
@@ -55845,7 +55827,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0506_philolakon",
     "source_title": "ΦΙΛΟΛΑΚΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0507.phoinikides": {
     "textgroup": "tlg0507",
@@ -55870,7 +55852,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0507_phoinikides",
     "source_title": "ΦΟΙΝΙΚΙΔΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0511.phasma_e_philargyros": {
     "textgroup": "tlg0511",
@@ -55895,7 +55877,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0511_phasma_e_philargyros",
     "source_title": "ΦΑΣΜΑ Η ΦΙΛΑΡΓΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0511.philodespotos": {
     "textgroup": "tlg0511",
@@ -55920,7 +55902,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0511_philodespotos",
     "source_title": "ΦΙΛΟΔΕΣΠΟΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0512.adelon_dramaton": {
     "textgroup": "tlg0512",
@@ -55945,7 +55927,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0512_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0514.adelon_dramaton": {
     "textgroup": "tlg0514",
@@ -55970,7 +55952,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0514_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0514.dikastai": {
     "textgroup": "tlg0514",
@@ -55995,7 +55977,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0514_dikastai",
     "source_title": "ΔΙΚΑΣΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0516.adelon_dramaton": {
     "textgroup": "tlg0516",
@@ -56020,7 +56002,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0516_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0516.asotos": {
     "textgroup": "tlg0516",
@@ -56045,7 +56027,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0516_asotos",
     "source_title": "ΑΣΩΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0516.pan": {
     "textgroup": "tlg0516",
@@ -56070,7 +56052,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0516_pan",
     "source_title": "ΠΑΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0516.parakatatheke": {
     "textgroup": "tlg0516",
@@ -56095,7 +56077,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0516_parakatatheke",
     "source_title": "ΠΑΡΑΚΑΤΑΘΗΚΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0516.philodespotos": {
     "textgroup": "tlg0516",
@@ -56120,7 +56102,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0516_philodespotos",
     "source_title": "ΦΙΛΟΔΕΣΠΟΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0517.adelon_dramaton": {
     "textgroup": "tlg0517",
@@ -56145,7 +56127,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0517_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0518.adelon_dramaton": {
     "textgroup": "tlg0518",
@@ -56170,7 +56152,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0518_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0519.adelon_dramaton": {
     "textgroup": "tlg0519",
@@ -56195,7 +56177,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0519_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.adelon_dramaton": {
     "textgroup": "tlg0541",
@@ -56220,7 +56202,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_adelon_dramaton",
     "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.adelphoi": {
     "textgroup": "tlg0541",
@@ -56245,7 +56227,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_adelphoi",
     "source_title": "ΑΔΕΛΦΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.alieis": {
     "textgroup": "tlg0541",
@@ -56270,7 +56252,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_alieis",
     "source_title": "ΑΛΙΕΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.anatithemene_andria": {
     "textgroup": "tlg0541",
@@ -56295,7 +56277,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_anatithemene_andria",
     "source_title": "ΑΝΑΤΙΘΕΜΕΝΗ ΑΝΔΡΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.anatithemene_e_messenia": {
     "textgroup": "tlg0541",
@@ -56320,7 +56302,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_anatithemene_e_messenia",
     "source_title": "ΑΝΑΤΙΘΕΜΕΝΗ Η ΜΕΣΣΗΝΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.andria": {
     "textgroup": "tlg0541",
@@ -56345,7 +56327,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_andria",
     "source_title": "ΑΝΔΡΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.androgynos_e_kres": {
     "textgroup": "tlg0541",
@@ -56370,7 +56352,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_androgynos_e_kres",
     "source_title": "ΑΝΔΡΟΓΥΝΟΣ Η ΚΡΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.anepsioi": {
     "textgroup": "tlg0541",
@@ -56395,7 +56377,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_anepsioi",
     "source_title": "ΑΝΕΨΙΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.aphrodisia": {
     "textgroup": "tlg0541",
@@ -56420,7 +56402,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_aphrodisia",
     "source_title": "ΑΦΡΟΔΙΣΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.apistos": {
     "textgroup": "tlg0541",
@@ -56445,7 +56427,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_apistos",
     "source_title": "ΑΠΙΣΤΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.arrephoros_e_ayletris": {
     "textgroup": "tlg0541",
@@ -56470,7 +56452,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_arrephoros_e_ayletris",
     "source_title": "ΑΡΡΗΦΟΡΟΣ Η ΑΥΛΗΤΡΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.aspis": {
     "textgroup": "tlg0541",
@@ -56495,7 +56477,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_aspis",
     "source_title": "ΑΣΠΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.aytolekythoi": {
     "textgroup": "tlg0541",
@@ -56520,7 +56502,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_aytolekythoi",
     "source_title": "αὐτολήκυθοι",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ayton_penthon": {
     "textgroup": "tlg0541",
@@ -56545,7 +56527,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ayton_penthon",
     "source_title": "ΑΥΤΟΝ ΠΕΝΘΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.boiotis": {
     "textgroup": "tlg0541",
@@ -56570,7 +56552,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_boiotis",
     "source_title": "ΒΟΙΩΤΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.chalkeia": {
     "textgroup": "tlg0541",
@@ -56595,7 +56577,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_chalkeia",
     "source_title": "ΧΑΛΚΕΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.chalkis": {
     "textgroup": "tlg0541",
@@ -56620,7 +56602,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_chalkis",
     "source_title": "ΧΑΛΚΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.chera": {
     "textgroup": "tlg0541",
@@ -56645,7 +56627,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_chera",
     "source_title": "ΧΗΡΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.daktylios": {
     "textgroup": "tlg0541",
@@ -56670,7 +56652,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_daktylios",
     "source_title": "ΔΑΚΤΥΛΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.dardanos": {
     "textgroup": "tlg0541",
@@ -56695,7 +56677,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_dardanos",
     "source_title": "ΔΑΡΔΑΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.demioyrgos": {
     "textgroup": "tlg0541",
@@ -56720,7 +56702,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_demioyrgos",
     "source_title": "ΔΗΜΙΟΥΡΓΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.didymai": {
     "textgroup": "tlg0541",
@@ -56745,7 +56727,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_didymai",
     "source_title": "ΔΙΔΥΜΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.dis_exapaton": {
     "textgroup": "tlg0541",
@@ -56770,7 +56752,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_dis_exapaton",
     "source_title": "ΔΙΣ ΕΞΑΠΑΤΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.dyskolos": {
     "textgroup": "tlg0541",
@@ -56795,7 +56777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_dyskolos",
     "source_title": "ΔΥΣΚΟΛΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.eayton_timoroymenos": {
     "textgroup": "tlg0541",
@@ -56820,7 +56802,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_eayton_timoroymenos",
     "source_title": "ΕΑΥΤΟΝ ΤΙΜΩΡΟΥΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.egcheiridion": {
     "textgroup": "tlg0541",
@@ -56845,7 +56827,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_egcheiridion",
     "source_title": "ΕΓΧΕΙΡΙΔΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.empimpramene": {
     "textgroup": "tlg0541",
@@ -56870,7 +56852,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_empimpramene",
     "source_title": "ΕΜΠΙΜΠΡΑΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.eniochos": {
     "textgroup": "tlg0541",
@@ -56895,7 +56877,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_eniochos",
     "source_title": "ΗΝΙΟΧΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.epaggellomenos": {
     "textgroup": "tlg0541",
@@ -56920,7 +56902,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_epaggellomenos",
     "source_title": "ΕΠΑΓΓΕΛΛΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ephesios": {
     "textgroup": "tlg0541",
@@ -56945,7 +56927,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ephesios",
     "source_title": "ΕΦΕΣΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.epikleros": {
     "textgroup": "tlg0541",
@@ -56970,7 +56952,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_epikleros",
     "source_title": "ΕΠΙΚΛΗΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.epitrepontes": {
     "textgroup": "tlg0541",
@@ -56995,7 +56977,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_epitrepontes",
     "source_title": "ΕΠΙΤΡΕΠΟΝΤΕΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.eros": {
     "textgroup": "tlg0541",
@@ -57020,7 +57002,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_eros",
     "source_title": "ΗΡΩΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.eynoychos": {
     "textgroup": "tlg0541",
@@ -57045,7 +57027,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_eynoychos",
     "source_title": "ΕΥΝΟΥΧΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.georgos": {
     "textgroup": "tlg0541",
@@ -57070,7 +57052,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_georgos",
     "source_title": "ΓΕΩΡΓΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.iereia": {
     "textgroup": "tlg0541",
@@ -57095,7 +57077,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_iereia",
     "source_title": "ΙΕΡΕΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.imbrioi": {
     "textgroup": "tlg0541",
@@ -57120,7 +57102,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_imbrioi",
     "source_title": "ΙΜΒΡΙΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ippokomos": {
     "textgroup": "tlg0541",
@@ -57145,7 +57127,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ippokomos",
     "source_title": "ΙΠΠΟΚΟΜΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.kanephoros": {
     "textgroup": "tlg0541",
@@ -57170,7 +57152,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_kanephoros",
     "source_title": "ΚΑΝΗΦΟΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.karchedonios": {
     "textgroup": "tlg0541",
@@ -57195,7 +57177,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_karchedonios",
     "source_title": "ΚΑΡΧΗΔΟΝΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.karchedonios_katapseydomenos": {
     "textgroup": "tlg0541",
@@ -57220,7 +57202,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_karchedonios_katapseydomenos",
     "source_title": "ΚΑΡΧΗΔΟΝΙΟΣ ΚΑΤΑΨΕΥΔΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.karine": {
     "textgroup": "tlg0541",
@@ -57245,7 +57227,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_karine",
     "source_title": "ΚΑΡΙΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.katapseydomenos": {
     "textgroup": "tlg0541",
@@ -57270,7 +57252,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_katapseydomenos",
     "source_title": "ΚΑΤΑΨΕΥΔΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.kekryphalos": {
     "textgroup": "tlg0541",
@@ -57295,7 +57277,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_kekryphalos",
     "source_title": "ΚΕΚΡΥΦΑΛΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.kitharistes": {
     "textgroup": "tlg0541",
@@ -57320,7 +57302,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_kitharistes",
     "source_title": "ΚΙΘΑΡΙΣΤΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.knidia": {
     "textgroup": "tlg0541",
@@ -57345,7 +57327,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_knidia",
     "source_title": "ΚΝΙΔΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.kolax": {
     "textgroup": "tlg0541",
@@ -57370,7 +57352,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_kolax",
     "source_title": "ΚΟΛΑΞ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.koneiazomenai": {
     "textgroup": "tlg0541",
@@ -57395,7 +57377,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_koneiazomenai",
     "source_title": "ΚΩΝΕΙΑΖΟΜΕΝΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.kybernetai": {
     "textgroup": "tlg0541",
@@ -57420,7 +57402,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_kybernetai",
     "source_title": "ΚΥΒΕΡΝΗΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.leykadia": {
     "textgroup": "tlg0541",
@@ -57445,7 +57427,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_leykadia",
     "source_title": "ΛΕΥΚΑΔΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.lokroi": {
     "textgroup": "tlg0541",
@@ -57470,7 +57452,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_lokroi",
     "source_title": "ΛΟΚΡΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.menagyrtes": {
     "textgroup": "tlg0541",
@@ -57495,7 +57477,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_menagyrtes",
     "source_title": "ΜΗΝΑΓΥΡΤΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.methe": {
     "textgroup": "tlg0541",
@@ -57520,7 +57502,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_methe",
     "source_title": "ΜΕΘΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.misogynes": {
     "textgroup": "tlg0541",
@@ -57545,7 +57527,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_misogynes",
     "source_title": "ΜΙΣΟΓΥΝΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.misoymenos": {
     "textgroup": "tlg0541",
@@ -57570,7 +57552,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_misoymenos",
     "source_title": "ΜΙΣΟΥΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.naykleros": {
     "textgroup": "tlg0541",
@@ -57595,7 +57577,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_naykleros",
     "source_title": "ΝΑΥΚΛΗΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.nomothetes": {
     "textgroup": "tlg0541",
@@ -57620,7 +57602,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_nomothetes",
     "source_title": "ΝΟΜΟΘΕΤΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.olynthia": {
     "textgroup": "tlg0541",
@@ -57645,7 +57627,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_olynthia",
     "source_title": "ΟΛΥΝΘΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.omopatrioi": {
     "textgroup": "tlg0541",
@@ -57670,7 +57652,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_omopatrioi",
     "source_title": "ΟΜΟΠΑΤΡΙΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.orge": {
     "textgroup": "tlg0541",
@@ -57695,7 +57677,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_orge",
     "source_title": "ΟΡΓΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.paidion": {
     "textgroup": "tlg0541",
@@ -57720,7 +57702,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_paidion",
     "source_title": "ΠΑΙΔΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.parakatatheke": {
     "textgroup": "tlg0541",
@@ -57745,7 +57727,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_parakatatheke",
     "source_title": "ΠΑΡΑΚΑΤΑΘΗΚΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.perikeiromene": {
     "textgroup": "tlg0541",
@@ -57770,7 +57752,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_perikeiromene",
     "source_title": "ΠΕΡΙΚΕΙΡΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.perinthia": {
     "textgroup": "tlg0541",
@@ -57795,7 +57777,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_perinthia",
     "source_title": "ΠΕΡΙΝΘΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.phanion": {
     "textgroup": "tlg0541",
@@ -57820,7 +57802,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_phanion",
     "source_title": "ΦΑΝΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.phasma": {
     "textgroup": "tlg0541",
@@ -57845,7 +57827,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_phasma",
     "source_title": "ΦΑΣΜΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.plokion": {
     "textgroup": "tlg0541",
@@ -57870,7 +57852,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_plokion",
     "source_title": "ΠΛΟΚΙΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.poloymenoi": {
     "textgroup": "tlg0541",
@@ -57895,7 +57877,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_poloymenoi",
     "source_title": "ΠΩΛΟΥΜΕΝΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.proegkalon": {
     "textgroup": "tlg0541",
@@ -57920,7 +57902,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_proegkalon",
     "source_title": "ΠΡΟΕΓΚΑΛΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.progamoi": {
     "textgroup": "tlg0541",
@@ -57945,7 +57927,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_progamoi",
     "source_title": "ΠΡΟΓΑΜΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.pseyderakles": {
     "textgroup": "tlg0541",
@@ -57970,7 +57952,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_pseyderakles",
     "source_title": "ΨΕΥΔΗΡΑΚΛΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.psophodees": {
     "textgroup": "tlg0541",
@@ -57995,7 +57977,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_psophodees",
     "source_title": "ΨΟΦΟΔΕΗΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.rapizomene": {
     "textgroup": "tlg0541",
@@ -58020,7 +58002,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_rapizomene",
     "source_title": "ΡΑΠΙΖΟΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.samia": {
     "textgroup": "tlg0541",
@@ -58045,7 +58027,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_samia",
     "source_title": "ΣΑΜΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.sikyonios": {
     "textgroup": "tlg0541",
@@ -58070,7 +58052,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_sikyonios",
     "source_title": "ΣΙΚΥΩΝΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.sitobolia": {
     "textgroup": "tlg0541",
@@ -58095,7 +58077,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_sitobolia",
     "source_title": "ΣΙΤΟΒΟΛΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.stratiotai": {
     "textgroup": "tlg0541",
@@ -58120,7 +58102,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_stratiotai",
     "source_title": "ΣΤΡΑΤΙΩΤΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.synaristosai": {
     "textgroup": "tlg0541",
@@ -58145,7 +58127,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_synaristosai",
     "source_title": "ΣΥΝΑΡΙΣΤΩΣΑΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.synepheboi": {
     "textgroup": "tlg0541",
@@ -58170,7 +58152,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_synepheboi",
     "source_title": "ΣΥΝΕΦΗΒΟΙ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.synerosa": {
     "textgroup": "tlg0541",
@@ -58195,7 +58177,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_synerosa",
     "source_title": "ΣΥΝΕΡΩΣΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.thais": {
     "textgroup": "tlg0541",
@@ -58220,7 +58202,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_thais",
     "source_title": "ΘΑΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.theophoroymene": {
     "textgroup": "tlg0541",
@@ -58245,7 +58227,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_theophoroymene",
     "source_title": "ΘΕΟΦΟΡΟΥΜΕΝΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.thesayros": {
     "textgroup": "tlg0541",
@@ -58270,7 +58252,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_thesayros",
     "source_title": "ΘΗΣΑΥΡΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.thettale": {
     "textgroup": "tlg0541",
@@ -58295,7 +58277,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_thettale",
     "source_title": "ΘΕΤΤΑΛΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.thrasyleon": {
     "textgroup": "tlg0541",
@@ -58320,7 +58302,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_thrasyleon",
     "source_title": "ΘΡΑΣΥΛΕΩΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.titthe": {
     "textgroup": "tlg0541",
@@ -58345,7 +58327,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_titthe",
     "source_title": "ΤΙΤΘΗ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.trophimon": {
     "textgroup": "tlg0541",
@@ -58370,7 +58352,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_trophimon",
     "source_title": "ΤΡΟΦΙΜΟΝ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.trophonios": {
     "textgroup": "tlg0541",
@@ -58395,7 +58377,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_trophonios",
     "source_title": "ΤΡΟΦΩΝΙΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.xenologos": {
     "textgroup": "tlg0541",
@@ -58420,7 +58402,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_xenologos",
     "source_title": "ΞΕΝΟΛΟΓΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ydria": {
     "textgroup": "tlg0541",
@@ -58445,7 +58427,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ydria",
     "source_title": "ΥΔΡΙΑ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ymnis": {
     "textgroup": "tlg0541",
@@ -58470,7 +58452,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ymnis",
     "source_title": "ΥΜΝΙΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ypobolimaios": {
     "textgroup": "tlg0541",
@@ -58495,7 +58477,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ypobolimaios",
     "source_title": "Ὑποβολιμαῖος",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg0541.ypobolimaios_e_agroikos": {
     "textgroup": "tlg0541",
@@ -58520,7 +58502,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_ypobolimaios_e_agroikos",
     "source_title": "ΥΠΟΒΟΛΙΜΑΙΟΣ Η ΑΓΡΟΙΚΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg1361.sphattomenos": {
     "textgroup": "tlg1361",
@@ -58545,7 +58527,7 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1361_sphattomenos",
     "source_title": "ΣΦΑΤΤΟΜΕΝΟΣ",
-    "source_edition": "kock1888"
+    "source_edition": "multiple-fragment-editions"
   },
   "tlg1788.atalantai": {
     "textgroup": "tlg1788",
@@ -58570,31 +58552,6 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1788_atalantai",
     "source_title": "ΑΤΑΛΑΝΤΑΙ",
-    "source_edition": "kock1888"
-  },
-  "tlg9002.adelon_dramaton": {
-    "textgroup": "tlg9002",
-    "work": "adelon_dramaton",
-    "title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-    "fragmentary": true,
-    "record_type": "fragmentary_play",
-    "editions": {},
-    "appcrits": {},
-    "translations": {},
-    "commentaries": {},
-    "treebanks": {},
-    "fragment_editions": {
-      "kock1888-grc1": {
-        "path": "/Users/gcrane/github/grcnewfragments/data/tlg9002/adelon_dramaton/tlg9002.adelon_dramaton.kock1888-grc1.xml",
-        "urn": "urn:cts:greekLit:tlg9002.adelon_dramaton.kock1888-grc1",
-        "label": "Greek (Kock, 1888; OCR draft): ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
-        "class": "greek-text",
-        "format": "tei_fragment_work",
-        "corresp_axis": "fragment"
-      }
-    },
-    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg9002_adelon_dramaton",
-    "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
     "source_edition": "multiple-fragment-editions"
   },
   "tlg0019.nayagos": {
@@ -59641,6 +59598,14 @@
         "class": "greek-text",
         "format": "tei_fragment_work",
         "corresp_axis": "fragment"
+      },
+      "kock1884-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0448/psaltria/tlg0448.psaltria.kock1884-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg0448.psaltria.kock1884-grc1",
+        "label": "Greek (Kock, 1884; OCR draft): ΨΑΛΤΡΙΑ",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
       }
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0448_psaltria",
@@ -59820,6 +59785,56 @@
     },
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0515_synerithoi",
     "source_title": "ΣΥΝΕΡΙΘΟΙ",
+    "source_edition": "multiple-fragment-editions"
+  },
+  "tlg1783.moschion": {
+    "textgroup": "tlg1783",
+    "work": "moschion",
+    "title": "ΜΟΣΧΙΩΝ",
+    "fragmentary": true,
+    "record_type": "fragmentary_play",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kock1884-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1783/moschion/tlg1783.moschion.kock1884-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1783.moschion.kock1884-grc1",
+        "label": "Greek (Kock, 1884; OCR draft): ΜΟΣΧΙΩΝ",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1783_moschion",
+    "source_title": "ΜΟΣΧΙΩΝ",
+    "source_edition": "multiple-fragment-editions"
+  },
+  "tlg0448.adelon_dramaton": {
+    "textgroup": "tlg0448",
+    "work": "adelon_dramaton",
+    "title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
+    "fragmentary": true,
+    "record_type": "fragmentary_play",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kock1888-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0448/adelon_dramaton/tlg0448.adelon_dramaton.kock1888-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg0448.adelon_dramaton.kock1888-grc1",
+        "label": "Greek (Kock, 1888; OCR draft): ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0448_adelon_dramaton",
+    "source_title": "ΑΔΗΛΩΝ ΔΡΑΜΑΤΩΝ",
     "source_edition": "multiple-fragment-editions"
   }
 }

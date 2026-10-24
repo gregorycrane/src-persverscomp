@@ -679,10 +679,38 @@ def _publish_kock_fragments(site_root, catalog):
         ("kock1888-grc1", "Greek (Kock, 1888; OCR draft)",
          "Kock vol. III sources and notes"),
     )
-    return sum(
-        _publish_kock_edition(site_root, catalog, registry, *volume)
-        for volume in volumes
-    )
+    published = 0
+    for short_id, label, source_label in volumes:
+        registered = {
+            key for key, record in registry.items()
+            if short_id in record.get("fragment_editions", {})
+        }
+        stale = []
+        for work_key, meta in catalog.get("works", {}).items():
+            if work_key in registered or not any(
+                    version.get("short_id") == short_id
+                    for version in meta.get("versions", [])):
+                continue
+            db_path = (site_root / "data" / meta["textgroup"] / meta["work"] /
+                       meta["parts"][0]["file"])
+            if db_path.exists():
+                conn = sqlite3.connect(db_path)
+                conn.execute("DELETE FROM text_segments WHERE version_short_id=?", (short_id,))
+                conn.execute("DELETE FROM edition_chapter_order WHERE version_short_id=?", (short_id,))
+                conn.execute("DELETE FROM text_units WHERE short_id=?", (short_id,))
+                conn.commit()
+                conn.close()
+            meta["versions"] = [version for version in meta.get("versions", [])
+                                if version.get("short_id") != short_id]
+            if not meta["versions"]:
+                if db_path.exists():
+                    db_path.unlink()
+                stale.append(work_key)
+        for work_key in stale:
+            catalog["works"].pop(work_key)
+        published += _publish_kock_edition(
+            site_root, catalog, registry, short_id, label, source_label)
+    return published
 
 
 def _publish_meineke_fragments(site_root, catalog):
