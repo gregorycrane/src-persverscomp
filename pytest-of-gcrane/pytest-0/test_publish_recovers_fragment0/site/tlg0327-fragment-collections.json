@@ -1,0 +1,826 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0327",
+  "author": "Carcinus",
+  "corpus_title": "Carcinus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0327.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0327-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr1-l1",
+          "text": "βαθεῖαν εἰς αὐλῶνα περίδρομον στρατοῦ"
+        }
+      ],
+      "context": "Ath. V p. 189 D : καλοῦσι δ’ ἀρσενικῶς τοὺς αὐλῶνας — οἱ καταλογάδην συγγραφεῖς, οἱ δὲ ποιηταὶ θηλυκῶς. Καρκίνος μὲν Ἀχιλλεῖ ‘βαθεῖαν — στρατοῦ’ .\n\nΘΥΕΣΤΗΣ v. ΑΕΡΟΠΗ",
+      "play_title": "ΑΧΙΛΛΕΥΣ",
+      "play_work": "achilleys",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_achilleys"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0327-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr2-l1",
+          "text": "Ὠ νύκτες"
+        }
+      ],
+      "context": "Ath. XIII p. 559 F, vide fr. 3 .",
+      "play_title": "ΣΕΜΕΛΗ",
+      "play_work": "semele",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0327-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr3-l1",
+          "text": "ὦ Ζεῦ , τί χρὴ γυναῖκας ἐξειπεῖν κακόν ;"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr3-l2",
+          "text": "ἀρκοῦν ἂν εἴη, κἂν γυναῖκ’ εἴπῃς μόνον."
+        }
+      ],
+      "context": "Ath. XIII p. 559 F : Καρκίνος δ’ ὁ τραγικὸς ἐν Σεμέλῃ , ἧς ἀρχή ‘ὦ νύκτες’ , φησίν ‘ὦ Ζεῦ — μόνον’ . v. 1 γυναῖκά σ’ ἐξειπεῖν Herwerden Exerc. crit. p. 73 .",
+      "play_title": "ΣΕΜΕΛΗ",
+      "play_work": "semele",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0327-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr4-l1",
+          "text": "ἀσκεῖν μὲν ἀρετήν, εὐτυχεῖν δ’ αἰτεῖν θεούς·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr4-l2",
+          "text": "ἔχων γὰρ ἄμφω ταῦτα μακάριός θ’ ἅμα"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0327-fr4-l3",
+          "text": "κεκλημένος ζῆν κἀγαθὸς δυνήσεται."
+        }
+      ],
+      "context": "Stob. Flor. 103 , 3 : Καρκίνου Τυρεύς (sic SMA, Carcinus in Tereo Gesner, Καρκίνου Τηρεύς ed. Gaisford, ego Καρκίνου Τυροῦς malim) . ‘ἀσκεῖν — δυνήσεται’ . v. 2 ἔχων libri, οὕχων Herwerden Exerc. crit. p. 73 . μακάριος θάμα M. v. 3 τἀγαθὸς A.",
+      "play_title": "ΤΥΡΩ",
+      "play_work": "tyro",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_tyro"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0327-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr5-l1",
+          "text": "λέγουσι Δήμητρός ποτ’ ἄρρητον κόρην"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr5-l2",
+          "text": "Πλούτωνα κρυφίοις ἁρπάσαι βουλεύμασιν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0327-fr5-l3",
+          "text": "δῦναί τε γαίας εἰς μελαμφαεῖς μυχούς·"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0327-fr5-l4",
+          "text": "πόθῳ δὲ μητέρ’ ἠφανισμένης κόρης"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0327-fr5-l5",
+          "text": "μαστῆρ’ ἐπελθεῖν πᾶσαν ἐν κύκλῳ χθόνα·"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0327-fr5-l6",
+          "text": "καὶ γῆν μὲν Αἰτναίοισι Σικελίας πάγοις"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0327-fr5-l7",
+          "text": "πυρὸς γέμουσαν ῥεύμασιν δυσεμβόλοις"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0327-fr5-l8",
+          "text": "πᾶσαν στενάξαι, πένθεσιν δὲ παρθένου"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0327-fr5-l9",
+          "text": "σίτων ἄμοιρον Διοτρεφὲς φθίνειν γένος,"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0327-fr5-l10",
+          "text": "ὅθεν θεὰς τιμῶσιν ἐς τὰ νῦν ἔτι."
+        }
+      ],
+      "context": "Diod. Sic. 5 , 5 , 1 : Καρκίνος μὲν γὰρ ὁ τῶν τραγῳδιῶν ποιητὴς πλεονάκις ἐν ταῖς Συρακούσαις παρεπιδεδημηκὼς καὶ τὴν τῶν ἐγχωρίων τεθεαμένος σπουδὴν περὶ τὰς θυσίας καὶ πανηγύρεις τῆς τε Δήμητρος καὶ Κόρης, κατεχώρισεν ἐν τοῖς ποιήμασι τούσδε τοὺς στίχους ‘λἐγουσι — τὰ νῦν ἔτι’ . v. 1 λέγουσι om. A. v. 2 Πλούτων ΑΒ. βουλεύμασι ed. v. 3 μελαμβαθεῖς Cobet Coll. crit. p. 254 . at μελαμφαὲς ἔρεβος Eur. Hel. 518 , κελαινοφαὴς ὄρφνα Ar. Ran. 1331 , μελαμφαέων τε βερέθρων Hymn. Isid. (Epigr. Kaib. 1028) v. 43 , atro lumine fumantis Verg. Aen. 7 , 457 . cf. Valckenaer in Eur. Phoen. 1017 . v. 4 μητρὸς B. v. 6 τὴν vulgo, γῆν scripsi. Αἰτναίοις ABD. Σικελίαν Rhodoman. v. 8 παρθένους ABD. v. 9 ἄμοιρος διοτροφοὺς FG. v. 10 θεᾶς D.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0327-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr6-l1",
+          "text": "οὐ κεῖνος ἐξέστησε· τὰς γὰρ ἐμφύτους"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr6-l2",
+          "text": "ὀρθῶς παγείσας. . . . . φρένας"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0327-fr6-l3",
+          "text": "οὐδεὶς ἐπαίρει καιρὸς ἐξαμαρτάνειν."
+        }
+      ],
+      "context": "Harpocr. V. Καρκίνος p. 106 , 10 : περὶ δὲ τοῦ τῆς τραγῳδίας ποιητοῦ τοῦ Ξενοκλέους υἱοῦ Λυσίας ἐν τῷ πρὸς Μνησίμαχον φησί· συντίθεται δὲ τούτοις καὶ Καρκίνος ὁ ποιητὴς εἰπών ‘οὐ κεῖνος — ἐξαμαρτάνειν’ . v. 1 νοῦ (ita iam Valesius) κεῖνος ἐξέστηκε coni. Valckenaer, οὐκ οἶνος ἐξέστησε Luzac, οὐ κέρδος ἐξέστησε F. G. Schmidt Krit. Stud. 3 p. 19 sq. v. 2 παγείσας φρένας ΑΒ, παγείσας μὲν φρένας al. , παγείσας ἀνδρὸς εὐγενοῦς φρένας F. G. Schmidt. v. 3 καιρὸν BC. v. 2 et 3 olim proposui ὀρθῶς παγείσας ἐξαμαρτάνειν φρένας οὐδεὶς ἐπαίρει (vel ἐπαρεῖ) καιρός.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0327-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr7-l1",
+          "text": "πολλῶν γὰρ ἀνθρώποισι φάρμακον κακῶν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr7-l2",
+          "text": "σιγή , μάλιστα δ’ ἐστὶ σώφρονος τρόπου."
+        }
+      ],
+      "context": "Stob. Flor. 33 , 1 : Καρκίνου (sic SM, eclogam om. A) . ‘πολλοῖς — τρόπου’ . v. 1 πολλῶν scripsi, πολλοῖς SM. φάρμακον κακὸν M.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0327-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr8-l1",
+          "text": "χαίρω σ’ ὁρῶν φθονοῦντα, τοῦτ’ εἰδὼς ὅτι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr8-l2",
+          "text": "ἓν δρᾷ μόνον δίκαιον ὧν ποιεῖ φθόνος·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0327-fr8-l3",
+          "text": "λυπεῖ γὰρ αὐτὸ τὸ κτῆμα τοὺς κεκτημένους."
+        }
+      ],
+      "context": "Stob. Flor. 38 , 18 : Καρκίνου (sic SMA, lemma om. Brux.) . ‘χαίρω — κεκτημένους’ . v. 1 χαίρειν σ’ ἐῶ φθονοῦντα F. G. Schmidt Krit. Stud. 1 p. 85 . v. 2 ἴδιον SMA, ἥδιον Brux. , δίκαιον Porson. ποεῖ malim. v. 3 αὐτὸ κτῆμα coni. Wakefield, αὖ τὸ κτῆμα Welcker Tragod. p. 1067 , αὐτοὺς κτῆμα F. G. Schmidt, αὐτόχρημα ego olim scripsi.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0327-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr9-l1",
+          "text": ". . δειλόν ἐσθ’ ὁ πλοῦτος καὶ φιλόψυχον κακόν."
+        }
+      ],
+      "context": "Stob. Flor. 93 , 8 : Καρκίνου (sic MA, eclogam om. S) . ‘δεινόν — κακόν’ . δεινόν MA, δειλόν Grotius. Eur. Phoen. 597 : δειλὸν δ’ ὁ πλοῦτος καὶ φιλόψυχον κακόν. Carcini locus fortasse excidit.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "10",
+      "source_id": "tlg0327-fr10",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:10",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0327-fr10-l1",
+          "text": "ὦ πολλὰ πλοῦτος δυστυχέστατος κυρῶν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0327-fr10-l2",
+          "text": "ὅμως μέγιστον ζῆλον ἐν βροτοῖς ἔχει."
+        }
+      ],
+      "context": "Stob. Flor. 93 , 11 : Καρκίνου (sic A, καρκῖνος M, eclogam om. S) . ‘ὦ πολλὰ — ἔχει’ . v. 1 ὁ πολλὰ Grotius, ὡς πολλὰ Valckenaer, ego ἐς πολλὰ praefero (cf. Eur. Phoen. 619 1643 fr. 45) . ὦ πολλὰ servans v. 2 ἔχεις requirit Meineke.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0327-aerope": {
+      "id": "tlg0327-aerope",
+      "work": "aerope",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_aerope",
+      "title": "ΑΕΡΟΠΗ",
+      "source_title": "ΑΕΡΟΠΗ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-aerope",
+      "record_type": "fragmentary_play",
+      "introduction": "Plut. de gloria Athen. c. 7 p. 349 F : οὐδὲ ὅτε Καρκίνος Ἀερόπῃ συνῆν ἢ Ἕκτορι Ἀστυδάμας (vide supra p. 778) . idem drama fortasse significat Aristot. Poet. c. 16 p. 1454 b 23 : πρώτη μὲν (ἀναγνώρισις) — ἡ διὰ τῶν σημείων. τούτων δὲ τὰ μὲν σύμφυτα, οἷον ‘λόγχην ἣν φοροῦσι γηγενεῖς’ ἢ ἀστέρας οἵους ἐν τῷ Θυέστῃ Καρκίνος, τὰ δὲ ἐπίκτητα. neque alio spectare videtur Aelian. V. H. 14 , 40 : Ἀλέξανδρος ὁ Φεραίων τύραννος ἐν τοῖς μάλιστα ἔδοξεν ὠμότατος εἶναι. Θεοδώρου δὲ τοῦ τῆς τραγῳδίας ποιητοῦ (immo ὑποκριτοῦ) ὑποκρινομένου τὴν Ἀερόπην (τὴν Μερόπην Valckenaer Diatr. p. 182) σφόδρα ἐμπαθῶς, ὅδε εἰς δάκρυα ἐξέπεσεν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-aias": {
+      "id": "tlg0327-aias",
+      "work": "aias",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_aias",
+      "title": "ΑΙΑΣ",
+      "source_title": "ΑΙΑΣ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-aias",
+      "record_type": "fragmentary_play",
+      "introduction": "Prov. Milleri Mél. de litt. gr. p. 355 : Aἰάντειος γέλως λέγουσι δὲ ὅτι Πλεισθένης ὁ ὑποκριτὴς τὸν Καρκίνου Αἴαντα ὑποκρινόμενος εὐκαίρως ἐγέλασε· τοῦ γὰρ Ὀδυσσέως εἰπόντος ὅτι τὰ δίκαια χρὴ ποιεῖν, μετὰ εἰρωνείας ὁ Αἴας τῷ γέλωτι ἐχρήσατο.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-alope": {
+      "id": "tlg0327-alope",
+      "work": "alope",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_alope",
+      "title": "ΑΛΟΠΗ",
+      "source_title": "ΑΛΟΠΗ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-alope",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Eth. Nic. 7 , 8 p. 1150 b 10 : οὐ γὰρ εἴ τις ἰσχυρῶν καὶ ὑπερβαλλουσῶν ἡδονῶν ἡττᾶται ἢ λυπῶν, θαυμαστόν, ἀλλὰ συγγνωμονικόν, εἰ ἀντιτείνων, ὥσπερ ὁ Θεοδέκτου Φιλοκτήτης ὑπὸ τοῦ ἔχεως πεπληγμένος ἢ ὁ Καρκίνου ἐν τῇ Ἀλόπῃ Κερκύων. Aspasius in Aristot. Eth. Nic. (7 , 8 p. 1150 b 10) cuius verba edidit Val. Rose in Herm. 5 p. 105 : ἔοικε δὲ καὶ Καρκίνος εἰσάγειν τὸν Κερκυόνα ἡττώμενον ὑπὸ μεγάλων ἡδονῶν (l. ὀδυνῶν) . Schol. Aristot. in Anecd. Paris. vol. 1 p. 243 , 20 : ὁ Καρκίνος τραγικὸς ἦν. ὁ δὲ Κερκύων εἶχε θυγατέρα τὴν Ἀλόπην· μαθὼν δὲ ὅτι ἐμοιχεύθη ἡ αὑτοῦ θυγάτηρ Ἀλόπη, ἠρώτησεν αὐτὴν τίς ὁ μοιχεύσας, λέγων, εἴ μοι τοῦτον εἴποις, οὐδ’ ὅλως ἂν λυπηθείης. εἶτα εἰπούσης τῆς Ἀλόπης τὸν αὐτὴν μοιχεύσαντα οὐκέτι ὁ Κερκύων ὑπὸ τῆς λύπης ἔφερε τὸ ζῆν, ἀλλὰ τὸ ζῆν ἀπελέγετο.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-amphiareos": {
+      "id": "tlg0327-amphiareos",
+      "work": "amphiareos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_amphiareos",
+      "title": "ΑΜΦΙΑΡΕΩΣ",
+      "source_title": "ΑΜΦΙΑΡΕΩΣ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-amphiareos",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Poet. c. 17 p. 1455 a 26 : σημεῖον δὲ τούτου ὃ ἐπετιμᾶτο Καρκίνῳ· ὁ γὰρ Ἀμφιάραος ἐξ ἱεροῦ ἀνῄει, ὃ μὴ ὁρῶντα (ὁρῶντ’ ἂν Vahlen) τὸν θεατὴν ἐλάνθανεν, ἐπὶ δὲ τῆς σκηνῆς ἐξέπεσε δυσχερανάντων τοῦτο τῶν θεατῶν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-achilleys": {
+      "id": "tlg0327-achilleys",
+      "work": "achilleys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_achilleys",
+      "title": "ΑΧΙΛΛΕΥΣ",
+      "source_title": "ΑΧΙΛΛΕΥΣ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-achilleys",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0327-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr1-l1",
+              "text": "βαθεῖαν εἰς αὐλῶνα περίδρομον στρατοῦ"
+            }
+          ],
+          "context": "Ath. V p. 189 D : καλοῦσι δ’ ἀρσενικῶς τοὺς αὐλῶνας — οἱ καταλογάδην συγγραφεῖς, οἱ δὲ ποιηταὶ θηλυκῶς. Καρκίνος μὲν Ἀχιλλεῖ ‘βαθεῖαν — στρατοῦ’ .\n\nΘΥΕΣΤΗΣ v. ΑΕΡΟΠΗ",
+          "play_title": "ΑΧΙΛΛΕΥΣ",
+          "play_work": "achilleys",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_achilleys",
+          "attribution_id": "nauck1889grc1-tlg0327-achilleys",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0327.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0327-medeia": {
+      "id": "tlg0327-medeia",
+      "work": "medeia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_medeia",
+      "title": "ΜΗΔΕΙΑ",
+      "source_title": "ΜΗΔΕΙΑ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-medeia",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Rhet. 2 , 23 p. 1400 b 9 : ἄλλος τόπος τὸ ἐκ τῶν ἁμαρτηθέντων κατηγορεῖν ἢ ἀπολογεῖσθαι, οἷον ἐν τῇ Καρκίνου Μηδείᾳ οἳ μὲν κατηγοροῦσιν ὅτι τοὺς παῖδας ἀπέκτεινεν, οὐ φαίνεσθαι γοῦν αὐτούς· ἥμαρτε γὰρ ἡ Μήδεια περὶ τὴν ἀποστολὴν τῶν παίδων· ἢ δ’ ἀπολογεῖται ὅτι οὐκ ἂν τοὺς παῖδας, ἀλλὰ τὸν Ἰάσονα ἂν ἀπέκτεινεν· τοῦτο γὰρ ἥμαρτεν ἂν μὴ ποιήσασα, εἴπερ καὶ θάτερον ἐποίησεν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-oidipoys": {
+      "id": "tlg0327-oidipoys",
+      "work": "oidipoys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_oidipoys",
+      "title": "ΟΙΔΙΠΟΥΣ",
+      "source_title": "ΟΙΔΙΠΟΥΣ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-oidipoys",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Rhet. 3 , 16 p. 1417 b 18 : ἂν δ’ ᾖ ἄπιστον, ὑπισχνεῖσθαί τε καὶ αἰτίαν λέγειν εὐθύς, καὶ διατάττειν οἷς βούλονται, οἷον ἡ Ἰοκάστη ἡ Καρκίνου ἐν τῷ Οἰδίποδι ἀεὶ ὑπισχνεῖται πυνθανομένου τοῦ ζητοῦντος τὸν υἱόν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-orestes": {
+      "id": "tlg0327-orestes",
+      "work": "orestes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_orestes",
+      "title": "ΟΡΕΣΤΗΣ",
+      "source_title": "ΟΡΕΣΤΗΣ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-orestes",
+      "record_type": "fragmentary_play",
+      "introduction": "Phot. Lex. p. 132 , 20 et Suidas : Καρκίνου ποιήματα. Μένανδρος Ψευδηρακλεῖ· αἰνιγματώδη. ὁ γὰρ Καρκίνος Ὀρέστην ἀπὸ ἡλίου (ἀπὸ ἰλίου Suid. ὑπὸ Μενελάου coni. Hemsterhuys, ὑπὸ Ἀπόλλωνος Dobree in Phot. p. 710 , ὑπ’ Οἴακος C. Robert de Apollod. bibl. p. 94) ἀναγκαζόμενον ὁμολογῆσαι ὅτι ἐμητροκτόνησεν, ἐποίησε δι’ αἰνιγμάτων ἀποκρινόμενον.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0327-semele": {
+      "id": "tlg0327-semele",
+      "work": "semele",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele",
+      "title": "ΣΕΜΕΛΗ",
+      "source_title": "ΣΕΜΕΛΗ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-semele",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0327-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr2-l1",
+              "text": "Ὠ νύκτες"
+            }
+          ],
+          "context": "Ath. XIII p. 559 F, vide fr. 3 .",
+          "play_title": "ΣΕΜΕΛΗ",
+          "play_work": "semele",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele",
+          "attribution_id": "nauck1889grc1-tlg0327-semele",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0327-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr3-l1",
+              "text": "ὦ Ζεῦ , τί χρὴ γυναῖκας ἐξειπεῖν κακόν ;"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr3-l2",
+              "text": "ἀρκοῦν ἂν εἴη, κἂν γυναῖκ’ εἴπῃς μόνον."
+            }
+          ],
+          "context": "Ath. XIII p. 559 F : Καρκίνος δ’ ὁ τραγικὸς ἐν Σεμέλῃ , ἧς ἀρχή ‘ὦ νύκτες’ , φησίν ‘ὦ Ζεῦ — μόνον’ . v. 1 γυναῖκά σ’ ἐξειπεῖν Herwerden Exerc. crit. p. 73 .",
+          "play_title": "ΣΕΜΕΛΗ",
+          "play_work": "semele",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele",
+          "attribution_id": "nauck1889grc1-tlg0327-semele",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0327.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0327-tyro": {
+      "id": "tlg0327-tyro",
+      "work": "tyro",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_tyro",
+      "title": "ΤΥΡΩ",
+      "source_title": "ΤΥΡΩ",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-tyro",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0327-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr4-l1",
+              "text": "ἀσκεῖν μὲν ἀρετήν, εὐτυχεῖν δ’ αἰτεῖν θεούς·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr4-l2",
+              "text": "ἔχων γὰρ ἄμφω ταῦτα μακάριός θ’ ἅμα"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0327-fr4-l3",
+              "text": "κεκλημένος ζῆν κἀγαθὸς δυνήσεται."
+            }
+          ],
+          "context": "Stob. Flor. 103 , 3 : Καρκίνου Τυρεύς (sic SMA, Carcinus in Tereo Gesner, Καρκίνου Τηρεύς ed. Gaisford, ego Καρκίνου Τυροῦς malim) . ‘ἀσκεῖν — δυνήσεται’ . v. 2 ἔχων libri, οὕχων Herwerden Exerc. crit. p. 73 . μακάριος θάμα M. v. 3 τἀγαθὸς A.",
+          "play_title": "ΤΥΡΩ",
+          "play_work": "tyro",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_tyro",
+          "attribution_id": "nauck1889grc1-tlg0327-tyro",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0327.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0327-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0327-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0327.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0327-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0327-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr5-l1",
+              "text": "λέγουσι Δήμητρός ποτ’ ἄρρητον κόρην"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr5-l2",
+              "text": "Πλούτωνα κρυφίοις ἁρπάσαι βουλεύμασιν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0327-fr5-l3",
+              "text": "δῦναί τε γαίας εἰς μελαμφαεῖς μυχούς·"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0327-fr5-l4",
+              "text": "πόθῳ δὲ μητέρ’ ἠφανισμένης κόρης"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0327-fr5-l5",
+              "text": "μαστῆρ’ ἐπελθεῖν πᾶσαν ἐν κύκλῳ χθόνα·"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0327-fr5-l6",
+              "text": "καὶ γῆν μὲν Αἰτναίοισι Σικελίας πάγοις"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0327-fr5-l7",
+              "text": "πυρὸς γέμουσαν ῥεύμασιν δυσεμβόλοις"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0327-fr5-l8",
+              "text": "πᾶσαν στενάξαι, πένθεσιν δὲ παρθένου"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0327-fr5-l9",
+              "text": "σίτων ἄμοιρον Διοτρεφὲς φθίνειν γένος,"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0327-fr5-l10",
+              "text": "ὅθεν θεὰς τιμῶσιν ἐς τὰ νῦν ἔτι."
+            }
+          ],
+          "context": "Diod. Sic. 5 , 5 , 1 : Καρκίνος μὲν γὰρ ὁ τῶν τραγῳδιῶν ποιητὴς πλεονάκις ἐν ταῖς Συρακούσαις παρεπιδεδημηκὼς καὶ τὴν τῶν ἐγχωρίων τεθεαμένος σπουδὴν περὶ τὰς θυσίας καὶ πανηγύρεις τῆς τε Δήμητρος καὶ Κόρης, κατεχώρισεν ἐν τοῖς ποιήμασι τούσδε τοὺς στίχους ‘λἐγουσι — τὰ νῦν ἔτι’ . v. 1 λέγουσι om. A. v. 2 Πλούτων ΑΒ. βουλεύμασι ed. v. 3 μελαμβαθεῖς Cobet Coll. crit. p. 254 . at μελαμφαὲς ἔρεβος Eur. Hel. 518 , κελαινοφαὴς ὄρφνα Ar. Ran. 1331 , μελαμφαέων τε βερέθρων Hymn. Isid. (Epigr. Kaib. 1028) v. 43 , atro lumine fumantis Verg. Aen. 7 , 457 . cf. Valckenaer in Eur. Phoen. 1017 . v. 4 μητρὸς B. v. 6 τὴν vulgo, γῆν scripsi. Αἰτναίοις ABD. Σικελίαν Rhodoman. v. 8 παρθένους ABD. v. 9 ἄμοιρος διοτροφοὺς FG. v. 10 θεᾶς D.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0327-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr6-l1",
+              "text": "οὐ κεῖνος ἐξέστησε· τὰς γὰρ ἐμφύτους"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr6-l2",
+              "text": "ὀρθῶς παγείσας. . . . . φρένας"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0327-fr6-l3",
+              "text": "οὐδεὶς ἐπαίρει καιρὸς ἐξαμαρτάνειν."
+            }
+          ],
+          "context": "Harpocr. V. Καρκίνος p. 106 , 10 : περὶ δὲ τοῦ τῆς τραγῳδίας ποιητοῦ τοῦ Ξενοκλέους υἱοῦ Λυσίας ἐν τῷ πρὸς Μνησίμαχον φησί· συντίθεται δὲ τούτοις καὶ Καρκίνος ὁ ποιητὴς εἰπών ‘οὐ κεῖνος — ἐξαμαρτάνειν’ . v. 1 νοῦ (ita iam Valesius) κεῖνος ἐξέστηκε coni. Valckenaer, οὐκ οἶνος ἐξέστησε Luzac, οὐ κέρδος ἐξέστησε F. G. Schmidt Krit. Stud. 3 p. 19 sq. v. 2 παγείσας φρένας ΑΒ, παγείσας μὲν φρένας al. , παγείσας ἀνδρὸς εὐγενοῦς φρένας F. G. Schmidt. v. 3 καιρὸν BC. v. 2 et 3 olim proposui ὀρθῶς παγείσας ἐξαμαρτάνειν φρένας οὐδεὶς ἐπαίρει (vel ἐπαρεῖ) καιρός.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0327-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr7-l1",
+              "text": "πολλῶν γὰρ ἀνθρώποισι φάρμακον κακῶν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr7-l2",
+              "text": "σιγή , μάλιστα δ’ ἐστὶ σώφρονος τρόπου."
+            }
+          ],
+          "context": "Stob. Flor. 33 , 1 : Καρκίνου (sic SM, eclogam om. A) . ‘πολλοῖς — τρόπου’ . v. 1 πολλῶν scripsi, πολλοῖς SM. φάρμακον κακὸν M.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0327-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr8-l1",
+              "text": "χαίρω σ’ ὁρῶν φθονοῦντα, τοῦτ’ εἰδὼς ὅτι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr8-l2",
+              "text": "ἓν δρᾷ μόνον δίκαιον ὧν ποιεῖ φθόνος·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0327-fr8-l3",
+              "text": "λυπεῖ γὰρ αὐτὸ τὸ κτῆμα τοὺς κεκτημένους."
+            }
+          ],
+          "context": "Stob. Flor. 38 , 18 : Καρκίνου (sic SMA, lemma om. Brux.) . ‘χαίρω — κεκτημένους’ . v. 1 χαίρειν σ’ ἐῶ φθονοῦντα F. G. Schmidt Krit. Stud. 1 p. 85 . v. 2 ἴδιον SMA, ἥδιον Brux. , δίκαιον Porson. ποεῖ malim. v. 3 αὐτὸ κτῆμα coni. Wakefield, αὖ τὸ κτῆμα Welcker Tragod. p. 1067 , αὐτοὺς κτῆμα F. G. Schmidt, αὐτόχρημα ego olim scripsi.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0327-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr9-l1",
+              "text": ". . δειλόν ἐσθ’ ὁ πλοῦτος καὶ φιλόψυχον κακόν."
+            }
+          ],
+          "context": "Stob. Flor. 93 , 8 : Καρκίνου (sic MA, eclogam om. S) . ‘δεινόν — κακόν’ . δεινόν MA, δειλόν Grotius. Eur. Phoen. 597 : δειλὸν δ’ ὁ πλοῦτος καὶ φιλόψυχον κακόν. Carcini locus fortasse excidit.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "10",
+          "source_id": "tlg0327-fr10",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:10",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0327-fr10-l1",
+              "text": "ὦ πολλὰ πλοῦτος δυστυχέστατος κυρῶν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0327-fr10-l2",
+              "text": "ὅμως μέγιστον ζῆλον ἐν βροτοῖς ἔχει."
+            }
+          ],
+          "context": "Stob. Flor. 93 , 11 : Καρκίνου (sic A, καρκῖνος M, eclogam om. S) . ‘ὦ πολλὰ — ἔχει’ . v. 1 ὁ πολλὰ Grotius, ὡς πολλὰ Valckenaer, ego ἐς πολλὰ praefero (cf. Eur. Phoen. 619 1643 fr. 45) . ὦ πολλὰ servans v. 2 ἔχεις requirit Meineke.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0327.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 21,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0327-achilleys",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0327-achilleys",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_achilleys",
+      "corresp": [
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0327-semele",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0327-semele",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_semele",
+      "corresp": [
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0327-tyro",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0327-tyro",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_tyro",
+      "corresp": [
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0327-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0327_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:9",
+        "urn:cts:greekLit:tlg0327.fragmenta.nauck1889grc1:10"
+      ]
+    }
+  ]
+}

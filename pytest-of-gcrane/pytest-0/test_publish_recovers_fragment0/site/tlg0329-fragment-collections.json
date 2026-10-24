@@ -1,0 +1,1490 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0329",
+  "author": "Theodectes",
+  "corpus_title": "Theodectes, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0329.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0329-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr1-l1",
+          "text": "σαφὴς μὲν ἐν βροτοῖσιν ὑμνεῖται λόγος"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr1-l2",
+          "text": "ὡς οὐδὲν ἔστιν ἀθλιώτερον φυτὸν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr1-l3",
+          "text": "γυναικός."
+        }
+      ],
+      "context": "Porphyr. in Euseb. P. E. X p. 466 D : τοῦ δὲ Εὐριπίδου εἰπόντος (Med. 231) ‘γυναῖκές ἐσμεν ἀθλιώτατον φυτόν’ , Θεοδέκτης (Θεόδεκτος CFG) ἐν Ἀλκμαίωνι φησί ‘σαφὴς — γυναικός’ .",
+      "play_title": "ΑΛΚΜΕΩΝ",
+      "play_work": "alkmeon",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0329-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr2-l1",
+          "text": "ΑΛΦ. μητέρα δὲ τὴν σὴν οὔτις ἐστύγει βροτῶν ;"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr2-l2",
+          "text": "ALK. . . . ἀλλὰ διαλαβόντα χρὴ σκοπεῖν."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr2-l3",
+          "text": "ΑΛΦ. πῶς ;"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr2-l4",
+          "text": "ΑΛΚ τὴν μὲν θανεῖν ἔκριναν, ἐμὲ δὲ μὴ κτανεῖν."
+        }
+      ],
+      "context": "Aristot. Rhet. 2 , 23 p. 1397 b 3 : δεῖ σκοπεῖν χωρὶς εἰ ἄξιος ὁ παθὼν παθεῖν καὶ ὁ ποιήσας ποιῆσαι, εἶτα χρῆσθαι ὁποτέρως ἁρμόττει· ἐνίοτε γὰρ διαφωνεῖ τὸ τοιοῦτον καὶ οὐδὲν κωλύει, ὥσπερ ἐν τῷ Ἀλκμαίωνι (ἀλκμέονι Αc) τῷ Θεοδέκτου ‘μητέρα — βροτῶν ;’ (v. 1) φησὶ δ’ ἀποκρινόμενος ‘ἀλλὰ — σκοπεῖν’ (v. 2) . ἐρομένης δὲ τῆς Ἀλφεσιβοίας ‘πῶς ;’ ὑπολαβὼν φησί ‘τὴν μὲν — κτανεῖν’ (v. 4) . cf. Schol. h. 1 . fol. 43 b 20 et 24 . personarum notas addidi. v. 2 ἅπαντες ego suppleverim, μάλιστά γ’ Herwerden Exerc. crit. p. 78 . διαλαβόντα χρὴ Αc, διαλαβόντας ceteri.",
+      "play_title": "ΑΛΚΜΕΩΝ",
+      "play_work": "alkmeon",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0329-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr3-l1",
+          "text": "θείων δ’ ἀπ’ ἀμφοῖν ἔκγονον ῥιζωμάτων"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr3-l2",
+          "text": "τίς ἂν προσειπεῖν ἀξιώσειεν λάτριν ;"
+        }
+      ],
+      "context": "Aristot. Polit. 1 , 6 p. 1255 a 37 : τοὺς δὲ βαρβάρους οἴκοι μόνον (sc. εὐγενεῖς νομίζουσιν) , ὡς ὄν τι τὸ μὲν ἁπλῶς εὐγενὲς καὶ έλεύθερον, τὸ δ’ οὐχ ἁπλῶς· ὥσπερ ἡ Θεοδέκτου Ἑλένη φησί ‘θεῖον — λάτριν ;’ v. 1 ἔκγονον] ἐκγόνοι et ἐκ γόνοιν al.",
+      "play_title": "ΕΛΕΝΗ",
+      "play_work": "elene",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_elene"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0329-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr4-l1",
+          "text": "εἰσὶ κασίγνηται δισσαί , ὧν ἡ μία τίκτει"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr4-l2",
+          "text": "τὴν ἑτέραν, αὐτὴ δὲ τεκοῦσ’ ὑπὸ τῆσδε τεκνοῦται."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr4-l3",
+          "text": "ὥστε κασιγνήτας οὔσας ἅμα καὶ συνομαίμους"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr4-l4",
+          "text": "αὐτοκασιγνήτας κοινῇ καὶ μητέρας εἶναι."
+        }
+      ],
+      "context": "Ath. X. p. 451 F allato Theodect. fr. 18 haec addit : καν τῷ Οἰδίποδι δὲ τῇ τραγῳδία (καν ταὐτῇ δὲ τῇ τραγῳδίᾳ coni. R. Methner progr. a. 1882 p. 8 sq.) τὴν νύκτα καὶ τὴν ἡμέραν εἴρηκεν αινιττό μενος εἰσὶ τεκνοῦται” . eosdem versus afferunt Tryphon in Rhet. vol. 8 p. 734 Moschop. Opusc. p. 75 Georg. Choerob. in Rhet. vol. 8 p. 816 . in Anthol. Pal. 14 , 40 duo accedunt versus inepti,\n\nv. 1 διτταὶ Ath. Moschop. , δισσα Tryph. κασίγνηται δύ᾽ ἀδελφεαί· ἡ μία Anth. Oedipi esse fr. 18 probabiliter coni. Methner.",
+      "play_title": "ΟΙΔΙΠΟΥΣ",
+      "play_work": "oidipoys",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_oidipoys"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0329-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr5-l1",
+          "text": "δίκαιόν ἐστιν, ἥτις ἂν κτείνῃ πόσιν"
+        }
+      ],
+      "context": "Aristot. Rhet. 2 , 24 p. 1401 a 35 : τὸ ἐν τῷ Ὀρέστῃ τοῦ Θεοδέκτου· ἐκ διαιρέσεως γάρ ἐστιν. ‘δίκαιόν — πόσιν,’ ἀποθνῄσκειν ταύτην, καὶ τῷ πατρί γε τιμωρεῖν τὸν υἱόν· οὐκοῦν καὶ ταῦτα πέπρακται· συντεθέντα γὰρ ἴσως οὐκέτι δίκαιον.",
+      "play_title": "ΟΡΕΣΤΗΣ",
+      "play_work": "orestes",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_orestes"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0329-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr6-l1",
+          "text": "γραφῆς ὁ πρῶτος ἦν μαλακόφθαλμος κύκλος·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr6-l2",
+          "text": "ἔπειτα δισσοὶ κανόνες ἰσόμετροι πάνυ,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr6-l3",
+          "text": "τούτους δὲ πλάγιος διαμέτρου συνδεῖ κανών,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr6-l4",
+          "text": "τρίτον δ’ ἑλικτῷ βοστρύχῳ προσεμφερές."
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0329-fr6-l5",
+          "text": "ἔπειτα τριόδους πλάγιος ὣς ἐφαίνετο,"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0329-fr6-l6",
+          "text": "πέμπται δ’ ἄνωθεν ἰσόμετροι ῥάβδοι δύο,"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0329-fr6-l7",
+          "text": "αὗται δὲ συντείνουσιν εἰς βάσιν μίαν·"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0329-fr6-l8",
+          "text": "ἕκτον δ’ ὅπερ καὶ πρόσθεν εἶφ’ , ὁ βόστρυχος."
+        }
+      ],
+      "context": "Ath. X p. 454 E : καὶ Θεοδέκτης δ’ ὁ Φασηλίτης ἄγροικόν τινα ἀγράμματον παράγει καὶ τοῦτον τὸ τοῦ Θησέως ὄνομα διασημαίνοντα· ‘γραφῆς — βόστρυχος’ . v. 1 μαλακόφθαλμος corruptum, καλόφθαλμος coni. Scaliger, μεσόμφαλος Valckenaer in Eur. Phoen. p. 261 , μεσόφθαλμος Welcker Tragod. p. 1079 , μακρόφθαλμος Herwerden Exerc. crit. p. 78 . κύκλος C, κύκλῳ A. v. 2 δισσοὶ Valckenaer, δύο οἱ AC, δοιοὶ Meineke Ath. 4 p. 206 . v. 3 διαμέτρου AC, διὰ μέσου Musurus. v. 4 προσεμφερής AC, προσεμφερές Musurus. v. 5 ὥστ’ A, ὡς C. v. 6 ἰσόμετροι] ὕπτιοι (vel potius ὕπτιαι) coni. Meineke. v. 8 εἶφ’ ὁ C, εἶπ’ ὁ A. πρόσθεν εἶπον, βόστρυχος coni. Herwerden, fortasse praestat πρόσθ’ ἔφην, ὁ βόστρυχος.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0329-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr7-l1",
+          "text": "ἀπὸ τῶν θεῶν ἀρχὴν δὲ ποιεῖσθαι πρέπον."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 1 , 1 p. 23 , 6 : Θεοδέκτου. ‘ἀπὸ — πρέπον’ . ἐκ τῶν malim.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0329-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr8-l1",
+          "text": "ὅστις δὲ θνητῶν μέμφεται τὰ θεῖ’ , ὅτι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr8-l2",
+          "text": "οὐκ εὐθὺς ἀλλὰ τῷ χρόνῳ μετέρχεται"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr8-l3",
+          "text": "τοὺς μὴ δικαίους, πρόφασιν εἰσακουσάτω."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr8-l4",
+          "text": "εἰ μὲν γὰρ αὐτίκ’ ᾖσαν αἱ τιμωρίαι,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0329-fr8-l5",
+          "text": "πολλοὶ διὰ φόβον κοὐ δι’ εὐσεβῆ τρόπον"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0329-fr8-l6",
+          "text": "θεοὺς ἂν ηὖξον· νῦν δὲ τῆς τιμωρίας"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0329-fr8-l7",
+          "text": "ἄπωθεν οὔσης τῇ φύσει χρῶνται βροτοί·"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0329-fr8-l8",
+          "text": "ὅταν δὲ φωραθῶσιν ἔρδοντες κακά ,"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0329-fr8-l9",
+          "text": "τίνουσι ποινὰς ὑστέροισιν ἐν χρόνοις."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 3 , 22 p. 56 , 10 : Θεοδέκτου (lemma versui 1 adscribit F, v. 3 P) . ‘ὅστις δὲ — ἐν χρόνοις’ . v. 4 εἰ μὲν γὰρ παρ’ αὐτίκ’ FP, εἰ μὲν παραυτίκ’ mecum scripsit Wachsmuth. ἦσαν vulgo, ᾖσαν praetuli. v. 5 κοὐ F, καὶ οὐ P. v. 6 ηὔξαντο F P m. sec. , ηὔξατο Ρ pr. , ηὖξον Meineke Zeitschr. f. d. Alt. 1844 p. 13 . v. 7 ἄποθεν F P pr. m. , ἄπωθεν Ρ m. sec. v. 8 βουραθῶσιν Ρ pr. ὀφθέντες κακοί FP, ἔρξαντες κακά Meineke, ἔρδοντες κακά F. G. Schmidt Krit. Stud. 3 p. 20 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0329-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr9-l1",
+          "text": "ἀλλ’ ὦ τάλαν Θυέστα, καρτέρει δάκνων"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr9-l2",
+          "text": "ὀργῆς χαλινόν· παρακελεύομαι δὲ σοὶ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr9-l3",
+          "text": "τεθηγμένῳ νῦν· ἀλλ’ ὁ μυρίος χρόνος"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr9-l4",
+          "text": "τὰ πάντ’ ἀμαυροῖ χὑπὸ χεῖρα λαμβάνει."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 8 , 6 p. 94 , 14 : Θεοδέκτου. ‘ἀλλ’ ὦ — λαμβάνει’ . v. 1 δαθανὼν F, διαθανὼν (θανὼν m. sec.) Ρ, δάκνων Grotius. v. 2 δέ σοι vulgo. v. 3 τεθειγμένον ἐν F, τεθηγμένον ἐν Ρ, τεθηγμένῳ νῦν scripsi. ἄλλοις μυρίοις χρόνοις FP, ἀλλ’ ὁ μυρίος χρόνος scripsi, χρόνος iam Grotius correxit. v. 4 καὶ ὑπὸ χεῖρα FP. coniecerunt ex hoc loco Thyesten tragoediam a Theodecta scriptam esse.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "10",
+      "source_id": "tlg0329-fr10",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:10",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr10-l1",
+          "text": "ὦ καλλιφεγγῆ λαμπάδ’ εἱλίσσων φλογὸς"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr10-l2",
+          "text": "ἥλιε, ποθεινὸν πᾶσιν ἀνθρώποις σέλας,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr10-l3",
+          "text": "εἶδές τιν’ ἄλλον πώποτ’ εἰς οὕτω μέγαν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr10-l4",
+          "text": "ἐλθόντ’ ἀγῶνα καὶ δυσέκφευκτον κρίσιν ;"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0329-fr10-l5",
+          "text": "ὅπου κατηγορεῖ μὲν ἐν λόγοισί μου"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0329-fr10-l6",
+          "text": "γυνή , πρὸς ὃν δ’ εἴρηκε, τυγχάνει πόσις,"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0329-fr10-l7",
+          "text": "κρινοῦσι δ’ οἵπερ καὶ κατηγοροῦσί μου."
+        }
+      ],
+      "context": "Stob. Flor. 10 , 8 : Θεοδέκτου. ‘ὦ καλλιφεγγῆ — μου’ . v. 3 οἶδας A. τινα ἄλλον πώποτε S. v. 5 ἐν λόγοις σίμου M. v. 6 δ’ om. M. v. 7 κρινοῦσι scripsi, κρατοῦσι SMA.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "11",
+      "source_id": "tlg0329-fr11",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:11",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr11-l1",
+          "text": "πολλὰ δεῖ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr11-l2",
+          "text": "μοχθεῖν τὸν ἥξοντ’ εἰς ἔπαινον εὐκλεῶς·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr11-l3",
+          "text": "ῥᾳθυμία δὲ τὴν παραυτίχ’ ἡδονὴν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr11-l4",
+          "text": "λαβοῦσα λύπας τῷ χρόνῳ τίκτειν φιλεῖ ."
+        }
+      ],
+      "context": "Stob. Flor. 29 , 35 : Θεοδέκτου. ‘πολλὰ — φιλεῖ’ . v. 2 εὐκλεῶς ineptum, ἢ κλέος coni. F. G. Schmidt Krit. Stud. 3 p. 20 , εὐκλεᾶ Wecklein.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "12",
+      "source_id": "tlg0329-fr12",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:12",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr12-l1",
+          "text": "ἅπαντ’ ἐν ἀνθρώποισι γηράσκειν ἔφυ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr12-l2",
+          "text": "[καὶ πρὸς τελευτὴν ἔρχεται τὰ τοῦ χρόνου]"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr12-l3",
+          "text": "πλὴν ὡς ἔοικε τῆς ἀναιδείας μόνης·"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr12-l4",
+          "text": "αὕτη δ’ ὅσῳ περ αὔξεται θνητῶν γένος,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0329-fr12-l5",
+          "text": "τοσῷδε μείζων γίγνεται καθ’ ἡμέραν."
+        }
+      ],
+      "context": "Stob. Flor. 32 , 6 : Θεοδέκτου. ‘ἅπαντ’ — ἡμέραν’ . eclogam praebent LSMBrux. v. 2 , qui inter lineas legitur in S, manifesto spurius est. τὰ LSMBrux. , τὴν Arsenius p. 303 , 13 . v. 3 μόνης Meineke, μόνον libri. v. 4 αὕτη S, αὐτὴ LMBrux. v. 5 γίνεται S. μείζων αὔξεται possis conicere secundum Eur. fr. 1029 , 5 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "13",
+      "source_id": "tlg0329-fr13",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:13",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr13-l1",
+          "text": "ὅταν γὰρ ἄλοχον εἰς δόμους ἄγῃ πόσις,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr13-l2",
+          "text": "οὐχ ὡς δοκεῖ γυναῖκα λαμβάνει μόνον,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr13-l3",
+          "text": "ὁμοῦ δὲ τῇδ’ ἔτ’ εἰσκομίζεται λαβὼν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr13-l4",
+          "text": "καὶ δαίμον’ ἤτοι χρηστὸν ἢ τοὐναντίον."
+        }
+      ],
+      "context": "Stob. Flor. 69 , 1 : Θεοδέκτου. ‘ὅταν — τοὐναντίον’ . v. 3 τῇδέ τ’ εἰσκομίζεται libri, τῇδ’ ἔτ’ εἰσκομίζεται scripsi. μόνην malim. tragici poetae hos esse versus, non comici, ut ipse dubitans opinabatur Meineke vol. 4 p. 691 , demonstrat Cobet Ν. L. p. 47 . itaque quod Iacobs proposuit τῇδ’ ἐπεισκομίζεται ferri non potest. iure autem quae Stobaeus Flor. 68 , 26 Theodectae tribuit, παραπλήσιον πρᾶγμ’ ἐστὶ γῆρας καὶ γάμος κτἑ . , comoediae vindicavit Meineke vol. 4 p. 690 . intercidisse illic Theodectae locum coni. O. Hense.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "14",
+      "source_id": "tlg0329-fr14",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:14",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr14-l1",
+          "text": "γονέων τὰ τέκνα σῴζουσιν αἱ συμβουλίαι."
+        }
+      ],
+      "context": "Stob. Flor. 83 , 8 : Θεοδέκτου (sic MA, ecl. om. S) . ‘γονέων — συμβουλίαι’ . τὰ τέκν’ ἔσωσαν coni. Mekler Lect. gr. spec. p. 15 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "15",
+      "source_id": "tlg0329-fr15",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:15",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr15-l1",
+          "text": "ἐγὼ μὲν οὔποτ’ εὐγένειαν ᾔνεσα"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr15-l2",
+          "text": "τὴν προστάταισι χρωμένην ἀναξίοις."
+        }
+      ],
+      "context": "Stob. Flor. 86 , 5 : Θεοδέκτου. ‘ἐγὼ — ἀναξίοις’ . v. 1 οὔποτ οὐδεμίαν ἐπῄνεσα γῆν coni. F. G. Schmidt Krit. Stud. 3 p. 22 . v. 2 ἀναξίως Arsenius p. 376 , 25 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "16",
+      "source_id": "tlg0329-fr16",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:16",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr16-l1",
+          "text": "πολυσπερὴς μέν, ὦ γέρον, καθ’ Ἑλλάδα"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr16-l2",
+          "text": "φήμη πλανᾶται καὶ διέγνωσται πάλαι,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr16-l3",
+          "text": "τὸ μὴ βεβαίους τὰς βροτῶν εἶναι τύχας."
+        }
+      ],
+      "context": "Stob. Flor. 105 , 25 : Θεοδέκτου. ‘πολυσπερὴς — τύχας’ . v. 1 πολυσπερεῖ SA, πολύσπερ εἰ M. v. 3 affert Clemens Alex. Strom. VI p. 745 : ὁ τραγικὸς ὁμοίως Θεοδέκτης γράφει ‘τὸ μὴ — τύχας’ .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "17",
+      "source_id": "tlg0329-fr17",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:17",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr17-l1",
+          "text": "ἧς ἀγχιτέρμων ἥλιος διφρηλατῶν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr17-l2",
+          "text": "σκοτεινὸν ἄνθος ἐξέχρωσε λιγνύος"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr17-l3",
+          "text": "εἰς σώματ’ ἀνδρῶν καὶ συνέστρεψεν κόμας"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr17-l4",
+          "text": "μορφαῖς ἀναυξήτοισι συντήξας πυρός."
+        }
+      ],
+      "context": "Strab. XV p. 695 : (Onesicritus vituperat) Θεοδέκτην εἰς αὐτὸν τὸν ἥλιον ἀναφέροντα τὸ αἴτιον (sc. τοῦ μέλανας εἶναι καὶ οὐλότριχας τοὺς Αἰθίοπας) , ὃς φησὶν οὕτως ‘οἷς — πυρός’ . v. 1 οἷς] ἧς CDFhi.\n\nv. 2 fort. αἶθος εἰσέχρωσε leg. , ubi εἰσέχρωσε debetur Meinekio. v. 4 μορφαῖς vitiosum, ὀμφαῖς coni. Porson Tracts and misc. crit. p. 231 , φοραῖς Lobeck Paral. p. 459 , ὁρμαῖς Meineke Vind. Strab. p. 244 , αὐγαῖς I. Bernhard Ind. graec. trag. I p. 10 . βολαῖς (vel στεροπαῖς) ἀναλγήτοισι Methner progr. a. 1882 p. 8 , ὁρμαῖς ἀνικήτοισι Herwerden Mnem. nov. 15 p. 452 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "18",
+      "source_id": "tlg0329-fr18",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:18",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0329-fr18-l1",
+          "text": "τίς φύσις οὔθ’ ὅσα γαῖα φέρει τροφὸς οὐδ’ ὅσα πόντος"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0329-fr18-l2",
+          "text": "οὔτε βροτοῖσιν ἔχει γυίων αὔξησιν ὁμοίαν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0329-fr18-l3",
+          "text": "ἀλλ’ ἐν μὲν γενέσει πρωτοσπόρῳ ἐστὶ μεγίστη,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0329-fr18-l4",
+          "text": "ἐν δὲ μέσαις ἀκμαῖς μικρά , γήρᾳ δὲ πρὸς αὐτῷ"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0329-fr18-l5",
+          "text": "μορφῇ καὶ μεγέθει μείζων πάλιν ἐστὶν ἁπάντων ;"
+        }
+      ],
+      "context": "Ath. X p. 451 E : Θεοδέκτην δὲ τὸν Φασηλίτην φησὶν Ἐρμιππος — ἱκανώτατον γεγονέναι ἀνευρεῖν τὸν προβληθέντα γρῖφον καὶ αὐτὸν προβαλεῖν ἑτέροις ἐπιδεξίως, οἷον τὸν περὶ σκιᾶς· ἔφη γὰρ εἶναί τινα φύσιν ἢ περὶ τὴν γένεσιν καὶ φθίσιν ἐστὶ μεγίστη, περὶ δὲ τὴν ἀκμὴν ἐλαχίστη. λέγει δ’ οὕτως (ἐν τῷ Οἰδίποδι addit Methner progr. a. 1882 p. 8) ‘τῆς — ἁπάντων’ . v. 1 τῆς φύσεως A, τίς φύσις Porson. v. 5 μεῖζον A.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0329-aias": {
+      "id": "tlg0329-aias",
+      "work": "aias",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_aias",
+      "title": "ΑΙΑΣ",
+      "source_title": "ΑΙΑΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-aias",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Rhet. 2 , 23 p. 1399 b 28 : καὶ τὸ ἐκ τοῦ Αἴαντος τοῦ Θεοδέκτου, ὅτι ὁ Διομήδης προείλετο Ὀδυσσέα οὐ τιμῶν, ἀλλ’ ἵνα ἥττων ᾖ ὁ ἀκολουθῶν. ibid. p. 1400 a 27 : οἷον ἐν τῷ Αἴαντι τῷ Θεοδέκτου Ὀδυσσεὺς λέγει πρὸς τὸν Αἴαντα, διότι ἀνδρειότερος ὢν τοῦ Αἴαντος οὐ δοκεῖ . hinc patet ὅπλων κρίσιν fuisse fabulae argumentum.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0329-alkmeon": {
+      "id": "tlg0329-alkmeon",
+      "work": "alkmeon",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon",
+      "title": "ΑΛΚΜΕΩΝ",
+      "source_title": "ΑΛΚΜΕΩΝ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-alkmeon",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0329-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr1-l1",
+              "text": "σαφὴς μὲν ἐν βροτοῖσιν ὑμνεῖται λόγος"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr1-l2",
+              "text": "ὡς οὐδὲν ἔστιν ἀθλιώτερον φυτὸν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr1-l3",
+              "text": "γυναικός."
+            }
+          ],
+          "context": "Porphyr. in Euseb. P. E. X p. 466 D : τοῦ δὲ Εὐριπίδου εἰπόντος (Med. 231) ‘γυναῖκές ἐσμεν ἀθλιώτατον φυτόν’ , Θεοδέκτης (Θεόδεκτος CFG) ἐν Ἀλκμαίωνι φησί ‘σαφὴς — γυναικός’ .",
+          "play_title": "ΑΛΚΜΕΩΝ",
+          "play_work": "alkmeon",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon",
+          "attribution_id": "nauck1889grc1-tlg0329-alkmeon",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0329-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr2-l1",
+              "text": "ΑΛΦ. μητέρα δὲ τὴν σὴν οὔτις ἐστύγει βροτῶν ;"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr2-l2",
+              "text": "ALK. . . . ἀλλὰ διαλαβόντα χρὴ σκοπεῖν."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr2-l3",
+              "text": "ΑΛΦ. πῶς ;"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr2-l4",
+              "text": "ΑΛΚ τὴν μὲν θανεῖν ἔκριναν, ἐμὲ δὲ μὴ κτανεῖν."
+            }
+          ],
+          "context": "Aristot. Rhet. 2 , 23 p. 1397 b 3 : δεῖ σκοπεῖν χωρὶς εἰ ἄξιος ὁ παθὼν παθεῖν καὶ ὁ ποιήσας ποιῆσαι, εἶτα χρῆσθαι ὁποτέρως ἁρμόττει· ἐνίοτε γὰρ διαφωνεῖ τὸ τοιοῦτον καὶ οὐδὲν κωλύει, ὥσπερ ἐν τῷ Ἀλκμαίωνι (ἀλκμέονι Αc) τῷ Θεοδέκτου ‘μητέρα — βροτῶν ;’ (v. 1) φησὶ δ’ ἀποκρινόμενος ‘ἀλλὰ — σκοπεῖν’ (v. 2) . ἐρομένης δὲ τῆς Ἀλφεσιβοίας ‘πῶς ;’ ὑπολαβὼν φησί ‘τὴν μὲν — κτανεῖν’ (v. 4) . cf. Schol. h. 1 . fol. 43 b 20 et 24 . personarum notas addidi. v. 2 ἅπαντες ego suppleverim, μάλιστά γ’ Herwerden Exerc. crit. p. 78 . διαλαβόντα χρὴ Αc, διαλαβόντας ceteri.",
+          "play_title": "ΑΛΚΜΕΩΝ",
+          "play_work": "alkmeon",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon",
+          "attribution_id": "nauck1889grc1-tlg0329-alkmeon",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 7,
+      "status": "Fragmentary text"
+    },
+    "tlg0329-elene": {
+      "id": "tlg0329-elene",
+      "work": "elene",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_elene",
+      "title": "ΕΛΕΝΗ",
+      "source_title": "ΕΛΕΝΗ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-elene",
+      "record_type": "fragmentary_play",
+      "introduction": "Hanc fabulam Welcker Tragod. p. 1074 respici suspicatur ab Aristot. Rhet. 2 , 24 p. 1401 b 35 : ἄλλος παρὰ τὴν ἔλλειψιν τοῦ πότε καὶ πῶς, οἷον ὅτι δικαίως Ἀλέξανδρος ἔλαβε τὴν Ἑλένην· αἵρεσις γὰρ αὐτῇ ἐδόθη παρὰ τοῦ πατρός· οὐ γὰρ ἀεὶ ἴσως, ἀλλὰ τὸ πρῶτον· καὶ γὰρ ὁ πατὴρ μέχρι τούτου κύριος.",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0329-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr3-l1",
+              "text": "θείων δ’ ἀπ’ ἀμφοῖν ἔκγονον ῥιζωμάτων"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr3-l2",
+              "text": "τίς ἂν προσειπεῖν ἀξιώσειεν λάτριν ;"
+            }
+          ],
+          "context": "Aristot. Polit. 1 , 6 p. 1255 a 37 : τοὺς δὲ βαρβάρους οἴκοι μόνον (sc. εὐγενεῖς νομίζουσιν) , ὡς ὄν τι τὸ μὲν ἁπλῶς εὐγενὲς καὶ έλεύθερον, τὸ δ’ οὐχ ἁπλῶς· ὥσπερ ἡ Θεοδέκτου Ἑλένη φησί ‘θεῖον — λάτριν ;’ v. 1 ἔκγονον] ἐκγόνοι et ἐκ γόνοιν al.",
+          "play_title": "ΕΛΕΝΗ",
+          "play_work": "elene",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_elene",
+          "attribution_id": "nauck1889grc1-tlg0329-elene",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0329-lygkeys": {
+      "id": "tlg0329-lygkeys",
+      "work": "lygkeys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_lygkeys",
+      "title": "ΛΥΓΚΕΥΣ",
+      "source_title": "ΛΥΓΚΕΥΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-lygkeys",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Poet. c. 18 p. 1455 b 29 : ἐν τῷ Λυγκεῖ (sic apogr. , λυκεῖ cod.) τῷ Θεοδέκτου δέσις μὲν τά τε προπεπραγμένα καὶ ἡ τοῦ παιδίου λῆψις, καὶ πάλιν ἡ αὐτῶν δὴ ἀπαγωγή , λύσις δ’ ἡ ἀπὸ τῆς αἰτιάσεως τοῦ θανάτου (τοῦ Δαναοῦ coni. Vahlen) μέχρι τοῦ τέλους. ubi ἀπαγωγή addidit Vahlen. cf. c. 11 p. 1452 a 27 : καὶ ἐν τῷ Λυγκεῖ ὁ μὲν ἀγόμενος ὡς ἀποθανούμενος, ὁ δὲ Δαναὸς ἀκολουθῶν ὡς ἀποκτενῶν· τὸν μὲν συνέβη ἐκ τῶν πεπραγμένων ἀποθανεῖν, τὸν δὲ σωθῆναι. hinc argumentum dramatis summatim describere conatus est Odofr. Mueller Graecorum de Lynceis fabulas referens, Gotting. 1837 p. 11 . cf. Welckeri Tragod. p. 1076 sq.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0329-maysolos": {
+      "id": "tlg0329-maysolos",
+      "work": "maysolos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_maysolos",
+      "title": "ΜΑΥΣΩΛΟΣ",
+      "source_title": "ΜΑΥΣΩΛΟΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-maysolos",
+      "record_type": "fragmentary_play",
+      "introduction": "Gellius N. A. 10 , 18 , 7 : exstat nunc quoque Theodecti tragoedia quae inscribitur Mausolus, in qua eum magis quam in prosa placuisse Hyginus in exemplis refert. cf. Suid. v. Θεοδέκτης. de argumento huius tragoediae coniecturas protulerunt admodum incertas O. Ribbeck Mus. Rhen. 30 p. 146 sq. et Egger Journal des savants 1881 p. 504-508 .",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0329-oidipoys": {
+      "id": "tlg0329-oidipoys",
+      "work": "oidipoys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_oidipoys",
+      "title": "ΟΙΔΙΠΟΥΣ",
+      "source_title": "ΟΙΔΙΠΟΥΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-oidipoys",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0329-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr4-l1",
+              "text": "εἰσὶ κασίγνηται δισσαί , ὧν ἡ μία τίκτει"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr4-l2",
+              "text": "τὴν ἑτέραν, αὐτὴ δὲ τεκοῦσ’ ὑπὸ τῆσδε τεκνοῦται."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr4-l3",
+              "text": "ὥστε κασιγνήτας οὔσας ἅμα καὶ συνομαίμους"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr4-l4",
+              "text": "αὐτοκασιγνήτας κοινῇ καὶ μητέρας εἶναι."
+            }
+          ],
+          "context": "Ath. X. p. 451 F allato Theodect. fr. 18 haec addit : καν τῷ Οἰδίποδι δὲ τῇ τραγῳδία (καν ταὐτῇ δὲ τῇ τραγῳδίᾳ coni. R. Methner progr. a. 1882 p. 8 sq.) τὴν νύκτα καὶ τὴν ἡμέραν εἴρηκεν αινιττό μενος εἰσὶ τεκνοῦται” . eosdem versus afferunt Tryphon in Rhet. vol. 8 p. 734 Moschop. Opusc. p. 75 Georg. Choerob. in Rhet. vol. 8 p. 816 . in Anthol. Pal. 14 , 40 duo accedunt versus inepti,\n\nv. 1 διτταὶ Ath. Moschop. , δισσα Tryph. κασίγνηται δύ᾽ ἀδελφεαί· ἡ μία Anth. Oedipi esse fr. 18 probabiliter coni. Methner.",
+          "play_title": "ΟΙΔΙΠΟΥΣ",
+          "play_work": "oidipoys",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_oidipoys",
+          "attribution_id": "nauck1889grc1-tlg0329-oidipoys",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    },
+    "tlg0329-orestes": {
+      "id": "tlg0329-orestes",
+      "work": "orestes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_orestes",
+      "title": "ΟΡΕΣΤΗΣ",
+      "source_title": "ΟΡΕΣΤΗΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-orestes",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0329-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr5-l1",
+              "text": "δίκαιόν ἐστιν, ἥτις ἂν κτείνῃ πόσιν"
+            }
+          ],
+          "context": "Aristot. Rhet. 2 , 24 p. 1401 a 35 : τὸ ἐν τῷ Ὀρέστῃ τοῦ Θεοδέκτου· ἐκ διαιρέσεως γάρ ἐστιν. ‘δίκαιόν — πόσιν,’ ἀποθνῄσκειν ταύτην, καὶ τῷ πατρί γε τιμωρεῖν τὸν υἱόν· οὐκοῦν καὶ ταῦτα πέπρακται· συντεθέντα γὰρ ἴσως οὐκέτι δίκαιον.",
+          "play_title": "ΟΡΕΣΤΗΣ",
+          "play_work": "orestes",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_orestes",
+          "attribution_id": "nauck1889grc1-tlg0329-orestes",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0329-tydeys": {
+      "id": "tlg0329-tydeys",
+      "work": "tydeys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_tydeys",
+      "title": "ΤΥΔΕΥΣ",
+      "source_title": "ΤΥΔΕΥΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-tydeys",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Poet. c. 16 p. 1455 a 9 : τετάρτη δὲ (sc. ἀναγνώρισις) ἡ ἐκ συλλογισμοῦ , οἷον — ἐν τῷ τοῦ Θεοδέκτου Τυδεῖ , ὅτι ἐλθὼν ὡς εὑρήσων υἱὸν αὐτὸς ἀπόλλυται.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0329-philoktetes": {
+      "id": "tlg0329-philoktetes",
+      "work": "philoktetes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_philoktetes",
+      "title": "ΦΙΛΟΚΤΗΤΗΣ",
+      "source_title": "ΦΙΛΟΚΤΗΤΗΣ",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-philoktetes",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Eth. Nic. 7 , 8 p. 1150 b 9 : οὐ γὰρ εἴ τις ἰσχυρῶν καὶ ὑπερβαλλουσῶν ἡδονῶν ἡττᾶται ἢ λυπῶν, θαυμαστόν, ἀλλὰ συγγνωμονικόν, εἰ ἀντιτείνων, ὥσπερ ὁ Θεοδέκτου Φιλοκτήτης ὑπὸ τοῦ ἔχεως πεπληγμένος. Aspasius in Aristot. Eth. Nic. quem locum edidit V. Rose Herm. 5 p. 105 : ὁ παρὰ τῷ Θεοδέκτῃ Φιλοκτήτης ὑπὸ τῆς ἔχεως πεπαρμένος κρύπτειν βουλόμενος τοὺς περὶ τὸν Νεοπτόλεμον μέχρι μέν τινος ἀνέχει (l. ἀντέχει) , ὕστερον δὲ οὐχ ὑπομένων τὸ μέγεθος τῶν ἀλγηδόνων φανερὸς γίνεται. Schol. Aristot. in Anecd. Paris. vol. 1 p. 243 , 15 : Θεοδέκτης τραγικὸς ἦν, καὶ παράγει τὴν χεῖρα δεδηγμένον τὸν Φιλοκτήτην ὑπὸ ὄφεως· καὶ μέχρι μὲν πολλοῦ ἀντέτεινε πρὸς τὰς λύπας καὶ τοὺς πόνους, ὕστερον δὲ ἡττήθη καὶ ἐβόα ‘κόψατε τὴν ἐμὴν χεῖρα’ . noli credere Theodectae ista esse verba.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0329-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0329-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0329.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0329-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "6",
+          "source_id": "tlg0329-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr6-l1",
+              "text": "γραφῆς ὁ πρῶτος ἦν μαλακόφθαλμος κύκλος·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr6-l2",
+              "text": "ἔπειτα δισσοὶ κανόνες ἰσόμετροι πάνυ,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr6-l3",
+              "text": "τούτους δὲ πλάγιος διαμέτρου συνδεῖ κανών,"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr6-l4",
+              "text": "τρίτον δ’ ἑλικτῷ βοστρύχῳ προσεμφερές."
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0329-fr6-l5",
+              "text": "ἔπειτα τριόδους πλάγιος ὣς ἐφαίνετο,"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0329-fr6-l6",
+              "text": "πέμπται δ’ ἄνωθεν ἰσόμετροι ῥάβδοι δύο,"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0329-fr6-l7",
+              "text": "αὗται δὲ συντείνουσιν εἰς βάσιν μίαν·"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0329-fr6-l8",
+              "text": "ἕκτον δ’ ὅπερ καὶ πρόσθεν εἶφ’ , ὁ βόστρυχος."
+            }
+          ],
+          "context": "Ath. X p. 454 E : καὶ Θεοδέκτης δ’ ὁ Φασηλίτης ἄγροικόν τινα ἀγράμματον παράγει καὶ τοῦτον τὸ τοῦ Θησέως ὄνομα διασημαίνοντα· ‘γραφῆς — βόστρυχος’ . v. 1 μαλακόφθαλμος corruptum, καλόφθαλμος coni. Scaliger, μεσόμφαλος Valckenaer in Eur. Phoen. p. 261 , μεσόφθαλμος Welcker Tragod. p. 1079 , μακρόφθαλμος Herwerden Exerc. crit. p. 78 . κύκλος C, κύκλῳ A. v. 2 δισσοὶ Valckenaer, δύο οἱ AC, δοιοὶ Meineke Ath. 4 p. 206 . v. 3 διαμέτρου AC, διὰ μέσου Musurus. v. 4 προσεμφερής AC, προσεμφερές Musurus. v. 5 ὥστ’ A, ὡς C. v. 6 ἰσόμετροι] ὕπτιοι (vel potius ὕπτιαι) coni. Meineke. v. 8 εἶφ’ ὁ C, εἶπ’ ὁ A. πρόσθεν εἶπον, βόστρυχος coni. Herwerden, fortasse praestat πρόσθ’ ἔφην, ὁ βόστρυχος.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0329-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr7-l1",
+              "text": "ἀπὸ τῶν θεῶν ἀρχὴν δὲ ποιεῖσθαι πρέπον."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 1 , 1 p. 23 , 6 : Θεοδέκτου. ‘ἀπὸ — πρέπον’ . ἐκ τῶν malim.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0329-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr8-l1",
+              "text": "ὅστις δὲ θνητῶν μέμφεται τὰ θεῖ’ , ὅτι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr8-l2",
+              "text": "οὐκ εὐθὺς ἀλλὰ τῷ χρόνῳ μετέρχεται"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr8-l3",
+              "text": "τοὺς μὴ δικαίους, πρόφασιν εἰσακουσάτω."
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr8-l4",
+              "text": "εἰ μὲν γὰρ αὐτίκ’ ᾖσαν αἱ τιμωρίαι,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0329-fr8-l5",
+              "text": "πολλοὶ διὰ φόβον κοὐ δι’ εὐσεβῆ τρόπον"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0329-fr8-l6",
+              "text": "θεοὺς ἂν ηὖξον· νῦν δὲ τῆς τιμωρίας"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0329-fr8-l7",
+              "text": "ἄπωθεν οὔσης τῇ φύσει χρῶνται βροτοί·"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0329-fr8-l8",
+              "text": "ὅταν δὲ φωραθῶσιν ἔρδοντες κακά ,"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0329-fr8-l9",
+              "text": "τίνουσι ποινὰς ὑστέροισιν ἐν χρόνοις."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 3 , 22 p. 56 , 10 : Θεοδέκτου (lemma versui 1 adscribit F, v. 3 P) . ‘ὅστις δὲ — ἐν χρόνοις’ . v. 4 εἰ μὲν γὰρ παρ’ αὐτίκ’ FP, εἰ μὲν παραυτίκ’ mecum scripsit Wachsmuth. ἦσαν vulgo, ᾖσαν praetuli. v. 5 κοὐ F, καὶ οὐ P. v. 6 ηὔξαντο F P m. sec. , ηὔξατο Ρ pr. , ηὖξον Meineke Zeitschr. f. d. Alt. 1844 p. 13 . v. 7 ἄποθεν F P pr. m. , ἄπωθεν Ρ m. sec. v. 8 βουραθῶσιν Ρ pr. ὀφθέντες κακοί FP, ἔρξαντες κακά Meineke, ἔρδοντες κακά F. G. Schmidt Krit. Stud. 3 p. 20 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0329-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr9-l1",
+              "text": "ἀλλ’ ὦ τάλαν Θυέστα, καρτέρει δάκνων"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr9-l2",
+              "text": "ὀργῆς χαλινόν· παρακελεύομαι δὲ σοὶ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr9-l3",
+              "text": "τεθηγμένῳ νῦν· ἀλλ’ ὁ μυρίος χρόνος"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr9-l4",
+              "text": "τὰ πάντ’ ἀμαυροῖ χὑπὸ χεῖρα λαμβάνει."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 8 , 6 p. 94 , 14 : Θεοδέκτου. ‘ἀλλ’ ὦ — λαμβάνει’ . v. 1 δαθανὼν F, διαθανὼν (θανὼν m. sec.) Ρ, δάκνων Grotius. v. 2 δέ σοι vulgo. v. 3 τεθειγμένον ἐν F, τεθηγμένον ἐν Ρ, τεθηγμένῳ νῦν scripsi. ἄλλοις μυρίοις χρόνοις FP, ἀλλ’ ὁ μυρίος χρόνος scripsi, χρόνος iam Grotius correxit. v. 4 καὶ ὑπὸ χεῖρα FP. coniecerunt ex hoc loco Thyesten tragoediam a Theodecta scriptam esse.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "10",
+          "source_id": "tlg0329-fr10",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:10",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr10-l1",
+              "text": "ὦ καλλιφεγγῆ λαμπάδ’ εἱλίσσων φλογὸς"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr10-l2",
+              "text": "ἥλιε, ποθεινὸν πᾶσιν ἀνθρώποις σέλας,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr10-l3",
+              "text": "εἶδές τιν’ ἄλλον πώποτ’ εἰς οὕτω μέγαν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr10-l4",
+              "text": "ἐλθόντ’ ἀγῶνα καὶ δυσέκφευκτον κρίσιν ;"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0329-fr10-l5",
+              "text": "ὅπου κατηγορεῖ μὲν ἐν λόγοισί μου"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0329-fr10-l6",
+              "text": "γυνή , πρὸς ὃν δ’ εἴρηκε, τυγχάνει πόσις,"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0329-fr10-l7",
+              "text": "κρινοῦσι δ’ οἵπερ καὶ κατηγοροῦσί μου."
+            }
+          ],
+          "context": "Stob. Flor. 10 , 8 : Θεοδέκτου. ‘ὦ καλλιφεγγῆ — μου’ . v. 3 οἶδας A. τινα ἄλλον πώποτε S. v. 5 ἐν λόγοις σίμου M. v. 6 δ’ om. M. v. 7 κρινοῦσι scripsi, κρατοῦσι SMA.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "11",
+          "source_id": "tlg0329-fr11",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:11",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr11-l1",
+              "text": "πολλὰ δεῖ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr11-l2",
+              "text": "μοχθεῖν τὸν ἥξοντ’ εἰς ἔπαινον εὐκλεῶς·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr11-l3",
+              "text": "ῥᾳθυμία δὲ τὴν παραυτίχ’ ἡδονὴν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr11-l4",
+              "text": "λαβοῦσα λύπας τῷ χρόνῳ τίκτειν φιλεῖ ."
+            }
+          ],
+          "context": "Stob. Flor. 29 , 35 : Θεοδέκτου. ‘πολλὰ — φιλεῖ’ . v. 2 εὐκλεῶς ineptum, ἢ κλέος coni. F. G. Schmidt Krit. Stud. 3 p. 20 , εὐκλεᾶ Wecklein.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "12",
+          "source_id": "tlg0329-fr12",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:12",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr12-l1",
+              "text": "ἅπαντ’ ἐν ἀνθρώποισι γηράσκειν ἔφυ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr12-l2",
+              "text": "[καὶ πρὸς τελευτὴν ἔρχεται τὰ τοῦ χρόνου]"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr12-l3",
+              "text": "πλὴν ὡς ἔοικε τῆς ἀναιδείας μόνης·"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr12-l4",
+              "text": "αὕτη δ’ ὅσῳ περ αὔξεται θνητῶν γένος,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0329-fr12-l5",
+              "text": "τοσῷδε μείζων γίγνεται καθ’ ἡμέραν."
+            }
+          ],
+          "context": "Stob. Flor. 32 , 6 : Θεοδέκτου. ‘ἅπαντ’ — ἡμέραν’ . eclogam praebent LSMBrux. v. 2 , qui inter lineas legitur in S, manifesto spurius est. τὰ LSMBrux. , τὴν Arsenius p. 303 , 13 . v. 3 μόνης Meineke, μόνον libri. v. 4 αὕτη S, αὐτὴ LMBrux. v. 5 γίνεται S. μείζων αὔξεται possis conicere secundum Eur. fr. 1029 , 5 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "13",
+          "source_id": "tlg0329-fr13",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:13",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr13-l1",
+              "text": "ὅταν γὰρ ἄλοχον εἰς δόμους ἄγῃ πόσις,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr13-l2",
+              "text": "οὐχ ὡς δοκεῖ γυναῖκα λαμβάνει μόνον,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr13-l3",
+              "text": "ὁμοῦ δὲ τῇδ’ ἔτ’ εἰσκομίζεται λαβὼν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr13-l4",
+              "text": "καὶ δαίμον’ ἤτοι χρηστὸν ἢ τοὐναντίον."
+            }
+          ],
+          "context": "Stob. Flor. 69 , 1 : Θεοδέκτου. ‘ὅταν — τοὐναντίον’ . v. 3 τῇδέ τ’ εἰσκομίζεται libri, τῇδ’ ἔτ’ εἰσκομίζεται scripsi. μόνην malim. tragici poetae hos esse versus, non comici, ut ipse dubitans opinabatur Meineke vol. 4 p. 691 , demonstrat Cobet Ν. L. p. 47 . itaque quod Iacobs proposuit τῇδ’ ἐπεισκομίζεται ferri non potest. iure autem quae Stobaeus Flor. 68 , 26 Theodectae tribuit, παραπλήσιον πρᾶγμ’ ἐστὶ γῆρας καὶ γάμος κτἑ . , comoediae vindicavit Meineke vol. 4 p. 690 . intercidisse illic Theodectae locum coni. O. Hense.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "14",
+          "source_id": "tlg0329-fr14",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:14",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr14-l1",
+              "text": "γονέων τὰ τέκνα σῴζουσιν αἱ συμβουλίαι."
+            }
+          ],
+          "context": "Stob. Flor. 83 , 8 : Θεοδέκτου (sic MA, ecl. om. S) . ‘γονέων — συμβουλίαι’ . τὰ τέκν’ ἔσωσαν coni. Mekler Lect. gr. spec. p. 15 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "15",
+          "source_id": "tlg0329-fr15",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:15",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr15-l1",
+              "text": "ἐγὼ μὲν οὔποτ’ εὐγένειαν ᾔνεσα"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr15-l2",
+              "text": "τὴν προστάταισι χρωμένην ἀναξίοις."
+            }
+          ],
+          "context": "Stob. Flor. 86 , 5 : Θεοδέκτου. ‘ἐγὼ — ἀναξίοις’ . v. 1 οὔποτ οὐδεμίαν ἐπῄνεσα γῆν coni. F. G. Schmidt Krit. Stud. 3 p. 22 . v. 2 ἀναξίως Arsenius p. 376 , 25 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "16",
+          "source_id": "tlg0329-fr16",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:16",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr16-l1",
+              "text": "πολυσπερὴς μέν, ὦ γέρον, καθ’ Ἑλλάδα"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr16-l2",
+              "text": "φήμη πλανᾶται καὶ διέγνωσται πάλαι,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr16-l3",
+              "text": "τὸ μὴ βεβαίους τὰς βροτῶν εἶναι τύχας."
+            }
+          ],
+          "context": "Stob. Flor. 105 , 25 : Θεοδέκτου. ‘πολυσπερὴς — τύχας’ . v. 1 πολυσπερεῖ SA, πολύσπερ εἰ M. v. 3 affert Clemens Alex. Strom. VI p. 745 : ὁ τραγικὸς ὁμοίως Θεοδέκτης γράφει ‘τὸ μὴ — τύχας’ .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "17",
+          "source_id": "tlg0329-fr17",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:17",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr17-l1",
+              "text": "ἧς ἀγχιτέρμων ἥλιος διφρηλατῶν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr17-l2",
+              "text": "σκοτεινὸν ἄνθος ἐξέχρωσε λιγνύος"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr17-l3",
+              "text": "εἰς σώματ’ ἀνδρῶν καὶ συνέστρεψεν κόμας"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr17-l4",
+              "text": "μορφαῖς ἀναυξήτοισι συντήξας πυρός."
+            }
+          ],
+          "context": "Strab. XV p. 695 : (Onesicritus vituperat) Θεοδέκτην εἰς αὐτὸν τὸν ἥλιον ἀναφέροντα τὸ αἴτιον (sc. τοῦ μέλανας εἶναι καὶ οὐλότριχας τοὺς Αἰθίοπας) , ὃς φησὶν οὕτως ‘οἷς — πυρός’ . v. 1 οἷς] ἧς CDFhi.\n\nv. 2 fort. αἶθος εἰσέχρωσε leg. , ubi εἰσέχρωσε debetur Meinekio. v. 4 μορφαῖς vitiosum, ὀμφαῖς coni. Porson Tracts and misc. crit. p. 231 , φοραῖς Lobeck Paral. p. 459 , ὁρμαῖς Meineke Vind. Strab. p. 244 , αὐγαῖς I. Bernhard Ind. graec. trag. I p. 10 . βολαῖς (vel στεροπαῖς) ἀναλγήτοισι Methner progr. a. 1882 p. 8 , ὁρμαῖς ἀνικήτοισι Herwerden Mnem. nov. 15 p. 452 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "18",
+          "source_id": "tlg0329-fr18",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:18",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0329-fr18-l1",
+              "text": "τίς φύσις οὔθ’ ὅσα γαῖα φέρει τροφὸς οὐδ’ ὅσα πόντος"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0329-fr18-l2",
+              "text": "οὔτε βροτοῖσιν ἔχει γυίων αὔξησιν ὁμοίαν,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0329-fr18-l3",
+              "text": "ἀλλ’ ἐν μὲν γενέσει πρωτοσπόρῳ ἐστὶ μεγίστη,"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0329-fr18-l4",
+              "text": "ἐν δὲ μέσαις ἀκμαῖς μικρά , γήρᾳ δὲ πρὸς αὐτῷ"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0329-fr18-l5",
+              "text": "μορφῇ καὶ μεγέθει μείζων πάλιν ἐστὶν ἁπάντων ;"
+            }
+          ],
+          "context": "Ath. X p. 451 E : Θεοδέκτην δὲ τὸν Φασηλίτην φησὶν Ἐρμιππος — ἱκανώτατον γεγονέναι ἀνευρεῖν τὸν προβληθέντα γρῖφον καὶ αὐτὸν προβαλεῖν ἑτέροις ἐπιδεξίως, οἷον τὸν περὶ σκιᾶς· ἔφη γὰρ εἶναί τινα φύσιν ἢ περὶ τὴν γένεσιν καὶ φθίσιν ἐστὶ μεγίστη, περὶ δὲ τὴν ἀκμὴν ἐλαχίστη. λέγει δ’ οὕτως (ἐν τῷ Οἰδίποδι addit Methner progr. a. 1882 p. 8) ‘τῆς — ἁπάντων’ . v. 1 τῆς φύσεως A, τίς φύσις Porson. v. 5 μεῖζον A.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0329.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 57,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0329-alkmeon",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0329-alkmeon",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_alkmeon",
+      "corresp": [
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0329-elene",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0329-elene",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_elene",
+      "corresp": [
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0329-oidipoys",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0329-oidipoys",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_oidipoys",
+      "corresp": [
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0329-orestes",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0329-orestes",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_orestes",
+      "corresp": [
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:5"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0329-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0329_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:9",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:10",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:11",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:12",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:13",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:14",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:15",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:16",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:17",
+        "urn:cts:greekLit:tlg0329.fragmenta.nauck1889grc1:18"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,498 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0305",
+  "author": "Aristias",
+  "corpus_title": "Aristias, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0305.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0305-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr1-l1",
+          "text": "Αἰγαίου Ποσειδῶ παῖς, πατὴρ δ’ ἐμός. ."
+        }
+      ],
+      "context": "Herod. π. μον. λέξ. p. 10 , 19 de nomine Ποσειδῶν disputans : οὐδὲν περισπώμενον ἀποκόπτεται κατὰ γενικὴν (κατὰ αἰτιατικὴν ante Dindorfium) πτῶσιν· ἐξεκόπη παρὰ Ἀριστίᾳ ἐν Ἀνταίῳ , ἔνθα φησὶν Ἀνταῖος ‘αἰγαίου — ἐμός’ . Αἰγαίου] ἐγὼ scripserim. ferri non potest quod Ahrens Philol. 23 p. 5 proponit, Ἀνταῖος Αἰγαίου Ποσειδῶ παῖς, πατὴρ δ’ | ἐμός.",
+      "play_title": "ΑΝΤΑΙΟΣ",
+      "play_work": "antaios",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_antaios"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0305-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr2-l1",
+          "text": "ἁρπεδόνην τε λύσιν ἱστοῦ"
+        }
+      ],
+      "context": "Pollux 7 , 31 : ἁρπεδόνας δὲ τὰ νήματα ‘Hρόδοτος· Ἀριστίας δὲ ἐν Ἀταλάντῃ ἁρπεδόνην — ἱστοῦ’ τραγικώτερον. τε λῦσον coni. Kuehn, τ’ ἔλυσεν Friebel Satyrogr. p. 68 .",
+      "play_title": "ΑΤΑΛΑΝΤΗ",
+      "play_work": "atalante",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_atalante"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0305-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr3-l1",
+          "text": "σύνδειπνος ἢ ἐπίκωμος ἢ μαζαγρέτας"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0305-fr3-l2",
+          "text": "Ἅιδου τραπεζεύς, ἀκρατέα νηδὺν ἔχων"
+        }
+      ],
+      "context": "Ath. XV p. 686 A : τοῖς παισὶ παρακελεύομαι κατὰ τὸν Σοφοκλέα — καὶ κατὰ τὸν Φλειάσιον δ’ Ἀριστίαν· καὶ γὰρ οὗτος ἐν ταῖς ἐπιγραφομέναις Κηρσὶν ἔφη ‘σύνδειπνος — ἔχων’ . v. 1 ἐπίκωπος libri, ἐπίκωμος L. Dindorf Thes. Gr. L. vol. 3 p. 1665 D, cf. Hesych. 2 p. 158 : ἐπίκωμος· ὁ ἐπᾴδων τῇ φίλῃ , ἢ ἀπὸ οἴνου ᾄδων. σύνδειπνος ἦν ἐπίκωμος coni. R. Methner diss. p. 14 . v. 2 αἰδοῦ ut videtur libri, Ἅιδου Toup Emend. 2 p. 478 . Ἅιδου μαγείρῳ dixit Eur. Cycl. 397 .",
+      "play_title": "ΚΗΡΕΣ",
+      "play_work": "keres",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_keres"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0305-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr4-l1",
+          "text": "ἀπώλεσας τὸν οἶνον ἐπιχέας ὕδωρ."
+        }
+      ],
+      "context": "Suidas : ‘ἀπώλεσας — ὕδωρ’ — ἡ παροιμία γέγονεν ἐκ τοῦ Ἀριστίου Κύκλωπος, ὡς φησὶ Χαμαιλέων ἐν τῷ περὶ σατύρων. Prov. Milleri Mél. de litt. gr. p. 371 sive Zenob. 2 , 16 (similiter Diogenianus 2 , 32) : ‘ἀπώλεσας — ὕδωρ’ . ἐν Κύκλωπι δράματι Πολύφημος οὕτως πρὸς Ὀδυσσέα λέγει, ὅθεν εἰς παροιμίαν περιέστη. utitur hoc versu poetae et fabulae nom. om. Ath. VIII p. 362 A.",
+      "play_title": "ΚΥΚΛΩΨ",
+      "play_work": "kyklops",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_kyklops"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0305-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr5-l1",
+          "text": "ἦν μοι παλαίστρα καὶ δρόμος ξυστὸς πέλας."
+        }
+      ],
+      "context": "Pollux 9 , 43 : λουτρῶνες, ἐφ’ οἷς καὶ παλαῖστραι καὶ δρόμοι ξυστοί. — εἴρηται δὲ καὶ ἐν τῷ Ἀριστίου Ὀρφεῖ ‘ἧν — πέλας’ .",
+      "play_title": "ΟΡΦΕΥΣ",
+      "play_work": "orpheys",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_orpheys"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0305-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr6-l1",
+          "text": "μυκαῖσι δ’ ὠρέχθει τὸ λάινον πέδον"
+        }
+      ],
+      "context": "Ath. II p. 60 B : ΜΥΚΑΙ Ἀριστίας ‘μύκαισι — πλέον’ . Eust. Il. p. 1017 , 14 : μύκης μύκητος καὶ μύκου — τῆς μὲν ἰσοσυλλαβίας χρῆσις παρά τε ἄλλοις καὶ Ἀριστίᾳ εἰπόντι ‘μύκαισι — ὀρέχθει C, ὠρέχθει Casaubonus. πέδον Ath. , δάπεδον Eust. μυκαῖσι Schneidewin : Athenaeus errasse videtur.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0305-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0305-fr7-l1",
+          "text": "πευκαλεῖται"
+        }
+      ],
+      "context": "Hesych. 3 p. 328 : πευκαλεῖται· ξηραίνεται ἢ ἀντὶ τοῦ ζητεῖται. Ἀριστέας. ubi Ἀριστίας coni. Wagner, Ἀμερίας M. Schmidt. glossam sanam esse non arbitror.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0305-antaios": {
+      "id": "tlg0305-antaios",
+      "work": "antaios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_antaios",
+      "title": "ΑΝΤΑΙΟΣ",
+      "source_title": "ΑΝΤΑΙΟΣ",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-antaios",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0305-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr1-l1",
+              "text": "Αἰγαίου Ποσειδῶ παῖς, πατὴρ δ’ ἐμός. ."
+            }
+          ],
+          "context": "Herod. π. μον. λέξ. p. 10 , 19 de nomine Ποσειδῶν disputans : οὐδὲν περισπώμενον ἀποκόπτεται κατὰ γενικὴν (κατὰ αἰτιατικὴν ante Dindorfium) πτῶσιν· ἐξεκόπη παρὰ Ἀριστίᾳ ἐν Ἀνταίῳ , ἔνθα φησὶν Ἀνταῖος ‘αἰγαίου — ἐμός’ . Αἰγαίου] ἐγὼ scripserim. ferri non potest quod Ahrens Philol. 23 p. 5 proponit, Ἀνταῖος Αἰγαίου Ποσειδῶ παῖς, πατὴρ δ’ | ἐμός.",
+          "play_title": "ΑΝΤΑΙΟΣ",
+          "play_work": "antaios",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_antaios",
+          "attribution_id": "nauck1889grc1-tlg0305-antaios",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0305-atalante": {
+      "id": "tlg0305-atalante",
+      "work": "atalante",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_atalante",
+      "title": "ΑΤΑΛΑΝΤΗ",
+      "source_title": "ΑΤΑΛΑΝΤΗ",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-atalante",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0305-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr2-l1",
+              "text": "ἁρπεδόνην τε λύσιν ἱστοῦ"
+            }
+          ],
+          "context": "Pollux 7 , 31 : ἁρπεδόνας δὲ τὰ νήματα ‘Hρόδοτος· Ἀριστίας δὲ ἐν Ἀταλάντῃ ἁρπεδόνην — ἱστοῦ’ τραγικώτερον. τε λῦσον coni. Kuehn, τ’ ἔλυσεν Friebel Satyrogr. p. 68 .",
+          "play_title": "ΑΤΑΛΑΝΤΗ",
+          "play_work": "atalante",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_atalante",
+          "attribution_id": "nauck1889grc1-tlg0305-atalante",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0305-keres": {
+      "id": "tlg0305-keres",
+      "work": "keres",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_keres",
+      "title": "ΚΗΡΕΣ",
+      "source_title": "ΚΗΡΕΣ",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-keres",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0305-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr3-l1",
+              "text": "σύνδειπνος ἢ ἐπίκωμος ἢ μαζαγρέτας"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0305-fr3-l2",
+              "text": "Ἅιδου τραπεζεύς, ἀκρατέα νηδὺν ἔχων"
+            }
+          ],
+          "context": "Ath. XV p. 686 A : τοῖς παισὶ παρακελεύομαι κατὰ τὸν Σοφοκλέα — καὶ κατὰ τὸν Φλειάσιον δ’ Ἀριστίαν· καὶ γὰρ οὗτος ἐν ταῖς ἐπιγραφομέναις Κηρσὶν ἔφη ‘σύνδειπνος — ἔχων’ . v. 1 ἐπίκωπος libri, ἐπίκωμος L. Dindorf Thes. Gr. L. vol. 3 p. 1665 D, cf. Hesych. 2 p. 158 : ἐπίκωμος· ὁ ἐπᾴδων τῇ φίλῃ , ἢ ἀπὸ οἴνου ᾄδων. σύνδειπνος ἦν ἐπίκωμος coni. R. Methner diss. p. 14 . v. 2 αἰδοῦ ut videtur libri, Ἅιδου Toup Emend. 2 p. 478 . Ἅιδου μαγείρῳ dixit Eur. Cycl. 397 .",
+          "play_title": "ΚΗΡΕΣ",
+          "play_work": "keres",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_keres",
+          "attribution_id": "nauck1889grc1-tlg0305-keres",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0305-kyklops": {
+      "id": "tlg0305-kyklops",
+      "work": "kyklops",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_kyklops",
+      "title": "ΚΥΚΛΩΨ",
+      "source_title": "ΚΥΚΛΩΨ",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-kyklops",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0305-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr4-l1",
+              "text": "ἀπώλεσας τὸν οἶνον ἐπιχέας ὕδωρ."
+            }
+          ],
+          "context": "Suidas : ‘ἀπώλεσας — ὕδωρ’ — ἡ παροιμία γέγονεν ἐκ τοῦ Ἀριστίου Κύκλωπος, ὡς φησὶ Χαμαιλέων ἐν τῷ περὶ σατύρων. Prov. Milleri Mél. de litt. gr. p. 371 sive Zenob. 2 , 16 (similiter Diogenianus 2 , 32) : ‘ἀπώλεσας — ὕδωρ’ . ἐν Κύκλωπι δράματι Πολύφημος οὕτως πρὸς Ὀδυσσέα λέγει, ὅθεν εἰς παροιμίαν περιέστη. utitur hoc versu poetae et fabulae nom. om. Ath. VIII p. 362 A.",
+          "play_title": "ΚΥΚΛΩΨ",
+          "play_work": "kyklops",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_kyklops",
+          "attribution_id": "nauck1889grc1-tlg0305-kyklops",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0305-orpheys": {
+      "id": "tlg0305-orpheys",
+      "work": "orpheys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_orpheys",
+      "title": "ΟΡΦΕΥΣ",
+      "source_title": "ΟΡΦΕΥΣ",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-orpheys",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0305-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr5-l1",
+              "text": "ἦν μοι παλαίστρα καὶ δρόμος ξυστὸς πέλας."
+            }
+          ],
+          "context": "Pollux 9 , 43 : λουτρῶνες, ἐφ’ οἷς καὶ παλαῖστραι καὶ δρόμοι ξυστοί. — εἴρηται δὲ καὶ ἐν τῷ Ἀριστίου Ὀρφεῖ ‘ἧν — πέλας’ .",
+          "play_title": "ΟΡΦΕΥΣ",
+          "play_work": "orpheys",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_orpheys",
+          "attribution_id": "nauck1889grc1-tlg0305-orpheys",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0305-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0305-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0305.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0305-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "6",
+          "source_id": "tlg0305-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr6-l1",
+              "text": "μυκαῖσι δ’ ὠρέχθει τὸ λάινον πέδον"
+            }
+          ],
+          "context": "Ath. II p. 60 B : ΜΥΚΑΙ Ἀριστίας ‘μύκαισι — πλέον’ . Eust. Il. p. 1017 , 14 : μύκης μύκητος καὶ μύκου — τῆς μὲν ἰσοσυλλαβίας χρῆσις παρά τε ἄλλοις καὶ Ἀριστίᾳ εἰπόντι ‘μύκαισι — ὀρέχθει C, ὠρέχθει Casaubonus. πέδον Ath. , δάπεδον Eust. μυκαῖσι Schneidewin : Athenaeus errasse videtur.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0305-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0305-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0305-fr7-l1",
+              "text": "πευκαλεῖται"
+            }
+          ],
+          "context": "Hesych. 3 p. 328 : πευκαλεῖται· ξηραίνεται ἢ ἀντὶ τοῦ ζητεῖται. Ἀριστέας. ubi Ἀριστίας coni. Wagner, Ἀμερίας M. Schmidt. glossam sanam esse non arbitror.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0305-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0305.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0305-antaios",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-antaios",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_antaios",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0305-atalante",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-atalante",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_atalante",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0305-keres",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-keres",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_keres",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0305-kyklops",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-kyklops",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_kyklops",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0305-orpheys",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-orpheys",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_orpheys",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:5"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0305-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0305-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0305_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0305.fragmenta.nauck1889grc1:7"
+      ]
+    }
+  ]
+}

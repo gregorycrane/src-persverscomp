@@ -686,40 +686,47 @@ def _publish_kock_fragments(site_root, catalog):
 
 
 def _publish_meineke_fragments(site_root, catalog):
-    """Publish Meineke FCG II beside the established Kock work identities."""
+    """Publish Meineke FCG II–III beside the established Kock identities."""
     registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
-    short_id = "meineke1839-grc1"
-    registered = {
-        key for key, record in registry.items()
-        if short_id in record.get("fragment_editions", {})
-    }
-    stale = []
-    for work_key, meta in catalog.get("works", {}).items():
-        if work_key in registered or not any(
-                version.get("short_id") == short_id
-                for version in meta.get("versions", [])):
-            continue
-        db_path = (site_root / "data" / meta["textgroup"] / meta["work"] /
-                   meta["parts"][0]["file"])
-        if db_path.exists():
-            conn = sqlite3.connect(db_path)
-            conn.execute("DELETE FROM text_segments WHERE version_short_id=?", (short_id,))
-            conn.execute("DELETE FROM edition_chapter_order WHERE version_short_id=?", (short_id,))
-            conn.execute("DELETE FROM text_units WHERE short_id=?", (short_id,))
-            conn.commit()
-            conn.close()
-        meta["versions"] = [version for version in meta.get("versions", [])
-                            if version.get("short_id") != short_id]
-        if not meta["versions"]:
+    volumes = (
+        ("meineke1839-grc1", "Greek (Meineke, 1839; OCR draft)",
+         "Meineke FCG II sources and notes"),
+        ("meineke1840-grc1", "Greek (Meineke, 1840; OCR draft)",
+         "Meineke FCG III sources and notes"),
+    )
+    published = 0
+    for short_id, label, source_label in volumes:
+        registered = {
+            key for key, record in registry.items()
+            if short_id in record.get("fragment_editions", {})
+        }
+        stale = []
+        for work_key, meta in catalog.get("works", {}).items():
+            if work_key in registered or not any(
+                    version.get("short_id") == short_id
+                    for version in meta.get("versions", [])):
+                continue
+            db_path = (site_root / "data" / meta["textgroup"] / meta["work"] /
+                       meta["parts"][0]["file"])
             if db_path.exists():
-                db_path.unlink()
-            stale.append(work_key)
-    for work_key in stale:
-        catalog["works"].pop(work_key)
-    return _publish_kock_edition(
-        site_root, catalog, registry,
-        short_id, "Greek (Meineke, 1839; OCR draft)",
-        "Meineke FCG II sources and notes", "August Meineke", True)
+                conn = sqlite3.connect(db_path)
+                conn.execute("DELETE FROM text_segments WHERE version_short_id=?", (short_id,))
+                conn.execute("DELETE FROM edition_chapter_order WHERE version_short_id=?", (short_id,))
+                conn.execute("DELETE FROM text_units WHERE short_id=?", (short_id,))
+                conn.commit()
+                conn.close()
+            meta["versions"] = [version for version in meta.get("versions", [])
+                                if version.get("short_id") != short_id]
+            if not meta["versions"]:
+                if db_path.exists():
+                    db_path.unlink()
+                stale.append(work_key)
+        for work_key in stale:
+            catalog["works"].pop(work_key)
+        published += _publish_kock_edition(
+            site_root, catalog, registry, short_id, label, source_label,
+            "August Meineke", True)
+    return published
 
 
 def _fragment_from_html(urn, chapter, content):
@@ -952,7 +959,7 @@ def publish(site_root=None):
           f"({sophocles_fragments} Sophocles, {euripides_fragments} Euripides, "
           f"{aristophanes_fragments} Aristophanes), "
           f"{kock_fragments} Kock CAF I–III work editions, "
-          f"{meineke_fragments} Meineke FCG II work editions, "
+          f"{meineke_fragments} Meineke FCG II–III work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,

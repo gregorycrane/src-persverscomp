@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0331",
+  "author": "Polyidus",
+  "corpus_title": "Polyidus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0331.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0331.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0331.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [],
+  "works": {
+    "tlg0331-iphigeneia": {
+      "id": "tlg0331-iphigeneia",
+      "work": "iphigeneia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0331_iphigeneia",
+      "title": "ΙΦΙΓΕΝΕΙΑ",
+      "source_title": "ΙΦΙΓΕΝΕΙΑ",
+      "source": "tlg0331.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0331-iphigeneia",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Poet. c. 16 p. 1455 a 6 : τετάρτη δὲ (sc. ἀναγνώρισις) ἡ ἐκ συλλογισμοῦ , οἷον ἐν Χοηφόροις — ἡ Πολυείδου τοῦ σοφιστοῦ περὶ τῆς Ἰφιγενείας· εἰκὸς γὰρ τὸν Ὀρέστην συλλογίσασθαι ὅτι ἥ τ’ ἀδελφὴ ἐτύθη καὶ αὐτῷ συμβαίνει θύεσθαι. ibid. c. 17 p. 1455 b 10 ἐλθὼν δὲ (Orestes) καὶ ληφθεὶς θύεσθαι μέλλων ἀνεγνώρισεν, εἴθ’ ὡς Εὐριπίδης εἴθ’ ὡς Πολύειδος ἐποίησεν, κατὰ τὸ εἰκὸς εἰπὼν ὅτι οὐκ ἄρα μόνον τὴν ἀδελφὴν ἀλλὰ καὶ αὐτὸν ἔδει τυθῆναι, καὶ ἐντεῦθεν ἡ σωτηρία.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    }
+  },
+  "attributions": []
+}

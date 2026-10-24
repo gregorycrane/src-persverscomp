@@ -1,0 +1,75 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0324",
+  "author": "Patrocles of Thurii",
+  "corpus_title": "Patrocles of Thurii, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0324.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0324.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0324.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0324-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0324.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0324-fr1-l1",
+          "text": "καὶ νῦν τὰ δεινὰ ταῦτα καὶ τὰ πόλλ’ ἔπη"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0324-fr1-l2",
+          "text": "εἰς ὧδε μικρὸν τεῦχος ἤθροισεν τύχη."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0324-fr1-l3",
+          "text": "τί δῆτα θνητοὶ πόλλ’ ἀπειλοῦμεν μάτην"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0324-fr1-l4",
+          "text": "δεινοὺς ἐπ’ ἀλλήλοισι πέμποντες λόγους,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0324-fr1-l5",
+          "text": "καὶ πάντα συννοοῦμεν ἐκπράξειν χερί ,"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0324-fr1-l6",
+          "text": "πρόσω βλέποντες ; τὴν δὲ πλησίον τύχην"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0324-fr1-l7",
+          "text": "οὐκ ἴσμεν οὐδ’ ὁρῶμεν ἀθλίου μόρου."
+        }
+      ],
+      "context": "Stob. Flor. 111 , 3 : Πατροκλέους (sic S, eclogam om. MA) . v. 2 ὧδε Trinc. , ὅδε S. v. 5 πάντες ἐννοοῦμεν coni. Herwerden Exerc. crit. p. 80 , πάντα συννοούμεθ῾ Wecklein Stud. zu Eur. p. 445 ."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0324-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0324.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [],
+      "context": "Clemens Alex. Protr. p. 26 : Πατροκλῆς τε ὁ Θούριος καὶ Σοφοκλῆς ὁ νεώτερος ἔν τισι τραγῳδίαις ἱστορεῖτον τοῖν Διοσκούροιν πέρι (vide quae diximus p. 781) ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

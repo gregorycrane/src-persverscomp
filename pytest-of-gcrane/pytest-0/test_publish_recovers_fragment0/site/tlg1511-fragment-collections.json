@@ -1,0 +1,195 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg1511",
+  "author": "Mimnermus",
+  "corpus_title": "Mimnermus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg1511.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg1511.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg1511-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1511-fr1-l1",
+          "text": "δεινοὶ γὰρ ἀνδρὶ πάντες ἐσμὲν εὐκλεεῖ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg1511-fr1-l2",
+          "text": "ζῶντι φθονῆσαι, κατθανόντα δ’ αἰνέσαι."
+        }
+      ],
+      "context": "Stob. Flor. 125 , 12 : Μιμνέρμου ἐκ Νεοπτολέμου (sic MA, μιμνέρμου nec plura S) . ‘δεινοὶ — αἰνέσαι’ v. 1 κλεινῷ γὰρ — ἐσμὲν εὔκολοι malit F. G. Schmidt Krit. Stud. 3 p. 27 sq. v. 2 ζῶντι suspectum, cf. Hilberg Princip der Silbenw. p. 216 . intercidisse Mimnermi locum et nomen poetae qui Neoptolemum scripserit coni. Meineke Stob. Flor. 4 p. XXV, cf. Bergk Lyr. 2 p. 33 .",
+      "play_title": "ΝΕΟΠΤΟΛΕΜΟΣ",
+      "play_work": "neoptolemos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_neoptolemos"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg1511-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1511-fr2-l1",
+          "text": ". . οἷα δὴ φιλοῦσιν ἰατροὶ λέγειν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg1511-fr2-l2",
+          "text": "τὰ φαῦλα μείζω καὶ τὰ δείν’ ὑπὲρ φόβον,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg1511-fr2-l3",
+          "text": "πυργοῦντες αὑτούς"
+        }
+      ],
+      "context": "Stob. Flor. 102 , 3 : Μιμνέρμου κατὰ ἰατρῶν (sic S, κατὰ ἰατρῶν μιμνέρμου νάννου MA) . ‘οἷα — αὑτούς‘ . v. 1 ὁποῖα coni. Bergk. ἰατροὶ Gaisford, οἱ ἰατροὶ SMA. v. 2 ὑπέρφοβα B. v. 3 αὐτοὺς MA, αὐτοί F. G. Schmidt Krit. Stud. 3 p. 28 . Euripidis esse locum coni. Bergk Lyr. 2 p. 33 , Menandro tribuunt Porson et Meineke Com. 4 p. 217 .",
+      "play_title": "INCERTAE FABULAE FRAGMENTUM",
+      "play_work": "incertae_fabulae_fragmentum",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_incertae_fabulae_fragmentum"
+    }
+  ],
+  "works": {
+    "tlg1511-neoptolemos": {
+      "id": "tlg1511-neoptolemos",
+      "work": "neoptolemos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_neoptolemos",
+      "title": "ΝΕΟΠΤΟΛΕΜΟΣ",
+      "source_title": "ΝΕΟΠΤΟΛΕΜΟΣ",
+      "source": "tlg1511.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg1511-neoptolemos",
+      "record_type": "fragmentary_play",
+      "introduction": "Neoptolemum nescimus cuius poetae commemorat Aristoteles Poet. c. 23 , quem locum attulimus in Soph. fr. p. 246 .",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg1511-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg1511-fr1-l1",
+              "text": "δεινοὶ γὰρ ἀνδρὶ πάντες ἐσμὲν εὐκλεεῖ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg1511-fr1-l2",
+              "text": "ζῶντι φθονῆσαι, κατθανόντα δ’ αἰνέσαι."
+            }
+          ],
+          "context": "Stob. Flor. 125 , 12 : Μιμνέρμου ἐκ Νεοπτολέμου (sic MA, μιμνέρμου nec plura S) . ‘δεινοὶ — αἰνέσαι’ v. 1 κλεινῷ γὰρ — ἐσμὲν εὔκολοι malit F. G. Schmidt Krit. Stud. 3 p. 27 sq. v. 2 ζῶντι suspectum, cf. Hilberg Princip der Silbenw. p. 216 . intercidisse Mimnermi locum et nomen poetae qui Neoptolemum scripserit coni. Meineke Stob. Flor. 4 p. XXV, cf. Bergk Lyr. 2 p. 33 .",
+          "play_title": "ΝΕΟΠΤΟΛΕΜΟΣ",
+          "play_work": "neoptolemos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_neoptolemos",
+          "attribution_id": "nauck1889grc1-tlg1511-neoptolemos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg1511.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg1511-incertae-fabulae-fragmentum": {
+      "id": "tlg1511-incertae-fabulae-fragmentum",
+      "work": "incertae_fabulae_fragmentum",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_incertae_fabulae_fragmentum",
+      "title": "INCERTAE FABULAE FRAGMENTUM",
+      "source_title": "INCERTAE FABULAE FRAGMENTUM",
+      "source": "tlg1511.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg1511-incertae-fabulae-fragmentum",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg1511-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg1511-fr2-l1",
+              "text": ". . οἷα δὴ φιλοῦσιν ἰατροὶ λέγειν,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg1511-fr2-l2",
+              "text": "τὰ φαῦλα μείζω καὶ τὰ δείν’ ὑπὲρ φόβον,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg1511-fr2-l3",
+              "text": "πυργοῦντες αὑτούς"
+            }
+          ],
+          "context": "Stob. Flor. 102 , 3 : Μιμνέρμου κατὰ ἰατρῶν (sic S, κατὰ ἰατρῶν μιμνέρμου νάννου MA) . ‘οἷα — αὑτούς‘ . v. 1 ὁποῖα coni. Bergk. ἰατροὶ Gaisford, οἱ ἰατροὶ SMA. v. 2 ὑπέρφοβα B. v. 3 αὐτοὺς MA, αὐτοί F. G. Schmidt Krit. Stud. 3 p. 28 . Euripidis esse locum coni. Bergk Lyr. 2 p. 33 , Menandro tribuunt Porson et Meineke Com. 4 p. 217 .",
+          "play_title": "INCERTAE FABULAE FRAGMENTUM",
+          "play_work": "incertae_fabulae_fragmentum",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_incertae_fabulae_fragmentum",
+          "attribution_id": "nauck1889grc1-tlg1511-incertae_fabulae_fragmentum",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg1511.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg1511-neoptolemos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg1511-neoptolemos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_neoptolemos",
+      "corresp": [
+        "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg1511-incertae_fabulae_fragmentum",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg1511-incertae_fabulae_fragmentum",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1511_incertae_fabulae_fragmentum",
+      "corresp": [
+        "urn:cts:greekLit:tlg1511.fragmenta.nauck1889grc1:2"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0349",
+  "author": "Demonax",
+  "corpus_title": "Demonax, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0349.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0349.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0349.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0349-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0349.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0349-fr1-l1",
+          "text": "θνητοὶ γεγῶτες μὴ φρονεῖθ’ ὐπὲρ θεούς."
+        }
+      ],
+      "context": "Stob. Flor. 22 , 16 : Δημώνακτος. ‘θνητοὶ — θεούς’ . φρονεῖτ’ S. cf. Men. mon. 243 : θνητὸς πεφυκὼς μὴ φρονῇς ὑπέρθεα."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0349-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0349.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0349-fr2-l1",
+          "text": "κόλαζε κρίνων, ἀλλὰ μὴ θυμούμενος."
+        }
+      ],
+      "context": "Anecd. Boiss. vol. 1 p. 118 : Δημώνακτος. ‘κόλαζε — θυμούνος’ . idem versus extat in Men. mon. 576 et in Cecaumeni Στρατηγικῷ p. 20 , 15 ed. Iernstedt. Mel. Aug. c. 34 , 17 et alios quosdam testes excitavit Wachsmuth Gnomol. Byzant. 254 p. 206 ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

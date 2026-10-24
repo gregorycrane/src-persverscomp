@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0315",
+  "author": "Sthenelus",
+  "corpus_title": "Sthenelus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0315.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0315.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0315.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0315-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0315.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0315-fr1-l1",
+          "text": "ἐκ τοῦ γὰρ ἐσορᾶν γίγνετ’ ἀνθρώποις ἐρᾶν."
+        }
+      ],
+      "context": "Prov. Milleri Mél. de litt. gr. p. 364 : ‘ἐκ — τὸν στίχον οἳ μὲν Σθενέλου, οἳ δὲ Ἀγάθωνος τοῦ τραγικοῦ φασὶν εἶναι. cf. quae dicemus in Agath. fr. 29 .\n\n*) Σάμῳ μόνῃ θεῶν Dindorf, codex haec praebet Σάμῳ ἐκ δὲ μυρσίνης ἐκ δὲ τοῦ πάθους δεισιδαίμονι θεῖον. aliam medelam frustra quaesivi."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

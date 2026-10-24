@@ -1,0 +1,104 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0348",
+  "author": "Biotus",
+  "corpus_title": "Biotus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0348.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0348.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0348.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0348-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0348.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0348-fr1-l1",
+          "text": ". . τὸ θρέψαι δ’ ἐν βροτοῖσι πολλάκις"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0348-fr1-l2",
+          "text": "πλείω πορίζει φίλτρα τοῦ φῦσαι τέκνα."
+        }
+      ],
+      "context": "Stob. Flor. 78 , 3 : βιότου ἐκ Μηδείας. ‘τὸ — τέκνα’ . lemma frustra in suspicionem vocatum esse docuit Meineke Monatsb. d. Preuss. Akad. d. Wiss. 1850 p. 257 . poetae et fabulae nomine omisso eundem locum affert Clemens Alex. Paed. I p. 127 .",
+      "play_title": "ΜΗΔΕΙΑ",
+      "play_work": "medeia",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0348_medeia"
+    }
+  ],
+  "works": {
+    "tlg0348-medeia": {
+      "id": "tlg0348-medeia",
+      "work": "medeia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0348_medeia",
+      "title": "ΜΗΔΕΙΑ",
+      "source_title": "ΜΗΔΕΙΑ",
+      "source": "tlg0348.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0348-medeia",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0348-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0348.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0348-fr1-l1",
+              "text": ". . τὸ θρέψαι δ’ ἐν βροτοῖσι πολλάκις"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0348-fr1-l2",
+              "text": "πλείω πορίζει φίλτρα τοῦ φῦσαι τέκνα."
+            }
+          ],
+          "context": "Stob. Flor. 78 , 3 : βιότου ἐκ Μηδείας. ‘τὸ — τέκνα’ . lemma frustra in suspicionem vocatum esse docuit Meineke Monatsb. d. Preuss. Akad. d. Wiss. 1850 p. 257 . poetae et fabulae nomine omisso eundem locum affert Clemens Alex. Paed. I p. 127 .",
+          "play_title": "ΜΗΔΕΙΑ",
+          "play_work": "medeia",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0348_medeia",
+          "attribution_id": "nauck1889grc1-tlg0348-medeia",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0348.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0348.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0348-medeia",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0348-medeia",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0348_medeia",
+      "corresp": [
+        "urn:cts:greekLit:tlg0348.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

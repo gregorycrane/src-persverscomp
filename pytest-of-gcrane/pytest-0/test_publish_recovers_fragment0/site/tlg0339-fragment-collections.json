@@ -1,0 +1,1151 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0339",
+  "author": "Moschion",
+  "corpus_title": "Moschion, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0339.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0339.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0339-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr1-l1",
+          "text": "καὶ γὰρ ἐν νάπαις βραχεῖ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr1-l2",
+          "text": "πολὺς σιδήρῳ κείρεται πεύκης κλάδος,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr1-l3",
+          "text": "καὶ βαιὸς ὄχλος μυρίας λόγχης κρατεῖ ."
+        }
+      ],
+      "context": "Stob. Flor. 51 , 21 : Μοσχίωνος ἐκ Θεμιστοκλέους. ‘καὶ γὰρ — κρατεῖ .",
+      "play_title": "ΘΕΜΙΣΤΟΚΛΗΣ",
+      "play_work": "themistokles",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_themistokles"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0339-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr2-l1",
+          "text": "ὦ καὶ θεῶν κρατοῦσα καὶ θνητῶν μόνη"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr2-l2",
+          "text": "μοῖρ’ , ὦ λιταῖς ἄτεγκτε δυστήνων βροτῶν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr2-l3",
+          "text": "πάντολμ’ ἀνάγκη, στυγνὸν ἣ κατ’ αὐχένων"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr2-l4",
+          "text": "ἡμῶν ἐρείδεις τῆσδε λατρείας ζυγόν."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 4 , 1 p. 70 , 18 : Μοσχίωνος Τηλέφου. ‘ὦ καὶ — ζυγόν’ . v. 2 μοῖρ’ ὦ Grotius, μοῖρα FP. λιτραῖς ἄτρωτε μοῖρα Iacobs. ἄτεγκτε scripsi, ἄτρωτε FP. v. 3 πᾶν τολῆμ’ ἀνάγκης F P, πάντολμ’ ἀνάγκη Tyrwhitt (v. Gaisf. in Stob. Ecl. p. XIV) et Porson in Eur. Phoen. 1622 . v. 4 τῆς τε FP, τῆσδε Ruhnken in Hymn. Cer. 217 . ζυγῶν (ὸν supra scr. pr. m.) F.",
+      "play_title": "ΤΗΛΕΦΟΣ",
+      "play_work": "telephos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_telephos"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0339-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr3-l1",
+          "text": "κενὸν θανόντος ἀνδρὸς αἰκίζειν σκιάν·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr3-l2",
+          "text": "ζῶντας κολάζειν, οὐ θανόντας εὐσεβές."
+        }
+      ],
+      "context": "Stob. Flor. 125 , 3 : Μοσχίωνος ἐκ Φεραιῶν (sic MA, μοσχίωνος om. fab. nomine S) . ‘κενὸν — σκιάν’ . 125 , 4 : ‘ζῶντας — εὐσεβές’ . versus in SMA cohaerentes vulgo male dirimuntur. v. 1 καινὸν MA, σκαιὸν parum apte coni. F. G. Schmidt Krit. Stud. 3 p. 22 .",
+      "play_title": "ΦΕΡΑΙΟΙ",
+      "play_work": "pheraioi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_pheraioi"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0339-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr4-l1",
+          "text": "ὅμως τό γ’ ὀρθὸν καὶ δίκαιον οὔποτε"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr4-l2",
+          "text": "σιγῇ παρήσω· τὴν γὰρ ἐντεθραμμένην"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr4-l3",
+          "text": "ἀστοῖς Ἀθάνας τῇ τε Θησέως πόλει"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr4-l4",
+          "text": "καλὸν φυλάξαι γνησίως παρρησίαν."
+        }
+      ],
+      "context": "Stob. Flor. 13 , 14 : Μοσχίωνος (sic SMA, lemma om. L) . ‘ὅμως — παρρησίαν’ . v. 3 ἀθανᾶς M.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0339-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr5-l1",
+          "text": "μόνον σὺ θυμοῦ χωρὶς ἔνδεξαι λόγους"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr5-l2",
+          "text": "οὓς σοὶ κομίζω· τὸν κλύοντα γὰρ λαβὼν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr5-l3",
+          "text": "ὁ μῦθος εὔνουν οὐ μάτην λεχθήσεται."
+        }
+      ],
+      "context": "Stob. Flor. 46 , 14 : Μοσχίωνος (sic S, eclogam om. MA) . ‘μόνον — λεχθήσεται.’ v. 2 οὓς σὺ S, οὕς σοι Trinc.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0339-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr6-l1",
+          "text": "πρῶτον δ’ ἄνειμι καὶ διαπτύξω λόγῳ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr6-l2",
+          "text": "ἀρχὴν βροτείου καὶ κατάστασιν βίου."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr6-l3",
+          "text": "ἦν γάρ ποτ’ αἰὼν κεῖνος, ἦν ποθ’ ἡνίκα"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr6-l4",
+          "text": "θηρσὶν διαίτας εἶχον ἐμφερεῖς βροτοί ,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0339-fr6-l5",
+          "text": "ὀρειγενῆ σπήλαια καὶ δυσηλίους"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0339-fr6-l6",
+          "text": "φάραγγας ἐνναίοντες· οὐδέπω γὰρ ἦν"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0339-fr6-l7",
+          "text": "οὔτε στεγήρης οἶκος οὔτε λαΐνοις"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0339-fr6-l8",
+          "text": "εὐρεῖα πύργοις ὠχυρωμένη πόλις."
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0339-fr6-l9",
+          "text": "οὐ μὴν ἀρότροις ἀγκύλοις ἐτέμνετο"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0339-fr6-l10",
+          "text": "μέλαινα καρποῦ βῶλος ὀμπνίου τροφός,"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0339-fr6-l11",
+          "text": "οὐδ’ ἐργάτης σίδηρος εὐιώτιδος"
+        },
+        {
+          "ref": "12",
+          "source_id": "tlg0339-fr6-l12",
+          "text": "θάλλοντας οἴνης ὀρχάτους ἐτημέλει,"
+        },
+        {
+          "ref": "13",
+          "source_id": "tlg0339-fr6-l13",
+          "text": "ἀλλ’ ἦν ἀκύμων κωφεύουσα ῥέουσα γῆ ."
+        },
+        {
+          "ref": "14",
+          "source_id": "tlg0339-fr6-l14",
+          "text": "βοραὶ δὲ σαρκοβρῶτες ἀλληλοκτόνους"
+        },
+        {
+          "ref": "15",
+          "source_id": "tlg0339-fr6-l15",
+          "text": "παρεῖχον αὐτοῖς δαῖτας· ἦν δ’ ὁ μὲν νόμος"
+        },
+        {
+          "ref": "16",
+          "source_id": "tlg0339-fr6-l16",
+          "text": "ταπεινός, ἡ βία δὲ σύνθρονος Διί."
+        },
+        {
+          "ref": "17",
+          "source_id": "tlg0339-fr6-l17",
+          "text": "[ὁ δ’ ἀσθενὴς ἦν τῶν ἀμεινόνων βορά .]"
+        },
+        {
+          "ref": "18",
+          "source_id": "tlg0339-fr6-l18",
+          "text": "ἐπεὶ δ’ ὁ τίκτων πάντα καὶ τρέφων χρόνος"
+        },
+        {
+          "ref": "19",
+          "source_id": "tlg0339-fr6-l19",
+          "text": "τὸν θνητὸν ἠλλοίωσεν ἔμπαλιν βίον,"
+        },
+        {
+          "ref": "20",
+          "source_id": "tlg0339-fr6-l20",
+          "text": "εἴτ’ οὖν μέριμναν τὴν Προμηθέως πάρα"
+        },
+        {
+          "ref": "21",
+          "source_id": "tlg0339-fr6-l21",
+          "text": "εἴτ’ οὖν ἀνάγκην εἴτε τῇ μακρᾷ τριβῇ"
+        },
+        {
+          "ref": "22",
+          "source_id": "tlg0339-fr6-l22",
+          "text": "αὐτὴν παρασχὼν τὴν φύσιν διδάσκαλον,"
+        },
+        {
+          "ref": "23",
+          "source_id": "tlg0339-fr6-l23",
+          "text": "τόθ’ ηὑρέθη μὲν καρπὸς ἡμέρου τροφῆς"
+        },
+        {
+          "ref": "24",
+          "source_id": "tlg0339-fr6-l24",
+          "text": "Δήμητρος ἁγνῆς, ηὑρέθη δὲ Βακχίου"
+        },
+        {
+          "ref": "25",
+          "source_id": "tlg0339-fr6-l25",
+          "text": "γλυκεῖα πηγή , γαῖα δ’ ἡ πρὶν ἄσπορος"
+        },
+        {
+          "ref": "26",
+          "source_id": "tlg0339-fr6-l26",
+          "text": "ἤδη ζυγουλκοῖς βουσὶν ἠροτρεύετο,"
+        },
+        {
+          "ref": "27",
+          "source_id": "tlg0339-fr6-l27",
+          "text": "ἄστη δ’ ἐπυργώσαντο καὶ περισκεπεῖς"
+        },
+        {
+          "ref": "28",
+          "source_id": "tlg0339-fr6-l28",
+          "text": "ἔτευξαν οἴκους καὶ τὸν ἠγριωμένον"
+        },
+        {
+          "ref": "29",
+          "source_id": "tlg0339-fr6-l29",
+          "text": "εἰς ἥμερον δίαιταν ἤγαγον βίον."
+        },
+        {
+          "ref": "30",
+          "source_id": "tlg0339-fr6-l30",
+          "text": "κἀκ τοῦδε τοὺς θανόντας ὥρισεν νόμος"
+        },
+        {
+          "ref": "31",
+          "source_id": "tlg0339-fr6-l31",
+          "text": "τύμβοις καλύπτειν κἀπιμοιρᾶσθαι κόνιν"
+        },
+        {
+          "ref": "32",
+          "source_id": "tlg0339-fr6-l32",
+          "text": "νεκροῖς ἀθάπτοις, μηδ’ ἐν ὀφθαλμοῖς ἐᾶν"
+        },
+        {
+          "ref": "33",
+          "source_id": "tlg0339-fr6-l33",
+          "text": "τῆς πρόσθε θοίνης μνημόνευμα δυσσεβοῦς."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 8 , 38 p. 100 , 2 : Μοσχίωνος (οσχίωνος F, lemma om. P) . ‘πρῶτον — δυσσεβές’ . v. 3 ἦν ποθ’ ἡνίκα scripsi, ἦν ὁπηνίκα FP. v. 4 θηρσὶ FP. v. 5 δυσηλίους dubito num integrum sit, olim δυσαυλίους proposui, nunc δυσχειμέρους malim. v. 7 λαγγήνοις F, λαγήνοις Ρ pr. m. , λαίνοις Ρ m. sec. v. 8 ὠχυρομένους F. v. 9 καμπύλοις malim, cf. καμπύλ’ ἄροτρα Hymn. Cer. 308 et Solon. fr. 13 , 48 et εὐκαμπὲς ἄροτρον Mosch. 2 , 81 et Maxim. περὶ καταρχῶν 458 . ἐγένετο F. v. 10 καρπὸς (καρπὸν sec. m.) P. ὀμπίου p. v. 11 εὐγωτίδος FP, εὐιώτιδος Grotius. v. 12 ὀρχάτουσε τημέλλει F, ὀρχατους . . . μένει Ρ, ὀρχάτους ἐτημέλει Salmasius. v. 13 κωφεύουσα ῥέουσα FP, κοὐ τροφὴν φέρουσα coni. Tyrwhitt, κωφά τ’ ἐκφύουσα (vel ἐκφέρουσα) Heeren, κωφὰ χηρεύουσα (aptius erat χερσεύουσα) Meineke, ego κοὐ φυτοῖς βρύουσα praetulerim. κνωδάλων βρύουσα Methner progr. a. 1882 p. 9 , κἀφυῶς ἀργοῦσα Haupt Opusc. 3 p. 471 sq. , κωρόνους τ’ ἀργοῦσα Vsener, καὶ φυτῶν ἀργοῦσα F. G.\n\nSchmidt Krit. Stud. 3 p. 22 . v. 14 βροτοὶ δὲ σαρκοβρῶτες I. Bernhard. v. 15 αὑτοῖς idem. ἦν om. P. v. 16 σύνθακος malim (cf. Phot. Lex. p. 554 , 27 : σύνθακος· σύνθρονος) . νηὶ corr. in διὶ P, νηὶ F, δίκῃ Canter. v. 17 aptius est τῶν ἀρειόνων, quod a. 1847 ego proposui et a. 1855 Meineke, ac saepe ἀρείων et ἀμείνων confunduntur (velut Il. Ζ 479 O 641 Τ 56 Orac. Herodot. 4 , 157 et 6 , 86) . at totum versum spurium esse recte iudicat Wachsmuth. v. 18 τρέφων FP, τρέπων coniecit nescio quis in ex. Gotting. , φθείρων Herwerden Exerc. crit. p. 79 aptissime si sententiam spectes (cf. Aristot. Phys. 4 , 13 p. 222 b 17 : ἐν δὲ τῷ χρόνῳ πάντα γίνεται καὶ φθείρεται) , sed sufficiet στρέφων (cf. Eur. fr. 536 Men. mon. 712) . v. 20 πάρα scripsi, σπάσας FP, πλάσας Meineke. v. 23 τότ’ εὑρέθη FP. v. 24 δημήτερος P. εὑρέθη FP. v. 27 ἄστη Wesseling, αὕτη FP. ἐπύργωσάν τε Valckenaer. v. 30 ὤρισεν F, ῶισε p. v. 32 νεκροὺς ἀθάπτους FP, νεκροῖς ἀθάπτοις Meineke, cf. Pseudo-Phocyl. 99 : γαῖαν ἐπιμοιρᾶσθαι ἀταρχύτοις νεκύεσσιν. v. 33 δυσσεβὲς FP, δυσσεβοῦς Valckenaer.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0339-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr7-l1",
+          "text": "τί κέρδος οὐκέτ’ ὄντας ὑβρίζειν νεκρούς ;"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr7-l2",
+          "text": "τί τὴν ἄναυδον γαῖαν αἰκίζειν πλέον ;"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr7-l3",
+          "text": "ἐπὰν γὰρ ἡ κρίνουσα καὶ τὰς ἡδονὰς"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr7-l4",
+          "text": "καὶ τἀνιαρὰ φροῦδος αἴσθησις φθαρῇ ,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0339-fr7-l5",
+          "text": "τὸ σῶμα κωφοῦ τάξιν εἴληφεν πέτρου."
+        }
+      ],
+      "context": "Stob. Flor. 125 , 14 : Μοσχίωνος (sic MA, lemma om. S) . ‘τί κέρδος — πέτρου.’ v. 1 ὑβρίζειν νεκρούς scripsi (cf. Eur. El. 902 Phoen. 1663) , αἰκίζειν νεκρούς libri. v. 2 γαῖαν ὑβρίζειν libri, γαῖαν αἰκίζειν scripsi. manifesto poeta imitatur Il. Ω 54 : κωφὴν γὰρ δὴ γαῖαν ἀεικίζει μενεαίνων. v. 3 ἐπὴν Wagner. τὰ ἡδίονα SMA, τὰς ἡδονὰς Porson Tracts and misc. crit. p. 231 . v. 3 sq. καὶ τἀλγίονα καὶ τἀπίχαρτα F. G. Schmidt Krit. Stud. 3 p. 22 sq. v. 5 εἴληχεν Valckenaer in Eur. Hipp. p. 174 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0339-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr8-l1",
+          "text": "ἦν ἆρα τρανὸς αἶνος ἀνθρώπων ὅδε,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr8-l2",
+          "text": "ὡς τὸν πέλας μὲν νουθετεῖν βραχὺς πόνος,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr8-l3",
+          "text": "αὐτὸν δ’ ἐνεγκεῖν ὕβριν ἠδικημένον"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr8-l4",
+          "text": "πάντων μέγιστον τῶν ἐν ἀνθρώποις βάρος."
+        }
+      ],
+      "context": "Stob. Flor. 114 , 9 : Μοσχίωνος. ‘ἦν — βάρος’ . v. 1 ἄρα libri. v. 2 τοὺς πέλας coni. Burges. βραχὺς χρόνος A. v. 3 αὐτὸν S, αὑτὸν MA.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0339-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr9-l1",
+          "text": "σὺν αἷσι δόξῃ πρόσθε καὶ γένει μέγας"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr9-l2",
+          "text": "Ἄργους δυνάστης, λειτὸς ἐκ τυραννικῶν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0339-fr9-l3",
+          "text": "θρόνων, προσίκτην θαλλὸν ἠγκαλισμένος"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0339-fr9-l4",
+          "text": "ἔστειχεν εἰς γῆν, ὄμμα συμπαθὲς φέρων"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0339-fr9-l5",
+          "text": "καὶ πᾶσι δεικνὺς ὡς τὰ λαμπρὰ τῆς τύχης"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0339-fr9-l6",
+          "text": "τὴν κτῆσιν οὐ βέβαιον ἀνθρώποις νέμει."
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0339-fr9-l7",
+          "text": "ὃν πᾶς μὲν ἀστῶν ἠλέησεν εἰσιδών,"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0339-fr9-l8",
+          "text": "ἅπας δὲ χεῖρα καὶ προσήγορον φάτιν"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0339-fr9-l9",
+          "text": "ὤρεξε κανθούς τ’ ἐξέτηξε δακρύοις"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0339-fr9-l10",
+          "text": "τύχαις συναλγῶν· τἀξίωμα γὰρ νοσοῦν"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0339-fr9-l11",
+          "text": "τὸ πρόσθε πολλοῖς οἶκτον ἐμποεῖ βροτῶν."
+        }
+      ],
+      "context": "Stob. Flor. 105 , 22 : Μοσχίωνος. ‘σὺν αἷσι — βροτῶν’ . v. 1 συνέσει δόξῃ S, σὺν αἷσι δόξῃ M, σὺν αἷσσι (συνέσει supra scr. m. sec.) δόξῃ (supra scr. ας m. sec.) A, σὺν αἷς ὁ ego proposui, συνέσει γε δόξας Valckenaer in Eur. Hipp. 96 , φυγὰς δ’ ὁ δόξῃ F. G. Schmidt Krit. Stud. 3 p. 23 . πρόσθεν S v. 2 λειτὸς scripsi, λιτὸς vulgo. v. 4 ἔστιχεν M. ἐκ γῆς coni. F. G. Schmidt. συννεφὲς malim cum Meinekio. v. 6 νέμει] ἔχει Cobet Mnem. 9 p. 144 . v. 8 κεὐ προσήγορον Valckenaer. φάτην MA. v. 9 κάνθους S, κἄνθους M, κανθούς A. v. 11 πρόσθεν S. ἐμποιεῖ Haupt, εὐπορεῖ SMA.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "10",
+      "source_id": "tlg0339-fr10",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:10",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0339-fr10-l1",
+          "text": "κεῖνος δ’ ἁπάντων ἐστὶ μακαριώτατος,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0339-fr10-l2",
+          "text": "ὃς διὰ τέλους ζῶν ὁμαλὸν ἤσκησεν βίον."
+        }
+      ],
+      "context": "Clemens Alex. Strom. VI p. 745 : Βακχυλίδου τε εἰρηκότος ‘παύροισι δὲ θνατῶν — πρὶν ἐγκῦρσαι δύᾳ’ , Μοσχίων ὁ κωμικὸς γράφει ‘κεῖνος — βίον’ . v. 2 ἐκύρησεν coni. F. G. Schmidt Krit. Stud. 3 p. 24 , εἴληχεν Wecklein. versus supra scriptos non esse Moschionis tragici e metro recte conclusit Meineke : trisyllabis enim pedibus sicut Sositheus et alii quidam ita Moschion abstinuit *) .\n\n*) Exclusimus Stob. Flor. 123 , 3 : Μοσχίωνος. ‘ἐάσατ’ ἤδη — δεῖ λαβεῖν’ . ubi Moschioni tribuuntur sex trimetri qui leguntur in Eur. Suppl. 531-536 . intercidisse in Stob. Flor. Moschionis locum et lemma Εὐριπίδου recte iudicat O. Hense.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0339-themistokles": {
+      "id": "tlg0339-themistokles",
+      "work": "themistokles",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_themistokles",
+      "title": "ΘΕΜΙΣΤΟΚΛΗΣ",
+      "source_title": "ΘΕΜΙΣΤΟΚΛΗΣ",
+      "source": "tlg0339.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0339-themistokles",
+      "record_type": "fragmentary_play",
+      "introduction": "Fabulam spectasse ad victoriam Salaminiam coni. Meineke Hist. crit. p. 522 , qui superstites versus ex nuntii oratione petitos suspicabatur. diversam sententiam sequitur O. Ribbeck Mus. Rhen. 30 p. 147 sqq.",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0339-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr1-l1",
+              "text": "καὶ γὰρ ἐν νάπαις βραχεῖ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr1-l2",
+              "text": "πολὺς σιδήρῳ κείρεται πεύκης κλάδος,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr1-l3",
+              "text": "καὶ βαιὸς ὄχλος μυρίας λόγχης κρατεῖ ."
+            }
+          ],
+          "context": "Stob. Flor. 51 , 21 : Μοσχίωνος ἐκ Θεμιστοκλέους. ‘καὶ γὰρ — κρατεῖ .",
+          "play_title": "ΘΕΜΙΣΤΟΚΛΗΣ",
+          "play_work": "themistokles",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_themistokles",
+          "attribution_id": "nauck1889grc1-tlg0339-themistokles",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0339.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0339-telephos": {
+      "id": "tlg0339-telephos",
+      "work": "telephos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_telephos",
+      "title": "ΤΗΛΕΦΟΣ",
+      "source_title": "ΤΗΛΕΦΟΣ",
+      "source": "tlg0339.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0339-telephos",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0339-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr2-l1",
+              "text": "ὦ καὶ θεῶν κρατοῦσα καὶ θνητῶν μόνη"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr2-l2",
+              "text": "μοῖρ’ , ὦ λιταῖς ἄτεγκτε δυστήνων βροτῶν,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr2-l3",
+              "text": "πάντολμ’ ἀνάγκη, στυγνὸν ἣ κατ’ αὐχένων"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr2-l4",
+              "text": "ἡμῶν ἐρείδεις τῆσδε λατρείας ζυγόν."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 4 , 1 p. 70 , 18 : Μοσχίωνος Τηλέφου. ‘ὦ καὶ — ζυγόν’ . v. 2 μοῖρ’ ὦ Grotius, μοῖρα FP. λιτραῖς ἄτρωτε μοῖρα Iacobs. ἄτεγκτε scripsi, ἄτρωτε FP. v. 3 πᾶν τολῆμ’ ἀνάγκης F P, πάντολμ’ ἀνάγκη Tyrwhitt (v. Gaisf. in Stob. Ecl. p. XIV) et Porson in Eur. Phoen. 1622 . v. 4 τῆς τε FP, τῆσδε Ruhnken in Hymn. Cer. 217 . ζυγῶν (ὸν supra scr. pr. m.) F.",
+          "play_title": "ΤΗΛΕΦΟΣ",
+          "play_work": "telephos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_telephos",
+          "attribution_id": "nauck1889grc1-tlg0339-telephos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0339.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    },
+    "tlg0339-pheraioi": {
+      "id": "tlg0339-pheraioi",
+      "work": "pheraioi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_pheraioi",
+      "title": "ΦΕΡΑΙΟΙ",
+      "source_title": "ΦΕΡΑΙΟΙ",
+      "source": "tlg0339.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0339-pheraioi",
+      "record_type": "fragmentary_play",
+      "introduction": "Argumentum fabulae fuisse interitum Alexandri crudelissimi Pheraeorum tyranni a Theba coniuge eiusque fratribus perempti censet O. Ribbeck Mus. Rhen. 30 p. 155 sqq. , qua de re cf. Conon Narrat. 50 et Plut. Pelop. 35 . insecutam esse in fabula suspicatur Ribbeck p. 158 altercationem de sepeliendo occisi tyranni cadavere secundum Schol. V Il. Ω 428 .",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0339-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr3-l1",
+              "text": "κενὸν θανόντος ἀνδρὸς αἰκίζειν σκιάν·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr3-l2",
+              "text": "ζῶντας κολάζειν, οὐ θανόντας εὐσεβές."
+            }
+          ],
+          "context": "Stob. Flor. 125 , 3 : Μοσχίωνος ἐκ Φεραιῶν (sic MA, μοσχίωνος om. fab. nomine S) . ‘κενὸν — σκιάν’ . 125 , 4 : ‘ζῶντας — εὐσεβές’ . versus in SMA cohaerentes vulgo male dirimuntur. v. 1 καινὸν MA, σκαιὸν parum apte coni. F. G. Schmidt Krit. Stud. 3 p. 22 .",
+          "play_title": "ΦΕΡΑΙΟΙ",
+          "play_work": "pheraioi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_pheraioi",
+          "attribution_id": "nauck1889grc1-tlg0339-pheraioi",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0339.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0339-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0339-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0339.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0339-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0339-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr4-l1",
+              "text": "ὅμως τό γ’ ὀρθὸν καὶ δίκαιον οὔποτε"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr4-l2",
+              "text": "σιγῇ παρήσω· τὴν γὰρ ἐντεθραμμένην"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr4-l3",
+              "text": "ἀστοῖς Ἀθάνας τῇ τε Θησέως πόλει"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr4-l4",
+              "text": "καλὸν φυλάξαι γνησίως παρρησίαν."
+            }
+          ],
+          "context": "Stob. Flor. 13 , 14 : Μοσχίωνος (sic SMA, lemma om. L) . ‘ὅμως — παρρησίαν’ . v. 3 ἀθανᾶς M.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0339-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr5-l1",
+              "text": "μόνον σὺ θυμοῦ χωρὶς ἔνδεξαι λόγους"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr5-l2",
+              "text": "οὓς σοὶ κομίζω· τὸν κλύοντα γὰρ λαβὼν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr5-l3",
+              "text": "ὁ μῦθος εὔνουν οὐ μάτην λεχθήσεται."
+            }
+          ],
+          "context": "Stob. Flor. 46 , 14 : Μοσχίωνος (sic S, eclogam om. MA) . ‘μόνον — λεχθήσεται.’ v. 2 οὓς σὺ S, οὕς σοι Trinc.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0339-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr6-l1",
+              "text": "πρῶτον δ’ ἄνειμι καὶ διαπτύξω λόγῳ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr6-l2",
+              "text": "ἀρχὴν βροτείου καὶ κατάστασιν βίου."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr6-l3",
+              "text": "ἦν γάρ ποτ’ αἰὼν κεῖνος, ἦν ποθ’ ἡνίκα"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr6-l4",
+              "text": "θηρσὶν διαίτας εἶχον ἐμφερεῖς βροτοί ,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0339-fr6-l5",
+              "text": "ὀρειγενῆ σπήλαια καὶ δυσηλίους"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0339-fr6-l6",
+              "text": "φάραγγας ἐνναίοντες· οὐδέπω γὰρ ἦν"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0339-fr6-l7",
+              "text": "οὔτε στεγήρης οἶκος οὔτε λαΐνοις"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0339-fr6-l8",
+              "text": "εὐρεῖα πύργοις ὠχυρωμένη πόλις."
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0339-fr6-l9",
+              "text": "οὐ μὴν ἀρότροις ἀγκύλοις ἐτέμνετο"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0339-fr6-l10",
+              "text": "μέλαινα καρποῦ βῶλος ὀμπνίου τροφός,"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0339-fr6-l11",
+              "text": "οὐδ’ ἐργάτης σίδηρος εὐιώτιδος"
+            },
+            {
+              "ref": "12",
+              "source_id": "tlg0339-fr6-l12",
+              "text": "θάλλοντας οἴνης ὀρχάτους ἐτημέλει,"
+            },
+            {
+              "ref": "13",
+              "source_id": "tlg0339-fr6-l13",
+              "text": "ἀλλ’ ἦν ἀκύμων κωφεύουσα ῥέουσα γῆ ."
+            },
+            {
+              "ref": "14",
+              "source_id": "tlg0339-fr6-l14",
+              "text": "βοραὶ δὲ σαρκοβρῶτες ἀλληλοκτόνους"
+            },
+            {
+              "ref": "15",
+              "source_id": "tlg0339-fr6-l15",
+              "text": "παρεῖχον αὐτοῖς δαῖτας· ἦν δ’ ὁ μὲν νόμος"
+            },
+            {
+              "ref": "16",
+              "source_id": "tlg0339-fr6-l16",
+              "text": "ταπεινός, ἡ βία δὲ σύνθρονος Διί."
+            },
+            {
+              "ref": "17",
+              "source_id": "tlg0339-fr6-l17",
+              "text": "[ὁ δ’ ἀσθενὴς ἦν τῶν ἀμεινόνων βορά .]"
+            },
+            {
+              "ref": "18",
+              "source_id": "tlg0339-fr6-l18",
+              "text": "ἐπεὶ δ’ ὁ τίκτων πάντα καὶ τρέφων χρόνος"
+            },
+            {
+              "ref": "19",
+              "source_id": "tlg0339-fr6-l19",
+              "text": "τὸν θνητὸν ἠλλοίωσεν ἔμπαλιν βίον,"
+            },
+            {
+              "ref": "20",
+              "source_id": "tlg0339-fr6-l20",
+              "text": "εἴτ’ οὖν μέριμναν τὴν Προμηθέως πάρα"
+            },
+            {
+              "ref": "21",
+              "source_id": "tlg0339-fr6-l21",
+              "text": "εἴτ’ οὖν ἀνάγκην εἴτε τῇ μακρᾷ τριβῇ"
+            },
+            {
+              "ref": "22",
+              "source_id": "tlg0339-fr6-l22",
+              "text": "αὐτὴν παρασχὼν τὴν φύσιν διδάσκαλον,"
+            },
+            {
+              "ref": "23",
+              "source_id": "tlg0339-fr6-l23",
+              "text": "τόθ’ ηὑρέθη μὲν καρπὸς ἡμέρου τροφῆς"
+            },
+            {
+              "ref": "24",
+              "source_id": "tlg0339-fr6-l24",
+              "text": "Δήμητρος ἁγνῆς, ηὑρέθη δὲ Βακχίου"
+            },
+            {
+              "ref": "25",
+              "source_id": "tlg0339-fr6-l25",
+              "text": "γλυκεῖα πηγή , γαῖα δ’ ἡ πρὶν ἄσπορος"
+            },
+            {
+              "ref": "26",
+              "source_id": "tlg0339-fr6-l26",
+              "text": "ἤδη ζυγουλκοῖς βουσὶν ἠροτρεύετο,"
+            },
+            {
+              "ref": "27",
+              "source_id": "tlg0339-fr6-l27",
+              "text": "ἄστη δ’ ἐπυργώσαντο καὶ περισκεπεῖς"
+            },
+            {
+              "ref": "28",
+              "source_id": "tlg0339-fr6-l28",
+              "text": "ἔτευξαν οἴκους καὶ τὸν ἠγριωμένον"
+            },
+            {
+              "ref": "29",
+              "source_id": "tlg0339-fr6-l29",
+              "text": "εἰς ἥμερον δίαιταν ἤγαγον βίον."
+            },
+            {
+              "ref": "30",
+              "source_id": "tlg0339-fr6-l30",
+              "text": "κἀκ τοῦδε τοὺς θανόντας ὥρισεν νόμος"
+            },
+            {
+              "ref": "31",
+              "source_id": "tlg0339-fr6-l31",
+              "text": "τύμβοις καλύπτειν κἀπιμοιρᾶσθαι κόνιν"
+            },
+            {
+              "ref": "32",
+              "source_id": "tlg0339-fr6-l32",
+              "text": "νεκροῖς ἀθάπτοις, μηδ’ ἐν ὀφθαλμοῖς ἐᾶν"
+            },
+            {
+              "ref": "33",
+              "source_id": "tlg0339-fr6-l33",
+              "text": "τῆς πρόσθε θοίνης μνημόνευμα δυσσεβοῦς."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 8 , 38 p. 100 , 2 : Μοσχίωνος (οσχίωνος F, lemma om. P) . ‘πρῶτον — δυσσεβές’ . v. 3 ἦν ποθ’ ἡνίκα scripsi, ἦν ὁπηνίκα FP. v. 4 θηρσὶ FP. v. 5 δυσηλίους dubito num integrum sit, olim δυσαυλίους proposui, nunc δυσχειμέρους malim. v. 7 λαγγήνοις F, λαγήνοις Ρ pr. m. , λαίνοις Ρ m. sec. v. 8 ὠχυρομένους F. v. 9 καμπύλοις malim, cf. καμπύλ’ ἄροτρα Hymn. Cer. 308 et Solon. fr. 13 , 48 et εὐκαμπὲς ἄροτρον Mosch. 2 , 81 et Maxim. περὶ καταρχῶν 458 . ἐγένετο F. v. 10 καρπὸς (καρπὸν sec. m.) P. ὀμπίου p. v. 11 εὐγωτίδος FP, εὐιώτιδος Grotius. v. 12 ὀρχάτουσε τημέλλει F, ὀρχατους . . . μένει Ρ, ὀρχάτους ἐτημέλει Salmasius. v. 13 κωφεύουσα ῥέουσα FP, κοὐ τροφὴν φέρουσα coni. Tyrwhitt, κωφά τ’ ἐκφύουσα (vel ἐκφέρουσα) Heeren, κωφὰ χηρεύουσα (aptius erat χερσεύουσα) Meineke, ego κοὐ φυτοῖς βρύουσα praetulerim. κνωδάλων βρύουσα Methner progr. a. 1882 p. 9 , κἀφυῶς ἀργοῦσα Haupt Opusc. 3 p. 471 sq. , κωρόνους τ’ ἀργοῦσα Vsener, καὶ φυτῶν ἀργοῦσα F. G.\n\nSchmidt Krit. Stud. 3 p. 22 . v. 14 βροτοὶ δὲ σαρκοβρῶτες I. Bernhard. v. 15 αὑτοῖς idem. ἦν om. P. v. 16 σύνθακος malim (cf. Phot. Lex. p. 554 , 27 : σύνθακος· σύνθρονος) . νηὶ corr. in διὶ P, νηὶ F, δίκῃ Canter. v. 17 aptius est τῶν ἀρειόνων, quod a. 1847 ego proposui et a. 1855 Meineke, ac saepe ἀρείων et ἀμείνων confunduntur (velut Il. Ζ 479 O 641 Τ 56 Orac. Herodot. 4 , 157 et 6 , 86) . at totum versum spurium esse recte iudicat Wachsmuth. v. 18 τρέφων FP, τρέπων coniecit nescio quis in ex. Gotting. , φθείρων Herwerden Exerc. crit. p. 79 aptissime si sententiam spectes (cf. Aristot. Phys. 4 , 13 p. 222 b 17 : ἐν δὲ τῷ χρόνῳ πάντα γίνεται καὶ φθείρεται) , sed sufficiet στρέφων (cf. Eur. fr. 536 Men. mon. 712) . v. 20 πάρα scripsi, σπάσας FP, πλάσας Meineke. v. 23 τότ’ εὑρέθη FP. v. 24 δημήτερος P. εὑρέθη FP. v. 27 ἄστη Wesseling, αὕτη FP. ἐπύργωσάν τε Valckenaer. v. 30 ὤρισεν F, ῶισε p. v. 32 νεκροὺς ἀθάπτους FP, νεκροῖς ἀθάπτοις Meineke, cf. Pseudo-Phocyl. 99 : γαῖαν ἐπιμοιρᾶσθαι ἀταρχύτοις νεκύεσσιν. v. 33 δυσσεβὲς FP, δυσσεβοῦς Valckenaer.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0339-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr7-l1",
+              "text": "τί κέρδος οὐκέτ’ ὄντας ὑβρίζειν νεκρούς ;"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr7-l2",
+              "text": "τί τὴν ἄναυδον γαῖαν αἰκίζειν πλέον ;"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr7-l3",
+              "text": "ἐπὰν γὰρ ἡ κρίνουσα καὶ τὰς ἡδονὰς"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr7-l4",
+              "text": "καὶ τἀνιαρὰ φροῦδος αἴσθησις φθαρῇ ,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0339-fr7-l5",
+              "text": "τὸ σῶμα κωφοῦ τάξιν εἴληφεν πέτρου."
+            }
+          ],
+          "context": "Stob. Flor. 125 , 14 : Μοσχίωνος (sic MA, lemma om. S) . ‘τί κέρδος — πέτρου.’ v. 1 ὑβρίζειν νεκρούς scripsi (cf. Eur. El. 902 Phoen. 1663) , αἰκίζειν νεκρούς libri. v. 2 γαῖαν ὑβρίζειν libri, γαῖαν αἰκίζειν scripsi. manifesto poeta imitatur Il. Ω 54 : κωφὴν γὰρ δὴ γαῖαν ἀεικίζει μενεαίνων. v. 3 ἐπὴν Wagner. τὰ ἡδίονα SMA, τὰς ἡδονὰς Porson Tracts and misc. crit. p. 231 . v. 3 sq. καὶ τἀλγίονα καὶ τἀπίχαρτα F. G. Schmidt Krit. Stud. 3 p. 22 sq. v. 5 εἴληχεν Valckenaer in Eur. Hipp. p. 174 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0339-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr8-l1",
+              "text": "ἦν ἆρα τρανὸς αἶνος ἀνθρώπων ὅδε,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr8-l2",
+              "text": "ὡς τὸν πέλας μὲν νουθετεῖν βραχὺς πόνος,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr8-l3",
+              "text": "αὐτὸν δ’ ἐνεγκεῖν ὕβριν ἠδικημένον"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr8-l4",
+              "text": "πάντων μέγιστον τῶν ἐν ἀνθρώποις βάρος."
+            }
+          ],
+          "context": "Stob. Flor. 114 , 9 : Μοσχίωνος. ‘ἦν — βάρος’ . v. 1 ἄρα libri. v. 2 τοὺς πέλας coni. Burges. βραχὺς χρόνος A. v. 3 αὐτὸν S, αὑτὸν MA.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0339-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr9-l1",
+              "text": "σὺν αἷσι δόξῃ πρόσθε καὶ γένει μέγας"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr9-l2",
+              "text": "Ἄργους δυνάστης, λειτὸς ἐκ τυραννικῶν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0339-fr9-l3",
+              "text": "θρόνων, προσίκτην θαλλὸν ἠγκαλισμένος"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0339-fr9-l4",
+              "text": "ἔστειχεν εἰς γῆν, ὄμμα συμπαθὲς φέρων"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0339-fr9-l5",
+              "text": "καὶ πᾶσι δεικνὺς ὡς τὰ λαμπρὰ τῆς τύχης"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0339-fr9-l6",
+              "text": "τὴν κτῆσιν οὐ βέβαιον ἀνθρώποις νέμει."
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0339-fr9-l7",
+              "text": "ὃν πᾶς μὲν ἀστῶν ἠλέησεν εἰσιδών,"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0339-fr9-l8",
+              "text": "ἅπας δὲ χεῖρα καὶ προσήγορον φάτιν"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0339-fr9-l9",
+              "text": "ὤρεξε κανθούς τ’ ἐξέτηξε δακρύοις"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0339-fr9-l10",
+              "text": "τύχαις συναλγῶν· τἀξίωμα γὰρ νοσοῦν"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0339-fr9-l11",
+              "text": "τὸ πρόσθε πολλοῖς οἶκτον ἐμποεῖ βροτῶν."
+            }
+          ],
+          "context": "Stob. Flor. 105 , 22 : Μοσχίωνος. ‘σὺν αἷσι — βροτῶν’ . v. 1 συνέσει δόξῃ S, σὺν αἷσι δόξῃ M, σὺν αἷσσι (συνέσει supra scr. m. sec.) δόξῃ (supra scr. ας m. sec.) A, σὺν αἷς ὁ ego proposui, συνέσει γε δόξας Valckenaer in Eur. Hipp. 96 , φυγὰς δ’ ὁ δόξῃ F. G. Schmidt Krit. Stud. 3 p. 23 . πρόσθεν S v. 2 λειτὸς scripsi, λιτὸς vulgo. v. 4 ἔστιχεν M. ἐκ γῆς coni. F. G. Schmidt. συννεφὲς malim cum Meinekio. v. 6 νέμει] ἔχει Cobet Mnem. 9 p. 144 . v. 8 κεὐ προσήγορον Valckenaer. φάτην MA. v. 9 κάνθους S, κἄνθους M, κανθούς A. v. 11 πρόσθεν S. ἐμποιεῖ Haupt, εὐπορεῖ SMA.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "10",
+          "source_id": "tlg0339-fr10",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:10",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0339-fr10-l1",
+              "text": "κεῖνος δ’ ἁπάντων ἐστὶ μακαριώτατος,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0339-fr10-l2",
+              "text": "ὃς διὰ τέλους ζῶν ὁμαλὸν ἤσκησεν βίον."
+            }
+          ],
+          "context": "Clemens Alex. Strom. VI p. 745 : Βακχυλίδου τε εἰρηκότος ‘παύροισι δὲ θνατῶν — πρὶν ἐγκῦρσαι δύᾳ’ , Μοσχίων ὁ κωμικὸς γράφει ‘κεῖνος — βίον’ . v. 2 ἐκύρησεν coni. F. G. Schmidt Krit. Stud. 3 p. 24 , εἴληχεν Wecklein. versus supra scriptos non esse Moschionis tragici e metro recte conclusit Meineke : trisyllabis enim pedibus sicut Sositheus et alii quidam ita Moschion abstinuit *) .\n\n*) Exclusimus Stob. Flor. 123 , 3 : Μοσχίωνος. ‘ἐάσατ’ ἤδη — δεῖ λαβεῖν’ . ubi Moschioni tribuuntur sex trimetri qui leguntur in Eur. Suppl. 531-536 . intercidisse in Stob. Flor. Moschionis locum et lemma Εὐριπίδου recte iudicat O. Hense.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0339.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 62,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0339-themistokles",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0339-themistokles",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_themistokles",
+      "corresp": [
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0339-telephos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0339-telephos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_telephos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0339-pheraioi",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0339-pheraioi",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_pheraioi",
+      "corresp": [
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0339-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0339_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:9",
+        "urn:cts:greekLit:tlg0339.fragmenta.nauck1889grc1:10"
+      ]
+    }
+  ]
+}

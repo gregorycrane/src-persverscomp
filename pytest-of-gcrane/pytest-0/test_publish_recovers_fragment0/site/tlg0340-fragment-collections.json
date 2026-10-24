@@ -1,0 +1,532 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0340",
+  "author": "Sositheus",
+  "corpus_title": "Sositheus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0340.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0340.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0340-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0340-fr1-l1",
+          "text": "εἷς μυρίους ὄρνιθας αἰετὸς σοβεῖ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0340-fr1-l2",
+          "text": "λαῶν τε δειλῶν πλῆθος εὖ τραφεὶς ἀνήρ."
+        }
+      ],
+      "context": "Stob. Flor. 51 , 23 : Σωσιθέου ἐξ Ἀεθλίου (sic M, ἐξ ἀθλίου A, fabulae nomen om. S) . ‘εἷς — ἀνήρ’ . v. 1 ἀετὸς SM, αἰετὸς A. v. 2 εὐθαρσὴς coni. Herwerden Exerc. crit. p. 81 , εὐτραφὴς F. G. Schmidt Krit. Stud. 3 p. 24 .",
+      "play_title": "ΑΕΘΛΙΟΣ",
+      "play_work": "aethlios",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_aethlios"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0340-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0340-fr2-l1",
+          "text": "τούτῳ Κελαιναὶ πατρίς, ἀρχαία πόλις"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0340-fr2-l2",
+          "text": "Μίδου γέροντος, ὅστις ὦτ’ ἔχων ὄνου"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0340-fr2-l3",
+          "text": "ἤνασσε καὶ νοῦν φωτὸς εὐήθους ἄγαν."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0340-fr2-l4",
+          "text": "οὗτος δ’ ἐκείνου παῖς πατρὶ πλαστὸς νόθος,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0340-fr2-l5",
+          "text": "μητρὸς δ’ ὁποίας ἡ τεκοῦσ’ ἐπίσταται,"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0340-fr2-l6",
+          "text": "ἔσθει μὲν ἄρτων τρεῖς ὄνους κανθηλίους"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0340-fr2-l7",
+          "text": "τρὶς τῆς βραχείας ἡμέρας, πίνει δ’ ἅμα"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0340-fr2-l8",
+          "text": "καλῶν μετρητὴν τὸν δεκάμφορον πίθον."
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0340-fr2-l9",
+          "text": "ἐργάζεται δ’ ἐλαφρὰ πρὸς τὰ σιτία."
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0340-fr2-l10",
+          "text": "ὄγμον θερίζει, τῇ μιᾷ δ’ ἐν ἡμέρᾳ"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0340-fr2-l11",
+          "text": "δαίνυσί τ’ ἔμπης συντίθησιν εἰς τέλος."
+        },
+        {
+          "ref": "12",
+          "source_id": "tlg0340-fr2-l12",
+          "text": "χὥταν τις ἔλθῃ ξεῖνος ἢ παρεξίῃ ,"
+        },
+        {
+          "ref": "13",
+          "source_id": "tlg0340-fr2-l13",
+          "text": "φαγεῖν τ’ ἔδωκεν εὖ κἀπεχόρτασεν"
+        },
+        {
+          "ref": "14",
+          "source_id": "tlg0340-fr2-l14",
+          "text": "καὶ τοῦ ποτοῦ προύτεινεν ὡς ἂν ἐν θέρει"
+        },
+        {
+          "ref": "15",
+          "source_id": "tlg0340-fr2-l15",
+          "text": "πλέον· φθονεῖν γὰρ τοῖς θανουμένοις ὀκνεῖ ."
+        },
+        {
+          "ref": "16",
+          "source_id": "tlg0340-fr2-l16",
+          "text": "ἐπιστατῶν οἴδηα Μαιάνδρου ῥοαῖς"
+        },
+        {
+          "ref": "17",
+          "source_id": "tlg0340-fr2-l17",
+          "text": "καρπευμάτων ἀρδευτὰ δαψιλεῖ πότῳ"
+        },
+        {
+          "ref": "18",
+          "source_id": "tlg0340-fr2-l18",
+          "text": "τὸν ἀνδρομήκη πυρὸν ἠκονημένῃ"
+        },
+        {
+          "ref": "19",
+          "source_id": "tlg0340-fr2-l19",
+          "text": "ἅρπῃ θερίζει· τὸν ξένον δὲ δράγματι"
+        },
+        {
+          "ref": "20",
+          "source_id": "tlg0340-fr2-l20",
+          "text": "αὐτῷ κυλίσας κρατὸς ὀρφανὸν φέρει"
+        },
+        {
+          "ref": "21",
+          "source_id": "tlg0340-fr2-l21",
+          "text": "γελῶν θεριστὴν ὡς ἄνουν ἠρίστισεν."
+        }
+      ],
+      "context": "Anonymus in Mythogr. Westerm. p. 346 , 16 : Λιτυέρσης Μίδου υἱὸς νόθος, ὃν ὁ Ἡρακλῆς ἀνεῖλεν ὄντα κακόξενον· ἠνάγκαζε γὰρ τοὺς ξένους συνθερίζειν αὑτῷ , εἶτα εὐωχῶν ἀπεκεφάλιζε, τὰ δὲ σώματα ἐκόμιζεν ἐν τοῖς δράγμασιν ὡς παραλελογισμένων. ἱστορεῖ ταῦτα κατὰ μέρος Σωσίβιος*) ἐν Δάφνιδι λέγων οὕτως ‘οὔτε οἱ — ἠρίστισεν’ . Tzetz. Chil. 2 , 596 : ὁ Λιτυέρσης (Λυτιέρσης ed.) δὲ υἱὸς νόθος ὑπάρχων Μίδου οἴνου μὲν πίθον ἐξαντλῶν ὅλον ὑπῆρχε πίνων, ἄρτους δὲ τρώγων ἤσθιεν ὄνων τριῶν φορτίον, ὡς ἐν τῷ Δάφνιδι φησὶ Σωσίβιος ἰάμβοις ‘οὗτος δ’ — φορτία’ (v. 4-9) . Ath. X p. 415 B : Λιτυέρσας δὲ ἦν μὲν υἱὸς Μίδου νόθος, Κελαινῶν δὲ τῶν ἐν Φρυγίᾳ βασιλεύς, ἄγριος ἰδέσθαι καὶ ἀνήμερος ἄνθρωπος, ἀδηφάγος δ’ ἰσχυρῶς. λέγει δὲ περὶ αὐτοῦ Σωσίθεος ὁ τραγῳδιοποιὸς ἐν δράματι Δάφνιδι ἢ *) Sosibii vel potius Sosithei versus primus edidit Casaubonus Lect. Theocr. cap. XIΙ, postea Heeren Bibl. für Litt. u. Kunst, Stück VII. uterque eodem codice usus est : quamquam codices commemorat Heeren, qui in lectione indicanda neglegentissimus fuit.\n\nΛιτυέρσᾳ οὕτως ‘ἔσθει — πίθον’ (v. 6-8) . verba quae manserunt esse Daphnidis Herculem de rerum statu edocentis coni. O. Iahn Herm. 3 p. 181 . v. 1 οὔτε οἱ cod. , τούτῳ scripsi. v. 3 φατὸς εὐειδοῦς cod. , φωτὸς εὐήθους Arnaud. v. 4 ὁ κείνου malim. περίπλαστος Anon. , παράπλαστος Tzetz. , πατρὶ πλαστὸς Hermann : sic πλαστὸς ὡς εἴην πατρί Soph. Oed. R. 780 . v. 6 ἄρτων τρεῖς ὄνους κανθηλίους Casaubonus. ἄρτους Anon. et Tzetz. , αὐτοὺς Athenaei A. ὄνους Athenaei C et Anon. , ὅλους Athenaei A et Tzetzes. ἄρτους τρεῖς ὄνου κανθηλίου coni. Eichstaedt. v. 7 τρὶς τῆς Ath. et Anon. , τῆς δὲ Tzetz. πίνει θ’ ἅμα Anon. et Tzetz. , πίνει δ’ ἕνα Ath. v. 8 καλῶν Anon. et Tzetz. , καλὸν Ath. , κάδον proposui Philol. 12 p. 195 , quamquam persanatum locum hac coniectura non arbitror. δεκάμφορον Anon. et Tzetz. , δὲ καρποφόρον Ath. v. 9 ἐργάζεται δὲ φλαῦρα coni. Meineke Ath. 4 p. 182 . ἐλαφρά πως ego olim temptavi. σιτία Anon. , φορτία Tzetz. v. 10 ὄγμους θερίζων Hermann. ὄγμον θερίζων ἕνα, μιᾷ δ’ ἐν ἡμέρᾳ Meineke, ubi improbandus est pes trisyllabus. v. 11 δαίνυσί τ’ ἔμπης verba desperata. v. 12 ξένος ante Casaubonum. v. 13 εὖ καὶ πεχόρτασεν cod. , εἶτα κἀπεχόρτασεν Hermann, ᾖα κἀπεχόρτασεν Meineke, εὖ καλῶς τ’ ἐχόρτασεν ego olim scripsi. v. 14 προυτειν’ cod. v. 15 πλείστου Meineke. ὤκνει cod. post v. 15 quaedam desiderari iudicat O. Iahn. v. 16 ἔπειτ’ ἄγων εἰς λῇα temptabam. v. 17 κηπευμάτων Hermann, ταφρευμάτων τ’ Methner progr. a. 1882 p. 12 . v. 18 sq. ἠονημένη ἅρπη cod. , corr. Casaubonus. v. 20 ἁδρῷ ’γκυλίσας Meineke, αὐτῷ ’γκυλίσας Methner. v. 21 γέρων et ἠρίστησεν cod. , γελῶν et ἠρίστισεν Casaubonus.",
+      "play_title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+      "play_work": "daphnis_e_lityerses",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0340-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0340-fr3-l1",
+          "text": "θανὼν μὲν οὖν Μαίανδρον ἐρρίφη ποδὸς"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0340-fr3-l2",
+          "text": "σόλος τις ὥσπερ· ἦν δ’ ὁ δισκεύσας ἀνὴρ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0340-fr3-l3",
+          "text": "πυθιο· τίς γὰρ ἀνθ’ Ἡρακλέους ;"
+        }
+      ],
+      "context": "Anonymus in Westerm. Mythogr. haec subicit p. 347 , 9 : ὅτι δ’ ἀπέθανεν ὑφ’ Ἡρακλέους φησὶ λέγων ‘θανὼν — Ἡρακλέους’ . v. 1 οὖν] εἰς Eichstaedt. v. 2 σοφός τις ὥσπερ δίσκος cod. , σόλος τις ὥσπερ Casaubonus, ὥσπερ σόλος τις Hermann. v. 3 πυθιο. . . ] fortasse Τιρύνθιος τις legendum.",
+      "play_title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+      "play_work": "daphnis_e_lityerses",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0340-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0340-fr4-l1",
+          "text": "οὓς ἡ Κλεάνθους μωρία βοηλατεῖ"
+        }
+      ],
+      "context": "Laert. Diog. 7 , 173 : Σωσιθέου τοῦ ποιητοῦ ἐν θεάτρῳ εἰπόντος πρὸς αὐτὸν (Cleanthem) παρόντα ‘οὓς — βοηλατεῖ’ ἔμεινεν ἐπὶ τοῦ αὐτοῦ σχήματος· ἐφ’ ᾧ ἀγασθέντες οἱ ἀκροαταὶ τὸν μὲν ἐκρότησαν, τὸν δὲ Σωσίθεον ἐξέβαλον. μεταγινώσκοντα δὲ αὐτὸν ἐπὶ τῇ λοιδορίᾳ προσήκατο, εἰπὼν ἄτοπον εἶναι τὸν μὲν Διόνυσον καὶ τὸν Ἡρακλέα φλυαρουμένους ὑπὸ τῶν ποιητῶν μὴ ὀργίζεσθαι, αὐτὸν δὲ ἐπὶ τῇ τυχούσῃ βλασφημίᾳ δυσχεραίνειν. cf. Hesychius Miles. 42 p. 32 , 4 ed. Fl. versiculus depromptus est ex satyrica fabula. Sositheus aequalem philosophum in scena commemorans non audacior fuit quam qui Menedemum scripsit Lycophron.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0340-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [],
+      "context": "Eratosth. Catast. 28 : ὃν (int. Τοξότην sive Κρότον τὸν Εὐφήμης τῆς τῶν μουσῶν τροφοῦ υἱόν) καὶ αἱ μοῦσαι τὴν τοξείαν εὑράμενον τὴν τροφὴν ἀπὸ τῶν ἀγρίων ἔχειν ἐποίησαν, καθάπερ φησὶ Σωσίθεος. cf. Hygin. Poet. astr. 2 , 27 p. 479 et Schol. German. Caes. Arat. p. 90 , 4 et p. 159 , 1 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0340-aethlios": {
+      "id": "tlg0340-aethlios",
+      "work": "aethlios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_aethlios",
+      "title": "ΑΕΘΛΙΟΣ",
+      "source_title": "ΑΕΘΛΙΟΣ",
+      "source": "tlg0340.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0340-aethlios",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0340-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0340-fr1-l1",
+              "text": "εἷς μυρίους ὄρνιθας αἰετὸς σοβεῖ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0340-fr1-l2",
+              "text": "λαῶν τε δειλῶν πλῆθος εὖ τραφεὶς ἀνήρ."
+            }
+          ],
+          "context": "Stob. Flor. 51 , 23 : Σωσιθέου ἐξ Ἀεθλίου (sic M, ἐξ ἀθλίου A, fabulae nomen om. S) . ‘εἷς — ἀνήρ’ . v. 1 ἀετὸς SM, αἰετὸς A. v. 2 εὐθαρσὴς coni. Herwerden Exerc. crit. p. 81 , εὐτραφὴς F. G. Schmidt Krit. Stud. 3 p. 24 .",
+          "play_title": "ΑΕΘΛΙΟΣ",
+          "play_work": "aethlios",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_aethlios",
+          "attribution_id": "nauck1889grc1-tlg0340-aethlios",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0340.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0340-daphnis-e-lityerses": {
+      "id": "tlg0340-daphnis-e-lityerses",
+      "work": "daphnis_e_lityerses",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses",
+      "title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+      "source_title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+      "source": "tlg0340.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0340-daphnis-e-lityerses",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. Theocr. 8 argum. : Σωσίθεος δὲ Δάφνιν γενόμενον, ὑφ’ οὗ νικηθῆναι Μενάλκαν Πανὸς ῀καὶ νυμφῶν] κρίναντος, γαμηθῆναι δὲ αὐτῷ Θάλειαν. cum loco mutilo, in quo καὶ νυμφῶν verba delenda esse agnovit Buecheler Mus. Rhen. 39 p. 275 , compares Schol. Theocr. 8 , 92 : ἱστοροῦσι γὰρ αὐτὸν (Daphnin) ἀγαπηθῆναι ὑπό τινος νύμφης, ἣν Σωσίθεος Θάλειαν λέγει. adde Serv. in Verg. Bucol. 8 , 68 (cuius loci aliquot vitia sustulit O. Iahn Herm. 3 p. 180 sq.) : alii hunc Daphnin Pimpleam amasse dicunt, quam cum a praedonibus raptam Daphnis per totum orbem quaesisset, invenit in Phrygia apud Lityersem regem servientem, qui hac lege in advenas saeviebat, ut cum multas segetes haberet, peregrinos advenientes secum metere faceret victosque iuberet occidi. sed Hercules miseratus Daphnidis venit ad regiam et audita condicione certaminis falcem ad metendum accepit eaque regi ferali sopito metendi carmine caput amputavit. ita Daphnin a periculo liberavit et ei Pimpleam, quam alii Thaliam dicunt, reddidit, quibus dotis nomine aulam quoque regiam condonavit. Schol. Theocr. 10 , 42 : οὗτος δὲ ὁ Λυτιέρσης ᾤκει Κελαινὰς τῆς Φρυγίας, υἱὸς τυγχάνων νόθος τοῦ Μίδου· γεωργὸς δὲ ὢν τοὺς παριόντας τῶν ξένων εὐωχῶν ἠνάγκαζε θερίζειν μετ’ αὐτοῦ , εἶτα ἑσπέρας ἀποτέμνων αὐτῶν τὰς κεφαλὰς τὸ λοιπὸν σῶμα ἐν τοῖς δράγμασι συνειλῶν ᾖδεν. Ἡρακλῆς δὲ ὕστερον τοῦτον ἀποκτείνας ἔρριψεν εἰς τὸν Μαίανδρον ποταμόν· ὅθεν καὶ νῦν οἱ θερισταὶ κατὰ Φρυγίαν ᾄδουσιν αὐτὸν ἐγκωμιάζοντες ὡς ἄριστον θεριστήν. sine dubio Daphnis Sosithei satyrica fuit fabula haud dissimilis Alcestidi Euripideae.",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0340-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0340-fr2-l1",
+              "text": "τούτῳ Κελαιναὶ πατρίς, ἀρχαία πόλις"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0340-fr2-l2",
+              "text": "Μίδου γέροντος, ὅστις ὦτ’ ἔχων ὄνου"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0340-fr2-l3",
+              "text": "ἤνασσε καὶ νοῦν φωτὸς εὐήθους ἄγαν."
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0340-fr2-l4",
+              "text": "οὗτος δ’ ἐκείνου παῖς πατρὶ πλαστὸς νόθος,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0340-fr2-l5",
+              "text": "μητρὸς δ’ ὁποίας ἡ τεκοῦσ’ ἐπίσταται,"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0340-fr2-l6",
+              "text": "ἔσθει μὲν ἄρτων τρεῖς ὄνους κανθηλίους"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0340-fr2-l7",
+              "text": "τρὶς τῆς βραχείας ἡμέρας, πίνει δ’ ἅμα"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0340-fr2-l8",
+              "text": "καλῶν μετρητὴν τὸν δεκάμφορον πίθον."
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0340-fr2-l9",
+              "text": "ἐργάζεται δ’ ἐλαφρὰ πρὸς τὰ σιτία."
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0340-fr2-l10",
+              "text": "ὄγμον θερίζει, τῇ μιᾷ δ’ ἐν ἡμέρᾳ"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0340-fr2-l11",
+              "text": "δαίνυσί τ’ ἔμπης συντίθησιν εἰς τέλος."
+            },
+            {
+              "ref": "12",
+              "source_id": "tlg0340-fr2-l12",
+              "text": "χὥταν τις ἔλθῃ ξεῖνος ἢ παρεξίῃ ,"
+            },
+            {
+              "ref": "13",
+              "source_id": "tlg0340-fr2-l13",
+              "text": "φαγεῖν τ’ ἔδωκεν εὖ κἀπεχόρτασεν"
+            },
+            {
+              "ref": "14",
+              "source_id": "tlg0340-fr2-l14",
+              "text": "καὶ τοῦ ποτοῦ προύτεινεν ὡς ἂν ἐν θέρει"
+            },
+            {
+              "ref": "15",
+              "source_id": "tlg0340-fr2-l15",
+              "text": "πλέον· φθονεῖν γὰρ τοῖς θανουμένοις ὀκνεῖ ."
+            },
+            {
+              "ref": "16",
+              "source_id": "tlg0340-fr2-l16",
+              "text": "ἐπιστατῶν οἴδηα Μαιάνδρου ῥοαῖς"
+            },
+            {
+              "ref": "17",
+              "source_id": "tlg0340-fr2-l17",
+              "text": "καρπευμάτων ἀρδευτὰ δαψιλεῖ πότῳ"
+            },
+            {
+              "ref": "18",
+              "source_id": "tlg0340-fr2-l18",
+              "text": "τὸν ἀνδρομήκη πυρὸν ἠκονημένῃ"
+            },
+            {
+              "ref": "19",
+              "source_id": "tlg0340-fr2-l19",
+              "text": "ἅρπῃ θερίζει· τὸν ξένον δὲ δράγματι"
+            },
+            {
+              "ref": "20",
+              "source_id": "tlg0340-fr2-l20",
+              "text": "αὐτῷ κυλίσας κρατὸς ὀρφανὸν φέρει"
+            },
+            {
+              "ref": "21",
+              "source_id": "tlg0340-fr2-l21",
+              "text": "γελῶν θεριστὴν ὡς ἄνουν ἠρίστισεν."
+            }
+          ],
+          "context": "Anonymus in Mythogr. Westerm. p. 346 , 16 : Λιτυέρσης Μίδου υἱὸς νόθος, ὃν ὁ Ἡρακλῆς ἀνεῖλεν ὄντα κακόξενον· ἠνάγκαζε γὰρ τοὺς ξένους συνθερίζειν αὑτῷ , εἶτα εὐωχῶν ἀπεκεφάλιζε, τὰ δὲ σώματα ἐκόμιζεν ἐν τοῖς δράγμασιν ὡς παραλελογισμένων. ἱστορεῖ ταῦτα κατὰ μέρος Σωσίβιος*) ἐν Δάφνιδι λέγων οὕτως ‘οὔτε οἱ — ἠρίστισεν’ . Tzetz. Chil. 2 , 596 : ὁ Λιτυέρσης (Λυτιέρσης ed.) δὲ υἱὸς νόθος ὑπάρχων Μίδου οἴνου μὲν πίθον ἐξαντλῶν ὅλον ὑπῆρχε πίνων, ἄρτους δὲ τρώγων ἤσθιεν ὄνων τριῶν φορτίον, ὡς ἐν τῷ Δάφνιδι φησὶ Σωσίβιος ἰάμβοις ‘οὗτος δ’ — φορτία’ (v. 4-9) . Ath. X p. 415 B : Λιτυέρσας δὲ ἦν μὲν υἱὸς Μίδου νόθος, Κελαινῶν δὲ τῶν ἐν Φρυγίᾳ βασιλεύς, ἄγριος ἰδέσθαι καὶ ἀνήμερος ἄνθρωπος, ἀδηφάγος δ’ ἰσχυρῶς. λέγει δὲ περὶ αὐτοῦ Σωσίθεος ὁ τραγῳδιοποιὸς ἐν δράματι Δάφνιδι ἢ *) Sosibii vel potius Sosithei versus primus edidit Casaubonus Lect. Theocr. cap. XIΙ, postea Heeren Bibl. für Litt. u. Kunst, Stück VII. uterque eodem codice usus est : quamquam codices commemorat Heeren, qui in lectione indicanda neglegentissimus fuit.\n\nΛιτυέρσᾳ οὕτως ‘ἔσθει — πίθον’ (v. 6-8) . verba quae manserunt esse Daphnidis Herculem de rerum statu edocentis coni. O. Iahn Herm. 3 p. 181 . v. 1 οὔτε οἱ cod. , τούτῳ scripsi. v. 3 φατὸς εὐειδοῦς cod. , φωτὸς εὐήθους Arnaud. v. 4 ὁ κείνου malim. περίπλαστος Anon. , παράπλαστος Tzetz. , πατρὶ πλαστὸς Hermann : sic πλαστὸς ὡς εἴην πατρί Soph. Oed. R. 780 . v. 6 ἄρτων τρεῖς ὄνους κανθηλίους Casaubonus. ἄρτους Anon. et Tzetz. , αὐτοὺς Athenaei A. ὄνους Athenaei C et Anon. , ὅλους Athenaei A et Tzetzes. ἄρτους τρεῖς ὄνου κανθηλίου coni. Eichstaedt. v. 7 τρὶς τῆς Ath. et Anon. , τῆς δὲ Tzetz. πίνει θ’ ἅμα Anon. et Tzetz. , πίνει δ’ ἕνα Ath. v. 8 καλῶν Anon. et Tzetz. , καλὸν Ath. , κάδον proposui Philol. 12 p. 195 , quamquam persanatum locum hac coniectura non arbitror. δεκάμφορον Anon. et Tzetz. , δὲ καρποφόρον Ath. v. 9 ἐργάζεται δὲ φλαῦρα coni. Meineke Ath. 4 p. 182 . ἐλαφρά πως ego olim temptavi. σιτία Anon. , φορτία Tzetz. v. 10 ὄγμους θερίζων Hermann. ὄγμον θερίζων ἕνα, μιᾷ δ’ ἐν ἡμέρᾳ Meineke, ubi improbandus est pes trisyllabus. v. 11 δαίνυσί τ’ ἔμπης verba desperata. v. 12 ξένος ante Casaubonum. v. 13 εὖ καὶ πεχόρτασεν cod. , εἶτα κἀπεχόρτασεν Hermann, ᾖα κἀπεχόρτασεν Meineke, εὖ καλῶς τ’ ἐχόρτασεν ego olim scripsi. v. 14 προυτειν’ cod. v. 15 πλείστου Meineke. ὤκνει cod. post v. 15 quaedam desiderari iudicat O. Iahn. v. 16 ἔπειτ’ ἄγων εἰς λῇα temptabam. v. 17 κηπευμάτων Hermann, ταφρευμάτων τ’ Methner progr. a. 1882 p. 12 . v. 18 sq. ἠονημένη ἅρπη cod. , corr. Casaubonus. v. 20 ἁδρῷ ’γκυλίσας Meineke, αὐτῷ ’γκυλίσας Methner. v. 21 γέρων et ἠρίστησεν cod. , γελῶν et ἠρίστισεν Casaubonus.",
+          "play_title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+          "play_work": "daphnis_e_lityerses",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses",
+          "attribution_id": "nauck1889grc1-tlg0340-daphnis_e_lityerses",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0340-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0340-fr3-l1",
+              "text": "θανὼν μὲν οὖν Μαίανδρον ἐρρίφη ποδὸς"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0340-fr3-l2",
+              "text": "σόλος τις ὥσπερ· ἦν δ’ ὁ δισκεύσας ἀνὴρ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0340-fr3-l3",
+              "text": "πυθιο· τίς γὰρ ἀνθ’ Ἡρακλέους ;"
+            }
+          ],
+          "context": "Anonymus in Westerm. Mythogr. haec subicit p. 347 , 9 : ὅτι δ’ ἀπέθανεν ὑφ’ Ἡρακλέους φησὶ λέγων ‘θανὼν — Ἡρακλέους’ . v. 1 οὖν] εἰς Eichstaedt. v. 2 σοφός τις ὥσπερ δίσκος cod. , σόλος τις ὥσπερ Casaubonus, ὥσπερ σόλος τις Hermann. v. 3 πυθιο. . . ] fortasse Τιρύνθιος τις legendum.",
+          "play_title": "ΔΑΦΝΙΣ Η ΛΙΤΥΕΡΣΗΣ",
+          "play_work": "daphnis_e_lityerses",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses",
+          "attribution_id": "nauck1889grc1-tlg0340-daphnis_e_lityerses",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0340.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 24,
+      "status": "Fragmentary text"
+    },
+    "tlg0340-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0340-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0340.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0340-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0340-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0340-fr4-l1",
+              "text": "οὓς ἡ Κλεάνθους μωρία βοηλατεῖ"
+            }
+          ],
+          "context": "Laert. Diog. 7 , 173 : Σωσιθέου τοῦ ποιητοῦ ἐν θεάτρῳ εἰπόντος πρὸς αὐτὸν (Cleanthem) παρόντα ‘οὓς — βοηλατεῖ’ ἔμεινεν ἐπὶ τοῦ αὐτοῦ σχήματος· ἐφ’ ᾧ ἀγασθέντες οἱ ἀκροαταὶ τὸν μὲν ἐκρότησαν, τὸν δὲ Σωσίθεον ἐξέβαλον. μεταγινώσκοντα δὲ αὐτὸν ἐπὶ τῇ λοιδορίᾳ προσήκατο, εἰπὼν ἄτοπον εἶναι τὸν μὲν Διόνυσον καὶ τὸν Ἡρακλέα φλυαρουμένους ὑπὸ τῶν ποιητῶν μὴ ὀργίζεσθαι, αὐτὸν δὲ ἐπὶ τῇ τυχούσῃ βλασφημίᾳ δυσχεραίνειν. cf. Hesychius Miles. 42 p. 32 , 4 ed. Fl. versiculus depromptus est ex satyrica fabula. Sositheus aequalem philosophum in scena commemorans non audacior fuit quam qui Menedemum scripsit Lycophron.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0340-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0340-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [],
+          "context": "Eratosth. Catast. 28 : ὃν (int. Τοξότην sive Κρότον τὸν Εὐφήμης τῆς τῶν μουσῶν τροφοῦ υἱόν) καὶ αἱ μοῦσαι τὴν τοξείαν εὑράμενον τὴν τροφὴν ἀπὸ τῶν ἀγρίων ἔχειν ἐποίησαν, καθάπερ φησὶ Σωσίθεος. cf. Hygin. Poet. astr. 2 , 27 p. 479 et Schol. German. Caes. Arat. p. 90 , 4 et p. 159 , 1 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0340-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0340.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0340-aethlios",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0340-aethlios",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_aethlios",
+      "corresp": [
+        "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0340-daphnis_e_lityerses",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0340-daphnis_e_lityerses",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_daphnis_e_lityerses",
+      "corresp": [
+        "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0340-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0340-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0340_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0340.fragmenta.nauck1889grc1:5"
+      ]
+    }
+  ]
+}

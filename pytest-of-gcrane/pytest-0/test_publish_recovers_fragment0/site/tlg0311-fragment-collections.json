@@ -1,0 +1,254 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0311",
+  "author": "Iophon",
+  "corpus_title": "Iophon, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0311.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0311.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0311-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0311-fr1-l1",
+          "text": "καὶ γὰρ εἰσελήλυθεν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0311-fr1-l2",
+          "text": "πολλῶν σοφιστῶν ὄχλον ἐξηρτημένος."
+        }
+      ],
+      "context": "Clemens Alex. Strom. I p. 329 : Ἰοφῶν τε ὁμοίως ὁ κωμικός (ὁ τραγικὸς Casaubonus) ἐν Αὐλῳδοῖς σατύροις ἐπὶ ῥαψῳδῶν καὶ ἄλλων τινῶν λέγει ‘καὶ γὰρ — ἐξηρτημένος’ . v. 2 ὄχλον Cobet Λογ. Ἑρμ. 1 p. 427 et Coll. crit. p. 234 , ὄχλος L.",
+      "play_title": "ΑΥΛΩΙΔΟΙ ΣΑΤΥΡΟΙ",
+      "play_work": "ayloidoi_satyroi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_ayloidoi_satyroi"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0311-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0311-fr2-l1",
+          "text": "ἐπίσταμαι δὲ καὶ τάδ’ οὖσά περ γυνή ,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0311-fr2-l2",
+          "text": "ὡς μᾶλλον ὅστις εἰδέναι τὰ τῶν θεῶν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0311-fr2-l3",
+          "text": "ζητεῖ , τοσούτῳ μᾶλλον ἧσσον εἴσεται."
+        }
+      ],
+      "context": "Stob. Ecl. 2 , 1 , 9 p. 5 , 5 : Ἰοφῶντος Βακχῶν (παιάν λοφῶντος βακχῶν F, πᾱιάνω ἰοφῶντος βακχῶν Ρ, ἰοφῶντος solum L) . ‘ἐπίσταμαι — εἴσεται’ . v. 1 δὲ om. L. τάδε FP, τόδ’ malim. v. 3 ἧσσον] οὐδὲν scribendum suspicor.",
+      "play_title": "ΒΑΚΧΑΙ Η ΠΕΝΘΕΥΣ",
+      "play_work": "bakchai_e_pentheys",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_bakchai_e_pentheys"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0311-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Ven. Ar. Ran. 330 : ἡ μυρσίνη ᾠκείωται τοῖς χθονίοις θεοῖς Διονύσου δεδωκότος, ὅτε ἀνήγαγε τὴν Σεμέλην. τρία γὰρ αὐτῷ ᾠκείωται, κισσὸς ἄμπελος μυρσίνη. μυθολογοῦσι δ’ ἐν Σάμῳ μόνῃ θεῶν*) μὴ προσφέρεσθαι τῇ Ἥρᾳ . ἐπεὶ γάρ, ὡς φασίν, ἐξῃτεῖτο τὴν ψυχὴν τῆς Σεμέλης τοὺς κάτω θεούς, καθάπερ ἦν ἐπηγγελμένον, ὑποσχέσθαι λέγουσιν αὐτῇ τὸν Ἅιδην τοῦτο δράσειν τοῦ Διονύσου τῶν μάλιστα τερπόντων αὐτῷ ἀντίψυχον ἀντ’ ἐκείνης πέμψαντος· τὸν δὲ Διόνυσον πυθόμενον τὰ παρὰ τῶν κάτω θεῶν ἐπεσταλμένα σοφίσασθαι πρὸς ταῦτα καὶ τριῶν ὄντων αὐτῷ μάλιστα ἠγαπημένων, τοῦ τε κισσοῦ καὶ τῆς ἀμπέλου καὶ τῆς μυρσίνης, ἀποστεῖλαι τοῖς κάτω θεοῖς αὐτήν. δηλοῖ δὲ καὶ Ἰοφῶν ὁ τραγικός.",
+      "play_title": "INCERTAE FABVLAE FRAGMENTVM",
+      "play_work": "incertae_fabvlae_fragmentvm",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_incertae_fabvlae_fragmentvm"
+    }
+  ],
+  "works": {
+    "tlg0311-ayloidoi-satyroi": {
+      "id": "tlg0311-ayloidoi-satyroi",
+      "work": "ayloidoi_satyroi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_ayloidoi_satyroi",
+      "title": "ΑΥΛΩΙΔΟΙ ΣΑΤΥΡΟΙ",
+      "source_title": "ΑΥΛΩΙΔΟΙ ΣΑΤΥΡΟΙ",
+      "source": "tlg0311.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0311-ayloidoi-satyroi",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0311-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0311-fr1-l1",
+              "text": "καὶ γὰρ εἰσελήλυθεν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0311-fr1-l2",
+              "text": "πολλῶν σοφιστῶν ὄχλον ἐξηρτημένος."
+            }
+          ],
+          "context": "Clemens Alex. Strom. I p. 329 : Ἰοφῶν τε ὁμοίως ὁ κωμικός (ὁ τραγικὸς Casaubonus) ἐν Αὐλῳδοῖς σατύροις ἐπὶ ῥαψῳδῶν καὶ ἄλλων τινῶν λέγει ‘καὶ γὰρ — ἐξηρτημένος’ . v. 2 ὄχλον Cobet Λογ. Ἑρμ. 1 p. 427 et Coll. crit. p. 234 , ὄχλος L.",
+          "play_title": "ΑΥΛΩΙΔΟΙ ΣΑΤΥΡΟΙ",
+          "play_work": "ayloidoi_satyroi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_ayloidoi_satyroi",
+          "attribution_id": "nauck1889grc1-tlg0311-ayloidoi_satyroi",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0311.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0311-bakchai-e-pentheys": {
+      "id": "tlg0311-bakchai-e-pentheys",
+      "work": "bakchai_e_pentheys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_bakchai_e_pentheys",
+      "title": "ΒΑΚΧΑΙ Η ΠΕΝΘΕΥΣ",
+      "source_title": "ΒΑΚΧΑΙ Η ΠΕΝΘΕΥΣ",
+      "source": "tlg0311.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0311-bakchai-e-pentheys",
+      "record_type": "fragmentary_play",
+      "introduction": "Duplicem fuisse fabulae titulum docet Suidas v. Ἰοφῶν.",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0311-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0311-fr2-l1",
+              "text": "ἐπίσταμαι δὲ καὶ τάδ’ οὖσά περ γυνή ,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0311-fr2-l2",
+              "text": "ὡς μᾶλλον ὅστις εἰδέναι τὰ τῶν θεῶν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0311-fr2-l3",
+              "text": "ζητεῖ , τοσούτῳ μᾶλλον ἧσσον εἴσεται."
+            }
+          ],
+          "context": "Stob. Ecl. 2 , 1 , 9 p. 5 , 5 : Ἰοφῶντος Βακχῶν (παιάν λοφῶντος βακχῶν F, πᾱιάνω ἰοφῶντος βακχῶν Ρ, ἰοφῶντος solum L) . ‘ἐπίσταμαι — εἴσεται’ . v. 1 δὲ om. L. τάδε FP, τόδ’ malim. v. 3 ἧσσον] οὐδὲν scribendum suspicor.",
+          "play_title": "ΒΑΚΧΑΙ Η ΠΕΝΘΕΥΣ",
+          "play_work": "bakchai_e_pentheys",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_bakchai_e_pentheys",
+          "attribution_id": "nauck1889grc1-tlg0311-bakchai_e_pentheys",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0311.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0311-incertae-fabvlae-fragmentvm": {
+      "id": "tlg0311-incertae-fabvlae-fragmentvm",
+      "work": "incertae_fabvlae_fragmentvm",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_incertae_fabvlae_fragmentvm",
+      "title": "INCERTAE FABVLAE FRAGMENTVM",
+      "source_title": "INCERTAE FABVLAE FRAGMENTVM",
+      "source": "tlg0311.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0311-incertae-fabvlae-fragmentvm",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0311-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Ven. Ar. Ran. 330 : ἡ μυρσίνη ᾠκείωται τοῖς χθονίοις θεοῖς Διονύσου δεδωκότος, ὅτε ἀνήγαγε τὴν Σεμέλην. τρία γὰρ αὐτῷ ᾠκείωται, κισσὸς ἄμπελος μυρσίνη. μυθολογοῦσι δ’ ἐν Σάμῳ μόνῃ θεῶν*) μὴ προσφέρεσθαι τῇ Ἥρᾳ . ἐπεὶ γάρ, ὡς φασίν, ἐξῃτεῖτο τὴν ψυχὴν τῆς Σεμέλης τοὺς κάτω θεούς, καθάπερ ἦν ἐπηγγελμένον, ὑποσχέσθαι λέγουσιν αὐτῇ τὸν Ἅιδην τοῦτο δράσειν τοῦ Διονύσου τῶν μάλιστα τερπόντων αὐτῷ ἀντίψυχον ἀντ’ ἐκείνης πέμψαντος· τὸν δὲ Διόνυσον πυθόμενον τὰ παρὰ τῶν κάτω θεῶν ἐπεσταλμένα σοφίσασθαι πρὸς ταῦτα καὶ τριῶν ὄντων αὐτῷ μάλιστα ἠγαπημένων, τοῦ τε κισσοῦ καὶ τῆς ἀμπέλου καὶ τῆς μυρσίνης, ἀποστεῖλαι τοῖς κάτω θεοῖς αὐτήν. δηλοῖ δὲ καὶ Ἰοφῶν ὁ τραγικός.",
+          "play_title": "INCERTAE FABVLAE FRAGMENTVM",
+          "play_work": "incertae_fabvlae_fragmentvm",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_incertae_fabvlae_fragmentvm",
+          "attribution_id": "nauck1889grc1-tlg0311-incertae_fabvlae_fragmentvm",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0311.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 0,
+      "status": "Testimonia only"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0311-ayloidoi_satyroi",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0311-ayloidoi_satyroi",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_ayloidoi_satyroi",
+      "corresp": [
+        "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0311-bakchai_e_pentheys",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0311-bakchai_e_pentheys",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_bakchai_e_pentheys",
+      "corresp": [
+        "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0311-incertae_fabvlae_fragmentvm",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0311-incertae_fabvlae_fragmentvm",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0311_incertae_fabvlae_fragmentvm",
+      "corresp": [
+        "urn:cts:greekLit:tlg0311.fragmenta.nauck1889grc1:3"
+      ]
+    }
+  ]
+}

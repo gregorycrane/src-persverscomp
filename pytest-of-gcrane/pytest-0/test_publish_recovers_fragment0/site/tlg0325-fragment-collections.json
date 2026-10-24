@@ -1,0 +1,709 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0325",
+  "author": "Astydamas",
+  "corpus_title": "Astydamas, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0325.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0325-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr1-l1",
+          "text": "οὐ τοῦ δοκεῖν μοι, τῆς δ’ ἀληθείας μέλει."
+        }
+      ],
+      "context": "Stob. Ecl. 2 , 15 , 1 p. 185 , 19 : Ἀστυδάμαντος Ἀλκμαίωνος (στυδάμαντος ἀλχμαι/νος L) . ‘τοῦ — μέλει’ . οὐ addidit Gaisford.",
+      "play_title": "ΑΛΚΜΕΩΝ",
+      "play_work": "alkmeon",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_alkmeon"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0325-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr2-l1",
+          "text": "δέξαι κυνῆν μοι, πρόσπολ’ . ."
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr2-l2",
+          "text": "μὴ καὶ φοβηθῇ παῖς"
+        }
+      ],
+      "context": "Schol. A Il. Ζ 472 : ἀπὸ κρατὸς κόρυθ’ εἵλετο] σημειοῦνταί τινες τοῦτον διὰ τὸ τὸν τραγικὸν Ἀστυδάμαντα παράγειν τὸν Ἕκτορα λέγοντα ‘δέξαι κοινήν μοι πρὸς πόλεμον δὲ καὶ φοβηθῇ παῖς’ . v. 1 δέξαι κυνῆν μοι πρόσπολ’ ὧδε προσμολὼν probabiliter coni. Porson in Eur. Hec. 533 , ubi tamen extrema verba dubitationi sunt obnoxia. πρόσπολε, τελαμῶνα τε minus feliciter temptavit F. G. Schmidt Krit. Stud. 3 p. 14 . v. 2 μή μοι (μὴ καὶ Dindorf) φοβηθῇ παῖς Cobet V. L. p. 495 .",
+      "play_title": "ΕΚΤΩΡ",
+      "play_work": "ektor",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ektor"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0325-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr3-l1",
+          "text": "κρατῆρε μὲν πρώτιστον ἀργυρὼ δύο"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr3-l2",
+          "text": "φιάλας δὲ πεντήκοντα, δέκα δὲ κυμβία,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0325-fr3-l3",
+          "text": "ῥέοντα δώδεχ’ , ὧν τὰ μὲν δέκ’ ἀργυρᾶ"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0325-fr3-l4",
+          "text": "ἦν, δύο δὲ χρυσᾶ , γρύψ, τὸ δ’ ἕτερον Πήγασος."
+        }
+      ],
+      "context": "Ath. XI p. 496 E : ῥέοντα· οὕτως ποτήριά τινα ἐκαλεῖτο. μνημονεύει δ’ αὐτῶν Ἀστυδάμας ἐν Ἑρμῇ λέγων οὕτως ‘κρατῆρε — Πήγασος’ . v. 3 et 4 om. poetae et fabulae nomine hinc Eust. Il. p. 1286 , 25 repetiit. v. 1 ἀργυρῶ libri, ut videtur. v. 3 ῥέοντα δώδεκα (δέδωκα Eust.) τόσα ἀργυρᾶ C et Eust. v. 4 ἦν om. C et Eust. γρυψὶ libri, γρύψ Casaubonus. τὸ δ’ ἄλλο Πήγασος O. Hense Exerc. crit. p. 45 sq.",
+      "play_title": "ΕΡΜΗΣ",
+      "play_work": "ermes",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ermes"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0325-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr4-l1",
+          "text": "Ἀλλ’ ὥσπερ δείπνου γλαφυροῦ ποικίλην εὐωχίαν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr4-l2",
+          "text": "τὸν ποητὴν δεῖ παρέχειν τοῖς θεαταῖς τὸν σοφόν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0325-fr4-l3",
+          "text": "ἵν’ ἀπίῃ τις τοῦτο λαβὼν καὶ φαγὼν καὶ προσπιὼν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0325-fr4-l4",
+          "text": "ᾧ χαίρει καὶ σκευασία μὴ μί’ ᾖ τῆς μουσικῆς·"
+        }
+      ],
+      "context": "Ath. X p. 411 A :\n\nἈστυδάμας ὁ τραγικὸς ἐν Ἡρακλεῖ σατυρικῷ , ἑταῖρε, φησί , Τιμόκρατες. φέρε εἴπωμεν ἐνταῦθα τοῖς προειρημένοις τὰ ἀκόλουθα, ὅτι ἦν καὶ ὁ Ἡρακλῆς ἀδηφάγος. ἀποφαίνονται δὲ τοῦτο σχεδὸν πάντες ποιηταὶ καὶ συγγραφεῖς. Ἐπίχαρμος μὲν ἐν Βουσίριδι κτἑ . versus Eupolideos supra allatos non Astydamantis esse sed poetae comici, verissime iudicavit Casaubonus : utrum Athenaeus errarit an librarii, non ausim decernere ; sed probabile est de voracitate Herculis Astydamantem testem allatum fuisse. v. 3 καὶ προσπιὼν Kaibel, ὥσπερ πιὼν A. v. 4 ᾧ addidit Hermann.",
+      "play_title": "ΗΡΑΚΛΗΣ ΣΑΤΥΡΙΚΟΣ",
+      "play_work": "erakles_satyrikos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_erakles_satyrikos"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0325-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr5-l1",
+          "text": "χαῖρ’ , εἰ τὸ χαίρειν ἔστι τοῖς κάτω χθονός·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr5-l2",
+          "text": "δοκῶ δ’· ὅτῳ γὰρ μὴ ἔστι λυπεῖσθαι βίῳ ,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0325-fr5-l3",
+          "text": "ἔστιν τὸ χαίρειν τῶν κακῶν λελησμένῳ ."
+        }
+      ],
+      "context": "Stob. Flor. 120 , 15 : Ἀστυδάμαντος Ναυπλίου (sic A, fabulae nomen om. S, eclogam om. M) . ‘χαῖρ’ — λελασμένῳ’ . v. 1 τοῖς F. G. Schmidt Krit. Stud. 3 p. 14 , που SA. v. 2 δὲ που vel δὲ ποῦ SA (sed δὲ in rasura S, χρ prius scriptum agnoscere sibi visus est Mekler) , δ’ ὅπου Tyrwhitt, δ’ ὅτῳ F. G. Schmidt. μήστι S, μήτι A, μή ἐστι Trinc. v. 3 λελασμένῳ vel λελασμένω SA, λελησμένῳ scripsi.",
+      "play_title": "ΝΑΥΠΛΙΟΣ",
+      "play_work": "nayplios",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_nayplios"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0325-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr6-l1",
+          "text": "θνητοῖσι τὴν ἀκεσφόρον"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr6-l2",
+          "text": "λύπης ἔφηνεν οἰνομήτορ’ ἄμπελον."
+        }
+      ],
+      "context": "Ath. II p. 40 B : τὴν παυσίλυπον ἄμπελον δοῦναι βροτοῖς — Εὐριπίδης ἐν Βάκχαις φησί. καὶ Ἀστυδάμας δὲ φησί ‘θνητοῖσι — ἄμπελον’ .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0325-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr7-l1",
+          "text": "γλώσσης περίπαπός ἐστιν ἀδολεσχία."
+        }
+      ],
+      "context": "Stob. Flor. 36 , 4 : Ἀστυδάμαντος. ‘γλώσσης — ἀδολεσχία’ . comico poetae versiculus iste convenit, non tragico.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0325-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0325-fr8-l1",
+          "text": "γένους δ’ ἔπαινός ἐστιν ἀσφαλέστατος"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0325-fr8-l2",
+          "text": "κατ’ ἄνδρ’ ἐπαινεῖν ὅστις ἂν δίκαιος ᾖ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0325-fr8-l3",
+          "text": "τρόπους τ’ ἄριστος, τοῦτον εὐγενῆ καλεῖν."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0325-fr8-l4",
+          "text": "ἐν ἑκατόν ἐστιν εὑρεῖν ἄνδρ’ ἕνα,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0325-fr8-l5",
+          "text": "κεἰ τοῦτον οἱ ζητοῦντες εἰσὶ μυρίοι."
+        }
+      ],
+      "context": "Stob. Flor. 86 , 3 : Ἀστυδάμαντος. ‘γένους — μυρίοι’ . v. 1 ἐστιν ἀφρονέστατος coni. F. G. Schmidt Krit. Stud. 3 p. 14 . v. 2 καλὸν δ’ ἐπαινεῖν F. G. Schmidt, aequo iure χρὴ δ’ ἄνδρ’ ἐπαινεῖν possis conicere. olim temptabam ἑνὸς δ’ ἔπαινός ἐστιν ἀσφαλέστατος, κατ’ ἄνδρ’ ἐπαινεῖν. v. 4 et 5 suspicor comici esse poetae. v. 4 ἕνεκα τῶν ἐστὶν εὑρεῖν ἄνδρ’ ἕνα SMA, ἵν’ ἄνδρα τούτων ἐστὶν εὑρεῖν δυσχερές A m. rec. in marg. , ἀλλ’ οὐκ ἐν ἑκατόν ἐστιν εὑρεῖν ἄνδρ’ ἕνα coni. Grotius, ἐν δ’ ἑκατόν ἐστιν ἔργον (ἔργον ἐστὶν Cobet Mnem. nov. 2 p. 437) εὑρεῖν ἄνδρ’ ἕνα Porson Adv. p. 305 , μόλις δ’ ἐν ἑκατὸν ἔστιν εὑρεῖν ἄνδρ’ ἕνα O. Hense, ἐν δ’ ἑκατὸν εὑρεῖν ἄνδρ’ ἔν ἐστι δυσχερές Conington, τὸν ἄνδρα δ’ εὑρεῖν τοῦτόν ἐστι δυσχερές Gomperz. v. 5 κεἰ Porson, καὶ SMA. κἂν αὐτὸν οἱ ζητοῦντες ὦσι μύριοι Gomperz.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0325-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Soph. Oed. C. 57 : καὶ Ἴστρος δὲ μνημονεύει τοῦ χαλκοῦ ὀδοῦ (ὁδοῦ cod.) καὶ Ἀστυδάμας. Antigonam Astydamantis spectari coni. P. Nikitin.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0325-alkmeon": {
+      "id": "tlg0325-alkmeon",
+      "work": "alkmeon",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_alkmeon",
+      "title": "ΑΛΚΜΕΩΝ",
+      "source_title": "ΑΛΚΜΕΩΝ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-alkmeon",
+      "record_type": "fragmentary_play",
+      "introduction": "Obiter meminit huius tragoediae Aristot. Poet. C. 14 p. 1453 b 33 : ἔστι δὲ πρᾶξαι μέν, ἀγνοοῦντας δὲ πρᾶξαι τὸ δεινόν, εἶθ’ ὕστερον ἀναγνωρίσαι τὴν φιλίαν, ὥσπερ ὁ Σοφοκλέους Οἰδίπους. τοῦτο μὲν οὖν ἔξω τοῦ δράματος· ἐν δ’ αὐτῇ τῇ τραγῳδίᾳ , οἷον ὁ Ἀλκμέων ὁ (ὁ Ἀλκμαίων ὁ Victorius, ὁ ἀλκμαίωνος cod.) Ἀστυδάμαντος ἢ ὁ Τηλέγονος ὁ ἐν τῷ τραυματίᾳ Ὀδυσσεῖ .",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0325-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr1-l1",
+              "text": "οὐ τοῦ δοκεῖν μοι, τῆς δ’ ἀληθείας μέλει."
+            }
+          ],
+          "context": "Stob. Ecl. 2 , 15 , 1 p. 185 , 19 : Ἀστυδάμαντος Ἀλκμαίωνος (στυδάμαντος ἀλχμαι/νος L) . ‘τοῦ — μέλει’ . οὐ addidit Gaisford.",
+          "play_title": "ΑΛΚΜΕΩΝ",
+          "play_work": "alkmeon",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_alkmeon",
+          "attribution_id": "nauck1889grc1-tlg0325-alkmeon",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0325-ektor": {
+      "id": "tlg0325-ektor",
+      "work": "ektor",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ektor",
+      "title": "ΕΚΤΩΡ",
+      "source_title": "ΕΚΤΩΡ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-ektor",
+      "record_type": "fragmentary_play",
+      "introduction": "Plut. de gloria Athen. c. 7 p. 349 F : ταῦτα ἡ πόλις ἑορτάζει καὶ ὑπὲρ τούτων θύει τοῖς θεοῖς, οὐκ ἐπὶ ταῖς Αἰσχύλου νίκαις ἢ Σοφοκλέους, οὐδὲ ὅτε Καρκίνος Ἀερόπῃ συνῆν (εὐημέρει coni. Porson in Eur. Hec. 533) ἢ Ἕκτορι Ἀστυδάμας. Astydamantis vestigia legisse Naevium in Hectore proficiscente coni. Welcker Tragod. p. 1059 .",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0325-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr2-l1",
+              "text": "δέξαι κυνῆν μοι, πρόσπολ’ . ."
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr2-l2",
+              "text": "μὴ καὶ φοβηθῇ παῖς"
+            }
+          ],
+          "context": "Schol. A Il. Ζ 472 : ἀπὸ κρατὸς κόρυθ’ εἵλετο] σημειοῦνταί τινες τοῦτον διὰ τὸ τὸν τραγικὸν Ἀστυδάμαντα παράγειν τὸν Ἕκτορα λέγοντα ‘δέξαι κοινήν μοι πρὸς πόλεμον δὲ καὶ φοβηθῇ παῖς’ . v. 1 δέξαι κυνῆν μοι πρόσπολ’ ὧδε προσμολὼν probabiliter coni. Porson in Eur. Hec. 533 , ubi tamen extrema verba dubitationi sunt obnoxia. πρόσπολε, τελαμῶνα τε minus feliciter temptavit F. G. Schmidt Krit. Stud. 3 p. 14 . v. 2 μή μοι (μὴ καὶ Dindorf) φοβηθῇ παῖς Cobet V. L. p. 495 .",
+          "play_title": "ΕΚΤΩΡ",
+          "play_work": "ektor",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ektor",
+          "attribution_id": "nauck1889grc1-tlg0325-ektor",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0325-ermes": {
+      "id": "tlg0325-ermes",
+      "work": "ermes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ermes",
+      "title": "ΕΡΜΗΣ",
+      "source_title": "ΕΡΜΗΣ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-ermes",
+      "record_type": "fragmentary_play",
+      "introduction": "Satyricam fuisse fabulam recte iudicavit Friebel Satyrogr. p. 75 .",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0325-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr3-l1",
+              "text": "κρατῆρε μὲν πρώτιστον ἀργυρὼ δύο"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr3-l2",
+              "text": "φιάλας δὲ πεντήκοντα, δέκα δὲ κυμβία,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0325-fr3-l3",
+              "text": "ῥέοντα δώδεχ’ , ὧν τὰ μὲν δέκ’ ἀργυρᾶ"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0325-fr3-l4",
+              "text": "ἦν, δύο δὲ χρυσᾶ , γρύψ, τὸ δ’ ἕτερον Πήγασος."
+            }
+          ],
+          "context": "Ath. XI p. 496 E : ῥέοντα· οὕτως ποτήριά τινα ἐκαλεῖτο. μνημονεύει δ’ αὐτῶν Ἀστυδάμας ἐν Ἑρμῇ λέγων οὕτως ‘κρατῆρε — Πήγασος’ . v. 3 et 4 om. poetae et fabulae nomine hinc Eust. Il. p. 1286 , 25 repetiit. v. 1 ἀργυρῶ libri, ut videtur. v. 3 ῥέοντα δώδεκα (δέδωκα Eust.) τόσα ἀργυρᾶ C et Eust. v. 4 ἦν om. C et Eust. γρυψὶ libri, γρύψ Casaubonus. τὸ δ’ ἄλλο Πήγασος O. Hense Exerc. crit. p. 45 sq.",
+          "play_title": "ΕΡΜΗΣ",
+          "play_work": "ermes",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ermes",
+          "attribution_id": "nauck1889grc1-tlg0325-ermes",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    },
+    "tlg0325-erakles-satyrikos": {
+      "id": "tlg0325-erakles-satyrikos",
+      "work": "erakles_satyrikos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_erakles_satyrikos",
+      "title": "ΗΡΑΚΛΗΣ ΣΑΤΥΡΙΚΟΣ",
+      "source_title": "ΗΡΑΚΛΗΣ ΣΑΤΥΡΙΚΟΣ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-erakles-satyrikos",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0325-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr4-l1",
+              "text": "Ἀλλ’ ὥσπερ δείπνου γλαφυροῦ ποικίλην εὐωχίαν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr4-l2",
+              "text": "τὸν ποητὴν δεῖ παρέχειν τοῖς θεαταῖς τὸν σοφόν,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0325-fr4-l3",
+              "text": "ἵν’ ἀπίῃ τις τοῦτο λαβὼν καὶ φαγὼν καὶ προσπιὼν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0325-fr4-l4",
+              "text": "ᾧ χαίρει καὶ σκευασία μὴ μί’ ᾖ τῆς μουσικῆς·"
+            }
+          ],
+          "context": "Ath. X p. 411 A :\n\nἈστυδάμας ὁ τραγικὸς ἐν Ἡρακλεῖ σατυρικῷ , ἑταῖρε, φησί , Τιμόκρατες. φέρε εἴπωμεν ἐνταῦθα τοῖς προειρημένοις τὰ ἀκόλουθα, ὅτι ἦν καὶ ὁ Ἡρακλῆς ἀδηφάγος. ἀποφαίνονται δὲ τοῦτο σχεδὸν πάντες ποιηταὶ καὶ συγγραφεῖς. Ἐπίχαρμος μὲν ἐν Βουσίριδι κτἑ . versus Eupolideos supra allatos non Astydamantis esse sed poetae comici, verissime iudicavit Casaubonus : utrum Athenaeus errarit an librarii, non ausim decernere ; sed probabile est de voracitate Herculis Astydamantem testem allatum fuisse. v. 3 καὶ προσπιὼν Kaibel, ὥσπερ πιὼν A. v. 4 ᾧ addidit Hermann.",
+          "play_title": "ΗΡΑΚΛΗΣ ΣΑΤΥΡΙΚΟΣ",
+          "play_work": "erakles_satyrikos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_erakles_satyrikos",
+          "attribution_id": "nauck1889grc1-tlg0325-erakles_satyrikos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    },
+    "tlg0325-nayplios": {
+      "id": "tlg0325-nayplios",
+      "work": "nayplios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_nayplios",
+      "title": "ΝΑΥΠΛΙΟΣ",
+      "source_title": "ΝΑΥΠΛΙΟΣ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-nayplios",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0325-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr5-l1",
+              "text": "χαῖρ’ , εἰ τὸ χαίρειν ἔστι τοῖς κάτω χθονός·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr5-l2",
+              "text": "δοκῶ δ’· ὅτῳ γὰρ μὴ ἔστι λυπεῖσθαι βίῳ ,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0325-fr5-l3",
+              "text": "ἔστιν τὸ χαίρειν τῶν κακῶν λελησμένῳ ."
+            }
+          ],
+          "context": "Stob. Flor. 120 , 15 : Ἀστυδάμαντος Ναυπλίου (sic A, fabulae nomen om. S, eclogam om. M) . ‘χαῖρ’ — λελασμένῳ’ . v. 1 τοῖς F. G. Schmidt Krit. Stud. 3 p. 14 , που SA. v. 2 δὲ που vel δὲ ποῦ SA (sed δὲ in rasura S, χρ prius scriptum agnoscere sibi visus est Mekler) , δ’ ὅπου Tyrwhitt, δ’ ὅτῳ F. G. Schmidt. μήστι S, μήτι A, μή ἐστι Trinc. v. 3 λελασμένῳ vel λελασμένω SA, λελησμένῳ scripsi.",
+          "play_title": "ΝΑΥΠΛΙΟΣ",
+          "play_work": "nayplios",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_nayplios",
+          "attribution_id": "nauck1889grc1-tlg0325-nayplios",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0325-parthenopaios": {
+      "id": "tlg0325-parthenopaios",
+      "work": "parthenopaios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_parthenopaios",
+      "title": "ΠΑΡΘΕΝΟΠΑΙΟΣ",
+      "source_title": "ΠΑΡΘΕΝΟΠΑΙΟΣ",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-parthenopaios",
+      "record_type": "fragmentary_play",
+      "introduction": "Mentio fit huius fabulae in titulo Corp. Inscr. Att. II 973 v. 21 : ποη(ταί)· Ἀστυδάμας Παρθενοπαίῳ , ὑπε(κρίνετο) Θετταλός . eandem commemorat Zenobius 5 , 100 : σαυτὴν ἐπαινεῖς — Ἁστυδάμας γὰρ ὁ Μορσίμου εὐημερήσας ἐν τῇ ὑποκρίσει Παρθενοπαίου ἐψηφίσθη εἰκόνος ἐν τῷ θεάτρῳ ἀξιωθῆναι· γράψας οὖν αὐτὸς ἐπίγραμμα ὁ Ἀστυδάμας ἔπαινον ἑαυτοῦ ἔχον ἀνήνεγκεν ἐπὶ τὴν βουλήν, οἳ δὲ ἐψηφίσαντο ὡς ἐπαχθὲς αὐτὸ μηκέτι ἐπιγραφῆναι. similiter Photius Lex. p. 502 , 23 et Suid. v. σαυτὴν ἐπαινεῖς, item Schol. Liban. Epist. 317 p. 153 .",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0325-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0325-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0325.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0325-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "6",
+          "source_id": "tlg0325-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr6-l1",
+              "text": "θνητοῖσι τὴν ἀκεσφόρον"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr6-l2",
+              "text": "λύπης ἔφηνεν οἰνομήτορ’ ἄμπελον."
+            }
+          ],
+          "context": "Ath. II p. 40 B : τὴν παυσίλυπον ἄμπελον δοῦναι βροτοῖς — Εὐριπίδης ἐν Βάκχαις φησί. καὶ Ἀστυδάμας δὲ φησί ‘θνητοῖσι — ἄμπελον’ .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0325-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr7-l1",
+              "text": "γλώσσης περίπαπός ἐστιν ἀδολεσχία."
+            }
+          ],
+          "context": "Stob. Flor. 36 , 4 : Ἀστυδάμαντος. ‘γλώσσης — ἀδολεσχία’ . comico poetae versiculus iste convenit, non tragico.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0325-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0325-fr8-l1",
+              "text": "γένους δ’ ἔπαινός ἐστιν ἀσφαλέστατος"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0325-fr8-l2",
+              "text": "κατ’ ἄνδρ’ ἐπαινεῖν ὅστις ἂν δίκαιος ᾖ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0325-fr8-l3",
+              "text": "τρόπους τ’ ἄριστος, τοῦτον εὐγενῆ καλεῖν."
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0325-fr8-l4",
+              "text": "ἐν ἑκατόν ἐστιν εὑρεῖν ἄνδρ’ ἕνα,"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0325-fr8-l5",
+              "text": "κεἰ τοῦτον οἱ ζητοῦντες εἰσὶ μυρίοι."
+            }
+          ],
+          "context": "Stob. Flor. 86 , 3 : Ἀστυδάμαντος. ‘γένους — μυρίοι’ . v. 1 ἐστιν ἀφρονέστατος coni. F. G. Schmidt Krit. Stud. 3 p. 14 . v. 2 καλὸν δ’ ἐπαινεῖν F. G. Schmidt, aequo iure χρὴ δ’ ἄνδρ’ ἐπαινεῖν possis conicere. olim temptabam ἑνὸς δ’ ἔπαινός ἐστιν ἀσφαλέστατος, κατ’ ἄνδρ’ ἐπαινεῖν. v. 4 et 5 suspicor comici esse poetae. v. 4 ἕνεκα τῶν ἐστὶν εὑρεῖν ἄνδρ’ ἕνα SMA, ἵν’ ἄνδρα τούτων ἐστὶν εὑρεῖν δυσχερές A m. rec. in marg. , ἀλλ’ οὐκ ἐν ἑκατόν ἐστιν εὑρεῖν ἄνδρ’ ἕνα coni. Grotius, ἐν δ’ ἑκατόν ἐστιν ἔργον (ἔργον ἐστὶν Cobet Mnem. nov. 2 p. 437) εὑρεῖν ἄνδρ’ ἕνα Porson Adv. p. 305 , μόλις δ’ ἐν ἑκατὸν ἔστιν εὑρεῖν ἄνδρ’ ἕνα O. Hense, ἐν δ’ ἑκατὸν εὑρεῖν ἄνδρ’ ἔν ἐστι δυσχερές Conington, τὸν ἄνδρα δ’ εὑρεῖν τοῦτόν ἐστι δυσχερές Gomperz. v. 5 κεἰ Porson, καὶ SMA. κἂν αὐτὸν οἱ ζητοῦντες ὦσι μύριοι Gomperz.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0325-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Soph. Oed. C. 57 : καὶ Ἴστρος δὲ μνημονεύει τοῦ χαλκοῦ ὀδοῦ (ὁδοῦ cod.) καὶ Ἀστυδάμας. Antigonam Astydamantis spectari coni. P. Nikitin.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0325.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 8,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0325-alkmeon",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-alkmeon",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_alkmeon",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0325-ektor",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-ektor",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ektor",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0325-ermes",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-ermes",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_ermes",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0325-erakles_satyrikos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-erakles_satyrikos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_erakles_satyrikos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0325-nayplios",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-nayplios",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_nayplios",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:5"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0325-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0325_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0325.fragmenta.nauck1889grc1:9"
+      ]
+    }
+  ]
+}

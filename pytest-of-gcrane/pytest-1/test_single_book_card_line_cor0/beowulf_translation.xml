@@ -1,0 +1,9 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+        <div type="translation">
+          <div type="textpart" subtype="card" n="1">
+            <p corresp="urn:cts:angLit:anon.beowulf.perseus-ang1:1.1-1.3">First sentence.</p>
+          </div>
+          <div type="textpart" subtype="card" n="53">
+            <p corresp="urn:cts:angLit:anon.beowulf.perseus-ang1:53.53-53.58">Second sentence.</p>
+          </div>
+        </div></body></text></TEI>

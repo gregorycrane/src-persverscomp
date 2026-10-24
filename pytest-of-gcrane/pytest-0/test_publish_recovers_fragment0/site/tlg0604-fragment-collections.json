@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0604",
+  "author": "Ptolemy Philopator",
+  "corpus_title": "Ptolemy Philopator, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0604.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0604.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0604.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [],
+  "works": {
+    "tlg0604-adonis": {
+      "id": "tlg0604-adonis",
+      "work": "adonis",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0604_adonis",
+      "title": "ΑΔΩΝΙΣ",
+      "source_title": "ΑΔΩΝΙΣ",
+      "source": "tlg0604.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0604-adonis",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. Ar. Thesm. 1059 : ἐπεὶ εἰσήγαγε κακοστένακτον τὴν Ἠχὼ ὁ Εὐριπίδης ἐν τῇ Ἀνδρομέδᾳ , εἰς τοῦτο παίζει. ἐζήλωσε δὲ αὐτὸν Πτολεμαῖος ὁ Φιλοπάτωρ ἐν ᾗ πεποίηκε τραγῳδίᾳ Ἀδώνιδι, περὶ ἧς ὁ ἐρώμενος αὐτῷ Ἀγαθοκλῆς γέγραφεν, ὁ ἀδελφὸς τῆς ἐρωμένης αὐτοῦ πάλιν Ἀγαθοκλείας.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    }
+  },
+  "attributions": []
+}

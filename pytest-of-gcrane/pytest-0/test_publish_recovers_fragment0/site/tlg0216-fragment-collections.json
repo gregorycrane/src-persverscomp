@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0216",
+  "author": "Alexander Aetolus",
+  "corpus_title": "Alexander Aetolus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0216.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0216.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0216.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [],
+  "works": {
+    "tlg0216-astragalistai": {
+      "id": "tlg0216-astragalistai",
+      "work": "astragalistai",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0216_astragalistai",
+      "title": "ΑΣΤΡΑΓΑΛΙΣΤΑΙ",
+      "source_title": "ΑΣΤΡΑΓΑΛΙΣΤΑΙ",
+      "source": "tlg0216.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0216-astragalistai",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. TV Il. ψ 86 : παῖδα γὰρ ἀνεῖλεν (sc. Patroclus Amphidamantis filium) , ὃν οἳ μὲν (ὃν μὲν T) Κλεισώνυμον, οἳ δὲ Αἰανῆ (ἑανῆ T) , οἳ δὲ Λύσανδρον καλεῖσθαι· ἀπέκτεινε δὲ αὐτὸν παρὰ Ὀφρυονεῖ τῷ γραμματιστῇ , ὡς φησὶν Ἀλέξανδρος ὁ Αἰτωλὸς ἐν Ἀστρολογισταῖς. ubi ἐν Ἀστραγαλισταῖς correxit Meineke, cf. verba Homerica, ὅτε παῖδα κατέκτανον Ἀμφίδαμαντος, νήπιος, οὐκ ἐθέλων, ἀμφ’ ἀστραγάλοισι χολωθείς.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    }
+  },
+  "attributions": []
+}

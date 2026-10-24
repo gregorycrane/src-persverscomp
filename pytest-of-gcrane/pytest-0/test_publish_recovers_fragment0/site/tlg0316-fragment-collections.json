@@ -1,0 +1,94 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0316",
+  "author": "Xenocles",
+  "corpus_title": "Xenocles, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0316.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0316.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0316.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0316-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0316.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0316-fr1-l1",
+          "text": "ὦ σκληρὲ δαῖμον, ὦ τύχαι χρυσάμπυκες"
+        }
+      ],
+      "context": "Ar. Nub. 1264 : AMYN. ὦ σκληρὲ δαῖμον, ὦ τύχαι θραυσάντυγες ἵππων ἐμῶν· ὦ Παλλάς, ὥς μ’ ἀπώλεσας. ΣΤΡΕΨ. τί δαί σε Τληπόλεμός ποτ’ εἴργασται κακόν ; ubi Schol. RV : ταῦτα Ξενοκλέους ἐστὶν ἐκ τοῦ Λικυμνίου. λέγεται δὲ ὑπ’ Ἀλκμήνης Λικύμνιον τεθνηκέναι ὑπὸ Τληπολέμου. διὸ καὶ ἐπιφέρει ‘τί δαί — κακόν ;’ Εὐφρόνιος παρὰ Ξενοκλεῖ φησὶν εἶναι τὸ χρυσάμπυκες (χρυσάμπυχες V, χρυσάντυγες Hermann) , ἐξ οὗ παραπεποιῆσθαι τὸ θραυσάντυγες τοῦτο. codex Paris. 2821 haec praebet : οἳ μὲν φασὶν ὡς ὁ Τληπόλεμος οὗτος ποιητὴς ὢν πεποίηκε τὸν Φιλόξενον ταῦτα τὰ ἰαμβεῖα ᾄδειν ἀπὸ τοῦ ‘ὦ σκληρὲ δαῖμον’ μέχρι τοῦ ‘ὥς μ’ ἀπώλεσας’ . ἄλλοι δὲ φασὶν ὡς Σοφοκλῆς ἐποίησε τὸν Τληπόλεμον ταῦτα λέγοντα· — ἔοικε δὲ μᾶλλον τοῦ Σοφοκλέους εἶναι ταῦτα. διὸ καὶ ἐπάγει ‘τί δὲ Τληπόλεμός σε κακὸν εἴργασται ;’ ὡς τοῦ Τληπολέμου ταῦτα εἰπόντος. veri simile est, ut ait W. H. van de Sande Bakhuyzen de parod. in comoed. Aristoph. p. 49 , e Xenoclis tragoedia petitos esse Nubium v. 1264 et 1265 , sed quid scripserit Xenocles, parum constat. dubitari vix potest quin verba ὦ Παλλάς, ὥς μ’ ἀπώλεσας tragoediae debeantur, sicut Ἥλι’ , ὥς μ’ ἀπώλεσας dixit Euripides fr. 779 , 11 . ex edit. Aldina affertur hoc scholion : Eὐφρόνιος δὲ φησὶ τὸ ‘ὦ Παλλάς, ὥς μ’ ἀπώλεσας’ Ξενοκλέους εἶναι ἐκ τοῦ Λικυμνίου.",
+      "play_title": "ΛΙΚΥΜΝΙΟΣ",
+      "play_work": "likymnios",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0316_likymnios"
+    }
+  ],
+  "works": {
+    "tlg0316-likymnios": {
+      "id": "tlg0316-likymnios",
+      "work": "likymnios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0316_likymnios",
+      "title": "ΛΙΚΥΜΝΙΟΣ",
+      "source_title": "ΛΙΚΥΜΝΙΟΣ",
+      "source": "tlg0316.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0316-likymnios",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0316-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0316.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0316-fr1-l1",
+              "text": "ὦ σκληρὲ δαῖμον, ὦ τύχαι χρυσάμπυκες"
+            }
+          ],
+          "context": "Ar. Nub. 1264 : AMYN. ὦ σκληρὲ δαῖμον, ὦ τύχαι θραυσάντυγες ἵππων ἐμῶν· ὦ Παλλάς, ὥς μ’ ἀπώλεσας. ΣΤΡΕΨ. τί δαί σε Τληπόλεμός ποτ’ εἴργασται κακόν ; ubi Schol. RV : ταῦτα Ξενοκλέους ἐστὶν ἐκ τοῦ Λικυμνίου. λέγεται δὲ ὑπ’ Ἀλκμήνης Λικύμνιον τεθνηκέναι ὑπὸ Τληπολέμου. διὸ καὶ ἐπιφέρει ‘τί δαί — κακόν ;’ Εὐφρόνιος παρὰ Ξενοκλεῖ φησὶν εἶναι τὸ χρυσάμπυκες (χρυσάμπυχες V, χρυσάντυγες Hermann) , ἐξ οὗ παραπεποιῆσθαι τὸ θραυσάντυγες τοῦτο. codex Paris. 2821 haec praebet : οἳ μὲν φασὶν ὡς ὁ Τληπόλεμος οὗτος ποιητὴς ὢν πεποίηκε τὸν Φιλόξενον ταῦτα τὰ ἰαμβεῖα ᾄδειν ἀπὸ τοῦ ‘ὦ σκληρὲ δαῖμον’ μέχρι τοῦ ‘ὥς μ’ ἀπώλεσας’ . ἄλλοι δὲ φασὶν ὡς Σοφοκλῆς ἐποίησε τὸν Τληπόλεμον ταῦτα λέγοντα· — ἔοικε δὲ μᾶλλον τοῦ Σοφοκλέους εἶναι ταῦτα. διὸ καὶ ἐπάγει ‘τί δὲ Τληπόλεμός σε κακὸν εἴργασται ;’ ὡς τοῦ Τληπολέμου ταῦτα εἰπόντος. veri simile est, ut ait W. H. van de Sande Bakhuyzen de parod. in comoed. Aristoph. p. 49 , e Xenoclis tragoedia petitos esse Nubium v. 1264 et 1265 , sed quid scripserit Xenocles, parum constat. dubitari vix potest quin verba ὦ Παλλάς, ὥς μ’ ἀπώλεσας tragoediae debeantur, sicut Ἥλι’ , ὥς μ’ ἀπώλεσας dixit Euripides fr. 779 , 11 . ex edit. Aldina affertur hoc scholion : Eὐφρόνιος δὲ φησὶ τὸ ‘ὦ Παλλάς, ὥς μ’ ἀπώλεσας’ Ξενοκλέους εἶναι ἐκ τοῦ Λικυμνίου.",
+          "play_title": "ΛΙΚΥΜΝΙΟΣ",
+          "play_work": "likymnios",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0316_likymnios",
+          "attribution_id": "nauck1889grc1-tlg0316-likymnios",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0316.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0316.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0316-likymnios",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0316-likymnios",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0316_likymnios",
+      "corresp": [
+        "urn:cts:greekLit:tlg0316.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

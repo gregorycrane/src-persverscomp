@@ -1,0 +1,355 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0338",
+  "author": "Sosiphanes",
+  "corpus_title": "Sosiphanes, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0338.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0338.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0338-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0338-fr1-l1",
+          "text": "μάγοις ἐπῳδαῖς πᾶσα Θεσσαλὶς κόρη"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0338-fr1-l2",
+          "text": "ψευδὴς σελήνης αἰθέρος καταιβάτις"
+        }
+      ],
+      "context": "Schol. Apoll. Rhod. 3 , 533 : τὸ παλαιὸν ᾤοντο αἱ φαρμακίδες τὴν σελήνην καὶ τὸν ἥλιον καθαιρεῖν· διὸ καὶ μέχρι τῶν Δημοκρίτου χρόνων πολλοὶ τὰς ἐκλείψεις καθαιρέσεις ἐκάλουν. Σωσιφάνης ἐν Μελεάγρῳ ‘μάγοις — καταιβάτις’ . v. 1 θεσσαλὶς f, πεσσαλίς L. v. 2 graviter corruptus. κεύθει σελήνην αἰθέρος καταιβάτιν coni. Wecklein Stud. zu Eur. p. 445 , σπεύδει σελήνης αἰθέρος καθαίρεσιν I. Bernhard.",
+      "play_title": "MEΛΕΑΓΡΟΣ",
+      "play_work": "meleagros",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_meleagros"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0338-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0338-fr2-l1",
+          "text": "νῦν σοι πρὸς ὄψιν θυμὸς ἡβάτω, γέρον·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0338-fr2-l2",
+          "text": "νυνὶ δεῖ γ’ ὀργήν, ἡνίκ’ ἠδικοῦ , λαβεῖν."
+        }
+      ],
+      "context": "Stob. Flor. 20 , 18 : Σωσιφάνους (sic S, eclogam om. MA) . ‘νῦν σοι — λαβεῖν’ . v. 1 νῦν σοι ’π’ ἄμειψιν coni. Mekler Lect. Gr. spec. p. 15 , νῦν σοι πρὸς ὅπλα F. G. Schmidt Krit. Stud. 3 p. 24 . neutrum placet. v. 2 νυνὶ δεῖ γ’ ὀργὴν S, unde νῦν ἡδύ γ’ ὀργὴν scripserim, νῦν ἔργον ὀργήν Hense Lect. Stob. p. 28 sq. ἠδικοῦ Mekler, ἠδείκου ut videtur S, ἔνδικον Gesner. νῦν ἡνί’ ὀργῆς, ἡνίκ ἔνδικον, χάλα Gomperz Mélanges Graux p. 52 sq. , qui nuperrime νῦν δεῖ δι’ ὀργῆς — μολεῖν proposuit.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0338-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0338-fr3-l1",
+          "text": "ὦ δυστυχεῖς μὲν πολλά , παῦρα δ’ ὄλβιοι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0338-fr3-l2",
+          "text": "βροτοί , τί σεμνύνεσθε ταῖς ἐξουσίαις,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0338-fr3-l3",
+          "text": "ἃς ἔν τ’ ἔδωκε φέγγος ἕν τ’ ἀφείλετο ;"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0338-fr3-l4",
+          "text": "ἢν δ’ εὐτυχῆτε, μηδὲν ὄντες εὐθέως"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0338-fr3-l5",
+          "text": "ἴσ’ οὐρανῷ φρονεῖτε, τὸν δὲ κύριον"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0338-fr3-l6",
+          "text": "Ἅιδην παρεστῶτ’ οὐχ ὁρᾶτε πλησίον."
+        }
+      ],
+      "context": "Stob. Flor. 22 , 3 : Σωσιφάνους. ‘ὦ δυστυχεῖς — πλησίον’ . v. 1 ὦ] ὡς M. v. 2 fortasse ταῖσιν οὐσίαις leg. v. 3 ἀφείλατο A. v. 4 ἢν Wagner, ἂν libri. v. 6 ἁδὴ SA pr. m. , ἅδην MA sec. m. προεστῶτ’ M. πλούσιον SA pr. m. , πλησίον MA sec. m.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0338-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Eur. Phoen. 1010 : Σωσιφάνης ὁ τραγικὸς ὑπὸ τοῦ Λαΐου φησὶ τεθνηκέναι τὸν Μενοικέα, Νικόστρατος (Νικοκράτης coni. Hecker Philol. 5 p. 428) δὲ ὑπὸ τῆς Σφιγγός.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0338-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Theocr. 18 , 45 : Μενελάου δὲ καὶ Ἑλένης ἀναγράφονται παῖδες Σωσιφάνης (Σωσιφάνει coni. Duebner) Νικόστρατος καὶ Ἴολμος· οἳ δὲ Θρόνιον· θυγατέρες δὲ Μελίτη καὶ Ἑρμιόνη. ubi Νικόστρατος καὶ Αἰθιόλας restituit Valckenaer ex Schol. A Il. Γ 175 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0338-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. A Il. Ι 453 (Eust. Il. p. 763 , 11) , ubi pro τῇ πιθόμην καὶ ἔρεξα Aristodemus οὐ πιθόμην οὐδ’ ἔρξα scripsisse traditur, haec accedunt : πρὸ δὲ αὐτοῦ Σωσιφάνης τὴν τοιαύτην εὗρε γραφήν· καὶ Εὐριπίδης δὲ ἀναμάρτητον εἰσάγει τὸν ἥρωα ἐν τῷ Φοίνικι.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0338-meleagros": {
+      "id": "tlg0338-meleagros",
+      "work": "meleagros",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_meleagros",
+      "title": "MEΛΕΑΓΡΟΣ",
+      "source_title": "MEΛΕΑΓΡΟΣ",
+      "source": "tlg0338.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0338-meleagros",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0338-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0338-fr1-l1",
+              "text": "μάγοις ἐπῳδαῖς πᾶσα Θεσσαλὶς κόρη"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0338-fr1-l2",
+              "text": "ψευδὴς σελήνης αἰθέρος καταιβάτις"
+            }
+          ],
+          "context": "Schol. Apoll. Rhod. 3 , 533 : τὸ παλαιὸν ᾤοντο αἱ φαρμακίδες τὴν σελήνην καὶ τὸν ἥλιον καθαιρεῖν· διὸ καὶ μέχρι τῶν Δημοκρίτου χρόνων πολλοὶ τὰς ἐκλείψεις καθαιρέσεις ἐκάλουν. Σωσιφάνης ἐν Μελεάγρῳ ‘μάγοις — καταιβάτις’ . v. 1 θεσσαλὶς f, πεσσαλίς L. v. 2 graviter corruptus. κεύθει σελήνην αἰθέρος καταιβάτιν coni. Wecklein Stud. zu Eur. p. 445 , σπεύδει σελήνης αἰθέρος καθαίρεσιν I. Bernhard.",
+          "play_title": "MEΛΕΑΓΡΟΣ",
+          "play_work": "meleagros",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_meleagros",
+          "attribution_id": "nauck1889grc1-tlg0338-meleagros",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0338.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0338-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0338-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0338.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0338-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0338-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0338-fr2-l1",
+              "text": "νῦν σοι πρὸς ὄψιν θυμὸς ἡβάτω, γέρον·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0338-fr2-l2",
+              "text": "νυνὶ δεῖ γ’ ὀργήν, ἡνίκ’ ἠδικοῦ , λαβεῖν."
+            }
+          ],
+          "context": "Stob. Flor. 20 , 18 : Σωσιφάνους (sic S, eclogam om. MA) . ‘νῦν σοι — λαβεῖν’ . v. 1 νῦν σοι ’π’ ἄμειψιν coni. Mekler Lect. Gr. spec. p. 15 , νῦν σοι πρὸς ὅπλα F. G. Schmidt Krit. Stud. 3 p. 24 . neutrum placet. v. 2 νυνὶ δεῖ γ’ ὀργὴν S, unde νῦν ἡδύ γ’ ὀργὴν scripserim, νῦν ἔργον ὀργήν Hense Lect. Stob. p. 28 sq. ἠδικοῦ Mekler, ἠδείκου ut videtur S, ἔνδικον Gesner. νῦν ἡνί’ ὀργῆς, ἡνίκ ἔνδικον, χάλα Gomperz Mélanges Graux p. 52 sq. , qui nuperrime νῦν δεῖ δι’ ὀργῆς — μολεῖν proposuit.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0338-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0338-fr3-l1",
+              "text": "ὦ δυστυχεῖς μὲν πολλά , παῦρα δ’ ὄλβιοι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0338-fr3-l2",
+              "text": "βροτοί , τί σεμνύνεσθε ταῖς ἐξουσίαις,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0338-fr3-l3",
+              "text": "ἃς ἔν τ’ ἔδωκε φέγγος ἕν τ’ ἀφείλετο ;"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0338-fr3-l4",
+              "text": "ἢν δ’ εὐτυχῆτε, μηδὲν ὄντες εὐθέως"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0338-fr3-l5",
+              "text": "ἴσ’ οὐρανῷ φρονεῖτε, τὸν δὲ κύριον"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0338-fr3-l6",
+              "text": "Ἅιδην παρεστῶτ’ οὐχ ὁρᾶτε πλησίον."
+            }
+          ],
+          "context": "Stob. Flor. 22 , 3 : Σωσιφάνους. ‘ὦ δυστυχεῖς — πλησίον’ . v. 1 ὦ] ὡς M. v. 2 fortasse ταῖσιν οὐσίαις leg. v. 3 ἀφείλατο A. v. 4 ἢν Wagner, ἂν libri. v. 6 ἁδὴ SA pr. m. , ἅδην MA sec. m. προεστῶτ’ M. πλούσιον SA pr. m. , πλησίον MA sec. m.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0338-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Eur. Phoen. 1010 : Σωσιφάνης ὁ τραγικὸς ὑπὸ τοῦ Λαΐου φησὶ τεθνηκέναι τὸν Μενοικέα, Νικόστρατος (Νικοκράτης coni. Hecker Philol. 5 p. 428) δὲ ὑπὸ τῆς Σφιγγός.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0338-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Theocr. 18 , 45 : Μενελάου δὲ καὶ Ἑλένης ἀναγράφονται παῖδες Σωσιφάνης (Σωσιφάνει coni. Duebner) Νικόστρατος καὶ Ἴολμος· οἳ δὲ Θρόνιον· θυγατέρες δὲ Μελίτη καὶ Ἑρμιόνη. ubi Νικόστρατος καὶ Αἰθιόλας restituit Valckenaer ex Schol. A Il. Γ 175 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0338-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. A Il. Ι 453 (Eust. Il. p. 763 , 11) , ubi pro τῇ πιθόμην καὶ ἔρεξα Aristodemus οὐ πιθόμην οὐδ’ ἔρξα scripsisse traditur, haec accedunt : πρὸ δὲ αὐτοῦ Σωσιφάνης τὴν τοιαύτην εὗρε γραφήν· καὶ Εὐριπίδης δὲ ἀναμάρτητον εἰσάγει τὸν ἥρωα ἐν τῷ Φοίνικι.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0338.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 8,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0338-meleagros",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0338-meleagros",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_meleagros",
+      "corresp": [
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0338-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0338_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0338.fragmenta.nauck1889grc1:6"
+      ]
+    }
+  ]
+}

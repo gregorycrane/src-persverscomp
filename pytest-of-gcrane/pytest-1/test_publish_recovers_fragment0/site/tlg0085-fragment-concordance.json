@@ -1,0 +1,1553 @@
+{
+  "schema_version": 1,
+  "editions": [
+    "dindorf1893-grc1",
+    "nauck1889-grc1"
+  ],
+  "matches": [
+    {
+      "work": "aitnaiai",
+      "card": "D5=N6",
+      "dindorf": "urn:cts:greekLit:tlg0085.aitnaiai.dindorf1893-grc1:5",
+      "nauck": "urn:cts:greekLit:tlg0085.aitnaiai.nauck1889-grc1:6",
+      "confidence": 0.9512,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "aitnaiai",
+      "card": "D6=N8",
+      "dindorf": "urn:cts:greekLit:tlg0085.aitnaiai.dindorf1893-grc1:6",
+      "nauck": "urn:cts:greekLit:tlg0085.aitnaiai.nauck1889-grc1:8",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "aitnaiai",
+      "card": "D8=N9",
+      "dindorf": "urn:cts:greekLit:tlg0085.aitnaiai.dindorf1893-grc1:8",
+      "nauck": "urn:cts:greekLit:tlg0085.aitnaiai.nauck1889-grc1:9",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "amymone",
+      "card": "D11=N13",
+      "dindorf": "urn:cts:greekLit:tlg0085.amymone.dindorf1893-grc1:11",
+      "nauck": "urn:cts:greekLit:tlg0085.amymone.nauck1889-grc1:13",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "amymone",
+      "card": "D12=N14",
+      "dindorf": "urn:cts:greekLit:tlg0085.amymone.dindorf1893-grc1:12",
+      "nauck": "urn:cts:greekLit:tlg0085.amymone.nauck1889-grc1:14",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "argeioi",
+      "card": "D14=N16",
+      "dindorf": "urn:cts:greekLit:tlg0085.argeioi.dindorf1893-grc1:14",
+      "nauck": "urn:cts:greekLit:tlg0085.argeioi.nauck1889-grc1:16",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "argeioi",
+      "card": "D16=N18",
+      "dindorf": "urn:cts:greekLit:tlg0085.argeioi.dindorf1893-grc1:16",
+      "nauck": "urn:cts:greekLit:tlg0085.argeioi.nauck1889-grc1:18",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "argeioi",
+      "card": "D17=N19",
+      "dindorf": "urn:cts:greekLit:tlg0085.argeioi.dindorf1893-grc1:17",
+      "nauck": "urn:cts:greekLit:tlg0085.argeioi.nauck1889-grc1:19",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "athamas",
+      "card": "D1=N1",
+      "dindorf": "urn:cts:greekLit:tlg0085.athamas.dindorf1893-grc1:1",
+      "nauck": "urn:cts:greekLit:tlg0085.athamas.nauck1889-grc1:1",
+      "confidence": 0.9917,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "athamas",
+      "card": "D2=N3",
+      "dindorf": "urn:cts:greekLit:tlg0085.athamas.dindorf1893-grc1:2",
+      "nauck": "urn:cts:greekLit:tlg0085.athamas.nauck1889-grc1:3",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "athamas",
+      "card": "D3=N4",
+      "dindorf": "urn:cts:greekLit:tlg0085.athamas.dindorf1893-grc1:3",
+      "nauck": "urn:cts:greekLit:tlg0085.athamas.nauck1889-grc1:4",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "bassarai",
+      "card": "D18=N25",
+      "dindorf": "urn:cts:greekLit:tlg0085.bassarai.dindorf1893-grc1:18",
+      "nauck": "urn:cts:greekLit:tlg0085.bassarai.nauck1889-grc1:25",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "bassarai",
+      "card": "D19=N24",
+      "dindorf": "urn:cts:greekLit:tlg0085.bassarai.dindorf1893-grc1:19",
+      "nauck": "urn:cts:greekLit:tlg0085.bassarai.nauck1889-grc1:24",
+      "confidence": 0.9062,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "danaides",
+      "card": "D37=N43",
+      "dindorf": "urn:cts:greekLit:tlg0085.danaides.dindorf1893-grc1:37",
+      "nauck": "urn:cts:greekLit:tlg0085.danaides.nauck1889-grc1:43",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "danaides",
+      "card": "D38=N44",
+      "dindorf": "urn:cts:greekLit:tlg0085.danaides.dindorf1893-grc1:38",
+      "nauck": "urn:cts:greekLit:tlg0085.danaides.nauck1889-grc1:44",
+      "confidence": 0.8732,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "danaides",
+      "card": "D39=N45",
+      "dindorf": "urn:cts:greekLit:tlg0085.danaides.dindorf1893-grc1:39",
+      "nauck": "urn:cts:greekLit:tlg0085.danaides.nauck1889-grc1:45",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "diktyoylkoi",
+      "card": "D40=N48",
+      "dindorf": "urn:cts:greekLit:tlg0085.diktyoylkoi.dindorf1893-grc1:40",
+      "nauck": "urn:cts:greekLit:tlg0085.diktyoylkoi.nauck1889-grc1:48",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "diktyoylkoi",
+      "card": "D41=N49",
+      "dindorf": "urn:cts:greekLit:tlg0085.diktyoylkoi.dindorf1893-grc1:41",
+      "nauck": "urn:cts:greekLit:tlg0085.diktyoylkoi.nauck1889-grc1:49",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "diktyoylkoi",
+      "card": "D42=N47",
+      "dindorf": "urn:cts:greekLit:tlg0085.diktyoylkoi.dindorf1893-grc1:42",
+      "nauck": "urn:cts:greekLit:tlg0085.diktyoylkoi.nauck1889-grc1:47",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "dionysoy_trophoi",
+      "card": "D44=N52",
+      "dindorf": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.dindorf1893-grc1:44",
+      "nauck": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.nauck1889-grc1:52",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "dionysoy_trophoi",
+      "card": "D45=N53",
+      "dindorf": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.dindorf1893-grc1:45",
+      "nauck": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.nauck1889-grc1:53",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "dionysoy_trophoi",
+      "card": "D46=N51",
+      "dindorf": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.dindorf1893-grc1:46",
+      "nauck": "urn:cts:greekLit:tlg0085.dionysoy_trophoi.nauck1889-grc1:51",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D56=N60",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:56",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:60",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D57=N67",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:57",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:67",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D58=N63",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:58",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:63",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D60=N65",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:60",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:65",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D61=N66",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:61",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:66",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "edonoi",
+      "card": "D62=N62",
+      "dindorf": "urn:cts:greekLit:tlg0085.edonoi.dindorf1893-grc1:62",
+      "nauck": "urn:cts:greekLit:tlg0085.edonoi.nauck1889-grc1:62",
+      "confidence": 0.9355,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "eleysinioi",
+      "card": "D47=N54",
+      "dindorf": "urn:cts:greekLit:tlg0085.eleysinioi.dindorf1893-grc1:47",
+      "nauck": "urn:cts:greekLit:tlg0085.eleysinioi.nauck1889-grc1:54",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "epigonoi",
+      "card": "D49=N55",
+      "dindorf": "urn:cts:greekLit:tlg0085.epigonoi.dindorf1893-grc1:49",
+      "nauck": "urn:cts:greekLit:tlg0085.epigonoi.nauck1889-grc1:55",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "epigonoi",
+      "card": "D50=N56",
+      "dindorf": "urn:cts:greekLit:tlg0085.epigonoi.dindorf1893-grc1:50",
+      "nauck": "urn:cts:greekLit:tlg0085.epigonoi.nauck1889-grc1:56",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "glaykos_pontios",
+      "card": "D21=N26",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_pontios.dindorf1893-grc1:21",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_pontios.nauck1889-grc1:26",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "glaykos_pontios",
+      "card": "D22=N34",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_pontios.dindorf1893-grc1:22",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_pontios.nauck1889-grc1:34",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "glaykos_pontios",
+      "card": "D23=N31",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_pontios.dindorf1893-grc1:23",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_pontios.nauck1889-grc1:31",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "glaykos_pontios",
+      "card": "D24=N30",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_pontios.dindorf1893-grc1:24",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_pontios.nauck1889-grc1:30",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "glaykos_pontios",
+      "card": "D25=N32",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_pontios.dindorf1893-grc1:25",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_pontios.nauck1889-grc1:32",
+      "confidence": 0.9492,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D29=N38",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:29",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:38",
+      "confidence": 0.9672,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D30=N39",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:30",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:39",
+      "confidence": 0.9916,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D31=N36",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:31",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:36",
+      "confidence": 0.8354,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D32=N41",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:32",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:41",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D33=N40",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:33",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:40",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D34=N42",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:34",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:42",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "glaykos_potnieys",
+      "card": "D36=N37",
+      "dindorf": "urn:cts:greekLit:tlg0085.glaykos_potnieys.dindorf1893-grc1:36",
+      "nauck": "urn:cts:greekLit:tlg0085.glaykos_potnieys.nauck1889-grc1:37",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "heliades",
+      "card": "D63=N71",
+      "dindorf": "urn:cts:greekLit:tlg0085.heliades.dindorf1893-grc1:63",
+      "nauck": "urn:cts:greekLit:tlg0085.heliades.nauck1889-grc1:71",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "heliades",
+      "card": "D64=N69",
+      "dindorf": "urn:cts:greekLit:tlg0085.heliades.dindorf1893-grc1:64",
+      "nauck": "urn:cts:greekLit:tlg0085.heliades.nauck1889-grc1:69",
+      "confidence": 0.9444,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "heliades",
+      "card": "D65=N72",
+      "dindorf": "urn:cts:greekLit:tlg0085.heliades.dindorf1893-grc1:65",
+      "nauck": "urn:cts:greekLit:tlg0085.heliades.nauck1889-grc1:72",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "heliades",
+      "card": "D66=N68",
+      "dindorf": "urn:cts:greekLit:tlg0085.heliades.dindorf1893-grc1:66",
+      "nauck": "urn:cts:greekLit:tlg0085.heliades.nauck1889-grc1:68",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "herakleidai",
+      "card": "D67=N75",
+      "dindorf": "urn:cts:greekLit:tlg0085.herakleidai.dindorf1893-grc1:67",
+      "nauck": "urn:cts:greekLit:tlg0085.herakleidai.nauck1889-grc1:75",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "herakleidai",
+      "card": "D68=N76",
+      "dindorf": "urn:cts:greekLit:tlg0085.herakleidai.dindorf1893-grc1:68",
+      "nauck": "urn:cts:greekLit:tlg0085.herakleidai.nauck1889-grc1:76",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "herakleidai",
+      "card": "D69=N77",
+      "dindorf": "urn:cts:greekLit:tlg0085.herakleidai.dindorf1893-grc1:69",
+      "nauck": "urn:cts:greekLit:tlg0085.herakleidai.nauck1889-grc1:77",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "iereiai",
+      "card": "D79=N86",
+      "dindorf": "urn:cts:greekLit:tlg0085.iereiai.dindorf1893-grc1:79",
+      "nauck": "urn:cts:greekLit:tlg0085.iereiai.nauck1889-grc1:86",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "iereiai",
+      "card": "D80=N88",
+      "dindorf": "urn:cts:greekLit:tlg0085.iereiai.dindorf1893-grc1:80",
+      "nauck": "urn:cts:greekLit:tlg0085.iereiai.nauck1889-grc1:88",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "incertae",
+      "card": "D276=N405",
+      "dindorf": "urn:cts:greekLit:tlg0085.incertae.dindorf1893-grc1:276",
+      "nauck": "urn:cts:greekLit:tlg0085.incertae.nauck1889-grc1:405",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "incertae",
+      "card": "D297=N408",
+      "dindorf": "urn:cts:greekLit:tlg0085.incertae.dindorf1893-grc1:297",
+      "nauck": "urn:cts:greekLit:tlg0085.incertae.nauck1889-grc1:408",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "incertae",
+      "card": "D402=N336",
+      "dindorf": "urn:cts:greekLit:tlg0085.incertae.dindorf1893-grc1:402",
+      "nauck": "urn:cts:greekLit:tlg0085.incertae.nauck1889-grc1:336",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "incertae",
+      "card": "D416=N294",
+      "dindorf": "urn:cts:greekLit:tlg0085.incertae.dindorf1893-grc1:416",
+      "nauck": "urn:cts:greekLit:tlg0085.incertae.nauck1889-grc1:294",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "iphigeneia",
+      "card": "D86=N94",
+      "dindorf": "urn:cts:greekLit:tlg0085.iphigeneia.dindorf1893-grc1:86",
+      "nauck": "urn:cts:greekLit:tlg0085.iphigeneia.nauck1889-grc1:94",
+      "confidence": 0.9474,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "ixion",
+      "card": "D82=N90",
+      "dindorf": "urn:cts:greekLit:tlg0085.ixion.dindorf1893-grc1:82",
+      "nauck": "urn:cts:greekLit:tlg0085.ixion.nauck1889-grc1:90",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "ixion",
+      "card": "D83=N93",
+      "dindorf": "urn:cts:greekLit:tlg0085.ixion.dindorf1893-grc1:83",
+      "nauck": "urn:cts:greekLit:tlg0085.ixion.nauck1889-grc1:93",
+      "confidence": 0.9333,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "ixion",
+      "card": "D85=N91",
+      "dindorf": "urn:cts:greekLit:tlg0085.ixion.dindorf1893-grc1:85",
+      "nauck": "urn:cts:greekLit:tlg0085.ixion.nauck1889-grc1:91",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "kabeiroi",
+      "card": "D88=N95",
+      "dindorf": "urn:cts:greekLit:tlg0085.kabeiroi.dindorf1893-grc1:88",
+      "nauck": "urn:cts:greekLit:tlg0085.kabeiroi.nauck1889-grc1:95",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "kabeiroi",
+      "card": "D91=N96",
+      "dindorf": "urn:cts:greekLit:tlg0085.kabeiroi.dindorf1893-grc1:91",
+      "nauck": "urn:cts:greekLit:tlg0085.kabeiroi.nauck1889-grc1:96",
+      "confidence": 0.9204,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "kallisto",
+      "card": "D92=N98",
+      "dindorf": "urn:cts:greekLit:tlg0085.kallisto.dindorf1893-grc1:92",
+      "nauck": "urn:cts:greekLit:tlg0085.kallisto.nauck1889-grc1:98",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "kares",
+      "card": "D52=N100",
+      "dindorf": "urn:cts:greekLit:tlg0085.kares.dindorf1893-grc1:52",
+      "nauck": "urn:cts:greekLit:tlg0085.kares.nauck1889-grc1:100",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "kares",
+      "card": "D53=N101",
+      "dindorf": "urn:cts:greekLit:tlg0085.kares.dindorf1893-grc1:53",
+      "nauck": "urn:cts:greekLit:tlg0085.kares.nauck1889-grc1:101",
+      "confidence": 0.8571,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerkyon",
+      "card": "D93=N103",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerkyon.dindorf1893-grc1:93",
+      "nauck": "urn:cts:greekLit:tlg0085.kerkyon.nauck1889-grc1:103",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerkyon",
+      "card": "D94=N102",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerkyon.dindorf1893-grc1:94",
+      "nauck": "urn:cts:greekLit:tlg0085.kerkyon.nauck1889-grc1:102",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "kerkyon",
+      "card": "D95=N104",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerkyon.dindorf1893-grc1:95",
+      "nauck": "urn:cts:greekLit:tlg0085.kerkyon.nauck1889-grc1:104",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerkyon",
+      "card": "D97=N106",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerkyon.dindorf1893-grc1:97",
+      "nauck": "urn:cts:greekLit:tlg0085.kerkyon.nauck1889-grc1:106",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D99=N112",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:99",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:112",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D100=N108",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:100",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:108",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D101=N109",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:101",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:109",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D102=N111",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:102",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:111",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D103=N113",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:103",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:113",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kerykes",
+      "card": "D104=N110",
+      "dindorf": "urn:cts:greekLit:tlg0085.kerykes.dindorf1893-grc1:104",
+      "nauck": "urn:cts:greekLit:tlg0085.kerykes.nauck1889-grc1:110",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "kirke",
+      "card": "D105=N114",
+      "dindorf": "urn:cts:greekLit:tlg0085.kirke.dindorf1893-grc1:105",
+      "nauck": "urn:cts:greekLit:tlg0085.kirke.nauck1889-grc1:114",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kirke",
+      "card": "D106=N115",
+      "dindorf": "urn:cts:greekLit:tlg0085.kirke.dindorf1893-grc1:106",
+      "nauck": "urn:cts:greekLit:tlg0085.kirke.nauck1889-grc1:115",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kressai",
+      "card": "D107=N116",
+      "dindorf": "urn:cts:greekLit:tlg0085.kressai.dindorf1893-grc1:107",
+      "nauck": "urn:cts:greekLit:tlg0085.kressai.nauck1889-grc1:116",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "kressai",
+      "card": "D108=N119",
+      "dindorf": "urn:cts:greekLit:tlg0085.kressai.dindorf1893-grc1:108",
+      "nauck": "urn:cts:greekLit:tlg0085.kressai.nauck1889-grc1:119",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kressai",
+      "card": "D109=N120",
+      "dindorf": "urn:cts:greekLit:tlg0085.kressai.dindorf1893-grc1:109",
+      "nauck": "urn:cts:greekLit:tlg0085.kressai.nauck1889-grc1:120",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "kressai",
+      "card": "D110=N117",
+      "dindorf": "urn:cts:greekLit:tlg0085.kressai.dindorf1893-grc1:110",
+      "nauck": "urn:cts:greekLit:tlg0085.kressai.nauck1889-grc1:117",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "kressai",
+      "card": "D111=N118",
+      "dindorf": "urn:cts:greekLit:tlg0085.kressai.dindorf1893-grc1:111",
+      "nauck": "urn:cts:greekLit:tlg0085.kressai.nauck1889-grc1:118",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "laios",
+      "card": "D112=N121",
+      "dindorf": "urn:cts:greekLit:tlg0085.laios.dindorf1893-grc1:112",
+      "nauck": "urn:cts:greekLit:tlg0085.laios.nauck1889-grc1:121",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "laios",
+      "card": "D113=N122",
+      "dindorf": "urn:cts:greekLit:tlg0085.laios.dindorf1893-grc1:113",
+      "nauck": "urn:cts:greekLit:tlg0085.laios.nauck1889-grc1:122",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "leon",
+      "card": "D114=N123",
+      "dindorf": "urn:cts:greekLit:tlg0085.leon.dindorf1893-grc1:114",
+      "nauck": "urn:cts:greekLit:tlg0085.leon.nauck1889-grc1:123",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "lykourgos",
+      "card": "D116=N124",
+      "dindorf": "urn:cts:greekLit:tlg0085.lykourgos.dindorf1893-grc1:116",
+      "nauck": "urn:cts:greekLit:tlg0085.lykourgos.nauck1889-grc1:124",
+      "confidence": 0.9774,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "lykourgos",
+      "card": "D117=N125",
+      "dindorf": "urn:cts:greekLit:tlg0085.lykourgos.dindorf1893-grc1:117",
+      "nauck": "urn:cts:greekLit:tlg0085.lykourgos.nauck1889-grc1:125",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "lykourgos",
+      "card": "D118=N126",
+      "dindorf": "urn:cts:greekLit:tlg0085.lykourgos.dindorf1893-grc1:118",
+      "nauck": "urn:cts:greekLit:tlg0085.lykourgos.nauck1889-grc1:126",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D122=N131",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:122",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:131",
+      "confidence": 0.8889,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D129=N133",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:129",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:133",
+      "confidence": 0.9,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D130=N134",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:130",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:134",
+      "confidence": 0.8889,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D131=N141",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:131",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:141",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D132=N142",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:132",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:142",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "myrmidones",
+      "card": "D133=N140",
+      "dindorf": "urn:cts:greekLit:tlg0085.myrmidones.dindorf1893-grc1:133",
+      "nauck": "urn:cts:greekLit:tlg0085.myrmidones.nauck1889-grc1:140",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "mysoi",
+      "card": "D134=N143",
+      "dindorf": "urn:cts:greekLit:tlg0085.mysoi.dindorf1893-grc1:134",
+      "nauck": "urn:cts:greekLit:tlg0085.mysoi.nauck1889-grc1:143",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "mysoi",
+      "card": "D135=N144",
+      "dindorf": "urn:cts:greekLit:tlg0085.mysoi.dindorf1893-grc1:135",
+      "nauck": "urn:cts:greekLit:tlg0085.mysoi.nauck1889-grc1:144",
+      "confidence": 0.9919,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "neaniskoi",
+      "card": "D138=N146",
+      "dindorf": "urn:cts:greekLit:tlg0085.neaniskoi.dindorf1893-grc1:138",
+      "nauck": "urn:cts:greekLit:tlg0085.neaniskoi.nauck1889-grc1:146",
+      "confidence": 0.8929,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "neaniskoi",
+      "card": "D139=N147",
+      "dindorf": "urn:cts:greekLit:tlg0085.neaniskoi.dindorf1893-grc1:139",
+      "nauck": "urn:cts:greekLit:tlg0085.neaniskoi.nauck1889-grc1:147",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "neaniskoi",
+      "card": "D140=N148",
+      "dindorf": "urn:cts:greekLit:tlg0085.neaniskoi.dindorf1893-grc1:140",
+      "nauck": "urn:cts:greekLit:tlg0085.neaniskoi.nauck1889-grc1:148",
+      "confidence": 0.9,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "neaniskoi",
+      "card": "D141=N149",
+      "dindorf": "urn:cts:greekLit:tlg0085.neaniskoi.dindorf1893-grc1:141",
+      "nauck": "urn:cts:greekLit:tlg0085.neaniskoi.nauck1889-grc1:149",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "nereides",
+      "card": "D142=N150",
+      "dindorf": "urn:cts:greekLit:tlg0085.nereides.dindorf1893-grc1:142",
+      "nauck": "urn:cts:greekLit:tlg0085.nereides.nauck1889-grc1:150",
+      "confidence": 0.8378,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "nereides",
+      "card": "D143=N152",
+      "dindorf": "urn:cts:greekLit:tlg0085.nereides.dindorf1893-grc1:143",
+      "nauck": "urn:cts:greekLit:tlg0085.nereides.nauck1889-grc1:152",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "niobe",
+      "card": "D146=N163",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:146",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:163",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "niobe",
+      "card": "D147=N161",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:147",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:161",
+      "confidence": 0.9391,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "niobe",
+      "card": "D149=N157",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:149",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:157",
+      "confidence": 0.987,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "niobe",
+      "card": "D150=N155",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:150",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:155",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "niobe",
+      "card": "D151=N156",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:151",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:156",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "niobe",
+      "card": "D152=N166",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:152",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:166",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "niobe",
+      "card": "D153=N165",
+      "dindorf": "urn:cts:greekLit:tlg0085.niobe.dindorf1893-grc1:153",
+      "nauck": "urn:cts:greekLit:tlg0085.niobe.nauck1889-grc1:165",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "oidipoys",
+      "card": "D160=N173",
+      "dindorf": "urn:cts:greekLit:tlg0085.oidipoys.dindorf1893-grc1:160",
+      "nauck": "urn:cts:greekLit:tlg0085.oidipoys.nauck1889-grc1:173",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "oplon_krisis",
+      "card": "D161=N175",
+      "dindorf": "urn:cts:greekLit:tlg0085.oplon_krisis.dindorf1893-grc1:161",
+      "nauck": "urn:cts:greekLit:tlg0085.oplon_krisis.nauck1889-grc1:175",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "oplon_krisis",
+      "card": "D162=N176",
+      "dindorf": "urn:cts:greekLit:tlg0085.oplon_krisis.dindorf1893-grc1:162",
+      "nauck": "urn:cts:greekLit:tlg0085.oplon_krisis.nauck1889-grc1:176",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "oplon_krisis",
+      "card": "D163=N177",
+      "dindorf": "urn:cts:greekLit:tlg0085.oplon_krisis.dindorf1893-grc1:163",
+      "nauck": "urn:cts:greekLit:tlg0085.oplon_krisis.nauck1889-grc1:177",
+      "confidence": 0.9667,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "oplon_krisis",
+      "card": "D164=N174",
+      "dindorf": "urn:cts:greekLit:tlg0085.oplon_krisis.dindorf1893-grc1:164",
+      "nauck": "urn:cts:greekLit:tlg0085.oplon_krisis.nauck1889-grc1:174",
+      "confidence": 0.9508,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "oreithyia",
+      "card": "D265=N281",
+      "dindorf": "urn:cts:greekLit:tlg0085.oreithyia.dindorf1893-grc1:265",
+      "nauck": "urn:cts:greekLit:tlg0085.oreithyia.nauck1889-grc1:281",
+      "confidence": 0.9932,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "ostologoi",
+      "card": "D165=N179",
+      "dindorf": "urn:cts:greekLit:tlg0085.ostologoi.dindorf1893-grc1:165",
+      "nauck": "urn:cts:greekLit:tlg0085.ostologoi.nauck1889-grc1:179",
+      "confidence": 0.9726,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "ostologoi",
+      "card": "D166=N180",
+      "dindorf": "urn:cts:greekLit:tlg0085.ostologoi.dindorf1893-grc1:166",
+      "nauck": "urn:cts:greekLit:tlg0085.ostologoi.nauck1889-grc1:180",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "palamedes",
+      "card": "D167=N181",
+      "dindorf": "urn:cts:greekLit:tlg0085.palamedes.dindorf1893-grc1:167",
+      "nauck": "urn:cts:greekLit:tlg0085.palamedes.nauck1889-grc1:181",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "palamedes",
+      "card": "D168=N182",
+      "dindorf": "urn:cts:greekLit:tlg0085.palamedes.dindorf1893-grc1:168",
+      "nauck": "urn:cts:greekLit:tlg0085.palamedes.nauck1889-grc1:182",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "penelope",
+      "card": "D173=N187",
+      "dindorf": "urn:cts:greekLit:tlg0085.penelope.dindorf1893-grc1:173",
+      "nauck": "urn:cts:greekLit:tlg0085.penelope.nauck1889-grc1:187",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "pentheys",
+      "card": "D169=N183",
+      "dindorf": "urn:cts:greekLit:tlg0085.pentheys.dindorf1893-grc1:169",
+      "nauck": "urn:cts:greekLit:tlg0085.pentheys.nauck1889-grc1:183",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "perraibides",
+      "card": "D170=N185",
+      "dindorf": "urn:cts:greekLit:tlg0085.perraibides.dindorf1893-grc1:170",
+      "nauck": "urn:cts:greekLit:tlg0085.perraibides.nauck1889-grc1:185",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "perraibides",
+      "card": "D171=N184",
+      "dindorf": "urn:cts:greekLit:tlg0085.perraibides.dindorf1893-grc1:171",
+      "nauck": "urn:cts:greekLit:tlg0085.perraibides.nauck1889-grc1:184",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "perraibides",
+      "card": "D172=N186",
+      "dindorf": "urn:cts:greekLit:tlg0085.perraibides.dindorf1893-grc1:172",
+      "nauck": "urn:cts:greekLit:tlg0085.perraibides.nauck1889-grc1:186",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D229=N255",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:229",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:255",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D230=N250",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:230",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:250",
+      "confidence": 0.9846,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D231=N253",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:231",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:253",
+      "confidence": 0.9355,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D232=N257",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:232",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:257",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D233=N249",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:233",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:249",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D234=N252",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:234",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:252",
+      "confidence": 0.873,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D235=N251",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:235",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:251",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "philoktetes",
+      "card": "D236=N256",
+      "dindorf": "urn:cts:greekLit:tlg0085.philoktetes.dindorf1893-grc1:236",
+      "nauck": "urn:cts:greekLit:tlg0085.philoktetes.nauck1889-grc1:256",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "phineys",
+      "card": "D237=N258",
+      "dindorf": "urn:cts:greekLit:tlg0085.phineys.dindorf1893-grc1:237",
+      "nauck": "urn:cts:greekLit:tlg0085.phineys.nauck1889-grc1:258",
+      "confidence": 0.9531,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "phorkides",
+      "card": "D240=N261",
+      "dindorf": "urn:cts:greekLit:tlg0085.phorkides.dindorf1893-grc1:240",
+      "nauck": "urn:cts:greekLit:tlg0085.phorkides.nauck1889-grc1:261",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "phryges",
+      "card": "D242=N263",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:242",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:263",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "phryges",
+      "card": "D243=N266",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:243",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:266",
+      "confidence": 0.9393,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "phryges",
+      "card": "D244=N264",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:244",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:264",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "phryges",
+      "card": "D245=N269",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:245",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:269",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "phryges",
+      "card": "D246=N270",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:246",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:270",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "phryges",
+      "card": "D247=N265",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:247",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:265",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "phryges",
+      "card": "D248=N271",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:248",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:271",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "phryges",
+      "card": "D249=N268",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:249",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:268",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "phryges",
+      "card": "D250=N267",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:250",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:267",
+      "confidence": 0.9913,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "phryges",
+      "card": "D252=N272",
+      "dindorf": "urn:cts:greekLit:tlg0085.phryges.dindorf1893-grc1:252",
+      "nauck": "urn:cts:greekLit:tlg0085.phryges.nauck1889-grc1:272",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D178=N192",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:178",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:192",
+      "confidence": 0.9971,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D180=N194",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:180",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:194",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D182=N199",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:182",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:199",
+      "confidence": 0.9928,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D184=N196",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:184",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:196",
+      "confidence": 0.9761,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D187=N201",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:187",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:201",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D189=N198",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:189",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:198",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "prometheys_lyomenos",
+      "card": "D191=N200",
+      "dindorf": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.dindorf1893-grc1:191",
+      "nauck": "urn:cts:greekLit:tlg0085.prometheys_lyomenos.nauck1889-grc1:200",
+      "confidence": 0.9508,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "propompoi",
+      "card": "D193=N209",
+      "dindorf": "urn:cts:greekLit:tlg0085.propompoi.dindorf1893-grc1:193",
+      "nauck": "urn:cts:greekLit:tlg0085.propompoi.nauck1889-grc1:209",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "proteys",
+      "card": "D194=N210",
+      "dindorf": "urn:cts:greekLit:tlg0085.proteys.dindorf1893-grc1:194",
+      "nauck": "urn:cts:greekLit:tlg0085.proteys.nauck1889-grc1:210",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "proteys",
+      "card": "D195=N211",
+      "dindorf": "urn:cts:greekLit:tlg0085.proteys.dindorf1893-grc1:195",
+      "nauck": "urn:cts:greekLit:tlg0085.proteys.nauck1889-grc1:211",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "proteys",
+      "card": "D197=N213",
+      "dindorf": "urn:cts:greekLit:tlg0085.proteys.dindorf1893-grc1:197",
+      "nauck": "urn:cts:greekLit:tlg0085.proteys.nauck1889-grc1:213",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "proteys",
+      "card": "D198=N214",
+      "dindorf": "urn:cts:greekLit:tlg0085.proteys.dindorf1893-grc1:198",
+      "nauck": "urn:cts:greekLit:tlg0085.proteys.nauck1889-grc1:214",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "proteys",
+      "card": "D199=N215",
+      "dindorf": "urn:cts:greekLit:tlg0085.proteys.dindorf1893-grc1:199",
+      "nauck": "urn:cts:greekLit:tlg0085.proteys.nauck1889-grc1:215",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D255=N275",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:255",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:275",
+      "confidence": 0.9868,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D256=N273",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:256",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:273",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D257=N278",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:257",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:278",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D258=N274",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:258",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:274",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D259=N276",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:259",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:276",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "psychagogoi",
+      "card": "D260=N277",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychagogoi.dindorf1893-grc1:260",
+      "nauck": "urn:cts:greekLit:tlg0085.psychagogoi.nauck1889-grc1:277",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "psychostasia",
+      "card": "D262=N279",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychostasia.dindorf1893-grc1:262",
+      "nauck": "urn:cts:greekLit:tlg0085.psychostasia.nauck1889-grc1:279",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "psychostasia",
+      "card": "D263=N280",
+      "dindorf": "urn:cts:greekLit:tlg0085.psychostasia.dindorf1893-grc1:263",
+      "nauck": "urn:cts:greekLit:tlg0085.psychostasia.nauck1889-grc1:280",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "salaminai",
+      "card": "D200=N216",
+      "dindorf": "urn:cts:greekLit:tlg0085.salaminai.dindorf1893-grc1:200",
+      "nauck": "urn:cts:greekLit:tlg0085.salaminai.nauck1889-grc1:216",
+      "confidence": 0.931,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "salaminai",
+      "card": "D201=N219",
+      "dindorf": "urn:cts:greekLit:tlg0085.salaminai.dindorf1893-grc1:201",
+      "nauck": "urn:cts:greekLit:tlg0085.salaminai.nauck1889-grc1:219",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "salaminai",
+      "card": "D202=N220",
+      "dindorf": "urn:cts:greekLit:tlg0085.salaminai.dindorf1893-grc1:202",
+      "nauck": "urn:cts:greekLit:tlg0085.salaminai.nauck1889-grc1:220",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "salaminai",
+      "card": "D203=N217",
+      "dindorf": "urn:cts:greekLit:tlg0085.salaminai.dindorf1893-grc1:203",
+      "nauck": "urn:cts:greekLit:tlg0085.salaminai.nauck1889-grc1:217",
+      "confidence": 0.8571,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "salaminai",
+      "card": "D204=N218",
+      "dindorf": "urn:cts:greekLit:tlg0085.salaminai.dindorf1893-grc1:204",
+      "nauck": "urn:cts:greekLit:tlg0085.salaminai.nauck1889-grc1:218",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "semele",
+      "card": "D205=N223",
+      "dindorf": "urn:cts:greekLit:tlg0085.semele.dindorf1893-grc1:205",
+      "nauck": "urn:cts:greekLit:tlg0085.semele.nauck1889-grc1:223",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "semele",
+      "card": "D206=N224",
+      "dindorf": "urn:cts:greekLit:tlg0085.semele.dindorf1893-grc1:206",
+      "nauck": "urn:cts:greekLit:tlg0085.semele.nauck1889-grc1:224",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "semele",
+      "card": "D207=N222",
+      "dindorf": "urn:cts:greekLit:tlg0085.semele.dindorf1893-grc1:207",
+      "nauck": "urn:cts:greekLit:tlg0085.semele.nauck1889-grc1:222",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "semele",
+      "card": "D208=N221",
+      "dindorf": "urn:cts:greekLit:tlg0085.semele.dindorf1893-grc1:208",
+      "nauck": "urn:cts:greekLit:tlg0085.semele.nauck1889-grc1:221",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D210=N225",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:210",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:225",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D211=N226",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:211",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:226",
+      "confidence": 0.9677,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D214=N231",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:214",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:231",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D216=N230",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:216",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:230",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D217=N234",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:217",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:234",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "sisyphos",
+      "card": "D218=N233",
+      "dindorf": "urn:cts:greekLit:tlg0085.sisyphos.dindorf1893-grc1:218",
+      "nauck": "urn:cts:greekLit:tlg0085.sisyphos.nauck1889-grc1:233",
+      "confidence": 0.9206,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "sphigx",
+      "card": "D219=N235",
+      "dindorf": "urn:cts:greekLit:tlg0085.sphigx.dindorf1893-grc1:219",
+      "nauck": "urn:cts:greekLit:tlg0085.sphigx.nauck1889-grc1:235",
+      "confidence": 0.9839,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "sphigx",
+      "card": "D220=N236",
+      "dindorf": "urn:cts:greekLit:tlg0085.sphigx.dindorf1893-grc1:220",
+      "nauck": "urn:cts:greekLit:tlg0085.sphigx.nauck1889-grc1:236",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "sphigx",
+      "card": "D221=N237",
+      "dindorf": "urn:cts:greekLit:tlg0085.sphigx.dindorf1893-grc1:221",
+      "nauck": "urn:cts:greekLit:tlg0085.sphigx.nauck1889-grc1:237",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "telephos",
+      "card": "D223=N240",
+      "dindorf": "urn:cts:greekLit:tlg0085.telephos.dindorf1893-grc1:223",
+      "nauck": "urn:cts:greekLit:tlg0085.telephos.nauck1889-grc1:240",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "theoroi",
+      "card": "D72=N81",
+      "dindorf": "urn:cts:greekLit:tlg0085.theoroi.dindorf1893-grc1:72",
+      "nauck": "urn:cts:greekLit:tlg0085.theoroi.nauck1889-grc1:81",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "theoroi",
+      "card": "D73=N80",
+      "dindorf": "urn:cts:greekLit:tlg0085.theoroi.dindorf1893-grc1:73",
+      "nauck": "urn:cts:greekLit:tlg0085.theoroi.nauck1889-grc1:80",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "threissai",
+      "card": "D75=N85",
+      "dindorf": "urn:cts:greekLit:tlg0085.threissai.dindorf1893-grc1:75",
+      "nauck": "urn:cts:greekLit:tlg0085.threissai.nauck1889-grc1:85",
+      "confidence": 1.0,
+      "method": "fuzzy-quoted-text-in-source-context"
+    },
+    {
+      "work": "threissai",
+      "card": "D78=N83",
+      "dindorf": "urn:cts:greekLit:tlg0085.threissai.dindorf1893-grc1:78",
+      "nauck": "urn:cts:greekLit:tlg0085.threissai.nauck1889-grc1:83",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "toxotides",
+      "card": "D226=N246",
+      "dindorf": "urn:cts:greekLit:tlg0085.toxotides.dindorf1893-grc1:226",
+      "nauck": "urn:cts:greekLit:tlg0085.toxotides.nauck1889-grc1:246",
+      "confidence": 0.995,
+      "method": "quoted-text-in-source-context"
+    },
+    {
+      "work": "xantriai",
+      "card": "D155=N169",
+      "dindorf": "urn:cts:greekLit:tlg0085.xantriai.dindorf1893-grc1:155",
+      "nauck": "urn:cts:greekLit:tlg0085.xantriai.nauck1889-grc1:169",
+      "confidence": 0.9861,
+      "method": "mutual-best-normalized-greek"
+    },
+    {
+      "work": "xantriai",
+      "card": "D156=N171",
+      "dindorf": "urn:cts:greekLit:tlg0085.xantriai.dindorf1893-grc1:156",
+      "nauck": "urn:cts:greekLit:tlg0085.xantriai.nauck1889-grc1:171",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "xantriai",
+      "card": "D158=N170",
+      "dindorf": "urn:cts:greekLit:tlg0085.xantriai.dindorf1893-grc1:158",
+      "nauck": "urn:cts:greekLit:tlg0085.xantriai.nauck1889-grc1:170",
+      "confidence": 1.0,
+      "method": "exact-normalized-greek"
+    },
+    {
+      "work": "xantriai",
+      "card": "D159=N168",
+      "dindorf": "urn:cts:greekLit:tlg0085.xantriai.dindorf1893-grc1:159",
+      "nauck": "urn:cts:greekLit:tlg0085.xantriai.nauck1889-grc1:168",
+      "confidence": 0.8917,
+      "method": "mutual-best-normalized-greek"
+    }
+  ]
+}

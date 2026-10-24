@@ -1,0 +1,382 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0307",
+  "author": "Neophron",
+  "corpus_title": "Neophron, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0307.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0307.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0307-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0307-fr1-l1",
+          "text": "καὶ γάρ τιν’ αὐτὸς ἤλυθον λύσιν μαθεῖν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0307-fr1-l2",
+          "text": "σοῦ· Πυθίαν γὰρ ὄσσαν, ἣν ἔχρησέ μοι"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0307-fr1-l3",
+          "text": "Φοίβου πρόμαντις, συμβαλεῖν ἀμηχανῶ·"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0307-fr1-l4",
+          "text": "σοὶ δ’ εἰς λόγους μολὼν ἂν ἤλπιζον μαθεῖν."
+        }
+      ],
+      "context": "Schol. Eur. Med. 666 : Νεόφρων δὲ εἰς Κόρινθον τὸν Αἰγέα φησὶ παραγενέσθαι πρὸς Μήδειαν ἕνεκα τοῦ σαφηνισθῆναι αὐτῷ τὸν χρησμὸν ὑπ’ αὐτῆς [τῆς Μηδείας] , γράφων οὕτως ‘καὶ γάρ — ἤλπιζον μαθεῖν’ . v. 1 ἦλθον ἵνα (vel ὡς) λύσιν μάθοιν vel ἤθελον λύσιν μαθεῖν coni. Herwerden Exerc. crit. p. 69 . ἤλυθον formam a senario non esse alienam satis notum est (cf. Eur. El. 598 Tro. 374 fr. 451 , 2 Rhes. 660 al.) . infinitivus pendens ex eundi verbo rarus est apud veteres scriptores nec tamen inauditus. velut προσέβαν ὑμέναιον ἀεῖσαι dixit Eur. fr. 773 , 54 . cf. quae F. G. Schmidt Krit. Stud. 3 p. 168 sq. et ego Mél. Gréco-Rom. V p. 218 attulimus. v. 2 Πυθίαν Valckenaer in Eur. Phoen. 709 , πρὶν θείαν libri. v. 3 συλλαβεῖν al. v. 3 sq. ἀμηχανῶ· σοὶ δ’ Valckenaer, ἀμηχάνως οἶδ’ libri. v. 4 ἂν Dindorf, γὰρ libri, γ’ ἂν Porson in Eur. Med. 666 .",
+      "play_title": "ΜΗΔΕΙΑ",
+      "play_work": "medeia",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0307-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0307-fr2-l1",
+          "text": "εἶεν· τί δράσεις, θυμέ ; βούλευσαι καλῶς"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0307-fr2-l2",
+          "text": "πρὶν ἐξαμαρτεῖν καὶ τὰ προσφιλέστατα"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0307-fr2-l3",
+          "text": "ἔχθιστα θέσθαι. ποῖ ποτ’ ἐξῇξας τάλας ;"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0307-fr2-l4",
+          "text": "κάτισχε λῆμα καὶ σθένος θεοστυγές."
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0307-fr2-l5",
+          "text": "καὶ πρὸς τί ταῦτα δύρομαι, ψυχὴν ἐμὴν"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0307-fr2-l6",
+          "text": "ὁρῶσ’ ἔρημον καὶ παρημελημένην"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0307-fr2-l7",
+          "text": "πρὸς ὧν ἐχρῆν ἥκιστα ; μαλθακοὶ δὲ δὴ"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0307-fr2-l8",
+          "text": "τοιαῦτα γιγνόμεσθα πάσχοντες κακά ;"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0307-fr2-l9",
+          "text": "οὐ μὴ προδώσεις, θυμέ , σαυτὸν ἐν κακοῖς ;"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0307-fr2-l10",
+          "text": "οἴμοι δέδοκται· παῖδες ἐκτὸς ὀμμάτων"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0307-fr2-l11",
+          "text": "ἀπέλθετ’· ἤδη γάρ με φοινία μέγαν"
+        },
+        {
+          "ref": "12",
+          "source_id": "tlg0307-fr2-l12",
+          "text": "δέδυκε λύσσα θυμόν. ὦ χέρες χέρες,"
+        },
+        {
+          "ref": "13",
+          "source_id": "tlg0307-fr2-l13",
+          "text": "πρὸς οἷον ἔργον ἐξοπλιζόμεσθα· φεῦ"
+        },
+        {
+          "ref": "14",
+          "source_id": "tlg0307-fr2-l14",
+          "text": "τάλαινα τόλμης, ἣ πολὺν πόνον βραχεῖ"
+        },
+        {
+          "ref": "15",
+          "source_id": "tlg0307-fr2-l15",
+          "text": "διαφθεροῦσα τὸν ἐμὸν ἔρχομαι χρόνῳ ."
+        }
+      ],
+      "context": "Stob. Flor. 20 , 34 : Νεόφρονος ἐν Μηδείᾳ (sic S, eclogam om. MA) . ‘εἶεν — χρόνῳ’ . v. 2 πρὶν Porson Adv. p. 295 , πρὶν ἢ S. v. 3 ἐξῆξας Β m. sec. teste Gaisfordo, ἐξηξαι S. v. 4 λῆμμα S. v. 5 καίτοι τί malim. ταῦτα δύρομαι Porson in Eur. Hec. 728 , ταῦτα ὀδύρομαι S. τύχην Cobet Ν. L. p. 74 . v. 7 προσων S. v. 8 . γιγνόμεσθα Gesner, γιγνόμεθα S. v. 9 προδώσεις cod. Voss. , προδώσης S. v. 10 οἴμμοι S. v. 11 ἀπέλθετε S. ἤδη γάρ μ’ ἄγαν ἡ φοινία coni. R. Methner diss. p. 15 , ἤδη γάρ με φοίνιον νέα F. G. Schmidt Krit. Stud. 3 p. 1 . v. 13 ἐξοπλιζόμεσθα δή vel ἐξοπλιζόμεσθ’ ἄρα, ut φεῦ extra versum positum sit, coni. Meineke in Stob. Flor. 4 p. LX, ἐξοπλιζόμεσθ’ ἄνοι F. G. Schmidt. v. 15 ἢ S, ἣ Frob. , ᾗ olim scripsi.",
+      "play_title": "ΜΗΔΕΙΑ",
+      "play_work": "medeia",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0307-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0307-fr3-l1",
+          "text": "τέλος γὰρ αὐτὸς αἰσχίστῳ μόρῳ φέρεις,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0307-fr3-l2",
+          "text": "βροχωτὸν ἀγχόνην ἐπισπάσας δέρῃ ."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0307-fr3-l3",
+          "text": "τοία σε μοῖρα σῶν κακῶν ἔργων μένει,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0307-fr3-l4",
+          "text": "διδάξεις τ’ ἄλλους μυρίους ἐφημέρους"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0307-fr3-l5",
+          "text": "θεῶν ὕπερθε μήποτ’ αἴρεσθαι βροτοῖς."
+        }
+      ],
+      "context": "Schol. Eur. Med. 1387 : οἳ μὲν λέγουσι κατὰ Μηδείας χόλον ἢ κέλευσιν ὑπὸ τῇ πρύμνῃ τῆς Ἀργοῦς καταδαρθόντα τὸν Ἰάσονα τελευτῆσαι ἐμπεσόντος αὐτῷ ξύλου· Νεόφρων δὲ ξενικώτερον ἀγχόνῃ φησὶ τελευτῆσαι· τὴν γὰρ Μήδειαν παράγει πρὸς αὐτὸν εἰποῦσαν ‘τέλος γὰρ — βροτοῖς’ . v. 1 αὐτὸς ἐχθίστῳ Fl. 6 , αὐτὸν ἐχθίστῳ B, αὐτεχθίστῳ I, αὐτὸς αἰσχίστῳ Elmsley. φέρεις] φθερεῖς Elmsley, φθερεῖ Hermann. v. 2 βροχωτὸν B, βρόχῳ τὸν Fl. 6 , βροτὸν I. ἀγχόνην Hermann, ἀγχόνης libri. δέρῃ B, δέρην Fl. 6 , ἔρη I. hinc v. 1 et 2 τέλος φθερεῖ γὰρ αὐτὸς αἰσχίστῳ μόρῳ , βροχωτὸν — δέρῃ scripsit Dindorf, τέλος γὰρ αὐτὸς αὑτὸν αἰσχίστῳ μόρῳ φθερεῖς, βρόχον τὸν ἀγχόνης ἐπισπάσας coni. R. Methner diss. p. 16 . ἔρρεις τέλος γὰρ αὐτὸς αἰσχίστῳ μόρῳ , δέρῃ βροχωτὸν ἀγχόνην ἐπισπάσας ego temptabam. v. 3 τοιάδε σ’ ἄποινα F. G. Schmidt Krit. Stud. 3 p. 2 . v. 4 τ’ B, τοὺς I Fl. 6 . δίδαξις ἄλλοις μυρίοις ἐφημέροις Elmsley, δείξεις δ’ ἐς ἄλλους μυρίους ἐφημέρους Conington, ὅπως διδάξῃς μυρίους ἐφημέρους Bergk Griech. Lit. 3 p. 506 , δείξεις δὲ κἄλλοις μυρίοις ἐφημέροις F. G. Schmidt. v. 5 μήποτ’ αἴρεσθαι Barnes, μήποθ’ αἱρεῖσθαι libri. βροτοῖς Β Fl. 6 , βροτούς I, φρένας Bergk, τρόπους F. G. Schmidt.",
+      "play_title": "ΜΗΔΕΙΑ",
+      "play_work": "medeia",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia"
+    }
+  ],
+  "works": {
+    "tlg0307-medeia": {
+      "id": "tlg0307-medeia",
+      "work": "medeia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia",
+      "title": "ΜΗΔΕΙΑ",
+      "source_title": "ΜΗΔΕΙΑ",
+      "source": "tlg0307.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0307-medeia",
+      "record_type": "fragmentary_play",
+      "introduction": "Argum. Eur. Med. : τὸ δρᾶμα δοκεῖ (Euripides) ὑποβαλέσθαι παρὰ Νεόφρονος διασκευάσας, ὡς Δικαίαρχος τοῦ τε Ἑλλάδος βίου*) καὶ Ἀριστοτέλης ἐν ὑπομνήμασι. Laert. Diog. 2 , 134 : πταίουσιν οἱ λέγοντες μηδὲν αὐτὸν (Menedemum) ἀνεγνωκέναι πλὴν τῆς Μηδείας *) Ita libri plerique : ἑλλάδι praebet cod. Marc. 468 , περὶ ante τοῦ addit Parisinus 2712 . ἐν τῷ περὶ Ἑλλάδος βίου scripsit Kirchhoff, ἐν α΄ περὶ τοῦ τῆς Ἑλλάδος βίου R. Klotz. fortasse praeferendum ὡς Δικαίαρχος [ὁ τὸν τῆς Ἑλλάδος βίον] , ita ut verba uncis inclusa tanquam recens additamentum deleantur, Dicaearchus autem intellegatur grammaticus ille cuius mentio fit in Arg. Soph. Ai. Oed. R. et Eur. Rhes. τῆς Εὐριπίδου, ἣν ἔνιοι (ἐν τοῖς ante Menagium) Νεόφρονος εἶναι τοῦ Σικυωνίου φασί. Suidas : Νεόφρων — οὗ φασὶν εἶναι τὴν τοῦ Εὐριπίδου Μήδειαν. potius fabulae oeconomiam personarumque mores quam verba aut sententias Euripidem a Neophrone mutuatum esse coniecit Elmsley in Eur. Med. p. 69 , quam sententiam probaremus, nisi id quod in Argum. Eur. Med. traditur dubitationibus esset obnoxium. Neophronis Sicyonii, quem centum viginti tragoedias edidisse refert Suidas, nulla perhibetur tragoedia praeter unam Medeam : ex qua quae afferuntur Euripide esse recentiora sagacissime perspexit Wilamowitz-Moellendorff Herm. 15 p. 487 , qui istam de Neophronis et Euripidis Medeis narrationem a malignis Euripidis obtrectatoribus quarto a. Chr. saeculo fictam esse et versus Neophroni subditos fraudi deberi recte statuit. ignorat Neophronis Medeam furtumque Euripideum Aristoteles in Poetica : ὑπομνήματα Aristotelica esse pseudepigrapha docuit V. Rose. Dicaearchum quae ab aliis relata invenisset credidisse non miramur, cum ne hodie quidem desint qui Pseudo-Neophronis declamationes ad Euripideae Medeae exemplum compositas laudibus efferant.",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0307-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0307-fr1-l1",
+              "text": "καὶ γάρ τιν’ αὐτὸς ἤλυθον λύσιν μαθεῖν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0307-fr1-l2",
+              "text": "σοῦ· Πυθίαν γὰρ ὄσσαν, ἣν ἔχρησέ μοι"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0307-fr1-l3",
+              "text": "Φοίβου πρόμαντις, συμβαλεῖν ἀμηχανῶ·"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0307-fr1-l4",
+              "text": "σοὶ δ’ εἰς λόγους μολὼν ἂν ἤλπιζον μαθεῖν."
+            }
+          ],
+          "context": "Schol. Eur. Med. 666 : Νεόφρων δὲ εἰς Κόρινθον τὸν Αἰγέα φησὶ παραγενέσθαι πρὸς Μήδειαν ἕνεκα τοῦ σαφηνισθῆναι αὐτῷ τὸν χρησμὸν ὑπ’ αὐτῆς [τῆς Μηδείας] , γράφων οὕτως ‘καὶ γάρ — ἤλπιζον μαθεῖν’ . v. 1 ἦλθον ἵνα (vel ὡς) λύσιν μάθοιν vel ἤθελον λύσιν μαθεῖν coni. Herwerden Exerc. crit. p. 69 . ἤλυθον formam a senario non esse alienam satis notum est (cf. Eur. El. 598 Tro. 374 fr. 451 , 2 Rhes. 660 al.) . infinitivus pendens ex eundi verbo rarus est apud veteres scriptores nec tamen inauditus. velut προσέβαν ὑμέναιον ἀεῖσαι dixit Eur. fr. 773 , 54 . cf. quae F. G. Schmidt Krit. Stud. 3 p. 168 sq. et ego Mél. Gréco-Rom. V p. 218 attulimus. v. 2 Πυθίαν Valckenaer in Eur. Phoen. 709 , πρὶν θείαν libri. v. 3 συλλαβεῖν al. v. 3 sq. ἀμηχανῶ· σοὶ δ’ Valckenaer, ἀμηχάνως οἶδ’ libri. v. 4 ἂν Dindorf, γὰρ libri, γ’ ἂν Porson in Eur. Med. 666 .",
+          "play_title": "ΜΗΔΕΙΑ",
+          "play_work": "medeia",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia",
+          "attribution_id": "nauck1889grc1-tlg0307-medeia",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0307-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0307-fr2-l1",
+              "text": "εἶεν· τί δράσεις, θυμέ ; βούλευσαι καλῶς"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0307-fr2-l2",
+              "text": "πρὶν ἐξαμαρτεῖν καὶ τὰ προσφιλέστατα"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0307-fr2-l3",
+              "text": "ἔχθιστα θέσθαι. ποῖ ποτ’ ἐξῇξας τάλας ;"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0307-fr2-l4",
+              "text": "κάτισχε λῆμα καὶ σθένος θεοστυγές."
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0307-fr2-l5",
+              "text": "καὶ πρὸς τί ταῦτα δύρομαι, ψυχὴν ἐμὴν"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0307-fr2-l6",
+              "text": "ὁρῶσ’ ἔρημον καὶ παρημελημένην"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0307-fr2-l7",
+              "text": "πρὸς ὧν ἐχρῆν ἥκιστα ; μαλθακοὶ δὲ δὴ"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0307-fr2-l8",
+              "text": "τοιαῦτα γιγνόμεσθα πάσχοντες κακά ;"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0307-fr2-l9",
+              "text": "οὐ μὴ προδώσεις, θυμέ , σαυτὸν ἐν κακοῖς ;"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0307-fr2-l10",
+              "text": "οἴμοι δέδοκται· παῖδες ἐκτὸς ὀμμάτων"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0307-fr2-l11",
+              "text": "ἀπέλθετ’· ἤδη γάρ με φοινία μέγαν"
+            },
+            {
+              "ref": "12",
+              "source_id": "tlg0307-fr2-l12",
+              "text": "δέδυκε λύσσα θυμόν. ὦ χέρες χέρες,"
+            },
+            {
+              "ref": "13",
+              "source_id": "tlg0307-fr2-l13",
+              "text": "πρὸς οἷον ἔργον ἐξοπλιζόμεσθα· φεῦ"
+            },
+            {
+              "ref": "14",
+              "source_id": "tlg0307-fr2-l14",
+              "text": "τάλαινα τόλμης, ἣ πολὺν πόνον βραχεῖ"
+            },
+            {
+              "ref": "15",
+              "source_id": "tlg0307-fr2-l15",
+              "text": "διαφθεροῦσα τὸν ἐμὸν ἔρχομαι χρόνῳ ."
+            }
+          ],
+          "context": "Stob. Flor. 20 , 34 : Νεόφρονος ἐν Μηδείᾳ (sic S, eclogam om. MA) . ‘εἶεν — χρόνῳ’ . v. 2 πρὶν Porson Adv. p. 295 , πρὶν ἢ S. v. 3 ἐξῆξας Β m. sec. teste Gaisfordo, ἐξηξαι S. v. 4 λῆμμα S. v. 5 καίτοι τί malim. ταῦτα δύρομαι Porson in Eur. Hec. 728 , ταῦτα ὀδύρομαι S. τύχην Cobet Ν. L. p. 74 . v. 7 προσων S. v. 8 . γιγνόμεσθα Gesner, γιγνόμεθα S. v. 9 προδώσεις cod. Voss. , προδώσης S. v. 10 οἴμμοι S. v. 11 ἀπέλθετε S. ἤδη γάρ μ’ ἄγαν ἡ φοινία coni. R. Methner diss. p. 15 , ἤδη γάρ με φοίνιον νέα F. G. Schmidt Krit. Stud. 3 p. 1 . v. 13 ἐξοπλιζόμεσθα δή vel ἐξοπλιζόμεσθ’ ἄρα, ut φεῦ extra versum positum sit, coni. Meineke in Stob. Flor. 4 p. LX, ἐξοπλιζόμεσθ’ ἄνοι F. G. Schmidt. v. 15 ἢ S, ἣ Frob. , ᾗ olim scripsi.",
+          "play_title": "ΜΗΔΕΙΑ",
+          "play_work": "medeia",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia",
+          "attribution_id": "nauck1889grc1-tlg0307-medeia",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0307-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0307-fr3-l1",
+              "text": "τέλος γὰρ αὐτὸς αἰσχίστῳ μόρῳ φέρεις,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0307-fr3-l2",
+              "text": "βροχωτὸν ἀγχόνην ἐπισπάσας δέρῃ ."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0307-fr3-l3",
+              "text": "τοία σε μοῖρα σῶν κακῶν ἔργων μένει,"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0307-fr3-l4",
+              "text": "διδάξεις τ’ ἄλλους μυρίους ἐφημέρους"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0307-fr3-l5",
+              "text": "θεῶν ὕπερθε μήποτ’ αἴρεσθαι βροτοῖς."
+            }
+          ],
+          "context": "Schol. Eur. Med. 1387 : οἳ μὲν λέγουσι κατὰ Μηδείας χόλον ἢ κέλευσιν ὑπὸ τῇ πρύμνῃ τῆς Ἀργοῦς καταδαρθόντα τὸν Ἰάσονα τελευτῆσαι ἐμπεσόντος αὐτῷ ξύλου· Νεόφρων δὲ ξενικώτερον ἀγχόνῃ φησὶ τελευτῆσαι· τὴν γὰρ Μήδειαν παράγει πρὸς αὐτὸν εἰποῦσαν ‘τέλος γὰρ — βροτοῖς’ . v. 1 αὐτὸς ἐχθίστῳ Fl. 6 , αὐτὸν ἐχθίστῳ B, αὐτεχθίστῳ I, αὐτὸς αἰσχίστῳ Elmsley. φέρεις] φθερεῖς Elmsley, φθερεῖ Hermann. v. 2 βροχωτὸν B, βρόχῳ τὸν Fl. 6 , βροτὸν I. ἀγχόνην Hermann, ἀγχόνης libri. δέρῃ B, δέρην Fl. 6 , ἔρη I. hinc v. 1 et 2 τέλος φθερεῖ γὰρ αὐτὸς αἰσχίστῳ μόρῳ , βροχωτὸν — δέρῃ scripsit Dindorf, τέλος γὰρ αὐτὸς αὑτὸν αἰσχίστῳ μόρῳ φθερεῖς, βρόχον τὸν ἀγχόνης ἐπισπάσας coni. R. Methner diss. p. 16 . ἔρρεις τέλος γὰρ αὐτὸς αἰσχίστῳ μόρῳ , δέρῃ βροχωτὸν ἀγχόνην ἐπισπάσας ego temptabam. v. 3 τοιάδε σ’ ἄποινα F. G. Schmidt Krit. Stud. 3 p. 2 . v. 4 τ’ B, τοὺς I Fl. 6 . δίδαξις ἄλλοις μυρίοις ἐφημέροις Elmsley, δείξεις δ’ ἐς ἄλλους μυρίους ἐφημέρους Conington, ὅπως διδάξῃς μυρίους ἐφημέρους Bergk Griech. Lit. 3 p. 506 , δείξεις δὲ κἄλλοις μυρίοις ἐφημέροις F. G. Schmidt. v. 5 μήποτ’ αἴρεσθαι Barnes, μήποθ’ αἱρεῖσθαι libri. βροτοῖς Β Fl. 6 , βροτούς I, φρένας Bergk, τρόπους F. G. Schmidt.",
+          "play_title": "ΜΗΔΕΙΑ",
+          "play_work": "medeia",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia",
+          "attribution_id": "nauck1889grc1-tlg0307-medeia",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0307.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 24,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0307-medeia",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0307-medeia",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0307_medeia",
+      "corresp": [
+        "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0307.fragmenta.nauck1889grc1:3"
+      ]
+    }
+  ]
+}

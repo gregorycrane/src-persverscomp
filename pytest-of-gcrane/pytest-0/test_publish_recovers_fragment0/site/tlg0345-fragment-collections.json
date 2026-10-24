@@ -1,0 +1,76 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0345",
+  "author": "Apollonides",
+  "corpus_title": "Apollonides, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0345.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0345.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0345.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0345-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0345.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0345-fr1-l1",
+          "text": "φεῦ φεῦ , γυναῖκες, ὡς ἐν ἀνθρώποις ἄρα"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0345-fr1-l2",
+          "text": "οὐ χρυσός, οὐ τυραννίς, οὐ πλούτου χλιδὴ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0345-fr1-l3",
+          "text": "τοσοῦτον εἶχε διαφόρους τὰς ἡδονὰς"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0345-fr1-l4",
+          "text": "ὡς ἀνδρὸς ἐσθλοῦ καὶ γυναικὸς εὐσεβοῦς"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0345-fr1-l5",
+          "text": "γνώμη δικαία καὶ φρονοῦσα τἄνδικα."
+        }
+      ],
+      "context": "Stob. Flor. 67 , 3 : Ἀπολλωνίδου. ‘φεῦ φεῦ — τἄνδικα’ . Clemens Alex. Paed. III p. 303 : πάνυ γοῦν θαυμασίως ἡ τραγῳδία ‘φεῦ φεῦ , γυναῖκες’ , φησίν, ‘ὡς ἐν ἀνθρώποις — φρονοῦσα τἀνδρικά’ . v. 2 οὐ πλοῦτος, οὐ τυραννίς, οὐ χρυσοῦ χλιδή requiri arbitror. v. 3 εἶχεν Clem. , ἴσχε coni. F. G. Schmidt Krit. Stud. 3 p. 25 . v. 5 κοινὴ δίαιτα F. G. Schmidt Krit. Stud. 3 p. 27 . τἄνδικα Stob. , τἀνδρικά Clem. , ταὔτ’ ἀεί Herwerden Exerc. crit. p. 80 , πάντ’ ἴσα Enger Adnot. ad poet. Gr. fr. p. 17 ."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0345-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0345.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0345-fr2-l1",
+          "text": "γυναικὸς ἀρετὰς ἀξίως ἐπαινέσαι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0345-fr2-l2",
+          "text": "σοφοῦ τινος γένοιτ’ ἂν ἵστορος λόγων."
+        }
+      ],
+      "context": "Stob. Flor. 67 , 6 : Ἀπολλωνίδου (sic MA, Euripidi locum tribuit S, ubi eclogae 6-8 10 12 uno lemmate Εὐριπίδου comprehenduntur) . ‘γυναικὸς — λόγων’"
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

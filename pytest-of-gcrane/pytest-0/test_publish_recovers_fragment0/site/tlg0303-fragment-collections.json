@@ -1,0 +1,1279 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0303",
+  "author": "Phrynichus",
+  "corpus_title": "Phrynichus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0303.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0303-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr1-l1",
+          "text": "ἰαίνεται"
+        }
+      ],
+      "context": "Hesych. 2 p. 336 : ἰαίνεται· χολοῦται, πικραίνεται (ἐπικραίνεται cod.) , παρὰ τὸν ἰόν. Φρύνιχος Αἰγυπτίοις.",
+      "play_title": "ΑΙΓΥΠΤΙΟΙ",
+      "play_work": "aigyptioi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0303-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr2-l1",
+          "text": "σῶμα δ’ ἀθαμβὲς γυιοδόνητον"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr2-l2",
+          "text": "τείρει"
+        }
+      ],
+      "context": "Hesych. 1 p. 61 : ἀθαμβές· Φρύνιχος Ἀλκήστιδι (φρύνιχι ἀλκίστιδι cod.) ‘σῶμα — τείρει’ . v. 1 γυοδόνιστον cod. , γυιοδόνητον Toup Emend. 4 p. 348 , γυιόδμητον Bergk Griech. Lit. 3 p. 498 . v. 2 τήρει Musurus.",
+      "play_title": "ΑΛΚΗΣΤΙΣ",
+      "play_work": "alkestis",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0303-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [],
+      "context": "Servius in Verg. Aen. 4 , 694 : alii dicunt Euripidem Orcum in scenam inducere gladium ferentem, quo crinem Alcesti abscindat, Euripidem hoc a Phrynicho (poenia F, phenico T, corr. O. Iahn Mus. Rhen. 9 p. 625) antiquo tragico mutuatum.",
+      "play_title": "ΑΛΚΗΣΤΙΣ",
+      "play_work": "alkestis",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0303-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr4-l1",
+          "text": "ἔγκαρπα"
+        }
+      ],
+      "context": "Hesych. 2 p. 7 : ἔγκαρτα· τοὺς κεκουρευμένους πυρούς. ἀλλὰ καὶ ἔγκαρπα. Φρύνιχος Δαναΐσιν (sic Florens Christianus, δάνεσιν codex. disputavit de hoc loco Meineke Philol. 13 p. 536 .",
+      "play_title": "ΔΑΝΑΙΔΕΣ",
+      "play_work": "danaides",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_danaides"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0303-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr5-l1",
+          "text": "στρατός ποτ’ εἰς γῆν τήνδ’ ἐπεστρώφα ποδί ,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr5-l2",
+          "text": "Ὕαντος ἣν ἔναιεν ἀρχαῖος λεώς,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0303-fr5-l3",
+          "text": "πεδία δὲ πάντα καὶ παράκτιον πλάκα"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0303-fr5-l4",
+          "text": "ὠκεῖα μάργοις φλὸξ ἐδαίνυτο γνάθοις."
+        }
+      ],
+      "context": "Tzetz. in Lycophr. 433 de Hyantibus : μέμνηται δὲ τοῦ ἔθνους τούτου καὶ Φρύνιχος ὁ τραγικὸς ἐν δράματι Πλευρωνίαις (Πλευρωνίᾳ Viteb. 2 et 3) λέγων ‘στρατός — γνάθοις’ . v. 1 ποδί] fort. πολύς leg. v. 2 Ὕαντος ὃς γῆν ναῖεν ed. , Ὕαντος ὃς γυναῖαν Viteb. 2 et 3 . Ὕαντος ἣν ἔναιεν Vnger, aequo iure Ὕαντες ἣν ἔναιον scribi posse dixi in Mus. Rhen. 6 p. 461 . ἀρχαῖος] Ἀγραῖος Vnger Theb. Parad. p. 8 . v. 3 δὲ om. Viteb. 2 et 3 .",
+      "play_title": "ΠΛΕΥΡΩΝΙΑΙ",
+      "play_work": "pleyroniai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0303-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr6-l1",
+          "text": "κρυερὸν γὰρ οὐκ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr6-l2",
+          "text": "ἤλυξεν μόρον, ὠκεῖα δέ νιν φλὸξ κατεδαίσατο"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0303-fr6-l3",
+          "text": "δαλοῦ περθομένου ματρὸς ὑπ’ αἰνᾶς κακομηχάνου."
+        }
+      ],
+      "context": "Pausan. 10 , 31 , 4 : τὸν δὲ ἐπὶ τῷ δαλῷ λόγον, ὡς δοθείη μὲν ὑπὸ μοιρῶν τῇ Ἀλθαίᾳ , Μελεάγρῳ δὲ οὐ πρότερον ἔδει τὴν τελευτὴν συμβῆναι πρὶν ἢ ὑπὸ πυρὸς ἀφανισθῆναι τὸν δαλόν, καὶ ὡς ὑπὸ τοῦ θυμοῦ καταπρήσειεν αὐτὸν ἡ Ἀλθαία, τοῦτον τὸν λόγον Φρύνιχος ὁ Πολυφράσμονος πρῶτος ἐν δράματι ἔδειξε Πλευρωνίαις (πλευρῶνι ἐς ante Facium) ‘κρυερὸν — κακομηχάνου’ . οὐ μὴν φαίνεταί γε ὁ Φρύνιχος προαγαγὼν τὸν λόγον ἐς πλέον ὡς εὕρημα ἄν τις οἰκεῖον, προσαψάμενος δὲ αὐτοῦ μόνον ἅτε ἐς ἅπαν ἤδη διαβεβοημένου τὸ Ἑλληνικόν.",
+      "play_title": "ΠΛΕΥΡΩΝΙΑΙ",
+      "play_work": "pleyroniai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0303-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr7-l1",
+          "text": "ἐφέδρανα"
+        }
+      ],
+      "context": "Hesych. 2 p. 238 : ἐφέδρανα· ἐφ’ ὧν καθῆντο οἳ τὰς λύρας ἔχουσι. Φρύνιχος Ταντάλῳ . lemma in ἐφ’ ἕδρανα mutat Meineke Philol. 13 p. 536 . οἳ addidit Musurus. Φρύνιχος Ἀνταίῳ coni. Leutsch Philol. 14 p. 187 .",
+      "play_title": "ΤΑΝΤΑΛΟΣ",
+      "play_work": "tantalos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_tantalos"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0303-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr8-l1",
+          "text": "Τάδ’ ἐστὶ Περσῶν τῶν πάλαι βεβηκότων"
+        }
+      ],
+      "context": "Argum. Aeschyli Pers. : Γλαῦκος ἐν τοῖς περὶ Αἰσχύλου μύθων ἐκ τῶν Φοινισσῶν Φρυνίχου φησὶ τοὺς Πέρσας παραπεποιῆσθαι· ἐκτίθησι δὲ καὶ τὴν ἀρχὴν τοῦ δράματος ταύτην τάδ’ — βεβηκότων’ . πλὴν ἐκεῖ εὐνοῦχός ἐστιν ὁ ἀγγέλλων ἐν ἀρχῇ τὴν Ξέρξου ἧτταν στορνύς τε θρόνους τινὰς τοῖς τῆς ἀρχῆς παρέδροις.",
+      "play_title": "ΦΟΙΝΙΣΣΑΙ",
+      "play_work": "phoinissai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0303-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr9-l1",
+          "text": "Σιδώνιον ἄστυ λιποῦσαι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr9-l2",
+          "text": "καὶ δροσερὰν Ἄραδον"
+        }
+      ],
+      "context": "Ar. Vesp. 220 : μινυρίζοντες μέλη ἀρχαιομελισιδωνοφρυνιχήρατα. ubi Schol. : δι’ ὀνόματος ἦν καθόλου μὲν ὁ Φρύνιχος ἐπὶ μελοποιίᾳ , μάλιστα δὲ τὸ ἐκ τῶν Φοινισσῶν αὐτοῦ τὸ ‘καὶ Σιδῶνος προλιπόντα ναόν’ (fr. 10) ἢ ‘Σιδώνιον ἄστυ λιποῦσα’ . Hesych. 1 p. 435 : γλυκερῷ Σιδωνίῳ . δρᾶμα δέ ἐστιν ἐν ᾧ τῆς θεμέλης (θυμέλης Mus.) ἄρχεται οὕτως ‘Σιδώνιον — ἐρανάδαρον’ . διαβεβόητο δὲ τὸ μέλος (μέρος cod.) τοῦτο. v. 1 λιπόντες Hesych. , λιποῦσα Schol. Ar. , λιποῦσαι Porson. v. 2 καῖδρος ἐρανάδαρον cod. , καὶ δροσερὰν Schow, Ἄραδον Porson Tracts and misc. crit. p. 283 .",
+      "play_title": "ΦΟΙΝΙΣΣΑΙ",
+      "play_work": "phoinissai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai"
+    },
+    {
+      "number": "10",
+      "source_id": "tlg0303-fr10",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:10",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr10-l1",
+          "text": "καὶ Σιδῶνος προλιπόντα ναόν"
+        }
+      ],
+      "context": "Schol. Ar. Vesp. 220 , vide fr. 9 . νᾶσον coni. Meineke Jahrb. f. Philol. vol. 87 p. 383 .",
+      "play_title": "ΦΟΙΝΙΣΣΑΙ",
+      "play_work": "phoinissai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai"
+    },
+    {
+      "number": "11",
+      "source_id": "tlg0303-fr11",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:11",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr11-l1",
+          "text": "ψαλμοῖσιν ἀντίσπαστ’ ἀείδοντες μέλη"
+        }
+      ],
+      "context": "Ath. XIV p. 635 C. καὶ Φρύνιχος δ’ ἐν Φοινίσσαις εἴρηκε ‘ψαλμοῖσιν — μέλη’ .",
+      "play_title": "ΦΟΙΝΙΣΣΑΙ",
+      "play_work": "phoinissai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai"
+    },
+    {
+      "number": "12",
+      "source_id": "tlg0303-fr12",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:12",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr12-l1",
+          "text": "σφηκῶσαι"
+        }
+      ],
+      "context": "Antiatt. p. 114 , 6 : σφηκῶσαι· τὸ δῆσαι. Φρύνιχος Φοινίσσαις Phot. Lex. p. 560 , 14 et Etym. M. p. 738 , 42 : σφηκῶσαι· τὸ δῆσαι. οὕτω Φρύνιχος.",
+      "play_title": "ΦΟΙΝΙΣΣΑΙ",
+      "play_work": "phoinissai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai"
+    },
+    {
+      "number": "13",
+      "source_id": "tlg0303-fr13",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:13",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr13-l1",
+          "text": "λάμπει δ’ ἐπὶ πορφυρέαις παρῇσι φῶς ἔρωτος"
+        }
+      ],
+      "context": "Ath. XIII p. 564 F : Φρύνιχός τε ἐπὶ τοῦ Τρωίλου ἔφη ‘λάμπειν ἐπὶ — ἔρωτος’ . p. 604 A : ὡς καλῶς Φρύνιχος ἐποίησεν εἴπας ‘λάμπει δ’ ἐπὶ — ἔρωτος’ . eadem verba om. poetae nomine repetit Eust. Od. p. 1558 , 18 . λάμπει δ’] λάμπεις Eust. πορφυραῖς Ath. p. 564 et Eust. παρῇσι Porson, παρίησι vel παρηίσι Ath. , παρειῇσι Eust.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "14",
+      "source_id": "tlg0303-fr14",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:14",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr14-l1",
+          "text": "τό γε μὴν ξείνια δούσαις, λόγος ὥσπερ λέγεται,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr14-l2",
+          "text": "ὀλέσαι κἀποτεμεῖν ὀξέι χαλκῷ κεφαλὰν"
+        }
+      ],
+      "context": "Hephaest. p. 72 : τῶν δὲ ἐν τῷ μέτρῳ μεγεθῶν τὸ μὲν ἐπισημότατόν ἐστι τὸ τετράμετρον καταληκτικόν, οἷόν ἐστι τὸ Φρυνίχου τοῦ τραγικοῦ τόδε τό γε — κεφαλάν’ . καὶ παρὰ Φρυνίχῳ τῷ κωμικῷ ‘ἃ δ’ — φράσομεν’ . v. 2 καὶ ποτέ μιν libri, κἀποτεμεῖν Dorville. dubito num v. 1 et 2 inter se cohaereant.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "15",
+      "source_id": "tlg0303-fr15",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:15",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr15-l1",
+          "text": "ἃ δ’ ἄναγν’ ἐσθ’ ἱερεῦσιν καθαρεύειν φράσομεν."
+        }
+      ],
+      "context": "Hephaest. p. 72 (v. fr. 14) comico Phrynicho haec verba tribuit vix recte. ἃ δ’ ἀνάγκα ’σθ’ ed. , ἅ δ’ ἀνάγκασθ’ cod. Ambr. , ἃ δ’ ἄναγν’ ἐσθ’ scripsi.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "16",
+      "source_id": "tlg0303-fr16",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:16",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr16-l1",
+          "text": "ταῦρος ἀργιμήτης"
+        }
+      ],
+      "context": "Eust. Od. p. 1430 , 62 : καὶ ‘ταῦρος ἀργιμήτης’ ἤγουν λευκός, φασί , παρὰ Φρυνίχῳ ὁ διακομίσας τὴν Εὐρώπην. cf. Hesych. 1 p. 273 : ἀργιμήτας ταῦρος· ταχύμητις (ταχομῆτις cod.) ἢ λευκός, παραγώγως (παραγώγους cod.) . λέγεται δὲ ἐπὶ τοῦ διακομίσαντος τὴν Εὐρώπην. ad Phoenissas locum probabiliter revocat Meineke. at ἀργιμήτης sive ἀργιμήτας vitiose est formatum *) et ineptum. expectamus ἀργιμέτωπος, sicut de eodem tauro dicit Moschus 2 , 85 : κύκλος δ’ ἀργύφεος μέσσῳ μάρμαιρε μετώπῳ . cf. Il. Ψ 454 : ἐν δὲ μετώπῳ λευκὸν σῆμα τέτυκτο περίτροχον ἠύτε μήνη.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "17",
+      "source_id": "tlg0303-fr17",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:17",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr17-l1",
+          "text": "ἔπτηξ’ ἀλέκτωρ δοῦλον ὣς κλίνας πτερόν"
+        }
+      ],
+      "context": "Plut. Amator. c. 18 , 4 p. 762 F : ἅμα τῷ γε καλὸν ἰδεῖν ‘ἔπτηξ’ — πτερόν’ καὶ τὸ θράσος ἐγκέκλασται. eundem versum om. p. nom. habet Plut. V. Alcib. c. 4 et Pelop. c. 29 . Phrynichi esse verba docet parodia Ar. Vesp. 1490 : πτήσσει Φρύνιχος ὥς τις ἀλέκτωρ. de fabula cuius iambus fuerit non ausim coniecturam facere ex Aelian. V. H. 13 , 17 : πτήσσει Φρύνιχος ὥς τις ἀλεκτρυών (l. ἀλέκτωρ) , παροιμία ἐπὶ τῶν κακῶς τι πασχόντων (l. κακῶς πασχόντων)· ὑποκρινομένου γὰρ Φρυνίχου τοῦ τραγικοῦ τὴν Μιλήτου ἅλωσιν οἱ Ἀθηναῖοι δακρύσαντες ἐξέβαλον δεδοικότα καὶ ὑποπτήσσοντα.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "18",
+      "source_id": "tlg0303-fr18",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:18",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr18-l1",
+          "text": "ταχὺν πόδα κυκλοσοβήσω"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0303-fr18-l2",
+          "text": "σκέλος οὐράνιόν γ’ ἐκλακτίζων."
+        }
+      ],
+      "context": "Ar. Vesp. 1490 : πτήσσει Φρύνιχος ὥς τις ἀλέκτωρ — σκέλος οὐράνιον ἐκλακτίζων. sicut verbis πτήσσει ἀλέκτωρ Phrynichi versus ridetur, ita quae sequuntur non dubito quin eodem ex poeta repetita sint. compares Ar. Vesp. 1523 : ταχὺν πόδα κυκλοσοβεῖτε καὶ τὸ Φρυνίχειον ἐκλακτισάτω τις ὅπως ἰδόντες ἄνω σκέλος ὤζωσιν οἱ θεαταί. hinc suspicor dixisse Phrynichum ταχὺν πόδα κυκλοσοβήσωσκέλος οὐράνιόν γ’ ἐκλακτίζων. etiam Eupolidem (Com. 2 p. 569 sive fr. 411 p. 363 Kock.) risisse Phrynicheum istud ἐκλακτίζειν probabile est.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "19",
+      "source_id": "tlg0303-fr19",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:19",
+      "same_as": [],
+      "lines": [],
+      "context": "Ar. Av. 750 : ἔνθεν ὡσπερεὶ μέλιττα Φρύνιχος ἀμβροσίων μελέων *) Vberius hac de re disputavi Mélanges Gréco-Rom. IV p. 108-124 . omnino consentit mecum Naber Mnem. nov. 12 p. 348 et secuti sunt rationem a me propositam novissimi Iliadis editores I. van Leeuwen et M. B. Mendes da Costa. ἀπεβόσκετο καρπόν, ἀεὶ φέρων γλυκεῖαν ᾠδήν. Phrynichei loci parodia manifesta : quid mutarit Aristophanes nescimus ; cf. Ran. 1299 : ἵνα μὴ τὸν αὐτὸν Φρυνίχῳ λειμῶνα μουσῶν ἱερὸν ὀφθείην δρέπων.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "20",
+      "source_id": "tlg0303-fr20",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:20",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr20-l1",
+          "text": "ὦ φίλτατ’ ἀνδρῶν, μή μ’ ἀτιμάσας γένῃ ."
+        }
+      ],
+      "context": "Priscianus Inst. 18 , 201 vol. 2 p. 305 , 3 : participia pro verbis ponunt Attici, quod frequenter faciunt Latini. — Phroenichus ‘ὦ — γένῃ’ . comico poetae hunc versum parum probabiliter tribuit Meineke Com. 2 p. 605 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "21",
+      "source_id": "tlg0303-fr21",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:21",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr21-l1",
+          "text": "ἐγὼ δέ , μισεῖ γάρ μ’ , ἄπειμ’ ἐξ ὀμμάτων."
+        }
+      ],
+      "context": "Zon. Lex. p. 757 : ἐξ ὀφθαλμῶν οὐ λέγουσιν οὐδ’ ἐκ προσώπου. Φρύνιχος ‘ἐγὼ δὲ — ἐξ ὀμμάτων’ . ἄπειμ’ nescio quis, ἄμειμι ed. Tittmann. tragico poetae recte versum tribuit Welcker Tragod. p. 1499 , cf. Cobet Coll. crit. p. 204 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "22",
+      "source_id": "tlg0303-fr22",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:22",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr22-l1",
+          "text": "ἴδριδες"
+        }
+      ],
+      "context": "Schol. A Il. Γ 219 : ὁ γὰρ Σοφοκλῆς ἴδριδα ἔφη τὴν αἰτιατικὴν ὅ τε Φρύνιχος τὴν εὐθεῖαν ἴδριδες. similiter Etym. M. p. 42 , 41 et Eust. Il. p. 407 , 38 (vide Soph. fr. 953) . tragicum poetam dici probabiliter statuit Meineke Hist. crit. p. 159 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "23",
+      "source_id": "tlg0303-fr23",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:23",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr23-l1",
+          "text": "σεμέλη"
+        }
+      ],
+      "context": "Hesych. 4 p. 20 : σεμέλη· τράπεζα. παρὰ δὲ Φρυνίχῳ ἑορτή . lemma suspectum : θυμέλη coni. Schrevel.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "24",
+      "source_id": "tlg0303-fr24",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:24",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0303-fr24-l1",
+          "text": "ψέλια"
+        }
+      ],
+      "context": "Antiatt. p. 116 , 26 : ψέλια· τὰ τοῖς πήχεσιν, οὐ μόνον στρεπτά . Φρύνιχος. Phoenissis hunc locum adscribit Blomf. in Aesch. Pers. p. IV.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0303-aigyptioi": {
+      "id": "tlg0303-aigyptioi",
+      "work": "aigyptioi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi",
+      "title": "ΑΙΓΥΠΤΙΟΙ",
+      "source_title": "ΑΙΓΥΠΤΙΟΙ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-aigyptioi",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. Eur. Or. 872 : Φρύνιχος δὲ ὁ τραγικὸς φησὶ σὺν (fort. φησὶν ἐν) Αἰγυπτίοις τὸν Αἴγυπτον ἥκειν εἰς Ἄργος.",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0303-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr1-l1",
+              "text": "ἰαίνεται"
+            }
+          ],
+          "context": "Hesych. 2 p. 336 : ἰαίνεται· χολοῦται, πικραίνεται (ἐπικραίνεται cod.) , παρὰ τὸν ἰόν. Φρύνιχος Αἰγυπτίοις.",
+          "play_title": "ΑΙΓΥΠΤΙΟΙ",
+          "play_work": "aigyptioi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi",
+          "attribution_id": "nauck1889grc1-tlg0303-aigyptioi",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-alkestis": {
+      "id": "tlg0303-alkestis",
+      "work": "alkestis",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis",
+      "title": "ΑΛΚΗΣΤΙΣ",
+      "source_title": "ΑΛΚΗΣΤΙΣ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-alkestis",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0303-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr2-l1",
+              "text": "σῶμα δ’ ἀθαμβὲς γυιοδόνητον"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr2-l2",
+              "text": "τείρει"
+            }
+          ],
+          "context": "Hesych. 1 p. 61 : ἀθαμβές· Φρύνιχος Ἀλκήστιδι (φρύνιχι ἀλκίστιδι cod.) ‘σῶμα — τείρει’ . v. 1 γυοδόνιστον cod. , γυιοδόνητον Toup Emend. 4 p. 348 , γυιόδμητον Bergk Griech. Lit. 3 p. 498 . v. 2 τήρει Musurus.",
+          "play_title": "ΑΛΚΗΣΤΙΣ",
+          "play_work": "alkestis",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis",
+          "attribution_id": "nauck1889grc1-tlg0303-alkestis",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0303-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [],
+          "context": "Servius in Verg. Aen. 4 , 694 : alii dicunt Euripidem Orcum in scenam inducere gladium ferentem, quo crinem Alcesti abscindat, Euripidem hoc a Phrynicho (poenia F, phenico T, corr. O. Iahn Mus. Rhen. 9 p. 625) antiquo tragico mutuatum.",
+          "play_title": "ΑΛΚΗΣΤΙΣ",
+          "play_work": "alkestis",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis",
+          "attribution_id": "nauck1889grc1-tlg0303-alkestis",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-antaios": {
+      "id": "tlg0303-antaios",
+      "work": "antaios",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_antaios",
+      "title": "ΑΝΤΑΙΟΣ",
+      "source_title": "ΑΝΤΑΙΟΣ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-antaios",
+      "record_type": "fragmentary_play",
+      "introduction": "Ἀνταῖος ἢ Λίβυες habet Suidas v. Φρύνιχος. Schol. Ar. Ran. 688 : ὁ τραγικὸς Φρύνιχος ἐν Ἀνταίῳ δράματι περὶ παλαισμάτων πολλὰ διεξῆλθεν. Herculis igitur et Antaei luctationem poeta proposuit.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0303-danaides": {
+      "id": "tlg0303-danaides",
+      "work": "danaides",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_danaides",
+      "title": "ΔΑΝΑΙΔΕΣ",
+      "source_title": "ΔΑΝΑΙΔΕΣ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-danaides",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0303-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr4-l1",
+              "text": "ἔγκαρπα"
+            }
+          ],
+          "context": "Hesych. 2 p. 7 : ἔγκαρτα· τοὺς κεκουρευμένους πυρούς. ἀλλὰ καὶ ἔγκαρπα. Φρύνιχος Δαναΐσιν (sic Florens Christianus, δάνεσιν codex. disputavit de hoc loco Meineke Philol. 13 p. 536 .",
+          "play_title": "ΔΑΝΑΙΔΕΣ",
+          "play_work": "danaides",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_danaides",
+          "attribution_id": "nauck1889grc1-tlg0303-danaides",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-miletoy-alosis": {
+      "id": "tlg0303-miletoy-alosis",
+      "work": "miletoy_alosis",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_miletoy_alosis",
+      "title": "ΜΙΛΗΤΟΥ ΑΛΩΣΙΣ",
+      "source_title": "ΜΙΛΗΤΟΥ ΑΛΩΣΙΣ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-miletoy-alosis",
+      "record_type": "fragmentary_play",
+      "introduction": "Herodotus 6 , 21 : Ἀθηναῖοι μὲν γὰρ δῆλον ἐποίησαν ὑπεραχθεσθέντες τῇ Μιλήτου ἁλώσι τῇ τε ἄλλῃ πολλαχῇ καὶ δὴ καὶ ποιήσαντι Φρυνίχῳ δρᾶμα Μιλήτου ἅλωσιν καὶ διδάξαντι ἐς δάκρυά τε ἔπεσε τὸ θέητρον καὶ ἐζημίωσάν μιν ὡς ἀναμνήσαντα οἰκήια κακὰ χιλίῃσι δραχμῇσι, καὶ ἐπέταξαν μηκέτι μηδένα χρᾶσθαι τούτῳ τῷ δράματι. similia referunt plurimi alii, velut Strabo XIV p. 635 Plut. Praec. gerendae rei publ. c. 17 p. 814 B Aelianus V. H. 13 , 17 Schol. Ar. Vesp. 1490 Ammianus Marcell. 28 , 1 , 4 Tzetz. in Hesiod. Op. 412 p. 224 Chil. 7 , 997 Epist. p. 25 Suid. v. Φρύνιχος. cf. Liban. Decl. vol. 4 p. 247 369 454 . ceterum haud iniuria dubitatum est, Μιλήτου ἅλωσις utrum titulus fuerit tragoediae an argumentum Περσῶν, quem titulum Suidas v. Φρύνιχος commemorat. paulo post olymp. 71 , 3 hoc argumentum a pοeta tractatum esse consentaneum est.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0303-pleyroniai": {
+      "id": "tlg0303-pleyroniai",
+      "work": "pleyroniai",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai",
+      "title": "ΠΛΕΥΡΩΝΙΑΙ",
+      "source_title": "ΠΛΕΥΡΩΝΙΑΙ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-pleyroniai",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0303-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr5-l1",
+              "text": "στρατός ποτ’ εἰς γῆν τήνδ’ ἐπεστρώφα ποδί ,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr5-l2",
+              "text": "Ὕαντος ἣν ἔναιεν ἀρχαῖος λεώς,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0303-fr5-l3",
+              "text": "πεδία δὲ πάντα καὶ παράκτιον πλάκα"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0303-fr5-l4",
+              "text": "ὠκεῖα μάργοις φλὸξ ἐδαίνυτο γνάθοις."
+            }
+          ],
+          "context": "Tzetz. in Lycophr. 433 de Hyantibus : μέμνηται δὲ τοῦ ἔθνους τούτου καὶ Φρύνιχος ὁ τραγικὸς ἐν δράματι Πλευρωνίαις (Πλευρωνίᾳ Viteb. 2 et 3) λέγων ‘στρατός — γνάθοις’ . v. 1 ποδί] fort. πολύς leg. v. 2 Ὕαντος ὃς γῆν ναῖεν ed. , Ὕαντος ὃς γυναῖαν Viteb. 2 et 3 . Ὕαντος ἣν ἔναιεν Vnger, aequo iure Ὕαντες ἣν ἔναιον scribi posse dixi in Mus. Rhen. 6 p. 461 . ἀρχαῖος] Ἀγραῖος Vnger Theb. Parad. p. 8 . v. 3 δὲ om. Viteb. 2 et 3 .",
+          "play_title": "ΠΛΕΥΡΩΝΙΑΙ",
+          "play_work": "pleyroniai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai",
+          "attribution_id": "nauck1889grc1-tlg0303-pleyroniai",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0303-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr6-l1",
+              "text": "κρυερὸν γὰρ οὐκ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr6-l2",
+              "text": "ἤλυξεν μόρον, ὠκεῖα δέ νιν φλὸξ κατεδαίσατο"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0303-fr6-l3",
+              "text": "δαλοῦ περθομένου ματρὸς ὑπ’ αἰνᾶς κακομηχάνου."
+            }
+          ],
+          "context": "Pausan. 10 , 31 , 4 : τὸν δὲ ἐπὶ τῷ δαλῷ λόγον, ὡς δοθείη μὲν ὑπὸ μοιρῶν τῇ Ἀλθαίᾳ , Μελεάγρῳ δὲ οὐ πρότερον ἔδει τὴν τελευτὴν συμβῆναι πρὶν ἢ ὑπὸ πυρὸς ἀφανισθῆναι τὸν δαλόν, καὶ ὡς ὑπὸ τοῦ θυμοῦ καταπρήσειεν αὐτὸν ἡ Ἀλθαία, τοῦτον τὸν λόγον Φρύνιχος ὁ Πολυφράσμονος πρῶτος ἐν δράματι ἔδειξε Πλευρωνίαις (πλευρῶνι ἐς ante Facium) ‘κρυερὸν — κακομηχάνου’ . οὐ μὴν φαίνεταί γε ὁ Φρύνιχος προαγαγὼν τὸν λόγον ἐς πλέον ὡς εὕρημα ἄν τις οἰκεῖον, προσαψάμενος δὲ αὐτοῦ μόνον ἅτε ἐς ἅπαν ἤδη διαβεβοημένου τὸ Ἑλληνικόν.",
+          "play_title": "ΠΛΕΥΡΩΝΙΑΙ",
+          "play_work": "pleyroniai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai",
+          "attribution_id": "nauck1889grc1-tlg0303-pleyroniai",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 7,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-tantalos": {
+      "id": "tlg0303-tantalos",
+      "work": "tantalos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_tantalos",
+      "title": "ΤΑΝΤΑΛΟΣ",
+      "source_title": "ΤΑΝΤΑΛΟΣ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-tantalos",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "7",
+          "source_id": "tlg0303-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr7-l1",
+              "text": "ἐφέδρανα"
+            }
+          ],
+          "context": "Hesych. 2 p. 238 : ἐφέδρανα· ἐφ’ ὧν καθῆντο οἳ τὰς λύρας ἔχουσι. Φρύνιχος Ταντάλῳ . lemma in ἐφ’ ἕδρανα mutat Meineke Philol. 13 p. 536 . οἳ addidit Musurus. Φρύνιχος Ἀνταίῳ coni. Leutsch Philol. 14 p. 187 .",
+          "play_title": "ΤΑΝΤΑΛΟΣ",
+          "play_work": "tantalos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_tantalos",
+          "attribution_id": "nauck1889grc1-tlg0303-tantalos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-phoinissai": {
+      "id": "tlg0303-phoinissai",
+      "work": "phoinissai",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+      "title": "ΦΟΙΝΙΣΣΑΙ",
+      "source_title": "ΦΟΙΝΙΣΣΑΙ",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-phoinissai",
+      "record_type": "fragmentary_play",
+      "introduction": "Probabiliter Bentley de Phalaridis Epist. p. 286 sq. ed. Ribb. coniecit olymp. 75 , 4 Adimanto archonte hanc fabulam actam esse, quo anno Phrynichum tragoedia vicisse testatur Plut. V. Themist. c. 5 : ἐνίκησε δὲ καὶ χορηγῶν τραγῳδοῖς (Themistocles) , μεγάλην ἤδη τότε σπουδὴν καὶ φιλοτιμίαν τοῦ ἀγῶνος ἔχοντος· καὶ πίνακα τῆς νίκης ἀνέθηκε τοιαύτην ἐπιγραφὴν ἔχοντα· Θεμιστοκλῆς Φρεάρριος ἐχορήγει, Φρύνιχος ἐδίδασκεν, Ἀδείμαντος ἦρχεν. argumentum idem fuit quod Aeschyli Persarum.",
+      "fragments": [
+        {
+          "number": "8",
+          "source_id": "tlg0303-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr8-l1",
+              "text": "Τάδ’ ἐστὶ Περσῶν τῶν πάλαι βεβηκότων"
+            }
+          ],
+          "context": "Argum. Aeschyli Pers. : Γλαῦκος ἐν τοῖς περὶ Αἰσχύλου μύθων ἐκ τῶν Φοινισσῶν Φρυνίχου φησὶ τοὺς Πέρσας παραπεποιῆσθαι· ἐκτίθησι δὲ καὶ τὴν ἀρχὴν τοῦ δράματος ταύτην τάδ’ — βεβηκότων’ . πλὴν ἐκεῖ εὐνοῦχός ἐστιν ὁ ἀγγέλλων ἐν ἀρχῇ τὴν Ξέρξου ἧτταν στορνύς τε θρόνους τινὰς τοῖς τῆς ἀρχῆς παρέδροις.",
+          "play_title": "ΦΟΙΝΙΣΣΑΙ",
+          "play_work": "phoinissai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+          "attribution_id": "nauck1889grc1-tlg0303-phoinissai",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0303-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr9-l1",
+              "text": "Σιδώνιον ἄστυ λιποῦσαι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr9-l2",
+              "text": "καὶ δροσερὰν Ἄραδον"
+            }
+          ],
+          "context": "Ar. Vesp. 220 : μινυρίζοντες μέλη ἀρχαιομελισιδωνοφρυνιχήρατα. ubi Schol. : δι’ ὀνόματος ἦν καθόλου μὲν ὁ Φρύνιχος ἐπὶ μελοποιίᾳ , μάλιστα δὲ τὸ ἐκ τῶν Φοινισσῶν αὐτοῦ τὸ ‘καὶ Σιδῶνος προλιπόντα ναόν’ (fr. 10) ἢ ‘Σιδώνιον ἄστυ λιποῦσα’ . Hesych. 1 p. 435 : γλυκερῷ Σιδωνίῳ . δρᾶμα δέ ἐστιν ἐν ᾧ τῆς θεμέλης (θυμέλης Mus.) ἄρχεται οὕτως ‘Σιδώνιον — ἐρανάδαρον’ . διαβεβόητο δὲ τὸ μέλος (μέρος cod.) τοῦτο. v. 1 λιπόντες Hesych. , λιποῦσα Schol. Ar. , λιποῦσαι Porson. v. 2 καῖδρος ἐρανάδαρον cod. , καὶ δροσερὰν Schow, Ἄραδον Porson Tracts and misc. crit. p. 283 .",
+          "play_title": "ΦΟΙΝΙΣΣΑΙ",
+          "play_work": "phoinissai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+          "attribution_id": "nauck1889grc1-tlg0303-phoinissai",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "10",
+          "source_id": "tlg0303-fr10",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:10",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr10-l1",
+              "text": "καὶ Σιδῶνος προλιπόντα ναόν"
+            }
+          ],
+          "context": "Schol. Ar. Vesp. 220 , vide fr. 9 . νᾶσον coni. Meineke Jahrb. f. Philol. vol. 87 p. 383 .",
+          "play_title": "ΦΟΙΝΙΣΣΑΙ",
+          "play_work": "phoinissai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+          "attribution_id": "nauck1889grc1-tlg0303-phoinissai",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "11",
+          "source_id": "tlg0303-fr11",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:11",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr11-l1",
+              "text": "ψαλμοῖσιν ἀντίσπαστ’ ἀείδοντες μέλη"
+            }
+          ],
+          "context": "Ath. XIV p. 635 C. καὶ Φρύνιχος δ’ ἐν Φοινίσσαις εἴρηκε ‘ψαλμοῖσιν — μέλη’ .",
+          "play_title": "ΦΟΙΝΙΣΣΑΙ",
+          "play_work": "phoinissai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+          "attribution_id": "nauck1889grc1-tlg0303-phoinissai",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "12",
+          "source_id": "tlg0303-fr12",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:12",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr12-l1",
+              "text": "σφηκῶσαι"
+            }
+          ],
+          "context": "Antiatt. p. 114 , 6 : σφηκῶσαι· τὸ δῆσαι. Φρύνιχος Φοινίσσαις Phot. Lex. p. 560 , 14 et Etym. M. p. 738 , 42 : σφηκῶσαι· τὸ δῆσαι. οὕτω Φρύνιχος.",
+          "play_title": "ΦΟΙΝΙΣΣΑΙ",
+          "play_work": "phoinissai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+          "attribution_id": "nauck1889grc1-tlg0303-phoinissai",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 6,
+      "status": "Fragmentary text"
+    },
+    "tlg0303-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0303-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0303.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0303-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "13",
+          "source_id": "tlg0303-fr13",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:13",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr13-l1",
+              "text": "λάμπει δ’ ἐπὶ πορφυρέαις παρῇσι φῶς ἔρωτος"
+            }
+          ],
+          "context": "Ath. XIII p. 564 F : Φρύνιχός τε ἐπὶ τοῦ Τρωίλου ἔφη ‘λάμπειν ἐπὶ — ἔρωτος’ . p. 604 A : ὡς καλῶς Φρύνιχος ἐποίησεν εἴπας ‘λάμπει δ’ ἐπὶ — ἔρωτος’ . eadem verba om. poetae nomine repetit Eust. Od. p. 1558 , 18 . λάμπει δ’] λάμπεις Eust. πορφυραῖς Ath. p. 564 et Eust. παρῇσι Porson, παρίησι vel παρηίσι Ath. , παρειῇσι Eust.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "14",
+          "source_id": "tlg0303-fr14",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:14",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr14-l1",
+              "text": "τό γε μὴν ξείνια δούσαις, λόγος ὥσπερ λέγεται,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr14-l2",
+              "text": "ὀλέσαι κἀποτεμεῖν ὀξέι χαλκῷ κεφαλὰν"
+            }
+          ],
+          "context": "Hephaest. p. 72 : τῶν δὲ ἐν τῷ μέτρῳ μεγεθῶν τὸ μὲν ἐπισημότατόν ἐστι τὸ τετράμετρον καταληκτικόν, οἷόν ἐστι τὸ Φρυνίχου τοῦ τραγικοῦ τόδε τό γε — κεφαλάν’ . καὶ παρὰ Φρυνίχῳ τῷ κωμικῷ ‘ἃ δ’ — φράσομεν’ . v. 2 καὶ ποτέ μιν libri, κἀποτεμεῖν Dorville. dubito num v. 1 et 2 inter se cohaereant.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "15",
+          "source_id": "tlg0303-fr15",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:15",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr15-l1",
+              "text": "ἃ δ’ ἄναγν’ ἐσθ’ ἱερεῦσιν καθαρεύειν φράσομεν."
+            }
+          ],
+          "context": "Hephaest. p. 72 (v. fr. 14) comico Phrynicho haec verba tribuit vix recte. ἃ δ’ ἀνάγκα ’σθ’ ed. , ἅ δ’ ἀνάγκασθ’ cod. Ambr. , ἃ δ’ ἄναγν’ ἐσθ’ scripsi.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "16",
+          "source_id": "tlg0303-fr16",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:16",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr16-l1",
+              "text": "ταῦρος ἀργιμήτης"
+            }
+          ],
+          "context": "Eust. Od. p. 1430 , 62 : καὶ ‘ταῦρος ἀργιμήτης’ ἤγουν λευκός, φασί , παρὰ Φρυνίχῳ ὁ διακομίσας τὴν Εὐρώπην. cf. Hesych. 1 p. 273 : ἀργιμήτας ταῦρος· ταχύμητις (ταχομῆτις cod.) ἢ λευκός, παραγώγως (παραγώγους cod.) . λέγεται δὲ ἐπὶ τοῦ διακομίσαντος τὴν Εὐρώπην. ad Phoenissas locum probabiliter revocat Meineke. at ἀργιμήτης sive ἀργιμήτας vitiose est formatum *) et ineptum. expectamus ἀργιμέτωπος, sicut de eodem tauro dicit Moschus 2 , 85 : κύκλος δ’ ἀργύφεος μέσσῳ μάρμαιρε μετώπῳ . cf. Il. Ψ 454 : ἐν δὲ μετώπῳ λευκὸν σῆμα τέτυκτο περίτροχον ἠύτε μήνη.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "17",
+          "source_id": "tlg0303-fr17",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:17",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr17-l1",
+              "text": "ἔπτηξ’ ἀλέκτωρ δοῦλον ὣς κλίνας πτερόν"
+            }
+          ],
+          "context": "Plut. Amator. c. 18 , 4 p. 762 F : ἅμα τῷ γε καλὸν ἰδεῖν ‘ἔπτηξ’ — πτερόν’ καὶ τὸ θράσος ἐγκέκλασται. eundem versum om. p. nom. habet Plut. V. Alcib. c. 4 et Pelop. c. 29 . Phrynichi esse verba docet parodia Ar. Vesp. 1490 : πτήσσει Φρύνιχος ὥς τις ἀλέκτωρ. de fabula cuius iambus fuerit non ausim coniecturam facere ex Aelian. V. H. 13 , 17 : πτήσσει Φρύνιχος ὥς τις ἀλεκτρυών (l. ἀλέκτωρ) , παροιμία ἐπὶ τῶν κακῶς τι πασχόντων (l. κακῶς πασχόντων)· ὑποκρινομένου γὰρ Φρυνίχου τοῦ τραγικοῦ τὴν Μιλήτου ἅλωσιν οἱ Ἀθηναῖοι δακρύσαντες ἐξέβαλον δεδοικότα καὶ ὑποπτήσσοντα.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "18",
+          "source_id": "tlg0303-fr18",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:18",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr18-l1",
+              "text": "ταχὺν πόδα κυκλοσοβήσω"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0303-fr18-l2",
+              "text": "σκέλος οὐράνιόν γ’ ἐκλακτίζων."
+            }
+          ],
+          "context": "Ar. Vesp. 1490 : πτήσσει Φρύνιχος ὥς τις ἀλέκτωρ — σκέλος οὐράνιον ἐκλακτίζων. sicut verbis πτήσσει ἀλέκτωρ Phrynichi versus ridetur, ita quae sequuntur non dubito quin eodem ex poeta repetita sint. compares Ar. Vesp. 1523 : ταχὺν πόδα κυκλοσοβεῖτε καὶ τὸ Φρυνίχειον ἐκλακτισάτω τις ὅπως ἰδόντες ἄνω σκέλος ὤζωσιν οἱ θεαταί. hinc suspicor dixisse Phrynichum ταχὺν πόδα κυκλοσοβήσωσκέλος οὐράνιόν γ’ ἐκλακτίζων. etiam Eupolidem (Com. 2 p. 569 sive fr. 411 p. 363 Kock.) risisse Phrynicheum istud ἐκλακτίζειν probabile est.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "19",
+          "source_id": "tlg0303-fr19",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:19",
+          "same_as": [],
+          "lines": [],
+          "context": "Ar. Av. 750 : ἔνθεν ὡσπερεὶ μέλιττα Φρύνιχος ἀμβροσίων μελέων *) Vberius hac de re disputavi Mélanges Gréco-Rom. IV p. 108-124 . omnino consentit mecum Naber Mnem. nov. 12 p. 348 et secuti sunt rationem a me propositam novissimi Iliadis editores I. van Leeuwen et M. B. Mendes da Costa. ἀπεβόσκετο καρπόν, ἀεὶ φέρων γλυκεῖαν ᾠδήν. Phrynichei loci parodia manifesta : quid mutarit Aristophanes nescimus ; cf. Ran. 1299 : ἵνα μὴ τὸν αὐτὸν Φρυνίχῳ λειμῶνα μουσῶν ἱερὸν ὀφθείην δρέπων.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "20",
+          "source_id": "tlg0303-fr20",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:20",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr20-l1",
+              "text": "ὦ φίλτατ’ ἀνδρῶν, μή μ’ ἀτιμάσας γένῃ ."
+            }
+          ],
+          "context": "Priscianus Inst. 18 , 201 vol. 2 p. 305 , 3 : participia pro verbis ponunt Attici, quod frequenter faciunt Latini. — Phroenichus ‘ὦ — γένῃ’ . comico poetae hunc versum parum probabiliter tribuit Meineke Com. 2 p. 605 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "21",
+          "source_id": "tlg0303-fr21",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:21",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr21-l1",
+              "text": "ἐγὼ δέ , μισεῖ γάρ μ’ , ἄπειμ’ ἐξ ὀμμάτων."
+            }
+          ],
+          "context": "Zon. Lex. p. 757 : ἐξ ὀφθαλμῶν οὐ λέγουσιν οὐδ’ ἐκ προσώπου. Φρύνιχος ‘ἐγὼ δὲ — ἐξ ὀμμάτων’ . ἄπειμ’ nescio quis, ἄμειμι ed. Tittmann. tragico poetae recte versum tribuit Welcker Tragod. p. 1499 , cf. Cobet Coll. crit. p. 204 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "22",
+          "source_id": "tlg0303-fr22",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:22",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr22-l1",
+              "text": "ἴδριδες"
+            }
+          ],
+          "context": "Schol. A Il. Γ 219 : ὁ γὰρ Σοφοκλῆς ἴδριδα ἔφη τὴν αἰτιατικὴν ὅ τε Φρύνιχος τὴν εὐθεῖαν ἴδριδες. similiter Etym. M. p. 42 , 41 et Eust. Il. p. 407 , 38 (vide Soph. fr. 953) . tragicum poetam dici probabiliter statuit Meineke Hist. crit. p. 159 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "23",
+          "source_id": "tlg0303-fr23",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:23",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr23-l1",
+              "text": "σεμέλη"
+            }
+          ],
+          "context": "Hesych. 4 p. 20 : σεμέλη· τράπεζα. παρὰ δὲ Φρυνίχῳ ἑορτή . lemma suspectum : θυμέλη coni. Schrevel.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "24",
+          "source_id": "tlg0303-fr24",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:24",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0303-fr24-l1",
+              "text": "ψέλια"
+            }
+          ],
+          "context": "Antiatt. p. 116 , 26 : ψέλια· τὰ τοῖς πήχεσιν, οὐ μόνον στρεπτά . Φρύνιχος. Phoenissis hunc locum adscribit Blomf. in Aesch. Pers. p. IV.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0303.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 13,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0303-aigyptioi",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-aigyptioi",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_aigyptioi",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-alkestis",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-alkestis",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_alkestis",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-danaides",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-danaides",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_danaides",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-pleyroniai",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-pleyroniai",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_pleyroniai",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:6"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-tantalos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-tantalos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_tantalos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:7"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-phoinissai",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-phoinissai",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_phoinissai",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:9",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:10",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:11",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:12"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0303-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0303_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:13",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:14",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:15",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:16",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:17",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:18",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:19",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:20",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:21",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:22",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:23",
+        "urn:cts:greekLit:tlg0303.fragmenta.nauck1889grc1:24"
+      ]
+    }
+  ]
+}

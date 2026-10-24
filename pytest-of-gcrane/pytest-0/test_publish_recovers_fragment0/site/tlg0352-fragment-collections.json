@@ -1,0 +1,66 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0352",
+  "author": "Isidorus",
+  "corpus_title": "Isidorus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0352.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0352.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0352.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0352-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0352.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0352-fr1-l1",
+          "text": "μορφὰς ἀτερπεῖς ὄψεσιν κεκτημένος"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0352-fr1-l2",
+          "text": "παρεμφερεῖς ταύταισι τοὺς τρόπους ἔχεις·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0352-fr1-l3",
+          "text": "ἐκ τοῦ κακοῦ γὰρ ἡ φύσις τίκτει κακόν,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0352-fr1-l4",
+          "text": "ὡς ἐξ ἐχίδνης πάλιν ἔχιδνα γίγνεται."
+        }
+      ],
+      "context": "Stob. Flor. 90 , 9 : Ἰσιδώρου (sic Meineke, ἐκιδώρου MA, εἰσιδώρου S) . ‘μορφὰς — γίγνεται’ . v. 3 κακόν] καλόν M. v. 4 γίνεται SM. Thersiten compellari coni. Meineke."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0352-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0352.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0352-fr2-l1",
+          "text": "θνητὸς πεφυκὼς τὰ ὀπίσω πειρῶ βλέπειν."
+        }
+      ],
+      "context": "Stob. Flor. 22 , 27 : Ἰσιδώρου (sic SM, ἰσηδώρου A) . ‘θνητὸς — βλέπειν’ . idem versus est in Men. mon. 249 . τὰ ὀπίσω Stobaei SMA, τἀπίσω Brux. , τοὐπίσω Men. mon. hinc τοὐπίσω μὴ ἔρα βλέπειν coni. F. G. Schmidt Krit. Stud. 3 p. 27 . rectius fortasse τἀπὶ σοὶ πειρῶ βλέπειν scribemus cum Apostol. 3 , 8 p. 289 , 19 ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

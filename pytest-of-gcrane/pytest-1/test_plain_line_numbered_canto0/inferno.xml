@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <text><body><div type="edition">
+    <div type="textpart" subtype="canto" n="1">
+      <l n="1">one</l><l n="2">two</l>
+    </div>
+    <div type="textpart" subtype="canto" n="2">
+      <l n="1">three</l><l n="2">four</l><l n="3">five</l>
+    </div>
+  </div></body></text>
+</TEI>

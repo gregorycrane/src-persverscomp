@@ -1,0 +1,41 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0354",
+  "author": "Zenodotus",
+  "corpus_title": "Zenodotus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0354.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0354.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0354.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0354-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0354.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0354-fr1-l1",
+          "text": "κηρύσσεται γὰρ ἁρετή· κακὸς δ’ ἀνὴρ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0354-fr1-l2",
+          "text": "σιγηλὸν ἔσχε ζῶν τε καὶ θανὼν βίον."
+        }
+      ],
+      "context": "Stob. Flor. 2 , 12 : Ζηνοδότου (sic MA, eclogam ignorat S, Ζήνωνος coni. Meineke) . ‘κηρύσσεται — βίον’ . v. 1 κηρύσσεται ἀεὶ ἀρετὴ MA, κηρύσσεται μὲν ἡ ’ρετή (debabat ἁρετή) Valckenaer. pro μὲν ego malui γὰρ scribere. v. 2 θανῶν M."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

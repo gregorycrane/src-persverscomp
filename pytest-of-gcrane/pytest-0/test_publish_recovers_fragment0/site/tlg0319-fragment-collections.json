@@ -1,0 +1,893 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0319",
+  "author": "Critias",
+  "corpus_title": "Critias, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0319.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0319.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0319-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr1-l1",
+          "text": "ἦν χρόνος ὅτ’ ἦν ἄτακτος ἀνθρώπων βίος"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0319-fr1-l2",
+          "text": "καὶ θηριώδης ἰσχύος θ’ ὑπηρέτης,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0319-fr1-l3",
+          "text": "ὅτ’ οὐδὲν ἆθλον οὔτε τοῖς ἐσθλοῖσιν ἦν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0319-fr1-l4",
+          "text": "οὔτ’ αὖ κόλασμα τοῖς κακοῖς ἐγίγνετο."
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0319-fr1-l5",
+          "text": "κἄπειτά μοι δοκοῦσιν ἄνθρωποι νόμους"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0319-fr1-l6",
+          "text": "θέσθαι κολαστάς, ἵνα δίκη τύραννος ᾖ"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0319-fr1-l7",
+          "text": ". . . . . . τήν θ’ ὕβριν δούλην ἔχῃ·"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0319-fr1-l8",
+          "text": "ἐζημιοῦτο δ’ εἴ τις ἐξαμαρτάνοι."
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0319-fr1-l9",
+          "text": "ἔπειτ’ ἐπειδὴ τἀμφανῆ μὲν οἱ νόμοι"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0319-fr1-l10",
+          "text": "ἀπεῖργον αὐτοὺς ἔργα μὴ πράσσειν βίᾳ ,"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0319-fr1-l11",
+          "text": "λάθρα δ’ ἔπρασσον, τηνικαῦτά μοι δοκεῖ"
+        },
+        {
+          "ref": "12",
+          "source_id": "tlg0319-fr1-l12",
+          "text": ". . πυκνός τις καὶ σοφὸς γνώμην ἀνὴρ"
+        },
+        {
+          "ref": "13",
+          "source_id": "tlg0319-fr1-l13",
+          "text": "γνῶναι θεοὺς θνητοῖσιν ἐξευρεῖν, ὅπως"
+        },
+        {
+          "ref": "14",
+          "source_id": "tlg0319-fr1-l14",
+          "text": "εἴη τι δεῖμα τοῖς κακοῖσι, κἂν λάθρα"
+        },
+        {
+          "ref": "15",
+          "source_id": "tlg0319-fr1-l15",
+          "text": "πράσσωσιν ἢ λέγωσιν ἢ φρονῶσί τι"
+        },
+        {
+          "ref": "16",
+          "source_id": "tlg0319-fr1-l16",
+          "text": "ἐντεῦθεν οὖν τὸ θεῖον εἰσηγήσατο,"
+        },
+        {
+          "ref": "17",
+          "source_id": "tlg0319-fr1-l17",
+          "text": "ὡς ἔστι δαίμων ἀφθίτῳ θάλλων βίῳ"
+        },
+        {
+          "ref": "18",
+          "source_id": "tlg0319-fr1-l18",
+          "text": "νόῳ τ’ ἀκούων καὶ βλέπων φρονῶν τε καὶ"
+        },
+        {
+          "ref": "19",
+          "source_id": "tlg0319-fr1-l19",
+          "text": "προσέχων τε ταῦτα καὶ φύσιν θείαν φορῶν,"
+        },
+        {
+          "ref": "20",
+          "source_id": "tlg0319-fr1-l20",
+          "text": "ὃς πᾶν τὸ λεχθὲν ἐν βροτοῖς ἀκούσεται,"
+        },
+        {
+          "ref": "21",
+          "source_id": "tlg0319-fr1-l21",
+          "text": "τὸ δρώμενον δὲ πᾶν ἰδεῖν δυνήσεται."
+        },
+        {
+          "ref": "22",
+          "source_id": "tlg0319-fr1-l22",
+          "text": "ἐὰν δὲ κἂν σιγῇ τι βουλεύῃς κακόν,"
+        },
+        {
+          "ref": "23",
+          "source_id": "tlg0319-fr1-l23",
+          "text": "τοῦτ’ οὐχὶ λήσει τοὺς θεούς· τὸ γὰρ φρονοῦν"
+        },
+        {
+          "ref": "24",
+          "source_id": "tlg0319-fr1-l24",
+          "text": ". . ἔνεστι. τούσδε τοὺς λόγους λέγων"
+        },
+        {
+          "ref": "25",
+          "source_id": "tlg0319-fr1-l25",
+          "text": "διδαγμάτων ἥδιστον εἰσηγήσατο"
+        },
+        {
+          "ref": "26",
+          "source_id": "tlg0319-fr1-l26",
+          "text": "ψευδεῖ τυφλώσας τὴν ἀλήθειαν λόγῳ ."
+        },
+        {
+          "ref": "27",
+          "source_id": "tlg0319-fr1-l27",
+          "text": "ναίειν δ’ ἔφασκε τοὺς θεοὺς ἐνταῦθ’ ἵνα"
+        },
+        {
+          "ref": "28",
+          "source_id": "tlg0319-fr1-l28",
+          "text": "μάλιστ’ ἂν ἐξέπληξεν ἀνθρώπους λέγων,"
+        },
+        {
+          "ref": "29",
+          "source_id": "tlg0319-fr1-l29",
+          "text": "ὅθεν περ ἔγνω τοὺς φόβους ὄντας βροτοῖς"
+        },
+        {
+          "ref": "30",
+          "source_id": "tlg0319-fr1-l30",
+          "text": "καὶ τὰς ὀνήσεις τῷ ταλαιπώρῳ βίῳ ,"
+        },
+        {
+          "ref": "31",
+          "source_id": "tlg0319-fr1-l31",
+          "text": "ἐκ τῆς ὕπερθε περιφορᾶς, ἵν’ ἀστραπὰς"
+        },
+        {
+          "ref": "32",
+          "source_id": "tlg0319-fr1-l32",
+          "text": "κατεῖδεν οὔσας, δεινὰ δὲ κτυπήματα"
+        },
+        {
+          "ref": "33",
+          "source_id": "tlg0319-fr1-l33",
+          "text": "βροντῆς τό τ’ ἀστερωπὸν οὐρανοῦ σέλας,"
+        },
+        {
+          "ref": "34",
+          "source_id": "tlg0319-fr1-l34",
+          "text": "χρόνου καλὸν ποίκιλμα τέκτονος σοφοῦ ,"
+        },
+        {
+          "ref": "35",
+          "source_id": "tlg0319-fr1-l35",
+          "text": "ὅθεν τε λαμπρὸς ἀστέρος στίλβει μύδρος"
+        },
+        {
+          "ref": "36",
+          "source_id": "tlg0319-fr1-l36",
+          "text": "ὅ θ’ ὑγρὸς εἰς γῆν ὄμβρος ἐκπορεύεται."
+        },
+        {
+          "ref": "37",
+          "source_id": "tlg0319-fr1-l37",
+          "text": "τοίους πέριξ ἔστησεν ἀνθρώποις φόβους"
+        },
+        {
+          "ref": "38",
+          "source_id": "tlg0319-fr1-l38",
+          "text": "δεινοὺς καλῶς τε τῷ λόγῳ κατῴκισεν"
+        },
+        {
+          "ref": "39",
+          "source_id": "tlg0319-fr1-l39",
+          "text": "τὸν δαίμονα καὶ ἐν πρέποντι χωρίῳ ,"
+        },
+        {
+          "ref": "40",
+          "source_id": "tlg0319-fr1-l40",
+          "text": "τὴν ἀνομίαν τε τοῖς φόβοις κατέσβεσεν."
+        },
+        {
+          "ref": "41",
+          "source_id": "tlg0319-fr1-l41",
+          "text": "οὕτω δὲ πρῶτον οἴομαι πεῖσαί τινα"
+        },
+        {
+          "ref": "42",
+          "source_id": "tlg0319-fr1-l42",
+          "text": "θνητοὺς νομίζειν δαιμόνων εἶναι γένος."
+        }
+      ],
+      "context": "Sextus Empir. p. 403 , 1 : καὶ Κριτίας δὲ εἷς τῶν ἐν Ἀθήναις τυραννησάντων δοκεῖ ἐκ τοῦ τάγματος τῶν ἀθέων ὑπάρχειν, φάμενος ὅτι οἱ παλαιοὶ νομοθέται ἐπίσκοπόν τινα τῶν ἀνθρωπίνων κατορθωμάτων καὶ ἁμαρτημάτων ἔπλασαν τὸν θεὸν ὑπὲρ τοῦ μηδένα λάθρᾳ τὸν πλησίον ἀδικεῖν, εὐλαβούμενον τὴν ὑπὸ τῶν θεῶν τιμωρίαν. ἔχει δὲ παρ’ αὐτῷ τὸ ῥητὸν οὕτως. ‘ἦν χρόνος — κατέσβεσεν’ (v. 1-40) . καὶ ὀλίγα προσδιελθὼν ἐπιφέρει ‘οὕτω δὲ — εἶναι γένος’ (v. 41 et 42) . Sextus Empir. p. 172 , 18 : θεοὺς γὰρ οἱ μὲν πολλοὶ φασὶν εἶναι, τινὲς δὲ οὐκ εἶναι, ὥσπερ οἱ περὶ Διαγόραν τὸν Μήλιον καὶ Θεόδωρον καὶ Κριτίαν τὸν Ἀθηναῖον. Euripidi non nullos horum versuum tribuit Plut. de placitis philos. 1 , 7 , 2 p. 880 E : καὶ Εὐριπίδης ὁ τραγῳδοποιὸς ἀποκαλύψασθαι μὲν οὐκ ἠθέλησε (deos non esse) δεδοικὼς τὸν Ἄρειον πάγον, ἐνέφηνε δὲ τοῦτον τὸν τρόπον· τὸν γὰρ Σίσυφον εἰσήγαγε προστάτην ταύτης τῆς δόξης καὶ συνηγόρευσεν αὐτοῦ ταύτῃ τῇ γνώμῃ (haec verba repetiit Eusebius P. E. XIV p. 753 C) . ‘ἦν γὰρ χρόνος’ φησίν ‘ὅτ’ ἄτακτος ἦν ἀνθρώπων — ὑπηρέτης’ (v. 1 et 2) . ἔπειτα φησὶ τὴν ἀνομίαν λυθῆναι νόμων εἰσαγωγῇ· ἐπεὶ γὰρ ὁ νόμος τὰ φανερὰ τῶν ἀδικημάτων εἴργειν ἐδύνατο, κρύφα τε (l. δὲ) ἠδίκουν πολλοί , τότε τις σοφὸς ἀνὴρ ἐπέστησεν ὡς δεῖ ἀεὶ ψευδεῖ λόγῳ τυφλῶσαι τὴν ἀλήθειαν καὶ πεῖσαι τοὺς ἀνθρώπους ‘ὡς ἔστι — φρονεῖ τ’ ἄγαν’ (v. 17 et 18) . cf. Plut. ibid. 1 , 6 , 7 p. 879 F : ὅθεν καὶ Εὐριπίδης φησί ‘τὸν ἀστερωπὸν — σοφοῦ’ (v. 33 et 34) . Galenus Hist. philos. c. 8 vol. 19 p. 253 : ὅθεν Εὐριπίδης εἶπεν ‘ἀστέρες δ’ ἐν οὐρανῷ ποίκιλμα τέκτονος σοφοῦ’ (cf. v. 33 sq.) . idem Galenus vol. 19 p. 250 : οὐ γὰρ εἶναι θεοὺς τετολμήκασιν. ἔοικε δὲ ταύτης τῆς ὑπολήψεως Εὐριπίδης, κἂν τοῦτο μὲν αὐτὸς οὐ λέγῃ — , ἀλλὰ τὸν Σίσυφον εἰσήγαγε τοῦτο λέγοντα. v. 1 ἦν ἄτακτος Sextus, ἄτακτος ἦν Plut. v. 3 ἄεθλον ante Barnesium. v. 6 ἵνα ἡ δίκη CR. v. 7 γένους βροτείου suppleri voluit Grotius, θρόνους ἔχουσα O. Hense Exerc. crit. p. 59 , ἰσχὺν δὲ πᾶσαν Enger Adnot. ad poet. Gr. fr. p. 1 . ἔχῃ δούλην CR. v. 10 ἀπεῖργον Normann, ἀπῆγον libri. βίᾳ suspectum. v. 11 sq. λάθρᾳ δ’ ἔπρασσον πολλά (ἄδικα Bach) , τηνικαῦτά μοι | δοκεῖ πυκνός τις Pierson Veris. p. 136 . potius v. 12 mutilus videtur, ubi πυκνός τις ἄλλος coni. Grotius, πυκνός τις ὄντως Normann, φρένας πυκνός τις Meineke, πρῶτον πυκνός τις Enger, γνῶναι πυκνός τις Wecklein. v. 13 γνῶναι δὲ ὃς CR, γνῶναι δεόση cod. Laur. , γνῶναι δέος Petitus, γνῶναι δέον Normann, γνῶναι θεοὺς Koechly Akad. Vorträge p. 277 , εἶναι θεοὺς Hense Exerc. crit. p. 60 , γνῶναι σέβας Enger, θεῶν δέος Wecklein, δεῖμ’ ἄλλο τοῖς F. G. Schmidt Krit. Stud. 3 p. 8 . ἐξευρεῖν cod. Monac. , ἐξευρών ceteri. v. 15 τι addidit Grotius. v. 18 νόῳ τ’ ἀκούων καὶ βλέπων φρονῶν τε καὶ Sextus, ὃς ταῦτ’ ἀκούει καὶ βλέπει φρονεῖ τ’ ἄγαν Plut. τῷ νῷ F. G. Schmidt. φρονεῖ τ’ ἀεὶ Bach. v. 18 sq. βλέπων τά τ’ ὄνθ’ ἑκὰς πρὸ ποδῶν τε πάντα coni. F. G. Schmidt, πάντα praeierat Grotius. v. 19 ταύτῃ τε προύχων coni. Enger, παρέχων τε ταῦτα Gomperz Beitr. 1 p. 273 . φύσιν τοίαν F. G. Schmidt. v. 20 ὑφ’ (vel ἐφ’) οὗ πᾶν μὲν τὸ λεχθὲν ἐν βροτοῖς ἀκούεται libri, corr. Normann. ὃς δὴ βροτοῖσι πᾶν τὸ μὲν λεχθὲν κλύειν coni. Gomperz p. 274 . v. 21 τὸ addidit Normann. v. 22 σιγῇ S, σὺν σιγῇ ceteri libri, καὶ σιγῇ Meineke, ego κἂν σιγῇ praetuli. ἐὰν δέ τῳ σιγῇ Enger. v. 24 θεοῖς ἔνεστι Normann, ἔνεστιν αὐτοῖς Heath, τούτοις ἔνεστι Hermann, ἔνεστι παντί Gomperz p. 271 . ἔνεστι τούσδε τοὺς λόγους κεῖνος) λέγων vel πλέκων F. G. Schmidt. τούσδε τις λόγους Musgrave. v. 25 δίδαγμά τοι μέγιστον (μέγιστον cum R. Methnero) F. G. Schmidt. ego διδαγμάτων κέρδιστον temptabam. v. 26 τυφλώσας Plutarchi ope Porson Adv. p. 275 , καλύψας Sext. v. 27 ναίειν Pierson Veris. p. 136 , αἰεὶ libri. v. 28 μάλιστ’ ἂν Toup Emend. 1 p. 227 , μάλιστα libri. ἐκπλήξειεν Grotius. λέγων Grotius, ἄγων libri. v. 29 περ om. C. v. 30 ὀνήσεις Normann, πονήσεις libri, πτοήσεις Alb. Iahn in Gregor. Pal. Prosop. p. 60 . v. 31 sq. ἵν’ ἀστραπῆς κατεῖδ’ ἐναύσεις Musgrave. v. 32 κατεῖδε φύσας coni. F. G. Schmidt. v. 33 τό τ’] τὸν Plut. σέλας Plut. , δέμας Sextus. v. 34 χρόνον Plutarchus et Sexti cod. Laur. χρόνων κανόνα, ποίκιλμα coni. F. G. Schmidt. spectare videtur haec verba Philo Iud. vol. 1 p. 652 : τὸ τοῦ θεοῦ καλὸν ποίκιλμα, ὅδε ὁ κόσμος, ἐπιστήμῃ πανσόφῳ τετελεσιούργηται. v. 35 ἀστέρος] αἰθέρος Boissonade, διάπυρος Herwerden Exerc. crit. p. 74 sq. , ego ἡλίου malim. στίλβει Wecklein, στείχει libri. v. 36 ἐκπορίζεται Musgrave, ἐκπιδύεται vel ἐκπροΐεται Wecklein. v. 37 τοίους (ego οὕτω malim) πέριξ ἔστησεν Meineke Com. 4 p. XII, τοιούτους δὲ περιέστησεν libri. v. 38 δεινοὺς Wecklein Stud. zu Eur. p. 361 , δι’ οὓς libri. κολαστὴν τῶν κακῶν κατοικίσας scripserim, ubi κολαστὴν et κατοικίσας debemus Engero. v. 39 τὸν δαίμον’ οἰκοῦντ’ Pierson, τὸν δαίμον’ οἰκεῖν Hermann. neutrum sufficit. v. 40 φόβοις F. G. Schmidt, νόμοις libri. v. 42 δαιμόνων εἶναι cod. Monac. , εἶναι δαιμόνων ceteri.",
+      "play_title": "ΣΙΣΥΦΟΣ",
+      "play_work": "sisyphos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_sisyphos"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0319-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr2-l1",
+          "text": "ὁ χρόνος ἁπάσης ἐστὶν ὀργῆς φάρμακον."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 8 , 10 p. 95 , 5 : Κριτίου. ‘ὁ χρόνος — φάρμακον’ . fortasse ὀργῆς ἁπάσης ὁ χρόνος ἐστὶ φάρμακον leg. , nisi lemmata confusa sunt, cf. Meineke Com. 4 p. XIII, qui Critiae esse suspicatur qui praecedunt versus (adesp. fr. 507) , dum Wachsmuth Critiae nomen spectare conicit ad ecl. 11 : μετὰ τὴν σκιὰν τάχιστα γηράσκει χρόνος, vel ad 12 : πάλιν χρόνῳ τἀρχαῖα καινὰ γίγνεται.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0319-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr3-l1",
+          "text": "ὅστις δὲ τοῖς φίλοισι πάντα πρὸς χάριν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0319-fr3-l2",
+          "text": "πράσσων ὁμιλεῖ , τὴν παραυτίχ’ ἡδονὴν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0319-fr3-l3",
+          "text": "ἔχθραν καθίστησ’ εἰς τὸν ὕστερον χρόνον."
+        }
+      ],
+      "context": "Stob. Flor. 14 , 2 : Κριτίου. ‘ὄστις — χρόνον’ . v. 2 ὁμιλῇ M. v. 3 καθίστησιν SM.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0319-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr4-l1",
+          "text": "δεινὸν δ’ ὅταν τις μὴ φρονῶν δοκῇ φρονεῖν."
+        }
+      ],
+      "context": "Stob. Flor. 23 , 1 : Κριτίου (sic SMA, Εὐριπίδου Trinc.) . ‘δεινὸν — φρονεῖν’ . idem versus adscripto Κριτηρίου (pro Κριτίου) lemmate extat in Georgidae excerptis quae protulit Mai Spicil. Rom. 6 p. 614 . δεινὸν δ’ Stob. , δεινὸν Georg. , δεινόν γ’ ὅταν τις malim. δοκεῖ Stobaei S et Georg. , unde ἦ δεινὸν ὅστις μὴ φρονῶν δοκεῖ φρονεῖν possis conicere.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0319-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr5-l1",
+          "text": "σοφῆς δὲ πενίας σκαιότητα πλουσίαν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0319-fr5-l2",
+          "text": "κρεῖσσον σύνοικον ἐστιν ἐν δόμοις ἔχειν."
+        }
+      ],
+      "context": "Stob. Flor. 97 , 10 : Κριτίου. ‘σοφῆς — ἔχειν’ .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0319-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr6-l1",
+          "text": "εὐξυνεσία"
+        }
+      ],
+      "context": "Pollux 9 , 161 : καὶ ἡ παρ’ Εὐριπίδῃ εὐπαιδευσία, καὶ ἡ παρὰ Κριτίᾳ εὐξυνεσία, καὶ ἡ παρ’ Ἀριστοφάνει εὐοδία.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0319-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr7-l1",
+          "text": "ποδεῖα"
+        }
+      ],
+      "context": "Pollux 2 , 196 et 7 , 91 . vide Aesch. fr. 259 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0319-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr8-l1",
+          "text": "ταχύχειρ"
+        }
+      ],
+      "context": "Pollux 2 , 149 : εὔχειρ, ταχύχειρ ὡς Κριτίας, καὶ ἀπ’ αὐτῶν εὐχειρία, ταχυχειρία. sed hoc vocabulo fortasse in elegiis Critias usus est.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0319-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0319-fr9-l1",
+          "text": "ψευδομάρτυρες"
+        }
+      ],
+      "context": "Pollux 6 , 152 : οἱ μὲν γὰρ ψευδομάρτυρες εἴρηνται παρὰ Κριτίᾳ , καὶ ὁ ψευδομάρτυς οὐκ οἶδ’ ὅπου.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0319-peirithoys": {
+      "id": "tlg0319-peirithoys",
+      "work": "peirithoys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_peirithoys",
+      "title": "ΠΕΙΡΙΘΟΥΣ",
+      "source_title": "ΠΕΙΡΙΘΟΥΣ",
+      "source": "tlg0319.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0319-peirithoys",
+      "record_type": "fragmentary_play",
+      "introduction": "Haec fabula, cuius fragmenta exhibuimus p. 547-550 , utrum Euripidis esset an Critiae dubitatum est teste Ath. XI p. 496 B, quicum cf. Vita Eurip. p. 135 , 33 . Critiam, cum ex Thessalia Athenas reversus esset, docuisse tetralogiam Τέννην Ῥαδάμανθυν Περίθουν Σίσυφον complexam istamque tetralogiam posteriore tempore Euripidi tributam esse coni. Wilamowitz-Moellendorff Anal. Eur. p. 166 .",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0319-sisyphos": {
+      "id": "tlg0319-sisyphos",
+      "work": "sisyphos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_sisyphos",
+      "title": "ΣΙΣΥΦΟΣ",
+      "source_title": "ΣΙΣΥΦΟΣ",
+      "source": "tlg0319.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0319-sisyphos",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0319-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr1-l1",
+              "text": "ἦν χρόνος ὅτ’ ἦν ἄτακτος ἀνθρώπων βίος"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0319-fr1-l2",
+              "text": "καὶ θηριώδης ἰσχύος θ’ ὑπηρέτης,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0319-fr1-l3",
+              "text": "ὅτ’ οὐδὲν ἆθλον οὔτε τοῖς ἐσθλοῖσιν ἦν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0319-fr1-l4",
+              "text": "οὔτ’ αὖ κόλασμα τοῖς κακοῖς ἐγίγνετο."
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0319-fr1-l5",
+              "text": "κἄπειτά μοι δοκοῦσιν ἄνθρωποι νόμους"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0319-fr1-l6",
+              "text": "θέσθαι κολαστάς, ἵνα δίκη τύραννος ᾖ"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0319-fr1-l7",
+              "text": ". . . . . . τήν θ’ ὕβριν δούλην ἔχῃ·"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0319-fr1-l8",
+              "text": "ἐζημιοῦτο δ’ εἴ τις ἐξαμαρτάνοι."
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0319-fr1-l9",
+              "text": "ἔπειτ’ ἐπειδὴ τἀμφανῆ μὲν οἱ νόμοι"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0319-fr1-l10",
+              "text": "ἀπεῖργον αὐτοὺς ἔργα μὴ πράσσειν βίᾳ ,"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0319-fr1-l11",
+              "text": "λάθρα δ’ ἔπρασσον, τηνικαῦτά μοι δοκεῖ"
+            },
+            {
+              "ref": "12",
+              "source_id": "tlg0319-fr1-l12",
+              "text": ". . πυκνός τις καὶ σοφὸς γνώμην ἀνὴρ"
+            },
+            {
+              "ref": "13",
+              "source_id": "tlg0319-fr1-l13",
+              "text": "γνῶναι θεοὺς θνητοῖσιν ἐξευρεῖν, ὅπως"
+            },
+            {
+              "ref": "14",
+              "source_id": "tlg0319-fr1-l14",
+              "text": "εἴη τι δεῖμα τοῖς κακοῖσι, κἂν λάθρα"
+            },
+            {
+              "ref": "15",
+              "source_id": "tlg0319-fr1-l15",
+              "text": "πράσσωσιν ἢ λέγωσιν ἢ φρονῶσί τι"
+            },
+            {
+              "ref": "16",
+              "source_id": "tlg0319-fr1-l16",
+              "text": "ἐντεῦθεν οὖν τὸ θεῖον εἰσηγήσατο,"
+            },
+            {
+              "ref": "17",
+              "source_id": "tlg0319-fr1-l17",
+              "text": "ὡς ἔστι δαίμων ἀφθίτῳ θάλλων βίῳ"
+            },
+            {
+              "ref": "18",
+              "source_id": "tlg0319-fr1-l18",
+              "text": "νόῳ τ’ ἀκούων καὶ βλέπων φρονῶν τε καὶ"
+            },
+            {
+              "ref": "19",
+              "source_id": "tlg0319-fr1-l19",
+              "text": "προσέχων τε ταῦτα καὶ φύσιν θείαν φορῶν,"
+            },
+            {
+              "ref": "20",
+              "source_id": "tlg0319-fr1-l20",
+              "text": "ὃς πᾶν τὸ λεχθὲν ἐν βροτοῖς ἀκούσεται,"
+            },
+            {
+              "ref": "21",
+              "source_id": "tlg0319-fr1-l21",
+              "text": "τὸ δρώμενον δὲ πᾶν ἰδεῖν δυνήσεται."
+            },
+            {
+              "ref": "22",
+              "source_id": "tlg0319-fr1-l22",
+              "text": "ἐὰν δὲ κἂν σιγῇ τι βουλεύῃς κακόν,"
+            },
+            {
+              "ref": "23",
+              "source_id": "tlg0319-fr1-l23",
+              "text": "τοῦτ’ οὐχὶ λήσει τοὺς θεούς· τὸ γὰρ φρονοῦν"
+            },
+            {
+              "ref": "24",
+              "source_id": "tlg0319-fr1-l24",
+              "text": ". . ἔνεστι. τούσδε τοὺς λόγους λέγων"
+            },
+            {
+              "ref": "25",
+              "source_id": "tlg0319-fr1-l25",
+              "text": "διδαγμάτων ἥδιστον εἰσηγήσατο"
+            },
+            {
+              "ref": "26",
+              "source_id": "tlg0319-fr1-l26",
+              "text": "ψευδεῖ τυφλώσας τὴν ἀλήθειαν λόγῳ ."
+            },
+            {
+              "ref": "27",
+              "source_id": "tlg0319-fr1-l27",
+              "text": "ναίειν δ’ ἔφασκε τοὺς θεοὺς ἐνταῦθ’ ἵνα"
+            },
+            {
+              "ref": "28",
+              "source_id": "tlg0319-fr1-l28",
+              "text": "μάλιστ’ ἂν ἐξέπληξεν ἀνθρώπους λέγων,"
+            },
+            {
+              "ref": "29",
+              "source_id": "tlg0319-fr1-l29",
+              "text": "ὅθεν περ ἔγνω τοὺς φόβους ὄντας βροτοῖς"
+            },
+            {
+              "ref": "30",
+              "source_id": "tlg0319-fr1-l30",
+              "text": "καὶ τὰς ὀνήσεις τῷ ταλαιπώρῳ βίῳ ,"
+            },
+            {
+              "ref": "31",
+              "source_id": "tlg0319-fr1-l31",
+              "text": "ἐκ τῆς ὕπερθε περιφορᾶς, ἵν’ ἀστραπὰς"
+            },
+            {
+              "ref": "32",
+              "source_id": "tlg0319-fr1-l32",
+              "text": "κατεῖδεν οὔσας, δεινὰ δὲ κτυπήματα"
+            },
+            {
+              "ref": "33",
+              "source_id": "tlg0319-fr1-l33",
+              "text": "βροντῆς τό τ’ ἀστερωπὸν οὐρανοῦ σέλας,"
+            },
+            {
+              "ref": "34",
+              "source_id": "tlg0319-fr1-l34",
+              "text": "χρόνου καλὸν ποίκιλμα τέκτονος σοφοῦ ,"
+            },
+            {
+              "ref": "35",
+              "source_id": "tlg0319-fr1-l35",
+              "text": "ὅθεν τε λαμπρὸς ἀστέρος στίλβει μύδρος"
+            },
+            {
+              "ref": "36",
+              "source_id": "tlg0319-fr1-l36",
+              "text": "ὅ θ’ ὑγρὸς εἰς γῆν ὄμβρος ἐκπορεύεται."
+            },
+            {
+              "ref": "37",
+              "source_id": "tlg0319-fr1-l37",
+              "text": "τοίους πέριξ ἔστησεν ἀνθρώποις φόβους"
+            },
+            {
+              "ref": "38",
+              "source_id": "tlg0319-fr1-l38",
+              "text": "δεινοὺς καλῶς τε τῷ λόγῳ κατῴκισεν"
+            },
+            {
+              "ref": "39",
+              "source_id": "tlg0319-fr1-l39",
+              "text": "τὸν δαίμονα καὶ ἐν πρέποντι χωρίῳ ,"
+            },
+            {
+              "ref": "40",
+              "source_id": "tlg0319-fr1-l40",
+              "text": "τὴν ἀνομίαν τε τοῖς φόβοις κατέσβεσεν."
+            },
+            {
+              "ref": "41",
+              "source_id": "tlg0319-fr1-l41",
+              "text": "οὕτω δὲ πρῶτον οἴομαι πεῖσαί τινα"
+            },
+            {
+              "ref": "42",
+              "source_id": "tlg0319-fr1-l42",
+              "text": "θνητοὺς νομίζειν δαιμόνων εἶναι γένος."
+            }
+          ],
+          "context": "Sextus Empir. p. 403 , 1 : καὶ Κριτίας δὲ εἷς τῶν ἐν Ἀθήναις τυραννησάντων δοκεῖ ἐκ τοῦ τάγματος τῶν ἀθέων ὑπάρχειν, φάμενος ὅτι οἱ παλαιοὶ νομοθέται ἐπίσκοπόν τινα τῶν ἀνθρωπίνων κατορθωμάτων καὶ ἁμαρτημάτων ἔπλασαν τὸν θεὸν ὑπὲρ τοῦ μηδένα λάθρᾳ τὸν πλησίον ἀδικεῖν, εὐλαβούμενον τὴν ὑπὸ τῶν θεῶν τιμωρίαν. ἔχει δὲ παρ’ αὐτῷ τὸ ῥητὸν οὕτως. ‘ἦν χρόνος — κατέσβεσεν’ (v. 1-40) . καὶ ὀλίγα προσδιελθὼν ἐπιφέρει ‘οὕτω δὲ — εἶναι γένος’ (v. 41 et 42) . Sextus Empir. p. 172 , 18 : θεοὺς γὰρ οἱ μὲν πολλοὶ φασὶν εἶναι, τινὲς δὲ οὐκ εἶναι, ὥσπερ οἱ περὶ Διαγόραν τὸν Μήλιον καὶ Θεόδωρον καὶ Κριτίαν τὸν Ἀθηναῖον. Euripidi non nullos horum versuum tribuit Plut. de placitis philos. 1 , 7 , 2 p. 880 E : καὶ Εὐριπίδης ὁ τραγῳδοποιὸς ἀποκαλύψασθαι μὲν οὐκ ἠθέλησε (deos non esse) δεδοικὼς τὸν Ἄρειον πάγον, ἐνέφηνε δὲ τοῦτον τὸν τρόπον· τὸν γὰρ Σίσυφον εἰσήγαγε προστάτην ταύτης τῆς δόξης καὶ συνηγόρευσεν αὐτοῦ ταύτῃ τῇ γνώμῃ (haec verba repetiit Eusebius P. E. XIV p. 753 C) . ‘ἦν γὰρ χρόνος’ φησίν ‘ὅτ’ ἄτακτος ἦν ἀνθρώπων — ὑπηρέτης’ (v. 1 et 2) . ἔπειτα φησὶ τὴν ἀνομίαν λυθῆναι νόμων εἰσαγωγῇ· ἐπεὶ γὰρ ὁ νόμος τὰ φανερὰ τῶν ἀδικημάτων εἴργειν ἐδύνατο, κρύφα τε (l. δὲ) ἠδίκουν πολλοί , τότε τις σοφὸς ἀνὴρ ἐπέστησεν ὡς δεῖ ἀεὶ ψευδεῖ λόγῳ τυφλῶσαι τὴν ἀλήθειαν καὶ πεῖσαι τοὺς ἀνθρώπους ‘ὡς ἔστι — φρονεῖ τ’ ἄγαν’ (v. 17 et 18) . cf. Plut. ibid. 1 , 6 , 7 p. 879 F : ὅθεν καὶ Εὐριπίδης φησί ‘τὸν ἀστερωπὸν — σοφοῦ’ (v. 33 et 34) . Galenus Hist. philos. c. 8 vol. 19 p. 253 : ὅθεν Εὐριπίδης εἶπεν ‘ἀστέρες δ’ ἐν οὐρανῷ ποίκιλμα τέκτονος σοφοῦ’ (cf. v. 33 sq.) . idem Galenus vol. 19 p. 250 : οὐ γὰρ εἶναι θεοὺς τετολμήκασιν. ἔοικε δὲ ταύτης τῆς ὑπολήψεως Εὐριπίδης, κἂν τοῦτο μὲν αὐτὸς οὐ λέγῃ — , ἀλλὰ τὸν Σίσυφον εἰσήγαγε τοῦτο λέγοντα. v. 1 ἦν ἄτακτος Sextus, ἄτακτος ἦν Plut. v. 3 ἄεθλον ante Barnesium. v. 6 ἵνα ἡ δίκη CR. v. 7 γένους βροτείου suppleri voluit Grotius, θρόνους ἔχουσα O. Hense Exerc. crit. p. 59 , ἰσχὺν δὲ πᾶσαν Enger Adnot. ad poet. Gr. fr. p. 1 . ἔχῃ δούλην CR. v. 10 ἀπεῖργον Normann, ἀπῆγον libri. βίᾳ suspectum. v. 11 sq. λάθρᾳ δ’ ἔπρασσον πολλά (ἄδικα Bach) , τηνικαῦτά μοι | δοκεῖ πυκνός τις Pierson Veris. p. 136 . potius v. 12 mutilus videtur, ubi πυκνός τις ἄλλος coni. Grotius, πυκνός τις ὄντως Normann, φρένας πυκνός τις Meineke, πρῶτον πυκνός τις Enger, γνῶναι πυκνός τις Wecklein. v. 13 γνῶναι δὲ ὃς CR, γνῶναι δεόση cod. Laur. , γνῶναι δέος Petitus, γνῶναι δέον Normann, γνῶναι θεοὺς Koechly Akad. Vorträge p. 277 , εἶναι θεοὺς Hense Exerc. crit. p. 60 , γνῶναι σέβας Enger, θεῶν δέος Wecklein, δεῖμ’ ἄλλο τοῖς F. G. Schmidt Krit. Stud. 3 p. 8 . ἐξευρεῖν cod. Monac. , ἐξευρών ceteri. v. 15 τι addidit Grotius. v. 18 νόῳ τ’ ἀκούων καὶ βλέπων φρονῶν τε καὶ Sextus, ὃς ταῦτ’ ἀκούει καὶ βλέπει φρονεῖ τ’ ἄγαν Plut. τῷ νῷ F. G. Schmidt. φρονεῖ τ’ ἀεὶ Bach. v. 18 sq. βλέπων τά τ’ ὄνθ’ ἑκὰς πρὸ ποδῶν τε πάντα coni. F. G. Schmidt, πάντα praeierat Grotius. v. 19 ταύτῃ τε προύχων coni. Enger, παρέχων τε ταῦτα Gomperz Beitr. 1 p. 273 . φύσιν τοίαν F. G. Schmidt. v. 20 ὑφ’ (vel ἐφ’) οὗ πᾶν μὲν τὸ λεχθὲν ἐν βροτοῖς ἀκούεται libri, corr. Normann. ὃς δὴ βροτοῖσι πᾶν τὸ μὲν λεχθὲν κλύειν coni. Gomperz p. 274 . v. 21 τὸ addidit Normann. v. 22 σιγῇ S, σὺν σιγῇ ceteri libri, καὶ σιγῇ Meineke, ego κἂν σιγῇ praetuli. ἐὰν δέ τῳ σιγῇ Enger. v. 24 θεοῖς ἔνεστι Normann, ἔνεστιν αὐτοῖς Heath, τούτοις ἔνεστι Hermann, ἔνεστι παντί Gomperz p. 271 . ἔνεστι τούσδε τοὺς λόγους κεῖνος) λέγων vel πλέκων F. G. Schmidt. τούσδε τις λόγους Musgrave. v. 25 δίδαγμά τοι μέγιστον (μέγιστον cum R. Methnero) F. G. Schmidt. ego διδαγμάτων κέρδιστον temptabam. v. 26 τυφλώσας Plutarchi ope Porson Adv. p. 275 , καλύψας Sext. v. 27 ναίειν Pierson Veris. p. 136 , αἰεὶ libri. v. 28 μάλιστ’ ἂν Toup Emend. 1 p. 227 , μάλιστα libri. ἐκπλήξειεν Grotius. λέγων Grotius, ἄγων libri. v. 29 περ om. C. v. 30 ὀνήσεις Normann, πονήσεις libri, πτοήσεις Alb. Iahn in Gregor. Pal. Prosop. p. 60 . v. 31 sq. ἵν’ ἀστραπῆς κατεῖδ’ ἐναύσεις Musgrave. v. 32 κατεῖδε φύσας coni. F. G. Schmidt. v. 33 τό τ’] τὸν Plut. σέλας Plut. , δέμας Sextus. v. 34 χρόνον Plutarchus et Sexti cod. Laur. χρόνων κανόνα, ποίκιλμα coni. F. G. Schmidt. spectare videtur haec verba Philo Iud. vol. 1 p. 652 : τὸ τοῦ θεοῦ καλὸν ποίκιλμα, ὅδε ὁ κόσμος, ἐπιστήμῃ πανσόφῳ τετελεσιούργηται. v. 35 ἀστέρος] αἰθέρος Boissonade, διάπυρος Herwerden Exerc. crit. p. 74 sq. , ego ἡλίου malim. στίλβει Wecklein, στείχει libri. v. 36 ἐκπορίζεται Musgrave, ἐκπιδύεται vel ἐκπροΐεται Wecklein. v. 37 τοίους (ego οὕτω malim) πέριξ ἔστησεν Meineke Com. 4 p. XII, τοιούτους δὲ περιέστησεν libri. v. 38 δεινοὺς Wecklein Stud. zu Eur. p. 361 , δι’ οὓς libri. κολαστὴν τῶν κακῶν κατοικίσας scripserim, ubi κολαστὴν et κατοικίσας debemus Engero. v. 39 τὸν δαίμον’ οἰκοῦντ’ Pierson, τὸν δαίμον’ οἰκεῖν Hermann. neutrum sufficit. v. 40 φόβοις F. G. Schmidt, νόμοις libri. v. 42 δαιμόνων εἶναι cod. Monac. , εἶναι δαιμόνων ceteri.",
+          "play_title": "ΣΙΣΥΦΟΣ",
+          "play_work": "sisyphos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_sisyphos",
+          "attribution_id": "nauck1889grc1-tlg0319-sisyphos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0319.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 42,
+      "status": "Fragmentary text"
+    },
+    "tlg0319-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0319-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0319.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0319-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0319-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr2-l1",
+              "text": "ὁ χρόνος ἁπάσης ἐστὶν ὀργῆς φάρμακον."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 8 , 10 p. 95 , 5 : Κριτίου. ‘ὁ χρόνος — φάρμακον’ . fortasse ὀργῆς ἁπάσης ὁ χρόνος ἐστὶ φάρμακον leg. , nisi lemmata confusa sunt, cf. Meineke Com. 4 p. XIII, qui Critiae esse suspicatur qui praecedunt versus (adesp. fr. 507) , dum Wachsmuth Critiae nomen spectare conicit ad ecl. 11 : μετὰ τὴν σκιὰν τάχιστα γηράσκει χρόνος, vel ad 12 : πάλιν χρόνῳ τἀρχαῖα καινὰ γίγνεται.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0319-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr3-l1",
+              "text": "ὅστις δὲ τοῖς φίλοισι πάντα πρὸς χάριν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0319-fr3-l2",
+              "text": "πράσσων ὁμιλεῖ , τὴν παραυτίχ’ ἡδονὴν"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0319-fr3-l3",
+              "text": "ἔχθραν καθίστησ’ εἰς τὸν ὕστερον χρόνον."
+            }
+          ],
+          "context": "Stob. Flor. 14 , 2 : Κριτίου. ‘ὄστις — χρόνον’ . v. 2 ὁμιλῇ M. v. 3 καθίστησιν SM.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0319-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr4-l1",
+              "text": "δεινὸν δ’ ὅταν τις μὴ φρονῶν δοκῇ φρονεῖν."
+            }
+          ],
+          "context": "Stob. Flor. 23 , 1 : Κριτίου (sic SMA, Εὐριπίδου Trinc.) . ‘δεινὸν — φρονεῖν’ . idem versus adscripto Κριτηρίου (pro Κριτίου) lemmate extat in Georgidae excerptis quae protulit Mai Spicil. Rom. 6 p. 614 . δεινὸν δ’ Stob. , δεινὸν Georg. , δεινόν γ’ ὅταν τις malim. δοκεῖ Stobaei S et Georg. , unde ἦ δεινὸν ὅστις μὴ φρονῶν δοκεῖ φρονεῖν possis conicere.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0319-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr5-l1",
+              "text": "σοφῆς δὲ πενίας σκαιότητα πλουσίαν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0319-fr5-l2",
+              "text": "κρεῖσσον σύνοικον ἐστιν ἐν δόμοις ἔχειν."
+            }
+          ],
+          "context": "Stob. Flor. 97 , 10 : Κριτίου. ‘σοφῆς — ἔχειν’ .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0319-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr6-l1",
+              "text": "εὐξυνεσία"
+            }
+          ],
+          "context": "Pollux 9 , 161 : καὶ ἡ παρ’ Εὐριπίδῃ εὐπαιδευσία, καὶ ἡ παρὰ Κριτίᾳ εὐξυνεσία, καὶ ἡ παρ’ Ἀριστοφάνει εὐοδία.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0319-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr7-l1",
+              "text": "ποδεῖα"
+            }
+          ],
+          "context": "Pollux 2 , 196 et 7 , 91 . vide Aesch. fr. 259 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0319-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr8-l1",
+              "text": "ταχύχειρ"
+            }
+          ],
+          "context": "Pollux 2 , 149 : εὔχειρ, ταχύχειρ ὡς Κριτίας, καὶ ἀπ’ αὐτῶν εὐχειρία, ταχυχειρία. sed hoc vocabulo fortasse in elegiis Critias usus est.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0319-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0319-fr9-l1",
+              "text": "ψευδομάρτυρες"
+            }
+          ],
+          "context": "Pollux 6 , 152 : οἱ μὲν γὰρ ψευδομάρτυρες εἴρηνται παρὰ Κριτίᾳ , καὶ ὁ ψευδομάρτυς οὐκ οἶδ’ ὅπου.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0319.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 11,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0319-sisyphos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0319-sisyphos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_sisyphos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0319-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0319_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0319.fragmenta.nauck1889grc1:9"
+      ]
+    }
+  ]
+}

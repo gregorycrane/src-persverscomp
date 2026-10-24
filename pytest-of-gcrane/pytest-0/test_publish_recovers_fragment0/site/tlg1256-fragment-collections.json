@@ -1,0 +1,96 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg1256",
+  "author": "Chares",
+  "corpus_title": "Chares, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg1256.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg1256.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg1256.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg1256-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1256.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1256-fr1-l1",
+          "text": "γαστρὸς δὲ πειρῶ πᾶσιν ἡνίαν κρατεῖν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg1256-fr1-l2",
+          "text": "μόνη γὰρ ὧν πέπονθεν οὐκ ἔχει χάριν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg1256-fr1-l3",
+          "text": "ἀεὶ δὲ τοῦ δοθέντος ἐνδεῖται πλέον."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg1256-fr1-l4",
+          "text": "ὅστις δὲ γαστρὸς μὴ κρατεῖν ἐπίσταται,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg1256-fr1-l5",
+          "text": "οὗτος τὰ πλείω τῶν κακῶν ἔχει κακά ."
+        }
+      ],
+      "context": "Stob. Flor. 17 , 3 : Χάρητος. ‘γαστρὸς δὲ — κακά’ . Greg. Naz. vol. 2 p. 213 C : ἤκουσα τοῦτο τῆς σοφῆς τραγῳδίας ‘γαστρὸς δὲ — χάριν’ (v. 1 et 2) . v. 1 recurrit in Men. mon. 81 . v. 3 δὲ] γὰρ A. δέοντος SMA, δοθέντος scripsi. v. 4 et 5 om. poetae nom. extant in Anecd. Boiss. vol. 3 p. 469 . v. 4 ὅστις δὲ μὴ γαστρὸς Stobaeo S, ὅστις δὲ γαστρὸς μὴ MA, γαστρὸς ὅστις μὴ Anecd. Boiss. v. 5 οὗτος om. Stobaei S, οὕτως Anecd. Boiss."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg1256-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1256.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1256-fr2-l1",
+          "text": "γλώσσης μάλιστα πανταχοῦ πειρῶ κρατεῖν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg1256-fr2-l2",
+          "text": "ὃ καὶ γέροντι καὶ νέῳ τιμὴν φέρει"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg1256-fr2-l3",
+          "text": "ἡ γλῶσσα σιγὴν καιρίαν κεκτημένη."
+        }
+      ],
+      "context": "Stob. Flor. 33 , 4 : Χάρητος (sic SM, eclogam om. A) . ‘γλώσσης — κεκτημένη’ . v. 1 recurrit in Men. mon. 80 , ubi πανταχῆ legitur. v. 2 ὡς καὶ malim. v. 3 interpolatoris esse coni. F. G. Schmidt Krit. Stud. 3 p. 27 ."
+    },
+    {
+      "number": "3",
+      "source_id": "tlg1256-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1256.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1256-fr3-l1",
+          "text": "μὴ φθόνει τοῖς εὐτυχοῦσι, μὴ δοκῇς εἶναι κακός."
+        }
+      ],
+      "context": "Stob. Flor. 38 , 3 : Χάρητος. ‘μὴ φθόνει — κακός’ ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

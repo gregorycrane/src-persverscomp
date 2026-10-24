@@ -1,0 +1,116 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0336",
+  "author": "Crates",
+  "corpus_title": "Crates, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0336.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0336.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0336.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0336-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0336.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0336-fr1-l1",
+          "text": "οὐχ εἷς πάτρα μοι πύργος, οὐ μία στέγη,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0336-fr1-l2",
+          "text": "πάσης δὲ χέρσου καὶ πόλισμα καὶ δόμος"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0336-fr1-l3",
+          "text": "ἕτοιμος ἡμῖν ἐνδιαιτᾶσθαι πάρα."
+        }
+      ],
+      "context": "Laert. Diog. 6 , 98 : γέγραφε (Crates) καὶ τραγῳδίας ὑψηλότατον (fort. ψιλότατον) ἐχούσας φιλοσοφίας χαρακτῆρα, οἷόν ἐστι κἀκεῖνο ‘οὐχ εἷς — πάρα’ . v. 1 πάτρας ante Grotium. μία] μία μοι codex Arund. ceterum cf. adesp. 392 ."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0336-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0336.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0336-fr2-l1",
+          "text": "οὐκ οἶσθα, πήρα δύναμιν ἡλίκην ἔχει"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0336-fr2-l2",
+          "text": "θέρμων τε χοῖνιξ καὶ τὸ μηδενὸς μέλειν ;"
+        }
+      ],
+      "context": "Teles in Stob. Flor. 97 , 31 p. 274 ed. Gaisf. (p. 216 , 22 Mein.) : οὐκ ἀηδῶς γὰρ Κράτης ‘οὐκ οἶσθα’ φησί ‘πήρα — μέλειν’ . eiusdem ac fr. 1 hos versus esse coni. Gomperz Nachl. p. 49 ."
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0336-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0336.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0336-fr3-l1",
+          "text": "ὠνείδισάς μοι γῆρας ὡς κακὸν μέγα,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0336-fr3-l2",
+          "text": "οὗ μὴ τυχόντι θάνατός ἐσθ’ ἡ ζημία,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0336-fr3-l3",
+          "text": "οὗ πάντες ἐπιθυμοῦμεν· ἢν δ’ ἔλθῃ ποτέ ,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0336-fr3-l4",
+          "text": "ἀνιώμεθ’· οὕτως ἐσμὲν ἀχάριστοι φύσει."
+        }
+      ],
+      "context": "Stob. Flor. 115 , 9 : Κράτητος ἐξ Ἀντιφάνους (ἐξ ἀνφ/τα S) . v. ᾧ libri, οὗ Gesner. θάνατος δ’ A. ἐστ’ S. v. 3 ἢν] ἂν libri. Sophoclis est qui accedit versus, τοῦ ζῆν γὰρ οὐδεὶς ὡς ὁ γηράσπων ἐρᾷ (fr. 63) . lemma scribendum esse Κράτητος ἢ Ἀντιφάνους coni. Meineke Hist. crit. p. 62 , qui Antiphanis esse locum suspicatur Com. 2 p. 247 ."
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0336-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0336.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0336-fr4-l1",
+          "text": "ὁ γὰρ χρόνος μ’ ἔκαμψε, τέκτων μὲν σοφός,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0336-fr4-l2",
+          "text": "ἅπαντα δ’ ἐργαζόμενος ἀσθενέστερα."
+        }
+      ],
+      "context": "Stob. Flor. 116 , 31 : Κράτητος (sic. S, eclogam om. MA) . ‘ὁ γὰρ — ἀσθενέστερα’ . v. 1 τέκτων με σοφός S Voss. pr. m. , τέκτων μὲν σοφός Voss. m. sec. , τέκτων οὐ σοφός Trinc. scite Gomperz animadvertit spectari his verbis Critiae fr. 1 , 34 : χρόνου — τέκτονος σοφοῦ ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

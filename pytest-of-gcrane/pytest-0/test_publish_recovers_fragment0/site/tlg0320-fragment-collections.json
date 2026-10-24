@@ -1,0 +1,194 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0320",
+  "author": "Diogenes of Athens",
+  "corpus_title": "Diogenes of Athens, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0320.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0320.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0320.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0320-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0320.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0320-fr1-l1",
+          "text": "καίτοι κλύω μὲν Ἀσιάδος μιτρηφόρους"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0320-fr1-l2",
+          "text": "Κυβέλας γυναῖκας, παῖδας ὀλβίων Φρυγῶν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0320-fr1-l3",
+          "text": "τυπάνοισι καὶ ῥόμβοισι καὶ χαλκοκτύπων"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0320-fr1-l4",
+          "text": "βόμβοις βρεμούσας ἀντίχερσι κυμβάλων"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0320-fr1-l5",
+          "text": "σοφὴν θεῶν ὑμνῳδὸν ἰατρόν θ’ ἅμα·"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0320-fr1-l6",
+          "text": "κλύω δὲ Λυδὰς Βακτρίας τε παρθένους"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0320-fr1-l7",
+          "text": "ποταμῷ παροίκους Ἅλυϊ Τμωλίαν θεὸν"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0320-fr1-l8",
+          "text": "δαφνόσκιον κατ’ ἄλσος Ἄρτεμιν σέβειν"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0320-fr1-l9",
+          "text": "ψαλμοῖς τριγώνων πηκτίδων ἀντιζύγοις"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0320-fr1-l10",
+          "text": "ὁλκοῖς κρεκούσας μάγαδιν, ἔνθα Περσικῷ"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0320-fr1-l11",
+          "text": "νόμῳ ξενωθεὶς αὐλὸς ὁμονοεῖ χοροῖς."
+        }
+      ],
+      "context": "Ath. XIV p. 636 A : Διογένης δὲ ὁ τραγικὸς διαφέρειν πηκτίδα μαγάδιδος λέγων οὕτως ἐν τῇ Σεμέλῃ ‘καίτοι — χοροῖς’ . v. 1 κλύω μὲν Schweighaeuser, κλύωμεν P. Ἀσιάδας Dalechamps. μιτρηφόρου malim. v. 2 expectamus id quod tacite scripsit Wecklein Stud. zu Eur. p. 315 Κυβέλης, cum adiectivum κυβέλας γυναῖκας, de quo cogitabat Meineke in Callim. p. 148 , teste careat. mire tamen dictum Κυβέλης γυναῖκας, ubi Κυβέλης ὀπαδούς dici poterat. v. 3 τυπάνοισι Casaubonus, τυμπάνοισι A. ῥόμβοισι Pierson Veris. p. 204 , βομβοῖσι A. v. 4 ἀντὶ χερσὶ libri, ἀντίχερσι Casaubonus. κυμβάλων ἀντηχέσι Methner progr. a. 1882 p. 5 sq. , qui huc referendum suspicatur quod habet Hesychius 1 p. 396 : βρεμούσας ἠχούσας. v. 5 σοφὴν corruptum, σέβειν coni. Bergk, fortasse praestat ψοφεῖν (cf. κελαδεῖν τινα) . ἠχὴν Wecklein Stud. zu Eur. p. 316 . ψόφον ψοφεῖν ὑμνῳδὸν Heimsoeth Wiederherst. der Dramen des Aesch. p. 473 , σέβειν σοφόν θ’ ὑμνῳδὸν Methner progr. a. 1882 p. 6 . v. 6 κλύω δὲ ed. Casaub. , ήλυωδε ΒP. Βακτρίας suspectum, βακχίας scripsit Meineke, ψαλτρίας R. Methner Coll. Ion. fr. 22 . v. 7 παροίκους Ἅλυϊ Τμωλίαν ed. Casaub. , παροικοῦσα λυιτμωλίαν P. v. 8 ἔλσος B. v. 10 ὁλκοῖς] ὁμοῦ Methner. κρεκούσας Casaubonus, κρεκούσαις A. ἔνθα] ἐν δὲ Methner. v. 11 νομῷ Methner. ὁμοθροεῖ coni. Meineke, ὁμοφωνεῖ Methner.",
+      "play_title": "ΣΕΜΕΛΗ",
+      "play_work": "semele",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0320_semele"
+    }
+  ],
+  "works": {
+    "tlg0320-semele": {
+      "id": "tlg0320-semele",
+      "work": "semele",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0320_semele",
+      "title": "ΣΕΜΕΛΗ",
+      "source_title": "ΣΕΜΕΛΗ",
+      "source": "tlg0320.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0320-semele",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0320-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0320.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0320-fr1-l1",
+              "text": "καίτοι κλύω μὲν Ἀσιάδος μιτρηφόρους"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0320-fr1-l2",
+              "text": "Κυβέλας γυναῖκας, παῖδας ὀλβίων Φρυγῶν,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0320-fr1-l3",
+              "text": "τυπάνοισι καὶ ῥόμβοισι καὶ χαλκοκτύπων"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0320-fr1-l4",
+              "text": "βόμβοις βρεμούσας ἀντίχερσι κυμβάλων"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0320-fr1-l5",
+              "text": "σοφὴν θεῶν ὑμνῳδὸν ἰατρόν θ’ ἅμα·"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0320-fr1-l6",
+              "text": "κλύω δὲ Λυδὰς Βακτρίας τε παρθένους"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0320-fr1-l7",
+              "text": "ποταμῷ παροίκους Ἅλυϊ Τμωλίαν θεὸν"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0320-fr1-l8",
+              "text": "δαφνόσκιον κατ’ ἄλσος Ἄρτεμιν σέβειν"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0320-fr1-l9",
+              "text": "ψαλμοῖς τριγώνων πηκτίδων ἀντιζύγοις"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0320-fr1-l10",
+              "text": "ὁλκοῖς κρεκούσας μάγαδιν, ἔνθα Περσικῷ"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0320-fr1-l11",
+              "text": "νόμῳ ξενωθεὶς αὐλὸς ὁμονοεῖ χοροῖς."
+            }
+          ],
+          "context": "Ath. XIV p. 636 A : Διογένης δὲ ὁ τραγικὸς διαφέρειν πηκτίδα μαγάδιδος λέγων οὕτως ἐν τῇ Σεμέλῃ ‘καίτοι — χοροῖς’ . v. 1 κλύω μὲν Schweighaeuser, κλύωμεν P. Ἀσιάδας Dalechamps. μιτρηφόρου malim. v. 2 expectamus id quod tacite scripsit Wecklein Stud. zu Eur. p. 315 Κυβέλης, cum adiectivum κυβέλας γυναῖκας, de quo cogitabat Meineke in Callim. p. 148 , teste careat. mire tamen dictum Κυβέλης γυναῖκας, ubi Κυβέλης ὀπαδούς dici poterat. v. 3 τυπάνοισι Casaubonus, τυμπάνοισι A. ῥόμβοισι Pierson Veris. p. 204 , βομβοῖσι A. v. 4 ἀντὶ χερσὶ libri, ἀντίχερσι Casaubonus. κυμβάλων ἀντηχέσι Methner progr. a. 1882 p. 5 sq. , qui huc referendum suspicatur quod habet Hesychius 1 p. 396 : βρεμούσας ἠχούσας. v. 5 σοφὴν corruptum, σέβειν coni. Bergk, fortasse praestat ψοφεῖν (cf. κελαδεῖν τινα) . ἠχὴν Wecklein Stud. zu Eur. p. 316 . ψόφον ψοφεῖν ὑμνῳδὸν Heimsoeth Wiederherst. der Dramen des Aesch. p. 473 , σέβειν σοφόν θ’ ὑμνῳδὸν Methner progr. a. 1882 p. 6 . v. 6 κλύω δὲ ed. Casaub. , ήλυωδε ΒP. Βακτρίας suspectum, βακχίας scripsit Meineke, ψαλτρίας R. Methner Coll. Ion. fr. 22 . v. 7 παροίκους Ἅλυϊ Τμωλίαν ed. Casaub. , παροικοῦσα λυιτμωλίαν P. v. 8 ἔλσος B. v. 10 ὁλκοῖς] ὁμοῦ Methner. κρεκούσας Casaubonus, κρεκούσαις A. ἔνθα] ἐν δὲ Methner. v. 11 νομῷ Methner. ὁμοθροεῖ coni. Meineke, ὁμοφωνεῖ Methner.",
+          "play_title": "ΣΕΜΕΛΗ",
+          "play_work": "semele",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0320_semele",
+          "attribution_id": "nauck1889grc1-tlg0320-semele",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0320.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0320.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 11,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0320-semele",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0320-semele",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0320_semele",
+      "corresp": [
+        "urn:cts:greekLit:tlg0320.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

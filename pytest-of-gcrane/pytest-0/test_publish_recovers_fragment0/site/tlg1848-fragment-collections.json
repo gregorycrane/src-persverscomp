@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg1848",
+  "author": "Meletus",
+  "corpus_title": "Meletus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg1848.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg1848.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg1848.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [],
+  "works": {
+    "tlg1848-oidipodeia": {
+      "id": "tlg1848-oidipodeia",
+      "work": "oidipodeia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1848_oidipodeia",
+      "title": "ΟΙΔΙΠΟΔΕΙΑ",
+      "source_title": "ΟΙΔΙΠΟΔΕΙΑ",
+      "source": "tlg1848.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg1848-oidipodeia",
+      "record_type": "fragmentary_play",
+      "introduction": "Tetralogia Oedipi res complexa. Schol. Plat. p. 893 a 14 : ᾧ ἔτει οἱ Πελαργοὶ ἐδιδάσκοντο, καὶ ὁ Μέλητος Οἰδιπόδειαν καθῆκεν (ἔθηκεν ante Meinekium) , ὡς Ἀριστοτέλης Διδασκαλίαις.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    }
+  },
+  "attributions": []
+}

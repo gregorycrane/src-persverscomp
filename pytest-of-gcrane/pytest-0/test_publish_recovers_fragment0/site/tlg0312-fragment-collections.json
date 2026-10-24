@@ -1,0 +1,258 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0312",
+  "author": "Philocles",
+  "corpus_title": "Philocles, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0312.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0312.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0312-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0312-fr1-l1",
+          "text": "σὲ τῶν πάντων δεσπότην λέγω"
+        }
+      ],
+      "context": "Schol. Ar. Av. 282 : οὗτος ὁ Φιλοκλῆς ἔποπα ἐσκεύασεν ἐν τῇ Πανδιονίδι τετραλογίᾳ , οὗ ἡ ἀρχή ‘σὲ — λέγω’ . τῶν] τὸν V, τῶνδε coni. Dindorf. σὲ τῶν ἁπάντων Wagner, σὲ τῶν ἁπάντων Ἥλιε V. Rose Aristot. pseud. p. 552 sq. ego Ἥλιε, σὲ πάντων τῶνδε δεσπότην λέγω praetulerim.\n\nΤΗΡΕΥΣ v. ΠΑΝΔΙΟΝΙΣ",
+      "play_title": "ΠΑΝΔΙΟΝΙΣ",
+      "play_work": "pandionis",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_pandionis"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0312-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. M Eur. Andr. 32 (quo de loco cf. Wilamowitz-Moellendorff Ind. schol. hib. univ. Gryph. a. 1877 p. 4) : Φιλοκλῆς δὲ ὁ τραγῳδοποιὸς καὶ . . . προεκδοθῆναι φησὶν (φασὶν ed. Dindorf) ὑπὸ Τυνδάρεω τὴν Ἑρμιόνην τῷ Ὀρέστῃ , εἶτα (ὅσα cod. ut videtur, εἶτα δ’ C. Robert) ὕστερον ὑπὸ Μενελάου δοθῆναι Νεοπτολέμῳ . similia praebent alii qui non Philoclem sed Sophoclem testem adhibent, cf. quae attulimus p. 176 .",
+      "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabnlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0312-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Soph. Oed. C. 1320 : Ταλαοῦ , ὃν ἔνιοι διὰ τοῦ Κ Καλαὸν προσαγορεύουσι, καθάπερ Ἀρίσταρχος ὁ Τεγεάτης καὶ Φιλοκλῆς ἱστοροῦσι, συγγραφέων δὲ Ἑκαταῖος ὁ Μιλήσιος.",
+      "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabnlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0312-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0312-fr4-l1",
+          "text": "δορυφόνος"
+        }
+      ],
+      "context": "Hesych. 1 p. 531 : δορυφόνον· τὸν δολοφονοῦντα] Ἀριστοφάνης Δαιδάλῳ . ὅτι δὲ Φιλόκτητος (Φιλοκλῆς Pearson) τῇ λέξει ἐχρήσατο πρῶτος, δηλοῖ Τηλεκλείδης ἐν Πρυτάνεσι. δηλοῖ δὲ τὸν δολοφονοῦντα. quae ante Ἀριστοφάνης nomen leguntur verba τὸν δολοφονοῦντα delenda iudicat M. Schmidt. interpretatio grammatici perversa.",
+      "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabnlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0312-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0312-fr5-l1",
+          "text": "οὐδ’ ἂν ἐγκέφαλον ἔσθων λίποι."
+        }
+      ],
+      "context": "Ath. II p. 66 B : καὶ γὰρ Φιλοκλῆς τε ἐγκέφαλον φησίν ‘οὐδ’ — λίποι’ καὶ Ἀριστοφάνης (Ran. 134) ‘ἀπολέσαιμ’ ἂν ἐγκεφάλου θρίω δύο’ . Eust. Il. p. 757 , 46 : τῷ εἰπόντι ὡς ‘οὐδ’ ἂν ἐγκεφάλων ἔσθων λίπῃ’ . non dubito quin vitiosa lectione Athenaeus vel is quem sequitur deceptus sit. requiritur οὐδ’ ἂν ἔγκαφος | ἔσθων λίποι, sicut dixit Eupolis Com. 2 p. 565 : οὐ γὰρ λέλειπται τῶν ἐμῶν οὐδ’ ἔγκαφος. neque tragoediae ista verba conveniunt, sed comoediae. ac testari videtur comicum Philoclem titulus C. I. Att. II 977 fragm. w p. 407 .",
+      "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabnlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0312-pandionis": {
+      "id": "tlg0312-pandionis",
+      "work": "pandionis",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_pandionis",
+      "title": "ΠΑΝΔΙΟΝΙΣ",
+      "source_title": "ΠΑΝΔΙΟΝΙΣ",
+      "source": "tlg0312.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0312-pandionis",
+      "record_type": "fragmentary_play",
+      "introduction": "Tetralogia Pandionis eiusque filiarum, Procnes et Philomelae, et Terei mythum complexa. singularum fabularum titulos ignoramus, nisi quod Τηρεὺς ἢ Ἔποψ commemoratur in Schol. Ar. Av. 281 . Aristophanis haec sunt verba : ΠΕΙΘ. οὐ σὺ μόνος ἄρ’ ἦσθ’ ἔποψ, ἀλλὰ χοὗτος ἕτερος ; ΕΠΟΨ. ἀλλ’ οὗτος μέν ἐστι Φιλοκλέους ἐξ ἔποπος, ἐγὼ δὲ τούτου πάππος. ubi Schol. : οὗτος ὁ Φιλοκλῆς ἔποπα ἐσκεύασεν ἐν τῇ Πανδιονίδι τετραλογίᾳ — . ἄλλως. Φιλοκλεῖ ἔστι δρᾶμα Τηρεὺς ἢ Ἔποψ. ἄλλως. ὁ Σοφοκλῆς πρῶτον τὸν Τηρέα ἐποίησεν· εἶτα Φιλοκλῆς. — ἐν ἐνίοις ὑπομνήμασιν, ὅτι προκέφαλός ἐστιν ὁ Φιλοκλῆς ὡς ὁ ἔποψ· ἀλλ’ οὐδαμοῦ κεκωμῴδηται. εἴη ἂν οὖν τὸν ἔποπα ἐσκευοποιηκὼς τῇ Πανδιονίδι τετραλογίᾳ , ἣν καὶ Ἀριστοτέλης ἐν ταῖς Διδασκαλίαις ἀναγράφει. Ἔποψ fabulae titulum fuisse non credo.",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0312-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0312-fr1-l1",
+              "text": "σὲ τῶν πάντων δεσπότην λέγω"
+            }
+          ],
+          "context": "Schol. Ar. Av. 282 : οὗτος ὁ Φιλοκλῆς ἔποπα ἐσκεύασεν ἐν τῇ Πανδιονίδι τετραλογίᾳ , οὗ ἡ ἀρχή ‘σὲ — λέγω’ . τῶν] τὸν V, τῶνδε coni. Dindorf. σὲ τῶν ἁπάντων Wagner, σὲ τῶν ἁπάντων Ἥλιε V. Rose Aristot. pseud. p. 552 sq. ego Ἥλιε, σὲ πάντων τῶνδε δεσπότην λέγω praetulerim.\n\nΤΗΡΕΥΣ v. ΠΑΝΔΙΟΝΙΣ",
+          "play_title": "ΠΑΝΔΙΟΝΙΣ",
+          "play_work": "pandionis",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_pandionis",
+          "attribution_id": "nauck1889grc1-tlg0312-pandionis",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0312.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0312-incertarvm-fabnlarvm-fragmenta": {
+      "id": "tlg0312-incertarvm-fabnlarvm-fragmenta",
+      "work": "incertarvm_fabnlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+      "title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABNLARVM FRAGMENTA",
+      "source": "tlg0312.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0312-incertarvm-fabnlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0312-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. M Eur. Andr. 32 (quo de loco cf. Wilamowitz-Moellendorff Ind. schol. hib. univ. Gryph. a. 1877 p. 4) : Φιλοκλῆς δὲ ὁ τραγῳδοποιὸς καὶ . . . προεκδοθῆναι φησὶν (φασὶν ed. Dindorf) ὑπὸ Τυνδάρεω τὴν Ἑρμιόνην τῷ Ὀρέστῃ , εἶτα (ὅσα cod. ut videtur, εἶτα δ’ C. Robert) ὕστερον ὑπὸ Μενελάου δοθῆναι Νεοπτολέμῳ . similia praebent alii qui non Philoclem sed Sophoclem testem adhibent, cf. quae attulimus p. 176 .",
+          "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabnlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0312-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Soph. Oed. C. 1320 : Ταλαοῦ , ὃν ἔνιοι διὰ τοῦ Κ Καλαὸν προσαγορεύουσι, καθάπερ Ἀρίσταρχος ὁ Τεγεάτης καὶ Φιλοκλῆς ἱστοροῦσι, συγγραφέων δὲ Ἑκαταῖος ὁ Μιλήσιος.",
+          "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabnlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0312-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0312-fr4-l1",
+              "text": "δορυφόνος"
+            }
+          ],
+          "context": "Hesych. 1 p. 531 : δορυφόνον· τὸν δολοφονοῦντα] Ἀριστοφάνης Δαιδάλῳ . ὅτι δὲ Φιλόκτητος (Φιλοκλῆς Pearson) τῇ λέξει ἐχρήσατο πρῶτος, δηλοῖ Τηλεκλείδης ἐν Πρυτάνεσι. δηλοῖ δὲ τὸν δολοφονοῦντα. quae ante Ἀριστοφάνης nomen leguntur verba τὸν δολοφονοῦντα delenda iudicat M. Schmidt. interpretatio grammatici perversa.",
+          "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabnlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0312-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0312-fr5-l1",
+              "text": "οὐδ’ ἂν ἐγκέφαλον ἔσθων λίποι."
+            }
+          ],
+          "context": "Ath. II p. 66 B : καὶ γὰρ Φιλοκλῆς τε ἐγκέφαλον φησίν ‘οὐδ’ — λίποι’ καὶ Ἀριστοφάνης (Ran. 134) ‘ἀπολέσαιμ’ ἂν ἐγκεφάλου θρίω δύο’ . Eust. Il. p. 757 , 46 : τῷ εἰπόντι ὡς ‘οὐδ’ ἂν ἐγκεφάλων ἔσθων λίπῃ’ . non dubito quin vitiosa lectione Athenaeus vel is quem sequitur deceptus sit. requiritur οὐδ’ ἂν ἔγκαφος | ἔσθων λίποι, sicut dixit Eupolis Com. 2 p. 565 : οὐ γὰρ λέλειπται τῶν ἐμῶν οὐδ’ ἔγκαφος. neque tragoediae ista verba conveniunt, sed comoediae. ac testari videtur comicum Philoclem titulus C. I. Att. II 977 fragm. w p. 407 .",
+          "play_title": "INCERTARVM FABNLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabnlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0312.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0312-pandionis",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0312-pandionis",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_pandionis",
+      "corresp": [
+        "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0312-incertarvm_fabnlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0312_incertarvm_fabnlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0312.fragmenta.nauck1889grc1:5"
+      ]
+    }
+  ]
+}

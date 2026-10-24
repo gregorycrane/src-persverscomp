@@ -1,0 +1,151 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0351",
+  "author": "Hippothoon",
+  "corpus_title": "Hippothoon, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0351.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0351.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0351-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr1-l1",
+          "text": "ἄνθρωπος ὢν μέμνησο τῆς κοινῆς τύχης."
+        }
+      ],
+      "context": "Stob. Flor. 22 , 25 : Ἰπποθόωντος (sic M, ἰπποθ/ο S, ἱπποθύοντος A) . ‘ἄνθρωπος — τύχης’ . eundem versum om. poetae nom. habet Vita Aesopi p. 46 , 6 ed. Westerm. cf. Men. mon. 8 et Doxop. in Rhet. vol. 2 p. 294 et 295 ."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0351-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr2-l1",
+          "text": "φθόνος κάκιστος κἀδικώτατος θεός,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0351-fr2-l2",
+          "text": "κακοῖς τε χαίρει κἀγαθοῖς ἀλγύνεται."
+        }
+      ],
+      "context": "Stob. Flor. 38 , 15 : Ἱπποθόωντος. ‘φθόνος — ἀλγύνεται’ . non cohaerent cum his versibus quae codices adiungunt (adesp. fr. 534) , οὐδεὶς ἂν εἴποι κτἑ ."
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0351-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr3-l1",
+          "text": "ζευχθεὶς γάμοισιν οὐκέτ᾽ ἔστ' ἐλεύθερος."
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0351-fr3-l2",
+          "text": "ἀλλ᾽ ἕν γ' ἔχει τι χρηστόν· ἐν κήδει γὰρ ὢν"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0351-fr3-l3",
+          "text": "ἐσθλῷ δέδοικε μηδὲν ἐξαμαρτάνειν."
+        }
+      ],
+      "context": "Stob. Flor. 67 , 13 : Εὐριπίδου Ἀντιγόνης (sic MA, simpliciter αντιγ/ο S) . ‘ζευχθεὶς — ἐξαμαρτάνειν.’ Flor. 67 , 14 : Ἰπποθόωντος. ‘ἄριστον ἀνδρὶ κτῆμα συμπαθής γυνή’ . lemmata sedem mutare iussi Eur. fr. 164 . v. 1 recurrit in Men. mon. 197 et cum lemmate Ἱπποθώου (sic SM, ίπποθόον A) in Stob. Flor. 68 , 24 . y. 2 iv] οὖν praetulerim. v. 3 δέδοικε] φυλάσσει coni. Wecklein."
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0351-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr4-l1",
+          "text": "παίδων κρατεῖν δεῖ τῶν νεωτέρων σοφούς."
+        }
+      ],
+      "context": "Stob. Flor. 83 , 15 : Ἰπποθόου. ‘παίδων -σοφούς‘"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0351-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr5-l1",
+          "text": "γῆρας λεόντων κρεῖσσον ἀκμαίων νεβρῶν."
+        }
+      ],
+      "context": "Stob. Flor. 115 , 14 : 'Ἱπποθόωντος (sic MA, ίππο S) . ‘γῆρας — νεβρῶν’ . ἀλκμαίων Stobaei A."
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0351-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0351.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0351-fr6-l1",
+          "text": "γάμος κράτιστός ἐστιν ἀνδρὶ σώφρονι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0351-fr6-l2",
+          "text": "τρόπον γυναικὸς χρηστὸν ἔνδον λαμβάνειν·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0351-fr6-l3",
+          "text": "αὕτη γὰρ ἡ προὶξ οἰκίαν σῴζει μόνη."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0351-fr6-l4",
+          "text": "ὅστις δὲ τρυφερῶς τὴν γυναῖκ᾽ ἄγει λαβών,"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0351-fr6-l5",
+          "text": "συνεργὸν οὗτος ἀντὶ δεσποίνης ἔχει"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0351-fr6-l6",
+          "text": "εὔνουν βεβαίαν εἰς ἅπαντα τὸν βίον,"
+        }
+      ],
+      "context": "Stob. Flor. 72 , 5 : Ίππώναχτος. ‘γάμος — μόνη’ , v. 2 ἕδνον λαμβάνειν Haupt Opusc. 3 p. 637 , ἕδνα λαμβάνειν Bergk Lyr. 2 p. 486 , qui in tertia Lyricorum edit, ἐν δόμοις λαχεῖν proposuerat. lemma in Ἱπποθόωντος mutandum esse coni. Meineke Com. 4 p. 714 . quos addit Stob. versus tres,\n\na praegressis separandos esse vidit Valckenaer. ὅστις δὲ τρυφερῶς ζῆν γυναῖκ᾽ εἴργει λαβών bene coni. F. G. Schmidt Krit. Stud. 1 p. 153 , sed λαβών dubito num ferri possit. extremus versus, εὔνουν — βίον, ab interpolatore videtur esse additus."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

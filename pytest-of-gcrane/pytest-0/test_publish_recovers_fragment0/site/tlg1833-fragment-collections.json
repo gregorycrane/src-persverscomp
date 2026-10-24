@@ -1,0 +1,109 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg1833",
+  "author": "Pratinas",
+  "corpus_title": "Pratinas, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg1833.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg1833.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg1833.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg1833-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg1833.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg1833-fr1-l1",
+          "text": "ἁδύφωνος ὄρτυξ"
+        }
+      ],
+      "context": "Ath. IX p. 392 F : Πρατίνας δ’ ἐν Δυσμαίναις ἢ Καρυάτισιν ἁδύφωνον ἰδίως καλεῖ τὸν ὄρτυγα, πλὴν εἰ μή τι παρὰ τοῖς Φλειασίοις ἢ τοῖς Λάκωσι φωνήεντες, ὡς καὶ οἱ πέρδικες. ubi ἐν δυμαναις A, ἐν Δυμαίναις Toup Emend. 2 p. 480 , ἐν Δυσμαίναις Meineke Anal. Alex. p. 360 coll. Hesych. 1 p. 545 : Δύσμαιναι· αἱ ἐν Σπάρταις (Καρύαις recte Meineke) χωρίτιδες βάκχαι. deinde Καρυάτισιν Dalechamps, καριατισιν A.",
+      "play_title": "ΔΥΣΜΑΙΝΑΙ Η ΚΑΡΥΑΤΙΔΕΣ",
+      "play_work": "dysmainai_e_karyatides",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1833_dysmainai_e_karyatides"
+    }
+  ],
+  "works": {
+    "tlg1833-dysmainai-e-karyatides": {
+      "id": "tlg1833-dysmainai-e-karyatides",
+      "work": "dysmainai_e_karyatides",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1833_dysmainai_e_karyatides",
+      "title": "ΔΥΣΜΑΙΝΑΙ Η ΚΑΡΥΑΤΙΔΕΣ",
+      "source_title": "ΔΥΣΜΑΙΝΑΙ Η ΚΑΡΥΑΤΙΔΕΣ",
+      "source": "tlg1833.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg1833-dysmainai-e-karyatides",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg1833-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg1833.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg1833-fr1-l1",
+              "text": "ἁδύφωνος ὄρτυξ"
+            }
+          ],
+          "context": "Ath. IX p. 392 F : Πρατίνας δ’ ἐν Δυσμαίναις ἢ Καρυάτισιν ἁδύφωνον ἰδίως καλεῖ τὸν ὄρτυγα, πλὴν εἰ μή τι παρὰ τοῖς Φλειασίοις ἢ τοῖς Λάκωσι φωνήεντες, ὡς καὶ οἱ πέρδικες. ubi ἐν δυμαναις A, ἐν Δυμαίναις Toup Emend. 2 p. 480 , ἐν Δυσμαίναις Meineke Anal. Alex. p. 360 coll. Hesych. 1 p. 545 : Δύσμαιναι· αἱ ἐν Σπάρταις (Καρύαις recte Meineke) χωρίτιδες βάκχαι. deinde Καρυάτισιν Dalechamps, καριατισιν A.",
+          "play_title": "ΔΥΣΜΑΙΝΑΙ Η ΚΑΡΥΑΤΙΔΕΣ",
+          "play_work": "dysmainai_e_karyatides",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1833_dysmainai_e_karyatides",
+          "attribution_id": "nauck1889grc1-tlg1833-dysmainai_e_karyatides",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg1833.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg1833.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg1833-palaistai-satyroi": {
+      "id": "tlg1833-palaistai-satyroi",
+      "work": "palaistai_satyroi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1833_palaistai_satyroi",
+      "title": "ΠΑΛΑΙΣΤΑΙ ΣΑΤΥΡΟΙ",
+      "source_title": "ΠΑΛΑΙΣΤΑΙ ΣΑΤΥΡΟΙ",
+      "source": "tlg1833.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg1833-palaistai-satyroi",
+      "record_type": "fragmentary_play",
+      "introduction": "Argum. Aesch. Sept. , vide Aesch. fr. p. 39 .",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg1833-dysmainai_e_karyatides",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg1833-dysmainai_e_karyatides",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg1833_dysmainai_e_karyatides",
+      "corresp": [
+        "urn:cts:greekLit:tlg1833.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

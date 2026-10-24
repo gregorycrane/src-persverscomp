@@ -1,0 +1,41 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0355",
+  "author": "Zopyrus",
+  "corpus_title": "Zopyrus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0355.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0355.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0355.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0355-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0355.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0355-fr1-l1",
+          "text": "μηδεὶς ἄπειρος τῶν ἐμῶν εἴη φίλων"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0355-fr1-l2",
+          "text": "ἔρωτος, εὐτυχῶν δὲ τὸν θεὸν λάβοι."
+        }
+      ],
+      "context": "Stob. Flor. 63 , 8 : Ζωπύρου (sic MA, eclogam om. S) . ‘μηδεὶς — λάβοι’ . v. 2 βροτὸς libri, ἔρωτος coni. Gesner. εὐτυχῶν Gesner, εὐτυχὼν MA, ἐντυχὼν coni. Meineke, εὖ φρονῶν O. Hense Exerc. crit. p. 25 , εὐαγῶν Enger Adnot. ad poet. Gr. fr. p. 13 . εὐτυχοῖ δὲ τὸν θεὸν λαβών F. G. Schmidt Anal. Soph. p. 49 , εὐμενοῦς δὲ τοῦ θεοῦ τύχοι ego malim."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

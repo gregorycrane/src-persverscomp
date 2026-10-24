@@ -1,0 +1,198 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0334",
+  "author": "Diogenes of Sinope",
+  "corpus_title": "Diogenes of Sinope, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0334.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0334.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0334-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0334-fr1-l1",
+          "text": "οἱ τῆς ἀνάνδρου καὶ διεσκατωμένης"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0334-fr1-l2",
+          "text": "τρυφῆς ὑφ’ ἡδοναῖσι σαχθέντες κέαρ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0334-fr1-l3",
+          "text": "πονεῖν θέλοντες οὐδὲ βαιά"
+        }
+      ],
+      "context": "Clemens Alex. Strom. II p. 492 : τί γὰρ ἕτερον ἡ τρυφὴ ἢ φιλήδονος λιχνεία καὶ πλεονασμὸς περίεργος πρὸς ἡδυπάθειαν ἀνειμένων ; ἐμφαντικῶς (ἐμφατικῶς Meinkeke Ath. vol. 4 p. 306) ὁ Διογένης ἔν τινι τραγῳδίᾳ γράφει ‘οἱ τῆς — βαιά’ , καὶ τὰ ἐπὶ τούτοις ὅσα αἰσχρῶς μὲν εἴρηται, ἐπαξίως δὲ τῶν φιληδόνων. v. 2 ἡδοναῖσιν ἀχθέντες L, ἡδοναῖσι σαχθέντες Meineke Anal. Alex. p. 393 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0334-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0334-fr2-l1",
+          "text": "θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον."
+        }
+      ],
+      "context": "Theodorus Hyrtac. Epist. 17 in Notices et Extr. vol. 5 p. 737 : Διογένη τὸν κύνα θαυμάσομαι σταλαγμὸν τύχης μᾶλλον ἢ πίθον φρενῶν προτιμήσαντα. versum supra scriptum sine auctoris nomine multi afferunt, cf. Men. mon. 240 Cosmas ad Greg. Naz. in Maii Spicil. Rom. vol. 2 p. 233 Choerob. in Theod. p. 5 , 3 Choerob. in Psalm. p. 30 , 31 Anecd. Oxon. vol. 1 p. 189 , 6 Etym. M. p. 415 , 30 Etym. Gud. p. 233 , 54 Suid. v. ἦ verba prima θέλω τύχης σταλαγμόν habet Eust. Il. p. 651 , 28 . adde Apophth. Vindob. 2 (Gnomol. Vatic. 97 quod edidit Leo Sternbach Wiener Stud. X p. 12) : Ἀλέξανδρος ὁ βασιλεὺς ἰδὼν Διογένην τὸν αὐτὸν κοιμώμενον ἐν πίθῳ εἶπε ‘πίθε μεστὲ φρενῶν’ . ὁ δὲ φιλόσοφος ἀναστὰς εἶπεν· ὦ βασιλεῦ μέγιστε, θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον, ἧς μὴ παρούσης δυστυχοῦσιν αἱ φρένες’ . etiam alterum hunc versum Diogeni tribuit C. Wachsmuth Studien zu den gr. Flor. p. 140 . denique Greg. Naz. vol. 2 p. 156 A : ἔφησέ τίς που τῶν φιλοχρύσων τάδε ‘θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον’· πρὸς ὅν τις ἀντέφησε τῶν φιλοφρόνων ‘ῥανὶς φρενῶν μοι μᾶλλον ἢ βυθὸς τύχης’ . versus qui est ‘ῥανὶς — τύχης’ recurrit Anecd. Oxon. vol. 1 p. 189 , 7 Etym. M. p. 415 , 31 et 58 Etym. Gud. p. 233 , 55 . quod constanter scribitur θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον dubito num ferri possit : praetulerim φρενῶν βυθόν (cf. Plut. Amator. c. 13 p. 757 C : βυθὸν ἀθεότητος, Porph. de abst. 1 , 42 p. 118 , 8 : βυθὸς ἐξουσίας) , neque obstat huic emendationi titulus Inscr. R. Neap. 2175 (sive C. I. 5868 vol. 3 p. 760 Epigr. Kaibel. 1112 p. 502) : θέλω τύχης σταλαγμὸν ἢ φρενῶν. ΙΘΟΝ, ubi ΒΥΘΟΝ in lapide primitus extitisse suspicor.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0334-erakles": {
+      "id": "tlg0334-erakles",
+      "work": "erakles",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_erakles",
+      "title": "ΗΡΑΚΛΗΣ",
+      "source_title": "ΗΡΑΚΛΗΣ",
+      "source": "tlg0334.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0334-erakles",
+      "record_type": "fragmentary_play",
+      "introduction": "Tertullianus Apolog. c. 14 : sed et Diogenes nescio quid in Herculem ludit, et Romanus cynicus Varro trecentos Ioves, sive Iupiteres dicendum, sine capitibus introducit.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0334-thyestes": {
+      "id": "tlg0334-thyestes",
+      "work": "thyestes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_thyestes",
+      "title": "ΘΥΕΣΤΗΣ",
+      "source_title": "ΘΥΕΣΤΗΣ",
+      "source": "tlg0334.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0334-thyestes",
+      "record_type": "fragmentary_play",
+      "introduction": "Laert. Diog. 6 , 73 : (Diogenes Sinopensis dixit) μηδ’ ἀνόσιον εἶναι τὸ καὶ τῶν ἀνθρωπείων κρεῶν ἅψασθαι, ὡς δῆλον ἐκ τῶν ἀλλοτρίων ἐθνῶν· καὶ τῷ ὀρθῷ λόγῳ πάντα ἐν πᾶσι καὶ διὰ πάντων εἶναι λέγων· καὶ γὰρ ἐν τῷ ἄρτῳ κρέας εἶναι καὶ ἐν τῷ λαχάνῳ ἄρτον, καὶ τῶν σωμάτων τῶν λοιπῶν ἐν πᾶσι διά τινων ἀδήλων πόρων καὶ ὄγκων εἰσκρινομένων καὶ συνατμιζομένων, ὡς δῆλον ἐν τῷ Θυέστῃ ποιεῖ , εἴ γε αὐτοῦ αἱ τραγῳδίαι καὶ μὴ Φιλίσκου τοῦ Αἰγινήτου ἐκείνου γνωρίμου ἢ Πασιφῶντος τοῦ Λουκιανοῦ (Λουσιάτου coni. Roeper Philol. 3 p. 62 , Ἐρετριακοῦ Wilamowitz-Moellendorff Antigonos von Karystos p. 142) , ὃν φησὶ Φαβωρῖνος ἐν παντοδαπῇ ἱστορίᾳ μετὰ τὴν τελευτὴν αὐτοῦ συγγράψαι. Philodemus de philosophis in Herc. vol. VIII col. 14 : τὸ περὶ τῆς ἀνθρωποφαγίας δόγμα — — Διογέν. . — — — Διογένης ἐν τῷ Θυέστῃ καὶ τῷ Οἰδίποδι. Theophilus ad Autol. 3 , 5 p. 198 : ἀθεωτέρα τις φωνὴ εὑρίσκεται ἡ τοῦ Διογένους διδάσκοντος τὰ τέκνα τοὺς ἑαυτῶν γονεῖς εἰς θυσίαν ἄγειν (γονεῖς θυσιάζειν malim) καὶ τούτους κατεσθίειν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0334-oidipoys": {
+      "id": "tlg0334-oidipoys",
+      "work": "oidipoys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_oidipoys",
+      "title": "ΟΙΔΙΠΟΥΣ",
+      "source_title": "ΟΙΔΙΠΟΥΣ",
+      "source": "tlg0334.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0334-oidipoys",
+      "record_type": "fragmentary_play",
+      "introduction": "V. Philodemi locum modo allatum.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0334-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0334-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0334.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0334-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0334-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0334-fr1-l1",
+              "text": "οἱ τῆς ἀνάνδρου καὶ διεσκατωμένης"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0334-fr1-l2",
+              "text": "τρυφῆς ὑφ’ ἡδοναῖσι σαχθέντες κέαρ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0334-fr1-l3",
+              "text": "πονεῖν θέλοντες οὐδὲ βαιά"
+            }
+          ],
+          "context": "Clemens Alex. Strom. II p. 492 : τί γὰρ ἕτερον ἡ τρυφὴ ἢ φιλήδονος λιχνεία καὶ πλεονασμὸς περίεργος πρὸς ἡδυπάθειαν ἀνειμένων ; ἐμφαντικῶς (ἐμφατικῶς Meinkeke Ath. vol. 4 p. 306) ὁ Διογένης ἔν τινι τραγῳδίᾳ γράφει ‘οἱ τῆς — βαιά’ , καὶ τὰ ἐπὶ τούτοις ὅσα αἰσχρῶς μὲν εἴρηται, ἐπαξίως δὲ τῶν φιληδόνων. v. 2 ἡδοναῖσιν ἀχθέντες L, ἡδοναῖσι σαχθέντες Meineke Anal. Alex. p. 393 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0334-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0334-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0334-fr2-l1",
+              "text": "θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον."
+            }
+          ],
+          "context": "Theodorus Hyrtac. Epist. 17 in Notices et Extr. vol. 5 p. 737 : Διογένη τὸν κύνα θαυμάσομαι σταλαγμὸν τύχης μᾶλλον ἢ πίθον φρενῶν προτιμήσαντα. versum supra scriptum sine auctoris nomine multi afferunt, cf. Men. mon. 240 Cosmas ad Greg. Naz. in Maii Spicil. Rom. vol. 2 p. 233 Choerob. in Theod. p. 5 , 3 Choerob. in Psalm. p. 30 , 31 Anecd. Oxon. vol. 1 p. 189 , 6 Etym. M. p. 415 , 30 Etym. Gud. p. 233 , 54 Suid. v. ἦ verba prima θέλω τύχης σταλαγμόν habet Eust. Il. p. 651 , 28 . adde Apophth. Vindob. 2 (Gnomol. Vatic. 97 quod edidit Leo Sternbach Wiener Stud. X p. 12) : Ἀλέξανδρος ὁ βασιλεὺς ἰδὼν Διογένην τὸν αὐτὸν κοιμώμενον ἐν πίθῳ εἶπε ‘πίθε μεστὲ φρενῶν’ . ὁ δὲ φιλόσοφος ἀναστὰς εἶπεν· ὦ βασιλεῦ μέγιστε, θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον, ἧς μὴ παρούσης δυστυχοῦσιν αἱ φρένες’ . etiam alterum hunc versum Diogeni tribuit C. Wachsmuth Studien zu den gr. Flor. p. 140 . denique Greg. Naz. vol. 2 p. 156 A : ἔφησέ τίς που τῶν φιλοχρύσων τάδε ‘θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον’· πρὸς ὅν τις ἀντέφησε τῶν φιλοφρόνων ‘ῥανὶς φρενῶν μοι μᾶλλον ἢ βυθὸς τύχης’ . versus qui est ‘ῥανὶς — τύχης’ recurrit Anecd. Oxon. vol. 1 p. 189 , 7 Etym. M. p. 415 , 31 et 58 Etym. Gud. p. 233 , 55 . quod constanter scribitur θέλω τύχης σταλαγμὸν ἢ φρενῶν πίθον dubito num ferri possit : praetulerim φρενῶν βυθόν (cf. Plut. Amator. c. 13 p. 757 C : βυθὸν ἀθεότητος, Porph. de abst. 1 , 42 p. 118 , 8 : βυθὸς ἐξουσίας) , neque obstat huic emendationi titulus Inscr. R. Neap. 2175 (sive C. I. 5868 vol. 3 p. 760 Epigr. Kaibel. 1112 p. 502) : θέλω τύχης σταλαγμὸν ἢ φρενῶν. ΙΘΟΝ, ubi ΒΥΘΟΝ in lapide primitus extitisse suspicor.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0334-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0334.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0334-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0334-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0334_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0334.fragmenta.nauck1889grc1:2"
+      ]
+    }
+  ]
+}

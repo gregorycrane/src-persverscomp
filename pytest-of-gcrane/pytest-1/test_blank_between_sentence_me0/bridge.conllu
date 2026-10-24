@@ -1,0 +1,7 @@
+# sent_id = 2274106a
+# text = ἣ ἔθηκε
+# literal_translation = It caused.
+
+8	ἣ	ὅς	PRON	p-s---fn-	Case=Nom	12	nsubj	_	Ref=1.2|gloss=who
+12	ἔθηκε	τίθημι	VERB	v3saia---	Mood=Ind	0	root	_	Ref=1.2|gloss=placed
+

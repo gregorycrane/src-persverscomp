@@ -1,0 +1,311 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0322",
+  "author": "Dicaeogenes",
+  "corpus_title": "Dicaeogenes, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0322.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0322.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0322-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0322-fr1-l1",
+          "text": "ὅταν δ’ ἔρωτος ἐνδεθῶμεν ἄρκυσιν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0322-fr1-l2",
+          "text": "θᾶσσον θυραίοις τὴν χάριν ποιούμεθα"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0322-fr1-l3",
+          "text": "ἢ τοῖς ἀνάγκης ἐν γένει πεφυκόσιν."
+        }
+      ],
+      "context": "Stob. Flor. 64 , 1 : Δικαιογένους (Διογένους A) . ‘ὅταν — πεφυκόσι’ . v. 1 ἄρκυσι ed. v. 2 πρὸς χάριν πονούμεθα Meineke Stob. 4 p. LXXII, rectius τὴν νόσον μηνύομεν Cobet Mnem. 9 p. 133 . v. 3 τοῖς ἀπ’ ἀρχῆς scribendum suspicor, τοῖσιν ἄγχιστ’ Meineke, cf. quae diximus in Iambl. de vita Pythag. p. 210 . πεφυκόσι ed.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0322-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0322-fr2-l1",
+          "text": "μακάριος ὅστις αὐτὸς ἰσχύων ἔτι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0322-fr2-l2",
+          "text": "παῖδας παρασπίζοντας ἀλκίμους ἔχει."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0322-fr2-l3",
+          "text": "οὐκ ἔστι μείζων ἡδονὴ ταύτης πατρὶ"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0322-fr2-l4",
+          "text": "ἢ σωφρονοῦντα καὶ φρονοῦντ’ ἰδεῖν τινα"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0322-fr2-l5",
+          "text": "τῶν ἐξ ἑαυτοῦ ."
+        }
+      ],
+      "context": "Stob. Flor. 75 , 1 : Διογένους (sic MA, διογ? S, Δικαιογένους scribendum videtur) . ‘μακάριος — ἔχει’ .\n\nStob. Flor. 75 , 10 : Δικαιογένους (sic S, Διογένους ceteri) . ζηλωτὸς ὅστις εὐτύχησεν ἐν τέκνοις καὶ μὴ ἐπισήμοις συμφοραῖς ὠδύρετο. Euripidis hi versus (Or. 541) librariorum errore tribuuntur Dicaeogeni, cuius locum intercidisse recte fortasse coni. O. Hense. quamquam fieri potest ut Dicaeogenis sint versus qui Flor. 75 , 9 Menandro (Com. 4 p. 261) adscribuntur : οὐκ ἔστι μείζων ἡδονὴ ταύτης πατρὶἢ σωφρονοῦντα καὶ φρονοῦντ’ ἰδεῖν τινατῶν ἐξ ἑαυτοῦ . ubi v. 2 σωφρονοῦντα κεὐτυχοῦντ’ ἰδεῖν coni. Meineke in Men. p. 230 , σωφρονοῦντα κεὐποροῦντ’ ἰδεῖν Herwerden Obs. crit. in fragm. com. Gr. p. 95 . v. 2 sq. σωφρονοῦντα κεὐθενοῦντα παῖδ’ ἰδεῖν τὸν ἐξ ἐαυτοῦ F. G. Schmidt Krit. Stud. 3 p. 12 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0322-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0322-fr4-l1",
+          "text": "αὐτὸς τραφεὶς δὲ τῶν φυτευσάντων ὕπο"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0322-fr4-l2",
+          "text": "καλῶς, τὸν αὐτὸν ἔρανον αὐτοῖσιν νέμεις."
+        }
+      ],
+      "context": "Stob. Flor. 79 , 6 : Δικαιογένους. ‘αὐτὸς — νέμεις’ . v. 1 αὐτὸς δὲ θρεφθεὶς Porson Adv. p. 304 . v. 2 νέμοις Arsenius p. 341 , 21 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0322-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0322-fr5-l1",
+          "text": "θεὸς μέγιστος τοῖς φρονοῦσιν οἱ γονῆς."
+        }
+      ],
+      "context": "Stob. Flor. 79 , 33 : Δικαιογένους. ‘θεὸς — γονεῖς’ . θεὸς μέγιστος] θεοὶ μέγιστοι Men. mon. 238 . γονῆς scropsi.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0322-kyprioi": {
+      "id": "tlg0322-kyprioi",
+      "work": "kyprioi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_kyprioi",
+      "title": "ΚΥΠΡΙΟΙ",
+      "source_title": "ΚΥΠΡΙΟΙ",
+      "source": "tlg0322.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0322-kyprioi",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Poet. c. 16 p. 1455 a 1 : ἡ τρίτη (sc. ἀναγνώρισις) διὰ μνήμης τῷ αἰσθέσθαι τι ἰδόντα, ὥσπερ ἡ ἐν Κυπρίοις τοῖς Δικαιογένους· ἰδὼν γὰρ τὴν γραφὴν ἔκλαυσεν.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0322-medeia": {
+      "id": "tlg0322-medeia",
+      "work": "medeia",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_medeia",
+      "title": "ΜΗΔΕΙΑ",
+      "source_title": "ΜΗΔΕΙΑ",
+      "source": "tlg0322.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0322-medeia",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. Eur. Med. 167 : Τιμαχίδας — Ἄψυρτον φησὶ λέγειν αὐτήν (Medeam) , τοῦ Εὐριπίδου μήτε ἐνταῦθα μήτε ἐν τῷ Αἰγεῖ δηλώσαντος τὸν Ἄψυρτον ὀνομαστί. ὁ δὲ Φερεκύδης διὰ τοῦ Ξ ὀνομάζει αὐτόν. Δικαιογένης δὲ ἐν τῇ Μηδείᾳ Μεταπόντιον αὐτὸν ὀνομάζει.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0322-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0322-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0322.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0322-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0322-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0322-fr1-l1",
+              "text": "ὅταν δ’ ἔρωτος ἐνδεθῶμεν ἄρκυσιν,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0322-fr1-l2",
+              "text": "θᾶσσον θυραίοις τὴν χάριν ποιούμεθα"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0322-fr1-l3",
+              "text": "ἢ τοῖς ἀνάγκης ἐν γένει πεφυκόσιν."
+            }
+          ],
+          "context": "Stob. Flor. 64 , 1 : Δικαιογένους (Διογένους A) . ‘ὅταν — πεφυκόσι’ . v. 1 ἄρκυσι ed. v. 2 πρὸς χάριν πονούμεθα Meineke Stob. 4 p. LXXII, rectius τὴν νόσον μηνύομεν Cobet Mnem. 9 p. 133 . v. 3 τοῖς ἀπ’ ἀρχῆς scribendum suspicor, τοῖσιν ἄγχιστ’ Meineke, cf. quae diximus in Iambl. de vita Pythag. p. 210 . πεφυκόσι ed.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0322-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0322-fr2-l1",
+              "text": "μακάριος ὅστις αὐτὸς ἰσχύων ἔτι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0322-fr2-l2",
+              "text": "παῖδας παρασπίζοντας ἀλκίμους ἔχει."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0322-fr2-l3",
+              "text": "οὐκ ἔστι μείζων ἡδονὴ ταύτης πατρὶ"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0322-fr2-l4",
+              "text": "ἢ σωφρονοῦντα καὶ φρονοῦντ’ ἰδεῖν τινα"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0322-fr2-l5",
+              "text": "τῶν ἐξ ἑαυτοῦ ."
+            }
+          ],
+          "context": "Stob. Flor. 75 , 1 : Διογένους (sic MA, διογ? S, Δικαιογένους scribendum videtur) . ‘μακάριος — ἔχει’ .\n\nStob. Flor. 75 , 10 : Δικαιογένους (sic S, Διογένους ceteri) . ζηλωτὸς ὅστις εὐτύχησεν ἐν τέκνοις καὶ μὴ ἐπισήμοις συμφοραῖς ὠδύρετο. Euripidis hi versus (Or. 541) librariorum errore tribuuntur Dicaeogeni, cuius locum intercidisse recte fortasse coni. O. Hense. quamquam fieri potest ut Dicaeogenis sint versus qui Flor. 75 , 9 Menandro (Com. 4 p. 261) adscribuntur : οὐκ ἔστι μείζων ἡδονὴ ταύτης πατρὶἢ σωφρονοῦντα καὶ φρονοῦντ’ ἰδεῖν τινατῶν ἐξ ἑαυτοῦ . ubi v. 2 σωφρονοῦντα κεὐτυχοῦντ’ ἰδεῖν coni. Meineke in Men. p. 230 , σωφρονοῦντα κεὐποροῦντ’ ἰδεῖν Herwerden Obs. crit. in fragm. com. Gr. p. 95 . v. 2 sq. σωφρονοῦντα κεὐθενοῦντα παῖδ’ ἰδεῖν τὸν ἐξ ἐαυτοῦ F. G. Schmidt Krit. Stud. 3 p. 12 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0322-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0322-fr4-l1",
+              "text": "αὐτὸς τραφεὶς δὲ τῶν φυτευσάντων ὕπο"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0322-fr4-l2",
+              "text": "καλῶς, τὸν αὐτὸν ἔρανον αὐτοῖσιν νέμεις."
+            }
+          ],
+          "context": "Stob. Flor. 79 , 6 : Δικαιογένους. ‘αὐτὸς — νέμεις’ . v. 1 αὐτὸς δὲ θρεφθεὶς Porson Adv. p. 304 . v. 2 νέμοις Arsenius p. 341 , 21 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0322-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0322-fr5-l1",
+              "text": "θεὸς μέγιστος τοῖς φρονοῦσιν οἱ γονῆς."
+            }
+          ],
+          "context": "Stob. Flor. 79 , 33 : Δικαιογένους. ‘θεὸς — γονεῖς’ . θεὸς μέγιστος] θεοὶ μέγιστοι Men. mon. 238 . γονῆς scropsi.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0322.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 11,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0322-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0322_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0322.fragmenta.nauck1889grc1:5"
+      ]
+    }
+  ]
+}

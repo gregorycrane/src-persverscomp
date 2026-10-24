@@ -1,0 +1,342 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0323",
+  "author": "Antiphon",
+  "corpus_title": "Antiphon, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0323.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0323-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0323-fr1-l1",
+          "text": "διετίθουν"
+        }
+      ],
+      "context": "Antiatt. p. 90 , 5 : διετίθουν· διετίθεσαν. Ἀντιφῶν (Ἀντιφάνης coni. Meineke Hist. crit. p. 316) Ἰάσονι.",
+      "play_title": "ΙΑΣΩΝ",
+      "play_work": "iason",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_iason"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0323-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0323-fr2-l1",
+          "text": "οὐχ ἵνα κάνωσι θῆρ’ , ὅπως δὲ μάρτυρες"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0323-fr2-l2",
+          "text": "ἀρετῆς γένωνται Μελεάγρῳ πρὸς Ἑλλάδα."
+        }
+      ],
+      "context": "Aristot. Rhet. 2 , 23 p. 1399 b 26 : καὶ τὸ ἐκ τοῦ Μελεάγρου τοῦ Ἀντιφῶντος ‘οὐχ — Ἑλλάδα’ . ubi schol. fol. 45 b 17 : περὶ τοῦ Μελεάγρου ὁ Ἀντιφῶν γράφει ὅτι συνῆλθον τῷ Οἰνεῖ τῷ πατρὶ τοῦ Μελεάγρου οἱ ἔκκριτοι τῶν Αἰτωλῶν, οὐχ ἵνα κτάνωσι τὸν σῦν ἐξελθόντες (τὸν συνεξελθόντα ed.) τὸν Ἐρυμάνθιον, ἀλλ’ ἵνα ἴδωσι τὸν Μελέαγρον ὅπως τὸν θῆρα ἀπέκτεινε καὶ μαρτυρῶσι τοῦτο. v. 1 κτάνωσι libri, κάνωσι Meineke Hist. crit. p. 315 .",
+      "play_title": "ΜΕΛΕΑΓΡΟΣ",
+      "play_work": "meleagros",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_meleagros"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0323-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0323-fr3-l1",
+          "text": "σοφόν γέ τοί τι πρὸς τὸ βουλεύειν ἔχει"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0323-fr3-l2",
+          "text": "τὸ γῆρας, ὡς δὴ πόλλ’ ἴδον τε καὶ παθόν."
+        }
+      ],
+      "context": "Stob. Flor. 115 , 15 : Ἀντιφάνους ἐκ Φιλοκτήτου (sic MA, ecl. 15 et 16 uno lemmate Σοφοκλέους comprehendit S) . ‘σοφόν — πρθόν’ . v. 1 ἔχει] ἐστὶ S et m. sec. Voss. , ubi πέλει m. pr. ἔφυ malim. σοφόν γέ τοὔστι πρὸς τὸ βουλεύειν καλῶς coni. Bergk. v. 2 παθόν MA, μαθόν ceteri. in lemmate Ἀντιφῶντος coni. Meineke.",
+      "play_title": "ΦΙΛΟΚΤΗΤΗΣ",
+      "play_work": "philoktetes",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_philoktetes"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0323-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0323-fr4-l1",
+          "text": "τέχνῃ κρατοῦμεν ὧν φύσει νικώμεθα."
+        }
+      ],
+      "context": "Aristot. Mechan. 1 p. 847 a 20 : καθάπερ γὰρ ἐποίησεν Ἀντιφῶν ὁ ποιητής, οὕτω καὶ ἔχει· ‘τέχνῃ γὰρ κρατοῦμεν — νικώμεθα’ .",
+      "play_title": "INCERTAE FABVLAE FRAGMENTVM",
+      "play_work": "incertae_fabvlae_fragmentvm",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_incertae_fabvlae_fragmentvm"
+    }
+  ],
+  "works": {
+    "tlg0323-andromache": {
+      "id": "tlg0323-andromache",
+      "work": "andromache",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_andromache",
+      "title": "ΑΝΔΡΟΜΑΧΗ",
+      "source_title": "ΑΝΔΡΟΜΑΧΗ",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0323-andromache",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Eth. Eud. 7 , 4 p. 1239 a 37 : σημεῖον δέ· ἕλοιτ’ ἂν ὁ φίλος μᾶλλον, εἰ μὴ ἐνδέχοιτ’ ἄμφω, γινώσκειν ἢ γινώσκεσθαι, οἷον ἐν ταῖς ὑπερβολαῖς αἱ γυναῖκες ποιοῦσι, καὶ ἡ Ἀνδρομάχη ἡ Ἀντιφῶντος.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0323-iason": {
+      "id": "tlg0323-iason",
+      "work": "iason",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_iason",
+      "title": "ΙΑΣΩΝ",
+      "source_title": "ΙΑΣΩΝ",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0323-iason",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0323-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0323-fr1-l1",
+              "text": "διετίθουν"
+            }
+          ],
+          "context": "Antiatt. p. 90 , 5 : διετίθουν· διετίθεσαν. Ἀντιφῶν (Ἀντιφάνης coni. Meineke Hist. crit. p. 316) Ἰάσονι.",
+          "play_title": "ΙΑΣΩΝ",
+          "play_work": "iason",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_iason",
+          "attribution_id": "nauck1889grc1-tlg0323-iason",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0323.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    },
+    "tlg0323-meleagros": {
+      "id": "tlg0323-meleagros",
+      "work": "meleagros",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_meleagros",
+      "title": "ΜΕΛΕΑΓΡΟΣ",
+      "source_title": "ΜΕΛΕΑΓΡΟΣ",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0323-meleagros",
+      "record_type": "fragmentary_play",
+      "introduction": "Aristot. Rhet. 2 , 2 p. 1379 b 15 : τοῖς δὲ φίλοις (sc. ὀργίζονται) , ἐὰν μὴ αἰσθάνωνται δεομένων, ὥσπερ ὁ Ἀντιφῶντος Πλήξιππος τῷ Μελεάγρῳ . Ath. XV p. 673 F : ἐκδόντος γὰρ τούτου (Adrantum dicit) πέντε μὲν βιβλία περὶ τῶν παρὰ Θεοφράστῳ — ζητουμένων, ἕκτον δὲ περὶ τῶν ἐν τοῖς Ἠθικοῖς Νικομαχείοις Ἀριστοτέλους, ἐν οἷς ἀμφιλαφῶς παραθεμένου περὶ τοῦ παρὰ Ἀντιφῶντι τῷ τραγῳδιοποιῷ Πληξίππου καὶ πλεῖστα ὅσα καὶ περὶ αὐτοῦ τοῦ Ἀντιφῶντος εἰπόντος, (Hephaestion) σφετερισάμενος καὶ ταῦτ’ ἐπέγραψέ τι βιβλίον περὶ τοῦ παρὰ Ξενοφῶντι ἐν τοῖς Ἀπομνημονεύμασιν Ἀντιφῶντος, οὐδὲν ἴδιον προσεξευρών. huius fabulae fortasse sunt adesp. fr. 80 et 81 .",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0323-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0323-fr2-l1",
+              "text": "οὐχ ἵνα κάνωσι θῆρ’ , ὅπως δὲ μάρτυρες"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0323-fr2-l2",
+              "text": "ἀρετῆς γένωνται Μελεάγρῳ πρὸς Ἑλλάδα."
+            }
+          ],
+          "context": "Aristot. Rhet. 2 , 23 p. 1399 b 26 : καὶ τὸ ἐκ τοῦ Μελεάγρου τοῦ Ἀντιφῶντος ‘οὐχ — Ἑλλάδα’ . ubi schol. fol. 45 b 17 : περὶ τοῦ Μελεάγρου ὁ Ἀντιφῶν γράφει ὅτι συνῆλθον τῷ Οἰνεῖ τῷ πατρὶ τοῦ Μελεάγρου οἱ ἔκκριτοι τῶν Αἰτωλῶν, οὐχ ἵνα κτάνωσι τὸν σῦν ἐξελθόντες (τὸν συνεξελθόντα ed.) τὸν Ἐρυμάνθιον, ἀλλ’ ἵνα ἴδωσι τὸν Μελέαγρον ὅπως τὸν θῆρα ἀπέκτεινε καὶ μαρτυρῶσι τοῦτο. v. 1 κτάνωσι libri, κάνωσι Meineke Hist. crit. p. 315 .",
+          "play_title": "ΜΕΛΕΑΓΡΟΣ",
+          "play_work": "meleagros",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_meleagros",
+          "attribution_id": "nauck1889grc1-tlg0323-meleagros",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0323.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0323-philoktetes": {
+      "id": "tlg0323-philoktetes",
+      "work": "philoktetes",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_philoktetes",
+      "title": "ΦΙΛΟΚΤΗΤΗΣ",
+      "source_title": "ΦΙΛΟΚΤΗΤΗΣ",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0323-philoktetes",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0323-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0323-fr3-l1",
+              "text": "σοφόν γέ τοί τι πρὸς τὸ βουλεύειν ἔχει"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0323-fr3-l2",
+              "text": "τὸ γῆρας, ὡς δὴ πόλλ’ ἴδον τε καὶ παθόν."
+            }
+          ],
+          "context": "Stob. Flor. 115 , 15 : Ἀντιφάνους ἐκ Φιλοκτήτου (sic MA, ecl. 15 et 16 uno lemmate Σοφοκλέους comprehendit S) . ‘σοφόν — πρθόν’ . v. 1 ἔχει] ἐστὶ S et m. sec. Voss. , ubi πέλει m. pr. ἔφυ malim. σοφόν γέ τοὔστι πρὸς τὸ βουλεύειν καλῶς coni. Bergk. v. 2 παθόν MA, μαθόν ceteri. in lemmate Ἀντιφῶντος coni. Meineke.",
+          "play_title": "ΦΙΛΟΚΤΗΤΗΣ",
+          "play_work": "philoktetes",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_philoktetes",
+          "attribution_id": "nauck1889grc1-tlg0323-philoktetes",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0323.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    },
+    "tlg0323-incertae-fabvlae-fragmentvm": {
+      "id": "tlg0323-incertae-fabvlae-fragmentvm",
+      "work": "incertae_fabvlae_fragmentvm",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_incertae_fabvlae_fragmentvm",
+      "title": "INCERTAE FABVLAE FRAGMENTVM",
+      "source_title": "INCERTAE FABVLAE FRAGMENTVM",
+      "source": "tlg0323.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0323-incertae-fabvlae-fragmentvm",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0323-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0323-fr4-l1",
+              "text": "τέχνῃ κρατοῦμεν ὧν φύσει νικώμεθα."
+            }
+          ],
+          "context": "Aristot. Mechan. 1 p. 847 a 20 : καθάπερ γὰρ ἐποίησεν Ἀντιφῶν ὁ ποιητής, οὕτω καὶ ἔχει· ‘τέχνῃ γὰρ κρατοῦμεν — νικώμεθα’ .",
+          "play_title": "INCERTAE FABVLAE FRAGMENTVM",
+          "play_work": "incertae_fabvlae_fragmentvm",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_incertae_fabvlae_fragmentvm",
+          "attribution_id": "nauck1889grc1-tlg0323-incertae_fabvlae_fragmentvm",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0323.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 1,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0323-iason",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0323-iason",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_iason",
+      "corresp": [
+        "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0323-meleagros",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0323-meleagros",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_meleagros",
+      "corresp": [
+        "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0323-philoktetes",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0323-philoktetes",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_philoktetes",
+      "corresp": [
+        "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0323-incertae_fabvlae_fragmentvm",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0323-incertae_fabvlae_fragmentvm",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0323_incertae_fabvlae_fragmentvm",
+      "corresp": [
+        "urn:cts:greekLit:tlg0323.fragmenta.nauck1889grc1:4"
+      ]
+    }
+  ]
+}

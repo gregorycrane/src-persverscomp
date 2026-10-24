@@ -1,0 +1,36 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0313",
+  "author": "Theognis",
+  "corpus_title": "Theognis, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0313.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0313.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0313.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0313-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0313.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0313-fr1-l1",
+          "text": "φόρμιγξ ἄχορδος"
+        }
+      ],
+      "context": "Demetrius de eloc. 85 : ἔνιοι δὲ καὶ ἀσφαλίζονται τὰς μεταφορὰς ἐπιθέτοις ἐπιφερομένοις, ὅταν αὐτοῖς κινδυνώδεις δοκῶσιν, ὡς ὁ Θέογνις παρατίθεται τὸν τοξοφόρμιγγα ἄχορδον ἐπὶ τοῦ τῷ τόξῳ βάλλοντος· ἡ μὲν γὰρ φόρμιγξ κινδυνῶδες ἐπὶ τοῦ τόξου, τῷ δὲ ἀχόρδῳ (ἄχορδος malim) ἠσφάλισται. scribendum arbitror παρατίθεται τῷ τόξῳ ‘φόρμιγγα ἄχορδον’ , cf. Aristot. Rhet. 3 , 11 p. 1413 a 1 : οἷον ἡ ἀσπίς, φαμέν, ἐστὶ φιάλη Ἄρεος (ita Timotheus dixit, v. Bergk. Lyr. 3 p. 625) καὶ τὸ τόξον φόρμιγξ ἄχορδος. ceterum φόρμιγξ ἄχορος scite olim coni. Lobeck, cuius v. Aglaoph. p. 840 ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

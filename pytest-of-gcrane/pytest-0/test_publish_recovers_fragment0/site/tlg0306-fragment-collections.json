@@ -1,0 +1,365 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0306",
+  "author": "Aristarchus",
+  "corpus_title": "Aristarchus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0306.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0306.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0306-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0306-fr1-l1",
+          "text": "καὶ ταῦτ’ ἴσον μὲν εὖ λέγειν, ἴσον δὲ μή·"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0306-fr1-l2",
+          "text": "ἴσον δ’ ἐρευνᾶν, ἐξ ἴσου δὲ μὴ εἰδέναι."
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0306-fr1-l3",
+          "text": "πλέον γὰρ οὐδὲν οἱ σοφοὶ τῶν μὴ σοφῶν"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0306-fr1-l4",
+          "text": "εἰς ταῦτα γιγνώσκουσιν· εἰ δ’ ἄλλου λέγει"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0306-fr1-l5",
+          "text": "ἄμεινον ἄλλος, τῷ λέγειν ὑπερφέρει."
+        }
+      ],
+      "context": "Stob. Ecl. 2 , 1 , 1 p. 3 , 6 : Ἀριστάρχου ἐκ Ταντάλου (ἐκ Ταντάλου om. L, ἐκ ταλάντου praebet P pr. m.) . ‘καὶ ταῦτ’ — ὑπερφέρει’ . v. 3 πλεῖον vulgo. v. 4 γινώσκουσιν FL. v. 5 ἄλλος L, ἄλλως F, ἄλλως (ω corr. in o) P. ὑποφέρει F.",
+      "play_title": "ΤΑΝΤΑΛΟΣ",
+      "play_work": "tantalos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_tantalos"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0306-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0306-fr2-l1",
+          "text": "Ἔρωτος ὅστις μὴ πεπείραται βροτῶν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0306-fr2-l2",
+          "text": "οὐκ οἶδ’ ἀνάγκης θεσμόν· ᾧ πεισθεὶς ἐγὼ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0306-fr2-l3",
+          "text": "οὕτω κρατηθεὶς τάσδ’ ἀπεστάλην ὁδούς."
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0306-fr2-l4",
+          "text": "οὗτος γὰρ ὁ θεὸς καὶ τὸν ἀσθενῆ σθένειν"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0306-fr2-l5",
+          "text": "τίθησι καὶ τὸν ἄπορον εὑρίσκειν πόρον."
+        }
+      ],
+      "context": "Stob. Flor. 63 , 9 : Ἀριστάρχου. ‘ἔρωτος — πόρον’ . Euripidi hunc locum tribuit Arsenius p. 419 , 17 . v. 3 οὕτω] πόθῳ coni. Meineke, an οἴστρῳ? v. 4 θεὸς γὰρ οὗτος malim. τὸ ἀσθενῆ S. v. 5 πόρον] πόνον M, πόρους coni. Blomfield in Aesch. Prom. 59 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0306-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0306-fr3-l1",
+          "text": "ὦ θάνατε, σωφρόνισμα τῶν ἀγνωμόνων."
+        }
+      ],
+      "context": "Stob. Flor. 120 , 2 : Ἀριστάρχου (sic A, eclogam om. SM) . ‘ὦ — ἀγνωμόνων’ . σωφρόνημα A, σωφρόνισμα Meineke, fortasse σωφρονιστὰ praeferendum. ceterum cf. Liban. Decl. vol. 4 p. 773 , 11 : θανάτου δὲ μείζων οὐκ ἔστι σωφρονισμός. ἀγνωμόνων (quod coniectura assecutus est F. G. Schmidt Krit. Stud. 3 p. 1) A, ἀμεινόνων ed.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0306-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0306-fr4-l1",
+          "text": "τάδ’ οὐχ ὑπάρχων, ἀλλὰ τιμωρούμενος"
+        }
+      ],
+      "context": "Ath. XIII p. 612 F : ἐγὼ δὲ κατὰ τὸν Ἀρίσταρχον τὸν τραγικὸν ποιητὴν ‘τάδ’ — τιμωρούμενος’ καταπαύσω τὸν πρὸς σὲ — λόγον. om. poetae nom. Demosth. c. Neaer. § 1 (Georg. Alexandr. in Rhet. vol. 6 p. 535 , 10) : ὥστ’ οὐχ ὑπάρχων ἀλλὰ τιμωρούμενος ἀγωνιοῦμαι τὸν ἀγῶνα τουτονί. item Prov. Milleri Mél. de litt. gr. p. 363 (Zenob. 6 , 51) et Photius Lex. p. 620 , 8 sive Suidas v. ὑπάρχων, ubi ὡς οὐχ ὑπ. legitur. eodem versu dicitur usus esse Μένανδρος ἐν Ὀλυνθίᾳ (Com. 4 p. 177) . adde Chaeremonis fr. 3 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0306-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Soph. Oed. C. 1320 : ἔνιοι οὐ τὸν Ἀταλάντης φασὶ Παρθενοπαῖον στρατεῦσαι, ἀλλὰ τὸν Ταλαοῦ , ὃν ἔνιοι διὰ τοῦ Κ Καλαὸν προσαγορεύουσι, καθάπερ Ἀρίσταρχος ὁ Τεγεάτης καὶ Φιλοκλῆς ἱστοροῦσι, συγγραφέων δὲ Ἑκαταῖος ὁ Μιλήσιος. Ed. Schwartz huc refert Schol. Eur. Phoen. 126 : Λερναῖα δ’ οἰκεῖ νάμαθ’ Ἱππομέδων ἄναξ· Ἀρίσταρχος· τοῦ Ταλαοῦ τοῦ Βίαντος τοῦ Ἀμυθάονος τοῦ Κρηθέως τοῦ Αἰόλου τοῦ Ἕλληνος τοῦ Δίος. παῖς Ἱππομέδοντος Πολύδωρος ἢ Δημοφῶν. ubi si Aristarchi nomen (ἀρίσταρχος MA, ἀριστάρχω T) recte se habet, grammaticus indicari videtur.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0306-achilleys": {
+      "id": "tlg0306-achilleys",
+      "work": "achilleys",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_achilleys",
+      "title": "ΑΧΙΛΛΕΥΣ",
+      "source_title": "ΑΧΙΛΛΕΥΣ",
+      "source": "tlg0306.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0306-achilleys",
+      "record_type": "fragmentary_play",
+      "introduction": "Ab Ennio hanc fabulam Latine redditam esse docet Festus p. 242 : ‘prolato aere astitit’ astitit Ennius in Achille (Ennius Achillae in ante Scalig.) Aristarchi cum ait, significat clypeo ante se protento. cf. Plautus Poenul. prol. 1 : Achillem Aristarchi mihi commentari lubet, inde mihi principium capiam ex ea tragoedia. ‘sileteque tacete atque animum advortite, audire vos iubet imperator’ histricus.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0306-tantalos": {
+      "id": "tlg0306-tantalos",
+      "work": "tantalos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_tantalos",
+      "title": "ΤΑΝΤΑΛΟΣ",
+      "source_title": "ΤΑΝΤΑΛΟΣ",
+      "source": "tlg0306.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0306-tantalos",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0306-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0306-fr1-l1",
+              "text": "καὶ ταῦτ’ ἴσον μὲν εὖ λέγειν, ἴσον δὲ μή·"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0306-fr1-l2",
+              "text": "ἴσον δ’ ἐρευνᾶν, ἐξ ἴσου δὲ μὴ εἰδέναι."
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0306-fr1-l3",
+              "text": "πλέον γὰρ οὐδὲν οἱ σοφοὶ τῶν μὴ σοφῶν"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0306-fr1-l4",
+              "text": "εἰς ταῦτα γιγνώσκουσιν· εἰ δ’ ἄλλου λέγει"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0306-fr1-l5",
+              "text": "ἄμεινον ἄλλος, τῷ λέγειν ὑπερφέρει."
+            }
+          ],
+          "context": "Stob. Ecl. 2 , 1 , 1 p. 3 , 6 : Ἀριστάρχου ἐκ Ταντάλου (ἐκ Ταντάλου om. L, ἐκ ταλάντου praebet P pr. m.) . ‘καὶ ταῦτ’ — ὑπερφέρει’ . v. 3 πλεῖον vulgo. v. 4 γινώσκουσιν FL. v. 5 ἄλλος L, ἄλλως F, ἄλλως (ω corr. in o) P. ὑποφέρει F.",
+          "play_title": "ΤΑΝΤΑΛΟΣ",
+          "play_work": "tantalos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_tantalos",
+          "attribution_id": "nauck1889grc1-tlg0306-tantalos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0306.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 5,
+      "status": "Fragmentary text"
+    },
+    "tlg0306-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0306-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0306.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0306-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0306-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0306-fr2-l1",
+              "text": "Ἔρωτος ὅστις μὴ πεπείραται βροτῶν,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0306-fr2-l2",
+              "text": "οὐκ οἶδ’ ἀνάγκης θεσμόν· ᾧ πεισθεὶς ἐγὼ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0306-fr2-l3",
+              "text": "οὕτω κρατηθεὶς τάσδ’ ἀπεστάλην ὁδούς."
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0306-fr2-l4",
+              "text": "οὗτος γὰρ ὁ θεὸς καὶ τὸν ἀσθενῆ σθένειν"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0306-fr2-l5",
+              "text": "τίθησι καὶ τὸν ἄπορον εὑρίσκειν πόρον."
+            }
+          ],
+          "context": "Stob. Flor. 63 , 9 : Ἀριστάρχου. ‘ἔρωτος — πόρον’ . Euripidi hunc locum tribuit Arsenius p. 419 , 17 . v. 3 οὕτω] πόθῳ coni. Meineke, an οἴστρῳ? v. 4 θεὸς γὰρ οὗτος malim. τὸ ἀσθενῆ S. v. 5 πόρον] πόνον M, πόρους coni. Blomfield in Aesch. Prom. 59 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0306-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0306-fr3-l1",
+              "text": "ὦ θάνατε, σωφρόνισμα τῶν ἀγνωμόνων."
+            }
+          ],
+          "context": "Stob. Flor. 120 , 2 : Ἀριστάρχου (sic A, eclogam om. SM) . ‘ὦ — ἀγνωμόνων’ . σωφρόνημα A, σωφρόνισμα Meineke, fortasse σωφρονιστὰ praeferendum. ceterum cf. Liban. Decl. vol. 4 p. 773 , 11 : θανάτου δὲ μείζων οὐκ ἔστι σωφρονισμός. ἀγνωμόνων (quod coniectura assecutus est F. G. Schmidt Krit. Stud. 3 p. 1) A, ἀμεινόνων ed.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0306-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0306-fr4-l1",
+              "text": "τάδ’ οὐχ ὑπάρχων, ἀλλὰ τιμωρούμενος"
+            }
+          ],
+          "context": "Ath. XIII p. 612 F : ἐγὼ δὲ κατὰ τὸν Ἀρίσταρχον τὸν τραγικὸν ποιητὴν ‘τάδ’ — τιμωρούμενος’ καταπαύσω τὸν πρὸς σὲ — λόγον. om. poetae nom. Demosth. c. Neaer. § 1 (Georg. Alexandr. in Rhet. vol. 6 p. 535 , 10) : ὥστ’ οὐχ ὑπάρχων ἀλλὰ τιμωρούμενος ἀγωνιοῦμαι τὸν ἀγῶνα τουτονί. item Prov. Milleri Mél. de litt. gr. p. 363 (Zenob. 6 , 51) et Photius Lex. p. 620 , 8 sive Suidas v. ὑπάρχων, ubi ὡς οὐχ ὑπ. legitur. eodem versu dicitur usus esse Μένανδρος ἐν Ὀλυνθίᾳ (Com. 4 p. 177) . adde Chaeremonis fr. 3 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0306-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Soph. Oed. C. 1320 : ἔνιοι οὐ τὸν Ἀταλάντης φασὶ Παρθενοπαῖον στρατεῦσαι, ἀλλὰ τὸν Ταλαοῦ , ὃν ἔνιοι διὰ τοῦ Κ Καλαὸν προσαγορεύουσι, καθάπερ Ἀρίσταρχος ὁ Τεγεάτης καὶ Φιλοκλῆς ἱστοροῦσι, συγγραφέων δὲ Ἑκαταῖος ὁ Μιλήσιος. Ed. Schwartz huc refert Schol. Eur. Phoen. 126 : Λερναῖα δ’ οἰκεῖ νάμαθ’ Ἱππομέδων ἄναξ· Ἀρίσταρχος· τοῦ Ταλαοῦ τοῦ Βίαντος τοῦ Ἀμυθάονος τοῦ Κρηθέως τοῦ Αἰόλου τοῦ Ἕλληνος τοῦ Δίος. παῖς Ἱππομέδοντος Πολύδωρος ἢ Δημοφῶν. ubi si Aristarchi nomen (ἀρίσταρχος MA, ἀριστάρχω T) recte se habet, grammaticus indicari videtur.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0306.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 7,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0306-tantalos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0306-tantalos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_tantalos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0306-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0306_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0306.fragmenta.nauck1889grc1:5"
+      ]
+    }
+  ]
+}

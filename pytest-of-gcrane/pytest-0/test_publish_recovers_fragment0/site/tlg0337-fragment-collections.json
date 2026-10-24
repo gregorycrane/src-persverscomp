@@ -1,0 +1,264 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0337",
+  "author": "Python",
+  "corpus_title": "Python, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0337.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0337.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0337.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0337-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0337.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0337-fr1-l1",
+          "text": "ἔστιν δ’ ὅπου μὲν ὁ κάλαμος πέφυχ’ ὅδε"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0337-fr1-l2",
+          "text": "φέτωμ’ ἄορνον· οὑξ ἀριστερᾶς δ’ ὅδε"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0337-fr1-l3",
+          "text": "πόρνης ὁ κλεινὸς ναός, ὃν δὴ Παλλίδης"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0337-fr1-l4",
+          "text": "τεύξας κατέγνω διὰ τὸ πρᾶγμ’ αὑτοῦ φυγήν."
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0337-fr1-l5",
+          "text": "ἐνταῦθα δὴ τῶν βαρβάρων τινὲς μάγοι"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0337-fr1-l6",
+          "text": "ὁρῶντες αὐτὸν παγκάκως διακείμενον,"
+        },
+        {
+          "ref": "7",
+          "source_id": "tlg0337-fr1-l7",
+          "text": "ἔπεισαν ὡς ἄξουσι τὴν ψυχὴν ἄνω"
+        },
+        {
+          "ref": "8",
+          "source_id": "tlg0337-fr1-l8",
+          "text": "τὴν Πυθιονίκης. ἐκμαθεῖν δέ σου ποθῶ"
+        },
+        {
+          "ref": "9",
+          "source_id": "tlg0337-fr1-l9",
+          "text": "μακρὰν ἀποικῶν κεῖθεν, Ἀτθίδα χθόνα"
+        },
+        {
+          "ref": "10",
+          "source_id": "tlg0337-fr1-l10",
+          "text": "τίνες τύχαι κατέχουσιν ἢ πράττουσι τί ;"
+        },
+        {
+          "ref": "11",
+          "source_id": "tlg0337-fr1-l11",
+          "text": "ὅτε μὲν ἔφασκον δοῦλον ἐκτῆσθαι βίον,"
+        },
+        {
+          "ref": "12",
+          "source_id": "tlg0337-fr1-l12",
+          "text": "ἱκανὸν ἐδείπνουν· νῦν δὲ τὸν χέδροπα μόνον"
+        },
+        {
+          "ref": "13",
+          "source_id": "tlg0337-fr1-l13",
+          "text": "καὶ τὸν μάραθον ἔσθουσι, πυροὺς δ’ οὐ μάλα."
+        },
+        {
+          "ref": "14",
+          "source_id": "tlg0337-fr1-l14",
+          "text": "καὶ μὴν ἀκούω μυριάδας τὸν Ἅρπαλον"
+        },
+        {
+          "ref": "15",
+          "source_id": "tlg0337-fr1-l15",
+          "text": "αὐτοῖσι τῶν Ἀγῆνος οὐκ ἐλάσσονας"
+        },
+        {
+          "ref": "16",
+          "source_id": "tlg0337-fr1-l16",
+          "text": "σίτου διαπέμψαι καὶ παλίτην γεγονέναι."
+        },
+        {
+          "ref": "17",
+          "source_id": "tlg0337-fr1-l17",
+          "text": "Γλυκέρας ὁ σῖτος οὗτος ἦν· ἔστιν δ’ ἴσως"
+        },
+        {
+          "ref": "18",
+          "source_id": "tlg0337-fr1-l18",
+          "text": "αὐτοῖσιν ὀλέθρου κοὐχ ἑταίρας ἀρραβών."
+        }
+      ],
+      "context": "Ath. XIII p. 595 F : μετὰ δὲ τὴν Πυθιονίκης τελευτὴν ὁ Ἅρπαλος Γλυκέραν μετεπέμψατο καὶ ταύτην ἑταίραν, ὡς ὁ Θεόπομπος ἱστορεῖ φάσκων ἀπειρηκέναι τὸν Ἅρπαλον μὴ στεφανοῦν ἑαυτόν, εἰ μή τις στεφανώσειε καὶ τὴν πόρνην. — συνεπιμαρτυρεῖ δὲ τούτοις καὶ ὁ τὸν Ἀγῆνα τὸ σατυρικὸν δραμάτιον γεγραφώς, ὅπερ ἐδίδαξε Διονυσίων ὄντων ἐπὶ τοῦ Ὑδάσπου τοῦ ποταμοῦ , εἴτε Πύθων ἦν ὁ Καταναῖος ἢ ὁ Βυζάντιος, ἢ καὶ αὐτὸς ὁ βασιλεύς. ἐδιδάχθη δὲ τὸ δρᾶμα ἤδη φυγόντος τοῦ Ἁρπάλου ἐπὶ θάλατταν καὶ ἀποστάντος. καὶ τῆς μὲν Πυθιονίκης ὡς τεθνηκυίας μέμνηται, τῆς δὲ Γλυκέρας ὡς οὔσης παρ’ αὐτῷ καὶ τοῖς Ἀθηναίοις αἰτίας γινομένης τοῦ δωρεὰς λαμβάνειν παρὰ τοῦ Ἀρπάλου, λέγων ὧδε ‘ἔστιν δ’ — τὴν Πυθιονίκης’ (v. 1-8) . Παλλίδην δ’ ἐνταῦθα ἐκάλεσε τὸν Ἅρπαλον· ἐν δὲ τοῖς ἑξῆς τῷ κυρίῳ καλέσας αὐτὸν φησίν ‘ἐκμαθεῖν — ἀρραβών’ (v. 8-18) . cf. Ath. XIII p. 586 D : ὁ δὲ γράψας τὸν Ἀγῆνα τὸ σατυρικὸν δραμάτιον, εἴτε Πύθων ἐστὶν ὁ Καταναῖος ἢ αὐτὸς ὁ βασιλεὺς Ἀλέξανδρος*) , φησί ‘καὶ μὴν — ἀρραβών’ (v. 14-18) . v. 1 sq. πέφυκεν ὁ δ’ ἐφέτωμα ὄρνον libri, πέφυχ’ ὅδε Dindorf, φάτνωμ’ ἄορνον Fiorillo, φηγὼν ἄορνος Friebel Satyrogr. p. 116 , ἕλωμ’ ἄορνον Meineke (Ath. 4 p. 280) , qui conicit indicari locum in vicinia Babylonis eum quem describat Lucianus Necyom. 9 vol. 1 p. 468 . v. 3 λαὸς libri, ναός Casaubonus ex Soph. El. 7 : oὑξ ἀριστερᾶς δ’ ὅδε Ἥρας ὁ κλεινὸς *) Ath. II p. 50 F : ὅτι Ἀγῆνα σατυρικόν τι δρᾶμα ἀμφιβάλλεται εἴτε Πὺθων ἐποίησεν ὁ Καταναῖος ἢ Βυζάντιος ἢ καὶ αὐτὸς ὁ βασιλεὺς Ἀλέξανδρος. ναός. Παλλίδης] Φαλλίδης coni. Meineke. v. 4 αὐτοῦ] αὑτοῦ V. v. 5 δὲ Ρ, δὴ Iacobs, δ’ ἐκ malim. v. 6 παγκάλως ante Iacobsium. v. 7 ἀξιοῦσι ante Casaubonum. v. 8 sq. ποθῶν ἄκραν ἀποικων A, ποθῶ μακρὰν ἀποικῶν Iacobs. v. 10 καλοῦσιν libri, κατέχουσιν Schweighaeuser. πράσσουσι malim. v. 12 χεδρώπαν ὠμόν A χέδροπα μόνον Porson et Iacobs. v. 13 μάραθων A. v. 15 ἐλάττονος p. 586 , ubi v. 16 παραπέμψαι, v. 17 ἔσται, v. 18 αὐτοῖς.",
+      "play_title": "ΑΓΗΝ ΣΑΤΥΡΙΚΟΣ",
+      "play_work": "agen_satyrikos",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0337_agen_satyrikos"
+    }
+  ],
+  "works": {
+    "tlg0337-agen-satyrikos": {
+      "id": "tlg0337-agen-satyrikos",
+      "work": "agen_satyrikos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0337_agen_satyrikos",
+      "title": "ΑΓΗΝ ΣΑΤΥΡΙΚΟΣ",
+      "source_title": "ΑΓΗΝ ΣΑΤΥΡΙΚΟΣ",
+      "source": "tlg0337.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0337-agen-satyrikos",
+      "record_type": "fragmentary_play",
+      "introduction": "Cf. F. Duhn Jahrb. f. Philol. 111 (a. 1875) p. 37 sq.",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0337-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0337.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0337-fr1-l1",
+              "text": "ἔστιν δ’ ὅπου μὲν ὁ κάλαμος πέφυχ’ ὅδε"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0337-fr1-l2",
+              "text": "φέτωμ’ ἄορνον· οὑξ ἀριστερᾶς δ’ ὅδε"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0337-fr1-l3",
+              "text": "πόρνης ὁ κλεινὸς ναός, ὃν δὴ Παλλίδης"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0337-fr1-l4",
+              "text": "τεύξας κατέγνω διὰ τὸ πρᾶγμ’ αὑτοῦ φυγήν."
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0337-fr1-l5",
+              "text": "ἐνταῦθα δὴ τῶν βαρβάρων τινὲς μάγοι"
+            },
+            {
+              "ref": "6",
+              "source_id": "tlg0337-fr1-l6",
+              "text": "ὁρῶντες αὐτὸν παγκάκως διακείμενον,"
+            },
+            {
+              "ref": "7",
+              "source_id": "tlg0337-fr1-l7",
+              "text": "ἔπεισαν ὡς ἄξουσι τὴν ψυχὴν ἄνω"
+            },
+            {
+              "ref": "8",
+              "source_id": "tlg0337-fr1-l8",
+              "text": "τὴν Πυθιονίκης. ἐκμαθεῖν δέ σου ποθῶ"
+            },
+            {
+              "ref": "9",
+              "source_id": "tlg0337-fr1-l9",
+              "text": "μακρὰν ἀποικῶν κεῖθεν, Ἀτθίδα χθόνα"
+            },
+            {
+              "ref": "10",
+              "source_id": "tlg0337-fr1-l10",
+              "text": "τίνες τύχαι κατέχουσιν ἢ πράττουσι τί ;"
+            },
+            {
+              "ref": "11",
+              "source_id": "tlg0337-fr1-l11",
+              "text": "ὅτε μὲν ἔφασκον δοῦλον ἐκτῆσθαι βίον,"
+            },
+            {
+              "ref": "12",
+              "source_id": "tlg0337-fr1-l12",
+              "text": "ἱκανὸν ἐδείπνουν· νῦν δὲ τὸν χέδροπα μόνον"
+            },
+            {
+              "ref": "13",
+              "source_id": "tlg0337-fr1-l13",
+              "text": "καὶ τὸν μάραθον ἔσθουσι, πυροὺς δ’ οὐ μάλα."
+            },
+            {
+              "ref": "14",
+              "source_id": "tlg0337-fr1-l14",
+              "text": "καὶ μὴν ἀκούω μυριάδας τὸν Ἅρπαλον"
+            },
+            {
+              "ref": "15",
+              "source_id": "tlg0337-fr1-l15",
+              "text": "αὐτοῖσι τῶν Ἀγῆνος οὐκ ἐλάσσονας"
+            },
+            {
+              "ref": "16",
+              "source_id": "tlg0337-fr1-l16",
+              "text": "σίτου διαπέμψαι καὶ παλίτην γεγονέναι."
+            },
+            {
+              "ref": "17",
+              "source_id": "tlg0337-fr1-l17",
+              "text": "Γλυκέρας ὁ σῖτος οὗτος ἦν· ἔστιν δ’ ἴσως"
+            },
+            {
+              "ref": "18",
+              "source_id": "tlg0337-fr1-l18",
+              "text": "αὐτοῖσιν ὀλέθρου κοὐχ ἑταίρας ἀρραβών."
+            }
+          ],
+          "context": "Ath. XIII p. 595 F : μετὰ δὲ τὴν Πυθιονίκης τελευτὴν ὁ Ἅρπαλος Γλυκέραν μετεπέμψατο καὶ ταύτην ἑταίραν, ὡς ὁ Θεόπομπος ἱστορεῖ φάσκων ἀπειρηκέναι τὸν Ἅρπαλον μὴ στεφανοῦν ἑαυτόν, εἰ μή τις στεφανώσειε καὶ τὴν πόρνην. — συνεπιμαρτυρεῖ δὲ τούτοις καὶ ὁ τὸν Ἀγῆνα τὸ σατυρικὸν δραμάτιον γεγραφώς, ὅπερ ἐδίδαξε Διονυσίων ὄντων ἐπὶ τοῦ Ὑδάσπου τοῦ ποταμοῦ , εἴτε Πύθων ἦν ὁ Καταναῖος ἢ ὁ Βυζάντιος, ἢ καὶ αὐτὸς ὁ βασιλεύς. ἐδιδάχθη δὲ τὸ δρᾶμα ἤδη φυγόντος τοῦ Ἁρπάλου ἐπὶ θάλατταν καὶ ἀποστάντος. καὶ τῆς μὲν Πυθιονίκης ὡς τεθνηκυίας μέμνηται, τῆς δὲ Γλυκέρας ὡς οὔσης παρ’ αὐτῷ καὶ τοῖς Ἀθηναίοις αἰτίας γινομένης τοῦ δωρεὰς λαμβάνειν παρὰ τοῦ Ἀρπάλου, λέγων ὧδε ‘ἔστιν δ’ — τὴν Πυθιονίκης’ (v. 1-8) . Παλλίδην δ’ ἐνταῦθα ἐκάλεσε τὸν Ἅρπαλον· ἐν δὲ τοῖς ἑξῆς τῷ κυρίῳ καλέσας αὐτὸν φησίν ‘ἐκμαθεῖν — ἀρραβών’ (v. 8-18) . cf. Ath. XIII p. 586 D : ὁ δὲ γράψας τὸν Ἀγῆνα τὸ σατυρικὸν δραμάτιον, εἴτε Πύθων ἐστὶν ὁ Καταναῖος ἢ αὐτὸς ὁ βασιλεὺς Ἀλέξανδρος*) , φησί ‘καὶ μὴν — ἀρραβών’ (v. 14-18) . v. 1 sq. πέφυκεν ὁ δ’ ἐφέτωμα ὄρνον libri, πέφυχ’ ὅδε Dindorf, φάτνωμ’ ἄορνον Fiorillo, φηγὼν ἄορνος Friebel Satyrogr. p. 116 , ἕλωμ’ ἄορνον Meineke (Ath. 4 p. 280) , qui conicit indicari locum in vicinia Babylonis eum quem describat Lucianus Necyom. 9 vol. 1 p. 468 . v. 3 λαὸς libri, ναός Casaubonus ex Soph. El. 7 : oὑξ ἀριστερᾶς δ’ ὅδε Ἥρας ὁ κλεινὸς *) Ath. II p. 50 F : ὅτι Ἀγῆνα σατυρικόν τι δρᾶμα ἀμφιβάλλεται εἴτε Πὺθων ἐποίησεν ὁ Καταναῖος ἢ Βυζάντιος ἢ καὶ αὐτὸς ὁ βασιλεὺς Ἀλέξανδρος. ναός. Παλλίδης] Φαλλίδης coni. Meineke. v. 4 αὐτοῦ] αὑτοῦ V. v. 5 δὲ Ρ, δὴ Iacobs, δ’ ἐκ malim. v. 6 παγκάλως ante Iacobsium. v. 7 ἀξιοῦσι ante Casaubonum. v. 8 sq. ποθῶν ἄκραν ἀποικων A, ποθῶ μακρὰν ἀποικῶν Iacobs. v. 10 καλοῦσιν libri, κατέχουσιν Schweighaeuser. πράσσουσι malim. v. 12 χεδρώπαν ὠμόν A χέδροπα μόνον Porson et Iacobs. v. 13 μάραθων A. v. 15 ἐλάττονος p. 586 , ubi v. 16 παραπέμψαι, v. 17 ἔσται, v. 18 αὐτοῖς.",
+          "play_title": "ΑΓΗΝ ΣΑΤΥΡΙΚΟΣ",
+          "play_work": "agen_satyrikos",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0337_agen_satyrikos",
+          "attribution_id": "nauck1889grc1-tlg0337-agen_satyrikos",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0337.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0337.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 18,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0337-agen_satyrikos",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0337-agen_satyrikos",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0337_agen_satyrikos",
+      "corresp": [
+        "urn:cts:greekLit:tlg0337.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

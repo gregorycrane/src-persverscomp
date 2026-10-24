@@ -1,0 +1,104 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0321",
+  "author": "Aeschylus of Alexandria",
+  "corpus_title": "Aeschylus of Alexandria, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0321.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0321.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0321.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0321-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0321.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0321-fr1-l1",
+          "text": "τίς δ’ ἔστ’ ἀνάγκη δυστυχεῖν ἐν πλείοσιν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0321-fr1-l2",
+          "text": "ἐξὸν σιωπᾶν κἀν σκότῳ κρύπτειν τάδε ;"
+        }
+      ],
+      "context": "Ath. XIII p. 599 E : ‘τίς δ’ — τάδε ;’ Αἰσχύλος ἔφη ὁ Ἀλεξανδρεὺς ἐν Ἀμφιτρύωνι· οὗτος δ’ ἐστὶν Αἰσχύλος ὁ καὶ τὰ Μεσσηνιακὰ ἔπη συνθείς, ἀνὴρ εὐπαίδευτος. v. 1 τίς δ’ ἔσται A.",
+      "play_title": "ΑΜΦΙΤΡΥΩΝ",
+      "play_work": "amphitryon",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0321_amphitryon"
+    }
+  ],
+  "works": {
+    "tlg0321-amphitryon": {
+      "id": "tlg0321-amphitryon",
+      "work": "amphitryon",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0321_amphitryon",
+      "title": "ΑΜΦΙΤΡΥΩΝ",
+      "source_title": "ΑΜΦΙΤΡΥΩΝ",
+      "source": "tlg0321.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0321-amphitryon",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0321-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0321.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0321-fr1-l1",
+              "text": "τίς δ’ ἔστ’ ἀνάγκη δυστυχεῖν ἐν πλείοσιν,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0321-fr1-l2",
+              "text": "ἐξὸν σιωπᾶν κἀν σκότῳ κρύπτειν τάδε ;"
+            }
+          ],
+          "context": "Ath. XIII p. 599 E : ‘τίς δ’ — τάδε ;’ Αἰσχύλος ἔφη ὁ Ἀλεξανδρεὺς ἐν Ἀμφιτρύωνι· οὗτος δ’ ἐστὶν Αἰσχύλος ὁ καὶ τὰ Μεσσηνιακὰ ἔπη συνθείς, ἀνὴρ εὐπαίδευτος. v. 1 τίς δ’ ἔσται A.",
+          "play_title": "ΑΜΦΙΤΡΥΩΝ",
+          "play_work": "amphitryon",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0321_amphitryon",
+          "attribution_id": "nauck1889grc1-tlg0321-amphitryon",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0321.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0321.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 2,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0321-amphitryon",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0321-amphitryon",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0321_amphitryon",
+      "corresp": [
+        "urn:cts:greekLit:tlg0321.fragmenta.nauck1889grc1:1"
+      ]
+    }
+  ]
+}

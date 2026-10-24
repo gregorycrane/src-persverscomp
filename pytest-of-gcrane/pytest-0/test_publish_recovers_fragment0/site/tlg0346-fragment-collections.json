@@ -1,0 +1,61 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0346",
+  "author": "Pompeius Macer",
+  "corpus_title": "Pompeius Macer, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0346.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0346.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0346.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0346-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0346.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0346-fr1-l1",
+          "text": "δεῦτ’ ὦ τέκν’ , ὦ στερχθένθ’ ὅσον πλεῖστον θέμις,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0346-fr1-l2",
+          "text": "ὦ πολλὰ τέρψαντ’ οὐδὲ λυπήσαντά τι"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0346-fr1-l3",
+          "text": "μητέρα, τί προσλάζεσθε κἀξαρτᾶσθέ μου ;"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0346-fr1-l4",
+          "text": "βούλεσθ’ ἀθύρειν ; παίζετ’ , ὦ νέαι φρένες·"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0346-fr1-l5",
+          "text": "ὡς ἐστιν ὑμῖν τοῦτ’ ἔαρ παντὸς βίου,"
+        },
+        {
+          "ref": "6",
+          "source_id": "tlg0346-fr1-l6",
+          "text": "ἥβῃ δὲ λῦπαι φροντίδες θ’ ἡβῶσ’ ὁμοῦ ."
+        }
+      ],
+      "context": "Stob. Flor. 78 , 7 : Πομπηίου Μάκρου (sic S, πομπηίου μακροῦ MA) . ‘δεῦτ’ ὦ — ὁμοῦ’ . v. 1 ὦ τέκνα ὥστ’ ἐρχθέντα SM. v. 2 τέρψαντ’ ex τέρψαντά τι corr. S pr. m. v. 3 προσλάζεσθε SMA, προσλάζυσθε cod. Voss. κἀξάρτεσθέ μου libri, corr. Valckenaer. v. 4 νέε SMA, νέαι cod. Voss. v. 5 ὑμῖν fortasse cod. Voss. , ἡμῖν SMA."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

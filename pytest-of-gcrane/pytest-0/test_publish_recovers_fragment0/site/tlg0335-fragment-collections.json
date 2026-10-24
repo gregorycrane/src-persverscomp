@@ -1,0 +1,50 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0335",
+  "author": "Philiscus",
+  "corpus_title": "Philiscus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0335.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0335.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0335.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0335-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0335.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0335-fr1-l1",
+          "text": "οὐκ ἔστιν, ὦ μάταιε, σὺν ῥᾳθυμίᾳ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0335-fr1-l2",
+          "text": "τὰ τῶν πονούντων μὴ πονήσαντας λαβεῖν."
+        }
+      ],
+      "context": "Stob. Flor. 29 , 40 : Φιλίσκου. ‘οὐκ — λαβεῖν’ ."
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0335-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0335.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. German. Caes. Arat. p. 70 , 15 (cf. p. 129 , 6) : sunt in hoc signo in eius testa aliae stellae, quas asinos appellant. Graeci enim ὄνους dicunt. quos Liber astris intulit, quod cum ab Iunone insania obiecta fugeret ad occasus, ut in Dodonaei Iovis templo responsa peteret, ut Philiscus refert, et magnis imbribus cum grandine ortis stagna, quae transiturus erat, inundata detinerent iter eius, asini ex contrario transeunt per aquas. ex his uno insidens et ipse transvectus est sine periculo insaniaque liberatus dicitur. uno itaque ex his fecisse ut voce humana loqueretur. qui cum sensum accepisset, post paucum tempus cum Priapo de membro naturali contendere coepit. cf. Hygin. Poet. astron. 2 , 23 . spectari Philisci fabulam satyricam arbitratur C. Robert Eratosth. Catast. reliq. p. 32 ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}

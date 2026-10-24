@@ -1,0 +1,199 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0302",
+  "author": "Choerilus",
+  "corpus_title": "Choerilus, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0302.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0302.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0302-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0302-fr1-l1",
+          "text": "INCERTARVM FABVLARVM FRAGMENTA"
+        }
+      ],
+      "context": "Pausan. 1 , 14 , 3 : Χοιρίλῳ δὲ Ἀθηναίῳ δρᾶμα ποιήσαντι Ἀλόπην ἔστ’ εἰρημένα Κερκύονα εἶναι καὶ Τριπτόλεμον ἀδελφούς, τεκεῖν δὲ σφᾶς θυγατέρα Ἀμφικτύονος, εἶναι δὲ πατέρα Τριπτολέμῳ μὲν Ῥᾶρον, Κερκύονι δὲ Ποσειδῶνα. INCERTARVM FABVLARVM FRAGMENTA",
+      "play_title": "CHOERILVS ΑΛΟΠΗ",
+      "play_work": "choerilvs_alope",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0302-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0302-fr2-l1",
+          "text": "λίθοισι γῆς ὀστοῖσιν ἐγχριμφθείς"
+        }
+      ],
+      "context": "Eust. Il. p. 309 , 43 : τετόλμηται δὲ καὶ γῆς ὀστᾶ τοὺς λίθους εἰπεῖν, ὡς δηλοῖ τὸ ‘γῆς — πόδα’ . ὀστέοισιν Eust. , ὀστοῖσιν scripsi. qua correctione usus σκληροῖσι γῆς ὀστοῖσιν proposuit Meineke Philol. 20 p. 718 . potius λίθοισι supplendum, quo nomine non addito verba poetae intellegi non poterant*) . similiter C. Immermann, ‘Alles rege sich! nur nicht der Stein, der lockern Erde haftendes Gebein’ . verba ab Eustathio allata cuius poetae sint docet Tzetzes Rhet. vol. 3 p. 650 : αἱ μέντοι λέξεις τροπικαὶ σεμνότητα ποιοῦσι· — ἂν πόρρω δὲ λαμβάνωνται, ὥσπερ ποιεῖ Χοιρίλλος καλῶν τοὺς λίθους γῆς ὀστᾶ , τοὺς ποταμοὺς γῆς φλέβας, ὡς τὴν σελήνην οὐρανοῦ πάλιν Αἰσχρίων σίγμα — τὸν λόγον ἐκτραχύνουσι.",
+      "play_title": "CHOERILVS ΑΛΟΠΗ",
+      "play_work": "choerilvs_alope",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0302-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0302-fr3-l1",
+          "text": "γῆς φλέβες"
+        }
+      ],
+      "context": "Tzetzes Rhet. vol. 3 p. 650 , vide fr. 2 .\n\n*) Chaeremon fr. 17 , 2 dixit ὕδωρ τε ποταμοῦ σῶμα διεπεράσαμεν. omissum fingas ὕδωρ nomen, et merum habebis aenigma, cum addito isto nomine audax metaphora excusetur. compares quae Gorgias dixit, Ξέρξης ὁ τῶν Περσῶν Ζεύς et γῦπες ἔμψυχοι τάφοι, item μήνη τὸ καλὸν οὐρανοῦ νέον σίγμα et ναῦται θαλάσσης μύρμηκες Aeschrionis, τοὺς τῶν πόλεων βασιλεῖς νόμους Alcidamantis, σπινθῆρες Ἁφαίστου σταλαγμοί nescio cuius apud Philodemum de rhet. II in Hercul. vol. XI, 2 p. 39 , alia.",
+      "play_title": "CHOERILVS ΑΛΟΠΗ",
+      "play_work": "choerilvs_alope",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0302-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [],
+      "context": "Schol. Bern. in Verg. Georg. 1 , 482 : ubi enim Eridanus sit, multi errant (fort. certant) — Ctesias hunc in India esse adfirmat, vel Choerilus (Choerulus cod.) in Germania, in quo fluvio Phaethon (feton cod.) exstinctus est, vel Ion in Achaia.",
+      "play_title": "CHOERILVS ΑΛΟΠΗ",
+      "play_work": "choerilvs_alope",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope"
+    }
+  ],
+  "works": {
+    "tlg0302-choerilvs-alope": {
+      "id": "tlg0302-choerilvs-alope",
+      "work": "choerilvs_alope",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+      "title": "CHOERILVS ΑΛΟΠΗ",
+      "source_title": "CHOERILVS ΑΛΟΠΗ",
+      "source": "tlg0302.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0302-choerilvs-alope",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0302-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0302-fr1-l1",
+              "text": "INCERTARVM FABVLARVM FRAGMENTA"
+            }
+          ],
+          "context": "Pausan. 1 , 14 , 3 : Χοιρίλῳ δὲ Ἀθηναίῳ δρᾶμα ποιήσαντι Ἀλόπην ἔστ’ εἰρημένα Κερκύονα εἶναι καὶ Τριπτόλεμον ἀδελφούς, τεκεῖν δὲ σφᾶς θυγατέρα Ἀμφικτύονος, εἶναι δὲ πατέρα Τριπτολέμῳ μὲν Ῥᾶρον, Κερκύονι δὲ Ποσειδῶνα. INCERTARVM FABVLARVM FRAGMENTA",
+          "play_title": "CHOERILVS ΑΛΟΠΗ",
+          "play_work": "choerilvs_alope",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+          "attribution_id": "nauck1889grc1-tlg0302-choerilvs_alope",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0302-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0302-fr2-l1",
+              "text": "λίθοισι γῆς ὀστοῖσιν ἐγχριμφθείς"
+            }
+          ],
+          "context": "Eust. Il. p. 309 , 43 : τετόλμηται δὲ καὶ γῆς ὀστᾶ τοὺς λίθους εἰπεῖν, ὡς δηλοῖ τὸ ‘γῆς — πόδα’ . ὀστέοισιν Eust. , ὀστοῖσιν scripsi. qua correctione usus σκληροῖσι γῆς ὀστοῖσιν proposuit Meineke Philol. 20 p. 718 . potius λίθοισι supplendum, quo nomine non addito verba poetae intellegi non poterant*) . similiter C. Immermann, ‘Alles rege sich! nur nicht der Stein, der lockern Erde haftendes Gebein’ . verba ab Eustathio allata cuius poetae sint docet Tzetzes Rhet. vol. 3 p. 650 : αἱ μέντοι λέξεις τροπικαὶ σεμνότητα ποιοῦσι· — ἂν πόρρω δὲ λαμβάνωνται, ὥσπερ ποιεῖ Χοιρίλλος καλῶν τοὺς λίθους γῆς ὀστᾶ , τοὺς ποταμοὺς γῆς φλέβας, ὡς τὴν σελήνην οὐρανοῦ πάλιν Αἰσχρίων σίγμα — τὸν λόγον ἐκτραχύνουσι.",
+          "play_title": "CHOERILVS ΑΛΟΠΗ",
+          "play_work": "choerilvs_alope",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+          "attribution_id": "nauck1889grc1-tlg0302-choerilvs_alope",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0302-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0302-fr3-l1",
+              "text": "γῆς φλέβες"
+            }
+          ],
+          "context": "Tzetzes Rhet. vol. 3 p. 650 , vide fr. 2 .\n\n*) Chaeremon fr. 17 , 2 dixit ὕδωρ τε ποταμοῦ σῶμα διεπεράσαμεν. omissum fingas ὕδωρ nomen, et merum habebis aenigma, cum addito isto nomine audax metaphora excusetur. compares quae Gorgias dixit, Ξέρξης ὁ τῶν Περσῶν Ζεύς et γῦπες ἔμψυχοι τάφοι, item μήνη τὸ καλὸν οὐρανοῦ νέον σίγμα et ναῦται θαλάσσης μύρμηκες Aeschrionis, τοὺς τῶν πόλεων βασιλεῖς νόμους Alcidamantis, σπινθῆρες Ἁφαίστου σταλαγμοί nescio cuius apud Philodemum de rhet. II in Hercul. vol. XI, 2 p. 39 , alia.",
+          "play_title": "CHOERILVS ΑΛΟΠΗ",
+          "play_work": "choerilvs_alope",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+          "attribution_id": "nauck1889grc1-tlg0302-choerilvs_alope",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0302-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [],
+          "context": "Schol. Bern. in Verg. Georg. 1 , 482 : ubi enim Eridanus sit, multi errant (fort. certant) — Ctesias hunc in India esse adfirmat, vel Choerilus (Choerulus cod.) in Germania, in quo fluvio Phaethon (feton cod.) exstinctus est, vel Ion in Achaia.",
+          "play_title": "CHOERILVS ΑΛΟΠΗ",
+          "play_work": "choerilvs_alope",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+          "attribution_id": "nauck1889grc1-tlg0302-choerilvs_alope",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0302.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0302-choerilvs_alope",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0302-choerilvs_alope",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0302_choerilvs_alope",
+      "corresp": [
+        "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0302.fragmenta.nauck1889grc1:4"
+      ]
+    }
+  ]
+}

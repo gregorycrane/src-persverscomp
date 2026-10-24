@@ -1,0 +1,422 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0341",
+  "author": "Lycophron",
+  "corpus_title": "Lycophron, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0341.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0341.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0341-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0341-fr1-l1",
+          "text": "παῖδες κρατίστου πατρὸς ἐξωλέστατοι,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0341-fr1-l2",
+          "text": "ἐγὼ μὲν ὑμῖν, ὡς ὁρᾶτε, στρηνιῶ·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0341-fr1-l3",
+          "text": "δεῖπνον γὰρ οὔτ’ ἐν Καρίᾳ , μὰ τοὺς θεούς,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0341-fr1-l4",
+          "text": "οὔτ’ ἐν Ῥόδῳ τοιοῦτον οὔτ’ ἐν Λυδία"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0341-fr1-l5",
+          "text": "κατέχω δεδειπνηκώς, Ἄπολλον, ὡς καλόν."
+        }
+      ],
+      "context": "Ath. X p. 420 B : μαρτυρεῖ δὲ καὶ περὶ τούτων (de Menedemi victu) Λυκόφρων ὁ Χαλκιδεὺς γράψας σατύρους Μενέδημον, ἐν οἷς φησὶν ὁ Σιληνὸς πρὸς τοὺς σατύρους ‘παῖδες — καλόν’ . v. 1 παιδὸς AC, πατρὸς Canter. v. 5 κατέχω] ἔχω malim.",
+      "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "play_work": "menedemos_satyroi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0341-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0341-fr2-l1",
+          "text": "ἀλλὰ κυλίκιον"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0341-fr2-l2",
+          "text": "ὑδαρὲς ὁ παῖς περιῆγε τοῦ πεντωβόλου,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0341-fr2-l3",
+          "text": "ἀτρέμα παρεξεστηκός· ὅ τ’ ἀλιτήριος"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0341-fr2-l4",
+          "text": "καὶ δημόκοινος ἐπεχόρευε δαψιλὴς"
+        },
+        {
+          "ref": "5",
+          "source_id": "tlg0341-fr2-l5",
+          "text": "θέρμος, πενήτων καὶ τρικλίνου συμπότης."
+        }
+      ],
+      "context": "Ath. I. 1 . pergit : καὶ προελθών (προσελθών A, corr. Musurus) ἀλλὰ — συμπότης’ . v. 3 ἠρέμα Herwerden Exerc. crit. p. 81 . παρεξεστηκός, ἁλιτήριος Methner progr. a. 1882 p. 10 . v. 4 et 5 attulit Ath. II p. 55 D : Λυκόφρων δ’ ὁ Χαλκιδεὺς ἐν σατυρικῷ δράματι ὃ ἐπὶ καταμωκήσει ἔγραφεν εἰς Μενέδημον τὸν φιλόσοφον, ἀφ’ οὗ ἡ τῶν Ἐρετρικῶν ὠνομάσθη αἵρεσις, διασκώπτων τῶν φιλοσόφων τὰ δεῖπνα φησί ‘καὶ — συμπότης’ . v. 4 δημόνικος p. 420 , δημόκριτος p. 55 , δημόκοινος Casaubonus, κοινόδημος Methner. v. 5 τρικλίνων p. 55 , τρικλίνους p. 420 . κοὐ τρικλίνων Methner.",
+      "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "play_work": "menedemos_satyroi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0341-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0341-fr3-l1",
+          "text": "ὡς ἐκ βραχείας δαιτὸς ἡ βαιὰ κύλιξ"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0341-fr3-l2",
+          "text": "αὐτοῖς κυκλεῖται πρὸς μέτρον, τράγημα δὲ"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0341-fr3-l3",
+          "text": "ὁ σωφρονιστὴς τοῖς φιληκόοις λόγος."
+        }
+      ],
+      "context": "Laert. Diog. 2 , 140 (cf. Hesych. Miles. 44) : τράγημα θέρμος ἢ κύαμος, ἔστι δ’ ὅτε καὶ τῶν ὡρίων ἄπιος ἢ ῥοιὰ ἢ ὦχροι (ὄχναι Hesych. Mil.) ἢ νὴ Δί’ ἰσχάδες. ἃ πάντα φησὶν ὁ Λυκόφρων ἐν τοῖς πεποιημένοις σατύροις αὐτῷ , οὓς Μενέδημος ἐπέγραψεν, ἐγκώμιον τοῦ φιλοσόφου ποιήσας τὸ δρᾶμα. ὧν καί τινά ἐστι τοιαυτί ‘ὡς ἐκ — λόγος’ . Ath. X p. 420 C : ἑξῆς δὲ φησὶν ὅτι ζητήσεις ἦσαν παρὰ πότον· ‘τράγημα — λόγος’ (v. 2 et 3) . v. 2 δὲ] γὰρ Ath. v. 3 τοῖς φιληκόοις] πᾶσιν ἐν μέσῳ Ath.",
+      "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "play_work": "menedemos_satyroi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0341-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0341-fr4-l1",
+          "text": "ὁ τὴν ἔω καλῶν"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0341-fr4-l2",
+          "text": "κατέλαβεν ὄρνις· τοῖσι δ’ οὐδέπω κόρος."
+        }
+      ],
+      "context": "Ath. X p. 420 C : ἱστορεῖται (ἱστορεῖ Meineke) δὲ καὶ ὅτι πολλάκις συνόντας αὐτοὺς ἐπὶ πλεῖον ὁ ὄρνις κατελάμβανε τὴν ἕω καλῶν, τοῖσι δὲ οὐδέπω κόρος. versus restituit Meineke Ath. 4 p. 186 .",
+      "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "play_work": "menedemos_satyroi",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0341-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0341-fr5-l1",
+          "text": "ἀλλ’ ἡνίκ’ ἂν μὲν ᾖ πρόσω τὸ κατθανεῖν,"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0341-fr5-l2",
+          "text": "Ἅιδης ποθεῖται τοῖς δεδυστυχηκόσιν·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0341-fr5-l3",
+          "text": "ὅταν δ’ ἐφέρπῃ κῦμα λοίσθιον βίου,"
+        },
+        {
+          "ref": "4",
+          "source_id": "tlg0341-fr5-l4",
+          "text": "τὸ ζῆν ποθοῦμεν· οὐ γὰρ ἔστ’ αὐτοῦ κόρος."
+        }
+      ],
+      "context": "Stob. Flor. 119 , 13 : Λυκόφρονος ἐκ Πελοπιδῶν (πελοπίδῶν A, Λυκόφρονος nec plura S, eclogam om. M) , ‘ἀλλ’ — κόρος’ . v. 1 ἡνίκα SA, ἡνίκ’ ἂν Iacobs. v. 4 ἐστιν A. τὸ ζῆν ποθοῦμεν κοὐκέτ ἔστ’ malim.",
+      "play_title": "ΠΕΛΟΠΙΛΑΙ",
+      "play_work": "pelopilai",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_pelopilai"
+    }
+  ],
+  "works": {
+    "tlg0341-menedemos-satyroi": {
+      "id": "tlg0341-menedemos-satyroi",
+      "work": "menedemos_satyroi",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+      "title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "source_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+      "source": "tlg0341.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0341-menedemos-satyroi",
+      "record_type": "fragmentary_play",
+      "introduction": "Titulus dramatis satyrici repetitus est a Menedemo philosopho Eretriensi, quem irrisum hac fabula refert Athenaeus II p. 55 D, laudatum Laertius Diogenes 2 , 140 .",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0341-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0341-fr1-l1",
+              "text": "παῖδες κρατίστου πατρὸς ἐξωλέστατοι,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0341-fr1-l2",
+              "text": "ἐγὼ μὲν ὑμῖν, ὡς ὁρᾶτε, στρηνιῶ·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0341-fr1-l3",
+              "text": "δεῖπνον γὰρ οὔτ’ ἐν Καρίᾳ , μὰ τοὺς θεούς,"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0341-fr1-l4",
+              "text": "οὔτ’ ἐν Ῥόδῳ τοιοῦτον οὔτ’ ἐν Λυδία"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0341-fr1-l5",
+              "text": "κατέχω δεδειπνηκώς, Ἄπολλον, ὡς καλόν."
+            }
+          ],
+          "context": "Ath. X p. 420 B : μαρτυρεῖ δὲ καὶ περὶ τούτων (de Menedemi victu) Λυκόφρων ὁ Χαλκιδεὺς γράψας σατύρους Μενέδημον, ἐν οἷς φησὶν ὁ Σιληνὸς πρὸς τοὺς σατύρους ‘παῖδες — καλόν’ . v. 1 παιδὸς AC, πατρὸς Canter. v. 5 κατέχω] ἔχω malim.",
+          "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+          "play_work": "menedemos_satyroi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+          "attribution_id": "nauck1889grc1-tlg0341-menedemos_satyroi",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "2",
+          "source_id": "tlg0341-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0341-fr2-l1",
+              "text": "ἀλλὰ κυλίκιον"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0341-fr2-l2",
+              "text": "ὑδαρὲς ὁ παῖς περιῆγε τοῦ πεντωβόλου,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0341-fr2-l3",
+              "text": "ἀτρέμα παρεξεστηκός· ὅ τ’ ἀλιτήριος"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0341-fr2-l4",
+              "text": "καὶ δημόκοινος ἐπεχόρευε δαψιλὴς"
+            },
+            {
+              "ref": "5",
+              "source_id": "tlg0341-fr2-l5",
+              "text": "θέρμος, πενήτων καὶ τρικλίνου συμπότης."
+            }
+          ],
+          "context": "Ath. I. 1 . pergit : καὶ προελθών (προσελθών A, corr. Musurus) ἀλλὰ — συμπότης’ . v. 3 ἠρέμα Herwerden Exerc. crit. p. 81 . παρεξεστηκός, ἁλιτήριος Methner progr. a. 1882 p. 10 . v. 4 et 5 attulit Ath. II p. 55 D : Λυκόφρων δ’ ὁ Χαλκιδεὺς ἐν σατυρικῷ δράματι ὃ ἐπὶ καταμωκήσει ἔγραφεν εἰς Μενέδημον τὸν φιλόσοφον, ἀφ’ οὗ ἡ τῶν Ἐρετρικῶν ὠνομάσθη αἵρεσις, διασκώπτων τῶν φιλοσόφων τὰ δεῖπνα φησί ‘καὶ — συμπότης’ . v. 4 δημόνικος p. 420 , δημόκριτος p. 55 , δημόκοινος Casaubonus, κοινόδημος Methner. v. 5 τρικλίνων p. 55 , τρικλίνους p. 420 . κοὐ τρικλίνων Methner.",
+          "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+          "play_work": "menedemos_satyroi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+          "attribution_id": "nauck1889grc1-tlg0341-menedemos_satyroi",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "3",
+          "source_id": "tlg0341-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0341-fr3-l1",
+              "text": "ὡς ἐκ βραχείας δαιτὸς ἡ βαιὰ κύλιξ"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0341-fr3-l2",
+              "text": "αὐτοῖς κυκλεῖται πρὸς μέτρον, τράγημα δὲ"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0341-fr3-l3",
+              "text": "ὁ σωφρονιστὴς τοῖς φιληκόοις λόγος."
+            }
+          ],
+          "context": "Laert. Diog. 2 , 140 (cf. Hesych. Miles. 44) : τράγημα θέρμος ἢ κύαμος, ἔστι δ’ ὅτε καὶ τῶν ὡρίων ἄπιος ἢ ῥοιὰ ἢ ὦχροι (ὄχναι Hesych. Mil.) ἢ νὴ Δί’ ἰσχάδες. ἃ πάντα φησὶν ὁ Λυκόφρων ἐν τοῖς πεποιημένοις σατύροις αὐτῷ , οὓς Μενέδημος ἐπέγραψεν, ἐγκώμιον τοῦ φιλοσόφου ποιήσας τὸ δρᾶμα. ὧν καί τινά ἐστι τοιαυτί ‘ὡς ἐκ — λόγος’ . Ath. X p. 420 C : ἑξῆς δὲ φησὶν ὅτι ζητήσεις ἦσαν παρὰ πότον· ‘τράγημα — λόγος’ (v. 2 et 3) . v. 2 δὲ] γὰρ Ath. v. 3 τοῖς φιληκόοις] πᾶσιν ἐν μέσῳ Ath.",
+          "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+          "play_work": "menedemos_satyroi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+          "attribution_id": "nauck1889grc1-tlg0341-menedemos_satyroi",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "4",
+          "source_id": "tlg0341-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0341-fr4-l1",
+              "text": "ὁ τὴν ἔω καλῶν"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0341-fr4-l2",
+              "text": "κατέλαβεν ὄρνις· τοῖσι δ’ οὐδέπω κόρος."
+            }
+          ],
+          "context": "Ath. X p. 420 C : ἱστορεῖται (ἱστορεῖ Meineke) δὲ καὶ ὅτι πολλάκις συνόντας αὐτοὺς ἐπὶ πλεῖον ὁ ὄρνις κατελάμβανε τὴν ἕω καλῶν, τοῖσι δὲ οὐδέπω κόρος. versus restituit Meineke Ath. 4 p. 186 .",
+          "play_title": "ΜΕΝΕΔΗΜΟΣ ΣΑΤΥΡΟΙ",
+          "play_work": "menedemos_satyroi",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+          "attribution_id": "nauck1889grc1-tlg0341-menedemos_satyroi",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0341.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 15,
+      "status": "Fragmentary text"
+    },
+    "tlg0341-pelopilai": {
+      "id": "tlg0341-pelopilai",
+      "work": "pelopilai",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_pelopilai",
+      "title": "ΠΕΛΟΠΙΛΑΙ",
+      "source_title": "ΠΕΛΟΠΙΛΑΙ",
+      "source": "tlg0341.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0341-pelopilai",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "5",
+          "source_id": "tlg0341-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0341-fr5-l1",
+              "text": "ἀλλ’ ἡνίκ’ ἂν μὲν ᾖ πρόσω τὸ κατθανεῖν,"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0341-fr5-l2",
+              "text": "Ἅιδης ποθεῖται τοῖς δεδυστυχηκόσιν·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0341-fr5-l3",
+              "text": "ὅταν δ’ ἐφέρπῃ κῦμα λοίσθιον βίου,"
+            },
+            {
+              "ref": "4",
+              "source_id": "tlg0341-fr5-l4",
+              "text": "τὸ ζῆν ποθοῦμεν· οὐ γὰρ ἔστ’ αὐτοῦ κόρος."
+            }
+          ],
+          "context": "Stob. Flor. 119 , 13 : Λυκόφρονος ἐκ Πελοπιδῶν (πελοπίδῶν A, Λυκόφρονος nec plura S, eclogam om. M) , ‘ἀλλ’ — κόρος’ . v. 1 ἡνίκα SA, ἡνίκ’ ἂν Iacobs. v. 4 ἐστιν A. τὸ ζῆν ποθοῦμεν κοὐκέτ ἔστ’ malim.",
+          "play_title": "ΠΕΛΟΠΙΛΑΙ",
+          "play_work": "pelopilai",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_pelopilai",
+          "attribution_id": "nauck1889grc1-tlg0341-pelopilai",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0341.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 4,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0341-menedemos_satyroi",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0341-menedemos_satyroi",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_menedemos_satyroi",
+      "corresp": [
+        "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:1",
+        "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:2",
+        "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:3",
+        "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:4"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0341-pelopilai",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0341-pelopilai",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0341_pelopilai",
+      "corresp": [
+        "urn:cts:greekLit:tlg0341.fragmenta.nauck1889grc1:5"
+      ]
+    }
+  ]
+}

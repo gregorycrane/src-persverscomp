@@ -1,0 +1,717 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0330",
+  "author": "Dionysius",
+  "corpus_title": "Dionysius, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0330.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0330-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr1-l1",
+          "text": "νυμφῶν ὑπὸ σπήλυγγα τὸν αὐτόστεγον"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0330-fr1-l2",
+          "text": "σύαγρον ἐκβόλειον εὔθηρον κλύειν,"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0330-fr1-l3",
+          "text": "ὁπλάς τ’ ἀπαρχὰς ἀκροθινιάζομαι."
+        }
+      ],
+      "context": "Ath. IX p. 401 F de nomine σύαγρος : Διονύσιος δὲ ὁ τύραννος ἐν τῷ Ἀδώνιδι ‘νυμφῶν — ἀκροθινιάζομαι’ . v. 1 τὸν] τὴν Dindorf, τόνδ’ coni. Kaibel, qui αὐτόστεγον corruptum iudicat. v. 2 σύαγρον, ἀκρόλειον εὔθηρον, κλονῶ Haupt Opuse. 3 p. 393 . v. 3 ᾧ πλεῖστ’ ἀπαρχὰς vulgo, ᾧ πλεῖστ’ ἀπάργματ’ Meineke (coll. Hesych. 1 p. 227 : ἀπάργματα· ἀπαρχαί) , ὁπλάς τ’ ἀπαρχὰς Haupt.",
+      "play_title": "ΑΔΩΝΙΣ",
+      "play_work": "adonis",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_adonis"
+    },
+    {
+      "number": "2",
+      "source_id": "tlg0330-fr2",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:2",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr2-l1",
+          "text": "εἰ δ’ ἀξιοῖς σοι μηδὲν ἀλγεινόν ποτε"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0330-fr2-l2",
+          "text": "μηδὲν ἔσεσθαι, μακαρίως ἔχεις φρενῶν·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0330-fr2-l3",
+          "text": "θεῶν γὰρ ἄξειν βίοτον, οὐ θνητῶν δοκεῖς."
+        }
+      ],
+      "context": "Stob. Flor. 98 , 30 : Διονυσίου τυράννου Ἀλκμήνης (sin MA, eclogam om. S) . ‘εἰ δ’ — δοκεῖς. v. 1 ἀξίοις MA, ἀξιοῖς Gesner.\n\nv. 2 Mήδει’ ἔσεσθαι coni. qui titulum fabulae vitiosum esse censebat Elmsley in Eur. Med. p. 74 , μὴ δείν’ ἔσεσθαι ego olim temptavi, δεινόν τ’ ἔσεσθαι Heimsoeth, μέλλειν ἔσεσθαι Wecklein Mus. Rhen. 28 p. 179 , μέλημ’ ἔσεσθαι coni. F. G. Schmidt Krit. Stud. 3 p. 18 , aptius fuerit ὦ τᾶν ἔσεσθαι. v. 3 ἕξειν libri, ἄξειν F. G. Schmidt.",
+      "play_title": "AΛΚΜΗΝΗ",
+      "play_work": "alkmene",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_alkmene"
+    },
+    {
+      "number": "3",
+      "source_id": "tlg0330-fr3",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:3",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr3-l1",
+          "text": "θνητῶν δὲ μηδεὶς μηδέν’ ὄλβιόν ποτε"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0330-fr3-l2",
+          "text": "κρίνῃ , πρὶν αὐτὸν εὖ τελευτήσαντ’ ἴδῃ·"
+        },
+        {
+          "ref": "3",
+          "source_id": "tlg0330-fr3-l3",
+          "text": "ἕν’ ἀσφαλὲς γὰρ τὸν θανόντ’ ἐπολβίσαι."
+        }
+      ],
+      "context": "Stob. Flor. 105 , 2 : Διονυσίου τυράννου ἐκ Λήδας (sic MA, ἐκ Λήδας om. S, ἐκ Μηδείας coni. Elmsley) . ‘θνητῶν — ἐπαινἐσαι’ . v. 2 εὐτελευτήσαντ’ M, εὐτελήσαντ’ A. v. 3 ἐν ἀσφαλεῖ — ἐπαινέσαι libri, ἕν’ ἀσφαλὲς — ἐπολβίσαι F. G. Schmidt Krit. Stud. 3 p. 18 sq.",
+      "play_title": "ΛΗΔΑ",
+      "play_work": "leda",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_leda"
+    },
+    {
+      "number": "4",
+      "source_id": "tlg0330-fr4",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:4",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr4-l1",
+          "text": "ἡ γὰρ τυραννὶς ἀδικίας μήτηρ ἔφυ."
+        }
+      ],
+      "context": "Plut. de Alexandri fortuna c. 5 p. 338 C ; ὁ δὲ πατὴρ αὐτοῦ (Dionysii minoris) τῶν μὲν πολιτῶν μυρίους ἢ καὶ πλείους ἀνελών — ἐν δὲ τραγῳδίᾳ γράψας αὐτός ‘ἡ γὰρ — ἔφυ’ . Stob. Flor. 49 , 9 : Διονυσίου τυράννου (sic SA, eclogam om. M) . ‘ἡ γὰρ — ἔφυ’ . om.\n\npoetae nom. Prov. append. 2 , 99 . de auctore versus fuisse qui ambigerent docet Prov. Milleri Mél. de litt. gr. p. 364 : ‘ἡ γὰρ — ἔφυ’ . τοῦτο Διονυσίῳ τινὲς τῷ Σικελίας τυράννῳ προσάπτουσιν.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "5",
+      "source_id": "tlg0330-fr5",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:5",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr5-l1",
+          "text": "ὁ τῆς Δίκης ὀφθαλμὸς ὡς δι’ ἡσύχου"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0330-fr5-l2",
+          "text": "λεύσσων προσώπου πάνθ’ ὅμως ἀεὶ βλέπει."
+        }
+      ],
+      "context": "Stob. Ecl. 1 , 3 , 19 p. 55 , 17 : Διονυσίου. ‘ὁ τῆς — βλέπει’ . Theophil. ad Autol. 2 , 37 p. 178 : ὅτι ὁ θεὸς τὰ πάντα ἐφορᾷ — καὶ περὶ τούτου Διονύσιος εἴρηκεν ‘ὁ τῆς — βλέπει’ . v. 1 ὡς διὰ σκότου F. G. Schmidt Krit. Stud. 3 p. 19 . v. 2 λεύσων προσώπῳ πανὸς ὀμόσαι εἰβλέπει Theoph. ὁμῶς pro ὅμως scripsit Canter. πρόσω περ ὄνθ’ ὅμως F. G. Schmidt. de sententia cf. adesp. fr. 421 , item Heliod. 8 , 13 : δεινὸς δὲ ὁ τῆς Δίκης ὀφθαλμὸς ἐλέγχειν τὰ κρύφια.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "6",
+      "source_id": "tlg0330-fr6",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:6",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr6-l1",
+          "text": "ἢ λέγε τι σιγῆς κρεῖσσον ἢ σιγὴν ἔχε."
+        }
+      ],
+      "context": "Stob. Flor. 34 , 1 : Διονυσίου (sic SM, Εὐριπίδου Trinc. , eclogam om. A) . ‘ἢ λέγε — ἔχε’ . κρεῖττον Stobaeus sicut Men. mon. 208 Macar. 4 , 44 Greg. Cypr. Mosq. 3 , 61 Prov. append. 3 , 7 . cf. Stob. Flor. 34 , 7 : Πυθαγόρας ἔλεγε ‘χρὴ σιγᾶν ἢ κρείσσονα σιγῆς λέγειν’ .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "7",
+      "source_id": "tlg0330-fr7",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:7",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr7-l1",
+          "text": "ἔπειτα δ’ οὐδὲ τοῦτο γιγνώσκεις, ὅτι"
+        },
+        {
+          "ref": "2",
+          "source_id": "tlg0330-fr7-l2",
+          "text": "τοῖς οὐδὲν οὖσιν οὐδὲ εἷς ὅλως φθονεῖ"
+        }
+      ],
+      "context": "Stob. Flor. 38 , 2 : Διονυσίου. ‘ἔπειτα — φθονεῖ ;’ fortasse hic locus comici est poetae, cf. Meineke Com. 3 p. 555 et F. G. Schmidt Krit. Stud. 3 p. 16 . separanda duxi quae continuo accedunt, ἀεὶ τὰ σεμνὰ κτἑ . , vide adesp. fr. 530 et 531 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "8",
+      "source_id": "tlg0330-fr8",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:8",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr8-l1",
+          "text": "αὐτὸς πενόμενος τοῖς ἔχουσι μὴ φθόνει."
+        }
+      ],
+      "context": "Stob. Flor. 38 , 6 : Διονυσίου (sic SMA, Διογένους Trinc.) . ‘λιτὸς — φθόνει’ . idem versus est in Men. mon. 43 et Anecd. Boiss. 1 p. 153 . αὐτὸς πενόμενος Anecd. Boiss. , αὐτὸς πενωθεὶς Men. mon. , λιτὸς γενόμενος Stob. τοῖς ἔχουσι Stob. Men. mon. , εὐτυχοῦσι Anecd. Boiss. ceterum cf. Meineke Com. 3 p. 555 . ab hoc versu separandus est cum Grotio qui accedit, εἰσίν τινες νῦν, οὓς τὸ βασκαίνειν τρέφει (adesp. fr. 533) .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "9",
+      "source_id": "tlg0330-fr9",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:9",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr9-l1",
+          "text": "Δωρὶς τέθνηκεν ἡ Διονυσίου γυνή ."
+        }
+      ],
+      "context": "Lucianus adv. indoctum c. 15 vol. 3 p. 112 : λέγεται γὰρ καὶ Διονύσιον τραγῳδίαν ποιεῖν φαύλως πάνυ καὶ γελοίως. — οὗτος τοίνυν πυθόμενος ὡς ἐγγελᾶται, τὸ Αἰσχύλου πυξίον, εἰς ὃ ἐκεῖνος ἔγραφε, σὺν πολλῇ σπουδῇ κτησάμενος αὐτὸς ᾤετο ἔνθεος ἔσεσθαι καὶ κάτοχος ἐκ τοῦ πυξίου, ἀλλ’ ὅμως ἐν αὐτῷ ἐκείνῳ μακρῷ γελοιότερα ἔγραφεν, οἷον κἀκεῖνο τὸ ‘δωρικὸν — γυνή’ καὶ πάλιν ‘οἴμοι — ἀπώλεσα’ (fr. 10)· καὶ τοῦτο γὰρ ἐκ τοῦ πυξίου καὶ τὸ ‘αὑτοῖς — (fr. 11) . Δωρικὸν ἧκεν libri, δωρὶς τέθνηκεν C. F. Hermann. versiculus iste num in tragoedia locum habuerit, dubitari potest.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "10",
+      "source_id": "tlg0330-fr10",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:10",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr10-l1",
+          "text": "οἴμοι, γυναῖκα χρησίμην ἀπώλεσα."
+        }
+      ],
+      "context": "Lucian. adv. indoctum c. 15 , vide fr. 9 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "11",
+      "source_id": "tlg0330-fr11",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:11",
+      "same_as": [],
+      "lines": [
+        {
+          "ref": "1",
+          "source_id": "tlg0330-fr11-l1",
+          "text": "αὑτοῖς γὰρ ἐμπαίζουσιν οἱ μωροὶ βροτῶν."
+        }
+      ],
+      "context": "Lucian. adv. indoctum c. 15 , vide fr. 9 . Tzetzes Epist. p. 3 : μήπως καὶ — ἀκούσειαν τὴν Διονυσίου τραγῳδίαν ἐπᾴδοντος αὐτοῖς προσαρμόζουσαν. φησὶ γὰρ ἐκεῖνος ὁ τύραννος οὑτωσὶ μετρικῶς ἐκβοῶν ‘αὑτοῖς — βροτῶν’ . Tzetz. Chil. 5 , 185 : ἐν δὲ τῷ κατὰ Πλάτωνος δράματι γεγραμμένῳ πλέον κωμικωτέρῳ μὲν ἢ τραγῳδίας ὄντι, δοκῶ , τὸν στίχον ἔλεξεν ὃς τῇ ἀρχῇ ἐγράφη ‘αὑτοῖς — βροτῶν’ . αὑτοῖς] αὐτοῖς Luciani AF.",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    },
+    {
+      "number": "12",
+      "source_id": "tlg0330-fr12",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:12",
+      "same_as": [],
+      "lines": [],
+      "context": "Helladius in Photii Bibl. p. 532 b 27 : παρεζήλωσε δὲ (Euphorion Chalcidensis) τὸν πρῶτον Διονύσιον τὸν Σικελίας τύραννον, ὃς — ἐπεχείρησε καὶ τραγῳδίας γράφειν, ἐν αἷς καὶ τοιαῦτα συνεφόρησε ῥήματα, τὸ μὲν ἀκόντιον καλῶν βαλάντιον, τὸν δὲ κάδον ἑλκύδριον, σκέπαρνον δὲ τὸ ἔριον (cf. Eust. Opusc. p. 46 , 39) , τὴν δὲ χλαῖναν ἐριώλην οἷον ὄλεθρον οὖσαν τῶν ἐρίων. de eodem Dionysio paulo post (p. 532 b 33) : θυέστην τὸν δοίδυκα ἐκάλει. Ath. III p. 98 D : ὑπερδραμόντες τὸν Σικελιώτην Διονύσιον, ὃς τὴν μὲν παρθένον ἐκάλει μένανδρον ὅτι μένει τὸν ἄνδρα (cf. Procl. in Plat. Crat. § 83 p. 43 ed. Boiss.) , καὶ τὸν στῦλον μενεκράτην ὅτι μένει καὶ κρατεῖ , βαλάντιον δὲ τὸ ἀκόντιον ὅτι ἐναντίον βάλλεται, καὶ τὰς τῶν μυῶν διεκδύσεις μυστήρια ἐκάλει ὅτι τοὺς μῦς τηρεῖ . Ἄθανις δ’ ἐν πρώτῳ Σικελικῶν τὸν αὐτὸν φησὶ Διονύσιον καὶ τὸν βοῦν γαρόταν καλεῖν καὶ τὸν χοῖρον ἴακχον. adde Socrat. Epist. 35 . ex tragoediis nugas istas derivatas esse non crediderim. cf. Meineke Anal. Alex. p. 136 .",
+      "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "play_work": "incertarvm_fabvlarvm_fragmenta",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta"
+    }
+  ],
+  "works": {
+    "tlg0330-adonis": {
+      "id": "tlg0330-adonis",
+      "work": "adonis",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_adonis",
+      "title": "ΑΔΩΝΙΣ",
+      "source_title": "ΑΔΩΝΙΣ",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-adonis",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "1",
+          "source_id": "tlg0330-fr1",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:1",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr1-l1",
+              "text": "νυμφῶν ὑπὸ σπήλυγγα τὸν αὐτόστεγον"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0330-fr1-l2",
+              "text": "σύαγρον ἐκβόλειον εὔθηρον κλύειν,"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0330-fr1-l3",
+              "text": "ὁπλάς τ’ ἀπαρχὰς ἀκροθινιάζομαι."
+            }
+          ],
+          "context": "Ath. IX p. 401 F de nomine σύαγρος : Διονύσιος δὲ ὁ τύραννος ἐν τῷ Ἀδώνιδι ‘νυμφῶν — ἀκροθινιάζομαι’ . v. 1 τὸν] τὴν Dindorf, τόνδ’ coni. Kaibel, qui αὐτόστεγον corruptum iudicat. v. 2 σύαγρον, ἀκρόλειον εὔθηρον, κλονῶ Haupt Opuse. 3 p. 393 . v. 3 ᾧ πλεῖστ’ ἀπαρχὰς vulgo, ᾧ πλεῖστ’ ἀπάργματ’ Meineke (coll. Hesych. 1 p. 227 : ἀπάργματα· ἀπαρχαί) , ὁπλάς τ’ ἀπαρχὰς Haupt.",
+          "play_title": "ΑΔΩΝΙΣ",
+          "play_work": "adonis",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_adonis",
+          "attribution_id": "nauck1889grc1-tlg0330-adonis",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0330.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0330-alkmene": {
+      "id": "tlg0330-alkmene",
+      "work": "alkmene",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_alkmene",
+      "title": "AΛΚΜΗΝΗ",
+      "source_title": "AΛΚΜΗΝΗ",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-alkmene",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "2",
+          "source_id": "tlg0330-fr2",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:2",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr2-l1",
+              "text": "εἰ δ’ ἀξιοῖς σοι μηδὲν ἀλγεινόν ποτε"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0330-fr2-l2",
+              "text": "μηδὲν ἔσεσθαι, μακαρίως ἔχεις φρενῶν·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0330-fr2-l3",
+              "text": "θεῶν γὰρ ἄξειν βίοτον, οὐ θνητῶν δοκεῖς."
+            }
+          ],
+          "context": "Stob. Flor. 98 , 30 : Διονυσίου τυράννου Ἀλκμήνης (sin MA, eclogam om. S) . ‘εἰ δ’ — δοκεῖς. v. 1 ἀξίοις MA, ἀξιοῖς Gesner.\n\nv. 2 Mήδει’ ἔσεσθαι coni. qui titulum fabulae vitiosum esse censebat Elmsley in Eur. Med. p. 74 , μὴ δείν’ ἔσεσθαι ego olim temptavi, δεινόν τ’ ἔσεσθαι Heimsoeth, μέλλειν ἔσεσθαι Wecklein Mus. Rhen. 28 p. 179 , μέλημ’ ἔσεσθαι coni. F. G. Schmidt Krit. Stud. 3 p. 18 , aptius fuerit ὦ τᾶν ἔσεσθαι. v. 3 ἕξειν libri, ἄξειν F. G. Schmidt.",
+          "play_title": "AΛΚΜΗΝΗ",
+          "play_work": "alkmene",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_alkmene",
+          "attribution_id": "nauck1889grc1-tlg0330-alkmene",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0330.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0330-ektoros-lytra": {
+      "id": "tlg0330-ektoros-lytra",
+      "work": "ektoros_lytra",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_ektoros_lytra",
+      "title": "ΕΚΤΟΡΟΣ ΛΥΤΡΑ",
+      "source_title": "ΕΚΤΟΡΟΣ ΛΥΤΡΑ",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-ektoros-lytra",
+      "record_type": "fragmentary_play",
+      "introduction": "Tzetz. Chil. 5 , 180 : οὗτος ὁ Διονύσιος πολλὰς μὲν τραγῳδίας ἐν ταῖς Ἀθήναις ἀναγνοὺς δεύτερος, τρίτος ἦλθεν· εἰς Λύτρα δὲ τοῦ Ἕκτορος καλούμενόν τι δρᾶμα ἀναγνωσθὲν ἐνίκησεν πάντας ἐν ταῖς Ἀθήναις. Nausigene archonte olymp. 103 , 1 hanc fabulam scenae commissam esse ex Diod. 15 , 74 , 1 collegit Clinton Fast. Hell. vol. 2 p. 125 ed. Kr.",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0330-leda": {
+      "id": "tlg0330-leda",
+      "work": "leda",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_leda",
+      "title": "ΛΗΔΑ",
+      "source_title": "ΛΗΔΑ",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-leda",
+      "record_type": "fragmentary_play",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "3",
+          "source_id": "tlg0330-fr3",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:3",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr3-l1",
+              "text": "θνητῶν δὲ μηδεὶς μηδέν’ ὄλβιόν ποτε"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0330-fr3-l2",
+              "text": "κρίνῃ , πρὶν αὐτὸν εὖ τελευτήσαντ’ ἴδῃ·"
+            },
+            {
+              "ref": "3",
+              "source_id": "tlg0330-fr3-l3",
+              "text": "ἕν’ ἀσφαλὲς γὰρ τὸν θανόντ’ ἐπολβίσαι."
+            }
+          ],
+          "context": "Stob. Flor. 105 , 2 : Διονυσίου τυράννου ἐκ Λήδας (sic MA, ἐκ Λήδας om. S, ἐκ Μηδείας coni. Elmsley) . ‘θνητῶν — ἐπαινἐσαι’ . v. 2 εὐτελευτήσαντ’ M, εὐτελήσαντ’ A. v. 3 ἐν ἀσφαλεῖ — ἐπαινέσαι libri, ἕν’ ἀσφαλὲς — ἐπολβίσαι F. G. Schmidt Krit. Stud. 3 p. 18 sq.",
+          "play_title": "ΛΗΔΑ",
+          "play_work": "leda",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_leda",
+          "attribution_id": "nauck1889grc1-tlg0330-leda",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0330.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 3,
+      "status": "Fragmentary text"
+    },
+    "tlg0330-limos": {
+      "id": "tlg0330-limos",
+      "work": "limos",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_limos",
+      "title": "ΛΙΜΟΣ (?)",
+      "source_title": "ΛΙΜΟΣ (?)",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-limos",
+      "record_type": "fragmentary_play",
+      "introduction": "Schol. LT Il. Λ 515 : οἷον γὰρ ἦν πυρέττοντα τὸν ἥρωα παραλαβεῖν ἢ κενούμενον τὴν γαστέρα ἢ προποτιζόμενον· ταῦτα γὰρ κωμικά , ὡς καὶ τῷ Διονυσίῳ πεποίηται ἐν Λιμῷ τῶν νόσων Ἡρακλῆς, Σειληνὸς δὲ κλύζειν πειρᾶται τὸν Ἡρακλέα. Eust. Il. p. 859 , 49 : γελοῖος οὖν, φασί , καὶ Διονύσιος, ᾧ πεποίηται νοσῶν Ἡρακλῆς καὶ Σιληνὸς κλύζειν αὐτὸν πειρώμενος. verba ἐν Λιμῷ τῶν νόσων variis modis sanare temptarunt, ἐν Λιμώττοντι νοσῶν coni. Heyne, ἐν Λίνῳ νοσῶν Meineke Hist. crit. p. 420 et Com. 3 p. 554 .",
+      "fragments": [],
+      "versions": [],
+      "line_count": 0,
+      "status": "Evidence only"
+    },
+    "tlg0330-incertarvm-fabvlarvm-fragmenta": {
+      "id": "tlg0330-incertarvm-fabvlarvm-fragmenta",
+      "work": "incertarvm_fabvlarvm_fragmenta",
+      "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+      "title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source_title": "INCERTARVM FABVLARVM FRAGMENTA",
+      "source": "tlg0330.fragmenta.nauck1889grc1.xml",
+      "selector": "#tlg0330-incertarvm-fabvlarvm-fragmenta",
+      "record_type": "fragment_collection",
+      "introduction": "",
+      "fragments": [
+        {
+          "number": "4",
+          "source_id": "tlg0330-fr4",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:4",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr4-l1",
+              "text": "ἡ γὰρ τυραννὶς ἀδικίας μήτηρ ἔφυ."
+            }
+          ],
+          "context": "Plut. de Alexandri fortuna c. 5 p. 338 C ; ὁ δὲ πατὴρ αὐτοῦ (Dionysii minoris) τῶν μὲν πολιτῶν μυρίους ἢ καὶ πλείους ἀνελών — ἐν δὲ τραγῳδίᾳ γράψας αὐτός ‘ἡ γὰρ — ἔφυ’ . Stob. Flor. 49 , 9 : Διονυσίου τυράννου (sic SA, eclogam om. M) . ‘ἡ γὰρ — ἔφυ’ . om.\n\npoetae nom. Prov. append. 2 , 99 . de auctore versus fuisse qui ambigerent docet Prov. Milleri Mél. de litt. gr. p. 364 : ‘ἡ γὰρ — ἔφυ’ . τοῦτο Διονυσίῳ τινὲς τῷ Σικελίας τυράννῳ προσάπτουσιν.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "5",
+          "source_id": "tlg0330-fr5",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:5",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr5-l1",
+              "text": "ὁ τῆς Δίκης ὀφθαλμὸς ὡς δι’ ἡσύχου"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0330-fr5-l2",
+              "text": "λεύσσων προσώπου πάνθ’ ὅμως ἀεὶ βλέπει."
+            }
+          ],
+          "context": "Stob. Ecl. 1 , 3 , 19 p. 55 , 17 : Διονυσίου. ‘ὁ τῆς — βλέπει’ . Theophil. ad Autol. 2 , 37 p. 178 : ὅτι ὁ θεὸς τὰ πάντα ἐφορᾷ — καὶ περὶ τούτου Διονύσιος εἴρηκεν ‘ὁ τῆς — βλέπει’ . v. 1 ὡς διὰ σκότου F. G. Schmidt Krit. Stud. 3 p. 19 . v. 2 λεύσων προσώπῳ πανὸς ὀμόσαι εἰβλέπει Theoph. ὁμῶς pro ὅμως scripsit Canter. πρόσω περ ὄνθ’ ὅμως F. G. Schmidt. de sententia cf. adesp. fr. 421 , item Heliod. 8 , 13 : δεινὸς δὲ ὁ τῆς Δίκης ὀφθαλμὸς ἐλέγχειν τὰ κρύφια.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "6",
+          "source_id": "tlg0330-fr6",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:6",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr6-l1",
+              "text": "ἢ λέγε τι σιγῆς κρεῖσσον ἢ σιγὴν ἔχε."
+            }
+          ],
+          "context": "Stob. Flor. 34 , 1 : Διονυσίου (sic SM, Εὐριπίδου Trinc. , eclogam om. A) . ‘ἢ λέγε — ἔχε’ . κρεῖττον Stobaeus sicut Men. mon. 208 Macar. 4 , 44 Greg. Cypr. Mosq. 3 , 61 Prov. append. 3 , 7 . cf. Stob. Flor. 34 , 7 : Πυθαγόρας ἔλεγε ‘χρὴ σιγᾶν ἢ κρείσσονα σιγῆς λέγειν’ .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "7",
+          "source_id": "tlg0330-fr7",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:7",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr7-l1",
+              "text": "ἔπειτα δ’ οὐδὲ τοῦτο γιγνώσκεις, ὅτι"
+            },
+            {
+              "ref": "2",
+              "source_id": "tlg0330-fr7-l2",
+              "text": "τοῖς οὐδὲν οὖσιν οὐδὲ εἷς ὅλως φθονεῖ"
+            }
+          ],
+          "context": "Stob. Flor. 38 , 2 : Διονυσίου. ‘ἔπειτα — φθονεῖ ;’ fortasse hic locus comici est poetae, cf. Meineke Com. 3 p. 555 et F. G. Schmidt Krit. Stud. 3 p. 16 . separanda duxi quae continuo accedunt, ἀεὶ τὰ σεμνὰ κτἑ . , vide adesp. fr. 530 et 531 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "8",
+          "source_id": "tlg0330-fr8",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:8",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr8-l1",
+              "text": "αὐτὸς πενόμενος τοῖς ἔχουσι μὴ φθόνει."
+            }
+          ],
+          "context": "Stob. Flor. 38 , 6 : Διονυσίου (sic SMA, Διογένους Trinc.) . ‘λιτὸς — φθόνει’ . idem versus est in Men. mon. 43 et Anecd. Boiss. 1 p. 153 . αὐτὸς πενόμενος Anecd. Boiss. , αὐτὸς πενωθεὶς Men. mon. , λιτὸς γενόμενος Stob. τοῖς ἔχουσι Stob. Men. mon. , εὐτυχοῦσι Anecd. Boiss. ceterum cf. Meineke Com. 3 p. 555 . ab hoc versu separandus est cum Grotio qui accedit, εἰσίν τινες νῦν, οὓς τὸ βασκαίνειν τρέφει (adesp. fr. 533) .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "9",
+          "source_id": "tlg0330-fr9",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:9",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr9-l1",
+              "text": "Δωρὶς τέθνηκεν ἡ Διονυσίου γυνή ."
+            }
+          ],
+          "context": "Lucianus adv. indoctum c. 15 vol. 3 p. 112 : λέγεται γὰρ καὶ Διονύσιον τραγῳδίαν ποιεῖν φαύλως πάνυ καὶ γελοίως. — οὗτος τοίνυν πυθόμενος ὡς ἐγγελᾶται, τὸ Αἰσχύλου πυξίον, εἰς ὃ ἐκεῖνος ἔγραφε, σὺν πολλῇ σπουδῇ κτησάμενος αὐτὸς ᾤετο ἔνθεος ἔσεσθαι καὶ κάτοχος ἐκ τοῦ πυξίου, ἀλλ’ ὅμως ἐν αὐτῷ ἐκείνῳ μακρῷ γελοιότερα ἔγραφεν, οἷον κἀκεῖνο τὸ ‘δωρικὸν — γυνή’ καὶ πάλιν ‘οἴμοι — ἀπώλεσα’ (fr. 10)· καὶ τοῦτο γὰρ ἐκ τοῦ πυξίου καὶ τὸ ‘αὑτοῖς — (fr. 11) . Δωρικὸν ἧκεν libri, δωρὶς τέθνηκεν C. F. Hermann. versiculus iste num in tragoedia locum habuerit, dubitari potest.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "10",
+          "source_id": "tlg0330-fr10",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:10",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr10-l1",
+              "text": "οἴμοι, γυναῖκα χρησίμην ἀπώλεσα."
+            }
+          ],
+          "context": "Lucian. adv. indoctum c. 15 , vide fr. 9 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "11",
+          "source_id": "tlg0330-fr11",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:11",
+          "same_as": [],
+          "lines": [
+            {
+              "ref": "1",
+              "source_id": "tlg0330-fr11-l1",
+              "text": "αὑτοῖς γὰρ ἐμπαίζουσιν οἱ μωροὶ βροτῶν."
+            }
+          ],
+          "context": "Lucian. adv. indoctum c. 15 , vide fr. 9 . Tzetzes Epist. p. 3 : μήπως καὶ — ἀκούσειαν τὴν Διονυσίου τραγῳδίαν ἐπᾴδοντος αὐτοῖς προσαρμόζουσαν. φησὶ γὰρ ἐκεῖνος ὁ τύραννος οὑτωσὶ μετρικῶς ἐκβοῶν ‘αὑτοῖς — βροτῶν’ . Tzetz. Chil. 5 , 185 : ἐν δὲ τῷ κατὰ Πλάτωνος δράματι γεγραμμένῳ πλέον κωμικωτέρῳ μὲν ἢ τραγῳδίας ὄντι, δοκῶ , τὸν στίχον ἔλεξεν ὃς τῇ ἀρχῇ ἐγράφη ‘αὑτοῖς — βροτῶν’ . αὑτοῖς] αὐτοῖς Luciani AF.",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        },
+        {
+          "number": "12",
+          "source_id": "tlg0330-fr12",
+          "edition": "nauck1889grc1",
+          "source_fragment_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:12",
+          "same_as": [],
+          "lines": [],
+          "context": "Helladius in Photii Bibl. p. 532 b 27 : παρεζήλωσε δὲ (Euphorion Chalcidensis) τὸν πρῶτον Διονύσιον τὸν Σικελίας τύραννον, ὃς — ἐπεχείρησε καὶ τραγῳδίας γράφειν, ἐν αἷς καὶ τοιαῦτα συνεφόρησε ῥήματα, τὸ μὲν ἀκόντιον καλῶν βαλάντιον, τὸν δὲ κάδον ἑλκύδριον, σκέπαρνον δὲ τὸ ἔριον (cf. Eust. Opusc. p. 46 , 39) , τὴν δὲ χλαῖναν ἐριώλην οἷον ὄλεθρον οὖσαν τῶν ἐρίων. de eodem Dionysio paulo post (p. 532 b 33) : θυέστην τὸν δοίδυκα ἐκάλει. Ath. III p. 98 D : ὑπερδραμόντες τὸν Σικελιώτην Διονύσιον, ὃς τὴν μὲν παρθένον ἐκάλει μένανδρον ὅτι μένει τὸν ἄνδρα (cf. Procl. in Plat. Crat. § 83 p. 43 ed. Boiss.) , καὶ τὸν στῦλον μενεκράτην ὅτι μένει καὶ κρατεῖ , βαλάντιον δὲ τὸ ἀκόντιον ὅτι ἐναντίον βάλλεται, καὶ τὰς τῶν μυῶν διεκδύσεις μυστήρια ἐκάλει ὅτι τοὺς μῦς τηρεῖ . Ἄθανις δ’ ἐν πρώτῳ Σικελικῶν τὸν αὐτὸν φησὶ Διονύσιον καὶ τὸν βοῦν γαρόταν καλεῖν καὶ τὸν χοῖρον ἴακχον. adde Socrat. Epist. 35 . ex tragoediis nugas istas derivatas esse non crediderim. cf. Meineke Anal. Alex. p. 136 .",
+          "play_title": "INCERTARVM FABVLARVM FRAGMENTA",
+          "play_work": "incertarvm_fabvlarvm_fragmenta",
+          "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+          "attribution_id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+          "attributed_by": "Perseus"
+        }
+      ],
+      "versions": [
+        {
+          "short_id": "nauck1889grc1",
+          "edition_urn": "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1",
+          "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+          "source": "tlg0330.fragmenta.nauck1889grc1.xml"
+        }
+      ],
+      "line_count": 10,
+      "status": "Fragmentary text"
+    }
+  },
+  "attributions": [
+    {
+      "id": "nauck1889grc1-tlg0330-adonis",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0330-adonis",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_adonis",
+      "corresp": [
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:1"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0330-alkmene",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0330-alkmene",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_alkmene",
+      "corresp": [
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:2"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0330-leda",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0330-leda",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_leda",
+      "corresp": [
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:3"
+      ]
+    },
+    {
+      "id": "nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+      "urn": "urn:cite2:perseus:fragmentattributions.v1:nauck1889grc1-tlg0330-incertarvm_fabvlarvm_fragmenta",
+      "resp": "Perseus",
+      "edition": "nauck1889grc1",
+      "play_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0330_incertarvm_fabvlarvm_fragmenta",
+      "corresp": [
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:4",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:5",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:6",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:7",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:8",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:9",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:10",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:11",
+        "urn:cts:greekLit:tlg0330.fragmenta.nauck1889grc1:12"
+      ]
+    }
+  ]
+}

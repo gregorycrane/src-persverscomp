@@ -1,0 +1,30 @@
+{
+  "schema_version": 4,
+  "textgroup": "tlg0326",
+  "author": "Sophocles the Younger",
+  "corpus_title": "Sophocles the Younger, Fragments",
+  "source_label": "Nauck’s notes",
+  "canonical_source": "tlg0326.fragmenta.nauck1889grc1.xml",
+  "source_format": "tei",
+  "versions": [
+    {
+      "short_id": "nauck1889grc1",
+      "edition_urn": "urn:cts:greekLit:tlg0326.fragmenta.nauck1889grc1",
+      "label": "Greek (Nauck, 1889; transcription preview) (OCR draft)",
+      "source": "tlg0326.fragmenta.nauck1889grc1.xml"
+    }
+  ],
+  "fragments": [
+    {
+      "number": "1",
+      "source_id": "tlg0326-fr1",
+      "edition": "nauck1889grc1",
+      "source_fragment_urn": "urn:cts:greekLit:tlg0326.fragmenta.nauck1889grc1:1",
+      "same_as": [],
+      "lines": [],
+      "context": "Clemens Alex. Protr. c. 2 p. 26 : Πατροκλῆς τε ὁ Θούριος καὶ Σοφοκλῆς ὁ νεώτερος ἐν τρισὶ (l. ἔν τισι cum Welckero) τραγῳδίαις ἱστορεῖτον τοῖν Διοσκούροιν πέρι (ἱστορείτων τὼ διοσκούρω πέρι libri, corr. Sylburg) ."
+    }
+  ],
+  "works": {},
+  "attributions": []
+}
