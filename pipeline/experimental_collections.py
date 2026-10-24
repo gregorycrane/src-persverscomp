@@ -710,6 +710,12 @@ def _publish_kock_fragments(site_root, catalog):
             catalog["works"].pop(work_key)
         published += _publish_kock_edition(
             site_root, catalog, registry, short_id, label, source_label)
+    used_textgroups = {
+        meta["textgroup"] for meta in catalog.get("works", {}).values()
+    }
+    for textgroup in list(catalog.get("authors", {})):
+        if textgroup not in used_textgroups:
+            catalog["authors"].pop(textgroup)
     return published
 
 
