@@ -467,6 +467,27 @@ def _aggregate_sophocles_work(pearson, nauck):
     }
 
 
+def _label_pearson_work_volume(work):
+    """Identify the Pearson volume represented by one derived work view."""
+    volumes = sorted({
+        str(fragment.get("volume"))
+        for card in work.get("cards", [])
+        for fragment in [card.get("pearson")]
+        if fragment and fragment.get("volume")
+    }, key=int)
+    if not volumes:
+        return
+    roman = {"1": "I", "2": "II", "3": "III"}
+    locator = (f"vol. {roman.get(volumes[0], volumes[0])}" if len(volumes) == 1
+               else "vols. " + "–".join(roman.get(v, v) for v in volumes))
+    for version in work.get("versions", []):
+        if version.get("short_id") == SOPHOCLES_PEARSON:
+            version["label"] = (
+                f"Greek with commentary (A. C. Pearson, 1917, {locator}) (OCR draft)"
+            )
+            version["source_volume"] = ",".join(volumes)
+
+
 def _publish_sophocles_fragments(site_root, catalog):
     pearson_source = json.loads(SOPHOCLES_FRAGMENTS_PATH.read_text(encoding="utf-8"))
     nauck_source = build_play_level_fragments(
@@ -494,6 +515,8 @@ def _publish_sophocles_fragments(site_root, catalog):
             ("nauck", SOPHOCLES_NAUCK, "Nauck’s notes and apparatus"),
             ("pearson", SOPHOCLES_PEARSON, "Pearson’s notes and apparatus"),
         )
+    for work in works.values():
+        _label_pearson_work_volume(work)
     catalog["works"] = {
         key: value for key, value in catalog.get("works", {}).items()
         if not ((value.get("fragmentary") or value.get("fragment_corpus"))
@@ -672,11 +695,11 @@ def _publish_kock_fragments(site_root, catalog):
     """
     registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
     volumes = (
-        ("kock1880-grc1", "Greek (Kock, 1880; OCR draft)",
+        ("kock1880-grc1", "Greek (Kock, 1880, vol. I; OCR draft)",
          "Kock vol. I sources and notes"),
-        ("kock1884-grc1", "Greek (Kock, 1884; OCR draft)",
+        ("kock1884-grc1", "Greek (Kock, 1884, vol. II; OCR draft)",
          "Kock vol. II sources and notes"),
-        ("kock1888-grc1", "Greek (Kock, 1888; OCR draft)",
+        ("kock1888-grc1", "Greek (Kock, 1888, vol. III; OCR draft)",
          "Kock vol. III sources and notes"),
     )
     published = 0
@@ -720,13 +743,15 @@ def _publish_kock_fragments(site_root, catalog):
 
 
 def _publish_meineke_fragments(site_root, catalog):
-    """Publish Meineke FCG II–III beside the established Kock identities."""
+    """Publish Meineke FCG II–IV beside the established Kock identities."""
     registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
     volumes = (
-        ("meineke1839-grc1", "Greek (Meineke, 1839; OCR draft)",
+        ("meineke1839-grc1", "Greek (Meineke, 1839, vol. II; OCR draft)",
          "Meineke FCG II sources and notes"),
-        ("meineke1840-grc1", "Greek (Meineke, 1840; OCR draft)",
+        ("meineke1840-grc1", "Greek (Meineke, 1840, vol. III; OCR draft)",
          "Meineke FCG III sources and notes"),
+        ("meineke1841-grc1", "Greek (Meineke, 1841, vol. IV; OCR draft)",
+         "Meineke FCG IV sources and notes"),
     )
     published = 0
     for short_id, label, source_label in volumes:
@@ -848,10 +873,16 @@ def _append_fragment_version(
             "WHERE s.version_short_id LIKE 'kock%-grc1' "
             "ORDER BY s.version_short_id, g.sort_order").fetchall()
         existing = [_fragment_from_html(*row) for row in rows]
+        # Large anonymous corpora make all-pairs fuzzy comparison quadratic
+        # and can hold a complete publication run for many minutes. Preserve
+        # defensible exact-text matches, but keep every other citation
+        # edition-specific rather than guessing across a huge candidate set.
+        fuzzy = len(fragments) * len(existing) <= 50_000
         for current, prior, _, _ in align_sophocles_fragments(
-                fragments, existing):
+                fragments, existing, fuzzy=fuzzy):
             matched[id(current)] = prior
-        matched.update(_align_context_only(fragments, existing, matched))
+        if fuzzy:
+            matched.update(_align_context_only(fragments, existing, matched))
 
     assignments = []
     occupied = {row[0] for row in conn.execute(
@@ -993,7 +1024,7 @@ def publish(site_root=None):
           f"({sophocles_fragments} Sophocles, {euripides_fragments} Euripides, "
           f"{aristophanes_fragments} Aristophanes), "
           f"{kock_fragments} Kock CAF I–III work editions, "
-          f"{meineke_fragments} Meineke FCG II–III work editions, "
+          f"{meineke_fragments} Meineke FCG II–IV work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,

@@ -243,7 +243,7 @@ def build(sources):
         "corpus_title": "Fragments", "source_label": "Pearson's notes and apparatus",
         "source_sha256": digest,
         "versions": [{"short_id": VERSION, "edition_urn": EDITION_URN,
-                      "label": "Greek with commentary (A. C. Pearson, 1917) (OCR draft)",
+                      "label": "Greek with commentary (A. C. Pearson, 1917, vols. I–III) (OCR draft)",
                       "source": [p.name for p in paths]}],
         "fragments": fragments, "works": works, "attributions": attributions,
         "collections": [{"id": "sophocles-fragments", "title": "Fragments",

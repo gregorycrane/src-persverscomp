@@ -31,7 +31,7 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
     sophocles = {k: v for k, v in rebuilt["works"].items()
                  if v.get("fragmentary") and v.get("textgroup") == "tlg0011"}
     assert result == {"fragment_works": 75, "kock_works": 1328,
-                      "meineke_works": 770, "fragment_authors": 55,
+                      "meineke_works": 1129, "fragment_authors": 55,
                       "claudel_versions": 3}
     assert len(fragments) == 75
     assert len(sophocles) == 118
@@ -90,6 +90,10 @@ def test_publish_recovers_fragments_and_claudel(tmp_path):
             rebuilt["works"]["tlg0402.agkylion"]["versions"]] == [
         "meineke1840-grc1", "kock1884-grc1"
     ]
+    assert "meineke1841-grc1" in {
+        version["short_id"]
+        for version in rebuilt["works"]["tlg0487.agroikos"]["versions"]
+    }
     with sqlite3.connect(
             site / "data/tlg0414/kretes/tlg0414.kretes.part1.db") as conn:
         aligned = conn.execute(

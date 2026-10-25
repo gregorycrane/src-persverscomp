@@ -8,11 +8,17 @@ import json
 import os
 from pathlib import Path
 import xml.etree.ElementTree as ET
+from typing import Optional
 
 
 TEI = "http://www.tei-c.org/ns/1.0"
 CTS = "http://chs.harvard.edu/xmlns/cts"
 NS = {"tei": TEI, "cts": CTS}
+
+ROMAN_VOLUMES = {
+    "1": "I", "i": "I", "2": "II", "ii": "II",
+    "3": "III", "iii": "III", "4": "IV", "iv": "IV",
+}
 
 
 def edition_label(metadata: Path, urn: str, fallback: str) -> str:
@@ -21,6 +27,31 @@ def edition_label(metadata: Path, urn: str, fallback: str) -> str:
         if edition.get("urn") == urn:
             return edition.findtext("cts:label", default=fallback, namespaces=NS)
     return fallback
+
+
+def source_volume(source: Path) -> Optional[str]:
+    root = ET.parse(source).getroot()
+    scope = root.find(".//tei:biblScope[@unit='volume']", NS)
+    if scope is None or not (scope.text or "").strip():
+        return None
+    value = (scope.text or "").strip().lower().rstrip(".")
+    if value.startswith("vol."):
+        value = value[4:].strip()
+    elif value.startswith("vol"):
+        value = value[3:].strip()
+    return ROMAN_VOLUMES.get(value, value.upper())
+
+
+def label_with_volume(label: str, volume: Optional[str]) -> str:
+    if not volume or "vol." in label.lower() or "vols." in label.lower():
+        return label
+    marker = "; OCR draft)"
+    if marker in label:
+        return label.replace(marker, f", vol. {volume}{marker}", 1)
+    closing = label.find(")")
+    if closing >= 0:
+        return f"{label[:closing]}, vol. {volume}{label[closing:]}"
+    return f"{label} — vol. {volume}"
 
 
 def sync(registry_path: Path, data_dir: Path, version: str, default_label: str) -> int:
@@ -59,9 +90,12 @@ def sync(registry_path: Path, data_dir: Path, version: str, default_label: str) 
             "object_urn": object_urn, "source_title": title,
             "source_edition": "multiple-fragment-editions",
         })
+        volume = source_volume(source)
+        label = label_with_volume(
+            edition_label(source.parent / "__cts__.xml", urn, default_label), volume)
         record.setdefault("fragment_editions", {})[version] = {
             "path": str(source.resolve()), "urn": urn,
-            "label": edition_label(source.parent / "__cts__.xml", urn, default_label),
+            "label": label, "source_volume": volume,
             "class": "greek-text", "format": "tei_fragment_work",
             "corresp_axis": "fragment",
         }
