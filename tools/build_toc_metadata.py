@@ -61,6 +61,30 @@ COLLECTION_METADATA = {
         "collection_label": "Kock, vol. 1",
         "collection_volume": 1,
     },
+    "meineke1839": {
+        "collection_year": 1839,
+        "collection_order": 2,
+        "source_edition_year": 1839,
+        "source_edition_statement": "vol. 2, 1839",
+        "collection_label": "Meineke, vol. 2",
+        "collection_volume": 2,
+    },
+    "meineke1840": {
+        "collection_year": 1840,
+        "collection_order": 2,
+        "source_edition_year": 1840,
+        "source_edition_statement": "vol. 3, 1840",
+        "collection_label": "Meineke, vol. 3",
+        "collection_volume": 3,
+    },
+    "meineke1841": {
+        "collection_year": 1841,
+        "collection_order": 2,
+        "source_edition_year": 1841,
+        "source_edition_statement": "vol. 4, 1841",
+        "collection_label": "Meineke, vol. 4",
+        "collection_volume": 4,
+    },
     "pearson": {
         "collection_year": 1917,
         "collection_order": 4,
@@ -170,6 +194,7 @@ def edition_name(short_id: str, label: str = "") -> str:
         "nauck": "Nauck",
         "pearson": "Pearson",
         "kock": "Kock",
+        "meineke": "Meineke",
         "jebb": "Jebb",
     }
     lowered = short_id.lower()
@@ -353,6 +378,40 @@ def complete_work_metadata(site: Path, catalog: dict) -> tuple[dict, dict]:
     return works, surviving_by_author
 
 
+def add_author_word_totals(authors: dict, complete_works: dict) -> dict:
+    """Attach transparent author totals to the TOC metadata.
+
+    For authors with fragment collections, the total is the sum of words in
+    surviving plays plus the single fragmentary edition with the greatest
+    word count.  Alternative fragment editions are reported separately and
+    are never added together.  Fragmentary dramatic works such as Ichneutae
+    are deliberately excluded from the surviving-play subtotal.
+    """
+    for textgroup, author in authors.items():
+        surviving_words = sum(
+            work.get("word_count", 0)
+            for work_key, work in complete_works.items()
+            if work_key.startswith(textgroup + ".")
+            and work.get("surviving_play")
+        )
+        author["surviving_word_count"] = surviving_words
+
+        editions = author.get("editions", [])
+        counted = max(
+            editions,
+            key=lambda edition: edition.get("word_count", 0),
+            default=None,
+        )
+        fragment_words = counted.get("word_count", 0) if counted else 0
+        author["counted_fragment_word_count"] = fragment_words
+        if counted:
+            author["counted_fragment_edition"] = (
+                counted.get("collection_label") or counted.get("edition")
+            )
+        author["total_word_count"] = surviving_words + fragment_words
+    return authors
+
+
 def _catalog_fragment_version(site: Path, work: dict, version: dict) -> dict:
     """Count one fragment edition from its published work databases."""
     short_id = version.get("short_id", "")
@@ -504,12 +563,15 @@ def build(site: Path, output: Optional[Path] = None) -> dict:
                 "editions": [],
             },
         )["surviving_play_count"] = count
+    authors = add_author_word_totals(authors, complete_works)
     payload = {
-        "schema_version": 1,
+        "schema_version": 2,
         "counting_note": (
             "Complete-work counts use the first available text version, preferring source-edition treebank "
             "tokens with punctuation excluded. Fragment counts include quoted authorial text only; "
-            "transmitting sources, notes, and punctuation-only tokens are excluded."
+            "transmitting sources, notes, and punctuation-only tokens are excluded. Author totals add "
+            "surviving-play words to the largest fragmentary edition; alternative fragment editions are "
+            "listed separately and are not added together."
         ),
         "authors": authors,
         "works": {**complete_works, **fragment_works},

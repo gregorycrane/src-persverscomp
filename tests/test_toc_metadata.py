@@ -1,9 +1,41 @@
 from tools.build_toc_metadata import (
+    add_author_word_totals,
     collection_metadata,
     count_fragment_html,
     edition_name,
     merge_catalog_fragments,
 )
+
+
+def test_author_total_uses_surviving_plays_and_largest_fragment_edition():
+    authors = {
+        "tlg0011": {
+            "editions": [
+                {"edition": "Dindorf", "word_count": 5365},
+                {"edition": "Nauck", "word_count": 6534},
+                {"edition": "Pearson", "word_count": 8513},
+            ]
+        }
+    }
+    complete_works = {
+        "tlg0011.tlg001": {
+            "surviving_play": True,
+            "word_count": 120654,
+        },
+        # A fragmentary dramatic work represented in the normal work catalog
+        # must not be folded into the surviving-play subtotal.
+        "tlg0011.tlg008": {
+            "surviving_play": False,
+            "word_count": 1914,
+        },
+    }
+
+    result = add_author_word_totals(authors, complete_works)["tlg0011"]
+
+    assert result["surviving_word_count"] == 120654
+    assert result["counted_fragment_edition"] == "Pearson"
+    assert result["counted_fragment_word_count"] == 8513
+    assert result["total_word_count"] == 129167
 
 
 def test_kock_volume_one_collection_label():
@@ -25,6 +57,19 @@ def test_kock_volume_three_collection_label():
     metadata = collection_metadata("kock1888-grc1")
     assert metadata["collection_label"] == "Kock, vol. 3"
     assert metadata["source_edition_year"] == 1888
+
+
+def test_meineke_volume_collection_labels():
+    expected = {
+        "meineke1839-grc1": ("Meineke, vol. 2", 1839),
+        "meineke1840-grc1": ("Meineke, vol. 3", 1840),
+        "meineke1841-grc1": ("Meineke, vol. 4", 1841),
+    }
+    for short_id, (label, year) in expected.items():
+        assert edition_name(short_id) == "Meineke"
+        metadata = collection_metadata(short_id)
+        assert metadata["collection_label"] == label
+        assert metadata["source_edition_year"] == year
 
 
 def test_fragment_word_count_excludes_transmitting_context():

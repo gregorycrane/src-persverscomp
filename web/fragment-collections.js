@@ -109,17 +109,19 @@ window.PMVFragmentCollections = (() => {
     if(!stats)return '';
     const surviving=stats.surviving_play_count||0, plays=stats.fragmentary_play_count||0;
     const bits=[];
-    if(surviving)bits.push(`${surviving.toLocaleString()} surviving play${surviving===1?'':'s'}`);
+    const wordTotal=authorWordTotal(name,catalog);
+    if(surviving)bits.push(`${surviving.toLocaleString()} surviving play${surviving===1?'':'s'}${wordTotal?`: ${wordTotal.completeWords.toLocaleString()} words`:''}`);
     if((stats.editions||[]).length===1) {
       const edition=stats.editions[0], fragments=edition.fragment_count||0;
       if(plays)bits.push(`${plays.toLocaleString()} ${fragments?'play':'fragmentary work'}${plays===1?'':'s'}`);
-      if(fragments)bits.push(`${fragments.toLocaleString()} fragment${fragments===1?'':'s'}`);
-      bits.push(edition.collection_label||edition.edition);
+      const source=edition.collection_label||edition.edition, words=edition.word_count||0;
+      bits.push(`${source}: ${fragments.toLocaleString()} fragment${fragments===1?'':'s'}, ${words.toLocaleString()} words`);
     } else if(plays) {
       bits.push(`${plays.toLocaleString()} fragmentary work${plays===1?'':'s'}`);
       (stats.editions||[]).forEach(edition=>{
         const source=edition.collection_label||edition.edition, fragments=edition.fragment_count||0;
-        bits.push(fragments?`${source} ${fragments.toLocaleString()} fragments`:source);
+        const words=edition.word_count||0;
+        bits.push(fragments?`${source}: ${fragments.toLocaleString()} fragment${fragments===1?'':'s'}, ${words.toLocaleString()} words`:`${source}: ${words.toLocaleString()} words`);
       });
     }
     return bits.join(' · ');
@@ -127,21 +129,25 @@ window.PMVFragmentCollections = (() => {
   function authorWordTotal(name,catalog) {
     const textgroup=Object.keys(catalog.authors||{}).find(key=>catalog.authors[key]===name);
     if(!textgroup)return null;
+    const stats=(tocMetadata.authors||{})[textgroup];
+    if(stats&&Number.isFinite(stats.total_word_count))return stats.total_word_count ? {
+      total:stats.total_word_count,
+      countedEdition:stats.counted_fragment_edition||null,
+      completeWords:stats.surviving_word_count||0,
+      fragmentWords:stats.counted_fragment_word_count||0
+    } : null;
+    const editions=(stats&&stats.editions)||[];
+    const hasFragments=editions.length>0;
     const completeWords=Object.entries(tocMetadata.works||{}).reduce((total,[workKey,work])=>
       workKey.startsWith(textgroup+'.') && work.record_type==='complete_work' && Number.isFinite(work.word_count)
-        ? total+work.word_count : total,0);
-    const stats=(tocMetadata.authors||{})[textgroup];
-    const chronological=((stats&&stats.editions)||[]).map((edition,index)=>({edition,index}));
-    // One fragment witness only: the latest scholarly collection. Do not use
-    // the date of the physical source edition here: our Dindorf text is from
-    // the eighth edition (1893), but the collection dates to 1830 and precedes
-    // Nauck. Alternative collections are never added together.
-    chronological.sort((a,b)=>(b.edition.collection_order??-1)-(a.edition.collection_order??-1)||b.index-a.index);
-    const latest=chronological.length?chronological[0].edition:null;
-    const fragmentWords=latest&&Number.isFinite(latest.word_count)?latest.word_count:0;
+        && (!hasFragments||work.surviving_play) ? total+work.word_count : total,0);
+    // One fragment witness only: use the edition containing the most quoted
+    // authorial words. Alternative editions are listed but never added.
+    const counted=editions.reduce((largest,edition)=>!largest||(edition.word_count||0)>(largest.word_count||0)?edition:largest,null);
+    const fragmentWords=counted&&Number.isFinite(counted.word_count)?counted.word_count:0;
     const total=completeWords+fragmentWords;
     if(!total)return null;
-    return {total,latestEdition:latest?latest.edition:null,completeWords,fragmentWords};
+    return {total,countedEdition:counted?(counted.collection_label||counted.edition):null,completeWords,fragmentWords};
   }
   function versionLang(shortId) {
     let found=null;
@@ -272,7 +278,9 @@ window.PMVFragmentCollections = (() => {
         const open=q || author || expanded[name];
         const collectionSummary=authorCollectionSummary(name,catalog);
         const wordTotal=authorWordTotal(name,catalog);
-        const wordSummary=wordTotal?`<span class="fc-author-word-total" title="One counted edition per complete work plus the latest fragment collection in scholarly chronology${wordTotal.latestEdition?' ('+escape(wordTotal.latestEdition)+')':''}">— ${wordTotal.total.toLocaleString()} words</span>`:'';
+        const totalBasis=wordTotal&&wordTotal.countedEdition?(wordTotal.completeWords?'surviving plays + ':'')+escape(wordTotal.countedEdition):'';
+        const totalTitle=wordTotal&&wordTotal.completeWords?'Surviving plays plus the fragmentary edition with the most words':'Fragmentary edition with the most words';
+        const wordSummary=wordTotal?`<span class="fc-author-word-total" title="${totalTitle}${wordTotal.countedEdition?' ('+escape(wordTotal.countedEdition)+')':''}">— ${wordTotal.total.toLocaleString()} words${totalBasis?' ('+totalBasis+')':''}</span>`:'';
         const authorSummary=collectionSummary?`<small class="fc-author-fragments">${escape(collectionSummary)}</small>`:'';
         const surviving=items.filter(w=>tocForWork(w)&&tocForWork(w).surviving_play);
         const fragmentary=items.filter(w=>tocForWork(w)&&tocForWork(w).record_type==='fragmentary_play');
