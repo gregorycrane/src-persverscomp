@@ -261,7 +261,16 @@ window.PMVFragmentCollections = (() => {
     const greekCollections=(language==='greek'||genre) ? `<nav class="fc-subcollections" aria-label="Greek collections"><a href="${escape(href({language:'greek'}))}">All Greek</a><a href="${escape(href({language:'greek',genre:'tragedy'}))}">Tragedy</a><a href="${escape(href({language:'greek',genre:'greek-drama'}))}">Greek drama</a><a href="${escape(href({language:'greek',genre:'hexameter'}))}">Hexametrical poetry</a><a href="${escape(href({language:'greek',genre:'history'}))}">History</a></nav>` : '';
     const description=genre==='tragedy' ? 'Currently cataloged surviving tragedies of Aeschylus, Sophocles and Euripides. Fragmentary works await genre review; satyr plays are excluded.' : genre==='greek-drama' ? 'Surviving tragedy, satyr drama and comedy, together with fragmentary Aeschylean, Sophoclean, Euripidean, and Aristophanic work records in this trial.' : genre==='history' ? 'Thucydides is the historical work currently available.' : '';
     const breadcrumb=language ? languageNames[language] : genre ? 'Greek' : '';
-    root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({home:'languages'}))}">Language collections</a>${breadcrumb?' / '+escape(breadcrumb):''}</nav><h1>${escape(title)}</h1>${greekCollections}${authorScope}${description?`<p>${escape(description)}</p>`:''}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
+    const authorTraits=new Map();
+    works.forEach(w=>{
+      const traits=authorTraits.get(w.author)||{surviving:false,fragmentary:false};
+      const toc=tocForWork(w);
+      traits.surviving ||= Boolean(toc&&(toc.surviving_play||toc.record_type==='complete_work'));
+      traits.fragmentary ||= Boolean((toc&&toc.record_type==='fragmentary_play')||w.experimental_fragment);
+      authorTraits.set(w.author,traits);
+    });
+    const authorToggle=!author&&[...authorTraits.values()].some(traits=>traits.fragmentary) ? `<fieldset class="fc-author-toggle"><legend>Show authors</legend><label><input type="radio" name="fc-author-type" value="all" checked><span>All authors</span></label><label><input type="radio" name="fc-author-type" value="surviving"><span>Authors with surviving works</span></label><label><input type="radio" name="fc-author-type" value="fragmentary"><span>Fragmentary authors</span></label></fieldset>` : '';
+    root.innerHTML=`<main class="fc-page"><nav><a href="${escape(href({home:'languages'}))}">Language collections</a>${breadcrumb?' / '+escape(breadcrumb):''}</nav><h1>${escape(title)}</h1>${greekCollections}${authorScope}${description?`<p>${escape(description)}</p>`:''}${authorToggle}<label class="fc-library-filter">Find a work or author<input id="fc-library-filter" type="search" placeholder="Title or author"></label><p id="fc-library-count" aria-live="polite"></p><div id="fc-library-results"></div></main>`;
     const input=root.querySelector('#fc-library-filter');
     let expanded={};
     // Global All works is a reset point: it starts with no author privileged.
@@ -269,10 +278,11 @@ window.PMVFragmentCollections = (() => {
     if(!params.has('browse')) try {expanded=JSON.parse(sessionStorage.getItem('pmv-author-groups')||'{}');} catch(e) {}
     const draw=()=>{
       const q=normalize(input.value.trim());
-      const matches=works.filter(w=>normalize(w.title+' '+w.author+' '+(w.source_title||'')+' '+fragmentSearchText(w)).includes(q));
+      const authorType=root.querySelector('input[name="fc-author-type"]:checked')?.value||'all';
+      const matches=works.filter(w=>(authorType==='all'||authorTraits.get(w.author)?.[authorType])&&normalize(w.title+' '+w.author+' '+(w.source_title||'')+' '+fragmentSearchText(w)).includes(q));
       const groups=new Map();
       matches.forEach(w=>{if(!groups.has(w.author))groups.set(w.author,[]);groups.get(w.author).push(w);});
-      root.querySelector('#fc-library-count').textContent=matches.length+(matches.length===1?' work':' works');
+      root.querySelector('#fc-library-count').textContent=groups.size+(groups.size===1?' author':' authors')+' · '+matches.length+(matches.length===1?' work':' works');
       const results=root.querySelector('#fc-library-results');
       results.innerHTML=[...groups].map(([name,items])=>{
         const open=q || author || expanded[name];
@@ -301,7 +311,9 @@ window.PMVFragmentCollections = (() => {
       const targetId=decodeURIComponent(location.hash.slice(1));
       if(targetId) requestAnimationFrame(()=>document.getElementById(targetId)?.scrollIntoView({block:'center'}));
     };
-    input.addEventListener('input',draw);draw();
+    input.addEventListener('input',draw);
+    root.querySelectorAll('input[name="fc-author-type"]').forEach(control=>control.addEventListener('change',draw));
+    draw();
   }
   async function attach(catalog) {
     if (!enabled) return;
