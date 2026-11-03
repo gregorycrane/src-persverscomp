@@ -4462,7 +4462,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             h += `<span class="tb-dk">Translit</span><span class="tb-dv" dir="ltr" style="font-style:italic">${escHtml(tok.translit)}</span>`;
         if (tok.gloss)
             h += `<span class="tb-dk">Gloss</span><span class="tb-dv tb-gloss">${tbSearchLink(tok.gloss, 'gloss', escHtml(tok.gloss))}</span>`;
-        if (tok.lemma && tok.lemma !== '_' && tok.lemma !== tok.form)
+        if (tok.lemma && tok.lemma !== '_')
             h += `<span class="tb-dk">Lemma</span><span class="tb-dv tb-greek">${tbSearchLink(tok.lemma, 'lemma', escHtml(tok.lemma))}${tok.ltranslit ? ' <span dir="ltr" style="font-style:italic;color:#888;font-size:11px">'+escHtml(tok.ltranslit)+'</span>' : ''}</span>`;
         if (tok.upos && tok.upos !== '_')
             h += `<span class="tb-dk">Part of Speech</span><span class="tb-dv"><span class="tb-pos-chip" style="color:${pc};border-color:${pc}40">${escHtml(tok.upos)}</span>${tok.xpos && tok.xpos !== '_' && tok.xpos !== tok.upos ? ' <span class="tb-xpos">'+escHtml(tok.xpos)+'</span>' : ''}</span>`;
