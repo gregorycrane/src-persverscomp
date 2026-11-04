@@ -505,7 +505,12 @@
             margin-top: 0.75em; 
         }
         .poetry-grid-layout { display: grid !important; grid-template-columns: 45px 1fr; row-gap: 4px; align-items: start; width: 100%; white-space: normal; }
-        .poetry-grid-layout p { grid-column: 1 / -1; margin: 0.15em 0; line-height: 1.5; }
+        .poetry-grid-layout p,
+        .poetry-grid-layout .prose-para {
+            grid-column: 1 / -1;
+            margin: 0.15em 0;
+            line-height: 1.5;
+        }
         .poetry-grid-layout .line-num-cell { grid-column: 1; text-align: right; padding-right: 12px; font-size: 11px; color: #999; font-weight: bold; font-family: monospace; line-height: 1.7; user-select: none; display: block !important; }
         .poetry-grid-layout .line-text-cell { grid-column: 2; line-height: 1.7; display: block !important; white-space: normal; }
         

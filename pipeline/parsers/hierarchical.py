@@ -45,8 +45,8 @@ def parse_hierarchical_tei(path, include_nonparagraph_blocks=False,
         base_val = node.get('xml:base') or node.get('{http://www.w3.org/XML/1998/namespace}base')
         
         key_map_so_far = {t: v for t, v in current_path}
-        if tag == 'div' and subtype in ('book', 'chapter', 'section', 'subchapter', 'part', 'textpart') and n_val:
-            if subtype in ('part', 'textpart') and n_val.isdigit():
+        if tag == 'div' and subtype in ('book', 'chapter', 'section', 'subchapter', 'part', 'textpart', 'page') and n_val:
+            if subtype in ('part', 'textpart', 'page') and n_val.isdigit():
                 resolved_subtype = 'chapter'
             elif subtype == 'subchapter':
                 resolved_subtype = 'section'
@@ -129,7 +129,7 @@ def parse_hierarchical_tei(path, include_nonparagraph_blocks=False,
             # rather than p. Preserve their document order and contents.
             paragraphs = [child for child in node
                           if isinstance(child.tag, str) and child.tag.split('}')[-1]
-                          in ('p', 'l', 'lg', 'quote', 'ab')]
+                          in ('head', 'p', 'l', 'lg', 'quote', 'ab', 'note')]
         if paragraphs and new_path:
             key_map = {t: v for t, v in new_path}
             bk = key_map.get('book', '1')

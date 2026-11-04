@@ -210,6 +210,13 @@ def split_corpus_by_work(monolith_path, out_root, only_work_keys=None):
         "tlg0086": "Aristotle",
         "tlg2045": "Nonnus",
     }
+
+    # Corpus extensions may carry their canonical author label in the work
+    # registry.  Merge those labels into the catalog instead of requiring a
+    # second, manually synchronized hard-coded author table here.
+    for meta in WORK_REGISTRY.values():
+        if meta.get("textgroup") and meta.get("author"):
+            AUTHOR_NAMES[meta["textgroup"]] = meta["author"]
     WORK_TITLES = {
         "phi1348.abo011": "Julius Caesar",
         "phi1348.abo012": "Augustus",

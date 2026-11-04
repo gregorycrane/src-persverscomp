@@ -65795,5 +65795,1658 @@
     "object_urn": "urn:cite2:perseus:fragmentaryplays.v1:tlg0541_sententiae",
     "source_title": "SENTENTIAE",
     "source_edition": "multiple-fragment-editions"
+  },
+  "tlg1705.dk001": {
+    "textgroup": "tlg1705",
+    "work": "dk001",
+    "author": "Thales",
+    "title": "1. THALES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1705/dk001/tlg1705.dk001.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0725.dk002": {
+    "textgroup": "tlg0725",
+    "work": "dk002",
+    "author": "Anaximander",
+    "title": "2. ΑΝΑΞΙΜΑΝΔΡΟΣ.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0725/dk002/tlg0725.dk002.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0617.dk003": {
+    "textgroup": "tlg0617",
+    "work": "dk003",
+    "author": "Anaximenes",
+    "title": "3. ANAXIMENES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0617/dk003/tlg0617.dk003.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0632.dk004": {
+    "textgroup": "tlg0632",
+    "work": "dk004",
+    "author": "Pythagoras",
+    "title": "4. PYTHAGORAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0632/dk004/tlg0632.dk004.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2286.dk005": {
+    "textgroup": "tlg2286",
+    "work": "dk005",
+    "author": "Cercops",
+    "title": "5. KERKOPS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2286/dk005/tlg2286.dk005.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2247.dk006": {
+    "textgroup": "tlg2247",
+    "work": "dk006",
+    "author": "Petron",
+    "title": "6. PETRON.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2247/dk006/tlg2247.dk006.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1230.dk007": {
+    "textgroup": "tlg1230",
+    "work": "dk007",
+    "author": "Brotinus",
+    "title": "7. BROTINOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1230/dk007/tlg1230.dk007.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2260.dk008": {
+    "textgroup": "tlg2260",
+    "work": "dk008",
+    "author": "Hippasus",
+    "title": "8. HIPPASOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2260/dk008/tlg2260.dk008.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2218.dk009": {
+    "textgroup": "tlg2218",
+    "work": "dk009",
+    "author": "Calliphon et Democedes",
+    "title": "9. KALLIPHON UND DEMOKEDES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2218/dk009/tlg2218.dk009.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2225.dk010": {
+    "textgroup": "tlg2225",
+    "work": "dk010",
+    "author": "Parm(en)iscus",
+    "title": "10. PARMISKOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2225/dk010/tlg2225.dk010.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0267.dk011": {
+    "textgroup": "tlg0267",
+    "work": "dk011",
+    "author": "Xenophanes",
+    "title": "11. XENOPHANES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0267/dk011/tlg0267.dk011.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0626.dk012": {
+    "textgroup": "tlg0626",
+    "work": "dk012",
+    "author": "Heraclitus",
+    "title": "12. HERAKLEITOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0626/dk012/tlg0626.dk012.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0521.dk013": {
+    "textgroup": "tlg0521",
+    "work": "dk013",
+    "author": "Epicharmus et Pseudoepicharmea",
+    "title": "13. EPICHARMOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0521/dk013/tlg0521.dk013.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0766.dk014": {
+    "textgroup": "tlg0766",
+    "work": "dk014",
+    "author": "Alcmaeon",
+    "title": "14. ALKMAION.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0766/dk014/tlg0766.dk014.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2226.dk015": {
+    "textgroup": "tlg2226",
+    "work": "dk015",
+    "author": "Iccus",
+    "title": "15. IKKOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2226/dk015/tlg2226.dk015.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2227.dk016": {
+    "textgroup": "tlg2227",
+    "work": "dk016",
+    "author": "Paron",
+    "title": "16. PARON.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2227/dk016/tlg2227.dk016.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1562.dk017": {
+    "textgroup": "tlg1562",
+    "work": "dk017",
+    "author": "Parmenides",
+    "title": "17. AMEINIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1562/dk017/tlg1562.dk017.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1562.dk018": {
+    "textgroup": "tlg1562",
+    "work": "dk018",
+    "author": "Parmenides",
+    "title": "18. PARMENIDES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1562/dk018/tlg1562.dk018.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0595.dk019": {
+    "textgroup": "tlg0595",
+    "work": "dk019",
+    "author": "Zeno",
+    "title": "19. ZENON.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0595/dk019/tlg0595.dk019.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1494.dk020": {
+    "textgroup": "tlg1494",
+    "work": "dk020",
+    "author": "Melissus",
+    "title": "20. MELISSOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1494/dk020/tlg1494.dk020.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1342.dk021": {
+    "textgroup": "tlg1342",
+    "work": "dk021",
+    "author": "Empedocles",
+    "title": "21. EMPEDOKLES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1342/dk021/tlg1342.dk021.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2228.dk022": {
+    "textgroup": "tlg2228",
+    "work": "dk022",
+    "author": "Menestor",
+    "title": "22. MENESTOR.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2228/dk022/tlg2228.dk022.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2229.dk023": {
+    "textgroup": "tlg2229",
+    "work": "dk023",
+    "author": "Xuthus",
+    "title": "23. XUTHOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2229/dk023/tlg2229.dk023.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2230.dk024": {
+    "textgroup": "tlg2230",
+    "work": "dk024",
+    "author": "Boidas",
+    "title": "24. BOÏDAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2230/dk024/tlg2230.dk024.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0308.dk025": {
+    "textgroup": "tlg0308",
+    "work": "dk025",
+    "author": "Ion",
+    "title": "25. ION VON CHIOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0308/dk025/tlg0308.dk025.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1437.dk026": {
+    "textgroup": "tlg1437",
+    "work": "dk026",
+    "author": "Hippon",
+    "title": "26. HIPPON.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1437/dk026/tlg1437.dk026.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1436.dk027": {
+    "textgroup": "tlg1436",
+    "work": "dk027",
+    "author": "Hippodamus",
+    "title": "27. PHALEAS UND HIPPODAMOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1436/dk027/tlg1436.dk027.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1625.dk028": {
+    "textgroup": "tlg1625",
+    "work": "dk028",
+    "author": "Polyclitus",
+    "title": "28. POLYKLEITOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1625/dk028/tlg1625.dk028.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2234.dk029": {
+    "textgroup": "tlg2234",
+    "work": "dk029",
+    "author": "Oenopides",
+    "title": "29. OINOPIDES. 1—10.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2234/dk029/tlg2234.dk029.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2235.dk030": {
+    "textgroup": "tlg2235",
+    "work": "dk030",
+    "author": "Hippocrates",
+    "title": "30. HIPPOKRATES VON CHIOS. AISCHYLOS. 1—5.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2235/dk030/tlg2235.dk030.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2237.dk031": {
+    "textgroup": "tlg2237",
+    "work": "dk031",
+    "author": "Theodorus",
+    "title": "31. THEODOROS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2237/dk031/tlg2237.dk031.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1596.dk032": {
+    "textgroup": "tlg1596",
+    "work": "dk032",
+    "author": "Philolaus",
+    "title": "32. PHILOLAOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1596/dk032/tlg1596.dk032.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1362.dk033": {
+    "textgroup": "tlg1362",
+    "work": "dk033",
+    "author": "Eurytus",
+    "title": "33. EYRYTOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1362/dk033/tlg1362.dk033.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0633.dk034": {
+    "textgroup": "tlg0633",
+    "work": "dk034",
+    "author": "Lysis",
+    "title": "34. ARCHIPPOS. LYSIS. OPSIMOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0633/dk034/tlg0633.dk034.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0620.dk035": {
+    "textgroup": "tlg0620",
+    "work": "dk035",
+    "author": "Archytas",
+    "title": "35. ARCHYTAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0620/dk035/tlg0620.dk035.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1545.dk035a": {
+    "textgroup": "tlg1545",
+    "work": "dk035a",
+    "author": "Ocellus",
+    "title": "35a. OKKELOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1545/dk035a/tlg1545.dk035a.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1734.dk036": {
+    "textgroup": "tlg1734",
+    "work": "dk036",
+    "author": "Timaeus",
+    "title": "36. TIMAIOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1734/dk036/tlg1734.dk036.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2240.dk037": {
+    "textgroup": "tlg2240",
+    "work": "dk037",
+    "author": "Hicetas",
+    "title": "37. HIKETAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2240/dk037/tlg2240.dk037.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1341.dk038": {
+    "textgroup": "tlg1341",
+    "work": "dk038",
+    "author": "Ecphantus",
+    "title": "38. EKPHANTOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1341/dk038/tlg1341.dk038.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2241.dk039": {
+    "textgroup": "tlg2241",
+    "work": "dk039",
+    "author": "Xenophilus",
+    "title": "39. XENOPHILOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2241/dk039/tlg2241.dk039.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2242.dk040": {
+    "textgroup": "tlg2242",
+    "work": "dk040",
+    "author": "Echecrates",
+    "title": "40. DIOKLES. ECHEKRATES. POLYMNASTOS. PHANTON. ARION.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2242/dk040/tlg2242.dk040.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1277.dk041": {
+    "textgroup": "tlg1277",
+    "work": "dk041",
+    "author": "Clinias",
+    "title": "41. PROROS. AMYKLAS. KLEINIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1277/dk041/tlg1277.dk041.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2244.dk042": {
+    "textgroup": "tlg2244",
+    "work": "dk042",
+    "author": "Damon et Phintias",
+    "title": "42. DAMON UND PHINTIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2244/dk042/tlg2244.dk042.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2245.dk043": {
+    "textgroup": "tlg2245",
+    "work": "dk043",
+    "author": "Simus",
+    "title": "43. SIMOS. MYONIDES. EYPHRANOR.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2245/dk043/tlg2245.dk043.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2246.dk044": {
+    "textgroup": "tlg2246",
+    "work": "dk044",
+    "author": "Lycon",
+    "title": "44. LYKON (LYKOS).",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2246/dk044/tlg2246.dk044.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2239.dk045": {
+    "textgroup": "tlg2239",
+    "work": "dk045",
+    "author": "Pythagoristae (D-K)",
+    "title": "45. PYTHAGOREISCHE SCHULE.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2239/dk045/tlg2239.dk045.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0713.dk046": {
+    "textgroup": "tlg0713",
+    "work": "dk046",
+    "author": "Anaxagoras",
+    "title": "46. ANAXAGORAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0713/dk046/tlg0713.dk046.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2303.dk047": {
+    "textgroup": "tlg2303",
+    "work": "dk047",
+    "author": "Archelaus",
+    "title": "47. ARCHELAOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2303/dk047/tlg2303.dk047.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1811.dk048": {
+    "textgroup": "tlg1811",
+    "work": "dk048",
+    "author": "Metrodorus Major",
+    "title": "48. METRODORUS VON LAMPSAKOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1811/dk048/tlg1811.dk048.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2305.dk049": {
+    "textgroup": "tlg2305",
+    "work": "dk049",
+    "author": "Clidemus",
+    "title": "49. KLEIDEMOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2305/dk049/tlg2305.dk049.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2304.dk050": {
+    "textgroup": "tlg2304",
+    "work": "dk050",
+    "author": "Idaeus",
+    "title": "50. IDAIOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2304/dk050/tlg2304.dk050.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1319.dk051": {
+    "textgroup": "tlg1319",
+    "work": "dk051",
+    "author": "Diogenes",
+    "title": "51. DIOGENES VON APOLLONIA.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1319/dk051/tlg1319.dk051.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2291.dk052": {
+    "textgroup": "tlg2291",
+    "work": "dk052",
+    "author": "Cratylus",
+    "title": "52. KRATYLOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2291/dk052/tlg2291.dk052.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2313.dk053": {
+    "textgroup": "tlg2313",
+    "work": "dk053",
+    "author": "Antisthenes",
+    "title": "53. ANTISTHENES DER HERAKLITEER.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1912-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2313/dk053/tlg2313.dk053.diels1912-grc1.xml",
+        "label": "Greek and source context (Diels, 1912; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1461.dk054": {
+    "textgroup": "tlg1461",
+    "work": "dk054",
+    "author": "Leucippus",
+    "title": "54. LEUKIPPOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1461/dk054/tlg1461.dk054.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1304.dk055": {
+    "textgroup": "tlg1304",
+    "work": "dk055",
+    "author": "Democritus",
+    "title": "55. DEMOKRITOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1304/dk055/tlg1304.dk055.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2456.dk056": {
+    "textgroup": "tlg2456",
+    "work": "dk056",
+    "author": "Nessas",
+    "title": "56. NESSAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2456/dk056/tlg2456.dk056.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1508.dk057": {
+    "textgroup": "tlg1508",
+    "work": "dk057",
+    "author": "Metrodorus",
+    "title": "57. METRODOROS VON CHIOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1508/dk057/tlg1508.dk057.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2314.dk058": {
+    "textgroup": "tlg2314",
+    "work": "dk058",
+    "author": "Diogenes",
+    "title": "58. DIOGENES VON SMYRNA.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2314/dk058/tlg2314.dk058.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0714.dk059": {
+    "textgroup": "tlg0714",
+    "work": "dk059",
+    "author": "Anaxarchus",
+    "title": "59. ANAXARCHOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0714/dk059/tlg0714.dk059.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1390.dk060": {
+    "textgroup": "tlg1390",
+    "work": "dk060",
+    "author": "Hecataeus",
+    "title": "60. HEKATAIOS VON ABDERA.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1390/dk060/tlg1390.dk060.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2319.dk061": {
+    "textgroup": "tlg2319",
+    "work": "dk061",
+    "author": "Apollodorus",
+    "title": "61. APOLLODOROS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2319/dk061/tlg2319.dk061.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2334.dk062": {
+    "textgroup": "tlg2334",
+    "work": "dk062",
+    "author": "Nausiphanes",
+    "title": "62. NAUSIPHANES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2334/dk062/tlg2334.dk062.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2340.dk063": {
+    "textgroup": "tlg2340",
+    "work": "dk063",
+    "author": "Diotimus",
+    "title": "63. DIOTIMOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2340/dk063/tlg2340.dk063.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2153.dk064": {
+    "textgroup": "tlg2153",
+    "work": "dk064",
+    "author": "Bion",
+    "title": "64. BION VON ABDERA.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2153/dk064/tlg2153.dk064.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1306.dk065": {
+    "textgroup": "tlg1306",
+    "work": "dk065",
+    "author": "Bolus",
+    "title": "65. BOLOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1306/dk065/tlg1306.dk065.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0579.dk066": {
+    "textgroup": "tlg0579",
+    "work": "dk066",
+    "author": "Orphica",
+    "title": "66. ORPHEUS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0579/dk066/tlg0579.dk066.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2691.dk067": {
+    "textgroup": "tlg2691",
+    "work": "dk067",
+    "author": "Musaeus",
+    "title": "67. MUSAIOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2691/dk067/tlg2691.dk067.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1347.dk068": {
+    "textgroup": "tlg1347",
+    "work": "dk068",
+    "author": "Epimenides",
+    "title": "68. EPIMENIDES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1347/dk068/tlg1347.dk068.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0020.dk068a": {
+    "textgroup": "tlg0020",
+    "work": "dk068a",
+    "author": "Hesiodus",
+    "title": "68a. HESIODOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0020/dk068a/tlg0020.dk068a.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2272.dk069": {
+    "textgroup": "tlg2272",
+    "work": "dk069",
+    "author": "Phocus",
+    "title": "69. PHOKOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2272/dk069/tlg2272.dk069.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1275.dk070": {
+    "textgroup": "tlg1275",
+    "work": "dk070",
+    "author": "Cleostratus",
+    "title": "70. KLEOSTRATOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1275/dk070/tlg1275.dk070.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0630.dk071": {
+    "textgroup": "tlg0630",
+    "work": "dk071",
+    "author": "Pherecydes",
+    "title": "71. PHEREKYDES VON SYROS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0630/dk071/tlg0630.dk071.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2275.dk072": {
+    "textgroup": "tlg2275",
+    "work": "dk072",
+    "author": "Theagenes",
+    "title": "72. THEAGENES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2275/dk072/tlg2275.dk072.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0392.dk073": {
+    "textgroup": "tlg0392",
+    "work": "dk073",
+    "author": "Acusilaus",
+    "title": "73. AKUSILAOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0392/dk073/tlg0392.dk073.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1667.dk073a": {
+    "textgroup": "tlg1667",
+    "work": "dk073a",
+    "author": "Septem Sapientes",
+    "title": "73a. DIE SIEBEN WEISEN.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1667/dk073a/tlg1667.dk073a.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1667.dk073b": {
+    "textgroup": "tlg1667",
+    "work": "dk073b",
+    "author": "Septem Sapientes",
+    "title": "73b. NAMEN UND BEGRIFF.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1667/dk073b/tlg1667.dk073b.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1635.dk074": {
+    "textgroup": "tlg1635",
+    "work": "dk074",
+    "author": "Protagoras",
+    "title": "74. PROTAGORAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1635/dk074/tlg1635.dk074.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2355.dk075": {
+    "textgroup": "tlg2355",
+    "work": "dk075",
+    "author": "Xeniades",
+    "title": "75. XENIADES.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2355/dk075/tlg2355.dk075.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0593.dk076": {
+    "textgroup": "tlg0593",
+    "work": "dk076",
+    "author": "Gorgias",
+    "title": "76. GORGIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0593/dk076/tlg0593.dk076.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1634.dk077": {
+    "textgroup": "tlg1634",
+    "work": "dk077",
+    "author": "Prodicus",
+    "title": "77. PRODIKOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1634/dk077/tlg1634.dk077.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1729.dk078": {
+    "textgroup": "tlg1729",
+    "work": "dk078",
+    "author": "Thrasymachus",
+    "title": "78. THRASYMACHOS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1729/dk078/tlg1729.dk078.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1434.dk079": {
+    "textgroup": "tlg1434",
+    "work": "dk079",
+    "author": "Hippias",
+    "title": "79. HIPPIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1434/dk079/tlg1434.dk079.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1147.dk080": {
+    "textgroup": "tlg1147",
+    "work": "dk080",
+    "author": "Antiphon",
+    "title": "80. ANTIPHON DER SOPHIST.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1147/dk080/tlg1147.dk080.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0319.dk081": {
+    "textgroup": "tlg0319",
+    "work": "dk081",
+    "author": "Critias",
+    "title": "81. KRITIAS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0319/dk081/tlg0319.dk081.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1134.dk082": {
+    "textgroup": "tlg1134",
+    "work": "dk082",
+    "author": "Anonymus Iamblichi",
+    "title": "82. ANONYMUS IAMBLICHI.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1134/dk082/tlg1134.dk082.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1309.dk083": {
+    "textgroup": "tlg1309",
+    "work": "dk083",
+    "author": "Dialexeis (Dissoi Logoi)",
+    "title": "83. DIALEXEIS.",
+    "strict_section_alignment": true,
+    "editions": {
+      "diels1922-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1309/dk083/tlg1309.dk083.diels1922-grc1.xml",
+        "label": "Greek and source context (Diels, 1922; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
   }
 }

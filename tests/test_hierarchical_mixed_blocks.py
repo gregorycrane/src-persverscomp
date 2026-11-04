@@ -33,3 +33,19 @@ def test_line_group_preserves_local_line_numbers_and_full_citations(tmp_path):
     assert 'data-n="1" data-cite="13.17.1"' in html
     assert 'data-n="2" data-cite="13.17.2"' in html
     assert html.index('First line.') < html.index('Second line.')
+
+
+def test_page_divisions_are_citable_and_keep_heads_and_notes(tmp_path):
+    from pipeline.parsers.hierarchical import parse_hierarchical_tei
+    p = tmp_path / 'pages.xml'
+    p.write_text('''<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+      <div type="edition"><div type="textpart" subtype="page" n="12">
+        <pb n="12"/><head>B. FRAGMENTE.</head><p>Greek text.</p>
+        <note type="footnote">Critical note.</note>
+      </div></div>
+    </body></text></TEI>''')
+    data = parse_hierarchical_tei(str(p), include_nonparagraph_blocks=True)
+    html = data['1']['12']['12']
+    assert 'B. FRAGMENTE.' in html
+    assert 'Greek text.' in html
+    assert 'Critical note.' in html
