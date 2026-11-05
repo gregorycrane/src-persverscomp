@@ -45,8 +45,12 @@ def parse_hierarchical_tei(path, include_nonparagraph_blocks=False,
         base_val = node.get('xml:base') or node.get('{http://www.w3.org/XML/1998/namespace}base')
         
         key_map_so_far = {t: v for t, v in current_path}
-        if tag == 'div' and subtype in ('book', 'chapter', 'section', 'subchapter', 'part', 'textpart', 'page') and n_val:
-            if subtype in ('part', 'textpart', 'page') and n_val.isdigit():
+        if tag == 'div' and subtype in ('book', 'chapter', 'section', 'subchapter', 'part', 'textpart', 'page', 'fragment') and n_val:
+            if subtype == 'fragment':
+                # Fragment editions cite the editor's fragment identifier;
+                # page breaks inside the div are provenance, not navigation.
+                resolved_subtype = 'chapter'
+            elif subtype in ('part', 'textpart', 'page') and n_val.isdigit():
                 resolved_subtype = 'chapter'
             elif subtype == 'subchapter':
                 resolved_subtype = 'section'
@@ -67,7 +71,8 @@ def parse_hierarchical_tei(path, include_nonparagraph_blocks=False,
             # way -- prefer the div's own <head> text in both cases.
             n_str = str(n_val).strip()
             label_val = n_str
-            if resolved_subtype == 'chapter' and (n_str == '0' or not re.fullmatch(r'\d+(\.\d+)*', n_str)):
+            if (resolved_subtype == 'chapter' and subtype != 'fragment'
+                    and (n_str == '0' or not re.fullmatch(r'\d+(\.\d+)*', n_str))):
                 head_el = node.find('{http://www.tei-c.org/ns/1.0}head')
                 if head_el is None:
                     head_el = node.find('head')

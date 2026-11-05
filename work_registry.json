@@ -67448,5 +67448,1145 @@
     "translations": {},
     "commentaries": {},
     "treebanks": {}
+  },
+  "tlg0243.plg2e001": {
+    "textgroup": "tlg0243",
+    "work": "plg2e001",
+    "author": "Callinus",
+    "title": "Callinus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0243/plg2e001/tlg0243.plg2e001.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0266.plg2e002": {
+    "textgroup": "tlg0266",
+    "work": "plg2e002",
+    "author": "Tyrtaeus",
+    "title": "Tyrtaeus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0266/plg2e002/tlg0266.plg2e002.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0242.plg2e003": {
+    "textgroup": "tlg0242",
+    "work": "plg2e003",
+    "author": "Asius",
+    "title": "Asius",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0242/plg2e003/tlg0242.plg2e003.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0288.plg2e004": {
+    "textgroup": "tlg0288",
+    "work": "plg2e004",
+    "author": "Pisander",
+    "title": "Pisander",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0288/plg2e004/tlg0288.plg2e004.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0255.plg2e005": {
+    "textgroup": "tlg0255",
+    "work": "plg2e005",
+    "author": "Mimnermus",
+    "title": "Mimnermus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0255/plg2e005/tlg0255.plg2e005.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0263.plg2e006": {
+    "textgroup": "tlg0263",
+    "work": "plg2e006",
+    "author": "Solon",
+    "title": "Solon",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0263/plg2e006/tlg0263.plg2e006.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0244.plg2e007": {
+    "textgroup": "tlg0244",
+    "work": "plg2e007",
+    "author": "Cleobulina",
+    "title": "Cleobulina",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0244/plg2e007/tlg0244.plg2e007.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0096.plg2e008": {
+    "textgroup": "tlg0096",
+    "work": "plg2e008",
+    "author": "Aesopus",
+    "title": "Aesopus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0096/plg2e008/tlg0096.plg2e008.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0245.plg2e009": {
+    "textgroup": "tlg0245",
+    "work": "plg2e009",
+    "author": "Demodocus",
+    "title": "Demodocus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0245/plg2e009/tlg0245.plg2e009.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1604.plg2e010": {
+    "textgroup": "tlg1604",
+    "work": "plg2e010",
+    "author": "Phocylides",
+    "title": "Phocylides",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1604/plg2e010/tlg1604.plg2e010.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1605.plg2e011": {
+    "textgroup": "tlg1605",
+    "work": "plg2e011",
+    "author": "Pseudo-Phocylides",
+    "title": "Pseudo-Phocylides",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1605/plg2e011/tlg1605.plg2e011.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0267.plg2e012": {
+    "textgroup": "tlg0267",
+    "work": "plg2e012",
+    "author": "Xenophanes",
+    "title": "Xenophanes",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0267/plg2e012/tlg0267.plg2e012.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0002.plg2e013": {
+    "textgroup": "tlg0002",
+    "work": "plg2e013",
+    "author": "Theognis",
+    "title": "Theognis",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0002/plg2e013/tlg0002.plg2e013.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1433.plg2e014": {
+    "textgroup": "tlg1433",
+    "work": "plg2e014",
+    "author": "Hipparchus",
+    "title": "Hipparchus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1433/plg2e014/tlg1433.plg2e014.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0258.plg2e015": {
+    "textgroup": "tlg0258",
+    "work": "plg2e015",
+    "author": "Pigres",
+    "title": "Pigres",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0258/plg2e015/tlg0258.plg2e015.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0521.plg2e016": {
+    "textgroup": "tlg0521",
+    "work": "plg2e016",
+    "author": "Epicharmus",
+    "title": "Epicharmus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0521/plg2e016/tlg0521.plg2e016.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0085.plg2e017": {
+    "textgroup": "tlg0085",
+    "work": "plg2e017",
+    "author": "Aeschylus",
+    "title": "Aeschylus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0085/plg2e017/tlg0085.plg2e017.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0011.plg2e018": {
+    "textgroup": "tlg0011",
+    "work": "plg2e018",
+    "author": "Sophocles",
+    "title": "Sophocles",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0011/plg2e018/tlg0011.plg2e018.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0308.plg2e019": {
+    "textgroup": "tlg0308",
+    "work": "plg2e019",
+    "author": "Ion of Chios",
+    "title": "Ion of Chios",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0308/plg2e019/tlg0308.plg2e019.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0254.plg2e020": {
+    "textgroup": "tlg0254",
+    "work": "plg2e020",
+    "author": "Melanthius",
+    "title": "Melanthius",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0254/plg2e020/tlg0254.plg2e020.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg2303.plg2e021": {
+    "textgroup": "tlg2303",
+    "work": "plg2e021",
+    "author": "Archelaus",
+    "title": "Archelaus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2303/plg2e021/tlg2303.plg2e021.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1437.plg2e022": {
+    "textgroup": "tlg1437",
+    "work": "plg2e022",
+    "author": "Hippo",
+    "title": "Hippo",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1437/plg2e022/tlg1437.plg2e022.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1342.plg2e023": {
+    "textgroup": "tlg1342",
+    "work": "plg2e023",
+    "author": "Empedocles",
+    "title": "Empedocles",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1342/plg2e023/tlg1342.plg2e023.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0246.plg2e024": {
+    "textgroup": "tlg0246",
+    "work": "plg2e024",
+    "author": "Dionysius Chalcus",
+    "title": "Dionysius Chalcus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0246/plg2e024/tlg0246.plg2e024.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0006.plg2e025": {
+    "textgroup": "tlg0006",
+    "work": "plg2e025",
+    "author": "Euripides",
+    "title": "Euripides",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0006/plg2e025/tlg0006.plg2e025.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0003.plg2e026": {
+    "textgroup": "tlg0003",
+    "work": "plg2e026",
+    "author": "Thucydides",
+    "title": "Thucydides",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0003/plg2e026/tlg0003.plg2e026.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0236.plg2e027": {
+    "textgroup": "tlg0236",
+    "work": "plg2e027",
+    "author": "Alcibiades",
+    "title": "Alcibiades",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0236/plg2e027/tlg0236.plg2e027.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0318.plg2e028": {
+    "textgroup": "tlg0318",
+    "work": "plg2e028",
+    "author": "Agathon",
+    "title": "Agathon",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0318/plg2e028/tlg0318.plg2e028.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0251.plg2e029": {
+    "textgroup": "tlg0251",
+    "work": "plg2e029",
+    "author": "Euenus",
+    "title": "Euenus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0251/plg2e029/tlg0251.plg2e029.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0319.plg2e030": {
+    "textgroup": "tlg0319",
+    "work": "plg2e030",
+    "author": "Critias",
+    "title": "Critias",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0319/plg2e030/tlg0319.plg2e030.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0311.plg2e031": {
+    "textgroup": "tlg0311",
+    "work": "plg2e031",
+    "author": "Iophon",
+    "title": "Iophon",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0311/plg2e031/tlg0311.plg2e031.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0262.plg2e032": {
+    "textgroup": "tlg0262",
+    "work": "plg2e032",
+    "author": "Socrates",
+    "title": "Socrates",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0262/plg2e032/tlg0262.plg2e032.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0239.plg2e033": {
+    "textgroup": "tlg0239",
+    "work": "plg2e033",
+    "author": "Antimachus",
+    "title": "Antimachus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0239/plg2e033/tlg0239.plg2e033.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0059.plg2e034": {
+    "textgroup": "tlg0059",
+    "work": "plg2e034",
+    "author": "Plato",
+    "title": "Plato",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0059/plg2e034/tlg0059.plg2e034.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1673.plg2e035": {
+    "textgroup": "tlg1673",
+    "work": "plg2e035",
+    "author": "Simmias of Thebes",
+    "title": "Simmias of Thebes",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1673/plg2e035/tlg1673.plg2e035.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1113.plg2e036": {
+    "textgroup": "tlg1113",
+    "work": "plg2e036",
+    "author": "Zeuxis",
+    "title": "Zeuxis",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1113/plg2e036/tlg1113.plg2e036.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1567.plg2e037": {
+    "textgroup": "tlg1567",
+    "work": "plg2e037",
+    "author": "Parrhasius",
+    "title": "Parrhasius",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1567/plg2e037/tlg1567.plg2e037.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1633.plg2e038": {
+    "textgroup": "tlg1633",
+    "work": "plg2e038",
+    "author": "Praxiteles",
+    "title": "Praxiteles",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1633/plg2e038/tlg1633.plg2e038.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0247.plg2e039": {
+    "textgroup": "tlg0247",
+    "work": "plg2e039",
+    "author": "Dionysius Minor",
+    "title": "Dionysius Minor",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0247/plg2e039/tlg0247.plg2e039.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1476.plg2e040": {
+    "textgroup": "tlg1476",
+    "work": "plg2e040",
+    "author": "Mamercus",
+    "title": "Mamercus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1476/plg2e040/tlg1476.plg2e040.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0325.plg2e041": {
+    "textgroup": "tlg0325",
+    "work": "plg2e041",
+    "author": "Astydamas",
+    "title": "Astydamas",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0325/plg2e041/tlg0325.plg2e041.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0257.plg2e042": {
+    "textgroup": "tlg0257",
+    "work": "plg2e042",
+    "author": "Philiscus",
+    "title": "Philiscus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0257/plg2e042/tlg0257.plg2e042.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1150.plg2e043": {
+    "textgroup": "tlg1150",
+    "work": "plg2e043",
+    "author": "Aphareus",
+    "title": "Aphareus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1150/plg2e043/tlg1150.plg2e043.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1692.plg2e044": {
+    "textgroup": "tlg1692",
+    "work": "plg2e044",
+    "author": "Speusippus",
+    "title": "Speusippus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1692/plg2e044/tlg1692.plg2e044.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0014.plg2e045": {
+    "textgroup": "tlg0014",
+    "work": "plg2e045",
+    "author": "Demosthenes",
+    "title": "Demosthenes",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0014/plg2e045/tlg0014.plg2e045.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0086.plg2e046": {
+    "textgroup": "tlg0086",
+    "work": "plg2e046",
+    "author": "Aristotle",
+    "title": "Aristotle",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0086/plg2e046/tlg0086.plg2e046.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1273.plg2e047": {
+    "textgroup": "tlg1273",
+    "work": "plg2e047",
+    "author": "Cleon of Sicily",
+    "title": "Cleon of Sicily",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1273/plg2e047/tlg1273.plg2e047.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0336.plg2e048": {
+    "textgroup": "tlg0336",
+    "work": "plg2e048",
+    "author": "Crates of Thebes",
+    "title": "Crates of Thebes",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0336/plg2e048/tlg0336.plg2e048.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1714.plg2e049": {
+    "textgroup": "tlg1714",
+    "work": "plg2e049",
+    "author": "Theocritus of Chios",
+    "title": "Theocritus of Chios",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1714/plg2e049/tlg1714.plg2e049.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0541.plg2e050": {
+    "textgroup": "tlg0541",
+    "work": "plg2e050",
+    "author": "Menander",
+    "title": "Menander",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0541/plg2e050/tlg0541.plg2e050.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0232.plg2i001": {
+    "textgroup": "tlg0232",
+    "work": "plg2i001",
+    "author": "Archilochus",
+    "title": "Archilochus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0232/plg2i001/tlg0232.plg2i001.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0260.plg2i002": {
+    "textgroup": "tlg0260",
+    "work": "plg2i002",
+    "author": "Semonides of Amorgos",
+    "title": "Semonides of Amorgos",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0260/plg2i002/tlg0260.plg2i002.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0233.plg2i003": {
+    "textgroup": "tlg0233",
+    "work": "plg2i003",
+    "author": "Hipponax",
+    "title": "Hipponax",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0233/plg2i003/tlg0233.plg2i003.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0238.plg2i004": {
+    "textgroup": "tlg0238",
+    "work": "plg2i004",
+    "author": "Ananius",
+    "title": "Ananius",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0238/plg2i004/tlg0238.plg2i004.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0248.plg2i005": {
+    "textgroup": "tlg0248",
+    "work": "plg2i005",
+    "author": "Diphilus",
+    "title": "Diphilus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0248/plg2i005/tlg0248.plg2i005.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0252.plg2i006": {
+    "textgroup": "tlg0252",
+    "work": "plg2i006",
+    "author": "Hermippus",
+    "title": "Hermippus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0252/plg2i006/tlg0252.plg2i006.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0259.plg2i007": {
+    "textgroup": "tlg0259",
+    "work": "plg2i007",
+    "author": "Scythinus",
+    "title": "Scythinus",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0259/plg2i007/tlg0259.plg2i007.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0650.plg2i008": {
+    "textgroup": "tlg0650",
+    "work": "plg2i008",
+    "author": "Herodas",
+    "title": "Herodas",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0650/plg2i008/tlg0650.plg2i008.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg1250.plg2i009": {
+    "textgroup": "tlg1250",
+    "work": "plg2i009",
+    "author": "Cercidas",
+    "title": "Cercidas",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1250/plg2i009/tlg1250.plg2i009.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
+  },
+  "tlg0679.plg2i010": {
+    "textgroup": "tlg0679",
+    "work": "plg2i010",
+    "author": "Aeschrion",
+    "title": "Aeschrion",
+    "strict_section_alignment": true,
+    "editions": {
+      "bergk1882-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0679/plg2i010/tlg0679.plg2i010.bergk1882-grc1.xml",
+        "label": "Greek and source context (Bergk, 1882; OCR/AI draft)",
+        "class": "greek-text",
+        "parse_mode": "hierarchical"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {}
   }
 }

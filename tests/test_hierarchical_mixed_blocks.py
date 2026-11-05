@@ -49,3 +49,19 @@ def test_page_divisions_are_citable_and_keep_heads_and_notes(tmp_path):
     assert 'B. FRAGMENTE.' in html
     assert 'Greek text.' in html
     assert 'Critical note.' in html
+
+
+def test_fragment_divisions_are_citable_and_page_breaks_are_not(tmp_path):
+    from pipeline.parsers.hierarchical import parse_hierarchical_tei
+    p = tmp_path / 'fragments.xml'
+    p.write_text('''<TEI xmlns="http://www.tei-c.org/ns/1.0"><text><body>
+      <div type="edition"><div type="textpart" subtype="fragment" n="2A">
+        <pb n="68" facs="https://example.test/scan/68"/><head>2A.</head>
+        <lg><l>Greek fragment.</l></lg><note>Critical note.</note>
+      </div></div>
+    </body></text></TEI>''')
+    data = parse_hierarchical_tei(str(p), include_nonparagraph_blocks=True)
+    html = data['1']['2A']['2A']
+    assert 'Greek fragment.' in html
+    assert 'Critical note.' in html
+    assert '68' not in data['1']
