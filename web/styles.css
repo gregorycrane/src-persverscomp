@@ -551,6 +551,27 @@
         .prose-inline-layout .prose-marker { font-weight: bold; color: #336699; margin-right: 8px; display: inline-block; }
         .prose-inline-layout .prose-body-inline { display: inline; }
         .prose-body-inline p, .prose-body-inline div { display: inline !important; margin: 0 !important; padding: 0 !important; }
+        /* Fragment identifiers can be substantially wider than ordinary
+           numeric section labels (for example "116to117").  Give the
+           citation its own intrinsic-width gutter so it cannot collide with
+           an edition's printed fragment heading. */
+        .fragment-citation-row .prose-inline-layout {
+            display: grid;
+            grid-template-columns: max-content minmax(0, 1fr);
+            column-gap: 0.65em;
+            align-items: baseline;
+        }
+        .fragment-citation-row .prose-inline-layout .prose-marker {
+            margin-right: 0;
+        }
+        .fragment-citation-row .prose-inline-layout .prose-body-inline {
+            display: block;
+            min-width: 0;
+        }
+        .fragment-citation-row .lineated-prose-layout {
+            grid-template-columns: max-content minmax(0, 1fr);
+            column-gap: 0.65em;
+        }
         .lineated-prose-layout { display: grid; grid-template-columns: 36px minmax(0, 1fr); column-gap: 4px; width: 100%; }
         .lineated-prose-layout > .prose-marker { grid-column: 1; text-align: right; padding-top: 1px; font-weight: bold; color: #336699; }
         .lineated-prose-layout > .lineated-section { grid-column: 2; }

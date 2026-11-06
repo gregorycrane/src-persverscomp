@@ -4777,6 +4777,9 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
             const cssClass = activeEditionMeta ? activeEditionMeta.class : "english-text";
             const shortId = activeEditionMeta ? activeEditionMeta.short_id : vId;
             const isPoetry = isPoetryWork(activeWorkKey);
+            const activeWorkMeta = CATALOG.works[activeWorkKey] || {};
+            const isFragmentWork = Boolean(activeWorkMeta.experimental_fragment) ||
+                String(getUnitLabels(activeWorkKey).chapter || '').toLowerCase() === 'fragment';
 
             if (activeEditionMeta && activeEditionMeta.doc_type === 'treebank') {
                 renderTreebankColumn(targetContainer, activeEditionMeta, payload);
@@ -4844,7 +4847,7 @@ function renderTreebankColumn(container, activeEditionMeta, payload) {
                     ? !inRange
                     : (activeSectionFilter !== null && activeSectionFilter !== sec));
                 const row = document.createElement("div");
-                row.className = `section-row s-idx-${sec} ${isHidden ? 'hidden-section' : ''} ${inRange ? 'urn-range-highlight' : ''}`;
+                row.className = `section-row s-idx-${sec} ${isFragmentWork ? 'fragment-citation-row' : ''} ${isHidden ? 'hidden-section' : ''} ${inRange ? 'urn-range-highlight' : ''}`;
                 const contentShortId = hasBilingualCommentary && commentaryMode === "original"
                     ? originalCommentaryId : shortId;
                 let txt = payload.sections[sec][contentShortId] || "<i>Not divided separately in this edition.</i>";
