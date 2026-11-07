@@ -34,7 +34,10 @@
     },
     "commentaries": {},
     "treebanks": {},
-    "unit_labels": {"chapter": "Ode", "section": "Line"}
+    "unit_labels": {
+      "chapter": "Ode",
+      "section": "Line"
+    }
   },
   "tlg0033.tlg002": {
     "textgroup": "tlg0033",
@@ -46,12 +49,16 @@
       "perseus-grc2": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg002/tlg0033.tlg002.perseus-grc2.xml",
         "label": "Greek (Sandys, 1937; Perseus canonical text)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       },
       "schroeder1900-grc1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0033/tlg002/tlg0033.tlg002.schroeder1900-grc1.xml",
         "label": "Greek and source context (Schroeder, 1900; OCR/AI draft)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       }
     },
     "appcrits": {},
@@ -59,12 +66,18 @@
       "perseus-eng3": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg002/tlg0033.tlg002.perseus-eng3.xml",
         "label": "English (Diane Arnson Svarlien; Perseus)",
-        "class": "english-text", "parse_mode": "poetry_cards", "card_anchor": "poem",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem",
         "source_version": "perseus-grc2"
       }
     },
-    "commentaries": {}, "treebanks": {},
-    "unit_labels": {"chapter": "Ode", "section": "Line"}
+    "commentaries": {},
+    "treebanks": {},
+    "unit_labels": {
+      "chapter": "Ode",
+      "section": "Line"
+    }
   },
   "tlg0033.tlg003": {
     "textgroup": "tlg0033",
@@ -76,12 +89,16 @@
       "perseus-grc2": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg003/tlg0033.tlg003.perseus-grc2.xml",
         "label": "Greek (Sandys, 1937; Perseus canonical text)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       },
       "schroeder1900-grc1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0033/tlg003/tlg0033.tlg003.schroeder1900-grc1.xml",
         "label": "Greek and source context (Schroeder, 1900; OCR/AI draft)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       }
     },
     "appcrits": {},
@@ -89,12 +106,18 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg003/tlg0033.tlg003.perseus-eng2.xml",
         "label": "English (Diane Arnson Svarlien; Perseus)",
-        "class": "english-text", "parse_mode": "poetry_cards", "card_anchor": "poem",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem",
         "source_version": "perseus-grc2"
       }
     },
-    "commentaries": {}, "treebanks": {},
-    "unit_labels": {"chapter": "Ode", "section": "Line"}
+    "commentaries": {},
+    "treebanks": {},
+    "unit_labels": {
+      "chapter": "Ode",
+      "section": "Line"
+    }
   },
   "tlg0033.tlg004": {
     "textgroup": "tlg0033",
@@ -106,12 +129,16 @@
       "perseus-grc2": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg004/tlg0033.tlg004.perseus-grc2.xml",
         "label": "Greek (Sandys, 1937; Perseus canonical text)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       },
       "schroeder1900-grc1": {
         "path": "/Users/gcrane/github/grcnewxml/data/tlg0033/tlg004/tlg0033.tlg004.schroeder1900-grc1.xml",
         "label": "Greek and source context (Schroeder, 1900; OCR/AI draft)",
-        "class": "greek-text", "parse_mode": "poetry_cards", "card_anchor": "poem"
+        "class": "greek-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem"
       }
     },
     "appcrits": {},
@@ -119,12 +146,18 @@
       "perseus-eng2": {
         "path": "/Users/gcrane/github/canonical-greekLit/data/tlg0033/tlg004/tlg0033.tlg004.perseus-eng2.xml",
         "label": "English (Diane Arnson Svarlien; Perseus)",
-        "class": "english-text", "parse_mode": "poetry_cards", "card_anchor": "poem",
+        "class": "english-text",
+        "parse_mode": "poetry_cards",
+        "card_anchor": "poem",
         "source_version": "perseus-grc2"
       }
     },
-    "commentaries": {}, "treebanks": {},
-    "unit_labels": {"chapter": "Ode", "section": "Line"}
+    "commentaries": {},
+    "treebanks": {},
+    "unit_labels": {
+      "chapter": "Ode",
+      "section": "Line"
+    }
   },
   "tlg0033.plg1p001": {
     "textgroup": "tlg0033",
@@ -140,8 +173,14 @@
         "parse_mode": "hierarchical"
       }
     },
-    "appcrits": {}, "translations": {}, "commentaries": {}, "treebanks": {},
-    "unit_labels": {"chapter": "Fragment", "section": "Section"}
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "unit_labels": {
+      "chapter": "Fragment",
+      "section": "Section"
+    }
   },
   "dante.inferno": {
     "textgroup": "dante",
@@ -69701,5 +69740,2330 @@
     "translations": {},
     "commentaries": {},
     "treebanks": {}
+  },
+  "kinkel1877.egf001": {
+    "textgroup": "kinkel1877",
+    "work": "egf001",
+    "title": "CYCLUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf001/kinkel1877.egf001.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf001.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf001",
+    "source_title": "CYCLUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf002": {
+    "textgroup": "kinkel1877",
+    "work": "egf002",
+    "title": "THEOGONIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf002/kinkel1877.egf002.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf002.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf002",
+    "source_title": "THEOGONIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf003": {
+    "textgroup": "kinkel1877",
+    "work": "egf003",
+    "title": "[TITANOMACHIA.]",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf003/kinkel1877.egf003.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf003.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf003",
+    "source_title": "[TITANOMACHIA.]",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf004": {
+    "textgroup": "kinkel1877",
+    "work": "egf004",
+    "title": "[OEDIPODEA.]",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf004/kinkel1877.egf004.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf004.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf004",
+    "source_title": "[OEDIPODEA.]",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf005": {
+    "textgroup": "kinkel1877",
+    "work": "egf005",
+    "title": "THEBAIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf005/kinkel1877.egf005.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf005.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf005",
+    "source_title": "THEBAIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf006": {
+    "textgroup": "kinkel1877",
+    "work": "egf006",
+    "title": "EPIGONI.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf006/kinkel1877.egf006.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf006.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf006",
+    "source_title": "EPIGONI.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf007": {
+    "textgroup": "kinkel1877",
+    "work": "egf007",
+    "title": "CYPRIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf007/kinkel1877.egf007.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf007.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf007",
+    "source_title": "CYPRIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf008": {
+    "textgroup": "kinkel1877",
+    "work": "egf008",
+    "title": "AETHIOPIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf008/kinkel1877.egf008.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf008.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf008",
+    "source_title": "AETHIOPIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf009": {
+    "textgroup": "kinkel1877",
+    "work": "egf009",
+    "title": "ILIAS PARVA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf009/kinkel1877.egf009.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf009.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf009",
+    "source_title": "ILIAS PARVA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf010": {
+    "textgroup": "kinkel1877",
+    "work": "egf010",
+    "title": "ILII PERSIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf010/kinkel1877.egf010.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf010.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf010",
+    "source_title": "ILII PERSIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf011": {
+    "textgroup": "kinkel1877",
+    "work": "egf011",
+    "title": "NOSTI.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf011/kinkel1877.egf011.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf011.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf011",
+    "source_title": "NOSTI.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf012": {
+    "textgroup": "kinkel1877",
+    "work": "egf012",
+    "title": "TELEGONIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf012/kinkel1877.egf012.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf012.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf012",
+    "source_title": "TELEGONIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf013": {
+    "textgroup": "kinkel1877",
+    "work": "egf013",
+    "title": "II. CARMINA HEROICA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf013/kinkel1877.egf013.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf013.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf013",
+    "source_title": "II. CARMINA HEROICA",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf014": {
+    "textgroup": "kinkel1877",
+    "work": "egf014",
+    "title": "II. OECHALIAE EXCIDIUM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf014/kinkel1877.egf014.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf014.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf014",
+    "source_title": "II. OECHALIAE EXCIDIUM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf015": {
+    "textgroup": "kinkel1877",
+    "work": "egf015",
+    "title": "III. PHOCAIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf015/kinkel1877.egf015.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf015.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf015",
+    "source_title": "III. PHOCAIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf016": {
+    "textgroup": "kinkel1877",
+    "work": "egf016",
+    "title": "CARMINA MINORA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf016/kinkel1877.egf016.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf016.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf016",
+    "source_title": "CARMINA MINORA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf017": {
+    "textgroup": "kinkel1877",
+    "work": "egf017",
+    "title": "Ι. MARGITES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf017/kinkel1877.egf017.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf017.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf017",
+    "source_title": "Ι. MARGITES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf018": {
+    "textgroup": "kinkel1877",
+    "work": "egf018",
+    "title": "ΙΙ. CERCOPES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf018/kinkel1877.egf018.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf018.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf018",
+    "source_title": "ΙΙ. CERCOPES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf019": {
+    "textgroup": "kinkel1877",
+    "work": "egf019",
+    "title": "INCERTAE SEDIS FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf019/kinkel1877.egf019.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf019.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf019",
+    "source_title": "INCERTAE SEDIS FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf020": {
+    "textgroup": "kinkel1877",
+    "work": "egf020",
+    "title": "DANAIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf020/kinkel1877.egf020.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf020.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf020",
+    "source_title": "DANAIS",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf021": {
+    "textgroup": "kinkel1877",
+    "work": "egf021",
+    "title": "HESIODUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf021/kinkel1877.egf021.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf021.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf021",
+    "source_title": "HESIODUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf022": {
+    "textgroup": "kinkel1877",
+    "work": "egf022",
+    "title": "AEGIMIUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf022/kinkel1877.egf022.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf022.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf022",
+    "source_title": "AEGIMIUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf023": {
+    "textgroup": "kinkel1877",
+    "work": "egf023",
+    "title": "ASTRONOMIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf023/kinkel1877.egf023.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf023.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf023",
+    "source_title": "ASTRONOMIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf024": {
+    "textgroup": "kinkel1877",
+    "work": "egf024",
+    "title": "CATALOGUS. EOEAE.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf024/kinkel1877.egf024.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf024.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf024",
+    "source_title": "CATALOGUS. EOEAE.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf025": {
+    "textgroup": "kinkel1877",
+    "work": "egf025",
+    "title": "CATALOGI FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf025/kinkel1877.egf025.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf025.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf025",
+    "source_title": "CATALOGI FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf026": {
+    "textgroup": "kinkel1877",
+    "work": "egf026",
+    "title": "EOEARUM FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf026/kinkel1877.egf026.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf026.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf026",
+    "source_title": "EOEARUM FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf027": {
+    "textgroup": "kinkel1877",
+    "work": "egf027",
+    "title": "CEYCIS NUPTIAE.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf027/kinkel1877.egf027.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf027.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf027",
+    "source_title": "CEYCIS NUPTIAE.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf028": {
+    "textgroup": "kinkel1877",
+    "work": "egf028",
+    "title": "CHIRONIS PRAECEPTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf028/kinkel1877.egf028.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf028.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf028",
+    "source_title": "CHIRONIS PRAECEPTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf029": {
+    "textgroup": "kinkel1877",
+    "work": "egf029",
+    "title": "DACTYLI IDAEI.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf029/kinkel1877.egf029.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf029.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf029",
+    "source_title": "DACTYLI IDAEI.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf030": {
+    "textgroup": "kinkel1877",
+    "work": "egf030",
+    "title": "MELAMPODIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf030/kinkel1877.egf030.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf030.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf030",
+    "source_title": "MELAMPODIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf031": {
+    "textgroup": "kinkel1877",
+    "work": "egf031",
+    "title": "OPERA MAGNA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf031/kinkel1877.egf031.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf031.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf031",
+    "source_title": "OPERA MAGNA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf032": {
+    "textgroup": "kinkel1877",
+    "work": "egf032",
+    "title": "ORNITHOMANTIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf032/kinkel1877.egf032.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf032.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf032",
+    "source_title": "ORNITHOMANTIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf033": {
+    "textgroup": "kinkel1877",
+    "work": "egf033",
+    "title": "INCERTAE SEDIS FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf033/kinkel1877.egf033.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf033.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf033",
+    "source_title": "INCERTAE SEDIS FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf034": {
+    "textgroup": "kinkel1877",
+    "work": "egf034",
+    "title": "FRAGMENTA DUBIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf034/kinkel1877.egf034.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf034.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf034",
+    "source_title": "FRAGMENTA DUBIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf035": {
+    "textgroup": "kinkel1877",
+    "work": "egf035",
+    "title": "FRAGMENTA FALSA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf035/kinkel1877.egf035.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf035.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf035",
+    "source_title": "FRAGMENTA FALSA",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf036": {
+    "textgroup": "kinkel1877",
+    "work": "egf036",
+    "title": "CORINTHIACA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf036/kinkel1877.egf036.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf036.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf036",
+    "source_title": "CORINTHIACA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf037": {
+    "textgroup": "kinkel1877",
+    "work": "egf037",
+    "title": "ΕUROPIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf037/kinkel1877.egf037.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf037.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf037",
+    "source_title": "ΕUROPIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf038": {
+    "textgroup": "kinkel1877",
+    "work": "egf038",
+    "title": "ἈιΣΜΑ ΠΡΟΣΟΔΙΟΝ 2).",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf038/kinkel1877.egf038.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf038.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf038",
+    "source_title": "ἈιΣΜΑ ΠΡΟΣΟΔΙΟΝ 2).",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf039": {
+    "textgroup": "kinkel1877",
+    "work": "egf039",
+    "title": "INCERTORUM CARMINUM FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf039/kinkel1877.egf039.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf039.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf039",
+    "source_title": "INCERTORUM CARMINUM FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf040": {
+    "textgroup": "kinkel1877",
+    "work": "egf040",
+    "title": "CΙΝΑΕΤΗΟ.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf040/kinkel1877.egf040.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf040.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf040",
+    "source_title": "CΙΝΑΕΤΗΟ.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf041": {
+    "textgroup": "kinkel1877",
+    "work": "egf041",
+    "title": "ἘΠΩΝ FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf041/kinkel1877.egf041.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf041.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf041",
+    "source_title": "ἘΠΩΝ FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf042": {
+    "textgroup": "kinkel1877",
+    "work": "egf042",
+    "title": "CARMEN NAUPACTIUM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf042/kinkel1877.egf042.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf042.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf042",
+    "source_title": "CARMEN NAUPACTIUM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf043": {
+    "textgroup": "kinkel1877",
+    "work": "egf043",
+    "title": "ASIUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf043/kinkel1877.egf043.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf043.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf043",
+    "source_title": "ASIUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf044": {
+    "textgroup": "kinkel1877",
+    "work": "egf044",
+    "title": "ΕΠΩΝ (ΓΕΝΕΑΛΟΓΙΩΝ)",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf044/kinkel1877.egf044.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf044.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf044",
+    "source_title": "ΕΠΩΝ (ΓΕΝΕΑΛΟΓΙΩΝ)",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf045": {
+    "textgroup": "kinkel1877",
+    "work": "egf045",
+    "title": "CARMINIS EPICI DE SAMIORUM MORIBUS FRAGMENTUM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf045/kinkel1877.egf045.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf045.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf045",
+    "source_title": "CARMINIS EPICI DE SAMIORUM MORIBUS FRAGMENTUM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf046": {
+    "textgroup": "kinkel1877",
+    "work": "egf046",
+    "title": "CHERSIAS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf046/kinkel1877.egf046.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf046.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf046",
+    "source_title": "CHERSIAS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf047": {
+    "textgroup": "kinkel1877",
+    "work": "egf047",
+    "title": "FRAGMENTUM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf047/kinkel1877.egf047.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf047.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf047",
+    "source_title": "FRAGMENTUM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf048": {
+    "textgroup": "kinkel1877",
+    "work": "egf048",
+    "title": "HEGESINUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf048/kinkel1877.egf048.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf048.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf048",
+    "source_title": "HEGESINUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf049": {
+    "textgroup": "kinkel1877",
+    "work": "egf049",
+    "title": "PHORONIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf049/kinkel1877.egf049.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf049.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf049",
+    "source_title": "PHORONIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf050": {
+    "textgroup": "kinkel1877",
+    "work": "egf050",
+    "title": "HERACLEIDES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf050/kinkel1877.egf050.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf050.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf050",
+    "source_title": "HERACLEIDES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf051": {
+    "textgroup": "kinkel1877",
+    "work": "egf051",
+    "title": "CONON.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf051/kinkel1877.egf051.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf051.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf051",
+    "source_title": "CONON.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf052": {
+    "textgroup": "kinkel1877",
+    "work": "egf052",
+    "title": "DEMODOCUS. 3)",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf052/kinkel1877.egf052.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf052.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf052",
+    "source_title": "DEMODOCUS. 3)",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf053": {
+    "textgroup": "kinkel1877",
+    "work": "egf053",
+    "title": "DIOTIMUS. 2)",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf053/kinkel1877.egf053.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf053.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf053",
+    "source_title": "DIOTIMUS. 2)",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf054": {
+    "textgroup": "kinkel1877",
+    "work": "egf054",
+    "title": "PHAEDIMUS. 1)",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf054/kinkel1877.egf054.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf054.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf054",
+    "source_title": "PHAEDIMUS. 1)",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf055": {
+    "textgroup": "kinkel1877",
+    "work": "egf055",
+    "title": "PISINUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf055/kinkel1877.egf055.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf055.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf055",
+    "source_title": "PISINUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf056": {
+    "textgroup": "kinkel1877",
+    "work": "egf056",
+    "title": "INCERTI POETAE FRAGMENTUM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf056/kinkel1877.egf056.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf056.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf056",
+    "source_title": "INCERTI POETAE FRAGMENTUM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf057": {
+    "textgroup": "kinkel1877",
+    "work": "egf057",
+    "title": "MINYAS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf057/kinkel1877.egf057.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf057.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf057",
+    "source_title": "MINYAS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf058": {
+    "textgroup": "kinkel1877",
+    "work": "egf058",
+    "title": "THESEIDES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf058/kinkel1877.egf058.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf058.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf058",
+    "source_title": "THESEIDES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf059": {
+    "textgroup": "kinkel1877",
+    "work": "egf059",
+    "title": "THESPROTIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf059/kinkel1877.egf059.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf059.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf059",
+    "source_title": "THESPROTIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf060": {
+    "textgroup": "kinkel1877",
+    "work": "egf060",
+    "title": "MUSAEUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf060/kinkel1877.egf060.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf060.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf060",
+    "source_title": "MUSAEUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf061": {
+    "textgroup": "kinkel1877",
+    "work": "egf061",
+    "title": "EUMOLPIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf061/kinkel1877.egf061.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf061.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf061",
+    "source_title": "EUMOLPIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf062": {
+    "textgroup": "kinkel1877",
+    "work": "egf062",
+    "title": "HYMNUS ΙΝ CEREREM.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf062/kinkel1877.egf062.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf062.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf062",
+    "source_title": "HYMNUS ΙΝ CEREREM.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf063": {
+    "textgroup": "kinkel1877",
+    "work": "egf063",
+    "title": "MORBORUM CURATIONES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf063/kinkel1877.egf063.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf063.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf063",
+    "source_title": "MORBORUM CURATIONES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf064": {
+    "textgroup": "kinkel1877",
+    "work": "egf064",
+    "title": "ΟRΑCULΑ.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf064/kinkel1877.egf064.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf064.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf064",
+    "source_title": "ΟRΑCULΑ.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf065": {
+    "textgroup": "kinkel1877",
+    "work": "egf065",
+    "title": "THEOGONIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf065/kinkel1877.egf065.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf065.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf065",
+    "source_title": "THEOGONIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf066": {
+    "textgroup": "kinkel1877",
+    "work": "egf066",
+    "title": "TITANOGRAPHIA (TITANOMACHIA).",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf066/kinkel1877.egf066.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf066.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf066",
+    "source_title": "TITANOGRAPHIA (TITANOMACHIA).",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf067": {
+    "textgroup": "kinkel1877",
+    "work": "egf067",
+    "title": "INCERTAE SEDIS FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf067/kinkel1877.egf067.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf067.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf067",
+    "source_title": "INCERTAE SEDIS FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf068": {
+    "textgroup": "kinkel1877",
+    "work": "egf068",
+    "title": "EPIMENIDES.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf068/kinkel1877.egf068.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf068.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf068",
+    "source_title": "EPIMENIDES.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf069": {
+    "textgroup": "kinkel1877",
+    "work": "egf069",
+    "title": "ARGONAUTICA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf069/kinkel1877.egf069.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf069.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf069",
+    "source_title": "ARGONAUTICA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf070": {
+    "textgroup": "kinkel1877",
+    "work": "egf070",
+    "title": "HISTORIA TELCHINIACA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf070/kinkel1877.egf070.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf070.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf070",
+    "source_title": "HISTORIA TELCHINIACA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf071": {
+    "textgroup": "kinkel1877",
+    "work": "egf071",
+    "title": "ORACULA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf071/kinkel1877.egf071.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf071.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf071",
+    "source_title": "ORACULA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf072": {
+    "textgroup": "kinkel1877",
+    "work": "egf072",
+    "title": "THEOGONIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf072/kinkel1877.egf072.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf072.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf072",
+    "source_title": "THEOGONIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf073": {
+    "textgroup": "kinkel1877",
+    "work": "egf073",
+    "title": "INCERTAE SEDIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf073/kinkel1877.egf073.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf073.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf073",
+    "source_title": "INCERTAE SEDIS",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf074": {
+    "textgroup": "kinkel1877",
+    "work": "egf074",
+    "title": "ONOMACRITUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf074/kinkel1877.egf074.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf074.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf074",
+    "source_title": "ONOMACRITUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf075": {
+    "textgroup": "kinkel1877",
+    "work": "egf075",
+    "title": "ΑΒΑRΙS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf075/kinkel1877.egf075.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf075.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf075",
+    "source_title": "ΑΒΑRΙS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf076": {
+    "textgroup": "kinkel1877",
+    "work": "egf076",
+    "title": "ARISTEAS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf076/kinkel1877.egf076.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf076.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf076",
+    "source_title": "ARISTEAS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf077": {
+    "textgroup": "kinkel1877",
+    "work": "egf077",
+    "title": "ANTIMACHUS TEIUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf077/kinkel1877.egf077.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf077.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf077",
+    "source_title": "ANTIMACHUS TEIUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf078": {
+    "textgroup": "kinkel1877",
+    "work": "egf078",
+    "title": "PISANDER CAMIRENSIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf078/kinkel1877.egf078.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf078.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf078",
+    "source_title": "PISANDER CAMIRENSIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf079": {
+    "textgroup": "kinkel1877",
+    "work": "egf079",
+    "title": "HERACLEA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf079/kinkel1877.egf079.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf079.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf079",
+    "source_title": "HERACLEA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf080": {
+    "textgroup": "kinkel1877",
+    "work": "egf080",
+    "title": "PANYASSIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf080/kinkel1877.egf080.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf080.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf080",
+    "source_title": "PANYASSIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf081": {
+    "textgroup": "kinkel1877",
+    "work": "egf081",
+    "title": "HERACLEA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf081/kinkel1877.egf081.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf081.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf081",
+    "source_title": "HERACLEA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf082": {
+    "textgroup": "kinkel1877",
+    "work": "egf082",
+    "title": "CHOERILUS SAMIUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf082/kinkel1877.egf082.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf082.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf082",
+    "source_title": "CHOERILUS SAMIUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf083": {
+    "textgroup": "kinkel1877",
+    "work": "egf083",
+    "title": "ΕΡΙLΥCUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf083/kinkel1877.egf083.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf083.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf083",
+    "source_title": "ΕΡΙLΥCUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf084": {
+    "textgroup": "kinkel1877",
+    "work": "egf084",
+    "title": "ΜΕLΑNΙΡΡΙDΕS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf084/kinkel1877.egf084.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf084.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf084",
+    "source_title": "ΜΕLΑNΙΡΡΙDΕS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf085": {
+    "textgroup": "kinkel1877",
+    "work": "egf085",
+    "title": "ΝΙCΕRΑΤUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf085/kinkel1877.egf085.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf085.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf085",
+    "source_title": "ΝΙCΕRΑΤUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf086": {
+    "textgroup": "kinkel1877",
+    "work": "egf086",
+    "title": "ΑΝΤΙΡΗΟN.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf086/kinkel1877.egf086.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf086.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf086",
+    "source_title": "ΑΝΤΙΡΗΟN.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf087": {
+    "textgroup": "kinkel1877",
+    "work": "egf087",
+    "title": "ANTIMACHUS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf087/kinkel1877.egf087.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf087.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf087",
+    "source_title": "ANTIMACHUS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf088": {
+    "textgroup": "kinkel1877",
+    "work": "egf088",
+    "title": "ΤΗΕΒΑΙS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf088/kinkel1877.egf088.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf088.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf088",
+    "source_title": "ΤΗΕΒΑΙS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf089": {
+    "textgroup": "kinkel1877",
+    "work": "egf089",
+    "title": "ΔΕΛΤΟΙ1).",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf089/kinkel1877.egf089.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf089.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf089",
+    "source_title": "ΔΕΛΤΟΙ1).",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf090": {
+    "textgroup": "kinkel1877",
+    "work": "egf090",
+    "title": "INCERTAE SEDIS FRAGMENTA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf090/kinkel1877.egf090.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf090.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf090",
+    "source_title": "INCERTAE SEDIS FRAGMENTA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf091": {
+    "textgroup": "kinkel1877",
+    "work": "egf091",
+    "title": "FRAGMENTA DUBIA.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf091/kinkel1877.egf091.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf091.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf091",
+    "source_title": "FRAGMENTA DUBIA.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf092": {
+    "textgroup": "kinkel1877",
+    "work": "egf092",
+    "title": "CHOERILUS IASENSIS.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf092/kinkel1877.egf092.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf092.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf092",
+    "source_title": "CHOERILUS IASENSIS.",
+    "source_edition": "kinkel1877-grc1"
+  },
+  "kinkel1877.egf093": {
+    "textgroup": "kinkel1877",
+    "work": "egf093",
+    "title": "ANYTE.",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "kinkel1877-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/kinkel1877/egf093/kinkel1877.egf093.kinkel1877-grc1.xml",
+        "urn": "urn:cts:greekLit:kinkel1877.egf093.kinkel1877-grc1",
+        "label": "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf093",
+    "source_title": "ANYTE.",
+    "source_edition": "kinkel1877-grc1"
   }
 }

@@ -91,6 +91,14 @@ COLLECTION_METADATA = {
         "source_edition_year": 1917,
         "source_edition_statement": "1917 ed.",
     },
+    "kinkel1877": {
+        "collection_year": 1877,
+        "collection_order": 2,
+        "source_edition_year": 1877,
+        "source_edition_statement": "vol. 1, 1877",
+        "collection_label": "Kinkel, vol. 1",
+        "collection_volume": 1,
+    },
 }
 EXTANT_DRAMA = {
     *(f"tlg0085.tlg{i:03d}" for i in range(1, 8)),

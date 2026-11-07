@@ -788,6 +788,15 @@ def _publish_meineke_fragments(site_root, catalog):
     return published
 
 
+def _publish_kinkel_fragments(site_root, catalog):
+    """Publish Kinkel EGF I section works on their printed fragment axis."""
+    registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
+    return _publish_kock_edition(
+        site_root, catalog, registry, "kinkel1877-grc1",
+        "Greek and source context (Kinkel, 1877, vol. I; OCR/AI draft)",
+        "Kinkel EGF I sources and notes", "Gottfried Kinkel")
+
+
 def _fragment_from_html(urn, chapter, content):
     """Recover enough quoted text from a published card for concordance."""
     verse_match = re.search(
@@ -1016,6 +1025,7 @@ def publish(site_root=None):
     nauck_authors = _publish_nauck_author_corpora(site_root, catalog) + 1
     kock_fragments = _publish_kock_fragments(site_root, catalog)
     meineke_fragments = _publish_meineke_fragments(site_root, catalog)
+    kinkel_fragments = _publish_kinkel_fragments(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = (fragments + sophocles_fragments + euripides_fragments
@@ -1025,9 +1035,11 @@ def publish(site_root=None):
           f"{aristophanes_fragments} Aristophanes), "
           f"{kock_fragments} Kock CAF I–III work editions, "
           f"{meineke_fragments} Meineke FCG II–IV work editions, "
+          f"{kinkel_fragments} Kinkel EGF I work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,
             "meineke_works": meineke_fragments,
+            "kinkel_works": kinkel_fragments,
             "fragment_authors": nauck_authors,
             "claudel_versions": claudel}
