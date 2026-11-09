@@ -18,10 +18,10 @@ def _text(element):
 
 def _fragment_number_key(fragment):
     value = str(fragment.get("number") or "")
-    match = re.fullmatch(r"(\d+)(?:_(\d+))?", value)
-    if match:
-        return (0, int(match.group(1)), int(match.group(2) or 0))
-    return (1, value, 0)
+    return tuple(
+        (0, int(token)) if token.isdigit() else (1, token.casefold())
+        for token in re.findall(r"\d+|[^\d._]+", value)
+    )
 
 
 def build(data_root: Path, textgroup: str, version: str, author: str,
@@ -37,12 +37,24 @@ def build(data_root: Path, textgroup: str, version: str, author: str,
         edition = tree.xpath("//tei:div[@type='edition']", namespaces=NS)[0]
         edition_urn = edition.get("n")
         work = edition_urn.split(":")[-1].split(".")[1]
-        object_urn = edition.get("corresp")
+        object_urn = edition.get("corresp") or (
+            f"urn:cite2:perseus:fragmentarycollections.v1:{textgroup}_{work}"
+        )
         title = edition.xpath("string(tei:head[1])", namespaces=NS).strip()
         record_id = f"{author.lower()}-{version}-{work}"
         source_fragments = []
-        for fragment in edition.xpath("./tei:div[@subtype='fragment']", namespaces=NS):
-            number = fragment.get("n")
+        for fragment in edition.xpath(".//tei:div[@subtype='fragment']", namespaces=NS):
+            printed_number = fragment.get("n")
+            volume = fragment.xpath(
+                "string(ancestor::tei:div[@subtype='volume'][1]/@n)",
+                namespaces=NS,
+            ).strip()
+            number = f"{volume}.{printed_number}" if volume else printed_number
+            roman_volume = {"1": "I", "2": "II", "3": "III"}.get(volume, volume)
+            citation_label = (
+                f"SVF {roman_volume} {printed_number}"
+                if version == "arnim1903-grc1" and volume else number
+            )
             source_urn = f"{edition_urn}:{number}"
             lines = [
                 {"ref": line.get("n") or str(index),
@@ -60,6 +72,10 @@ def build(data_root: Path, textgroup: str, version: str, author: str,
                 "edition": version, "source_fragment_urn": source_urn,
                 "same_as": (fragment.get("sameAs") or "").split(),
                 "lines": lines, "context": context,
+                "volume": volume or None,
+                "citation_label": citation_label,
+                "pages": fragment.xpath(".//tei:pb/@n", namespaces=NS),
+                "locator_label": editor,
                 "play_title": title, "play_work": work,
                 "play_urn": object_urn,
             }

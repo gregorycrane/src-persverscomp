@@ -72065,5 +72065,530 @@
     "object_urn": "urn:cite2:perseus:kinkel1877sections.v1:egf093",
     "source_title": "ANYTE.",
     "source_edition": "kinkel1877-grc1"
+  },
+  "tlg0635.svf001": {
+    "textgroup": "tlg0635",
+    "work": "svf001",
+    "author": "Zeno of Citium",
+    "title": "Stoicorum Veterum Fragmenta: Zeno of Citium",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg0635/svf001/tlg0635.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg0635.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Zeno of Citium",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1193.svf001": {
+    "textgroup": "tlg1193",
+    "work": "svf001",
+    "author": "Aristo of Chios",
+    "title": "Stoicorum Veterum Fragmenta: Aristo of Chios",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1193/svf001/tlg1193.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1193.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Aristo of Chios",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2168.svf001": {
+    "textgroup": "tlg2168",
+    "work": "svf001",
+    "author": "Apollophanes",
+    "title": "Stoicorum Veterum Fragmenta: Apollophanes",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2168/svf001/tlg2168.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2168.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Apollophanes",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2169.svf001": {
+    "textgroup": "tlg2169",
+    "work": "svf001",
+    "author": "Herillus of Carthage",
+    "title": "Stoicorum Veterum Fragmenta: Herillus of Carthage",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2169/svf001/tlg2169.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2169.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Herillus of Carthage",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2185.svf001": {
+    "textgroup": "tlg2185",
+    "work": "svf001",
+    "author": "Dionysius the Renegade",
+    "title": "Stoicorum Veterum Fragmenta: Dionysius the Renegade",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2185/svf001/tlg2185.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2185.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Dionysius the Renegade",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1574.svf001": {
+    "textgroup": "tlg1574",
+    "work": "svf001",
+    "author": "Persaeus of Citium",
+    "title": "Stoicorum Veterum Fragmenta: Persaeus of Citium",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1574/svf001/tlg1574.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1574.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Persaeus of Citium",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1269.svf001": {
+    "textgroup": "tlg1269",
+    "work": "svf001",
+    "author": "Cleanthes",
+    "title": "Stoicorum Veterum Fragmenta: Cleanthes",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1269/svf001/tlg1269.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1269.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Cleanthes",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1693.svf001": {
+    "textgroup": "tlg1693",
+    "work": "svf001",
+    "author": "Sphaerus",
+    "title": "Stoicorum Veterum Fragmenta: Sphaerus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1693/svf001/tlg1693.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1693.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Sphaerus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "svfincerti.svf001": {
+    "textgroup": "svfincerti",
+    "work": "svf001",
+    "author": "Early Stoics (uncertain attribution)",
+    "title": "Stoicorum Veterum Fragmenta: Early Stoics (uncertain attribution)",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/svfincerti/svf001/svfincerti.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:svfincerti.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Early Stoics (uncertain attribution)",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1264.svf001": {
+    "textgroup": "tlg1264",
+    "work": "svf001",
+    "author": "Chrysippus",
+    "title": "Stoicorum Veterum Fragmenta: Chrysippus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1264/svf001/tlg1264.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1264.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Chrysippus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2294.svf001": {
+    "textgroup": "tlg2294",
+    "work": "svf001",
+    "author": "Zeno of Tarsus",
+    "title": "Stoicorum Veterum Fragmenta: Zeno of Tarsus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2294/svf001/tlg2294.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2294.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Zeno of Tarsus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1320.svf001": {
+    "textgroup": "tlg1320",
+    "work": "svf001",
+    "author": "Diogenes of Babylon",
+    "title": "Stoicorum Veterum Fragmenta: Diogenes of Babylon",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1320/svf001/tlg1320.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1320.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Diogenes of Babylon",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1146.svf001": {
+    "textgroup": "tlg1146",
+    "work": "svf001",
+    "author": "Antipater of Tarsus",
+    "title": "Stoicorum Veterum Fragmenta: Antipater of Tarsus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1146/svf001/tlg1146.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1146.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Antipater of Tarsus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1748.svf001": {
+    "textgroup": "tlg1748",
+    "work": "svf001",
+    "author": "Sosigenes",
+    "title": "Stoicorum Veterum Fragmenta: Sosigenes",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1748/svf001/tlg1748.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1748.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Sosigenes",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1954.svf001": {
+    "textgroup": "tlg1954",
+    "work": "svf001",
+    "author": "Heraclides of Tarsus",
+    "title": "Stoicorum Veterum Fragmenta: Heraclides of Tarsus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1954/svf001/tlg1954.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1954.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Heraclides of Tarsus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1166.svf001": {
+    "textgroup": "tlg1166",
+    "work": "svf001",
+    "author": "Apollodorus of Seleucia",
+    "title": "Stoicorum Veterum Fragmenta: Apollodorus of Seleucia",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1166/svf001/tlg1166.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1166.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Apollodorus of Seleucia",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1173.svf001": {
+    "textgroup": "tlg1173",
+    "work": "svf001",
+    "author": "Archedemus of Tarsus",
+    "title": "Stoicorum Veterum Fragmenta: Archedemus of Tarsus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1173/svf001/tlg1173.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1173.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Archedemus of Tarsus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2397.svf001": {
+    "textgroup": "tlg2397",
+    "work": "svf001",
+    "author": "Boethus of Sidon",
+    "title": "Stoicorum Veterum Fragmenta: Boethus of Sidon",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2397/svf001/tlg2397.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2397.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Boethus of Sidon",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2398.svf001": {
+    "textgroup": "tlg2398",
+    "work": "svf001",
+    "author": "Basilides the Stoic",
+    "title": "Stoicorum Veterum Fragmenta: Basilides the Stoic",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2398/svf001/tlg2398.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2398.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Basilides the Stoic",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg2399.svf001": {
+    "textgroup": "tlg2399",
+    "work": "svf001",
+    "author": "Eudromus",
+    "title": "Stoicorum Veterum Fragmenta: Eudromus",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2399/svf001/tlg2399.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2399.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Eudromus",
+    "source_edition": "arnim1903-grc1"
+  },
+  "tlg1293.svf001": {
+    "textgroup": "tlg1293",
+    "work": "svf001",
+    "author": "Crinis",
+    "title": "Stoicorum Veterum Fragmenta: Crinis",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "arnim1903-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1293/svf001/tlg1293.svf001.arnim1903-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1293.svf001.arnim1903-grc1",
+        "label": "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "volume.fragment"
+      }
+    },
+    "source_title": "Stoicorum Veterum Fragmenta: Crinis",
+    "source_edition": "arnim1903-grc1"
   }
 }

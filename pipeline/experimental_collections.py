@@ -92,7 +92,8 @@ def _fragment_html(work, fragment, source_label="Nauck’s notes"):
             page_label = f"pp. {pages[0]}–{pages[-1]}"
         else:
             page_label = ""
-        locator = (f'<div class="fc-source-locator">Pearson 1917 · Vol. '+
+        locator_label = fragment.get("locator_label", "Pearson 1917")
+        locator = (f'<div class="fc-source-locator">{escape(locator_label)} · Vol. '+
                    f'{escape(volume_label)}{(" · " + escape(page_label)) if page_label else ""}</div>')
     lines = "".join(
         f'<l n="{escape(str(line["ref"]))}" lang="grc">{escape(line["text"])}</l>'
@@ -112,8 +113,9 @@ def _fragment_html(work, fragment, source_label="Nauck’s notes"):
     display_title = work["title"]
     if work.get("fragment_corpus") and fragment.get("play_title"):
         display_title = f'{display_title} · {fragment["play_title"]}'
+    citation_label = fragment.get("citation_label", fragment["number"])
     return (f'<div class="pmv-fragment"><h3>{escape(display_title)} · Fragment '
-            f'{escape(str(fragment["number"]))}</h3>{locator}{intro}<div class="fc-verse">{lines}</div>'
+            f'{escape(str(citation_label))}</h3>{locator}{intro}<div class="fc-verse">{lines}</div>'
             f'<details class="fc-context" open><summary>Transmitting source and {escape(source_label)}</summary>'
             f'<div>{context}</div></details></div>')
 
@@ -797,6 +799,15 @@ def _publish_kinkel_fragments(site_root, catalog):
         "Kinkel EGF I sources and notes", "Gottfried Kinkel")
 
 
+def _publish_arnim_fragments(site_root, catalog):
+    """Publish Arnim's SVF author collections on the volume.fragment axis."""
+    registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
+    return _publish_kock_edition(
+        site_root, catalog, registry, "arnim1903-grc1",
+        "Greek and source context (von Arnim, 1903-1905; scan-first draft)",
+        "Arnim SVF sources, apparatus, and notes", "Hans von Arnim")
+
+
 def _fragment_from_html(urn, chapter, content):
     """Recover enough quoted text from a published card for concordance."""
     verse_match = re.search(
@@ -1026,6 +1037,7 @@ def publish(site_root=None):
     kock_fragments = _publish_kock_fragments(site_root, catalog)
     meineke_fragments = _publish_meineke_fragments(site_root, catalog)
     kinkel_fragments = _publish_kinkel_fragments(site_root, catalog)
+    arnim_fragments = _publish_arnim_fragments(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = (fragments + sophocles_fragments + euripides_fragments
@@ -1036,10 +1048,12 @@ def publish(site_root=None):
           f"{kock_fragments} Kock CAF I–III work editions, "
           f"{meineke_fragments} Meineke FCG II–IV work editions, "
           f"{kinkel_fragments} Kinkel EGF I work editions, "
+          f"{arnim_fragments} Arnim SVF work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,
             "meineke_works": meineke_fragments,
             "kinkel_works": kinkel_fragments,
+            "arnim_works": arnim_fragments,
             "fragment_authors": nauck_authors,
             "claudel_versions": claudel}
