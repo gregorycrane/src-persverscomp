@@ -808,6 +808,25 @@ def _publish_arnim_fragments(site_root, catalog):
         "Arnim SVF sources, apparatus, and notes", "Hans von Arnim")
 
 
+def _publish_peter_fragments(site_root, catalog):
+    """Publish Peter's HRR I-II works on each work's fragment-number axis."""
+    registry = json.loads(WORK_REGISTRY_PATH.read_text(encoding="utf-8"))
+    editions = (
+        ("peter1914-grc1",
+         "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+         "Peter HRR I sources and notes"),
+        ("peter1906-grc1",
+         "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+         "Peter HRR II sources and notes"),
+    )
+    return sum(
+        _publish_kock_edition(
+            site_root, catalog, registry, short_id, label, source_label,
+            "Hermann Peter")
+        for short_id, label, source_label in editions
+    )
+
+
 def _fragment_from_html(urn, chapter, content):
     """Recover enough quoted text from a published card for concordance."""
     verse_match = re.search(
@@ -1038,6 +1057,7 @@ def publish(site_root=None):
     meineke_fragments = _publish_meineke_fragments(site_root, catalog)
     kinkel_fragments = _publish_kinkel_fragments(site_root, catalog)
     arnim_fragments = _publish_arnim_fragments(site_root, catalog)
+    peter_fragments = _publish_peter_fragments(site_root, catalog)
     claudel = _publish_claudel(site_root, catalog)
     catalog_path.write_text(json.dumps(catalog, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     total_fragments = (fragments + sophocles_fragments + euripides_fragments
@@ -1049,11 +1069,13 @@ def publish(site_root=None):
           f"{meineke_fragments} Meineke FCG II–IV work editions, "
           f"{kinkel_fragments} Kinkel EGF I work editions, "
           f"{arnim_fragments} Arnim SVF work editions, "
+          f"{peter_fragments} Peter HRR I-II work editions, "
           f"{nauck_authors} Nauck author corpora, "
           f"{claudel} Claudel versions")
     return {"fragment_works": fragments, "kock_works": kock_fragments,
             "meineke_works": meineke_fragments,
             "kinkel_works": kinkel_fragments,
             "arnim_works": arnim_fragments,
+            "peter_works": peter_fragments,
             "fragment_authors": nauck_authors,
             "claudel_versions": claudel}

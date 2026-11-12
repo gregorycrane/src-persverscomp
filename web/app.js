@@ -1602,6 +1602,105 @@ let activeWorkKey = "tlg0003.tlg001";
         });
     }
 
+    const LARGE_CHAPTER_NAV_THRESHOLD = 80;
+    const LARGE_CHAPTER_NAV_RADIUS = 6;
+
+    function isArnimFragmentWork(workKey) {
+        const work = CATALOG && CATALOG.works && CATALOG.works[workKey];
+        return Boolean(work && (work.versions || []).some(
+            version => version.short_id === "arnim1903-grc1"));
+    }
+
+    function chapterDisplayLabel(workKey, chapter) {
+        const value = String(chapter);
+        const match = isArnimFragmentWork(workKey) && value.match(/^([123])\.(.+)$/);
+        if (!match) return value;
+        const roman = {"1": "I", "2": "II", "3": "III"}[match[1]];
+        return `SVF ${roman} ${match[2]}`;
+    }
+
+    function normalizeChapterJump(workKey, input) {
+        let value = String(input || "").trim();
+        if (!isArnimFragmentWork(workKey)) return value;
+        value = value.replace(/^SVF\s+/i, "").trim();
+        value = value.replace(/^III\b/i, "3")
+                     .replace(/^II\b/i, "2")
+                     .replace(/^I\b/i, "1");
+        return value.replace(/[\s:]+/g, ".").replace(/^\.+|\.+$/g, "");
+    }
+
+    function appendChapterLink(container, workKey, chapter, currentChapter,
+                               focusHasContent, onNavigate) {
+        const link = document.createElement("a");
+        link.innerText = chapterDisplayLabel(workKey, chapter);
+        link.dataset.chapter = chapter;
+        if (chapter === currentChapter) link.className = "current";
+        if (focusHasContent && !focusHasContent.has(chapter)) {
+            link.classList.add("chapter-unavailable-focus");
+            link.title = "Not divided separately in the focus edition -- click to see other editions here";
+        }
+        link.onclick = () => onNavigate(chapter);
+        container.appendChild(link);
+    }
+
+    function renderLargeChapterNavigation(container, workKey, chapters, currentChapter,
+                                          focusHasContent, onNavigate) {
+        container.classList.add("chapter-items-large");
+
+        const jump = document.createElement("span");
+        jump.className = "chapter-jump-control";
+        const input = document.createElement("input");
+        input.type = "search";
+        input.className = "chapter-jump-input";
+        input.setAttribute("aria-label", "Jump to fragment");
+        input.placeholder = isArnimFragmentWork(workKey) ? "SVF II 456" : "Fragment";
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "chapter-jump-button";
+        button.innerText = "Go";
+        const message = document.createElement("span");
+        message.className = "chapter-jump-message";
+        const navigateFromInput = () => {
+            const target = normalizeChapterJump(workKey, input.value);
+            if (chapters.includes(target)) {
+                message.innerText = "";
+                onNavigate(target);
+            } else {
+                message.innerText = "Not found";
+                input.select();
+            }
+        };
+        button.onclick = navigateFromInput;
+        input.addEventListener("keydown", event => {
+            if (event.key === "Enter") navigateFromInput();
+        });
+        jump.append(input, button, message);
+        container.appendChild(jump);
+
+        const count = document.createElement("span");
+        count.className = "chapter-nav-count";
+        count.innerText = `${chapters.length.toLocaleString()} fragments`;
+        container.appendChild(count);
+
+        const currentIndex = Math.max(0, chapters.indexOf(currentChapter));
+        const indexes = new Set([0, chapters.length - 1]);
+        for (let index = Math.max(0, currentIndex - LARGE_CHAPTER_NAV_RADIUS);
+             index <= Math.min(chapters.length - 1, currentIndex + LARGE_CHAPTER_NAV_RADIUS);
+             index++) indexes.add(index);
+        let previous = -1;
+        [...indexes].sort((a, b) => a - b).forEach(index => {
+            if (previous >= 0 && index - previous > 1) {
+                const ellipsis = document.createElement("span");
+                ellipsis.className = "chapter-nav-ellipsis";
+                ellipsis.innerText = "…";
+                container.appendChild(ellipsis);
+            }
+            appendChapterLink(container, workKey, chapters[index], currentChapter,
+                              focusHasContent, onNavigate);
+            previous = index;
+        });
+    }
+
     function getChapterDataPayload(workKey, book, chapter) {
         if (!window.dbInstance) { console.warn("getChapterDataPayload: no DB loaded"); return null; }
         const parts = workKey.split(".");
@@ -1918,6 +2017,15 @@ function resolvePassageSpec(workKey, spec) {
         const startLine = startSegs[startSegs.length - 1];
         const endLine = endSegs[endSegs.length - 1];
         const flatChapters = GLOBAL_STRUCTURES[workKey] || [];
+
+        // Some genuinely flat citation schemes contain dots inside the
+        // chapter label itself. Arnim SVF is the large production example:
+        // "3.777" means volume 3, fragment 777, not book 3 plus a raw line
+        // that still needs resolving. Prefer an exact flat label before
+        // interpreting dot-separated components structurally.
+        if (!isRange && flatChapters.includes(startRef)) {
+            return { book: null, chapter: startRef, sectionRange: null };
+        }
 
         // A fragment-concordance card retains both editions' native labels
         // (for example P34=N31). Old and external links may cite either
@@ -3466,6 +3574,7 @@ function initializeRoutingFromURL() {
             : canonicalChList;
         if (chapterContainer) {
             chapterContainer.innerHTML = "";
+            chapterContainer.classList.remove("chapter-items-large");
             // The TOC deliberately shows the UNION of every edition's own
             // card labels (e.g. Butler's "8a" alongside Muller's "13b"), so
             // an editorial split introduced by any one edition stays visible
@@ -3491,16 +3600,20 @@ function initializeRoutingFromURL() {
                 console.log("[chapter-toc] getChaptersWithContent disagrees with what's on screen -- skipping greying this render", payload.chapter, [...focusHasContent]);
                 focusHasContent = null;
             }
-            chList.forEach(ch => {
-                const a = document.createElement("a"); a.innerText = ch;
-                if(ch === payload.chapter) a.className = "current";
-                if (focusHasContent && !focusHasContent.has(ch)) {
-                    a.classList.add("chapter-unavailable-focus");
-                    a.title = "Not divided separately in the focus edition -- click to see other editions here";
-                }
-                a.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(payload.book, ch); };
-                chapterContainer.appendChild(a);
-            });
+            const navigateChapter = ch => {
+                activeSectionFilter = null;
+                activeSectionRange = null;
+                triggerTargetNavigation(payload.book, ch);
+            };
+            if (chList.length > LARGE_CHAPTER_NAV_THRESHOLD) {
+                renderLargeChapterNavigation(
+                    chapterContainer, activeWorkKey, chList, payload.chapter,
+                    focusHasContent, navigateChapter);
+            } else {
+                chList.forEach(ch => appendChapterLink(
+                    chapterContainer, activeWorkKey, ch, payload.chapter,
+                    focusHasContent, navigateChapter));
+            }
         }
 
         if (!isDramaOrPoetry) {
@@ -3526,10 +3639,21 @@ function initializeRoutingFromURL() {
                 // Reuses the same (possibly Focus-reordered) chList computed
                 // above for the main chapter TOC, so the rail tree and the
                 // TOC never disagree about reading order.
-                chList.forEach(ch => {
+                const currentIndex = Math.max(0, chList.indexOf(payload.chapter));
+                const railStart = chList.length > LARGE_CHAPTER_NAV_THRESHOLD
+                    ? Math.max(0, currentIndex - 40) : 0;
+                const railEnd = chList.length > LARGE_CHAPTER_NAV_THRESHOLD
+                    ? Math.min(chList.length, currentIndex + 41) : chList.length;
+                if (railStart > 0 || railEnd < chList.length) {
+                    const note = document.createElement("div");
+                    note.className = "rail-window-note";
+                    note.innerText = `Showing ${railStart + 1}–${railEnd} of ${chList.length.toLocaleString()}; use the fragment jump above.`;
+                    railNodesTarget.appendChild(note);
+                }
+                chList.slice(railStart, railEnd).forEach(ch => {
                     const n = document.createElement("div");
                     n.className = `rail-tree-item ${(payload.chapter === ch) ? 'active-rail-node' : ''}`;
-                    n.innerText = isDramaOrPoetry ? `Lines ${ch}` : `${unitLabels.chapter} ${ch}`;
+                    n.innerText = isDramaOrPoetry ? `Lines ${ch}` : chapterDisplayLabel(activeWorkKey, ch);
                     n.onclick = () => { activeSectionFilter = null; activeSectionRange = null; triggerTargetNavigation(null, ch); };
                     railNodesTarget.appendChild(n);
                 });

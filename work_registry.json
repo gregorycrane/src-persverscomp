@@ -72590,5 +72590,3580 @@
     },
     "source_title": "Stoicorum Veterum Fragmenta: Crinis",
     "source_edition": "arnim1903-grc1"
+  },
+  "hrr1a001.hrr1e001": {
+    "textgroup": "hrr1a001",
+    "work": "hrr1e001",
+    "author": "ANNALES MAXIMI",
+    "title": "ANNALES MAXIMI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a001/hrr1e001/hrr1a001.hrr1e001.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a001.hrr1e001.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ANNALES MAXIMI",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2542.hrr1e002": {
+    "textgroup": "tlg2542",
+    "work": "hrr1e002",
+    "author": "Quintus Fabius Pictor",
+    "title": "Q. FABII PICTORIS GRAECAE HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2542/hrr1e002/tlg2542.hrr1e002.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2542.hrr1e002.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. FABII PICTORIS GRAECAE HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2543.hrr1e003": {
+    "textgroup": "tlg2543",
+    "work": "hrr1e003",
+    "author": "Lucius Cincius Alimentus",
+    "title": "L. CINCII ALIMENTI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2543/hrr1e003/tlg2543.hrr1e003.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2543.hrr1e003.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CINCII ALIMENTI HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2163.hrr1e004": {
+    "textgroup": "tlg2163",
+    "work": "hrr1e004",
+    "author": "Publius Cornelius Scipio Africanus Major",
+    "title": "P. CORNELII SCIPIONIS AFRICANI MAIORIS EPISTVLA AD PHILIPPVM REGEM",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2163/hrr1e004/tlg2163.hrr1e004.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2163.hrr1e004.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. CORNELII SCIPIONIS AFRICANI MAIORIS EPISTVLA AD PHILIPPVM REGEM",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2164.hrr1e005": {
+    "textgroup": "tlg2164",
+    "work": "hrr1e005",
+    "author": "Publius Cornelius Scipio Nasica Corculum",
+    "title": "P. CORNELII SCIPIONIS NASICAE CORCVLI EPISTVLA DE KEBVS CONTKA PERSAM GESTIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2164/hrr1e005/tlg2164.hrr1e005.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2164.hrr1e005.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. CORNELII SCIPIONIS NASICAE CORCVLI EPISTVLA DE KEBVS CONTKA PERSAM GESTIS",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2545.hrr1e006": {
+    "textgroup": "tlg2545",
+    "work": "hrr1e006",
+    "author": "Gaius Acilius",
+    "title": "C. ACILII HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2545/hrr1e006/tlg2545.hrr1e006.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2545.hrr1e006.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. ACILII HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2544.hrr1e007": {
+    "textgroup": "tlg2544",
+    "work": "hrr1e007",
+    "author": "Aulus Postumius Albinus",
+    "title": "A. POSTVMII ALBINI GRAECI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2544/hrr1e007/tlg2544.hrr1e007.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2544.hrr1e007.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "A. POSTVMII ALBINI GRAECI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2544.hrr1e008": {
+    "textgroup": "tlg2544",
+    "work": "hrr1e008",
+    "author": "Aulus Postumius Albinus",
+    "title": "POSTVMII DE ADVENTV AENEAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2544/hrr1e008/tlg2544.hrr1e008.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2544.hrr1e008.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "POSTVMII DE ADVENTV AENEAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a009.hrr1e009": {
+    "textgroup": "hrr1a009",
+    "work": "hrr1e009",
+    "author": "M. PORCII CATONIS ORIGINES EX LIBRO I",
+    "title": "M. PORCII CATONIS ORIGINES EX LIBRO I",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a009/hrr1e009/hrr1a009.hrr1e009.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a009.hrr1e009.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "M. PORCII CATONIS ORIGINES EX LIBRO I",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a010.hrr1e010": {
+    "textgroup": "hrr1a010",
+    "work": "hrr1e010",
+    "author": "C. CASSII HEMINAE ANNALES EX LIBRO I",
+    "title": "C. CASSII HEMINAE ANNALES EX LIBRO I",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a010/hrr1e010/hrr1a010.hrr1e010.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a010.hrr1e010.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. CASSII HEMINAE ANNALES EX LIBRO I",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2542.hrr1e011": {
+    "textgroup": "tlg2542",
+    "work": "hrr1e011",
+    "author": "Quintus Fabius Pictor",
+    "title": "FABII PICTORIS LATINI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2542/hrr1e011/tlg2542.hrr1e011.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2542.hrr1e011.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "FABII PICTORIS LATINI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2542.hrr1e012": {
+    "textgroup": "tlg2542",
+    "work": "hrr1e012",
+    "author": "Quintus Fabius Pictor",
+    "title": "FABII PICTOKIS IVRIS PONTIFICII LIBBI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2542/hrr1e012/tlg2542.hrr1e012.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2542.hrr1e012.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "FABII PICTOKIS IVRIS PONTIFICII LIBBI",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a013.hrr1e013": {
+    "textgroup": "hrr1a013",
+    "work": "hrr1e013",
+    "author": "Q. FABII MAXIMI SERVILIANI ANNALES",
+    "title": "Q. FABII MAXIMI SERVILIANI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a013/hrr1e013/hrr1a013.hrr1e013.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a013.hrr1e013.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. FABII MAXIMI SERVILIANI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a014.hrr1e014": {
+    "textgroup": "hrr1a014",
+    "work": "hrr1e014",
+    "author": "C. SEMPEONII GRACCHI AD M. POMPONIVM LIBER",
+    "title": "C. SEMPEONII GRACCHI AD M. POMPONIVM LIBER",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a014/hrr1e014/hrr1a014.hrr1e014.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a014.hrr1e014.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. SEMPEONII GRACCHI AD M. POMPONIVM LIBER",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a015.hrr1e015": {
+    "textgroup": "hrr1a015",
+    "work": "hrr1e015",
+    "author": "L. CALPVENII PISONIS CENSORII FRVGI ANNALES",
+    "title": "L. CALPVENII PISONIS CENSORII FRVGI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a015/hrr1e015/hrr1a015.hrr1e015.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a015.hrr1e015.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CALPVENII PISONIS CENSORII FRVGI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a016.hrr1e016": {
+    "textgroup": "hrr1a016",
+    "work": "hrr1e016",
+    "author": "C. FANNII ANNALES",
+    "title": "C. FANNII ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a016/hrr1e016/hrr1a016.hrr1e016.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a016.hrr1e016.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. FANNII ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a017.hrr1e017": {
+    "textgroup": "hrr1a017",
+    "work": "hrr1e017",
+    "author": "VENNONII ANNALES",
+    "title": "VENNONII ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a017/hrr1e017/hrr1a017.hrr1e017.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a017.hrr1e017.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VENNONII ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrrtuditanus.hrr1e018": {
+    "textgroup": "hrrtuditanus",
+    "work": "hrr1e018",
+    "author": "Gaius Sempronius Tuditanus",
+    "title": "C. SEMPltONII TVDITANI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrtuditanus/hrr1e018/hrrtuditanus.hrr1e018.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrtuditanus.hrr1e018.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. SEMPltONII TVDITANI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrrtuditanus.hrr1e019": {
+    "textgroup": "hrrtuditanus",
+    "work": "hrr1e019",
+    "author": "Gaius Sempronius Tuditanus",
+    "title": "EX MAGISTRATVVM LIBRIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrtuditanus/hrr1e019/hrrtuditanus.hrr1e019.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrtuditanus.hrr1e019.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "EX MAGISTRATVVM LIBRIS",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a020.hrr1e020": {
+    "textgroup": "hrr1a020",
+    "work": "hrr1e020",
+    "author": "CN. GELLII ANNALES",
+    "title": "CN. GELLII ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a020/hrr1e020/hrr1a020.hrr1e020.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a020.hrr1e020.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CN. GELLII ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a021.hrr1e021": {
+    "textgroup": "hrr1a021",
+    "work": "hrr1e021",
+    "author": "L. COELII ANTIPATRI BELLI PVNICI ALTERIVS HISTORIAE AD L. AELIVM",
+    "title": "L. COELII ANTIPATRI BELLI PVNICI ALTERIVS HISTORIAE AD L. AELIVM",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a021/hrr1e021/hrr1a021.hrr1e021.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a021.hrr1e021.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. COELII ANTIPATRI BELLI PVNICI ALTERIVS HISTORIAE AD L. AELIVM",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a022.hrr1e022": {
+    "textgroup": "hrr1a022",
+    "work": "hrr1e022",
+    "author": "<PAVLVS> CLODIVS",
+    "title": "<PAVLVS> CLODIVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a022/hrr1e022/hrr1a022.hrr1e022.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a022.hrr1e022.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "<PAVLVS> CLODIVS",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a023.hrr1e023": {
+    "textgroup": "hrr1a023",
+    "work": "hrr1e023",
+    "author": "SEMPRONII ASELLIONIS RERVM GESTARYM LIBRI",
+    "title": "SEMPRONII ASELLIONIS RERVM GESTARYM LIBRI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a023/hrr1e023/hrr1a023.hrr1e023.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a023.hrr1e023.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "SEMPRONII ASELLIONIS RERVM GESTARYM LIBRI",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrrscaurus.hrr1e024": {
+    "textgroup": "hrrscaurus",
+    "work": "hrr1e024",
+    "author": "Marcus Aemilius Scaurus",
+    "title": "Μ. AEMILII SCAVRI DE VITA SVA EX LIBRO I",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrscaurus/hrr1e024/hrrscaurus.hrr1e024.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrscaurus.hrr1e024.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. AEMILII SCAVRI DE VITA SVA EX LIBRO I",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrrscaurus.hrr1e025": {
+    "textgroup": "hrrscaurus",
+    "work": "hrr1e025",
+    "author": "Marcus Aemilius Scaurus",
+    "title": "ORATIONVM RELIQVIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrscaurus/hrr1e025/hrrscaurus.hrr1e025.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrscaurus.hrr1e025.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ORATIONVM RELIQVIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2546.hrr1e026": {
+    "textgroup": "tlg2546",
+    "work": "hrr1e026",
+    "author": "Publius Rutilius Rufus",
+    "title": "P. RVTILII RVFI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2546/hrr1e026/tlg2546.hrr1e026.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2546.hrr1e026.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. RVTILII RVFI HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2546.hrr1e027": {
+    "textgroup": "tlg2546",
+    "work": "hrr1e027",
+    "author": "Publius Rutilius Rufus",
+    "title": "P. RVTILII RVFI DE VITA SVA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2546/hrr1e027/tlg2546.hrr1e027.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2546.hrr1e027.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. RVTILII RVFI DE VITA SVA",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2546.hrr1e028": {
+    "textgroup": "tlg2546",
+    "work": "hrr1e028",
+    "author": "Publius Rutilius Rufus",
+    "title": "INCERTAE SEDIS RELIQVIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2546/hrr1e028/tlg2546.hrr1e028.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2546.hrr1e028.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "INCERTAE SEDIS RELIQVIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a029.hrr1e029": {
+    "textgroup": "hrr1a029",
+    "work": "hrr1e029",
+    "author": "Q. LVTATII CATVLI",
+    "title": "Q. LVTATII CATVLI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a029/hrr1e029/hrr1a029.hrr1e029.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a029.hrr1e029.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. LVTATII CATVLI",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a030.hrr1e030": {
+    "textgroup": "hrr1a030",
+    "work": "hrr1e030",
+    "author": "L. CORNELII SVLLAE COMMENTARII RERVM GESTARVM",
+    "title": "L. CORNELII SVLLAE COMMENTARII RERVM GESTARVM",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a030/hrr1e030/hrr1a030.hrr1e030.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a030.hrr1e030.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CORNELII SVLLAE COMMENTARII RERVM GESTARVM",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a031.hrr1e031": {
+    "textgroup": "hrr1a031",
+    "work": "hrr1e031",
+    "author": "Ω. CLAVDII QVADRIGARII ANNALES",
+    "title": "Ω. CLAVDII QVADRIGARII ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a031/hrr1e031/hrr1a031.hrr1e031.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a031.hrr1e031.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Ω. CLAVDII QVADRIGARII ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a032.hrr1e032": {
+    "textgroup": "hrr1a032",
+    "work": "hrr1e032",
+    "author": "VALEEII ANTIATIS ANNALES",
+    "title": "VALEEII ANTIATIS ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a032/hrr1e032/hrr1a032.hrr1e032.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a032.hrr1e032.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VALEEII ANTIATIS ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a033.hrr1e033": {
+    "textgroup": "hrr1a033",
+    "work": "hrr1e033",
+    "author": "L. CORNELII SISENNAE HISTORIAE",
+    "title": "L. CORNELII SISENNAE HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a033/hrr1e033/hrr1a033.hrr1e033.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a033.hrr1e033.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CORNELII SISENNAE HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a034.hrr1e034": {
+    "textgroup": "hrr1a034",
+    "work": "hrr1e034",
+    "author": "C. LICINII MACRI ANNALES",
+    "title": "C. LICINII MACRI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a034/hrr1e034/hrr1a034.hrr1e034.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a034.hrr1e034.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. LICINII MACRI ANNALES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a035.hrr1e035": {
+    "textgroup": "hrr1a035",
+    "work": "hrr1e035",
+    "author": "Q. AELH TVBERONIS HISTOKIAE",
+    "title": "Q. AELH TVBERONIS HISTOKIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a035/hrr1e035/hrr1a035.hrr1e035.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a035.hrr1e035.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. AELH TVBERONIS HISTOKIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a036.hrr1e036": {
+    "textgroup": "hrr1a036",
+    "work": "hrr1e036",
+    "author": "PROCILII LIBRI",
+    "title": "PROCILII LIBRI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a036/hrr1e036/hrr1a036.hrr1e036.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a036.hrr1e036.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "PROCILII LIBRI",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a037.hrr1e037": {
+    "textgroup": "hrr1a037",
+    "work": "hrr1e037",
+    "author": "L. SCKIBONII LIBONIS ANNALIS",
+    "title": "L. SCKIBONII LIBONIS ANNALIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a037/hrr1e037/hrr1a037.hrr1e037.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a037.hrr1e037.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. SCKIBONII LIBONIS ANNALIS",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a038.hrr1e038": {
+    "textgroup": "hrr1a038",
+    "work": "hrr1e038",
+    "author": "INCERTAE AETATIS SCRIPTORES",
+    "title": "INCERTAE AETATIS SCRIPTORES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a038/hrr1e038/hrr1a038.hrr1e038.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a038.hrr1e038.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "INCERTAE AETATIS SCRIPTORES",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a039.hrr1e039": {
+    "textgroup": "hrr1a039",
+    "work": "hrr1e039",
+    "author": "ALFII BELLI CARTHAGINIENSIS LIBRI",
+    "title": "ALFII BELLI CARTHAGINIENSIS LIBRI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a039/hrr1e039/hrr1a039.hrr1e039.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a039.hrr1e039.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ALFII BELLI CARTHAGINIENSIS LIBRI",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a040.hrr1e040": {
+    "textgroup": "hrr1a040",
+    "work": "hrr1e040",
+    "author": "GAI PISONIS HISTORIAE",
+    "title": "GAI PISONIS HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a040/hrr1e040/hrr1a040.hrr1e040.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a040.hrr1e040.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "GAI PISONIS HISTORIAE",
+    "source_edition": "peter1914-grc1"
+  },
+  "hrr1a041.hrr1e041": {
+    "textgroup": "hrr1a041",
+    "work": "hrr1e041",
+    "author": "ANNII FETIALIS LIBER",
+    "title": "ANNII FETIALIS LIBER",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1914-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr1a041/hrr1e041/hrr1a041.hrr1e041.peter1914-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr1a041.hrr1e041.peter1914-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 1, 1914; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ANNII FETIALIS LIBER",
+    "source_edition": "peter1914-grc1"
+  },
+  "tlg2165.hrr2e001": {
+    "textgroup": "tlg2165",
+    "work": "hrr2e001",
+    "author": "Marcus Tullius Cicero",
+    "title": "Μ. TVLLI CICERONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2165/hrr2e001/tlg2165.hrr2e001.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2165.hrr2e001.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. TVLLI CICERONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg2165.hrr2e002": {
+    "textgroup": "tlg2165",
+    "work": "hrr2e002",
+    "author": "Marcus Tullius Cicero",
+    "title": "Μ. TVLLI CICERONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2165/hrr2e002/tlg2165.hrr2e002.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2165.hrr2e002.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. TVLLI CICERONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg2165.hrr2e003": {
+    "textgroup": "tlg2165",
+    "work": "hrr2e003",
+    "author": "Marcus Tullius Cicero",
+    "title": "Μ. TVLLI CICERONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2165/hrr2e003/tlg2165.hrr2e003.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2165.hrr2e003.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. TVLLI CICERONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a004.hrr2e004": {
+    "textgroup": "hrr2a004",
+    "work": "hrr2e004",
+    "author": "Μ. TVLLI TIRONIS",
+    "title": "Μ. TVLLI TIRONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a004/hrr2e004/hrr2a004.hrr2e004.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a004.hrr2e004.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. TVLLI TIRONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg1982.hrr2e005": {
+    "textgroup": "tlg1982",
+    "work": "hrr2e005",
+    "author": "Titus Pomponius Atticus",
+    "title": "Τ. POMPONI ATTICI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1982/hrr2e005/tlg1982.hrr2e005.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1982.hrr2e005.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Τ. POMPONI ATTICI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a006.hrr2e006": {
+    "textgroup": "hrr2a006",
+    "work": "hrr2e006",
+    "author": "SAVFEIVS",
+    "title": "SAVFEIVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a006/hrr2e006/hrr2a006.hrr2e006.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a006.hrr2e006.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "SAVFEIVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a007.hrr2e007": {
+    "textgroup": "hrr2a007",
+    "work": "hrr2e007",
+    "author": "ANNALES",
+    "title": "ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a007/hrr2e007/hrr2a007.hrr2e007.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a007.hrr2e007.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ANNALES",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a008.hrr2e008": {
+    "textgroup": "hrr2a008",
+    "work": "hrr2e008",
+    "author": "Μ. TERENTI VAERONIS",
+    "title": "Μ. TERENTI VAERONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a008/hrr2e008/hrr2a008.hrr2e008.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a008.hrr2e008.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. TERENTI VAERONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a009.hrr2e009": {
+    "textgroup": "hrr2a009",
+    "work": "hrr2e009",
+    "author": "CORNELI NEPOTIS",
+    "title": "CORNELI NEPOTIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a009/hrr2e009/hrr2a009.hrr2e009.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a009.hrr2e009.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CORNELI NEPOTIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a010.hrr2e010": {
+    "textgroup": "hrr2a010",
+    "work": "hrr2e010",
+    "author": "C. ATEI PHILOLOGI",
+    "title": "C. ATEI PHILOLOGI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a010/hrr2e010/hrr2a010.hrr2e010.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a010.hrr2e010.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. ATEI PHILOLOGI",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg1920.hrr2e011": {
+    "textgroup": "tlg1920",
+    "work": "hrr2e011",
+    "author": "Gaius Sulpicius Galba",
+    "title": "C. SVLPICI GALBAE HISTORIA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1920/hrr2e011/tlg1920.hrr2e011.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1920.hrr2e011.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. SVLPICI GALBAE HISTORIA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a012.hrr2e012": {
+    "textgroup": "hrr2a012",
+    "work": "hrr2e012",
+    "author": "L. ARRVNTI HISTORIAE BELLI PVNICI",
+    "title": "L. ARRVNTI HISTORIAE BELLI PVNICI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a012/hrr2e012/hrr2a012.hrr2e012.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a012.hrr2e012.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. ARRVNTI HISTORIAE BELLI PVNICI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a013.hrr2e013": {
+    "textgroup": "hrr2a013",
+    "work": "hrr2e013",
+    "author": "MVNATI EVFl",
+    "title": "MVNATI EVFl",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a013/hrr2e013/hrr2a013.hrr2e013.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a013.hrr2e013.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "MVNATI EVFl",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a014.hrr2e014": {
+    "textgroup": "hrr2a014",
+    "work": "hrr2e014",
+    "author": "Τ. AMPIVS BALBVS",
+    "title": "Τ. AMPIVS BALBVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a014/hrr2e014/hrr2a014.hrr2e014.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a014.hrr2e014.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Τ. AMPIVS BALBVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a015.hrr2e015": {
+    "textgroup": "hrr2a015",
+    "work": "hrr2e015",
+    "author": "Μ. ACTORIVS NASO",
+    "title": "Μ. ACTORIVS NASO",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a015/hrr2e015/hrr2a015.hrr2e015.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a015.hrr2e015.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. ACTORIVS NASO",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a016.hrr2e016": {
+    "textgroup": "hrr2a016",
+    "work": "hrr2e016",
+    "author": "L. AVRVNCVLEIVS COTTA",
+    "title": "L. AVRVNCVLEIVS COTTA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a016/hrr2e016/hrr2a016.hrr2e016.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a016.hrr2e016.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. AVRVNCVLEIVS COTTA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a017.hrr2e017": {
+    "textgroup": "hrr2a017",
+    "work": "hrr2e017",
+    "author": "L. CORNELIVS BALBVS",
+    "title": "L. CORNELIVS BALBVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a017/hrr2e017/hrr2a017.hrr2e017.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a017.hrr2e017.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CORNELIVS BALBVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a018.hrr2e018": {
+    "textgroup": "hrr2a018",
+    "work": "hrr2e018",
+    "author": "C. OPPI",
+    "title": "C. OPPI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a018/hrr2e018/hrr2a018.hrr2e018.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a018.hrr2e018.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. OPPI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a019.hrr2e019": {
+    "textgroup": "hrr2a019",
+    "work": "hrr2e019",
+    "author": "TANVSI GEMINI",
+    "title": "TANVSI GEMINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a019/hrr2e019/hrr2a019.hrr2e019.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a019.hrr2e019.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "TANVSI GEMINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a020.hrr2e020": {
+    "textgroup": "hrr2a020",
+    "work": "hrr2e020",
+    "author": "Μ. IVNIVS BRVTVS",
+    "title": "Μ. IVNIVS BRVTVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a020/hrr2e020/hrr2a020.hrr2e020.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a020.hrr2e020.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. IVNIVS BRVTVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a021.hrr2e021": {
+    "textgroup": "hrr2a021",
+    "work": "hrr2e021",
+    "author": "L. CALPVRNI BIBVLI",
+    "title": "L. CALPVRNI BIBVLI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a021/hrr2e021/hrr2a021.hrr2e021.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a021.hrr2e021.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. CALPVRNI BIBVLI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a022.hrr2e022": {
+    "textgroup": "hrr2a022",
+    "work": "hrr2e022",
+    "author": "P. VOLVMNI",
+    "title": "P. VOLVMNI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a022/hrr2e022/hrr2a022.hrr2e022.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a022.hrr2e022.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. VOLVMNI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a023.hrr2e023": {
+    "textgroup": "hrr2a023",
+    "work": "hrr2e023",
+    "author": "Q. DELLI",
+    "title": "Q. DELLI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a023/hrr2e023/hrr2a023.hrr2e023.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a023.hrr2e023.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. DELLI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a024.hrr2e024": {
+    "textgroup": "hrr2a024",
+    "work": "hrr2e024",
+    "author": "IMPERATORIS AVGVSTI",
+    "title": "IMPERATORIS AVGVSTI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a024/hrr2e024/hrr2a024.hrr2e024.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a024.hrr2e024.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATORIS AVGVSTI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a025.hrr2e025": {
+    "textgroup": "hrr2a025",
+    "work": "hrr2e025",
+    "author": "M. VIPSANI AGRIPPAE",
+    "title": "M. VIPSANI AGRIPPAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a025/hrr2e025/hrr2a025.hrr2e025.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a025.hrr2e025.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "M. VIPSANI AGRIPPAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a026.hrr2e026": {
+    "textgroup": "hrr2a026",
+    "work": "hrr2e026",
+    "author": "Μ. VALERI MESSALLAE RVFI",
+    "title": "Μ. VALERI MESSALLAE RVFI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a026/hrr2e026/hrr2a026.hrr2e026.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a026.hrr2e026.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. VALERI MESSALLAE RVFI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a027.hrr2e027": {
+    "textgroup": "hrr2a027",
+    "work": "hrr2e027",
+    "author": "Μ. VALERI MESSALLAE CORVINI",
+    "title": "Μ. VALERI MESSALLAE CORVINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a027/hrr2e027/hrr2a027.hrr2e027.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a027.hrr2e027.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. VALERI MESSALLAE CORVINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a028.hrr2e028": {
+    "textgroup": "hrr2a028",
+    "work": "hrr2e028",
+    "author": "C. ASINI POLLIONIS",
+    "title": "C. ASINI POLLIONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a028/hrr2e028/hrr2a028.hrr2e028.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a028.hrr2e028.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. ASINI POLLIONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a029.hrr2e029": {
+    "textgroup": "hrr2a029",
+    "work": "hrr2e029",
+    "author": "IVLIVS MARATHVS",
+    "title": "IVLIVS MARATHVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a029/hrr2e029/hrr2a029.hrr2e029.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a029.hrr2e029.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IVLIVS MARATHVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a030.hrr2e030": {
+    "textgroup": "hrr2a030",
+    "work": "hrr2e030",
+    "author": "C. DRVSVS",
+    "title": "C. DRVSVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a030/hrr2e030/hrr2a030.hrr2e030.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a030.hrr2e030.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. DRVSVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a031.hrr2e031": {
+    "textgroup": "hrr2a031",
+    "work": "hrr2e031",
+    "author": "IVLIVS SATVRNINVS",
+    "title": "IVLIVS SATVRNINVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a031/hrr2e031/hrr2a031.hrr2e031.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a031.hrr2e031.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IVLIVS SATVRNINVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a032.hrr2e032": {
+    "textgroup": "hrr2a032",
+    "work": "hrr2e032",
+    "author": "AQVILIVS NIGER",
+    "title": "AQVILIVS NIGER",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a032/hrr2e032/hrr2a032.hrr2e032.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a032.hrr2e032.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AQVILIVS NIGER",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a033.hrr2e033": {
+    "textgroup": "hrr2a033",
+    "work": "hrr2e033",
+    "author": "BAEBIVS MACER",
+    "title": "BAEBIVS MACER",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a033/hrr2e033/hrr2a033.hrr2e033.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a033.hrr2e033.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "BAEBIVS MACER",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a034.hrr2e034": {
+    "textgroup": "hrr2a034",
+    "work": "hrr2e034",
+    "author": "C. IVLI HYGINI",
+    "title": "C. IVLI HYGINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a034/hrr2e034/hrr2a034.hrr2e034.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a034.hrr2e034.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. IVLI HYGINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a035.hrr2e035": {
+    "textgroup": "hrr2a035",
+    "work": "hrr2e035",
+    "author": "C. CLODI LICINI",
+    "title": "C. CLODI LICINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a035/hrr2e035/hrr2a035.hrr2e035.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a035.hrr2e035.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. CLODI LICINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a036.hrr2e036": {
+    "textgroup": "hrr2a036",
+    "work": "hrr2e036",
+    "author": "Μ. VERRI FLACCI",
+    "title": "Μ. VERRI FLACCI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a036/hrr2e036/hrr2a036.hrr2e036.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a036.hrr2e036.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. VERRI FLACCI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a037.hrr2e037": {
+    "textgroup": "hrr2a037",
+    "work": "hrr2e037",
+    "author": "FENESTELLAE ANNALES",
+    "title": "FENESTELLAE ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a037/hrr2e037/hrr2a037.hrr2e037.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a037.hrr2e037.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "FENESTELLAE ANNALES",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a038.hrr2e038": {
+    "textgroup": "hrr2a038",
+    "work": "hrr2e038",
+    "author": "A. CREMVTTI CORDI ANNALES",
+    "title": "A. CREMVTTI CORDI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a038/hrr2e038/hrr2a038.hrr2e038.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a038.hrr2e038.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "A. CREMVTTI CORDI ANNALES",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a039.hrr2e039": {
+    "textgroup": "hrr2a039",
+    "work": "hrr2e039",
+    "author": "BRVTTEDII NIGRI HISTORIAE",
+    "title": "BRVTTEDII NIGRI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a039/hrr2e039/hrr2a039.hrr2e039.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a039.hrr2e039.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "BRVTTEDII NIGRI HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a040.hrr2e040": {
+    "textgroup": "hrr2a040",
+    "work": "hrr2e040",
+    "author": "CN. CORNELIYS LKNTVLVS GAETVLICVS",
+    "title": "CN. CORNELIYS LKNTVLVS GAETVLICVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a040/hrr2e040/hrr2a040.hrr2e040.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a040.hrr2e040.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CN. CORNELIYS LKNTVLVS GAETVLICVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrrsenecaelder.hrr2e041": {
+    "textgroup": "hrrsenecaelder",
+    "work": "hrr2e041",
+    "author": "Lucius Annaeus Seneca the Elder",
+    "title": "L. ANNAEI SENECAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrsenecaelder/hrr2e041/hrrsenecaelder.hrr2e041.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrsenecaelder.hrr2e041.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. ANNAEI SENECAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrrclaudius.hrr2e042": {
+    "textgroup": "hrrclaudius",
+    "work": "hrr2e042",
+    "author": "Emperor Claudius",
+    "title": "IMPERATORIS TIBERII CLAVDII NERONIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrclaudius/hrr2e042/hrrclaudius.hrr2e042.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrclaudius.hrr2e042.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATORIS TIBERII CLAVDII NERONIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrrclaudius.hrr2e043": {
+    "textgroup": "hrrclaudius",
+    "work": "hrr2e043",
+    "author": "Emperor Claudius",
+    "title": "IMPERATORIS TIBERII CLAVDII HISTORIA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrclaudius/hrr2e043/hrrclaudius.hrr2e043.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrclaudius.hrr2e043.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATORIS TIBERII CLAVDII HISTORIA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a044.hrr2e044": {
+    "textgroup": "hrr2a044",
+    "work": "hrr2e044",
+    "author": "AGRIPPlNAE CLAVDII COMMENTAKII",
+    "title": "AGRIPPlNAE CLAVDII COMMENTAKII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a044/hrr2e044/hrr2a044.hrr2e044.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a044.hrr2e044.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AGRIPPlNAE CLAVDII COMMENTAKII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a045.hrr2e045": {
+    "textgroup": "hrr2a045",
+    "work": "hrr2e045",
+    "author": "CORNELII BOCCHI HISTORIA",
+    "title": "CORNELII BOCCHI HISTORIA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a045/hrr2e045/hrr2a045.hrr2e045.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a045.hrr2e045.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CORNELII BOCCHI HISTORIA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a046.hrr2e046": {
+    "textgroup": "hrr2a046",
+    "work": "hrr2e046",
+    "author": "AVFIDII BASSI HISTORIAE",
+    "title": "AVFIDII BASSI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a046/hrr2e046/hrr2a046.hrr2e046.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a046.hrr2e046.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AVFIDII BASSI HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a047.hrr2e047": {
+    "textgroup": "hrr2a047",
+    "work": "hrr2e047",
+    "author": "Μ. SERVILII NONIANI ANNALES",
+    "title": "Μ. SERVILII NONIANI ANNALES",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a047/hrr2e047/hrr2a047.hrr2e047.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a047.hrr2e047.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. SERVILII NONIANI ANNALES",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrrsenecaelder.hrr2e048": {
+    "textgroup": "hrrsenecaelder",
+    "work": "hrr2e048",
+    "author": "Lucius Annaeus Seneca the Elder",
+    "title": "L. ANNAEI SENECAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrrsenecaelder/hrr2e048/hrrsenecaelder.hrr2e048.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrrsenecaelder.hrr2e048.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "L. ANNAEI SENECAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a049.hrr2e049": {
+    "textgroup": "hrr2a049",
+    "work": "hrr2e049",
+    "author": "P. CLODII THRASEAE PAETI",
+    "title": "P. CLODII THRASEAE PAETI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a049/hrr2e049/hrr2a049.hrr2e049.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a049.hrr2e049.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "P. CLODII THRASEAE PAETI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a050.hrr2e050": {
+    "textgroup": "hrr2a050",
+    "work": "hrr2e050",
+    "author": "CN. DOMITII CORBVLONIS COMMENTARII",
+    "title": "CN. DOMITII CORBVLONIS COMMENTARII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a050/hrr2e050/hrr2a050.hrr2e050.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a050.hrr2e050.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CN. DOMITII CORBVLONIS COMMENTARII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a051.hrr2e051": {
+    "textgroup": "hrr2a051",
+    "work": "hrr2e051",
+    "author": "C. SVETONII PAVLINI COMMENTARII",
+    "title": "C. SVETONII PAVLINI COMMENTARII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a051/hrr2e051/hrr2a051.hrr2e051.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a051.hrr2e051.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. SVETONII PAVLINI COMMENTARII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a052.hrr2e052": {
+    "textgroup": "hrr2a052",
+    "work": "hrr2e052",
+    "author": "C. LIGIMVS MVCIANVS",
+    "title": "C. LIGIMVS MVCIANVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a052/hrr2e052/hrr2a052.hrr2e052.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a052.hrr2e052.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. LIGIMVS MVCIANVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a053.hrr2e053": {
+    "textgroup": "hrr2a053",
+    "work": "hrr2e053",
+    "author": "TI. CLAVDIVS BALBILLVS",
+    "title": "TI. CLAVDIVS BALBILLVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a053/hrr2e053/hrr2a053.hrr2e053.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a053.hrr2e053.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "TI. CLAVDIVS BALBILLVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a054.hrr2e054": {
+    "textgroup": "hrr2a054",
+    "work": "hrr2e054",
+    "author": "T. FLAVII VESPASIANI COMMENTARII",
+    "title": "T. FLAVII VESPASIANI COMMENTARII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a054/hrr2e054/hrr2a054.hrr2e054.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a054.hrr2e054.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "T. FLAVII VESPASIANI COMMENTARII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a055.hrr2e055": {
+    "textgroup": "hrr2a055",
+    "work": "hrr2e055",
+    "author": "Μ. ANTONII IVLIANI DE IVDAEIS",
+    "title": "Μ. ANTONII IVLIANI DE IVDAEIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a055/hrr2e055/hrr2a055.hrr2e055.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a055.hrr2e055.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. ANTONII IVLIANI DE IVDAEIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a056.hrr2e056": {
+    "textgroup": "hrr2a056",
+    "work": "hrr2e056",
+    "author": "Q. ASCONII PEDIANI",
+    "title": "Q. ASCONII PEDIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a056/hrr2e056/hrr2a056.hrr2e056.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a056.hrr2e056.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. ASCONII PEDIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a057.hrr2e057": {
+    "textgroup": "hrr2a057",
+    "work": "hrr2e057",
+    "author": "C. PLINII SECVNDI",
+    "title": "C. PLINII SECVNDI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a057/hrr2e057/hrr2a057.hrr2e057.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a057.hrr2e057.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "C. PLINII SECVNDI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a058.hrr2e058": {
+    "textgroup": "hrr2a058",
+    "work": "hrr2e058",
+    "author": "FABII RVSTICI HISTORIAE",
+    "title": "FABII RVSTICI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a058/hrr2e058/hrr2a058.hrr2e058.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a058.hrr2e058.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "FABII RVSTICI HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a059.hrr2e059": {
+    "textgroup": "hrr2a059",
+    "work": "hrr2e059",
+    "author": "Μ. CLVVII RVFI HISTORIAE",
+    "title": "Μ. CLVVII RVFI HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a059/hrr2e059/hrr2a059.hrr2e059.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a059.hrr2e059.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. CLVVII RVFI HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a060.hrr2e060": {
+    "textgroup": "hrr2a060",
+    "work": "hrr2e060",
+    "author": "VIPSTANI MESSALLAE HISTORIAE",
+    "title": "VIPSTANI MESSALLAE HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a060/hrr2e060/hrr2a060.hrr2e060.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a060.hrr2e060.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VIPSTANI MESSALLAE HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a061.hrr2e061": {
+    "textgroup": "hrr2a061",
+    "work": "hrr2e061",
+    "author": "IVNII ARVLENI RVSTICI LAVDES THRASEAE PAETI",
+    "title": "IVNII ARVLENI RVSTICI LAVDES THRASEAE PAETI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a061/hrr2e061/hrr2a061.hrr2e061.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a061.hrr2e061.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IVNII ARVLENI RVSTICI LAVDES THRASEAE PAETI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a062.hrr2e062": {
+    "textgroup": "hrr2a062",
+    "work": "hrr2e062",
+    "author": "POMPEI PLANTAE HISTORIAE",
+    "title": "POMPEI PLANTAE HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a062/hrr2e062/hrr2a062.hrr2e062.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a062.hrr2e062.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "POMPEI PLANTAE HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a063.hrr2e063": {
+    "textgroup": "hrr2a063",
+    "work": "hrr2e063",
+    "author": "M. VLPII TRAIANI DACICA",
+    "title": "M. VLPII TRAIANI DACICA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a063/hrr2e063/hrr2a063.hrr2e063.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a063.hrr2e063.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "M. VLPII TRAIANI DACICA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a064.hrr2e064": {
+    "textgroup": "hrr2a064",
+    "work": "hrr2e064",
+    "author": "IMPERATOEIS P. AELII HADRIANI",
+    "title": "IMPERATOEIS P. AELII HADRIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a064/hrr2e064/hrr2a064.hrr2e064.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a064.hrr2e064.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATOEIS P. AELII HADRIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a065.hrr2e065": {
+    "textgroup": "hrr2a065",
+    "work": "hrr2e065",
+    "author": "IMPERATORIS L. SEPTIMII SEVERl",
+    "title": "IMPERATORIS L. SEPTIMII SEVERl",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a065/hrr2e065/hrr2a065.hrr2e065.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a065.hrr2e065.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATORIS L. SEPTIMII SEVERl",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a066.hrr2e066": {
+    "textgroup": "hrr2a066",
+    "work": "hrr2e066",
+    "author": "AELIVS MAYRVS",
+    "title": "AELIVS MAYRVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a066/hrr2e066/hrr2a066.hrr2e066.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a066.hrr2e066.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AELIVS MAYRVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a067.hrr2e067": {
+    "textgroup": "hrr2a067",
+    "work": "hrr2e067",
+    "author": "MARII MAXIMI DE VITA IMPEEATORVM",
+    "title": "MARII MAXIMI DE VITA IMPEEATORVM",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a067/hrr2e067/hrr2a067.hrr2e067.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a067.hrr2e067.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "MARII MAXIMI DE VITA IMPEEATORVM",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a068.hrr2e068": {
+    "textgroup": "hrr2a068",
+    "work": "hrr2e068",
+    "author": "ENCOLPII VITA ALEXANDRI SEVERI",
+    "title": "ENCOLPII VITA ALEXANDRI SEVERI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a068/hrr2e068/hrr2a068.hrr2e068.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a068.hrr2e068.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ENCOLPII VITA ALEXANDRI SEVERI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a069.hrr2e069": {
+    "textgroup": "hrr2a069",
+    "work": "hrr2e069",
+    "author": "SEPTIMII VITA ALEXANDEI SEVERI",
+    "title": "SEPTIMII VITA ALEXANDEI SEVERI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a069/hrr2e069/hrr2a069.hrr2e069.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a069.hrr2e069.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "SEPTIMII VITA ALEXANDEI SEVERI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a070.hrr2e070": {
+    "textgroup": "hrr2a070",
+    "work": "hrr2e070",
+    "author": "GARGILII MARTIALIS VITA ALEXANDRI SEVERI",
+    "title": "GARGILII MARTIALIS VITA ALEXANDRI SEVERI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a070/hrr2e070/hrr2a070.hrr2e070.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a070.hrr2e070.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "GARGILII MARTIALIS VITA ALEXANDRI SEVERI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a071.hrr2e071": {
+    "textgroup": "hrr2a071",
+    "work": "hrr2e071",
+    "author": "AELIVS SABINVS",
+    "title": "AELIVS SABINVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a071/hrr2e071/hrr2a071.hrr2e071.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a071.hrr2e071.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AELIVS SABINVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a072.hrr2e072": {
+    "textgroup": "hrr2a072",
+    "work": "hrr2e072",
+    "author": "VVLCATII TEEENTIANI",
+    "title": "VVLCATII TEEENTIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a072/hrr2e072/hrr2a072.hrr2e072.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a072.hrr2e072.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VVLCATII TEEENTIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a073.hrr2e073": {
+    "textgroup": "hrr2a073",
+    "work": "hrr2e073",
+    "author": "LOLLII VRBICI",
+    "title": "LOLLII VRBICI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a073/hrr2e073/hrr2a073.hrr2e073.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a073.hrr2e073.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "LOLLII VRBICI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a074.hrr2e074": {
+    "textgroup": "hrr2a074",
+    "work": "hrr2e074",
+    "author": "AELII IVNII COEDI VITAE",
+    "title": "AELII IVNII COEDI VITAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a074/hrr2e074/hrr2a074.hrr2e074.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a074.hrr2e074.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AELII IVNII COEDI VITAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a075.hrr2e075": {
+    "textgroup": "hrr2a075",
+    "work": "hrr2e075",
+    "author": "AEMILII PARTHENIANI",
+    "title": "AEMILII PARTHENIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a075/hrr2e075/hrr2a075.hrr2e075.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a075.hrr2e075.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AEMILII PARTHENIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a076.hrr2e076": {
+    "textgroup": "hrr2a076",
+    "work": "hrr2e076",
+    "author": "ACHOLII VITA ALEXANDRI SEVERI",
+    "title": "ACHOLII VITA ALEXANDRI SEVERI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a076/hrr2e076/hrr2a076.hrr2e076.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a076.hrr2e076.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ACHOLII VITA ALEXANDRI SEVERI",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg2122.hrr2e077": {
+    "textgroup": "tlg2122",
+    "work": "hrr2e077",
+    "author": "Gaius Asinius Quadratus",
+    "title": "ΑΣΙΝΙΟΥ ΚΟΥΑΔΡΑΤΟΥ",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg2122/hrr2e077/tlg2122.hrr2e077.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg2122.hrr2e077.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ΑΣΙΝΙΟΥ ΚΟΥΑΔΡΑΤΟΥ",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a078.hrr2e078": {
+    "textgroup": "hrr2a078",
+    "work": "hrr2e078",
+    "author": "VITAE AVCTORVM A TREBELLIO ET A VOPISCO NOMINATORVM CAELESTINI",
+    "title": "VITAE AVCTORVM A TREBELLIO ET A VOPISCO NOMINATORVM CAELESTINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a078/hrr2e078/hrr2a078.hrr2e078.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a078.hrr2e078.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VITAE AVCTORVM A TREBELLIO ET A VOPISCO NOMINATORVM CAELESTINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a079.hrr2e079": {
+    "textgroup": "hrr2a079",
+    "work": "hrr2e079",
+    "author": "IVLII ATHERIANI",
+    "title": "IVLII ATHERIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a079/hrr2e079/hrr2a079.hrr2e079.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a079.hrr2e079.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IVLII ATHERIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a080.hrr2e080": {
+    "textgroup": "hrr2a080",
+    "work": "hrr2e080",
+    "author": "MAEONII ASTYANACTIS",
+    "title": "MAEONII ASTYANACTIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a080/hrr2e080/hrr2a080.hrr2e080.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a080.hrr2e080.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "MAEONII ASTYANACTIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a081.hrr2e081": {
+    "textgroup": "hrr2a081",
+    "work": "hrr2e081",
+    "author": "CORNELl] CAPITOLINI",
+    "title": "CORNELl] CAPITOLINI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a081/hrr2e081/hrr2a081.hrr2e081.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a081.hrr2e081.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CORNELl] CAPITOLINI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a082.hrr2e082": {
+    "textgroup": "hrr2a082",
+    "work": "hrr2e082",
+    "author": "DAOELLII FVSCI",
+    "title": "DAOELLII FVSCI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a082/hrr2e082/hrr2a082.hrr2e082.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a082.hrr2e082.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "DAOELLII FVSCI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a083.hrr2e083": {
+    "textgroup": "hrr2a083",
+    "work": "hrr2e083",
+    "author": "GALLI ANTIPATRI",
+    "title": "GALLI ANTIPATRI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a083/hrr2e083/hrr2a083.hrr2e083.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a083.hrr2e083.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "GALLI ANTIPATRI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a084.hrr2e084": {
+    "textgroup": "hrr2a084",
+    "work": "hrr2e084",
+    "author": "CALLICRATIS TYRII",
+    "title": "CALLICRATIS TYRII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a084/hrr2e084/hrr2a084.hrr2e084.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a084.hrr2e084.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CALLICRATIS TYRII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a085.hrr2e085": {
+    "textgroup": "hrr2a085",
+    "work": "hrr2e085",
+    "author": "THEOCLII",
+    "title": "THEOCLII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a085/hrr2e085/hrr2a085.hrr2e085.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a085.hrr2e085.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "THEOCLII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a086.hrr2e086": {
+    "textgroup": "hrr2a086",
+    "work": "hrr2e086",
+    "author": "NICOMACHI",
+    "title": "NICOMACHI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a086/hrr2e086/hrr2a086.hrr2e086.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a086.hrr2e086.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "NICOMACHI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a087.hrr2e087": {
+    "textgroup": "hrr2a087",
+    "work": "hrr2e087",
+    "author": "ASCLEPIODOTI",
+    "title": "ASCLEPIODOTI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a087/hrr2e087/hrr2a087.hrr2e087.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a087.hrr2e087.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ASCLEPIODOTI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a088.hrr2e088": {
+    "textgroup": "hrr2a088",
+    "work": "hrr2e088",
+    "author": "AVEELII FESTIVI",
+    "title": "AVEELII FESTIVI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a088/hrr2e088/hrr2a088.hrr2e088.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a088.hrr2e088.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AVEELII FESTIVI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a089.hrr2e089": {
+    "textgroup": "hrr2a089",
+    "work": "hrr2e089",
+    "author": "Μ. SALVIDIENI",
+    "title": "Μ. SALVIDIENI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a089/hrr2e089/hrr2a089.hrr2e089.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a089.hrr2e089.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Μ. SALVIDIENI",
+    "source_edition": "peter1906-grc1"
+  },
+  "tlg1968.hrr2e090": {
+    "textgroup": "tlg1968",
+    "work": "hrr2e090",
+    "author": "Fabius Ceryllianus",
+    "title": "FABII CERYLLIANI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/tlg1968/hrr2e090/tlg1968.hrr2e090.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:tlg1968.hrr2e090.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "FABII CERYLLIANI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a091.hrr2e091": {
+    "textgroup": "hrr2a091",
+    "work": "hrr2e091",
+    "author": "ONESIMI VITA PROBI",
+    "title": "ONESIMI VITA PROBI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a091/hrr2e091/hrr2a091.hrr2e091.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a091.hrr2e091.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "ONESIMI VITA PROBI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a092.hrr2e092": {
+    "textgroup": "hrr2a092",
+    "work": "hrr2e092",
+    "author": "TVRDVLI CtALLICANI EPHEMERIS",
+    "title": "TVRDVLI CtALLICANI EPHEMERIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a092/hrr2e092/hrr2a092.hrr2e092.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a092.hrr2e092.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "TVRDVLI CtALLICANI EPHEMERIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a093.hrr2e093": {
+    "textgroup": "hrr2a093",
+    "work": "hrr2e093",
+    "author": "IMPERATORIS CONSTANTINI COMMENTARII",
+    "title": "IMPERATORIS CONSTANTINI COMMENTARII",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a093/hrr2e093/hrr2a093.hrr2e093.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a093.hrr2e093.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "IMPERATORIS CONSTANTINI COMMENTARII",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a094.hrr2e094": {
+    "textgroup": "hrr2a094",
+    "work": "hrr2e094",
+    "author": "Q. AVRELII MEMMIJ SYMMAOHI HISTORIA",
+    "title": "Q. AVRELII MEMMIJ SYMMAOHI HISTORIA",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a094/hrr2e094/hrr2a094.hrr2e094.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a094.hrr2e094.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "Q. AVRELII MEMMIJ SYMMAOHI HISTORIA",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a095.hrr2e095": {
+    "textgroup": "hrr2a095",
+    "work": "hrr2e095",
+    "author": "SCRIPTOEES AETATIS OMNINO INCERTAE FABIVS VESTALIS",
+    "title": "SCRIPTOEES AETATIS OMNINO INCERTAE FABIVS VESTALIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a095/hrr2e095/hrr2a095.hrr2e095.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a095.hrr2e095.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "SCRIPTOEES AETATIS OMNINO INCERTAE FABIVS VESTALIS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a096.hrr2e096": {
+    "textgroup": "hrr2a096",
+    "work": "hrr2e096",
+    "author": "DECVLO",
+    "title": "DECVLO",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a096/hrr2e096/hrr2a096.hrr2e096.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a096.hrr2e096.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "DECVLO",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a097.hrr2e097": {
+    "textgroup": "hrr2a097",
+    "work": "hrr2e097",
+    "author": "CORNELIVS VALERIANVS",
+    "title": "CORNELIVS VALERIANVS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a097/hrr2e097/hrr2a097.hrr2e097.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a097.hrr2e097.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "CORNELIVS VALERIANVS",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a098.hrr2e098": {
+    "textgroup": "hrr2a098",
+    "work": "hrr2e098",
+    "author": "PESCENNII FESTI",
+    "title": "PESCENNII FESTI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a098/hrr2e098/hrr2a098.hrr2e098.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a098.hrr2e098.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "PESCENNII FESTI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a099.hrr2e099": {
+    "textgroup": "hrr2a099",
+    "work": "hrr2e099",
+    "author": "BRVTTII HISTORIAE",
+    "title": "BRVTTII HISTORIAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a099/hrr2e099/hrr2a099.hrr2e099.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a099.hrr2e099.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "BRVTTII HISTORIAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a100.hrr2e100": {
+    "textgroup": "hrr2a100",
+    "work": "hrr2e100",
+    "author": "KVBELLII BLANDI",
+    "title": "KVBELLII BLANDI",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a100/hrr2e100/hrr2a100.hrr2e100.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a100.hrr2e100.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "KVBELLII BLANDI",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a101.hrr2e101": {
+    "textgroup": "hrr2a101",
+    "work": "hrr2e101",
+    "author": "AEMILII SVRAE",
+    "title": "AEMILII SVRAE",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a101/hrr2e101/hrr2a101.hrr2e101.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a101.hrr2e101.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "AEMILII SVRAE",
+    "source_edition": "peter1906-grc1"
+  },
+  "hrr2a102.hrr2e102": {
+    "textgroup": "hrr2a102",
+    "work": "hrr2e102",
+    "author": "VALENTIS",
+    "title": "VALENTIS",
+    "fragmentary": true,
+    "record_type": "fragment_collection",
+    "editions": {},
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "fragment_editions": {
+      "peter1906-grc1": {
+        "path": "/Users/gcrane/github/grcnewfragments/data/hrr2a102/hrr2e102/hrr2a102.hrr2e102.peter1906-grc1.xml",
+        "urn": "urn:cts:greekLit:hrr2a102.hrr2e102.peter1906-grc1",
+        "label": "Greek and Latin with source context (Peter, volume 2, 1906; scan-first draft)",
+        "class": "greek-text",
+        "format": "tei_fragment_work",
+        "corresp_axis": "fragment"
+      }
+    },
+    "source_title": "VALENTIS",
+    "source_edition": "peter1906-grc1"
   }
 }
