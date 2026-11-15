@@ -1,6 +1,7 @@
 """doc_type: poetry_cards. Relocated from Cell 4."""
 import os
 import re
+from copy import deepcopy
 from html import escape
 from collections import OrderedDict
 from pipeline.core.xml_utils import (
@@ -231,6 +232,64 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
     buffer_map = {}
     pending_page_breaks = []
 
+    def _split_leaf_at_card_milestones(elem):
+        """Split an ``l``/``stage`` at authored, direct-child card breaks.
+
+        Perseus translations sometimes use one coarse ``<l n>`` for several
+        Greek verses and put the exact Storr card boundary *inside* that
+        element.  Rendering the leaf atomically either loses the boundary or
+        moves the whole leaf to the later card.  Return small synthetic leaves
+        so text on each side remains on the side explicitly encoded by TEI.
+        The continuation has a blank line-number cell rather than repeating
+        the source line number.
+        """
+        markers = [
+            child for child in elem
+            if isinstance(child.tag, str)
+            and child.tag.split("}")[-1] == "milestone"
+            and child.get("unit") == "card"
+        ]
+        if not markers:
+            return [(None, elem)]
+
+        def _empty_fragment():
+            fragment = deepcopy(elem)
+            for child in list(fragment):
+                fragment.remove(child)
+            fragment.text = None
+            fragment.tail = None
+            return fragment
+
+        pieces = []
+        fragment = _empty_fragment()
+        fragment.text = elem.text
+        boundary = None
+        for child in elem:
+            is_card = (
+                isinstance(child.tag, str)
+                and child.tag.split("}")[-1] == "milestone"
+                and child.get("unit") == "card"
+            )
+            if is_card:
+                if "".join(fragment.itertext()).strip():
+                    pieces.append((boundary, fragment))
+                fragment = _empty_fragment()
+                fragment.text = child.tail
+                boundary = (child.get("n") or "").strip() or None
+                continue
+            fragment.append(deepcopy(child))
+
+        if "".join(fragment.itertext()).strip():
+            pieces.append((boundary, fragment))
+
+        # A milestone may be the first child of the line.  In that case the
+        # first real piece still owns the source line number.  Later pieces
+        # are visual continuations and should not repeat it.
+        for index, (_, piece) in enumerate(pieces):
+            if index and piece.get("n") is not None:
+                piece.attrib.pop("n", None)
+        return pieces
+
     def _add_content(bk, label, html):
         if html and html.strip():
             buffer_map.setdefault((bk, label), []).append(html)
@@ -315,24 +374,6 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
             if elem.tail:
                 _add_content(current_book, cur_label, elem.tail)
             return
-
-        # Some editions (e.g. Evelyn-White's 1914 Theogony translation) embed
-        # the card milestone AS THE FIRST CHILD of <l> rather than as a
-        # preceding sibling (contrast the Greek baseline, which always puts
-        # it before <l>). Because <l>/<stage> are leaves below — their full
-        # text is pulled in one shot via extract_text_recursive and we never
-        # recurse into them with _walk — a milestone nested this way is
-        # never otherwise seen, so the card boundary silently never advances
-        # and the whole text collapses into the first card. Check for it here.
-        if tag in ("l", "stage"):
-            for desc in elem.iter():
-                if desc is elem:
-                    continue
-                if desc.tag.split("}")[-1] == "milestone" and desc.get("unit") == "card":
-                    n_val = (desc.get("n") or "").strip()
-                    if n_val and (current_book, n_val) in card_n_to_label:
-                        cur_label = card_n_to_label[(current_book, n_val)]
-                    break  # only the leading milestone (if any) should matter
 
         if tag == "div":
             subtype = (elem.get("subtype") or elem.get("type") or "").lower()
@@ -429,14 +470,27 @@ def parse_poetry_cards_tei(path, master_intervals, lineno_sigil=None, line_remap
             return
 
         if tag in ("l", "stage"):
-            for page_break in pending_page_breaks:
-                _add_content(current_book, label, page_break)
-            pending_page_breaks.clear()
-            rendered = extract_text_recursive(
-                elem, strip_paragraphs=True, lineno_sigil=lineno_sigil,
-                footnote_lookup=footnote_lookup)
-            if tag == "l": rendered = _attach_standoff(elem, rendered)
-            _add_content(current_book, label, rendered)
+            for piece_index, (boundary_n, piece) in enumerate(
+                    _split_leaf_at_card_milestones(elem)):
+                if boundary_n and (current_book, boundary_n) in card_n_to_label:
+                    cur_label = card_n_to_label[(current_book, boundary_n)]
+                piece_label = cur_label
+                if not piece_label:
+                    bk_ivs = master_intervals.get(current_book, [])
+                    piece_label = bk_ivs[0]["label"] if bk_ivs else "1"
+                for page_break in pending_page_breaks:
+                    _add_content(current_book, piece_label, page_break)
+                pending_page_breaks.clear()
+                rendered = extract_text_recursive(
+                    piece, strip_paragraphs=True, lineno_sigil=lineno_sigil,
+                    footnote_lookup=footnote_lookup)
+                if tag == "l":
+                    # Stand-off annotations are line-scoped, not fragment-
+                    # scoped. Attach them once to the first piece and retain
+                    # identity-based handling for the source's final line.
+                    rendered = _attach_standoff(
+                        elem if piece_index == 0 else piece, rendered)
+                _add_content(current_book, piece_label, rendered)
             # The leaf renderer excludes the XML tail: it belongs after the
             # stage/verse, and may contain the rest of a prose speech.
             if elem.tail:

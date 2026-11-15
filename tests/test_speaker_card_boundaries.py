@@ -59,3 +59,38 @@ def test_prose_speaker_before_opening_milestone_joins_new_card(tmp_path):
     assert "Iolaus" not in old
     assert "Iolaus" in new
     assert "new card" in new
+
+
+def test_poetry_milestone_inside_line_splits_text_at_exact_boundary(tmp_path):
+    path = _write_tei(tmp_path, '''
+      <div type="edition" subtype="book" n="1">
+        <milestone unit="card" n="1"/>
+        <l n="1">end of old card <hi>with markup</hi>
+          <milestone unit="card" n="3"/>start of new card</l>
+        <l n="4">rest of new card</l>
+      </div>
+    ''')
+    parsed = parse_poetry_cards_tei(path, MASTER_INTERVALS)
+    old = parsed["1"]["1-2"]["1"]
+    new = parsed["1"]["3-4"]["1"]
+
+    assert "end of old card" in old
+    assert "with markup" in old
+    assert "start of new card" not in old
+    assert "end of old card" not in new
+    assert "start of new card" in new
+    assert "rest of new card" in new
+
+
+def test_poetry_leading_nested_milestone_keeps_line_number_on_new_card(tmp_path):
+    path = _write_tei(tmp_path, '''
+      <div type="edition" subtype="book" n="1">
+        <milestone unit="card" n="1"/><l n="1">old card</l>
+        <l n="3"><milestone unit="card" n="3"/>new card</l>
+      </div>
+    ''')
+    parsed = parse_poetry_cards_tei(path, MASTER_INTERVALS)
+    new = parsed["1"]["3-4"]["1"]
+
+    assert 'data-n="3"' in new
+    assert "new card" in new
