@@ -314,9 +314,12 @@ def count_version_in_parts(site: Path, work: dict, version: dict) -> tuple[int, 
         if candidate.get("doc_type") == "treebank"
         and candidate.get("source_version") == version_id
     ]
-    treebank_count = 0
     html_count = 0
-    saw_treebank = False
+    treebank_counts = {
+        treebank.get("short_id"): 0
+        for treebank in treebanks
+        if treebank.get("short_id")
+    }
     for part in work.get("parts", []):
         db_path = site / "data" / work["textgroup"] / work["work"] / part["file"]
         if not db_path.exists():
@@ -325,15 +328,17 @@ def count_version_in_parts(site: Path, work: dict, version: dict) -> tuple[int, 
         try:
             if treebanks and has_table(connection, "treebank_tokens"):
                 for treebank in treebanks:
+                    treebank_id = treebank.get("short_id")
+                    if not treebank_id:
+                        continue
                     rows = connection.execute(
                         "SELECT form, upos FROM treebank_tokens WHERE version_short_id=?",
-                        (treebank.get("short_id"),),
+                        (treebank_id,),
                     )
                     for form, upos in rows:
-                        saw_treebank = True
                         if upos != "PUNCT" and form and any(char.isalpha() for char in form):
-                            treebank_count += 1
-            if not saw_treebank and has_table(connection, "text_segments"):
+                            treebank_counts[treebank_id] += 1
+            if has_table(connection, "text_segments"):
                 rows = connection.execute(
                     "SELECT content_html FROM text_segments WHERE version_short_id=?",
                     (version_id,),
@@ -341,7 +346,17 @@ def count_version_in_parts(site: Path, work: dict, version: dict) -> tuple[int, 
                 html_count += sum(count_html(row[0]) for row in rows)
         finally:
             connection.close()
-    if saw_treebank:
+    # Surviving-play totals measure editions, not linguistic annotations.
+    # Their rendered text is both complete and edition-specific, whereas an
+    # attached treebank may cover only part of a play or there may be several
+    # independent treebanks for the same edition.  Summing those annotations
+    # doubled Sophocles and an incomplete treebank reduced Euripides'
+    # Andromache to about one sixth of its actual size.
+    work_key = f"{work.get('textgroup')}.{work.get('work')}"
+    if work_key in EXTANT_DRAMA and html_count:
+        return html_count, "visible text"
+    treebank_count = sum(treebank_counts.values())
+    if treebank_count:
         return treebank_count, "treebank tokens excluding punctuation"
     return html_count, "visible text"
 
@@ -575,8 +590,10 @@ def build(site: Path, output: Optional[Path] = None) -> dict:
     payload = {
         "schema_version": 2,
         "counting_note": (
-            "Complete-work counts use the first available text version, preferring source-edition treebank "
-            "tokens with punctuation excluded. Fragment counts include quoted authorial text only; "
+            "Surviving-play counts use the visible text of the first available edition so incomplete "
+            "or parallel treebanks cannot distort the totals. Other complete-work counts prefer "
+            "source-edition treebank tokens with punctuation excluded. "
+            "Fragment counts include quoted authorial text only; "
             "transmitting sources, notes, and punctuation-only tokens are excluded. Author totals add "
             "surviving-play words to the largest fragmentary edition; alternative fragment editions are "
             "listed separately and are not added together."

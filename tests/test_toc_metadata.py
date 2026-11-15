@@ -1,10 +1,90 @@
+from __future__ import annotations
+
+import sqlite3
+
 from tools.build_toc_metadata import (
     add_author_word_totals,
     collection_metadata,
     count_fragment_html,
+    count_version_in_parts,
     edition_name,
     merge_catalog_fragments,
 )
+
+
+def _write_count_fixture(
+    tmp_path, *, html: str, treebank_rows: list[tuple[str, str, str]]
+):
+    work_dir = tmp_path / "data" / "tlg0011" / "tlg002"
+    work_dir.mkdir(parents=True)
+    db_path = work_dir / "part1.db"
+    connection = sqlite3.connect(db_path)
+    connection.execute(
+        "CREATE TABLE text_segments (version_short_id TEXT, content_html TEXT)"
+    )
+    connection.execute(
+        "CREATE TABLE treebank_tokens (version_short_id TEXT, form TEXT, upos TEXT)"
+    )
+    connection.execute(
+        "INSERT INTO text_segments VALUES (?, ?)", ("edition-grc1", html)
+    )
+    connection.executemany(
+        "INSERT INTO treebank_tokens VALUES (?, ?, ?)", treebank_rows
+    )
+    connection.commit()
+    connection.close()
+    return {
+        "textgroup": "tlg0011",
+        "work": "tlg002",
+        "parts": [{"file": "part1.db"}],
+        "versions": [
+            {
+                "short_id": "tb-one",
+                "doc_type": "treebank",
+                "source_version": "edition-grc1",
+            },
+            {
+                "short_id": "tb-two",
+                "doc_type": "treebank",
+                "source_version": "edition-grc1",
+            },
+        ],
+    }
+
+
+def test_complete_work_counts_edition_text_once_with_multiple_treebanks(tmp_path):
+    work = _write_count_fixture(
+        tmp_path,
+        html='<div class="line-text-cell">alpha beta gamma</div>',
+        treebank_rows=[
+            ("tb-one", "alpha", "NOUN"),
+            ("tb-one", "beta", "NOUN"),
+            ("tb-two", "alpha", "NOUN"),
+            ("tb-two", "beta", "NOUN"),
+        ],
+    )
+
+    count, method = count_version_in_parts(
+        tmp_path, work, {"short_id": "edition-grc1"}
+    )
+
+    assert count == 3
+    assert method == "visible text"
+
+
+def test_complete_work_does_not_prefer_an_incomplete_treebank(tmp_path):
+    work = _write_count_fixture(
+        tmp_path,
+        html='<div class="line-text-cell">alpha beta gamma delta</div>',
+        treebank_rows=[("tb-one", "alpha", "NOUN")],
+    )
+
+    count, method = count_version_in_parts(
+        tmp_path, work, {"short_id": "edition-grc1"}
+    )
+
+    assert count == 4
+    assert method == "visible text"
 
 
 def test_author_total_uses_surviving_plays_and_largest_fragment_edition():
