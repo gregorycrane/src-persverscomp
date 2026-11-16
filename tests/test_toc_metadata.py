@@ -102,7 +102,7 @@ def test_author_total_uses_surviving_plays_and_largest_fragment_edition():
             "surviving_play": True,
             "word_count": 120654,
         },
-        # A fragmentary dramatic work represented in the normal work catalog
+        # A substantial fragmentary dramatic work is counted separately and
         # must not be folded into the surviving-play subtotal.
         "tlg0011.tlg008": {
             "surviving_play": False,
@@ -113,9 +113,17 @@ def test_author_total_uses_surviving_plays_and_largest_fragment_edition():
     result = add_author_word_totals(authors, complete_works)["tlg0011"]
 
     assert result["surviving_word_count"] == 120654
+    assert result["additional_works"] == [
+        {
+            "work": "tlg0011.tlg008",
+            "title": "Ichneutae",
+            "word_count": 1914,
+        }
+    ]
+    assert result["additional_work_word_count"] == 1914
     assert result["counted_fragment_edition"] == "Pearson"
     assert result["counted_fragment_word_count"] == 8513
-    assert result["total_word_count"] == 129167
+    assert result["total_word_count"] == 131081
 
 
 def test_kock_volume_one_collection_label():

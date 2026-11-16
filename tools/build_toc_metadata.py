@@ -107,6 +107,14 @@ EXTANT_DRAMA = {
     *(f"tlg0019.tlg{i:03d}" for i in range(1, 12)),
 }
 
+# Substantial dramatic texts that deserve their own named contribution to an
+# author's total, but should not be described as wholly surviving plays.  They
+# are also kept separate from fragment collections so that a collection can
+# point to the work without counting it twice.
+SEPARATELY_COUNTED_DRAMA = {
+    "tlg0011.tlg008": "Ichneutae",
+}
+
 
 class VisibleText(HTMLParser):
     """Extract text while excluding line numbers, notes, and apparatus."""
@@ -405,10 +413,10 @@ def add_author_word_totals(authors: dict, complete_works: dict) -> dict:
     """Attach transparent author totals to the TOC metadata.
 
     For authors with fragment collections, the total is the sum of words in
-    surviving plays plus the single fragmentary edition with the greatest
-    word count.  Alternative fragment editions are reported separately and
-    are never added together.  Fragmentary dramatic works such as Ichneutae
-    are deliberately excluded from the surviving-play subtotal.
+    surviving plays, separately named substantial dramatic texts such as
+    Ichneutae, and the single fragmentary edition with the greatest word
+    count. Alternative fragment editions are reported separately and are
+    never added together.
     """
     for textgroup, author in authors.items():
         surviving_words = sum(
@@ -418,6 +426,20 @@ def add_author_word_totals(authors: dict, complete_works: dict) -> dict:
             and work.get("surviving_play")
         )
         author["surviving_word_count"] = surviving_words
+
+        additional_works = [
+            {
+                "work": work_key,
+                "title": SEPARATELY_COUNTED_DRAMA[work_key],
+                "word_count": complete_works[work_key].get("word_count", 0),
+            }
+            for work_key in SEPARATELY_COUNTED_DRAMA
+            if work_key.startswith(textgroup + ".") and work_key in complete_works
+        ]
+        additional_words = sum(work["word_count"] for work in additional_works)
+        if additional_works:
+            author["additional_works"] = additional_works
+            author["additional_work_word_count"] = additional_words
 
         editions = author.get("editions", [])
         counted = max(
@@ -431,7 +453,9 @@ def add_author_word_totals(authors: dict, complete_works: dict) -> dict:
             author["counted_fragment_edition"] = (
                 counted.get("collection_label") or counted.get("edition")
             )
-        author["total_word_count"] = surviving_words + fragment_words
+        author["total_word_count"] = (
+            surviving_words + additional_words + fragment_words
+        )
     return authors
 
 
@@ -588,7 +612,7 @@ def build(site: Path, output: Optional[Path] = None) -> dict:
         )["surviving_play_count"] = count
     authors = add_author_word_totals(authors, complete_works)
     payload = {
-        "schema_version": 2,
+        "schema_version": 3,
         "counting_note": (
             "Surviving-play counts use the visible text of the first available edition so incomplete "
             "or parallel treebanks cannot distort the totals. Other complete-work counts prefer "
@@ -596,7 +620,9 @@ def build(site: Path, output: Optional[Path] = None) -> dict:
             "Fragment counts include quoted authorial text only; "
             "transmitting sources, notes, and punctuation-only tokens are excluded. Author totals add "
             "surviving-play words to the largest fragmentary edition; alternative fragment editions are "
-            "listed separately and are not added together."
+            "listed separately and are not added together. Substantial fragmentary dramatic texts "
+            "such as Ichneutae are identified and added separately, without being described as "
+            "wholly surviving plays or duplicated in a fragment collection."
         ),
         "authors": authors,
         "works": {**complete_works, **fragment_works},

@@ -111,6 +111,7 @@ window.PMVFragmentCollections = (() => {
     const bits=[];
     const wordTotal=authorWordTotal(name,catalog);
     if(surviving)bits.push(`${surviving.toLocaleString()} surviving play${surviving===1?'':'s'}${wordTotal?`: ${wordTotal.completeWords.toLocaleString()} words`:''}`);
+    (stats.additional_works||[]).forEach(work=>bits.push(`${work.title}: ${(work.word_count||0).toLocaleString()} words`));
     if((stats.editions||[]).length===1) {
       const edition=stats.editions[0], fragments=edition.fragment_count||0;
       if(plays)bits.push(`${plays.toLocaleString()} ${fragments?'play':'fragmentary work'}${plays===1?'':'s'}`);
@@ -134,6 +135,8 @@ window.PMVFragmentCollections = (() => {
       total:stats.total_word_count,
       countedEdition:stats.counted_fragment_edition||null,
       completeWords:stats.surviving_word_count||0,
+      additionalWorks:stats.additional_works||[],
+      additionalWords:stats.additional_work_word_count||0,
       fragmentWords:stats.counted_fragment_word_count||0
     } : null;
     const editions=(stats&&stats.editions)||[];
@@ -147,7 +150,7 @@ window.PMVFragmentCollections = (() => {
     const fragmentWords=counted&&Number.isFinite(counted.word_count)?counted.word_count:0;
     const total=completeWords+fragmentWords;
     if(!total)return null;
-    return {total,countedEdition:counted?(counted.collection_label||counted.edition):null,completeWords,fragmentWords};
+    return {total,countedEdition:counted?(counted.collection_label||counted.edition):null,completeWords,additionalWorks:[],additionalWords:0,fragmentWords};
   }
   function versionLang(shortId) {
     let found=null;
@@ -288,8 +291,12 @@ window.PMVFragmentCollections = (() => {
         const open=q || author || expanded[name];
         const collectionSummary=authorCollectionSummary(name,catalog);
         const wordTotal=authorWordTotal(name,catalog);
-        const totalBasis=wordTotal&&wordTotal.countedEdition?(wordTotal.completeWords?'surviving plays + ':'')+escape(wordTotal.countedEdition):'';
-        const totalTitle=wordTotal&&wordTotal.completeWords?'Surviving plays plus the fragmentary edition with the most words':'Fragmentary edition with the most words';
+        const totalParts=[];
+        if(wordTotal?.completeWords)totalParts.push('surviving plays');
+        (wordTotal?.additionalWorks||[]).forEach(work=>totalParts.push(escape(work.title)));
+        if(wordTotal?.countedEdition)totalParts.push(escape(wordTotal.countedEdition));
+        const totalBasis=totalParts.join(' + ');
+        const totalTitle=wordTotal?.additionalWorks?.length?'Surviving plays, separately identified substantial fragmentary works, and the fragmentary edition with the most words':wordTotal&&wordTotal.completeWords?'Surviving plays plus the fragmentary edition with the most words':'Fragmentary edition with the most words';
         const wordSummary=wordTotal?`<span class="fc-author-word-total" title="${totalTitle}${wordTotal.countedEdition?' ('+escape(wordTotal.countedEdition)+')':''}">— ${wordTotal.total.toLocaleString()} words${totalBasis?' ('+totalBasis+')':''}</span>`:'';
         const authorSummary=collectionSummary?`<small class="fc-author-fragments">${escape(collectionSummary)}</small>`:'';
         const surviving=items.filter(w=>tocForWork(w)&&tocForWork(w).surviving_play);
