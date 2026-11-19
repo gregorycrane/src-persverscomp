@@ -221,6 +221,27 @@ def _resolve_targets(requested: list) -> list:
     return resolved
 
 
+def _needs_experimental_publish(work_keys: list) -> bool:
+    """Return whether a targeted build changed a fragment-only collection.
+
+    ``experimental_collections.publish()`` rewrites thousands of generated
+    fragment shards.  Ordinary corpus works are already handled by the
+    incremental sharder and must not pay that cost.  Keep the full publisher
+    for registry records whose data is produced by the experimental fragment
+    pipeline rather than the ordinary TEI ingestion path.
+    """
+    for work_key in work_keys:
+        meta = WORK_REGISTRY[work_key]
+        if (
+            meta.get("fragmentary")
+            or meta.get("fragment_corpus")
+            or meta.get("fragment_editions")
+            or str(meta.get("record_type", "")).startswith("fragment")
+        ):
+            return True
+    return False
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description="Perseus Multitext Viewer build orchestrator")
     ap.add_argument("--work", action="append", dest="works",
@@ -245,7 +266,6 @@ def main(argv=None):
     _ensure_monolith(DB_PATH, shard_root, index_only=args.index_only)
 
     if args.index_only:
-        experimental_collections.publish()
         conn = sqlite3.connect(str(DB_PATH))
         index_builder.rebuild(conn)
         conn.close()
@@ -273,7 +293,8 @@ def main(argv=None):
         sharding.split_corpus_by_work(
             str(DB_PATH), str(WORKSPACE_DIR / "site"), only_work_keys=changed)
 
-        experimental_collections.publish()
+        if _needs_experimental_publish(changed):
+            experimental_collections.publish()
 
         # Rebuild every author/work lexicon scoped to a changed textgroup.
         # This keeps resources such as Dindorf and Klaeber in the lexicon

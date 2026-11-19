@@ -7832,6 +7832,30 @@
       "33": "XXXIII. Oratio nataliciis Friderici Guilelmi IV. celebrandis d. XV. m. Octobris a. MDCCCXXXXVII. habita."
     }
   },
+  "boeckh.reden": {
+    "textgroup": "boeckh",
+    "work": "reden",
+    "author": "August Boeckh",
+    "title": "Reden gehalten auf der Universität und in der Akademie der Wissenschaften zu Berlin",
+    "editions": {
+      "leipzig1859-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/reden/boeckh.reden.leipzig1859-deu1.xml",
+        "label": "German (F. Ascherson, ed. 1859) (OCR draft)",
+        "class": "german-text",
+        "parse_mode": "speech_collection_sentences",
+        "book_div_type": "speech"
+      }
+    },
+    "appcrits": {},
+    "translations": {},
+    "commentaries": {},
+    "treebanks": {},
+    "unit_labels": {
+      "book": "Speech",
+      "chapter": "Paragraph",
+      "section": "Sentence"
+    }
+  },
   "heike.tokyo1933": {
     "textgroup": "heike",
     "work": "tokyo1933",

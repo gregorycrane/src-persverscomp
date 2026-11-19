@@ -78,14 +78,13 @@ Everything else in those loop bodies is unchanged from the notebook.
   out of turn budget before getting to the sharding step. It's a much
   smaller, more self-contained cell than Cell 4 or Cell 9 -- straightforward
   to pull over the same way the others were.
-- **`sharding.py`'s `split_corpus_by_work` was moved verbatim, not made
-  work-selective.** It still re-shards the entire monolith (and rebuilds
-  `catalog.json`) on every call, even when `build_all.py` only just
-  ingested one work. I didn't trace far enough into its ~400 lines to be
-  confident a partial-shard filter wouldn't quietly break `catalog.json`'s
-  cross-work aggregation, so `build_all.py` calls it unfiltered for now.
-  Sharding a persistent monolith is still much cheaper than re-parsing TEI,
-  so this is a real but bounded inefficiency, not a correctness risk.
+- **Targeted builds are now work-selective.** `split_corpus_by_work` accepts
+  the changed work keys, rewrites only those shard directories, and merges
+  their refreshed metadata into the existing `catalog.json`. Ordinary and
+  `--index-only` builds also leave the generated experimental fragment
+  collections alone; the expensive fragment publisher runs only when a
+  changed registry entry is itself a fragment collection. `make force`
+  remains the full recovery/rebuild path.
 - **Cell 11's `SHARD_LOADER_JS`** (a Python string constant that gets
   written out as `shard_loader.js`) wasn't ported into the package as-is.
   Since you asked not to touch `web/`, and the cleanest fix is to make

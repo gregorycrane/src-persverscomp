@@ -52,9 +52,19 @@ def _make_env():
     return tmp, build_all
 
 
-def test_index_only_picks_up_web_changes_without_reingesting():
+def test_index_only_picks_up_web_changes_without_reingesting(monkeypatch):
     tmp, build_all = _make_env()
     try:
+        def unexpected_experimental_publish(*args, **kwargs):
+            raise AssertionError(
+                "ordinary and index-only builds must not republish fragment collections"
+            )
+
+        monkeypatch.setattr(
+            build_all.experimental_collections,
+            "publish",
+            unexpected_experimental_publish,
+        )
         build_all.main(["--work", "tlg0085.tlg007"])
         html = (tmp / "persverscomp" / "index.html").read_text()
         assert "console.log('v1')" in html
@@ -68,5 +78,19 @@ def test_index_only_picks_up_web_changes_without_reingesting():
         build_all.main(["--index-only"])
         html = (tmp / "persverscomp" / "index.html").read_text()
         assert "console.log('v2')" in html, "--index-only should have picked up the app.js edit"
+    finally:
+        shutil.rmtree(tmp)
+
+
+def test_fragment_registry_entries_still_request_experimental_publish(monkeypatch):
+    tmp, build_all = _make_env()
+    try:
+        monkeypatch.setitem(
+            build_all.WORK_REGISTRY,
+            "tlg9999.fragments",
+            {"fragmentary": True, "fragment_editions": {"ed1": {}}},
+        )
+        assert build_all._needs_experimental_publish(["tlg9999.fragments"])
+        assert not build_all._needs_experimental_publish(["tlg0085.tlg007"])
     finally:
         shutil.rmtree(tmp)

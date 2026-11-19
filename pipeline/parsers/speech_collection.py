@@ -4,8 +4,28 @@ Populates work_book_metadata (book title/summary read straight off the
 TEI's own <head> elements) -- see core/storage.py's table comment.
 """
 from collections import OrderedDict
+from html import unescape
 import os
+import re
 from pipeline.core.xml_utils import NS, safe_parse, find_text_root, extract_text_recursive
+
+
+def _clean_heading_text(el):
+    """Return plain navigation text even when a heading contains TEI markup.
+
+    ``extract_text_recursive`` intentionally renders elements such as ``pb``
+    as HTML for reading passages.  Navigation titles are metadata, however,
+    and must not expose those rendered spans (Boeckh's first-page marker sits
+    inside the numbered heading in the source TEI).
+    """
+    rendered = extract_text_recursive(el, strip_paragraphs=True)
+    rendered = re.sub(
+        r'<span\s+class="tei-page-break"[^>]*>.*?</span>',
+        "",
+        rendered,
+        flags=re.DOTALL,
+    )
+    return " ".join(unescape(re.sub(r"<[^>]+>", "", rendered)).split())
 
 def parse_speech_collection_tei(path, book_div_types=("edition",)):
     """Parses a COLLECTION of speeches/orations in one TEI file, where each
@@ -59,9 +79,6 @@ def parse_speech_collection_tei(path, book_div_types=("edition",)):
     def _div_kind(div):
         return (div.get("type") or "", div.get("subtype") or "")
 
-    def _clean_text(el):
-        return " ".join(extract_text_recursive(el, strip_paragraphs=True).split())
-
     for div in text_entry.iter():
         tag = div.tag.split("}")[-1]
         if tag != "div":
@@ -80,11 +97,11 @@ def parse_speech_collection_tei(path, book_div_types=("edition",)):
             heads = div.findall("head")
 
         if heads:
-            title_txt = _clean_text(heads[0])
+            title_txt = _clean_heading_text(heads[0])
             if title_txt:
                 book_titles[bk] = title_txt
         if len(heads) >= 2:
-            summary_txt = _clean_text(heads[1])
+            summary_txt = _clean_heading_text(heads[1])
             if summary_txt:
                 book_summaries[bk] = summary_txt
 
