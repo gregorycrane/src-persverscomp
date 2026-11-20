@@ -7847,9 +7847,28 @@
       }
     },
     "appcrits": {},
-    "translations": {},
+    "translations": {
+      "leipzig1859-eng1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/reden/boeckh.reden.leipzig1859-eng1.xml",
+        "label": "English (DeepSeek Flash, 2026) (AI/OCR draft)",
+        "class": "english-text",
+        "parse_mode": "speech_collection_sentences",
+        "book_div_type": "speech",
+        "source_version": "leipzig1859-deu1",
+        "source_certainty": "explicit",
+        "source_note": "Generated sentence by sentence from the registered 1859 German OCR edition; speech, paragraph, and sentence IDs are preserved exactly."
+      }
+    },
     "commentaries": {},
-    "treebanks": {},
+    "treebanks": {
+      "leipzig1859-tb-deu1": {
+        "path": "/Users/gcrane/github/grcnewxml/data/boeckh/reden/boeckh.reden.leipzig1859-deu1.conllu",
+        "label": "German UD treebank + glosses (Stanza / DeepSeek Flash, 2026) (AI/OCR draft)",
+        "class": "treebank-text",
+        "parse_mode": "conllu",
+        "source_version": "leipzig1859-deu1"
+      }
+    },
     "unit_labels": {
       "book": "Speech",
       "chapter": "Paragraph",
